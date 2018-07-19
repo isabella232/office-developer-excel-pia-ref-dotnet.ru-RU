@@ -1,0 +1,605 @@
+<Type Name="WorkbookConnection" FullName="Microsoft.Office.Interop.Excel.WorkbookConnection">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="0412302ec11fc558839570922b03112869bc8d74" />
+    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20581069" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface WorkbookConnection" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WorkbookConnection" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.WorkbookConnection" />
+  <TypeSignature Language="VB.NET" Value="Public Interface WorkbookConnection" />
+  <TypeSignature Language="C++ CLI" Value="public interface class WorkbookConnection" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00024485-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(2)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4096)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Подключение представляют собой набор информацию, необходимую для получения данных из внешнего источника данных отличный от книги 1st_Excel12.</summary>
+    <remarks>
+      <para>Подключения могут храниться в книге Excel.  При открытии книги Excel создает в памяти копию подключения, который является, на которое как объект подключения.  Объект подключения содержит сведения, такие как имя сервера и имя объекта открывать их на этом сервере.  При необходимости объект подключения также может включать учетные данные проверки подлинности и/или команды, который будет передан на сервер и выполнять (пример: инструкции SELECT для выполнения с SQL Server.)  </para>
+      <para>
+        <b>Примечание</b>: точное форма подключения зависит от механизма, который используется для извлечения данных – подключения ODBC, подключения OLEDB и веб-запросы будет содержать различные сведения о.</para> Подключение 
+      <para>A также могут храниться в файле отдельные подключения.  Большинство подключений в книге Excel включают указатель на внешний файл подключения.  Файлы подключений с расширениями четко пометьте их как файлы подключений (*. ODC, *. IQY, и т.д.) и находится на локальном компьютере или в других хорошо известных или надежных расположений, такие как WSS (библиотеки подключений к данным) или других корпоративных серверов.  Файлы подключений включить несколько пользователей в пределах той же организации, повторное использование подключений.  Сетевые администраторы имеют возможность изменить способ во всей организации подключается к источнику данных, изменив файл подключения.  Файл подключения не всегда требуется при подключении к внешнему источнику данных.</para> Имена подключения 
+      <para>являются строками, которые однозначно идентифицируют подключений в книге, в котором они используются.     Существуют другие свойства подключения, которые не являются уникальными.  Каждый раз, когда формулы в Excel принимает в качестве аргумента, который является соединение, оно будет достаточно для ссылки на имя этого подключения, либо напрямую (в виде строки) или косвенно (с помощью ссылки на ячейки, которая содержит имя подключения в виде строки.)</para><para /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="_Default">
+      <MemberSignature Language="C#" Value="public string this { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string _Default" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection._Default" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property _Default As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ default { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.TypeLibFunc(1024)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(0)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.TypeLibFunc(1024)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::Application ^ Application { Microsoft::Office::Interop::Excel::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(148)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(148)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатор объекта, данное свойство возвращает объект <b>приложения</b> , представляющего создателя указанный объект. Только для чтения.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Это свойство можно использовать с помощью объекта OLE-автоматизации возвращает приложение этого объекта.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.XlCreator Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Excel.XlCreator Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As XlCreator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::XlCreator Creator { Microsoft::Office::Interop::Excel::XlCreator get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(149)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(149)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Только для чтения <b>целое число</b>.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataFeedConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.DataFeedConnection DataFeedConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.DataFeedConnection DataFeedConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.DataFeedConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataFeedConnection As DataFeedConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::DataFeedConnection ^ DataFeedConnection { Microsoft::Office::Interop::Excel::DataFeedConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3104)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3104)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.DataFeedConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект <b>DataFeedConnection</b> , который содержит данные и функциональных возможностей, необходимых для подключения к данным веб-каналов. Только для чтения</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Delete">
+      <MemberSignature Language="C#" Value="public void Delete ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Delete() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Excel.WorkbookConnection.Delete" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Delete ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Delete();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(117)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Удаление подключения к книге.</summary>
+        <remarks>
+          <para>Используется для удаления подключения к внешним данным. Этот метод не применяется к ссылок на другие книги. </para>
+          <para>Удаление подключения не удалить или удалить любые объекты, которые использовали это подключение.  Удаление подключения не вызывает какие-либо файлы подключений к удалению из файловой системы.  При изменении любого из этих объектов для использования другого подключения все начнут работать еще раз.</para>
+          <para>Объектов, использующих удаленного подключения будут рассматриваться как, если не удается установить подключение.  </para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Description { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(218)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(218)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(218)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает или задает краткое описание <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объекта. Для чтения и записи, <b>String</b>.</summary>
+        <value>To be added.</value>
+        <remarks>Диалоговое окно <para>подключения свойства, пользователь может изменять имя подключения и/или описание.  Изменение имени и описания в данном диалоговом изменяет эти поля только в пределах объект подключения Excel.</para> Максимальный размер описание 
+          <para>составляет 255 знаков.  Если пользователь вводит описания в файл подключения, которая содержит более 255 знаков, описание усечения в соответствии со 255 знаков.</para><para /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InModel">
+      <MemberSignature Language="C#" Value="public bool InModel { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InModel" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.InModel" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InModel As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool InModel { bool get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3105)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3105)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Указывает ли объект <b>WorkbookConnection</b> был добавлен к модели. <b>Логическое</b> (<b>bool</b> в C#) Только для чтения.</summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>Должен иметь значение false для устаревших подключений.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.ModelConnection ModelConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.ModelConnection ModelConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.ModelConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModelConnection As ModelConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::ModelConnection ^ ModelConnection { Microsoft::Office::Interop::Excel::ModelConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3100)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3100)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.ModelConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект, который содержит сведения о тип подключения модели представлено в Excel 2013 для взаимодействия с помощью интегрированной модели данных. Только для чтения</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModelTables">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.ModelTables ModelTables { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.ModelTables ModelTables" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.ModelTables" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModelTables As ModelTables" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::ModelTables ^ ModelTables { Microsoft::Office::Interop::Excel::ModelTables ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3106)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3106)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.ModelTables</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTables" /> объекта, связанного с конкретное подключение. Только для чтения</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Name { System::String ^ get(); void set(System::String ^ value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(110)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(110)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(110)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает или задает имя объекта подключения к книге. Для чтения и записи, <b>String</b>.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ODBCConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.ODBCConnection ODBCConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.ODBCConnection ODBCConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.ODBCConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ODBCConnection As ODBCConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::ODBCConnection ^ ODBCConnection { Microsoft::Office::Interop::Excel::ODBCConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2698)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2698)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.ODBCConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Дополнительные сведения об возвращающим подключения ODBC для указанного <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объекта. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.ODBCConnection" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OLEDBConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.OLEDBConnection OLEDBConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.OLEDBConnection OLEDBConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.OLEDBConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OLEDBConnection As OLEDBConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::OLEDBConnection ^ OLEDBConnection { Microsoft::Office::Interop::Excel::OLEDBConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2697)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2697)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.OLEDBConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Дополнительные сведения об возвращающим подключения OLEDB для указанного <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объекта. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(150)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(150)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ranges">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.Ranges Ranges { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.Ranges Ranges" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Ranges" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ranges As Ranges" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::Ranges ^ Ranges { Microsoft::Office::Interop::Excel::Ranges ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2699)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2699)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.Ranges</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает диапазон для указанного <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объекта. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.Ranges" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Refresh">
+      <MemberSignature Language="C#" Value="public void Refresh ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Refresh() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Excel.WorkbookConnection.Refresh" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Refresh ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void Refresh();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(1417)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Обновление подключения к книге.</summary>
+        <remarks>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство имеет <b>значение False</b>, диалоговые окна не отображаются и не удается выполнить метод <b>Refresh</b> за исключением недостаточно сведения о подключении.</para>
+          <para>Сбой обновления для одного подключения не будет любые влияния на операции обновления для других подключений.</para>
+          <para />
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RefreshWithRefreshAll">
+      <MemberSignature Language="C#" Value="public bool RefreshWithRefreshAll { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RefreshWithRefreshAll" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.RefreshWithRefreshAll" />
+      <MemberSignature Language="VB.NET" Value="Public Property RefreshWithRefreshAll As Boolean" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property bool RefreshWithRefreshAll { bool get(); void set(bool value); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3102)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3102)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>set: System.Runtime.InteropServices.DispId(3102)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Определяет, следует обновить подключение при выполнении обновления всех. <b>Логическое</b> (<b>bool</b> в C#). Чтение и запись.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.TextConnection TextConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.TextConnection TextConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.TextConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TextConnection As TextConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::TextConnection ^ TextConnection { Microsoft::Office::Interop::Excel::TextConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3103)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3103)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.TextConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TextConnection" /> объект, который содержит сведения о запросе в текстовый файл. Только для чтения.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.XlConnectionType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Excel.XlConnectionType Type" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As XlConnectionType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::XlConnectionType Type { Microsoft::Office::Interop::Excel::XlConnectionType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(108)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(108)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.XlConnectionType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает тип подключения к книге. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlConnectionType" />.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorksheetDataConnection">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.WorksheetDataConnection WorksheetDataConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.WorksheetDataConnection WorksheetDataConnection" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.WorkbookConnection.WorksheetDataConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WorksheetDataConnection As WorksheetDataConnection" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::WorksheetDataConnection ^ WorksheetDataConnection { Microsoft::Office::Interop::Excel::WorksheetDataConnection ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(3101)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(3101)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.WorksheetDataConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Возвращает объект, который содержит сведения о подключении к данным в книге, включая диапазон, именованный диапазон или таблицу из модели PowerPivot. Только для чтения.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
