@@ -1,0 +1,1174 @@
+<Type Name="PivotCell" FullName="Microsoft.Office.Interop.Excel.PivotCell">
+  <Metadata>
+    <Meta Name="ms.openlocfilehash" Value="97d53069436a318096bbfbdc2ce01e7de3cf9166" />
+    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
+    <Meta Name="ms.translationtype" Value="MT" />
+    <Meta Name="ms.contentlocale" Value="ru-RU" />
+    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.locfileid" Value="20574727" />
+  </Metadata>
+  <TypeSignature Language="C#" Value="public interface PivotCell" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotCell" />
+  <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotCell" />
+  <TypeSignature Language="VB.NET" Value="Public Interface PivotCell" />
+  <TypeSignature Language="C++ CLI" Value="public interface class PivotCell" />
+  <AssemblyInfo>
+    <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+    <AssemblyVersion>15.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.Guid("00024458-0000-0000-C000-000000000046")</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.InterfaceType(2)</AttributeName>
+    </Attribute>
+    <Attribute>
+      <AttributeName>System.Runtime.InteropServices.TypeLibType(4096)</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+      <span data-ttu-id="cff7b-101">Представляет ячейки в отчете сводной таблицы.</span>
+      <span class="sxs-lookup">
+        <span data-stu-id="cff7b-101">Represents a cell in a PivotTable report.</span>
+      </span>
+    </summary>
+    <remarks>
+      <span data-ttu-id="cff7b-102">
+        <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.PivotCell" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Range" /> коллекции для получения объекта <b>PivotCell</b> .</para>
+        <para>После возвращения объекта <b>PivotCell</b> , можно использовать <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.PivotCellType" /> свойства, чтобы определить тип ячейки о-ва определенного диапазона</para>
+        <para>Можно использовать <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" /> или <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" /> свойства, чтобы определить <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> коллекции, соответствующий элементов на оси строку или столбец, который представляет выбранный номер.</para>
+        <para />
+      </span>
+      <span class="sxs-lookup">
+        <span data-stu-id="cff7b-102">
+          <para>Use the <see cref="P:Microsoft.Office.Interop.Excel.Range.PivotCell" /> property of the <see cref="T:Microsoft.Office.Interop.Excel.Range" /> collection to return a <b>PivotCell</b> object.</para>
+          <para>Once a <b>PivotCell</b> object is returned, you can use the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.PivotCellType" /> property to determine what type of cell a particular range is.</para>
+          <para>You can use the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" /> or <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" /> property to determine the <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> collection that corresponds to the items on the column or row axis that represents the selected number.</para>
+          <para />
+        </span>
+      </span>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AllocateChange">
+      <MemberSignature Language="C#" Value="public void AllocateChange ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AllocateChange() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Excel.PivotCell.AllocateChange" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AllocateChange ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void AllocateChange();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2928)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-103">Выполняет операцию обратной записи на указанную ячейку в отчете сводной таблицы на основе источника данных OLAP.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-103">Performs a writeback operation on the specified cell in a PivotTable report based on an OLAP data source.</span>
+          </span>
+        </summary>
+        <remarks>
+          <span data-ttu-id="cff7b-104">
+            <para>Этот метод выполняет инструкцию UPDATE CUBE для добавления только изменения в этой ячейке, а также включает в себя все предыдущие изменения применяются. После того как выполняется оператор обновление КУБА, выполните обновление сводной таблицы и затем выполняется оператор ОТКАТА ТРАНЗАКЦИЙ.</para>
+            <para>Под управлением <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.AllocateChange" /> метод для ячейки в отчете сводной таблицы, основанных на источнике данных не OLAP приводит к ошибке времени выполнения.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-104">
+              <para>This method executes an UPDATE CUBE statement to add just the change in this particular cell, but also includes any previous changes applied. After the UPDATE CUBE statement is executed, a PivotTable update is run, and then a ROLLBACK TRANSACTION statement is executed.</para>
+              <para>Running the <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.AllocateChange" /> method for a cell in a PivotTable report based on a non-OLAP data source generates a run-time error.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Application">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.Application Application { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.Application Application" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.Application" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Application As Application" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::Application ^ Application { Microsoft::Office::Interop::Excel::Application ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(148)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(148)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-105">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-105">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the Microsoft Excel application.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CellChanged">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.XlCellChangedState CellChanged { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Excel.XlCellChangedState CellChanged" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CellChanged As XlCellChangedState" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::XlCellChangedState CellChanged { Microsoft::Office::Interop::Excel::XlCellChangedState get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2931)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2931)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.XlCellChangedState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-106">Получает значение ячейки сводной таблицы изменяется или перерасчете с момента создания отчета сводной таблицы или последнюю операцию зафиксировать была выполнена.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-106">Gets whether a PivotTable value cell has been edited or recalculated since the PivotTable report was created or the last commit operation was performed.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="cff7b-107">A <see cref="T:Microsoft.Office.Interop.Excel.XlCellChangedState" /> объекта.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-107">A <see cref="T:Microsoft.Office.Interop.Excel.XlCellChangedState" /> object.</span>
+          </span>
+        </value>
+        <remarks>
+          <span data-ttu-id="cff7b-108">
+            <para>Значение <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> — это свойство <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> по умолчанию.</para>
+            <para>Сводной таблицы для отчетов с источниками данных, не OLAP, значение этого свойства может быть только один <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> или <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" />. Это <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для ячеек, которые не были изменены и является <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> для ячеек, которые были изменены. Отмена изменений задает в качестве значения <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" />.</para>
+            <para>Применение и сохранение изменений применяется только к отчета сводной таблицы с источниками данных OLAP. Следующие описания возможных состояний <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> свойства применяются только к сводные таблицы с источниками данных OLAP.</para>
+            <list type="bullet">
+              <item>
+                <description>
+                  <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> -ячейки не изменяется или перерасчете (если ячейка с формулой) с момента создания сводной таблицы или с момента последнего сохранения или отменить изменения операции.</description>
+              </item>
+              <item>
+                <description>
+                  <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> -ячейки изменяется или перерасчете с момента создания сводной таблицы, или с момента последнего применить изменения "или" Сохранить изменения операции, но это изменение не были применены (инструкция UPDATE CUBE не запускался его).</description>
+              </item>
+              <item>
+                <description>
+                  <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" />- изменение ячейки или перерасчете с момента создания сводной таблицы или с момента последнего применить изменения, сохранить изменения, или отменить изменения операции и применения изменений (инструкция UPDATE CUBE запускался его).</description>
+              </item>
+            </list>
+            <para>В следующей таблице описываются как разные действия пользователем параметр <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> свойство в сводной таблицы с источником данных OLAP.</para>
+            <list type="table">
+              <item>
+                <term>Вводит значение или формулу в ячейку или несколько ячеек.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> для этих ячеек.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> для этих ячеек.</description>
+              </item>
+              <item>
+                <term>Пересчитывается ячейку или несколько ячеек с формулой, либо вручную (F9) или автоматически с помощью Excel.</term>
+                <description>Н/д</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> для этих ячеек.</description>
+              </item>
+              <item>
+                <term>(Фиксирует) сохраняет изменения.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для всех изменяется ячеек без формула.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> для всех редактировать ячейки с формулой.</description>
+              </item>
+              <item>
+                <term>Отменяет все изменения.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для всех изменяется ячеек без формула.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для всех редактировать ячейки с формулой.</description>
+              </item>
+              <item>
+                <term>Изменения отменяются в одну ячейку.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для только что ячейка.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для только что ячейка.</description>
+              </item>
+              <item>
+                <term>Очищает несколько ячеек за одну операцию.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для всех ячеек.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для всех ячеек.</description>
+              </item>
+              <item>
+                <term>Очищает ячейки.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для только что ячейка.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для только что ячейка.</description>
+              </item>
+              <item>
+                <term>Выполняет операцию отмены, изменяется значение обратно в значение измененные до применения этого значения.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> для всех изменяется ячеек без формула.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> для всех редактировать ячейки с формулой.</description>
+              </item>
+              <item>
+                <term>Выполняет операцию отмены, изменяется значение обратно в значение измененные после применения этого значения.</term>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> для всех изменяется ячеек без формула.</description>
+                <description>Значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> для всех редактировать ячейки с формулой.</description>
+              </item>
+            </list>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-108">
+              <para>The value of the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> property is <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> by default.</para>
+              <para>For PivotTable reports with non-OLAP data sources, the value of this property can be only either <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> or <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" />. It is <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for cells that have not been edited, and is <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> for cells that have been edited. Discarding changes sets its value to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" />.</para>
+              <para>Applying and saving changes applies only to PivotTable reports with OLAP data sources. The following descriptions of the possible states of the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> property apply only to PivotTables with OLAP data sources.</para>
+              <list type="bullet">
+                <item>
+                  <description>
+                    <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> - the cell has not been edited or recalculated (if the cell contains a formula) since the PivotTable was created, or since the last save or discard changes operation was performed.</description>
+                </item>
+                <item>
+                  <description>
+                    <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> - the cell has been edited or recalculated since the PivotTable was created, or since the last apply changes or save changes operation was performed, but that change has not yet been applied (the UPDATE CUBE statement has not been run for it).</description>
+                </item>
+                <item>
+                  <description>
+                    <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" />- the cell has been edited or recalculated since the PivotTable was created, or since the last apply changes, save changes, or discard changes operation was performed, and that change has been applied (the UPDATE CUBE statement has been run for it).</description>
+                </item>
+              </list>
+              <para>The following table describes how different actions by the user affect the setting of the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> property in a PivotTable with an OLAP data source.</para>
+              <list type="table">
+                <item>
+                  <term>Types a value or formula into a cell or multiple cells.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> for those cells.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> for those cells.</description>
+                </item>
+                <item>
+                  <term>Recalculates a cell or multiple cells with a formula, either manually (F9) or automatically by Excel.</term>
+                  <description>N/A</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> for those cells.</description>
+                </item>
+                <item>
+                  <term>Saves (commits) changes.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for all edited cells without a formula.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> for all edited cells with a formula.</description>
+                </item>
+                <item>
+                  <term>Discards all changes.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for all edited cells without a formula.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for all edited cells with a formula.</description>
+                </item>
+                <item>
+                  <term>Discards change in single cell.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for that cell only.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for that cell only.</description>
+                </item>
+                <item>
+                  <term>Clears multiple cells in one operation.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for all those cells.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for all those cells.</description>
+                </item>
+                <item>
+                  <term>Clears a cell.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for that cell only.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> for that cell only.</description>
+                </item>
+                <item>
+                  <term>Performs an undo operation that changes the value back to a previously edited value, before that value was applied.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> for all edited cells without a formula.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> for all edited cells with a formula.</description>
+                </item>
+                <item>
+                  <term>Performs an undo operation that changes the value back to a previously edited value, after that value was applied.</term>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> for all edited cells without a formula.</description>
+                  <description>Set to <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> for all edited cells with a formula.</description>
+                </item>
+              </list>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnItems">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotItemList ColumnItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotItemList ColumnItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ColumnItems As PivotItemList" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotItemList ^ ColumnItems { Microsoft::Office::Interop::Excel::PivotItemList ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2191)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2191)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotItemList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-109">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> коллекции, соответствующий элементов на оси столбцов, которые представляют выбранного диапазона.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-109">Returns a <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> collection that corresponds to the items on the column axis that represent the selected range.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Creator">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.XlCreator Creator { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Excel.XlCreator Creator" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.Creator" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Creator As XlCreator" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::XlCreator Creator { Microsoft::Office::Interop::Excel::XlCreator get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(149)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(149)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-110">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-110">Returns a 32-bit integer that indicates the application in which this object was created.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="cff7b-111">
+            <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
+          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para /></span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-111">
+              <para>If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</para>
+              <para>The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code. For example, Microsoft Excel has the creator code XCEL.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CustomSubtotalFunction">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.XlConsolidationFunction CustomSubtotalFunction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Excel.XlConsolidationFunction CustomSubtotalFunction" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.CustomSubtotalFunction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CustomSubtotalFunction As XlConsolidationFunction" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::XlConsolidationFunction CustomSubtotalFunction { Microsoft::Office::Interop::Excel::XlConsolidationFunction get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2193)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2193)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.XlConsolidationFunction</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-112">Возвращает значение поля пользовательской функции промежуточных итогов <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объекта.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-112">Returns the custom subtotal function field setting of a <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="cff7b-113">
+            <para>
+              <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" />может иметь одно из следующих констант <b>XlConsolidationFunction</b> :</para>
+            <para>
+              <b>xlAverage</b>
+            </para>
+            <para>
+              <b>xlCount</b>
+            </para>
+            <para>
+              <b>xlCountNums</b>
+            </para>
+            <para>
+              <b>xlMax</b>
+            </para>
+            <para>
+              <b>xlMin</b>
+            </para>
+            <para>
+              <b>xlProduct</b>
+            </para>
+            <para>
+              <b>xlStDev</b>
+            </para>
+            <para>
+              <b>xlStDevP</b>
+            </para>
+            <para>
+              <b>xlSum </b>
+            </para>
+            <para>
+              <b>xlVar</b>
+            </para>
+            <para>
+              <b>xlUnknown</b>
+            </para>
+            <para>
+              <b>xlVarP</b>
+            </para>
+            <para>свойство <b>CustomSubtotalFunction</b> возвращает ошибку, если тип объекта <b>PivotCell</b> не настраиваемые промежуточные итоги. Это свойство применяется только к источнику данных не OLAP.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-113">
+              <para>
+                <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> can be one of the following <b>XlConsolidationFunction</b> constants:</para>
+              <para>
+                <b>xlAverage</b>
+              </para>
+              <para>
+                <b>xlCount</b>
+              </para>
+              <para>
+                <b>xlCountNums</b>
+              </para>
+              <para>
+                <b>xlMax</b>
+              </para>
+              <para>
+                <b>xlMin</b>
+              </para>
+              <para>
+                <b>xlProduct</b>
+              </para>
+              <para>
+                <b>xlStDev</b>
+              </para>
+              <para>
+                <b>xlStDevP</b>
+              </para>
+              <para>
+                <b>xlSum</b>
+              </para>
+              <para>
+                <b>xlUnknown</b>
+              </para>
+              <para>
+                <b>xlVar</b>
+              </para>
+              <para>
+                <b>xlVarP</b>
+              </para>
+              <para>The <b>CustomSubtotalFunction</b> property will return an error if the <b>PivotCell</b> object type is not a custom subtotal. This property applies only to non-OLAP source data.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataField">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotField DataField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotField DataField" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.DataField" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataField As PivotField" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotField ^ DataField { Microsoft::Office::Interop::Excel::PivotField ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2091)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2091)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-114">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта, который соответствует в поле Выбранные данные.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-114">Returns a <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> object that corresponds to the selected data field.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="cff7b-115">
+            <para>Данное свойство возвращает ошибку, если <b>PivotCell</b> объект не является одним из допустимых типов: <b>XlPivotCellTypeValue</b>, <b>XlPivotCellTypeDataField</b>, <b>XlPivotCellTypeSubtotal</b>или <b>XlPivotCellTypeGrandTotal</b>.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-115">
+              <para>This property will return an error if the <b>PivotCell</b> object is not one of the allowed types: <b>XlPivotCellTypeValue</b>, <b>XlPivotCellTypeDataField</b>, <b>XlPivotCellTypeSubtotal</b>, or <b>XlPivotCellTypeGrandTotal</b>.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataSourceValue">
+      <MemberSignature Language="C#" Value="public object DataSourceValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object DataSourceValue" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DataSourceValue As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ DataSourceValue { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2930)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2930)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-116">Получает значение, последнего извлечения из источника данных для измененного ячеек в отчете сводной таблицы.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-116">Gets the value last retrieved from the data source for edited cells in a PivotTable report.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="cff7b-117">Значение последнего извлечения из источника данных для измененного ячеек в отчете сводной таблицы.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-117">The value last retrieved from the data source for edited cells in a PivotTable report.</span>
+          </span>
+        </value>
+        <remarks>
+          <span data-ttu-id="cff7b-118">
+            <para>Только для чтения.</para>
+            <para>При редактировании ячейки в области значений отчета сводной таблицы <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> свойство будет содержать значение, последнего извлечения из источника данных до изменения были выполнены. Для сводной таблицы значение ячейки отчета, который не были изменены или для которого значения источника данных не был получен явным образом это свойство будет возвращать пустая ссылка (Nothing в Visual Basic). Для отчета сводной таблицы с источниками данных OLAP, значение <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> свойства извлекается из отдельное подключение, чтобы убедиться, что она не содержит значения любых операций обратной записи, пользователь может с.</para>
+            <para>Чтение <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> свойство для ячеек, которые расположены вне области значений отчета сводной таблицы приводит к ошибке времени выполнения.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-118">
+              <para>Read-only.</para>
+              <para>Whenever a cell in the values area of a PivotTable report is edited, the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> property will hold the value that was last retrieved from the data source before editing took place. For PivotTable report value cells that have not been edited, or for which the data source value has not been explicitly retrieved, this property will return a null reference (Nothing in Visual Basic). For PivotTable reports with OLAP data sources, the value of the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> property is retrieved from a separate connection to ensure that it does not contain the value of any writeback operations that the user might have made.</para>
+              <para>Reading the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> property for cells that are outside of the values area of a PivotTable report generates a run-time error.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiscardChange">
+      <MemberSignature Language="C#" Value="public void DiscardChange ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DiscardChange() runtime managed" />
+      <MemberSignature Language="DocId" Value="M:Microsoft.Office.Interop.Excel.PivotCell.DiscardChange" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DiscardChange ()" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; void DiscardChange();" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2929)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-119">Отмена изменений в указанную ячейку в отчете сводной таблицы.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-119">Discards changes to the specified cell in a PivotTable report.</span>
+          </span>
+        </summary>
+        <remarks>
+          <span data-ttu-id="cff7b-120">
+            <para>Для ячейки в сводной таблице на основе на источнике данных OLAP <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.DiscardChange" /> метод удаляет значение или формулу, введенный в указанной ячейке, а затем запускает обновление сводной таблицы для получения последних значения из источника данных. Значения источника данных будет иметь значение пустая ссылка (Nothing в Visual Basic), этот метод для заданной ячейки. Метод также удаляет все изменения, внесенные этой ячейки из списка изменений в Excel, чтобы он больше не будет включаться в инструкция UPDATE CUBE для источника данных. Этот метод также заново создает состояния сеанса для всех изменений, внесенных в транзакции. Включает выполнение инструкции ОТКАТА ТРАНЗАКЦИЙ и затем выполнения инструкции UPDATE CUBE все изменения, за исключением указанной ячейке. Для ячейки в сводной таблице на основе источника данных не OLAP этот метод просто удаляет редактируемой ячейки.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-120">
+              <para>For a cell in a PivotTable based on an OLAP data source, the <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.DiscardChange" /> method removes the value or formula entered in the specified cell, and then runs a PivotTable update to retrieve the latest value from the data source. The data source value will be set to a null reference (Nothing in Visual Basic) by this method for the specified cell. The method also removes all changes made to this cell from Excel's change list so that it will no longer be included in the UPDATE CUBE statement for the data source. This method also recreates the session state for all other changes made in the transaction. This includes executing a ROLLBACK TRANSACTION statement, and then executing an UPDATE CUBE statement with all changes except for the specified cell. For a cell in a PivotTable based on a non-OLAP data source, this method simply clears the edited cell.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dummy18">
+      <MemberSignature Language="C#" Value="public string Dummy18 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Dummy18" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.Dummy18" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Dummy18 As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ Dummy18 { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2295)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2295)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.TypeLibFunc(64)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-121">Зарезервировано для внутреннего использования.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-121">Reserved for internal use.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MDX">
+      <MemberSignature Language="C#" Value="public string MDX { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string MDX" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.MDX" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MDX As String" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::String ^ MDX { System::String ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2123)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2123)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-122">Возвращает кортеж, предоставляющий полный координаты многомерных Выражений указанное значение ячейки в сводной таблице источника данных OLAP.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-122">Gets a tuple that provides the full MDX coordinates of the specified value cell in PivotTable with an OLAP data source.</span>
+          </span>
+        </summary>
+        <value>
+          <span data-ttu-id="cff7b-123">Кортеж, предоставляющий полный координаты многомерных Выражений указанное значение ячейки в сводной таблице источника данных OLAP.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-123">A tuple that provides the full MDX coordinates of the specified value cell in PivotTable with an OLAP data source.</span>
+          </span>
+        </value>
+        <remarks>
+          <span data-ttu-id="cff7b-124">
+            <para>Только для чтения.</para> Размеры 
+          <para>, возвращаемых в кортеж с <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.MDX" /> свойство включать координаты строк и столбцов, а также координаты фильтр отчета. Для ячеек, за пределами области значений со сводными таблицами и за пределами сводной таблицы доступ к этому свойству возникнет ошибка во время выполнения. Для сводных таблиц с помощью выбора нескольких элементов в поле фильтра отчета доступа к этому свойству будет также создавать ошибку времени выполнения.</para><para /></span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-124">
+              <para>Read-only.</para>
+              <para>The dimensions returned in the tuple by the <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.MDX" /> property include row and column coordinates as well as report filter coordinates. For cells outside the values area of the PivotTable, and outside a PivotTable, accessing this property will generate a run-time error. For PivotTables with multi-item selection in a report filter field, accessing this property will also generate a run-time error.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public object Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Parent" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.Parent" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Parent As Object" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property System::Object ^ Parent { System::Object ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(150)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(150)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-125">Возвращает родительский объект для указанного объекта.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-125">Returns the parent object for the specified object.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PivotCellType">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.XlPivotCellType PivotCellType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Office.Interop.Excel.XlPivotCellType PivotCellType" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.PivotCellType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PivotCellType As XlPivotCellType" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::XlPivotCellType PivotCellType { Microsoft::Office::Interop::Excel::XlPivotCellType get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2189)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2189)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.XlPivotCellType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-126">Возвращает константу, идентифицирующее элемент сводной таблицы, который соответствует значению ячейки.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-126">Returns a constant that identifies the PivotTable entity the cell corresponds to.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="cff7b-127">
+            <para>
+              <see cref="T:Microsoft.Office.Interop.Excel.XlPivotCellType" />может иметь одно из следующих констант <b>XlPivotCellType</b> :</para>
+            <para>
+              <b>xlPivotCellBlankCell</b> структурные пустые ячейки в сводной таблице.</para>
+            <para>
+              <b>xlPivotCellCustomSubtotal</b> A ячейку в области строки или столбца, который является настраиваемой промежуточным.</para>
+            <para>подпись поля данных 
+            <b>xlPivotCellDataField</b> A (не кнопка <b>данных</b> ).</para>
+            <para>
+              <b>xlPivotCellDataPivotField</b> кнопку <b>данные</b> .</para>
+            <para>
+              <b>xlPivotCellGrandTotal</b> A ячейки в область строк или столбцов, который является общей суммы.</para>
+            <para>
+              <b>xlPivotCellPageFieldItem</b> ячейки, которая показывает выбранный элемент поля страницы.</para>
+            <para>
+              <b>xlPivotCellPivotField</b> кнопки для поля (не кнопка <b>данных</b> ).</para>
+            <para>
+              <b>xlPivotCellPivotItem</b> A ячейки в область строк или столбцов, который не является промежуточных итогов, общий общее, настраиваемых промежуточных итогов или пустую строку.</para>
+            <para>
+              <b>xlPivotCellSubtotal</b> A ячейки в область строк или столбцов, который является промежуточным.</para>
+            <para>
+              <b>xlPivotCellValue</b> какие-либо ячейки в области данных (за исключением пустая строка).</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-127">
+              <para>
+                <see cref="T:Microsoft.Office.Interop.Excel.XlPivotCellType" /> can be one of the following <b>XlPivotCellType</b> constants:</para>
+              <para>
+                <b>xlPivotCellBlankCell</b> A structural blank cell in the PivotTable.</para>
+              <para>
+                <b>xlPivotCellCustomSubtotal</b> A cell in the row or column area that is a custom subtotal.</para>
+              <para>
+                <b>xlPivotCellDataField</b> A data field label (not the <b>Data</b> button).</para>
+              <para>
+                <b>xlPivotCellDataPivotField</b> The <b>Data</b> button.</para>
+              <para>
+                <b>xlPivotCellGrandTotal</b> A cell in a row or column area which is a grand total.</para>
+              <para>
+                <b>xlPivotCellPageFieldItem</b> The cell that shows the selected item of a Page field.</para>
+              <para>
+                <b>xlPivotCellPivotField</b> The button for a field (not the <b>Data</b> button).</para>
+              <para>
+                <b>xlPivotCellPivotItem</b> A cell in the row or column area which is not a subtotal, grand total, custom subtotal, or blank line.</para>
+              <para>
+                <b>xlPivotCellSubtotal</b> A cell in the row or column area which is a subtotal.</para>
+              <para>
+                <b>xlPivotCellValue</b> Any cell in the data area (except a blank row).</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PivotColumnLine">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotLine PivotColumnLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotLine PivotColumnLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.PivotColumnLine" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PivotColumnLine As PivotLine" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotLine ^ PivotColumnLine { Microsoft::Office::Interop::Excel::PivotLine ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2674)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2674)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotLine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-128">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> на столбец для указанного объекта <b>PivotCell</b> .</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-128">Returns the <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> on a column for a specific  <b>PivotCell</b> object.</span>
+          </span>
+          <span data-ttu-id="cff7b-129">Только для чтения.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-129">Read-only.</span>
+          </span>
+        </summary>
+        <value>
+          <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" />
+        </value>
+        <remarks>
+          <span data-ttu-id="cff7b-130">
+            <para>Если в <b>PivotCell</b> строк, свойство <b>PivotColumnLine</b> возвращает ошибку времени выполнения.</para>
+            <para>При <b>PivotCell</b> на столбцы, свойство <b>PivotColumnLine</b> возвращает объект <b>PivotLine</b> столбца.</para>
+            <para>При <b>PivotCell</b> в области данных, свойство <b>PivotColumnLine</b> возвращает соответствующего объекта <b>PivotLine</b> столбца.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-130">
+              <para>If the <b>PivotCell</b> is on rows, the <b>PivotColumnLine</b> property returns a run-time error.</para>
+              <para>If the <b>PivotCell</b> is on columns, the <b>PivotColumnLine</b> property returns the column <b>PivotLine</b> object.</para>
+              <para>If the <b>PivotCell</b> is in the data area, the <b>PivotColumnLine</b> property returns the corresponding column <b>PivotLine</b> object.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PivotField">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotField PivotField { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotField PivotField" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.PivotField" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PivotField As PivotField" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotField ^ PivotField { Microsoft::Office::Interop::Excel::PivotField ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(731)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(731)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-131">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющий поле сводной таблицы, содержащий в верхний левый угол указанного диапазона.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-131">Returns a <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> object that represents the PivotTable field containing the upper-left corner of the specified range.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PivotItem">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotItem PivotItem { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotItem PivotItem" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.PivotItem" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PivotItem As PivotItem" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotItem ^ PivotItem { Microsoft::Office::Interop::Excel::PivotItem ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(740)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(740)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotItem</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-132">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект, представляющий элемент сводной таблицы, содержащий в верхний левый угол указанного диапазона.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-132">Returns a <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> object that represents the PivotTable item containing the upper-left corner of the specified range.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PivotRowLine">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotLine PivotRowLine { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotLine PivotRowLine" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.PivotRowLine" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PivotRowLine As PivotLine" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotLine ^ PivotRowLine { Microsoft::Office::Interop::Excel::PivotLine ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2673)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2673)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotLine</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-133">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> на строку для указанного объекта <b>PivotCell</b> .</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-133">Returns the <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> on a row for a specific  <b>PivotCell</b> object.</span>
+          </span>
+          <span data-ttu-id="cff7b-134">Только для чтения <b>PivotLine</b>.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-134">Read-only <b>PivotLine</b>.</span>
+          </span>
+        </summary>
+        <value>
+          <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" />
+        </value>
+        <remarks>
+          <span data-ttu-id="cff7b-135">
+            <para>Если в <b>PivotCell</b> строк, <b>PivotRowLine</b> возвращает объект <b>PivotLine</b> строки.</para>
+            <para>При <b>PivotCell</b> на столбцы <b>PivotRowLine</b> возвращает ошибку времени выполнения.</para>
+            <para>При <b>PivotCell</b> в области данных <b>PivotRowLine</b> возвращает объект <b>PivotLine</b> соответствующей строки.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-135">
+              <para>If the <b>PivotCell</b> is on rows, <b>PivotRowLine</b> returns the row's <b>PivotLine</b> object.</para>
+              <para>If the <b>PivotCell</b> is on columns, <b>PivotRowLine</b>  returns a run-time error.</para>
+              <para>If the <b>PivotCell</b> is in the data area, <b>PivotRowLine</b> returns the corresponding row's <b>PivotLine</b> object.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PivotTable">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotTable PivotTable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotTable PivotTable" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.PivotTable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PivotTable As PivotTable" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotTable ^ PivotTable { Microsoft::Office::Interop::Excel::PivotTable ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(716)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(716)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotTable</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-136">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект, представляющий отчет сводной таблицы, содержащий в верхний левый угол указанный диапазон или отчета сводной таблицы, связанный с в отчете сводной диаграммы.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-136">Returns a <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> object that represents the PivotTable report containing the upper-left corner of the specified range, or the PivotTable report associated with the PivotChart report.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.Range Range { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.Range Range" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.Range" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Range As Range" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::Range ^ Range { Microsoft::Office::Interop::Excel::Range ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(197)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(197)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-137">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон указанной PivotCell применяется к.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-137">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Range" /> object that represents the range the specified PivotCell applies to.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RowItems">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.PivotItemList RowItems { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.PivotItemList RowItems" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RowItems As PivotItemList" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::PivotItemList ^ RowItems { Microsoft::Office::Interop::Excel::PivotItemList ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2190)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2190)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.PivotItemList</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-138">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> коллекции, соответствующий элементов на оси категорий, которые представляют выбранной ячейки.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-138">Returns a <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> collection that corresponds to the items on the category axis that represent the selected cell.</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ServerActions">
+      <MemberSignature Language="C#" Value="public Microsoft.Office.Interop.Excel.Actions ServerActions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Office.Interop.Excel.Actions ServerActions" />
+      <MemberSignature Language="DocId" Value="P:Microsoft.Office.Interop.Excel.PivotCell.ServerActions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ServerActions As Actions" />
+      <MemberSignature Language="C++ CLI" Value="public:&#xA; property Microsoft::Office::Interop::Excel::Actions ^ ServerActions { Microsoft::Office::Interop::Excel::Actions ^ get(); };" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Microsoft.Office.Interop.Excel</AssemblyName>
+        <AssemblyVersion>15.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Runtime.InteropServices.DispId(2491)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>get: System.Runtime.InteropServices.DispId(2491)</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Microsoft.Office.Interop.Excel.Actions</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <span data-ttu-id="cff7b-139">Представляет коллекцию действий, состоящий из OLAP определенных действий, которые могут быть выполнены.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-139">Represents a collection of actions consisting of OLAP-defined actions which can be executed.</span>
+          </span>
+          <span data-ttu-id="cff7b-140">Действия относятся только к сводных таблиц, существующих на уровне рабочего листа.</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-140">The actions are specific to PivotTables existing at a worksheet-level.</span>
+          </span>
+          <span data-ttu-id="cff7b-141">Только для чтения</span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-141">Read-only</span>
+          </span>
+        </summary>
+        <value>To be added.</value>
+        <remarks>
+          <span data-ttu-id="cff7b-142">
+            <para>Действия с сервера — это дополнительная функция, которая администратора куба OLAP можно определить на сервере, использующем член куба или измерения как параметр в запрос для получения подробных сведений в куб.</para>
+            <para />
+          </span>
+          <span class="sxs-lookup">
+            <span data-stu-id="cff7b-142">
+              <para>A server action is an optional feature that an OLAP cube administrator can define on a server that uses a cube member or measure as a parameter into a query to obtain details in the cube.</para>
+              <para />
+            </span>
+          </span>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
