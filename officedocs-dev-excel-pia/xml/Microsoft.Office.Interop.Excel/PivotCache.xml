@@ -4,7 +4,7 @@
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="07/19/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
     <Meta Name="ms.locfileid" Value="20579501" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface PivotCache" />
@@ -35,7 +35,7 @@
         <b>Сводный кэш</b> объектов должна быть членом <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> семейства.</para>
       <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotCache" /> метод, возвращающий объект <b>сводный кэш</b> для отчета сводной таблицы (у каждого отчета имеется только один кэша).</para>
       <para>Использования <b>PivotCaches</b>(<paramref name="index" />), где <paramref name="index" /> является номером кэш сводной таблицы для возврата объекта <b>сводный кэш</b> из коллекции <b>PivotCaches</b> для книги.</para>
-      <para />
+      <para></para>
     </remarks>
   </Docs>
   <Members>
@@ -68,7 +68,7 @@
           <para>Свойство <b>ADOConnection</b> предоставляет Microsoft Excel подключение к поставщику данных, что позволяет пользователю создавать код в контексте текущего сеанса, который использует Excel с помощью ADO (реляционной) или ADOMD (источник OLAP).</para>
           <para>
             <b>ADOConnection</b> свойство доступно только для сеансов где источник данных — это источник данных OLE DB. Если нет сеанса ADO запрос приведет к ошибке времени выполнения.</para> Свойство 
-          <para><b>ADOConnection</b> можно использовать для любой на основе OLEDB кэша с помощью ADO. Объект ADO подключения можно использовать с ADOMD для поиска сведений о — это кэш на основе данных кубов OLAP.</para><para /></remarks>
+          <para><b>ADOConnection</b> можно использовать для любой на основе OLEDB кэша с помощью ADO. Объект ADO подключения можно использовать с ADOMD для поиска сведений о — это кэш на основе данных кубов OLAP.</para><para></para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -129,8 +129,8 @@
           <b>Значение true,</b> Если выполняется запрос в таблице запроса или отчета сводной таблицы выполняются асинхронно (в фоновом режиме).</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников данных OLAP это свойство доступно только для чтения и всегда возвращает <b>значение False</b>.</para>
-          <para />
+          <para>OLAP для источников данных, это свойство доступно только для чтения и всегда возвращает <b>значение False</b>.</para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -163,8 +163,8 @@
         <summary>Возвращает или задает командную строку для указанного источника данных.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников OLE DB <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.CommandType" /> свойство описывает тип значения свойства <b>CommandText</b> .</para>
-          <para />
+          <para>Источников для OLE DB <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.CommandType" /> свойство описывает тип значения свойства <b>CommandText</b> .</para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -209,7 +209,7 @@
             <b>xlCmdTable</b>. Содержит имя таблицы для доступа к источникам данных OLE DB.</para>
           <para>Можно задать значение, только если свойство <b>CommandType</b><see cref="P:Microsoft.Office.Interop.Excel.PivotCache.QueryType" /> свойство для запроса таблицы или сводной таблицы кэша — это <b>xlOLEDBQuery</b>.</para>
           <para>Если значение свойства <b>CommandType</b><b>xlCmdCube</b>, не может изменить это значение, если отчет сводной таблицы, связанный с таблицей запроса.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -247,7 +247,7 @@
           <para>При использовании автономного файла, установить <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> значение <b>True</b> и использование <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.LocalConnection" /> вместо свойства <b>подключения</b> .</para>
           <para>Дополнительные сведения о синтаксисе строки подключения можно <see cref="M:Microsoft.Office.Interop.Excel.PivotCaches.Add(Microsoft.Office.Interop.Excel.XlPivotTableSourceType,System.Object)" /> методу коллекции <b>PivotCaches</b> .</para>
           <para>Также можно получить доступ к источнику данных непосредственно с помощью библиотеки Microsoft ActiveX Data Objects (ADO) вместо.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -308,7 +308,7 @@
               <description>Сводной диаграммы, созданный с помощью ссылки на новые сводной таблицы уровне книги автономного.</description>
             </item>
           </list>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -344,8 +344,8 @@
         <summary>Создание отчета сводной таблицы на основе <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объекта.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>Альтернативный способ создания отчета сводной таблицы на основе кэша сводной таблицы, в разделе <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.</para>
-          <para />
+          <para>Альтернативный способ создания отчета сводной таблицы на основе кэша сводной таблицы, в разделе <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект.</para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -376,7 +376,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para /></remarks>
+          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableRefresh">
@@ -412,7 +412,7 @@
           <para>
             <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.RefreshOnFileOpen" /> Свойство игнорируется, если свойство <b>EnableRefresh</b> имеет значение <b>False</b>.</para>
           <para>Для источников данных OLAP, назначить этому свойству значение <b>False</b> отключает обновлений.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -469,7 +469,11 @@
       <Docs>
         <summary>Возвращает <b>значение True,</b> Если <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.MaintainConnection" /> свойство имеет <b>значение True</b> и кэш сводной таблицы в настоящее время подключения к источнику. Возвращает <b>значение False</b> , если в настоящее время не подключен к источнику.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>сетевым розеткам</b> не проверяет, чтобы увидеть, подключен ли подключение. Даже в том случае, если это свойство возвращает <b>значение True</b>, Отправка команды к поставщику может приводит к ошибке, если подключение больше не является допустимым.</para><para>Требует, что тип источника кэша является внешним и подключена к источнику данных OLE DB.</para><para /></remarks>
+        <remarks>
+          <para>Свойство <b>сетевым розеткам</b> не проверяет, чтобы увидеть, подключен ли подключение. Даже в том случае, если это свойство возвращает <b>значение True</b>, Отправка команды к поставщику может приводит к ошибке, если подключение больше не является допустимым.</para>
+          <para>Требует, что тип источника кэша является внешним и подключена к источнику данных OLE DB.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="LocalConnection">
@@ -505,7 +509,7 @@
           <para>Свойства <b>LocalConnection</b> не инициировать сразу же подключения к источнику данных. Сначала необходимо использовать <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> метод для подключения и извлечения данных.</para>
           <para>Значение свойства <b>LocalConnection</b> используется, если <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> задано значение <b>True</b>. Если свойство <b>UseLocalConnection</b> имеет значение false, <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойство указывает строку подключения для таблицы запросов на основе источников файлов локальному кубу.</para>
           <para>Дополнительные сведения о синтаксисе строки подключения см <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> методу коллекции <b>сводных таблиц</b> .</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -541,7 +545,7 @@
         <remarks>
           <para>Можно задать только если свойство <b>MaintainConnection</b><see cref="P:Microsoft.Office.Interop.Excel.PivotCache.QueryType" /> запроса таблицы или сводной таблицы кэша задано значение <b>xlOLEDBQuery</b>.</para>
           <para>, Если предполагается частых запросов на сервер, установка для этого свойства <b>значения True</b> может улучшить производительность за счет сокращения времени повторного подключения. Свойство <b>значение False,</b> при указании открытое подключение к закрытию.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -571,7 +575,7 @@
           <para>После того как кэш разрыв подключения и пользователю необходимо повторно установить подключение можно использовать метод <b>MakeConnection</b> .</para>
           <para>Различные объекты и методы может возвращать ошибку времени выполнения, если кэш не подключен. Использование этого метода гарантирует подключения до выполнения других объектов или методы.</para>
           <para>Этот метод приведет к ошибке времени выполнения при <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.MaintainConnection" /> свойство указанного кэш сводной таблицы имеет значение <b>False</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceType" /><b>xlExternal</b>не были присвоены свойства указанного кэш сводной таблицы или не имеет подключения OLEDB.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -603,7 +607,7 @@
         <remarks>
           <para>Свойство <b>MemoryUsed</b> отражает временные состояние кэша, в то время, которое будет опрошен.</para>
           <para>Если <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объект имеет отчет сводной таблицы, не подключенного к нему, данное свойство возвращает нуль (0).</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -646,7 +650,7 @@
             <b>xlMissingItemsNone</b> не уникальных элементов в каждой сводных полей допускается (0).</para>
           <para>Этого свойства может быть присвоено значение в диапазоне от 0 до 32500. Если указано целое число меньше нуля, это эквивалентно указание <b>xlMissingItemsDefault</b>. Целые числа больше, чем 32,500 можно указать, но будет иметь тот же эффект, что и при указании <b>xlMissingItemsMax</b>.</para>
           <para>Свойство <b>MissingItemsLimit</b> работает только для не - сводных таблиц OLAP; в противном случае может возникнуть ошибка времени выполнения.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -710,7 +714,7 @@
         <remarks>
           <para>Кэш оптимизации приводит к дополнительных запросов и снижает производительность начальной отчета сводной таблицы.</para>
           <para>Для источников данных OLE DB, это свойство доступно только для чтения и всегда возвращает <b>значение False</b>.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -783,7 +787,7 @@
           <para>
             <b>xlODBCQuery</b>. На основе источника данных ODBC.</para>
           <para>Укажите источник данных в префикс для <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> значение свойства.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -814,7 +818,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Это свойство соответствует временные состояние кэша в то время, которое будет опрошен. Кэш можно изменить между запросами.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -848,7 +852,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Если это свойство используется для перезаписи существующего набора данных, изменения вступят в силу при <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> метод выполняется.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -905,7 +909,7 @@
         <remarks>
           <para>Кэш должны иметь по крайней мере один отчет сводной таблицы, связанные с его.</para>
           <para>Для источников данных OLAP, это свойство обновляется после каждого запроса.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -966,10 +970,7 @@
         <summary>
           <b>Значение true,</b> Если сводной таблицы, кэширование выполняется автоматически обновляется каждый раз, книга будет открыта. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Отчеты сводной таблицы, не обновляются автоматически. Использование <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> метод для обновления данных после открытия книги.</para>
-          <para />
-        </remarks>
+        <remarks>Отчеты сводных таблиц <para>не обновляются автоматически. Использование <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> метод для обновления данных после открытия книги.</para><para></para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RefreshPeriod">
@@ -1003,7 +1004,7 @@
         <remarks>
           <para>Установка периода 0 (ноль) отключает автоматическую истекшим временем обновится и соответствует назначить этому свойству значение <b>Null</b>.</para>
           <para>Значение свойства <b>RefreshPeriod</b> может быть целое число от 0 до 32 767.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1069,7 +1070,7 @@
             <b>xlAsRequired</b> кэш использует сведения об внешнего источника подключиться, используя <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойство.</para>
           <para>
             <b>xlNever</b> кэш никогда не использует сведения об источника повторное подключение.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1136,7 +1137,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Это свойство влияет только запросы ODBC.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1220,7 +1221,7 @@
             </item>
           </list>
           <para>Это свойство недоступно для источников данных OLE DB.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1250,8 +1251,8 @@
         <summary>Возвращает <b>строку</b> , указывающую исходный файл данных для кэша сводной таблицы.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников данных на основе файла (например, Microsoft Access) свойство <b>SourceDataFile</b> содержит полный путь к исходному файлу данных. Он имеет <b>значение Null</b> для источников данных на стороне сервера (например SQL Server). Свойство <b>SourceDataFile</b> задано значение <b>Null</b> , если <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> программным путем изменения свойства.</para>
-          <para />
+          <para>Данных на основе файла источниках (например, Microsoft Access), свойство <b>SourceDataFile</b> содержит полный путь к исходному файлу данных. Он имеет <b>значение Null</b> для источников данных на стороне сервера (например SQL Server). Свойство <b>SourceDataFile</b> задано значение <b>Null</b> , если <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойство изменяется программным путем.</para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1298,7 +1299,7 @@
           <para>
             <b>xlScenario</b>
           </para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1373,7 +1374,7 @@
           <para>Значение по умолчанию — <b>False</b>. Если свойство имеет значение <b>True</b> для <b>сводный кэш</b>, обновление какие-либо <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> подключенного к, что <b>сводный кэш</b> будет обновляться <b>сводный кэш</b> и все вложенные <b>сводных таблиц</b> для версии 2007 (PivotTable.Version = 3) как часть обновление.</para>
           <para>, Если свойство имеет значение <b>False</b> для <b>сводный кэш</b>, обновление любой <b>сводной таблицы</b> подключенного к, <b>сводный кэш</b> не будет изменяться, версия <b>сводный кэш</b>, а также версии все вложенные <b>Сводные таблицы </b>. Прежде чем обновить все они оставаться той же версии.</para>
           <para>Сохранение в формате файла short_Excel2007 при совместимость режим будет этому свойству присвоено значение <b>True</b> для всех <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> в книге.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1438,7 +1439,7 @@
         </value>
         <remarks>
           <para>Данное свойство возвращает номер версии <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. Параметры по умолчанию и поведение в зависимости от версии о предоставлении старой <b>сводной таблицы</b> объектной модели кода в 1st_Excel12 с ведут при версии <b>сводной таблицы</b> соответствует версии Excel, для которого создается код.</para>
-          <para />
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -1468,8 +1469,9 @@
         <summary>Устанавливает соединение между текущей книги и <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объекта. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Объект <b>WorkbookConnection</b> представляет подключение к внешнему источнику данных.</para>
-          <para />
+          <para>
+            <b>WorkbookConnection</b> представляет подключение к внешнему источнику данных.</para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
