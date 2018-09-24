@@ -1,10 +1,10 @@
 <Type Name="ChartGroups" FullName="Microsoft.Office.Interop.Excel.ChartGroups">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ed49e202a12a761d2ea1f0fade680591aab69567" />
+    <Meta Name="ms.openlocfilehash" Value="d05b335ff2ac16ca069b154e14a4f4ac9e9eb27d" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20582770" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ChartGroups : System.Collections.IEnumerable" />
@@ -34,78 +34,122 @@
   </Attributes>
   <Docs>
     <summary>
-      <span data-ttu-id="07842-101">Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объектов в указанную диаграмму.</span>
+      <span data-ttu-id="54c15-101">Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объектов в указанную диаграмму.</span>
       <span class="sxs-lookup">
-        <span data-stu-id="07842-101">A collection of all the <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> objects in the specified chart.</span>
+        <span data-stu-id="54c15-101">A collection of all the <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> objects in the specified chart.</span>
       </span>
     </summary>
     <remarks>
-      <span data-ttu-id="07842-102">
-        <para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект представляет один или несколько серии отображения на диаграмме с тот же формат. Диаграмма содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек. Отдельных диаграмм может содержать, например, группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</para>
-        <para>Использования <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> метод, чтобы вернуть <b>коллекцию ChartGroups</b> коллекции. Используйте <b>коллекцию ChartGroups</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса группа диаграммы, чтобы возвратить объект <b>ChartGroup</b> . Если диаграмма была активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" />.</para>
-        <para>Так как номер индекса для конкретной диаграммы группы могут изменяться при изменении формата диаграммы, используемой для этой группы, можно также использовать один из методов ярлык группы именованные диаграммы для возвращения группы диаграммы. <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> Метод возвращает коллекцию групп круговой диаграммы на диаграмме <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод возвращает коллекцию групп диаграммы строки и т. д. Каждый из этих методов можно использовать с числом индекса для возврата объекта <b>ChartGroup</b> или без числом индекса для возврата коллекции <b>коллекцию ChartGroups</b> . Доступны следующие методы группы диаграммы:</para>
-        <list type="bullet">
-          <item>
-            <description>
-              <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> метод</description>
-          </item>
-          <item>
-            <description>
-              <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> метод</description>
-          </item>
-          <item>
-            <description>
-              <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> метод</description>
-          </item>
-          <item>
-            <description>
-              <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> метод</description>
-          </item>
-          <item>
-            <description>
-              <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод</description>
-          </item>
-          <item>
-            <description>
-              <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> метод</description>
-          </item>
-        </list>
-        <para></para>
-      </span>
-      <span class="sxs-lookup">
-        <span data-stu-id="07842-102">
-          <para>Each <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> object represents one or more series plotted in a chart with the same format. A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format.</para>
-          <para>Use the <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> method to return the <b>ChartGroups</b> collection. Use <b>ChartGroups</b>(<paramref name="index" />), where <paramref name="index" /> is the chart-group index number, to return a single <b>ChartGroup</b> object. If the chart has been activated, you can use <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" />.</para>
-          <para>Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method returns the collection of pie chart groups in a chart, the <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single <b>ChartGroup</b> object, or without an index number to return a <b>ChartGroups</b> collection. The following chart group methods are available:</para>
-          <list type="bullet">
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method</description>
-            </item>
-          </list>
-          <para></para>
+      <para>
+        <span data-ttu-id="54c15-102">Каждый <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект представляет один или несколько серии отображения на диаграмме с тот же формат.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-102">Each <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> object represents one or more series plotted in a chart with the same format.</span>
         </span>
-      </span>
+        <span data-ttu-id="54c15-103">Диаграмма содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-103">A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points.</span>
+        </span>
+        <span data-ttu-id="54c15-104">К примеру отдельных диаграмм может содержать группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-104">For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format.</span>
+        </span>
+      </para>
+      <para>
+        <span data-ttu-id="54c15-105">Использование <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> метод, чтобы вернуть <b>коллекцию ChartGroups</b> коллекции.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-105">Use the <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> method to return the <b>ChartGroups</b> collection.</span>
+        </span>
+        <span data-ttu-id="54c15-106">Используйте <b>коллекцию ChartGroups</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса группа диаграммы, чтобы возвратить объект <b>ChartGroup</b> .</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-106">Use <b>ChartGroups</b>(<paramref name="index" />), where <paramref name="index" /> is the chart-group index number, to return a single <b>ChartGroup</b> object.</span>
+        </span>
+        <span data-ttu-id="54c15-107">Если диаграмма была активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" />.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-107">If the chart has been activated, you can use <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" />.</span>
+        </span>
+      </para>
+      <para>
+        <span data-ttu-id="54c15-108">Так как номер индекса для конкретной диаграммы группы могут изменяться при изменении формата диаграммы, используемой для этой группы, может быть проще использовать один из методов ярлык группы именованные диаграммы для возвращения группы диаграммы.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-108">Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group.</span>
+        </span>
+        <span data-ttu-id="54c15-109">
+          <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> Метод возвращает коллекцию групп круговой диаграммы на диаграмме <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод возвращает коллекцию групп диаграммы строки и т. д.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-109">The <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method returns the collection of pie chart groups in a chart, the <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method returns the collection of line chart groups, and so on.</span>
+        </span>
+        <span data-ttu-id="54c15-110">Каждый из этих методов можно использовать с числом индекса для возврата объекта <b>ChartGroup</b> или без числом индекса для возврата коллекции <b>коллекцию ChartGroups</b> .</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-110">Each of these methods can be used with an index number to return a single <b>ChartGroup</b> object, or without an index number to return a <b>ChartGroups</b> collection.</span>
+        </span>
+        <span data-ttu-id="54c15-111">Доступны следующие методы группы диаграммы:</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="54c15-111">The following chart group methods are available:</span>
+        </span>
+      </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <span data-ttu-id="54c15-112">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-112">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="54c15-113">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-113">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="54c15-114">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-114">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="54c15-115">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-115">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="54c15-116">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-116">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="54c15-117">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-117">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+      </list>
+      <para></para>
     </remarks>
   </Docs>
   <Members>
@@ -133,13 +177,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="07842-103">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект).</span>
+          <span data-ttu-id="54c15-118">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект).</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-103">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the creator of the specified object (you can use this property with an OLE Automation object to return the application of that object).</span>
+            <span data-stu-id="54c15-118">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the creator of the specified object (you can use this property with an OLE Automation object to return the application of that object).</span>
           </span>
-          <span data-ttu-id="07842-104">Только для чтения.</span>
+          <span data-ttu-id="54c15-119">Только для чтения.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-104">Read-only.</span>
+            <span data-stu-id="54c15-119">Read-only.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -170,13 +214,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="07842-105">Возвращает число объектов в коллекции.</span>
+          <span data-ttu-id="54c15-120">Возвращает число объектов в коллекции.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-105">Returns the number of objects in the collection.</span>
+            <span data-stu-id="54c15-120">Returns the number of objects in the collection.</span>
           </span>
-          <span data-ttu-id="07842-106">Только для чтения <b>целое число</b>.</span>
+          <span data-ttu-id="54c15-121">Только для чтения <b>целое число</b>.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-106">Read-only <b>Integer</b>.</span>
+            <span data-stu-id="54c15-121">Read-only <b>Integer</b>.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -207,28 +251,32 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="07842-107">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
+          <span data-ttu-id="54c15-122">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-107">Returns a 32-bit integer that indicates the application in which this object was created.</span>
+            <span data-stu-id="54c15-122">Returns a 32-bit integer that indicates the application in which this object was created.</span>
           </span>
-          <span data-ttu-id="07842-108">Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</span>
+          <span data-ttu-id="54c15-123">Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-108">If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</span>
+            <span data-stu-id="54c15-123">If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</span>
           </span>
-          <span data-ttu-id="07842-109">Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</span>
+          <span data-ttu-id="54c15-124">Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-109">Read-only <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</span>
+            <span data-stu-id="54c15-124">Read-only <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="07842-110">Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></span>
-          <span class="sxs-lookup">
-            <span data-stu-id="07842-110">
-              <para>The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code. For example, Microsoft Excel has the creator code XCEL.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="54c15-125">Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-125">The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code.</span>
             </span>
-          </span>
+            <span data-ttu-id="54c15-126">Например Microsoft Excel содержит код создателя XCEL.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="54c15-126">For example, Microsoft Excel has the creator code XCEL.</span>
+            </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -288,19 +336,19 @@
       </Parameters>
       <Docs>
         <param name="Index">
-          <span data-ttu-id="07842-111">Требуется <b>объект</b>.</span>
+          <span data-ttu-id="54c15-127">Требуется <b>объект</b>.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-111">Required <b>Object</b>.</span>
+            <span data-stu-id="54c15-127">Required <b>Object</b>.</span>
           </span>
-          <span data-ttu-id="07842-112">Имя или номер индекса для объекта.</span>
+          <span data-ttu-id="54c15-128">Имя или номер индекса для объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-112">The name or index number for the object.</span>
+            <span data-stu-id="54c15-128">The name or index number for the object.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="07842-113">Возвращает один объект из коллекции.</span>
+          <span data-ttu-id="54c15-129">Возвращает один объект из коллекции.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-113">Returns a single object from a collection.</span>
+            <span data-stu-id="54c15-129">Returns a single object from a collection.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -331,13 +379,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="07842-114">Возвращает родительский объект для указанного объекта.</span>
+          <span data-ttu-id="54c15-130">Возвращает родительский объект для указанного объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-114">Returns the parent object for the specified object.</span>
+            <span data-stu-id="54c15-130">Returns the parent object for the specified object.</span>
           </span>
-          <span data-ttu-id="07842-115">Только для чтения.</span>
+          <span data-ttu-id="54c15-131">Только для чтения.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="07842-115">Read-only.</span>
+            <span data-stu-id="54c15-131">Read-only.</span>
           </span>
         </summary>
         <value>To be added.</value>

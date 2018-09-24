@@ -1,10 +1,10 @@
 <Type Name="ChartGroup" FullName="Microsoft.Office.Interop.Excel.ChartGroup">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="91aeed6a7dfc46c2d925ce34ca5aa8b7e1be919f" />
+    <Meta Name="ms.openlocfilehash" Value="d867c9c484716da4b2528f8d662af2030b791599" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20578248" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ChartGroup" />
@@ -30,52 +30,118 @@
   </Attributes>
   <Docs>
     <summary>
-      <span data-ttu-id="3ee95-101">Представляет один или несколько рядов на диаграмме с тот же формат.</span>
+      <span data-ttu-id="f4367-101">Представляет один или несколько рядов на диаграмме с тот же формат.</span>
       <span class="sxs-lookup">
-        <span data-stu-id="3ee95-101">Represents one or more series plotted in a chart with the same format.</span>
+        <span data-stu-id="f4367-101">Represents one or more series plotted in a chart with the same format.</span>
       </span>
-      <span data-ttu-id="3ee95-102">Объект <b>ChartGroup</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> семейства сайтов.</span>
+      <span data-ttu-id="f4367-102">Объект <b>ChartGroup</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> семейства сайтов.</span>
       <span class="sxs-lookup">
-        <span data-stu-id="3ee95-102">The <b>ChartGroup</b> object is a member of the <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> collection.</span>
+        <span data-stu-id="f4367-102">The <b>ChartGroup</b> object is a member of the <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> collection.</span>
       </span>
     </summary>
     <remarks>
-      <span data-ttu-id="3ee95-103">
-        <para>Диаграммы содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек. Отдельных диаграмм может содержать, например, группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</para> Используйте <b>коллекцию ChartGroups</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса группа диаграммы, чтобы возвратить объект <b>ChartGroup</b> . Если диаграмма была активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> свойство.</para><para>Так как номер индекса для конкретной диаграммы группы могут изменяться при изменении формата диаграммы, используемой для этой группы, можно также использовать один из методов ярлык группы именованные диаграммы для возвращения группы диаграммы. <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> Метод возвращает коллекцию групп круговой диаграммы на диаграмме <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод возвращает коллекцию групп диаграммы строки и т. д. Каждый из этих методов можно использовать с числом индекса для возврата объекта <b>ChartGroup</b> или без числом индекса для возврата коллекции <b>коллекцию ChartGroups</b> . Доступны следующие методы группы диаграммы:</para><list type="bullet"><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> метод</description></item></list><para></para></span>
-      <span class="sxs-lookup">
-        <span data-stu-id="3ee95-103">
-          <para>A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format.</para>
-          <para>Use <b>ChartGroups</b>(<paramref name="index" />), where <paramref name="index" /> is the chart-group index number, to return a single <b>ChartGroup</b> object. If the chart has been activated, you can use the <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> property.</para>
-          <para>Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method returns the collection of pie chart groups in a chart, the <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single <b>ChartGroup</b> object, or without an index number to return a <b>ChartGroups</b> collection. The following chart group methods are available:</para>
-          <list type="bullet">
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>
-                <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method</description>
-            </item>
-          </list>
-          <para></para>
+      <para>
+        <span data-ttu-id="f4367-103">Диаграмма содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-103">A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points.</span>
         </span>
-      </span>
+        <span data-ttu-id="f4367-104">К примеру отдельных диаграмм может содержать группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-104">For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format.</span>
+        </span>
+      </para>
+      <para>
+        <span data-ttu-id="f4367-105">Используйте <b>коллекцию ChartGroups</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса группа диаграммы, чтобы возвратить объект <b>ChartGroup</b> .</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-105">Use <b>ChartGroups</b>(<paramref name="index" />), where <paramref name="index" /> is the chart-group index number, to return a single <b>ChartGroup</b> object.</span>
+        </span>
+        <span data-ttu-id="f4367-106">Если диаграмма была активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> свойство.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-106">If the chart has been activated, you can use the <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> property.</span>
+        </span>
+      </para>
+      <para>
+        <span data-ttu-id="f4367-107">Так как номер индекса для конкретной диаграммы группы могут изменяться при изменении формата диаграммы, используемой для этой группы, может быть проще использовать один из методов ярлык группы именованные диаграммы для возвращения группы диаграммы.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-107">Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group.</span>
+        </span>
+        <span data-ttu-id="f4367-108">
+          <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> Метод возвращает коллекцию групп круговой диаграммы на диаграмме <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод возвращает коллекцию групп диаграммы строки и т. д.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-108">The <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method returns the collection of pie chart groups in a chart, the <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method returns the collection of line chart groups, and so on.</span>
+        </span>
+        <span data-ttu-id="f4367-109">Каждый из этих методов можно использовать с числом индекса для возврата объекта <b>ChartGroup</b> или без числом индекса для возврата коллекции <b>коллекцию ChartGroups</b> .</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-109">Each of these methods can be used with an index number to return a single <b>ChartGroup</b> object, or without an index number to return a <b>ChartGroups</b> collection.</span>
+        </span>
+        <span data-ttu-id="f4367-110">Доступны следующие методы группы диаграммы:</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="f4367-110">The following chart group methods are available:</span>
+        </span>
+      </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <span data-ttu-id="f4367-111">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-111">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="f4367-112">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-112">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="f4367-113">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-113">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="f4367-114">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-114">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="f4367-115">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-115">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="f4367-116">
+              <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" />метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-116">
+                <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+      </list>
+      <para></para>
     </remarks>
   </Docs>
   <Members>
@@ -103,9 +169,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-104">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект).</span>
+          <span data-ttu-id="f4367-117">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект).</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-104">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the creator of the specified object (you can use this property with an OLE Automation object to return the application of that object).</span>
+            <span data-stu-id="f4367-117">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the creator of the specified object (you can use this property with an OLE Automation object to return the application of that object).</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -139,23 +205,20 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-105">Возвращает группу для указанной диаграммы группы или серии.</span>
+          <span data-ttu-id="f4367-118">Возвращает группу для указанной диаграммы группы или серии.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-105">Returns the group for the specified chart group or series.</span>
+            <span data-stu-id="f4367-118">Returns the group for the specified chart group or series.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="3ee95-106">
-            <para>Для объемных диаграмм только <b>xlPrimary</b> является допустимым.</para>
-            <para></para>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="3ee95-106">
-              <para>For 3-D charts only <b>xlPrimary</b> is valid.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="f4367-119">Для объемных диаграмм действителен только <b>xlPrimary</b> .</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-119">For 3-D charts only <b>xlPrimary</b> is valid.</span>
             </span>
-          </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -186,17 +249,17 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-107">Возвращает или задает коэффициент масштабирования для может передаваться в группе указанную диаграмму.</span>
+          <span data-ttu-id="f4367-120">Возвращает или задает коэффициент масштабирования для может передаваться в группе указанную диаграмму.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-107">Returns or sets the scale factor for bubbles in the specified chart group.</span>
+            <span data-stu-id="f4367-120">Returns or sets the scale factor for bubbles in the specified chart group.</span>
           </span>
-          <span data-ttu-id="3ee95-108">Может быть целое число от 0 (ноль) равным 300, соответствующий в процентах от размера по умолчанию.</span>
+          <span data-ttu-id="f4367-121">Может быть целое число от 0 (ноль) равным 300, соответствующий в процентах от размера по умолчанию.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-108">Can be an integer value from 0 (zero) to 300, corresponding to a percentage of the default size.</span>
+            <span data-stu-id="f4367-121">Can be an integer value from 0 (zero) to 300, corresponding to a percentage of the default size.</span>
           </span>
-          <span data-ttu-id="3ee95-109">Применяется только к пузырьковых диаграмм.</span>
+          <span data-ttu-id="f4367-122">Применяется только к пузырьковых диаграмм.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-109">Applies only to bubble charts.</span>
+            <span data-stu-id="f4367-122">Applies only to bubble charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -226,15 +289,15 @@
       </Parameters>
       <Docs>
         <param name="Index">
-          <span data-ttu-id="3ee95-110">Имя или номер из категорий.</span>
+          <span data-ttu-id="f4367-123">Имя или номер из категорий.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-110">The name or number of the categories.</span>
+            <span data-stu-id="f4367-123">The name or number of the categories.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="3ee95-111">Возвращает объект, представляющий коллекцию всех категорий visible ( <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" /> семейства сайтов) в группе диаграммы.</span>
+          <span data-ttu-id="f4367-124">Возвращает объект, представляющий коллекцию всех категорий visible ( <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" /> семейства сайтов) в группе диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-111">Returns an object that represents a collection of all of the visible categories (a <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" /> collection) in the chart group.</span>
+            <span data-stu-id="f4367-124">Returns an object that represents a collection of all of the visible categories (a <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" /> collection) in the chart group.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -265,24 +328,28 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-112">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
+          <span data-ttu-id="f4367-125">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-112">Returns a 32-bit integer that indicates the application in which this object was created.</span>
+            <span data-stu-id="f4367-125">Returns a 32-bit integer that indicates the application in which this object was created.</span>
           </span>
-          <span data-ttu-id="3ee95-113">Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</span>
+          <span data-ttu-id="f4367-126">Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-113">If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</span>
+            <span data-stu-id="f4367-126">If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="3ee95-114">Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></span>
-          <span class="sxs-lookup">
-            <span data-stu-id="3ee95-114">
-              <para>The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code. For example, Microsoft Excel has the creator code XCEL.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="f4367-127">Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-127">The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code.</span>
             </span>
-          </span>
+            <span data-ttu-id="f4367-128">Например Microsoft Excel содержит код создателя XCEL.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-128">For example, Microsoft Excel has the creator code XCEL.</span>
+            </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -313,13 +380,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-115">Возвращает или задает размер отверстия в группе кольцевых диаграмм.</span>
+          <span data-ttu-id="f4367-129">Возвращает или задает размер отверстия в группе кольцевых диаграмм.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-115">Returns or sets the size of the hole in a doughnut chart group.</span>
+            <span data-stu-id="f4367-129">Returns or sets the size of the hole in a doughnut chart group.</span>
           </span>
-          <span data-ttu-id="3ee95-116">Размер отверстия выражается в процентном соотношении от размер диаграммы от 10 до 90 процентов.</span>
+          <span data-ttu-id="f4367-130">Размер отверстия выражается в процентном соотношении от размер диаграммы от 10 до 90 процентов.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-116">The hole size is expressed as a percentage of the chart size, between 10 and 90 percent.</span>
+            <span data-stu-id="f4367-130">The hole size is expressed as a percentage of the chart size, between 10 and 90 percent.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -350,13 +417,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-117">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DownBars" /> объект, представляющий вниз панелей на графике.</span>
+          <span data-ttu-id="f4367-131">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DownBars" /> объект, представляющий вниз панелей на графике.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-117">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DownBars" /> object that represents the down bars on a line chart.</span>
+            <span data-stu-id="f4367-131">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DownBars" /> object that represents the down bars on a line chart.</span>
           </span>
-          <span data-ttu-id="3ee95-118">Применяется только к графики.</span>
+          <span data-ttu-id="f4367-132">Применяется только к графики.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-118">Applies only to line charts.</span>
+            <span data-stu-id="f4367-132">Applies only to line charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -387,13 +454,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-119">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DropLines" /> объект, представляющий строки размещения сообщений для серии на графике или области диаграммы.</span>
+          <span data-ttu-id="f4367-133">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DropLines" /> объект, представляющий строки размещения сообщений для серии на графике или области диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-119">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DropLines" /> object that represents the drop lines for a series on a line chart or area chart.</span>
+            <span data-stu-id="f4367-133">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DropLines" /> object that represents the drop lines for a series on a line chart or area chart.</span>
           </span>
-          <span data-ttu-id="3ee95-120">Применяется только к графики и диаграммы с областями.</span>
+          <span data-ttu-id="f4367-134">Применяется только к графики и диаграммы с областями.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-120">Applies only to line charts or area charts.</span>
+            <span data-stu-id="f4367-134">Applies only to line charts or area charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -427,13 +494,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-121">Возвращает или задает угол первого сектора круговой диаграммы или кольцевая диаграмма градусов (часовой с вертикального).</span>
+          <span data-ttu-id="f4367-135">Возвращает или задает угол первого сектора круговой диаграммы или кольцевая диаграмма градусов (часовой с вертикального).</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-121">Returns or sets the angle of the first pie-chart or doughnut-chart slice in degrees (clockwise from vertical).</span>
+            <span data-stu-id="f4367-135">Returns or sets the angle of the first pie-chart or doughnut-chart slice in degrees (clockwise from vertical).</span>
           </span>
-          <span data-ttu-id="3ee95-122">Применяется только к круговая, объемных круговых и кольцевых диаграммах.</span>
+          <span data-ttu-id="f4367-136">Применяется только к круговая, объемных круговых и кольцевых диаграммах.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-122">Applies only to pie, 3-D pie, and doughnut charts.</span>
+            <span data-stu-id="f4367-136">Applies only to pie, 3-D pie, and doughnut charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -463,15 +530,15 @@
       </Parameters>
       <Docs>
         <param name="Index">
-          <span data-ttu-id="3ee95-123">Имя или номер из категорий.</span>
+          <span data-ttu-id="f4367-137">Имя или номер из категорий.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-123">The name or number of the categories.</span>
+            <span data-stu-id="f4367-137">The name or number of the categories.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="3ee95-124">Возвращает объект, представляющий коллекцию всех категорий видимым и отфильтрованные ( <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" />) в группе диаграммы.</span>
+          <span data-ttu-id="f4367-138">Возвращает объект, представляющий коллекцию всех категорий видимым и отфильтрованные ( <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" />) в группе диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-124">Returns an object that represents a collection of all of the visible and filtered categories (a <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" />) in the chart group.</span>
+            <span data-stu-id="f4367-138">Returns an object that represents a collection of all of the visible and filtered categories (a <see cref="T:Microsoft.Office.Interop.Excel.CategoryCollection" />) in the chart group.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -505,27 +572,24 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-125">Диаграмм и гистограмм: Возвращает или задает интервалы между строку или столбец кластеры в процентном соотношении от строки или столбца ширины.</span>
+          <span data-ttu-id="f4367-139">Диаграмм и гистограмм: Возвращает или задает интервалы между строку или столбец кластеры в процентном соотношении от строки или столбца ширины.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-125">Bar and Column charts: Returns or sets the space between bar or column clusters as a percentage of the bar or column width.</span>
+            <span data-stu-id="f4367-139">Bar and Column charts: Returns or sets the space between bar or column clusters as a percentage of the bar or column width.</span>
           </span>
-          <span data-ttu-id="3ee95-126">Вторичная круговая и вторичной гистограммы: Возвращает или задает пространство между разделами основных и дополнительных диаграммы.</span>
+          <span data-ttu-id="f4367-140">Вторичная круговая и вторичной гистограммы: Возвращает или задает пространство между разделами основных и дополнительных диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-126">Pie of Pie and Bar of Pie charts: Returns or sets the space between the primary and secondary sections of the chart.</span>
+            <span data-stu-id="f4367-140">Pie of Pie and Bar of Pie charts: Returns or sets the space between the primary and secondary sections of the chart.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="3ee95-127">
-            <para>Значение этого свойства должны быть от 0 до 500.</para>
-            <para></para>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="3ee95-127">
-              <para>The value of this property must be between 0 and 500.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="f4367-141">Значение этого свойства должны быть от 0 до 500.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-141">The value of this property must be between 0 and 500.</span>
             </span>
-          </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -556,15 +620,15 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-128">
+          <span data-ttu-id="f4367-142">
             <b>Значение true,</b> Если группа диаграммы трехмерную тени.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-128">
+            <span data-stu-id="f4367-142">
               <b>True</b> if the chart group has three-dimensional shading.</span>
           </span>
-          <span data-ttu-id="3ee95-129">Это свойство только применяется к Поверхностные диаграммы и возвращает ошибку времени выполнения при попытке задайте для него значение не поверхность диаграммы.</span>
+          <span data-ttu-id="f4367-143">Это свойство только применяется к Поверхностные диаграммы и возвращает ошибку времени выполнения при попытке задайте для него значение не поверхность диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-129">This property only applies to surface charts and will return a run-time error if you try to set it to a non-surface chart.</span>
+            <span data-stu-id="f4367-143">This property only applies to surface charts and will return a run-time error if you try to set it to a non-surface chart.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -598,15 +662,15 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-130">
+          <span data-ttu-id="f4367-144">
             <b>Значение true,</b> Если график или диаграмма линии проекции.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-130">
+            <span data-stu-id="f4367-144">
               <b>True</b> if the line chart or area chart has drop lines.</span>
           </span>
-          <span data-ttu-id="3ee95-131">Применяется только к строке и области диаграммы.</span>
+          <span data-ttu-id="f4367-145">Применяется только к строке и области диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-131">Applies only to line and area charts.</span>
+            <span data-stu-id="f4367-145">Applies only to line and area charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -640,15 +704,15 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-132">
+          <span data-ttu-id="f4367-146">
             <b>Значение true,</b> Если для графика коридор колебания.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-132">
+            <span data-stu-id="f4367-146">
               <b>True</b> if the line chart has high-low lines.</span>
           </span>
-          <span data-ttu-id="3ee95-133">Применяется только к графики.</span>
+          <span data-ttu-id="f4367-147">Применяется только к графики.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-133">Applies only to line charts.</span>
+            <span data-stu-id="f4367-147">Applies only to line charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -682,15 +746,15 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-134">
+          <span data-ttu-id="f4367-148">
             <b>Значение true,</b> Если лепестковые диаграммы подписей осей.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-134">
+            <span data-stu-id="f4367-148">
               <b>True</b> if a radar chart has axis labels.</span>
           </span>
-          <span data-ttu-id="3ee95-135">Применяется только к лепестковые диаграммы.</span>
+          <span data-ttu-id="f4367-149">Применяется только к лепестковые диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-135">Applies only to radar charts.</span>
+            <span data-stu-id="f4367-149">Applies only to radar charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -724,14 +788,14 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-136">Линии ряда или если Вторичная круговая диаграмма или панели круговая диаграмма имеет соединительные линии между два раздела имеет <b>значение true,</b> Если Гистограмма или Линейчатая диаграмма.</span>
+          <span data-ttu-id="f4367-150">Линии ряда или если Вторичная круговая диаграмма или панели круговая диаграмма имеет соединительные линии между два раздела имеет <b>значение true,</b> Если Гистограмма или Линейчатая диаграмма.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-136">
+            <span data-stu-id="f4367-150">
               <b>True</b> if a stacked column chart or bar chart has series lines or if a Pie of Pie chart or Bar of Pie chart has connector lines between the two sections.</span>
           </span>
-          <span data-ttu-id="3ee95-137">Применяется только к гистограмма с накоплением, линейчатых диаграмм, круговой диаграммы или вторичной гистограммы.</span>
+          <span data-ttu-id="f4367-151">Применяется только к гистограмма с накоплением, линейчатых диаграмм, круговой диаграммы или вторичной гистограммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-137">Applies only to stacked column charts, bar charts, Pie of Pie charts, or Bar of Pie charts.</span>
+            <span data-stu-id="f4367-151">Applies only to stacked column charts, bar charts, Pie of Pie charts, or Bar of Pie charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -765,13 +829,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-138">Значение true, если график вверх и вниз панелей.</span>
+          <span data-ttu-id="f4367-152">Значение true, если график вверх и вниз панелей.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-138">True if a line chart has up and down bars.</span>
+            <span data-stu-id="f4367-152">True if a line chart has up and down bars.</span>
           </span>
-          <span data-ttu-id="3ee95-139">Применяется только к графики.</span>
+          <span data-ttu-id="f4367-153">Применяется только к графики.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-139">Applies only to line charts.</span>
+            <span data-stu-id="f4367-153">Applies only to line charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -802,13 +866,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-140">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HiLoLines" /> объект, представляющий коридор колебания серии на графике.</span>
+          <span data-ttu-id="f4367-154">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HiLoLines" /> объект, представляющий коридор колебания серии на графике.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-140">Returns a <see cref="T:Microsoft.Office.Interop.Excel.HiLoLines" /> object that represents the high-low lines for a series on a line chart.</span>
+            <span data-stu-id="f4367-154">Returns a <see cref="T:Microsoft.Office.Interop.Excel.HiLoLines" /> object that represents the high-low lines for a series on a line chart.</span>
           </span>
-          <span data-ttu-id="3ee95-141">Применяется только к графики.</span>
+          <span data-ttu-id="f4367-155">Применяется только к графики.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-141">Applies only to line charts.</span>
+            <span data-stu-id="f4367-155">Applies only to line charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -839,9 +903,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-142">Возвращает число объектов в коллекции подобных объектов индекса.</span>
+          <span data-ttu-id="f4367-156">Возвращает число объектов в коллекции подобных объектов индекса.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-142">Returns the index number of the object within the collection of similar objects.</span>
+            <span data-stu-id="f4367-156">Returns the index number of the object within the collection of similar objects.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -875,31 +939,36 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-143">Указывает расположение строки и столбцы.</span>
+          <span data-ttu-id="f4367-157">Указывает расположение строки и столбцы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-143">Specifies how bars and columns are positioned.</span>
+            <span data-stu-id="f4367-157">Specifies how bars and columns are positioned.</span>
           </span>
-          <span data-ttu-id="3ee95-144">Может быть в диапазоне от – 100 до 100.</span>
+          <span data-ttu-id="f4367-158">Может быть в диапазоне от – 100 до 100.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-144">Can be a value between –100 and 100.</span>
+            <span data-stu-id="f4367-158">Can be a value between –100 and 100.</span>
           </span>
-          <span data-ttu-id="3ee95-145">Применяется только к плоских диаграмм и гистограмм 2-D.</span>
+          <span data-ttu-id="f4367-159">Применяется только к плоских диаграмм и гистограмм 2-D.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-145">Applies only to 2-D bar and 2-D column charts.</span>
+            <span data-stu-id="f4367-159">Applies only to 2-D bar and 2-D column charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="3ee95-146">
-            <para>Если задано значение – 100, полосы расположены так, чтобы одно полоса между ними. Если перекрытие нуль (0), нет места между панелей (одной строки начинается сразу после предыдущего панели). Если перекрытие 100, полосы расположены друг на друга.</para>
-            <para></para>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="3ee95-146">
-              <para>If this property is set to –100, bars are positioned so that there's one bar width between them. If the overlap is 0 (zero), there's no space between bars (one bar starts immediately after the preceding bar). If the overlap is 100, bars are positioned on top of each other.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="f4367-160">Если задано значение – 100, полосы расположением, чтобы не одно полоса между ними.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-160">If this property is set to –100, bars are positioned so that there's one bar width between them.</span>
             </span>
-          </span>
+            <span data-ttu-id="f4367-161">Если перекрытие нуль (0), нет места между панелей (одной строки начинается сразу после предыдущего панели).</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-161">If the overlap is 0 (zero), there's no space between bars (one bar starts immediately after the preceding bar).</span>
+            </span>
+            <span data-ttu-id="f4367-162">Если перекрытие 100, полосы расположены друг на друга.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="f4367-162">If the overlap is 100, bars are positioned on top of each other.</span>
+            </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -927,9 +996,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-147">Возвращает родительский объект для указанного объекта.</span>
+          <span data-ttu-id="f4367-163">Возвращает родительский объект для указанного объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-147">Returns the parent object for the specified object.</span>
+            <span data-stu-id="f4367-163">Returns the parent object for the specified object.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -960,9 +1029,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-148">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TickLabels" /> объект, представляющий подписями осей для группы указанную диаграмму.</span>
+          <span data-ttu-id="f4367-164">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TickLabels" /> объект, представляющий подписями осей для группы указанную диаграмму.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-148">Returns a <see cref="T:Microsoft.Office.Interop.Excel.TickLabels" /> object that represents the radar axis labels for the specified chart group.</span>
+            <span data-stu-id="f4367-164">Returns a <see cref="T:Microsoft.Office.Interop.Excel.TickLabels" /> object that represents the radar axis labels for the specified chart group.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -996,13 +1065,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-149">Возвращает или задает размер дополнительного раздела Вторичная круговая диаграмма или круговой диаграмме, в процентах от размера основной круговой диаграммы.</span>
+          <span data-ttu-id="f4367-165">Возвращает или задает размер дополнительного раздела Вторичная круговая диаграмма или круговой диаграмме, в процентах от размера основной круговой диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-149">Returns or sets the size of the secondary section of either a Pie of Pie chart or a Bar of Pie chart, as a percentage of the size of the primary pie.</span>
+            <span data-stu-id="f4367-165">Returns or sets the size of the secondary section of either a Pie of Pie chart or a Bar of Pie chart, as a percentage of the size of the primary pie.</span>
           </span>
-          <span data-ttu-id="3ee95-150">Может быть в диапазоне от 5 до 200.</span>
+          <span data-ttu-id="f4367-166">Может быть в диапазоне от 5 до 200.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-150">Can be a value from 5 to 200.</span>
+            <span data-stu-id="f4367-166">Can be a value from 5 to 200.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1032,19 +1101,19 @@
       </Parameters>
       <Docs>
         <param name="Index">
-          <span data-ttu-id="3ee95-151">Необязательный элемент <b>Object</b>.</span>
+          <span data-ttu-id="f4367-167">Необязательный элемент <b>Object</b>.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-151">Optional <b>Object</b>.</span>
+            <span data-stu-id="f4367-167">Optional <b>Object</b>.</span>
           </span>
-          <span data-ttu-id="3ee95-152">Имя или номер ряда.</span>
+          <span data-ttu-id="f4367-168">Имя или номер ряда.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-152">The name or number of the series.</span>
+            <span data-stu-id="f4367-168">The name or number of the series.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="3ee95-153">Возвращает объект, представляющий либо один серии ( <see cref="T:Microsoft.Office.Interop.Excel.Series" /> объект) или коллекцию всех серии ( <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> коллекции) на диаграмме или группа диаграммы.</span>
+          <span data-ttu-id="f4367-169">Возвращает объект, представляющий либо один серии ( <see cref="T:Microsoft.Office.Interop.Excel.Series" /> объект) или коллекцию всех серии ( <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> коллекции) на диаграмме или группа диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-153">Returns an object that represents either a single series (a <see cref="T:Microsoft.Office.Interop.Excel.Series" /> object) or a collection of all the series (a <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> collection) in the chart or chart group.</span>
+            <span data-stu-id="f4367-169">Returns an object that represents either a single series (a <see cref="T:Microsoft.Office.Interop.Excel.Series" /> object) or a collection of all the series (a <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> collection) in the chart or chart group.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -1075,13 +1144,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-154">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SeriesLines" /> объект, представляющий ряда линейчатая диаграмма с накоплением или Гистограмма.</span>
+          <span data-ttu-id="f4367-170">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SeriesLines" /> объект, представляющий ряда линейчатая диаграмма с накоплением или Гистограмма.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-154">Returns a <see cref="T:Microsoft.Office.Interop.Excel.SeriesLines" /> object that represents the series lines for a stacked bar chart or a stacked column chart.</span>
+            <span data-stu-id="f4367-170">Returns a <see cref="T:Microsoft.Office.Interop.Excel.SeriesLines" /> object that represents the series lines for a stacked bar chart or a stacked column chart.</span>
           </span>
-          <span data-ttu-id="3ee95-155">Применяется только к линейчатая диаграмма и диаграммы с накоплением.</span>
+          <span data-ttu-id="f4367-171">Применяется только к линейчатая диаграмма и диаграммы с накоплением.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-155">Applies only to stacked bar and stacked column charts.</span>
+            <span data-stu-id="f4367-171">Applies only to stacked bar and stacked column charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1115,15 +1184,15 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-156">
+          <span data-ttu-id="f4367-172">
             <b>Значение true,</b> Если отрицательные значения отображаются для группы диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-156">
+            <span data-stu-id="f4367-172">
               <b>True</b> if negative bubbles are shown for the chart group.</span>
           </span>
-          <span data-ttu-id="3ee95-157">Действительно только для пузырьковых диаграмм.</span>
+          <span data-ttu-id="f4367-173">Действительно только для пузырьковых диаграмм.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-157">Valid only for bubble charts.</span>
+            <span data-stu-id="f4367-173">Valid only for bubble charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1157,13 +1226,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-158">Возвращает или задает размер пузырьковой представляет на пузырьковой диаграммы.</span>
+          <span data-ttu-id="f4367-174">Возвращает или задает размер пузырьковой представляет на пузырьковой диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-158">Returns or sets what the bubble size represents on a bubble chart.</span>
+            <span data-stu-id="f4367-174">Returns or sets what the bubble size represents on a bubble chart.</span>
           </span>
-          <span data-ttu-id="3ee95-159">Может быть одним из следующих констант <b>XlSizeRepresents</b> : <b>xlSizeIsArea</b> или <b>xlSizeIsWidth</b>.</span>
+          <span data-ttu-id="f4367-175">Может быть одним из следующих констант <b>XlSizeRepresents</b> : <b>xlSizeIsArea</b> или <b>xlSizeIsWidth</b>.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-159">Can be either of the following <b>XlSizeRepresents</b> constants: <b>xlSizeIsArea</b> or <b>xlSizeIsWidth</b>.</span>
+            <span data-stu-id="f4367-175">Can be either of the following <b>XlSizeRepresents</b> constants: <b>xlSizeIsArea</b> or <b>xlSizeIsWidth</b>.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1197,9 +1266,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-160">Возвращает или задает способ разделить два раздела Вторичная круговая диаграмма или круговой диаграмме.</span>
+          <span data-ttu-id="f4367-176">Возвращает или задает способ разделить два раздела Вторичная круговая диаграмма или круговой диаграмме.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-160">Returns or sets the way the two sections of either a Pie of Pie chart or a Bar of Pie chart are split.</span>
+            <span data-stu-id="f4367-176">Returns or sets the way the two sections of either a Pie of Pie chart or a Bar of Pie chart are split.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1233,9 +1302,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-161">Возвращает или задает пороговое значение, отделяя два раздела Вторичная круговая диаграмма или круговой диаграмме.</span>
+          <span data-ttu-id="f4367-177">Возвращает или задает пороговое значение, отделяя два раздела Вторичная круговая диаграмма или круговой диаграмме.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-161">Returns or sets the threshold value separating the two sections of either a Pie of Pie chart or a Bar of Pie chart.</span>
+            <span data-stu-id="f4367-177">Returns or sets the threshold value separating the two sections of either a Pie of Pie chart or a Bar of Pie chart.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1275,9 +1344,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-162">Зарезервировано для внутреннего использования.</span>
+          <span data-ttu-id="f4367-178">Зарезервировано для внутреннего использования.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-162">Reserved for internal use.</span>
+            <span data-stu-id="f4367-178">Reserved for internal use.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1317,9 +1386,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-163">Зарезервировано для внутреннего использования.</span>
+          <span data-ttu-id="f4367-179">Зарезервировано для внутреннего использования.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-163">Reserved for internal use.</span>
+            <span data-stu-id="f4367-179">Reserved for internal use.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1350,13 +1419,13 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-164">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.UpBars" /> объект, представляющий вверх панелей на графике.</span>
+          <span data-ttu-id="f4367-180">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.UpBars" /> объект, представляющий вверх панелей на графике.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-164">Returns an <see cref="T:Microsoft.Office.Interop.Excel.UpBars" /> object that represents the up bars on a line chart.</span>
+            <span data-stu-id="f4367-180">Returns an <see cref="T:Microsoft.Office.Interop.Excel.UpBars" /> object that represents the up bars on a line chart.</span>
           </span>
-          <span data-ttu-id="3ee95-165">Применяется только к графики.</span>
+          <span data-ttu-id="f4367-181">Применяется только к графики.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-165">Applies only to line charts.</span>
+            <span data-stu-id="f4367-181">Applies only to line charts.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -1390,15 +1459,15 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="3ee95-166">
+          <span data-ttu-id="f4367-182">
             <b>Значение true,</b> Если Microsoft Excel назначает разные цвета или узора к маркерам данных.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-166">
+            <span data-stu-id="f4367-182">
               <b>True</b> if Microsoft Excel assigns a different color or pattern to each data marker.</span>
           </span>
-          <span data-ttu-id="3ee95-167">Диаграмма должен содержать только один ряд.</span>
+          <span data-ttu-id="f4367-183">Диаграмма должен содержать только один ряд.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="3ee95-167">The chart must contain only one series.</span>
+            <span data-stu-id="f4367-183">The chart must contain only one series.</span>
           </span>
         </summary>
         <value>To be added.</value>
