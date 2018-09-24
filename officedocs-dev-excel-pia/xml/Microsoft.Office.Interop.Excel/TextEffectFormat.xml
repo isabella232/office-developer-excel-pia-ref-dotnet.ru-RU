@@ -1,10 +1,10 @@
 <Type Name="TextEffectFormat" FullName="Microsoft.Office.Interop.Excel.TextEffectFormat">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="988e85ab2e6ef7b42cff85a134ea2c142a4955d7" />
+    <Meta Name="ms.openlocfilehash" Value="fbb84779b82f0d04327c445fb2dede8ff19b5468" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20581013" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface TextEffectFormat : Microsoft.Office.Core._IMsoDispObj" />
@@ -125,8 +125,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FontBold">
@@ -410,7 +412,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Значения для этого свойства соответствуют форматов в диалоговом окне Коллекция WordArt (нумерованные слева направо, сверху вниз).</para>
-          <para>Свойства <b>PresetTextEffect</b> автоматически устанавливает многие другие свойства форматирования указанной фигуры.</para>
+          <para>Установка свойства <b>PresetTextEffect</b> автоматически устанавливает многие другие свойства форматирования указанной фигуры.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -447,7 +449,7 @@
         <remarks>
           <para>Если объект WordArt горизонтальный текст, установка для свойства <b>RotatedChars</b><b>msoTrue</b> поворот знаки 90 градусов против. Если объект WordArt вертикальной, установка для свойства <b>RotatedChars</b><b>msoFalse</b> поворот знаки 90 градусов часовой. Использование <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> метод для переключения между горизонтальных и вертикальных текста.</para>
           <para>
-            <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объектов и свойств <b>RotatedChars</b> и <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> метод <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> объекта все влияют на ориентация символов и направление потока текст в <b>фигуру</b> объекта, который Представляет WordArt. В некоторых случаях требуется проверить, узнайте, как объединить эффекты этих свойств и методов для получения результатов, вы должны.</para>
+            <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объектов и свойств <b>RotatedChars</b> и <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> метод <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> объекта все влияют на ориентация символов и направление потока текста в объект <b>фигуры</b> , представляющий WordArt. Может потребоваться проверить, узнайте, как объединить эффекты этих свойств и методов для получения результатов, который будет.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -508,7 +510,7 @@
         <remarks>
           <para>С помощью метода <b>ToggleVerticalText</b> меняет местами значения <see cref="P:Microsoft.Office.Interop.Excel.Shape.Width" /> и <see cref="P:Microsoft.Office.Interop.Excel.Shape.Height" /> свойства объекта <b>Shape</b> , который представляет объект WordArt и оставляет <see cref="P:Microsoft.Office.Interop.Excel.Shape.Left" /> и <see cref="P:Microsoft.Office.Interop.Excel.Shape.Top" /> свойства без изменений.</para>
           <para>
-            <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта и <see cref="P:Microsoft.Office.Interop.Excel.TextEffectFormat.RotatedChars" /> свойство и метод <b>ToggleVerticalText</b><see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> объекта все влияют на ориентация символов и направление потока текст в <b>фигуру</b> Объект, представляющий WordArt. В некоторых случаях требуется проверить, узнайте, как объединить эффекты этих свойств и методов для получения результатов, вы должны.</para>
+            <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> Метод и <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта и <see cref="P:Microsoft.Office.Interop.Excel.TextEffectFormat.RotatedChars" /> свойство и метод <b>ToggleVerticalText</b><see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> объекта все влияют на ориентация символов и направление потока текст в <b>фигуру</b> объекта, который Представляет WordArt. Может потребоваться проверить, узнайте, как объединить эффекты этих свойств и методов для получения результатов, который будет.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -542,7 +544,7 @@
         <summary>Возвращает или задает коэффициент горизонтальное пространство, выделенной для всех символов в указанном WordArt по ширине знаков. Может быть в диапазоне от 0 (ноль) до 5.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Большие значения для этого свойства укажите достаточно пространство между символами; значение меньше 1 может осуществлять символ перекрытие.</para>
+          <para>Большие значения для этого свойства укажите достаточно от символов; значение меньше 1 может осуществлять перекрытие символов.</para>
           <para>В следующей таблице приведены значения свойства <b>отслеживания</b> , соответствующие параметры в пользовательском интерфейсе.</para>
           <list type="table">
             <item>
@@ -550,7 +552,7 @@
               <description>0,8</description>
             </item>
             <item>
-              <term>строгий контроль</term>
+              <term>Строгий контроль</term>
               <description>0,9</description>
             </item>
             <item>
@@ -558,12 +560,12 @@
               <description>1.0</description>
             </item>
             <item>
-              <term>свободном</term>
+              <term>Слабый контроль</term>
               <description>1.2</description>
             </item>
             <item>
-              <term>очень широкий</term>
-              <description>1,5</description>
+              <term>Очень широкий</term>
+              <description>1.5</description>
             </item>
           </list>
           <para></para>

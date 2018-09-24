@@ -1,10 +1,10 @@
 <Type Name="Name" FullName="Microsoft.Office.Interop.Excel.Name">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="dc0260c6b148041f273cfeb372c53b2a97c08418" />
+    <Meta Name="ms.openlocfilehash" Value="03c7a9b67e0c5237abc6e68749010ea9f9840fdb" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20575896" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Name" />
@@ -32,8 +32,15 @@
     <summary>Представляет имя, определенное для диапазона ячеек.</summary>
     <remarks>
       <para>Имена может быть либо встроенные имена — например, базы данных, Print_Area и Авто_открыть — или пользовательских имен.</para>
-      <para>Приложения, книги и объекты листа</para> Объект 
-      <para><b>имя</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Names" /> семейство сайтов для <see cref="T:Microsoft.Office.Interop.Excel.Application" />, <see cref="T:Microsoft.Office.Interop.Excel.Workbook" />, и <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объектов. Используйте <b>имена</b>(<paramref name="index" />), где <paramref name="index" /> — это имя номер индекса или определенное имя, чтобы возвратить объект <b>имя</b> .</para><para>Номер индекса указывает положение именем в коллекции. Имена отображаются в алфавитном порядке от z и являются без учета регистра (это же порядке как оно отображается в диалоговых окнах присвоить имя и применить имена, возвращаемой с помощью команды имя в меню "Вставка").</para><para>Использования <see cref="P:Microsoft.Office.Interop.Excel.Name.Name" /> свойство для возвращения или задания текста марка полностью.</para><para>Диапазон объектов</para><para>Хотя <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта может иметь более одного имени, нет <b>имена</b> семейства сайтов для объекта <b>Range</b> . Используйте <b>имя</b> с помощью объекта <b>Range</b> для возврата имя в списке имена (в алфавитном порядке) назначается диапазон.</para><para></para></remarks>
+      <para>Приложения, книги и объекты листа</para>
+      <para>
+        <b>Имя</b> объекта является членом <see cref="T:Microsoft.Office.Interop.Excel.Names" /> семейство сайтов для <see cref="T:Microsoft.Office.Interop.Excel.Application" />, <see cref="T:Microsoft.Office.Interop.Excel.Workbook" />, и <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объектов. Используйте <b>имена</b>(<paramref name="index" />), где <paramref name="index" /> — это имя номер индекса или определенное имя, чтобы возвратить объект <b>имя</b> .</para>
+      <para>Номер индекса указывает положение именем в коллекции. Имена отображаются в алфавитном порядке от z и являются без учета регистра (это же порядке как оно отображается в диалоговых окнах присвоить имя и применить имена, возвращаемой с помощью команды имя в меню "Вставка").</para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Name.Name" /> свойство для возвращения или задания текста самого имени.</para>
+      <para>Диапазон объектов</para>
+      <para>Хотя <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта может иметь более одного имени, нет <b>имена</b> семейства сайтов для объекта <b>Range</b> . Использование <b>имени</b> с помощью объекта <b>Range</b> для возврата имя в списке имена (в алфавитном порядке) назначается диапазон.</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -124,7 +131,7 @@
         <summary>Возвращает или задает категории для указанного имени на языке макрос.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Имя должны ссылаться на пользовательскую функцию или командной.</para>
+          <para>Имя должны ссылаться на пользовательскую функцию или команды.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -191,7 +198,7 @@
           <b>Строка</b>
         </value>
         <remarks>
-          <para>Текст комментария не может превышать 255 знаков.</para>
+          <para>Текст комментария не может превышать 255 знаков. </para>
           <para></para>
         </remarks>
       </Docs>
@@ -222,8 +229,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если указанный объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если указанный объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -369,7 +378,7 @@
         <summary>Возвращает или задает имя объекта на языке пользователя.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если выбран стиль встроенных стилей, данное свойство возвращает имя стиля на языке текущей языковой стандарт.</para>
+          <para>Если выбран стиль встроенных стилей, данное свойство возвращает имя стиля на языке текущего языкового стандарта.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -530,7 +539,7 @@
         <summary>Возвращает или задает формулу, на который ссылается имя.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Эту формулу — на языке пользователя, и это в нотации стиля R1C1, начиная с знак равенства.</para>
+          <para>Эту формулу находится в языке пользователя и находится в нотации стиля R1C1, начиная с знак равенства.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -561,7 +570,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект ссылается <see cref="T:Microsoft.Office.Interop.Excel.Name" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если <b>имя</b> объекта не ссылается на диапазон (например, если речь идет об константа или формулы), это свойство не выполняется.</para>
+          <para>Если <b>имя</b> объекта не ссылается на диапазон (например, если речь идет об константа или формулы), происходит сбой этого свойства.</para>
           <para>Чтобы изменить диапазон, на который ссылается имя, используйте <see cref="P:Microsoft.Office.Interop.Excel.Name.RefersTo" /> свойство.</para>
           <para></para>
         </remarks>

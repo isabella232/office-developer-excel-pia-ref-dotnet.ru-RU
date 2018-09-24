@@ -1,10 +1,10 @@
 <Type Name="Worksheets" FullName="Microsoft.Office.Interop.Excel.Worksheets">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="62181a586d545e1a026f86bd8ec84b25d6e092ad" />
+    <Meta Name="ms.openlocfilehash" Value="a754235a311170e13d0d4825decb297f28a9fa27" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20581503" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Worksheets : System.Collections.IEnumerable" />
@@ -36,9 +36,11 @@
     <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объектов в указанный или активной книги. Каждый объект <b>Worksheet</b> представляет лист.</summary>
     <remarks>
       <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.Worksheets" /> свойство для возврата коллекции <b>листов</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.Worksheets.Add(System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового листа и добавить его в коллекцию.</para>
-      <para>Использование <b>листов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса рабочего листа или имя, чтобы возвратить объект <b>рабочего листа</b> .</para> Объект 
-      <para><b>листа</b> также является членом <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> семейства сайтов. Коллекция <b>стилей</b> содержит всех листов в книге (листы диаграмм и таблиц).</para><para></para></remarks>
+      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Worksheets.Add(System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового листа и добавить его в коллекцию.</para>
+      <para>Используйте <b>таблицы</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса рабочего листа или имя, чтобы возвратить объект <b>рабочего листа</b> .</para>
+      <para>Объект <b>Worksheet</b> также является членом <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> семейства сайтов. Коллекция <b>стилей</b> содержит всех листов в книге (листы диаграмм и таблиц).</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -247,7 +249,7 @@
         <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться копируемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
         <summary>Копирование таблицы в другое место в книге.</summary>
         <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создает новую книгу, содержащую копируемый лист.</para>
+          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей копируемый лист Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -305,7 +307,10 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -330,7 +335,10 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <remarks>При удалении <para><see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />, этот метод отображает диалоговое окно с запросом подтверждения удаления. Это диалоговое окно отображается по умолчанию. Метод <b>Delete</b> возвращает <b>логическое</b> значение, которое присвоено <b>значение False</b> , если пользователь нажатия кнопки "Отмена" в диалоговом окне или <b>значение True,</b> Если пользователь выбрал удаление.</para><para></para></remarks>
+        <remarks>
+          <para>При удалении <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />, этот метод отображает диалоговое окно с запросом подтверждения удаления. Это диалоговое окно отображается по умолчанию. Метод <b>Delete</b> возвращает <b>логическое</b> значение, которое присвоено <b>значение False</b> , если пользователь нажатия кнопки "Отмена" в диалоговом окне или <b>значение True,</b> Если пользователь выбрал удалить.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FillAcrossSheets">
@@ -419,7 +427,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> разрывов коллекции, представляющей горизонтальной страницы на листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Не более 1 026 горизонтальных разрывов страниц на листе.</para>
+          <para>Существует ограничение в 1 026 горизонтальных разрывов страниц на листе.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -483,7 +491,7 @@
         <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться перемещаемый лист. Не удается задать <paramref name="After" /> при указании <b>перед</b>.</param>
         <summary>Перемещает окно в другое место в книге.</summary>
         <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создает новую книгу, содержащее перемещаемый лист.</para>
+          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей перемещаемый лист Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -558,7 +566,7 @@
         <param name="PrToFileName">Необязательный элемент <b>Object</b>. Если <paramref name="PrintToFile" /> имеет значение <b>True</b>, этот аргумент указывает имя файла, который вы хотите напечатать для.</param>
         <summary>Печатает объект.</summary>
         <remarks>
-          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц — не ко всем страницам на листе или книге.</para>
+          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц — не ко всем страницам на листе или рабочей книги.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -658,7 +666,7 @@
         <param name="Replace">Необязательный элемент <b>Object</b> (используется только с листами). <b>Значение true,</b> Чтобы заменить текущее выделение с указанным объектом. <b>Значение false</b> для расширения текущего выделения в содержит каких-либо ранее выбранные объекты и указанный объект.</param>
         <summary>Выбор объекта.</summary>
         <remarks>
-          <para>Выберите ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Activate" /> метод.</para>
+          <para>Чтобы выбрать ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Activate" /> метод.</para>
           <para></para>
         </remarks>
       </Docs>

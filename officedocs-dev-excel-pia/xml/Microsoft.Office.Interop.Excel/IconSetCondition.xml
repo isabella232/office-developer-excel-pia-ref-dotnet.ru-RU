@@ -1,10 +1,10 @@
 <Type Name="IconSetCondition" FullName="Microsoft.Office.Interop.Excel.IconSetCondition">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="bc68b806e9539de6f5350ba189ec017a58c6f1db" />
+    <Meta Name="ms.openlocfilehash" Value="60529c90129fadd3409df7f77d68bfab6f56e963" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20580726" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface IconSetCondition" />
@@ -32,7 +32,7 @@
     <summary>Представляет значок набора правила условного форматирования.</summary>
     <remarks>
       <para>Все объекты условного форматирования в составе <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекцию, содержащую объект, который является дочерним из <see cref="T:Microsoft.Office.Interop.Excel.Range" /> семейства сайтов. Можно создать правило форматирования с помощью одного набора значков <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition" /> методу коллекции <b>FormatConditions</b> .</para>
-      <para>Каждого набора значков содержит три, четыре или пять значков. Вы используете <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> для возвращаемого объекта <see cref="T:Microsoft.Office.Interop.Excel.IconSets" /> объект, который требуется указать один из встроенных наборов значков. Каждый отдельный значок в наборе значок присваивается подмножество значений диапазона членов <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> объекта. Тип пороговое значение задается на этот объект.</para>
+      <para>Каждый значок набор содержит три, четыре или пять значков. Вы используете <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> для возвращаемого объекта <see cref="T:Microsoft.Office.Interop.Excel.IconSets" /> объект, который требуется указать один из встроенных наборов значков. Каждый отдельный значок в наборе значок присваивается подмножество значений диапазона членов <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> объекта. Тип пороговое значение задается на этот объект.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -127,7 +127,7 @@
           <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
         </value>
         <remarks>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -220,7 +220,10 @@
         <value>
           <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" />
         </value>
-        <remarks>После того как <para><see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" />семейства сайтов, можно использовать <see cref="P:Microsoft.Office.Interop.Excel.IconCriteria.Item(System.Object)" /> свойство коллекции для возврата <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> объекта. <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> Объект представляет условие одного набора значков.</para><para></para></remarks>
+        <remarks>
+          <para>После того как <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" />семейства сайтов, можно использовать <see cref="P:Microsoft.Office.Interop.Excel.IconCriteria.Item(System.Object)" /> свойство коллекции для возврата <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> объекта. <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> Объект представляет условие одного набора значков.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="IconSet">
@@ -254,7 +257,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>Можно назначить значок установки с помощью <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объект.</para>
+          <para>Вы можете назначить значок установки с помощью <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объекта. </para>
           <para></para>
         </remarks>
       </Docs>
@@ -284,7 +287,7 @@
         <param name="Range">Диапазон, к которому будет применяться это правило форматирования.</param>
         <summary>Задает диапазон ячеек, к которому применяется этот правила форматирования.</summary>
         <remarks>
-          <para>Диапазон должен быть в стиль ссылок A1 и полностью содержаться в таблице, являющийся родительским <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Также можно использовать знак доллара, но они обрабатываются.</para>
+          <para>Диапазон должен быть в стиль ссылок A1 и полностью содержаться в таблице, являющийся родительским <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Также можно использовать знак доллара, но они игнорируются.</para>
           <para>Также можно использовать локально определенное имя в любой части диапазона, но имя должно быть языке макрос.</para>
           <para></para>
         </remarks>
@@ -351,7 +354,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Данное свойство возвращает <b>значение False</b> , если не задано каждые пороговое значение процентиль. Установка для этого свойства <b>значения True</b> устанавливающей каждый тип пороговое значение процентиль.</para>
+          <para>Это свойство будет возвращать <b>значение False</b> , если не задано каждые пороговое значение процентиль. Установка для этого свойства <b>значения True</b> устанавливающей процентиль каждый тип пороговое значение.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -387,7 +390,7 @@
           <b>Integer</b>
         </value>
         <remarks>
-          <para>При задании приоритета, значение должно быть положительное целое число от 1 до общее число правила условного форматирования в рабочем листе. Приоритет должен быть уникальное значение для всех правил в рабочем листе, поэтому изменение приоритета для указанного правила условного форматирования может стать причиной значение приоритета других правил на листе перемещать.</para>
+          <para>При задании приоритета, значение должно быть положительное целое число от 1 до общее число правила условного форматирования в рабочем листе. Приоритет должен быть уникальное значение для всех правил в рабочем листе, поэтому изменение приоритета для указанного правила условного форматирования может стать причиной значение приоритета других правил на листе удаляются.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -453,7 +456,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>По умолчанию, большая часть наборов значков, можно использовать сопоставление положительное изображения с более высокие значения. К примеру набора значков «3 трафика освещение» применяется зеленый кружок к пороговое значение максимального и красный кружок низшего значений в диапазоне. Если данные таким образом, что меньшие значения более предпочтительным, такие как marathon время результаты, может потребоваться в обратном порядке, применения значки для диапазона связывание зеленый кружок низшего значениям.</para>
+          <para>По умолчанию большая часть наборов значков, которые можно использовать связывание положительное изображения с более высокие значения. К примеру набора значков «3 трафика освещение» применяется зеленый кружок к пороговое значение максимального и красный кружок низшего значений в диапазоне. Если данные таким образом, что меньшие значения более предпочтительным, такие как marathon время результаты, может потребоваться в обратном порядке, применения значки для диапазона связывание зеленый кружок низшего значениям.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -545,7 +548,7 @@
       <Docs>
         <summary>Задает порядок вычисления для данного правила условного форматирования, поэтому оценивается после всех правил в рабочем листе.</summary>
         <remarks>
-          <para>Фактическое значение приоритета будет совпадать с общим количеством правила условного форматирования в рабочем листе. При наличии нескольких правила условного форматирования на лист, этот метод будет отображено приоритет правила, которые имели значение приоритета, больше, чем правило будет увеличено с помощью одного.</para>
+          <para>Фактическое значение приоритета будет совпадать с общим количеством правила условного форматирования в рабочем листе. При наличии нескольких правила условного форматирования на листе этот метод будет отображено приоритет правил, которым пришлось больше, чем правило будет увеличено с помощью одного значения приоритета.</para>
           <para></para>
         </remarks>
       </Docs>

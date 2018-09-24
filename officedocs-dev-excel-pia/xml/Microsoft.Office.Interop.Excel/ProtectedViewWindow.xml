@@ -1,10 +1,10 @@
 <Type Name="ProtectedViewWindow" FullName="Microsoft.Office.Interop.Excel.ProtectedViewWindow">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e408f0f28015c64503fb4f24fd3d1bb9d13526ce" />
+    <Meta Name="ms.openlocfilehash" Value="ba924f04fb4c1accdb23e5bb8b2f1b404a2117ad" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20574762" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ProtectedViewWindow" />
@@ -30,7 +30,30 @@
   </Attributes>
   <Docs>
     <summary>Представляет окно, в режиме защищенного просмотра.</summary>
-    <remarks>Окно <para>режима защищенного просмотра используется для отображения книги от потенциально небезопасных расположение. Небезопасных расположений определены как следующее:</para><list type="number"><item><description>файлы открываются из Интернета.</description></item><item><description>Вложения, из которого открывается Microsoft Outlook 2010.</description></item><item><description>Файлов, блокируемые политикой блокировки файла.</description></item><item><description>, Не прошедшие проверку файлов Office.</description></item><item><description>Файлы явным образом открываются в режиме защищенного просмотра с помощью Открытие в режиме защищенного просмотра командной кнопки "Открыть" в диалоговом окне Open.</description></item></list><para>Книгах, отображаемые в режиме защищенного просмотра окна не могут быть изменены и не имеют полномочий на выполнение активного содержимого Visual Basic для приложений с макросами и данные подключений.</para><para>, Чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объекта из <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindows" /> семейства сайтов, используйте ProtectedViewWindows(Index), где индекс — номер индекса окна, который необходимо открыть. Вы также можете открыть <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объект, представляющий активное окно защищенного просмотра с помощью <see cref="P:Microsoft.Office.Interop.Excel.Application.ActiveProtectedViewWindow" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект.</para><para>После выхода <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> , используйте <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.Workbook" /> свойство для доступа к <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект, представляющий файл книги, открытого в режиме защищенного просмотра окна. Поскольку окно защищенного просмотра разработан для защиты пользователей от потенциально вредоносного кода, операции можно выполнить с помощью <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект, возвращенный свойством <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объекта будет ограничен. Большинство операций, которые не разрешены будет возвращать «ошибки времени выполнения 1004: Эта команда недоступен, когда Excel изолированных.»</para><para></para></remarks>
+    <remarks>
+      <para>Окно защищенного просмотра используется для отображения книги от потенциально небезопасных расположение. Небезопасных расположений определяются следующим образом:</para>
+      <list type="number">
+        <item>
+          <description>Файлы, открытые из Интернета.</description>
+        </item>
+        <item>
+          <description>Вложения из Microsoft Outlook 2010.</description>
+        </item>
+        <item>
+          <description>Файлы, блокированные с помощью политики блокировки файла.</description>
+        </item>
+        <item>
+          <description>Файлы, не прошедшие проверку файлов Office.</description>
+        </item>
+        <item>
+          <description>Явным образом файлы открываются в режиме защищенного просмотра с помощью Открытие в режиме защищенного просмотра командной кнопки "Открыть" в диалоговое окно Открыть.</description>
+        </item>
+      </list>
+      <para>Книгах, отображаемые в режиме защищенного просмотра окна не могут быть изменены и не имеют полномочий на выполнение активного содержимого Visual Basic для приложений макросов и подключения к данным.</para>
+      <para>Чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объекта из <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindows" /> семейства сайтов, используйте ProtectedViewWindows(Index), где индекс — номер индекса окна, который необходимо открыть. Вы также можете открыть <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объект, представляющий активное окно защищенного просмотра с помощью <see cref="P:Microsoft.Office.Interop.Excel.Application.ActiveProtectedViewWindow" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта.</para>
+      <para>После выхода <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> , используйте <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.Workbook" /> свойство для доступа к <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект, представляющий файл книги, открытого в режиме защищенного просмотра окна. Поскольку окно защищенного просмотра разработан для защиты пользователей от потенциально вредоносного кода, операции можно выполнить с помощью <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект, возвращенный свойством <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объекта будет ограничен. Большинство операций, которые не разрешены будет возвращать «ошибки времени выполнения 1004: Эта команда недоступен, когда Excel изолированных.»</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -118,7 +141,7 @@
         <summary>Получает или задает значение, представляющее имя, которое отображается в строке заголовка окна, защищенного просмотра.</summary>
         <value>Имя, которое отображается в строке заголовка окна, защищенного просмотра.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -179,16 +202,16 @@
         <remarks>
           <para>Если <paramref name="WriteResPassword" /> параметр указан и книги требуется пароль, пользователю будет предложено ввести пароль.</para>
           <para>Если <paramref name="UpdateLinks" /> параметр указан, то пользователю будет предложено для обновления ссылок. Если Excel открывает файл в WKS, WK1 или WK3 формат и <paramref name="UpdateLinks" /> аргумент равно 0, создаются диаграмм; в противном случае Excel создает диаграммы на основе диаграмм, присоединенного к файлу.</para>
-          <para>Избегайте использования жестко паролей в приложениях. Если в процедуре необходим пароль, запрашивать пароль пользователя, сохраните его в переменной и затем использовать эту переменную в вашем коде.</para>
+          <para>Избегайте использования в приложениях жестко заданных паролей. Если в процедуре требуется пароль, запросите пароль у пользователя, сохраните его в переменной, а затем используйте эту переменную в коде.</para>
           <para>Можно указать одно из значений, перечисленных в следующей таблице, в <paramref name="UpdateLinks" /> параметра, чтобы определить, является ли внешние ссылки (ссылки) обновляются при открытии книги.</para>
           <list type="table">
             <item>
               <term>0</term>
-              <description>внешние ссылки (ссылки) не будут обновляться при открытии книги.</description>
+              <description>Внешние ссылки (ссылки) не обновляются при открытии книги.</description>
             </item>
             <item>
               <term>3</term>
-              <description>внешние ссылки (ссылки) будут обновлены при открытии книги.</description>
+              <description>Внешние ссылки (ссылки) будут обновлены при открытии книги.</description>
             </item>
           </list>
           <para></para>
@@ -225,7 +248,7 @@
         <value>
           <b>значение true,</b> Если можно изменить размер окна защищенного просмотра; в противном случае — <b>false</b>.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -259,8 +282,8 @@
         <summary>Получает или задает значение, представляющее высота в пунктах окно защищенного просмотра.</summary>
         <value>Высота в пунктах окна защищенного просмотра.</value>
         <remarks>
-          <para>Чтение и запись.</para>
-          <para>Нельзя задать это свойство, если в режиме защищенного просмотра окно свернуто или развернуто. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.WindowState" /> свойства, чтобы определить состояние окна.</para>
+          <para>Для чтения и записи.</para>
+          <para>Это свойство нельзя установить, если окно защищенного просмотра свернуто или развернуто. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.WindowState" /> свойства, чтобы определить состояние окна.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -294,7 +317,7 @@
         <summary>Получает или задает значение, представляющее расстояние в пунктах от левого края клиентской области по левому краю окна защищенного просмотра.</summary>
         <value>Расстояние в пунктах от левого края клиентской области по левому краю окна защищенного просмотра.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -357,7 +380,7 @@
         <value>Путь к исходному файлу, открытого в указанном окне режима защищенного просмотра.</value>
         <remarks>
           <para>Только для чтения.</para>
-          <para>Путь не включает знака (например, «C:\MSOffice»). Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.SourceName" /> из <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объект, который требуется вернуть имя исходного файла без путь.</para>
+          <para>Путь не включает знака (например, «C:\MSOffice»). Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.PathSeparator" /> свойство, чтобы добавить знак, отделяющий папок и буквы дисков. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.SourceName" /> из <see cref="T:Microsoft.Office.Interop.Excel.ProtectedViewWindow" /> объект, который требуется вернуть имя исходного файла без пути.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -391,7 +414,7 @@
         <summary>Получает или задает значение, представляющее расстояние в пунктах от верхнего края на указанное окно защищенного просмотра по верхнему краю области могут использоваться.</summary>
         <value>Расстояние в пунктах от верхнего края на указанное окно защищенного просмотра по верхнему краю области могут использоваться.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Не удается установить это свойство для полноэкранном режиме защищенного просмотра. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.WindowState" /> свойство для возвращения или задания состояния окна.</para>
           <para></para>
         </remarks>
@@ -427,7 +450,7 @@
         <value>
           <b>значение true,</b> Если отображается на указанное окно защищенного просмотра; в противном случае — <b>false</b>.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -461,8 +484,8 @@
         <summary>Получает или задает значение, задающее ширину в пунктах на указанное окно защищенного просмотра.</summary>
         <value>Ширина в пунктах на указанное окно защищенного просмотра.</value>
         <remarks>
-          <para>Чтение и запись.</para>
-          <para>Нельзя задать это свойство, если в режиме защищенного просмотра окно свернуто или развернуто. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.WindowState" /> свойства, чтобы определить состояние окна.</para>
+          <para>Для чтения и записи.</para>
+          <para>Это свойство нельзя установить, если окно защищенного просмотра свернуто или развернуто. Использование <see cref="P:Microsoft.Office.Interop.Excel.ProtectedViewWindow.WindowState" /> свойства, чтобы определить состояние окна.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -496,7 +519,7 @@
         <summary>Получает или задает состояние окна указанного режима защищенного просмотра.</summary>
         <value>Состояние на указанное окно защищенного просмотра.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para></para>
         </remarks>
       </Docs>
