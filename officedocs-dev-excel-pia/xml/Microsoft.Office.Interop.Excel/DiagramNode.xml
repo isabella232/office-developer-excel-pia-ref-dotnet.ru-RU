@@ -1,10 +1,10 @@
 <Type Name="DiagramNode" FullName="Microsoft.Office.Interop.Excel.DiagramNode">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0ca42ecf50dd3405db74400e2269347011d04258" />
+    <Meta Name="ms.openlocfilehash" Value="86e622fca7f83a44ee8326d13178a7a41108a865" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20576148" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface DiagramNode : Microsoft.Office.Core._IMsoDispObj" />
@@ -31,87 +31,112 @@
   </Attributes>
   <Docs>
     <summary>
-      <span data-ttu-id="9f883-101">Представляет узел в схеме.</span>
+      <span data-ttu-id="525ba-101">Представляет узел в схеме.</span>
       <span class="sxs-lookup">
-        <span data-stu-id="9f883-101">Represents a node in a diagram.</span>
+        <span data-stu-id="525ba-101">Represents a node in a diagram.</span>
       </span>
     </summary>
     <remarks>
-      <span data-ttu-id="9f883-102">
-        <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" /> метод, чтобы добавить узел в схеме или узел диаграммы.</para>
-        <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.Delete" /> метод, чтобы удалить узел из диаграммы или узла диаграммы.</para>
-        <para>Возвращает объект <b>DiagramNode</b> , используйте один из следующих значений:</para>
-        <list type="bullet">
-          <item>
-            <description>Объекта <b>DiagramNode</b><see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.CloneNode(System.Boolean,Microsoft.Office.Interop.Excel.DiagramNode,Microsoft.Office.Core.MsoRelativeNodePosition)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.NextNode" />, или <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.PrevNode" /> методы или его <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Root" /> свойство</description>
-          </item>
-          <item>
-            <description>
-              <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> коллекции <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.AddNode(System.Object,Microsoft.Office.Core.MsoDiagramNodeType)" /> или <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.Item(System.Object)" /> методы или <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.FirstChild" /> или <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.LastChild" /> свойства </description>
-          </item>
-          <item>
-            <description>
-              <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodes" /> Коллекции <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodes.Item(System.Object)" /> метод</description>
-          </item>
-          <item>
-            <description>
-              <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта или <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> коллекции <b>DiagramNode</b></description>
-          </item>
-        </list>
-        <para>A узла диаграммы можно завершить, или он может содержать другие диаграммы дочерних дочерних Схема узлов или дочерние фигур. Здесь на следующий текст:</para>
-        <list type="bullet">
-          <item>
-            <description>для указания дочерних схемы, используйте <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Diagram" /> свойство.</description>
-          </item>
-          <item>
-            <description>Для ссылки на узел схема отдельных дочерних используется <b>AddNode</b>, <b>CloneNode</b>, <b>NextNode</b> или <b>PrevNode</b> методов или свойств <b>корневого</b> .</description>
-          </item>
-          <item>
-            <description>Для ссылки на коллекцию дочерних узлов схемы, используйте <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Children" /> свойство.</description>
-          </item>
-          <item>
-            <description>Для указания фигуры, используйте <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Shape" /> или <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.TextShape" /> свойств.</description>
-          </item>
-        </list>
-        <para></para>
-      </span>
-      <span class="sxs-lookup">
-        <span data-stu-id="9f883-102">
-          <para>Use the <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" /> method to add a node to a diagram or to a diagram node.</para>
-          <para>Use the <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.Delete" /> method to remove a node from a diagram or diagram node.</para>
-          <para>To return a <b>DiagramNode</b> object, use one of the following:</para>
-          <list type="bullet">
-            <item>
-              <description>The <b>DiagramNode</b> object's <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.CloneNode(System.Boolean,Microsoft.Office.Interop.Excel.DiagramNode,Microsoft.Office.Core.MsoRelativeNodePosition)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.NextNode" />, or <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.PrevNode" /> methods or its <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Root" /> property</description>
-            </item>
-            <item>
-              <description>The <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> collection's <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.AddNode(System.Object,Microsoft.Office.Core.MsoDiagramNodeType)" /> or <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.Item(System.Object)" /> methods or <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.FirstChild" /> or <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.LastChild" /> properties</description>
-            </item>
-            <item>
-              <description>The <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodes" /> collection's <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodes.Item(System.Object)" /> method</description>
-            </item>
-            <item>
-              <description>The <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object's or <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> collection's <b>DiagramNode</b> property</description>
-            </item>
-          </list>
-          <para>A diagram node can terminate, or it can contain other child diagrams, child diagram nodes, or child shapes. Refer to these with the following:</para>
-          <list type="bullet">
-            <item>
-              <description>To refer to a child diagram, use the <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Diagram" /> property.</description>
-            </item>
-            <item>
-              <description>To refer to an individual child diagram node, use the <b>AddNode</b>, <b>CloneNode</b>, <b>NextNode</b> or <b>PrevNode</b> methods or the <b>Root</b> property.</description>
-            </item>
-            <item>
-              <description>To refer to a collection of child diagram nodes, use the <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Children" /> property.</description>
-            </item>
-            <item>
-              <description>To refer to a shape, use the <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Shape" /> or <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.TextShape" /> properties.</description>
-            </item>
-          </list>
-          <para></para>
+      <para>
+        <span data-ttu-id="525ba-102">Использование <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" /> метод, чтобы добавить узел в схеме или узел диаграммы.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="525ba-102">Use the <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" /> method to add a node to a diagram or to a diagram node.</span>
         </span>
-      </span>
+      </para>
+      <para>
+        <span data-ttu-id="525ba-103">Использование <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.Delete" /> метод, чтобы удалить узел из диаграммы или узла диаграммы.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="525ba-103">Use the <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.Delete" /> method to remove a node from a diagram or diagram node.</span>
+        </span>
+      </para>
+      <para>
+        <span data-ttu-id="525ba-104">Возвращает объект <b>DiagramNode</b> , используйте один из следующих:</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="525ba-104">To return a <b>DiagramNode</b> object, use one of the following:</span>
+        </span>
+      </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <span data-ttu-id="525ba-105">Объект <b>DiagramNode</b><see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.CloneNode(System.Boolean,Microsoft.Office.Interop.Excel.DiagramNode,Microsoft.Office.Core.MsoRelativeNodePosition)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.NextNode" />, или <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.PrevNode" /> методы или его <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Root" /> свойство</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-105">The <b>DiagramNode</b> object's <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.AddNode(Microsoft.Office.Core.MsoRelativeNodePosition,Microsoft.Office.Core.MsoDiagramNodeType)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.CloneNode(System.Boolean,Microsoft.Office.Interop.Excel.DiagramNode,Microsoft.Office.Core.MsoRelativeNodePosition)" />, <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.NextNode" />, or <see cref="M:Microsoft.Office.Interop.Excel.DiagramNode.PrevNode" /> methods or its <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Root" /> property</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="525ba-106">
+              <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> Коллекции <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.AddNode(System.Object,Microsoft.Office.Core.MsoDiagramNodeType)" /> или <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.Item(System.Object)" /> методы или <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.FirstChild" /> или <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.LastChild" /> свойства</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-106">The <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> collection's <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.AddNode(System.Object,Microsoft.Office.Core.MsoDiagramNodeType)" /> or <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodeChildren.Item(System.Object)" /> methods or <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.FirstChild" /> or <see cref="P:Microsoft.Office.Interop.Excel.DiagramNodeChildren.LastChild" /> properties</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="525ba-107">
+              <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodes" /> Коллекции <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodes.Item(System.Object)" /> метод</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-107">The <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodes" /> collection's <see cref="M:Microsoft.Office.Interop.Excel.DiagramNodes.Item(System.Object)" /> method</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="525ba-108">
+              <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> Объекта или <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /><b>DiagramNode</b> коллекции</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-108">The <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object's or <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> collection's <b>DiagramNode</b> property</span>
+            </span>
+          </description>
+        </item>
+      </list>
+      <para>
+        <span data-ttu-id="525ba-109">Узел диаграммы можно завершить или может содержать другие схемы дочерних, дочерние узлы схема или фигуры потомков.</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="525ba-109">A diagram node can terminate, or it can contain other child diagrams, child diagram nodes, or child shapes.</span>
+        </span>
+        <span data-ttu-id="525ba-110">Ознакомьтесь с помощью следующих:</span>
+        <span class="sxs-lookup">
+          <span data-stu-id="525ba-110">Refer to these with the following:</span>
+        </span>
+      </para>
+      <list type="bullet">
+        <item>
+          <description>
+            <span data-ttu-id="525ba-111">Для указания дочерних схемы, используйте <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Diagram" /> свойство.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-111">To refer to a child diagram, use the <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Diagram" /> property.</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="525ba-112">Для ссылки на узел схема отдельных дочерних используется <b>AddNode</b>, <b>CloneNode</b>, <b>NextNode</b> или <b>PrevNode</b> методов или свойств <b>корневого</b> .</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-112">To refer to an individual child diagram node, use the <b>AddNode</b>, <b>CloneNode</b>, <b>NextNode</b> or <b>PrevNode</b> methods or the <b>Root</b> property.</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="525ba-113">Чтобы указать коллекцию дочерних узлов схемы, используйте <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Children" /> свойство.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-113">To refer to a collection of child diagram nodes, use the <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Children" /> property.</span>
+            </span>
+          </description>
+        </item>
+        <item>
+          <description>
+            <span data-ttu-id="525ba-114">Чтобы указать фигуры, используйте <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Shape" /> или <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.TextShape" /> свойства.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-114">To refer to a shape, use the <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.Shape" /> or <see cref="P:Microsoft.Office.Interop.Excel.DiagramNode.TextShape" /> properties.</span>
+            </span>
+          </description>
+        </item>
+      </list>
+      <para></para>
     </remarks>
   </Docs>
   <Members>
@@ -139,37 +164,37 @@
       </Parameters>
       <Docs>
         <param name="pos">
-          <span data-ttu-id="9f883-103">Необязательные <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
+          <span data-ttu-id="525ba-115">Необязательные <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-103">Optional <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
+            <span data-stu-id="525ba-115">Optional <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
           </span>
-          <span data-ttu-id="9f883-104">Где будет добавлен узел, относящиеся к другой узел. <b>MsoRelativeNodePosition</b> может иметь одно из следующих констант:<b>msoAfterLastSibling</b><b>msoAfterNode </b><b>msoBeforeFirstSibling</b>по умолчанию<b>msoBeforeNode</b></span>
+          <span data-ttu-id="525ba-116">Где будет добавлен узел, относящиеся к другой узел. <b>MsoRelativeNodePosition</b> может иметь одно из следующих констант:<b>msoAfterLastSibling</b><b>msoAfterNode </b><b>msoBeforeFirstSibling</b>по умолчанию<b>msoBeforeNode</b></span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-104">Where the node will be added, relative to another node.<b>MsoRelativeNodePosition</b> can be one of these constants:<b>msoAfterLastSibling</b><b>msoAfterNode </b>Default<b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
+            <span data-stu-id="525ba-116">Where the node will be added, relative to another node.<b>MsoRelativeNodePosition</b> can be one of these constants:<b>msoAfterLastSibling</b><b>msoAfterNode </b>Default<b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
           </span>
         </param>
         <param name="nodeType">
-          <span data-ttu-id="9f883-105">Необязательные <see cref="T:Microsoft.Office.Interop.Office.MsoDiagramNodeType" />.</span>
+          <span data-ttu-id="525ba-117">Необязательные <see cref="T:Microsoft.Office.Interop.Office.MsoDiagramNodeType" />.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-105">Optional <see cref="T:Microsoft.Office.Interop.Office.MsoDiagramNodeType" />.</span>
+            <span data-stu-id="525ba-117">Optional <see cref="T:Microsoft.Office.Interop.Office.MsoDiagramNodeType" />.</span>
           </span>
-          <span data-ttu-id="9f883-106">Тип узла.</span>
+          <span data-ttu-id="525ba-118">Тип узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-106">The type of node.</span>
+            <span data-stu-id="525ba-118">The type of node.</span>
           </span>
-          <span data-ttu-id="9f883-107">Может иметь одно из следующих констант <b>MsoDiagramNodeType</b> :<b>msoDiagramAssistant</b><b>msoDiagramNode</b> по умолчанию</span>
+          <span data-ttu-id="525ba-119">Может иметь одно из следующих констант <b>MsoDiagramNodeType</b> :<b>msoDiagramAssistant</b><b>msoDiagramNode</b> по умолчанию</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-107">Can be one of these <b>MsoDiagramNodeType</b> constants:<b>msoDiagramAssistant</b><b>msoDiagramNode</b> Default</span>
+            <span data-stu-id="525ba-119">Can be one of these <b>MsoDiagramNodeType</b> constants:<b>msoDiagramAssistant</b><b>msoDiagramNode</b> Default</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="9f883-108">Создает узел диаграммы.</span>
+          <span data-ttu-id="525ba-120">Создает узел диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-108">Creates a diagram node.</span>
+            <span data-stu-id="525ba-120">Creates a diagram node.</span>
           </span>
-          <span data-ttu-id="9f883-109">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объект, представляющий новый узел.</span>
+          <span data-ttu-id="525ba-121">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объект, представляющий новый узел.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-109">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object that represents the new node.</span>
+            <span data-stu-id="525ba-121">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object that represents the new node.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -203,9 +228,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-110">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</span>
+          <span data-ttu-id="525ba-122">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-110">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the Microsoft Excel application.</span>
+            <span data-stu-id="525ba-122">Returns an <see cref="T:Microsoft.Office.Interop.Excel.Application" /> object that represents the Microsoft Excel application.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -236,9 +261,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-111">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> объект, представляющий коллекцию дочерних узлов отдельного узла.</span>
+          <span data-ttu-id="525ba-123">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> объект, представляющий коллекцию дочерних узлов отдельного узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-111">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> object, representing the collection of child nodes of a particular node.</span>
+            <span data-stu-id="525ba-123">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNodeChildren" /> object, representing the collection of child nodes of a particular node.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -270,45 +295,45 @@
       </Parameters>
       <Docs>
         <param name="copyChildren">
-          <span data-ttu-id="9f883-112">Требуется <b>Boolean</b>.</span>
+          <span data-ttu-id="525ba-124">Требуется <b>Boolean</b>.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-112">Required <b>Boolean</b>.</span>
+            <span data-stu-id="525ba-124">Required <b>Boolean</b>.</span>
           </span>
-          <span data-ttu-id="9f883-113">
+          <span data-ttu-id="525ba-125">
             <b>Значение true,</b> следует скопировать также дочерние элементы узла диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-113">
+            <span data-stu-id="525ba-125">
               <b>True</b> to clone the diagram node's children as well.</span>
           </span>
         </param>
         <param name="pTargetNode">
-          <span data-ttu-id="9f883-114">Требуется объект <b>DiagramNode</b> .</span>
+          <span data-ttu-id="525ba-126">Требуется объект <b>DiagramNode</b> .</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-114">Required <b>DiagramNode</b> object.</span>
+            <span data-stu-id="525ba-126">Required <b>DiagramNode</b> object.</span>
           </span>
-          <span data-ttu-id="9f883-115">Выражение, возвращающее объект <b>DiagramNode</b> , представляющий узел, где будет размещаться новый узел.</span>
+          <span data-ttu-id="525ba-127">Выражение, возвращающее объект <b>DiagramNode</b> , представляющий узел, где будет размещаться новый узел.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-115">An expression that returns a <b>DiagramNode</b> object that represents the node where the new node will be placed.</span>
+            <span data-stu-id="525ba-127">An expression that returns a <b>DiagramNode</b> object that represents the node where the new node will be placed.</span>
           </span>
         </param>
         <param name="pos">
-          <span data-ttu-id="9f883-116">Необязательные <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
+          <span data-ttu-id="525ba-128">Необязательные <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-116">Optional <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
+            <span data-stu-id="525ba-128">Optional <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
           </span>
-          <span data-ttu-id="9f883-117">Если <paramref name="pTargetNode" /> указано, указывает, что относительно, в которую будет добавлен узел <paramref name="pTargetNode" />. <b>MsoRelativeNodePosition</b> может иметь одно из следующих констант:<b>msoAfterLastSibling</b><b>msoAfterNode </b><b>msoBeforeFirstSibling</b>по умолчанию<b>msoBeforeNode</b></span>
+          <span data-ttu-id="525ba-129">Если <paramref name="pTargetNode" /> указано, указывает, что относительно, в которую будет добавлен узел <paramref name="pTargetNode" />. <b>MsoRelativeNodePosition</b> может иметь одно из следующих констант:<b>msoAfterLastSibling</b><b>msoAfterNode </b><b>msoBeforeFirstSibling</b>по умолчанию<b>msoBeforeNode</b></span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-117">If <paramref name="pTargetNode" /> is specified, indicates where the node will be added relative to <paramref name="pTargetNode" />.<b>MsoRelativeNodePosition</b> can be one of these constants:<b>msoAfterLastSibling</b><b>msoAfterNode </b>Default<b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
+            <span data-stu-id="525ba-129">If <paramref name="pTargetNode" /> is specified, indicates where the node will be added relative to <paramref name="pTargetNode" />.<b>MsoRelativeNodePosition</b> can be one of these constants:<b>msoAfterLastSibling</b><b>msoAfterNode </b>Default<b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="9f883-118">Копирует узел диаграммы.</span>
+          <span data-ttu-id="525ba-130">Копирует узел диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-118">Clones a diagram node.</span>
+            <span data-stu-id="525ba-130">Clones a diagram node.</span>
           </span>
-          <span data-ttu-id="9f883-119">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта, представляющего скопированный узел.</span>
+          <span data-ttu-id="525ba-131">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта, представляющего скопированный узел.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-119">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object representing the cloned node.</span>
+            <span data-stu-id="525ba-131">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object representing the cloned node.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -342,23 +367,30 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-120">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
+          <span data-ttu-id="525ba-132">Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-120">Returns a 32-bit integer that indicates the application in which this object was created.</span>
+            <span data-stu-id="525ba-132">Returns a 32-bit integer that indicates the application in which this object was created.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="9f883-121">
-            <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9f883-121">
-              <para>If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</para>
-              <para>The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code. For example, Microsoft Excel has the creator code XCEL.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="525ba-133">Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-133">If the object was created in Microsoft Excel, this property returns the string XCEL, which is equivalent to the hexadecimal number 5843454C.</span>
             </span>
-          </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-134">Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-134">The <b>Creator</b> property is designed to be used in Microsoft Excel for the Macintosh, where each application has a four-character creator code.</span>
+            </span>
+            <span data-ttu-id="525ba-135">Например Microsoft Excel содержит код создателя XCEL.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-135">For example, Microsoft Excel has the creator code XCEL.</span>
+            </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -384,9 +416,9 @@
       <Parameters />
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-122">Удаляет объект.</span>
+          <span data-ttu-id="525ba-136">Удаляет объект.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-122">Deletes the object.</span>
+            <span data-stu-id="525ba-136">Deletes the object.</span>
           </span>
         </summary>
         <remarks>To be added.</remarks>
@@ -416,9 +448,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-123">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Diagram" /> объект, представляющий схему.</span>
+          <span data-ttu-id="525ba-137">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Diagram" /> объект, представляющий схему.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-123">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Diagram" /> object representing a diagram.</span>
+            <span data-stu-id="525ba-137">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Diagram" /> object representing a diagram.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -452,49 +484,70 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-124">Возвращает или задает значение константы, чтобы указать форматирование дочерние узлы организационной диаграммы.</span>
+          <span data-ttu-id="525ba-138">Возвращает или задает значение константы, чтобы указать форматирование дочерние узлы организационной диаграммы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-124">Returns or sets a constant to indicate the formatting of the child nodes of an organization chart.</span>
+            <span data-stu-id="525ba-138">Returns or sets a constant to indicate the formatting of the child nodes of an organization chart.</span>
           </span>
         </summary>
         <value>To be added.</value>
         <remarks>
-          <span data-ttu-id="9f883-125">
-            <para>
-              <b>MsoOrgChartLayoutType</b> может иметь одно из следующих констант <b>MsoOrgChartLayoutType</b> .</para>
-            <para>
-              <b>msoOrgChartLayoutAssistant</b> местах дочерние узлы как помощников по обслуживанию.</para>
-            <para>
-              <b>msoOrgChartLayoutBothHanging</b> местах дочерние узлы по вертикали из родительского узла слева и справа.</para>
-            <para>
-              <b>msoOrgChartLayoutLeftHanging</b> местах дочерние узлы по вертикали из родительского узла с левой стороны.</para>
-            <para>
-              <b>msoOrgChartLayoutMixed</b> возвращаемые значения для родительского узла, который имеет дочерние элементы, отформатированный с использованием более одного <b>MsoOrgChartLayoutType</b>.</para>
-            <para>
-              <b>msoOrgChartLayoutRightHanging</b> местах дочерние узлы по вертикали из родительского узла с правой стороны.</para>
-            <para>
-              <b>msoOrgChartLayoutStandard</b> местах дочерние узлы по горизонтали ниже родительского узла.</para>
-            <para></para>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9f883-125">
-              <para>
-                <b>MsoOrgChartLayoutType</b> can be one of these <b>MsoOrgChartLayoutType</b> constants.</para>
-              <para>
-                <b>msoOrgChartLayoutAssistant</b> Places child nodes as assistants.</para>
-              <para>
-                <b>msoOrgChartLayoutBothHanging</b> Places child nodes vertically from the parent node on both the left and the right side.</para>
-              <para>
-                <b>msoOrgChartLayoutLeftHanging</b> Places child nodes vertically from the parent node on the left side.</para>
-              <para>
-                <b>msoOrgChartLayoutMixed</b> Return value for a parent node that has children formatted using more than one <b>MsoOrgChartLayoutType</b>.</para>
-              <para>
-                <b>msoOrgChartLayoutRightHanging</b> Places child nodes vertically from the parent node on the right side.</para>
-              <para>
-                <b>msoOrgChartLayoutStandard</b> Places child nodes horizontally below the parent node.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="525ba-139">
+              <b>MsoOrgChartLayoutType</b> может иметь одно из следующих констант <b>MsoOrgChartLayoutType</b> .</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-139">
+                <b>MsoOrgChartLayoutType</b> can be one of these <b>MsoOrgChartLayoutType</b> constants.</span>
             </span>
-          </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-140">
+              <b>msoOrgChartLayoutAssistant</b> Размещает дочерние узлы как помощников по обслуживанию.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-140">
+                <b>msoOrgChartLayoutAssistant</b> Places child nodes as assistants.</span>
+            </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-141">
+              <b>msoOrgChartLayoutBothHanging</b> Размещает дочерние узлы по вертикали из родительского узла слева и справа.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-141">
+                <b>msoOrgChartLayoutBothHanging</b> Places child nodes vertically from the parent node on both the left and the right side.</span>
+            </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-142">
+              <b>msoOrgChartLayoutLeftHanging</b> В левой части размещает дочерние узлы по вертикали из родительского узла.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-142">
+                <b>msoOrgChartLayoutLeftHanging</b> Places child nodes vertically from the parent node on the left side.</span>
+            </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-143">
+              <b>msoOrgChartLayoutMixed</b> Возвращает значение для родительского узла, который имеет дочерние элементы, отформатированный с использованием более одного <b>MsoOrgChartLayoutType</b>.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-143">
+                <b>msoOrgChartLayoutMixed</b> Return value for a parent node that has children formatted using more than one <b>MsoOrgChartLayoutType</b>.</span>
+            </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-144">
+              <b>msoOrgChartLayoutRightHanging</b> В правой части размещает дочерние узлы по вертикали из родительского узла.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-144">
+                <b>msoOrgChartLayoutRightHanging</b> Places child nodes vertically from the parent node on the right side.</span>
+            </span>
+          </para>
+          <para>
+            <span data-ttu-id="525ba-145">
+              <b>msoOrgChartLayoutStandard</b> Размещает дочерние узлы по горизонтали ниже родительского узла.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-145">
+                <b>msoOrgChartLayoutStandard</b> Places child nodes horizontally below the parent node.</span>
+            </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -523,29 +576,29 @@
       </Parameters>
       <Docs>
         <param name="pTargetNode">
-          <span data-ttu-id="9f883-126">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
+          <span data-ttu-id="525ba-146">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-126">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
+            <span data-stu-id="525ba-146">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
           </span>
-          <span data-ttu-id="9f883-127">Схема узел, где будут перемещены указанного узла.</span>
+          <span data-ttu-id="525ba-147">Схема узел, где будут перемещены указанного узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-127">The diagram node where the specified node will be moved.</span>
+            <span data-stu-id="525ba-147">The diagram node where the specified node will be moved.</span>
           </span>
         </param>
         <param name="pos">
-          <span data-ttu-id="9f883-128">Требуется <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
+          <span data-ttu-id="525ba-148">Требуется <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-128">Required <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
+            <span data-stu-id="525ba-148">Required <see cref="T:Microsoft.Office.Interop.Office.MsoRelativeNodePosiiton" />.</span>
           </span>
-          <span data-ttu-id="9f883-129">Положение для перемещения узла, относительно <paramref name="TargetNode" />. <b>MsoRelativeNodePosition</b> может иметь одно из следующих констант:<b>msoAfterLastSibling</b><b>msoAfterNode</b><b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
+          <span data-ttu-id="525ba-149">Положение для перемещения узла, относительно <paramref name="TargetNode" />. <b>MsoRelativeNodePosition</b> может иметь одно из следующих констант:<b>msoAfterLastSibling</b><b>msoAfterNode</b><b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-129">The position to move the node, relative to <paramref name="TargetNode" />.<b>MsoRelativeNodePosition</b> can be one of these constants:<b>msoAfterLastSibling</b><b>msoAfterNode</b><b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
+            <span data-stu-id="525ba-149">The position to move the node, relative to <paramref name="TargetNode" />.<b>MsoRelativeNodePosition</b> can be one of these constants:<b>msoAfterLastSibling</b><b>msoAfterNode</b><b>msoBeforeFirstSibling</b><b>msoBeforeNode</b></span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="9f883-130">Перемещает узел диаграммы и его дочерних узлов в схеме.</span>
+          <span data-ttu-id="525ba-150">Перемещает узел диаграммы и его дочерних узлов в схеме.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-130">Moves a diagram node and any of its child nodes within a diagram.</span>
+            <span data-stu-id="525ba-150">Moves a diagram node and any of its child nodes within a diagram.</span>
           </span>
         </summary>
         <remarks>To be added.</remarks>
@@ -573,13 +626,13 @@
       <Parameters />
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-131">Выбор следующего узла схемы в серии из узлов.</span>
+          <span data-ttu-id="525ba-151">Выбор следующего узла схемы в серии из узлов.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-131">Selects the next diagram node in a series of nodes.</span>
+            <span data-stu-id="525ba-151">Selects the next diagram node in a series of nodes.</span>
           </span>
-          <span data-ttu-id="9f883-132">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта, представляющего вновь выбранного узла.</span>
+          <span data-ttu-id="525ba-152">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта, представляющего вновь выбранного узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-132">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object representing the newly-selected node.</span>
+            <span data-stu-id="525ba-152">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object representing the newly-selected node.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -610,9 +663,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-133">Возвращает родительский объект для указанного объекта.</span>
+          <span data-ttu-id="525ba-153">Возвращает родительский объект для указанного объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-133">Returns the parent object for the specified object.</span>
+            <span data-stu-id="525ba-153">Returns the parent object for the specified object.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -641,9 +694,9 @@
       <Parameters />
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-134">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объект, представляющий предыдущей схеме узел в коллекции узлов схемы.</span>
+          <span data-ttu-id="525ba-154">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объект, представляющий предыдущей схеме узел в коллекции узлов схемы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-134">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object that represents the previous diagram node in a collection of diagram nodes.</span>
+            <span data-stu-id="525ba-154">Returns a <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object that represents the previous diagram node in a collection of diagram nodes.</span>
           </span>
         </summary>
         <returns>To be added.</returns>
@@ -674,32 +727,29 @@
       </Parameters>
       <Docs>
         <param name="pTargetNode">
-          <span data-ttu-id="9f883-135">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
+          <span data-ttu-id="525ba-155">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-135">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
+            <span data-stu-id="525ba-155">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
           </span>
-          <span data-ttu-id="9f883-136">Схема целевого узла для замены.</span>
+          <span data-ttu-id="525ba-156">Схема целевого узла для замены.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-136">The target diagram node to be replaced.</span>
+            <span data-stu-id="525ba-156">The target diagram node to be replaced.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="9f883-137">Заменяет узел диаграммы конечного узла диаграммы источника.</span>
+          <span data-ttu-id="525ba-157">Заменяет узел диаграммы конечного узла диаграммы источника.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-137">Replaces a target diagram node with the source diagram node.</span>
+            <span data-stu-id="525ba-157">Replaces a target diagram node with the source diagram node.</span>
           </span>
         </summary>
         <remarks>
-          <span data-ttu-id="9f883-138">
-            <para>Удаляется схема целевого узла, а узла схема источника, включая все его дочерние узлы, перемещаются в которых был конечного узла диаграммы.</para>
-            <para></para>
-          </span>
-          <span class="sxs-lookup">
-            <span data-stu-id="9f883-138">
-              <para>The target diagram node is deleted, and the source diagram node, including any of its child nodes, are moved to where the target diagram node was.</para>
-              <para></para>
+          <para>
+            <span data-ttu-id="525ba-158">Удален конечного узла диаграммы и схема узла источника, включая все его дочерние узлы, перемещаются в которых был конечного узла диаграммы.</span>
+            <span class="sxs-lookup">
+              <span data-stu-id="525ba-158">The target diagram node is deleted, and the source diagram node, including any of its child nodes, are moved to where the target diagram node was.</span>
             </span>
-          </span>
+          </para>
+          <para></para>
         </remarks>
       </Docs>
     </Member>
@@ -727,9 +777,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-139">Возвращает корень <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта, принадлежащего схема корневого узла.</span>
+          <span data-ttu-id="525ba-159">Возвращает корень <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта, принадлежащего схема корневого узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-139">Returns the root <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object which the root diagram node belongs.</span>
+            <span data-stu-id="525ba-159">Returns the root <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object which the root diagram node belongs.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -760,9 +810,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-140">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий форму, подключенного к указанной схемы узла</span>
+          <span data-ttu-id="525ba-160">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий форму, подключенного к указанной схемы узла</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-140">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object that represents the shape attached to the specified diagram node</span>
+            <span data-stu-id="525ba-160">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object that represents the shape attached to the specified diagram node</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -793,37 +843,37 @@
       </Parameters>
       <Docs>
         <param name="pTargetNode">
-          <span data-ttu-id="9f883-141">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
+          <span data-ttu-id="525ba-161">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-141">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
+            <span data-stu-id="525ba-161">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
           </span>
-          <span data-ttu-id="9f883-142">Схема целевого узла для замены.</span>
+          <span data-ttu-id="525ba-162">Схема целевого узла для замены.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-142">The target diagram node to be replaced.</span>
+            <span data-stu-id="525ba-162">The target diagram node to be replaced.</span>
           </span>
         </param>
         <param name="swapChildren">
-          <span data-ttu-id="9f883-143">Необязательный атрибут типа <b>Boolean</b>. </span>
+          <span data-ttu-id="525ba-163">Необязательный атрибут типа <b>Boolean</b>. </span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-143">Optional <b>Boolean</b>.</span>
+            <span data-stu-id="525ba-163">Optional <b>Boolean</b>.</span>
           </span>
-          <span data-ttu-id="9f883-144">Дочерние узлы заменить исходный и целевой узлы.</span>
+          <span data-ttu-id="525ba-164">Дочерние узлы заменить исходный и целевой узлы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-144">The child nodes of the target and source nodes being swapped.</span>
+            <span data-stu-id="525ba-164">The child nodes of the target and source nodes being swapped.</span>
           </span>
-          <span data-ttu-id="9f883-145">Дочерние узлы схема перемещаются вместе с их соответствующих корневого узла.</span>
+          <span data-ttu-id="525ba-165">Дочерние узлы схема перемещаются вместе с их соответствующих корневого узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-145">Any child diagram nodes are moved along with their corresponding root nodes.</span>
+            <span data-stu-id="525ba-165">Any child diagram nodes are moved along with their corresponding root nodes.</span>
           </span>
-          <span data-ttu-id="9f883-146">Значение по умолчанию — <b>True</b>, которое меняет местами дочерние узлы.</span>
+          <span data-ttu-id="525ba-166">Значение по умолчанию — <b>True</b>, которое меняет местами дочерние узлы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-146">Default is <b>True</b>, which swaps the child nodes.</span>
+            <span data-stu-id="525ba-166">Default is <b>True</b>, which swaps the child nodes.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="9f883-147">Меняет местами узел схема источника с целевого узла схемы.</span>
+          <span data-ttu-id="525ba-167">Меняет местами узел схема источника с целевого узла схемы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-147">Swaps the source diagram node with a target diagram node.</span>
+            <span data-stu-id="525ba-167">Swaps the source diagram node with a target diagram node.</span>
           </span>
         </summary>
         <remarks>To be added.</remarks>
@@ -853,9 +903,9 @@
       </ReturnValue>
       <Docs>
         <summary>
-          <span data-ttu-id="9f883-148">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру текстовое поле связан с узлом схемы.</span>
+          <span data-ttu-id="525ba-168">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру текстовое поле связан с узлом схемы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-148">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object representing the shape of the text box associated with a diagram node.</span>
+            <span data-stu-id="525ba-168">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object representing the shape of the text box associated with a diagram node.</span>
           </span>
         </summary>
         <value>To be added.</value>
@@ -886,19 +936,19 @@
       </Parameters>
       <Docs>
         <param name="pReceivingNode">
-          <span data-ttu-id="9f883-149">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
+          <span data-ttu-id="525ba-169">Требуется <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> объекта.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-149">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
+            <span data-stu-id="525ba-169">Required <see cref="T:Microsoft.Office.Interop.Excel.DiagramNode" /> object.</span>
           </span>
-          <span data-ttu-id="9f883-150">Узел схемы, получение дочерних узлов, куда следует переключить с указанного узла.</span>
+          <span data-ttu-id="525ba-170">Узел схемы, получение дочерних узлов, куда следует переключить с указанного узла.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-150">The diagram node receiving the child nodes being transferred from the specified node.</span>
+            <span data-stu-id="525ba-170">The diagram node receiving the child nodes being transferred from the specified node.</span>
           </span>
         </param>
         <summary>
-          <span data-ttu-id="9f883-151">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру текстовое поле связан с узлом схемы.</span>
+          <span data-ttu-id="525ba-171">Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру текстовое поле связан с узлом схемы.</span>
           <span class="sxs-lookup">
-            <span data-stu-id="9f883-151">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object representing the shape of the text box associated with a diagram node.</span>
+            <span data-stu-id="525ba-171">Returns a <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> object representing the shape of the text box associated with a diagram node.</span>
           </span>
         </summary>
         <remarks>To be added.</remarks>
