@@ -1,10 +1,10 @@
 <Type Name="FormatCondition" FullName="Microsoft.Office.Interop.Excel.FormatCondition">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a635d52289eab8b27e83a83f54b3afc26b142b07" />
+    <Meta Name="ms.openlocfilehash" Value="06db90663108615d83dc620b65e7671be2f3d791" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20584415" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface FormatCondition" />
@@ -31,11 +31,49 @@
   <Docs>
     <summary>Представляет условное форматирование.</summary>
     <remarks>
-      <para>Объект <b>FormatCondition</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Коллекция <b>FormatConditions</b> может содержать до трех условные форматы для указанного диапазона.</para>
-      <para>Использования <b>FormatConditions</b>(<paramref name="index" />), где индекс — номер индекса условное форматирование, чтобы возвратить объект <b>FormatCondition</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для создания нового условное форматирование. Если предпринимается попытка создания более трех условные форматы для одного диапазона, происходит сбой метода <b>Add</b> . Если диапазон имеет три формата, можно использовать <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> можно использовать метод, чтобы изменить один из форматов, или <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> метод для удаления формат и затем использовать метод <b>Add</b> для создания нового формата.</para> Использование 
-      <para><see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Font" />, <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Borders" />, и <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Interior" /> свойства <b>FormatCondition</b> объекта, чтобы управлять внешним видом форматирование ячеек. Некоторые свойства этих объектов не поддерживаются в условное форматирование в объектной модели. В следующей таблице перечислены свойства, которые могут использоваться с условным форматированием.</para><list type="table"><item><term><b>Шрифта</b></term><description><b>Полужирный</b><b>цвета</b><b>ColorIndex</b><b>FontStyle</b><b>Italic</b><b>зачеркивание</b><b>Подчеркивание</b>подчеркивания учета не может использоваться.</description></item> Можно использовать стилей границ 
-        <item><term><b>границы</b></term><description><b>внизу</b><b>слева</b><b>право</b><b>цвета</b><b>стиля</b>следующие (все остальные не поддерживаются): <b>xlNone</b>, <b>xlSolid</b>, <b>xlDash</b><b>xlDot</b>, <b>xlDashDot</b>, <b>xlDashDotDot</b>, <b>xlGray50</b>, <b>xlGray75</b>и <b>xlGray25</b>. <b>В начало</b><b>Вес</b> Можно использовать следующие Вес границы (все остальные не поддерживаются): <b>xlWeightHairline</b> и <b>xlWeightThin</b>.</description></item><item><term><b>Внутренняя</b></term><description><b>цвета</b><b>ColorIndex</b><b>шаблон</b><b>PatternColorIndex</b></description></item></list><para></para></remarks>
+      <para>Объект <b>FormatCondition</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Коллекция <b>FormatConditions</b> может содержать до трех условные форматы за указанный период.</para>
+      <para>Используйте <b>FormatConditions</b>(<paramref name="index" />), где индекс — номер индекса условное форматирование, чтобы возвратить объект <b>FormatCondition</b> .</para>
+      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для создания нового условное форматирование. Если предпринимается попытка создания более трех условные форматы для одного диапазона, происходит сбой метода <b>Add</b> . Если диапазон имеет три формата, можно использовать <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> можно использовать метод, чтобы изменить один из форматов, или <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> метод для удаления формат и затем использовать метод <b>Add</b> для создания нового формата.</para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Font" />, <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Borders" />, и <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Interior" /> свойства <b>FormatCondition</b> объекта, чтобы управлять внешним видом форматирование ячеек. Некоторые свойства этих объектов не поддерживаются в условное форматирование в объектной модели. В следующей таблице перечислены свойства, которые могут использоваться с условным форматированием.</para>
+      <list type="table">
+        <item>
+          <term>
+            <b>Шрифт</b>
+          </term>
+          <description>
+            <b>Полужирным шрифтом</b>
+            <b>Цвет</b>
+            <b>ColorIndex (en)</b>
+            <b>FontStyle</b>
+            <b>Курсив</b>
+            <b>Зачеркивание</b>
+            <b>Подчеркивание</b> Нельзя использовать стили подчеркивания бухгалтерского учета.</description>
+        </item>
+        <item>
+          <term>
+            <b>Границы</b>
+          </term>
+          <description>
+            <b>Внизу</b>
+            <b>Цвет</b>
+            <b>Слева</b>
+            <b>Справа</b>
+            <b>Стиль</b> Можно использовать следующие стилей границ (все остальные не поддерживаются): <b>xlNone</b>, <b>xlSolid</b>, <b>xlDash</b>, <b>xlDot</b>, <b>xlDashDot</b>, <b>xlDashDotDot</b>, <b>xlGray50</b>, <b>xlGray75</b>и <b>xlGray25 </b>. <b>В начало</b><b>Вес</b> Можно использовать следующие Вес границы (все остальные не поддерживаются): <b>xlWeightHairline</b> и <b>xlWeightThin</b>.</description>
+        </item>
+        <item>
+          <term>
+            <b>Внутренняя</b>
+          </term>
+          <description>
+            <b>Цвет</b>
+            <b>ColorIndex (en)</b>
+            <b>Шаблон</b>
+            <b>PatternColorIndex</b>
+          </description>
+        </item>
+      </list>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -150,8 +188,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DateOperator">
@@ -266,7 +306,7 @@
         <summary>Возвращает значение или выражение, связанное с условной проверки формата или данные.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Свойства <b>Formula1</b> может быть константа, строковое значение, ссылка на ячейку или формулу.</para>
+          <para>Свойство <b>Formula1</b> может быть константа, строковое значение, ссылка на ячейку или формулу.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -296,7 +336,10 @@
       <Docs>
         <summary>Возвращает значение или выражение, связанное с вторая часть условной проверки формата или данные.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>Formula2</b> используется только при условной проверки данных форматирование <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Operator" /> свойство является <b>xlBetween</b> или <b>xlNotBetween</b>. Может быть константа, строковое значение, ссылка на ячейку или формулу.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>Formula2</b> используется только при условной проверки данных форматирование <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Operator" /> свойство является <b>xlBetween</b> или <b>xlNotBetween</b>. Может быть константа, строковое значение, ссылка на ячейку или формулу.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Interior">
@@ -388,7 +431,7 @@
         <param name="Range">Диапазон, к которому будет применяться это правило форматирования.</param>
         <summary>Задает диапазон ячеек, к которому применяется этот правила форматирования.</summary>
         <remarks>
-          <para>Диапазон должен быть в стиль ссылок A1 и полностью содержаться в таблице, являющийся родительским <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Также можно использовать знак доллара, но они обрабатываются.</para>
+          <para>Диапазон должен быть в стиль ссылок A1 и полностью содержаться в таблице, являющийся родительским <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Также можно использовать знак доллара, но они игнорируются.</para>
           <para>Также можно использовать локально определенное имя в любой части диапазона, но имя должно быть языке макрос.</para>
           <para></para>
         </remarks>
@@ -462,7 +505,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>Числовой формат задается с помощью одной кодов формата, отображаются на вкладке "число" диалогового окна Формат ячеек. Используйте встроенные числовой формат, например «Общие» или создать пользовательский числовой формат.</para>
+          <para>Формат номера задается с помощью одной кодов формата, отображаются на вкладке "число" диалогового окна Формат ячеек. Можно использовать встроенные числовой формат, например «Общие», или создать пользовательский числовой формат.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -554,7 +597,7 @@
           <b>Integer</b>
         </value>
         <remarks>
-          <para>При задании приоритета, значение должно быть положительное целое число от 1 до общее число правила условного форматирования в рабочем листе. Приоритет должен быть уникальное значение для всех правил в рабочем листе, поэтому изменение приоритета для указанного правила условного форматирования может стать причиной значение приоритета других правил на листе перемещать.</para>
+          <para>При задании приоритета, значение должно быть положительное целое число от 1 до общее число правила условного форматирования в рабочем листе. Приоритет должен быть уникальное значение для всех правил в рабочем листе, поэтому изменение приоритета для указанного правила условного форматирования может стать причиной значение приоритета других правил на листе удаляются.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -678,7 +721,7 @@
       <Docs>
         <summary>Задает порядок вычисления для данного правила условного форматирования, поэтому оценивается после всех правил в рабочем листе.</summary>
         <remarks>
-          <para>Фактический vaule приоритет будет совпадать с общим количеством правила условного форматирования в рабочем листе. При наличии нескольких правила условного форматирования на лист, этот метод будет отображено приоритет правила, которые имели значение приоритета, больше, чем правило будет увеличено с помощью одного.</para>
+          <para>Фактический vaule приоритет будет совпадать с общим количеством правила условного форматирования в рабочем листе. При наличии нескольких правила условного форматирования на листе этот метод будет отображено приоритет правил, которым пришлось больше, чем правило будет увеличено с помощью одного значения приоритета.</para>
           <para>
             <b>Примечание</b>: уровни приоритета для правила условного форматирования, применяются на основе уровне рабочего листа.</para>
           <para></para>
@@ -816,7 +859,7 @@
         <summary>Возвращает тип объекта.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Тип объекта может иметь одно из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> констант:</para>
+          <para>Тип объекта может иметь одно из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> константы:</para>
           <para>
             <b>xlCellValue</b>
           </para>

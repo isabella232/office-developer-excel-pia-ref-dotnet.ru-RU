@@ -1,10 +1,10 @@
 <Type Name="Borders" FullName="Microsoft.Office.Interop.Excel.Borders">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="65559708625b42273291cf16ec350e291ea4154d" />
+    <Meta Name="ms.openlocfilehash" Value="ac67cbe49f4367fa1e2be6aa391091c3d7ab6ce3" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20580663" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Borders : System.Collections.IEnumerable" />
@@ -36,8 +36,8 @@
     <summary>Коллекция четыре <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объекты, которые представляют четыре границы <see cref="T:Microsoft.Office.Interop.Excel.Range" /> или <see cref="T:Microsoft.Office.Interop.Excel.Style" /> объекта.</summary>
     <remarks>
       <para>Используйте свойство <b>границы</b> объекта <b>диапазон</b> или <b>стиля</b> для возврата коллекции <b>границы</b> , которая содержит все четыре границы.</para>
-      <para>Использования <b>границы</b>(<paramref name="index" />), где <paramref name="index" /> определяет границы, чтобы возвратить объект <b>границы</b> .</para>
-      <para>Index может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> констант: <b>xlDiagonalDown</b>, <b>xlDiagonalUp</b>, <b>xlEdgeBottom</b>, <b>xlEdgeLeft</b>, <b>xlEdgeRight</b>, <b>xlEdgeTop</b>, <b>xlInsideHorizontal</b>или <b>xlInsideVertical</b>.</para>
+      <para>Используйте <b>границы</b>(<paramref name="index" />), где <paramref name="index" /> определяет границы, чтобы возвратить объект <b>границы</b> .</para>
+      <para>Индекс может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> констант: <b>xlDiagonalDown</b>, <b>xlDiagonalUp</b>, <b>xlEdgeBottom</b>, <b>xlEdgeLeft</b>, <b>xlEdgeRight</b>, <b>xlEdgeTop</b>, <b>xlInsideHorizontal</b>или <b>xlInsideVertical </b>.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -165,7 +165,7 @@
         <summary>Возвращает или задает цвет всех четырех границ. Возвращает <b>значение Null</b> , если все четыре границы не тот же цвет.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Цвет указан как значение индекса в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант:</para>
+          <para>Цвет указан как значение индекса в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> константы:</para>
           <para>
             <b>xlColorIndexAutomatic</b>
           </para>
@@ -230,8 +230,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -330,10 +332,10 @@
           <para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" />может иметь одно из следующих <b>xlLineStyle задается тип</b> константы:</para>
           <para>
-            <b>xlDouble</b>
+            <b>xlContinuous</b>
           </para>
           <para>
-            <b>xlSlantDashDot</b>
+            <b>xlDash</b>
           </para>
           <para>
             <b>xlDashDot</b>
@@ -342,13 +344,13 @@
             <b>xlDashDotDot</b>
           </para>
           <para>
-            <b>xlContinuous</b>
-          </para>
-          <para>
-            <b>xlDash</b>
-          </para>
-          <para>
             <b>xlDot</b>
+          </para>
+          <para>
+            <b>xlDouble</b>
+          </para>
+          <para>
+            <b>xlSlantDashDot</b>
           </para>
           <para>
             <b>xlLineStyleNone</b>
@@ -416,7 +418,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>Попытки подключения к цвет темы для объекта, цвет которого не является в настоящее время темой приводит к ошибке времени выполнения недопустимый запрос.</para>
+          <para>Попытки подключения к цвет темы для объекта, цвет которого не является в настоящее время темой приведет к ошибку времени выполнения недопустимый запрос.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -452,7 +454,7 @@
           <b>Single</b>
         </value>
         <remarks>
-          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для <see cref="P:Microsoft.Office.Interop.Excel.Borders.TintAndShade" /> свойство. Нуль (0) нейтральный.</para>
+          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для <see cref="P:Microsoft.Office.Interop.Excel.Borders.TintAndShade" /> свойство. Нейтральный нуль (0).</para>
           <para>Попытки подключения к этому свойству присвоено значение меньше, чем значение -1 или более 1 приводит к ошибке времени выполнения: «указанное значение находится вне диапазона».  Это свойство работает для цвета темы и цвета nontheme.</para>
           <para></para>
         </remarks>

@@ -1,10 +1,10 @@
 <Type Name="CellFormat" FullName="Microsoft.Office.Interop.Excel.CellFormat">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7fe04494981caca0d57f0a87169643a708571b41" />
+    <Meta Name="ms.openlocfilehash" Value="bb607767f33cbf4ea76bfc37821ee59c522eeb21" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20581174" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface CellFormat" />
@@ -67,7 +67,7 @@
           <b>Значение true,</b> Если текст автоматически с отступом при выравнивания текста в ячейку задано значение равномерного распределения по горизонтали или по вертикали.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для выравнивания текста по равномерное распределение, можно задать <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.VerticalAlignment" /> свойства <b>xlVAlignDistributed</b> при значение <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.Orientation" /><b>xlVertical</b>— это свойство, а также можно задать <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.HorizontalAlignment" /> свойства <b>xlHAlignDistributed</b> при имеет значение свойство <b>Orientation</b><b>xlHorizontal</b>.</para>
+          <para>Чтобы установить равномерное выравнивание текста, можно задать <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.VerticalAlignment" /> свойства <b>xlVAlignDistributed</b> при значение <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.Orientation" /><b>xlVertical</b>— это свойство, а также можно задать <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.HorizontalAlignment" /> свойства <b>xlHAlignDistributed</b> при Свойство <b>Orientation</b> равен <b>xlHorizontal</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -182,8 +182,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Font">
@@ -247,7 +249,7 @@
           <b>Значение true,</b> Если формула будет скрыта при использовании защищенного рабочего листа. Возвращает <b>значение Null</b> , если указанный диапазон содержит ячейки с <b>FormulaHidden</b> равно <b>True</b> , а некоторые ячейки с помощью <b>FormulaHidden</b> равно <b>False</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Не следует путать это свойство с <see cref="P:Microsoft.Office.Interop.Excel.Range.Hidden" /> свойство. Формула не скрывается, если книга защищена, а не рабочего листа; оно будет скрыта только в том случае, если лист защищен.</para>
+          <para>Не следует путать это свойство с <see cref="P:Microsoft.Office.Interop.Excel.Range.Hidden" /> свойство. Формула не скрывается, если книга защищена, а не рабочего листа; она будет скрыта только в том случае, если защищенного рабочего листа.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -429,7 +431,7 @@
           <b>Значение true,</b> Если диапазон или стиля содержит объединенные ячейки.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Если выбрать диапазон, который содержит объединенные ячейки, выделенный фрагмент в итоге может отличаться от предполагаемого выбора. Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Address(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlReferenceStyle,System.Object,System.Object)" /> свойство Проверьте адрес выбранного диапазона.</para>
+          <para>Если выбрать диапазон, который содержит объединенные ячейки, выделенный фрагмент в итоге может отличаться от предполагаемого выбора. Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Address(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlReferenceStyle,System.Object,System.Object)" /> свойство Проверьте адрес выбранного диапазона.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -462,7 +464,10 @@
       <Docs>
         <summary>Возвращает или задает код формата для объекта. Возвращает <b>значение Null</b> , если нет том же формате всем ячейкам в указанном диапазоне.</summary>
         <value>To be added.</value>
-        <remarks>Код <para>формата является ту же строку как вариант кодов формата в диалоговом окне Формат ячеек. Функция Visual Basic <b>Формат</b> использует строки кода другой формат, чем <b>Формат числа</b> и <see cref="P:Microsoft.Office.Interop.Excel.Range.NumberFormatLocal" /> свойств.</para><para></para></remarks>
+        <remarks>
+          <para>Код формата является ту же строку как вариант кодов формата в диалоговом окне Формат ячеек. Функция Visual Basic <b>Формат</b> использует строки кода другой формат, чем <b>Формат числа</b> и <see cref="P:Microsoft.Office.Interop.Excel.Range.NumberFormatLocal" /> свойства.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberFormatLocal">
@@ -494,7 +499,7 @@
         <summary>Возвращает или задает код формата для объекта в виде строки на языке пользователя.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Функция Visual Basic <b>Формат</b> использует другой формат кода строки, чем <see cref="P:Microsoft.Office.Interop.Excel.Range.NumberFormat" /> и свойства <b>NumberFormatLocal</b> .</para>
+          <para>Функция Visual Basic <b>Формат</b> использует другой формат кода строки, чем <see cref="P:Microsoft.Office.Interop.Excel.Range.NumberFormat" /> и <b>NumberFormatLocal</b> свойства.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -541,7 +546,7 @@
           <para>
             <b>xlVertical</b>
           </para>
-          <para>для этого свойства для одного поля в иерархии наборов источников данных OLAP ориентация для других полей в той же иерархии. На оказании полей аналитики можно только в строк, столбцов и области поля страницы отчета сводной таблицы. На оказании мер полей можно только в области данных. Установка иерархии или данных поля для <b>xlHidden</b> удаляет иерархии или поле из отчета сводной таблицы.</para>
+          <para>Для источников данных OLAP этого свойства для одного поля в иерархии задает направление для других полей в той же иерархии. На оказании полей аналитики можно только в строк, столбцов и области поля страницы отчета сводной таблицы. На оказании мер полей можно только в области данных. Установка иерархии или данных поля для <b>xlHidden</b> удаляет иерархии или поле из отчета сводной таблицы.</para>
           <para></para>
         </remarks>
       </Docs>

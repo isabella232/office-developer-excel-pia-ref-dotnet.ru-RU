@@ -1,10 +1,10 @@
 <Type Name="VPageBreaks" FullName="Microsoft.Office.Interop.Excel.VPageBreaks">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="40747211c0a9bc6951867f60f1e99349accca4af" />
+    <Meta Name="ms.openlocfilehash" Value="9f1ccf11f0bbaf483e28c650605da8bce1726a26" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20581958" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface VPageBreaks : System.Collections.IEnumerable" />
@@ -36,10 +36,10 @@
     <summary>Коллекция вертикальной разрывов страниц в область печати. Представленный приостановки выполнения каждой страницы по вертикали <see cref="T:Microsoft.Office.Interop.Excel.VPageBreak" /> объекта.</summary>
     <remarks>
       <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.VPageBreaks" /> свойство для возврата коллекции <b>VPageBreaks</b> . Использование <see cref="M:Microsoft.Office.Interop.Excel.VPageBreaks.Add(System.Object)" /> метод, чтобы добавить разрыв страницы по вертикали.</para>
-      <para>Если добавить разрыв страницы, которая не пересекаются область печати, выберите только что добавленное <b>VPageBreak</b> объекта не будут отображаться в коллекции <b>VPageBreaks</b> для области печати. При изменении размера или переопределить область печати можно изменить содержимое коллекции.</para>
+      <para>Если добавить разрыв страницы, которая не пересекаются область печати объекта <b>VPageBreak</b> недавно добавленных не появится в коллекции <b>VPageBreaks</b> для области печати. При изменении размера или переопределить область печати можно изменить содержимое коллекции.</para>
       <para>При <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Application" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Count" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Creator" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Item(System.Int32)" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Parent" /> свойство или <see cref="M:Microsoft.Office.Interop.Excel.VPageBreaks.Add(System.Object)" /> метод используется в сочетании со свойством <b>VPageBreaks</b> :</para>
-      <para>Для автоматического область печати, свойство <b>VPageBreaks</b> применяется только к разрывов страниц в область печати.</para>
-      <para>Для пользовательских области печати тот же диапазон, свойство <b>VPageBreaks</b> применяется ко всем разрывов страниц.</para>
+      <para>Для автоматического область печати свойство <b>VPageBreaks</b> применяется только к разрывов страниц в область печати.</para>
+      <para>Для пользовательских области печати тот же диапазон свойство <b>VPageBreaks</b> применяется ко всем разрывов страниц.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -190,8 +190,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">

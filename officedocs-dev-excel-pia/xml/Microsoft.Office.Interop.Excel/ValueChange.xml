@@ -1,10 +1,10 @@
 <Type Name="ValueChange" FullName="Microsoft.Office.Interop.Excel.ValueChange">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="cec9116dcd3809910e97f0f88001ea2b0c0525b8" />
+    <Meta Name="ms.openlocfilehash" Value="b2dce604b01b455e4f9c71554372a322f7c7c2fe" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20586291" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ValueChange" />
@@ -33,7 +33,7 @@
     <remarks>
       <para>
         <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> Содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекты, которые представляют изменения внесенные пользователем на значение ячейки в отчете сводной таблицы.</para>
-      <para>Свойства <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта укажите сведения об изменениях, которое было выполнено, такие как значение изменения, кортеж, связанные с ячейки, которое было изменено, порядок, в котором изменения относительно других изменений и является ли ячейки отображается в сводной таблице. <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> Объект также предоставляет <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство, которое возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект, представляющий ячейку, который был изменен и Дополнительные сведения о измененные ячейки.</para>
+      <para>Свойства <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта укажите сведения об изменениях, которое было выполнено, такие как значение изменения, кортеж, связанные с ячейки, которое было изменено, порядок, в которой был изменен относительно других изменений и ячейке отображается в Сводная таблица. <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> Объект также предоставляет <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство, которое возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект, представляющий ячейку, который был изменен и Дополнительные сведения о измененные ячейки.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -99,7 +99,7 @@
         <remarks>
           <para>Только для чтения.</para>
           <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationValue" /> Свойства соответствует значению параметра распределения в диалоговом окне Параметры анализа "что если" для отчета сводной таблицы, основанный на источнике данных OLAP, был выполнен во время применения это изменение. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов и соответствующий <paramref name="AllocationValue" /> параметр не указан, возвращается значение по умолчанию для распределения сервера OLAP.</para>
+            <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationValue" /> Свойства соответствует значению параметра распределения в диалоговом окне Параметры анализа "что если" для отчета сводной таблицы, основанный на источнике данных OLAP, был выполнен во время применения это изменение. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов и соответствующий <paramref name="AllocationValue" /> параметр не указан, возвращается значение по умолчанию для распределения OLAP-сервера.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -195,8 +195,8 @@
         <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
         <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
         <remarks>
-          <para>Только для чтения <b>длинное</b>.</para>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Только для чтения <b>времени</b>.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -224,7 +224,7 @@
       <Docs>
         <summary>Удаляет указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта из <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</summary>
         <remarks>
-          <para>Также можно удалить <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объектов с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Delete" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства.</para>
+          <para>Также можно удалить <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объектов с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Delete" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -256,7 +256,7 @@
         <value>Порядок, в котором было выполнено это изменение относительно других изменений в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</value>
         <remarks>
           <para>Только для чтения.</para>
-          <para>Значение из <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Order" /> автоматически назначаемый Excel на основе порядка, в том, что пользователь применил изменения значения ячеек в отчете сводной таблицы. Если несколько изменений были применены за одну операцию, Excel произвольно назначить порядок в этот набор изменений.</para>
+          <para>Значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Order" /> автоматически назначаемый Excel на основе порядка, в том, что пользователь применил изменения значения ячеек в отчете сводной таблицы. Если в нескольких изменения применяются за одну операцию, Excel произвольно назначить порядок в этот набор изменений.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -414,7 +414,7 @@
           <b>значение true,</b> Если ячейки (кортеж) в данный момент виден в отчете сводной таблицы; в противном случае — <b>false</b>.</value>
         <remarks>
           <para>Только для чтения.</para>
-          <para>Возвращаемое <b>значение true,</b> Если ячейки (кортеж) в данный момент виден в отчете сводной таблицы; в противном случае — <b>false</b>.</para>
+          <para>Возвращает <b>значение true</b> , если ячейки (кортеж) в данный момент виден в отчете сводной таблицы; в противном случае — <b>false</b>.</para>
           <para></para>
         </remarks>
       </Docs>

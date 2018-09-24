@@ -1,10 +1,10 @@
 <Type Name="Protection" FullName="Microsoft.Office.Interop.Excel.Protection">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="eb4842f02045899e4df285db2b98dfe149fa3820" />
+    <Meta Name="ms.openlocfilehash" Value="f9996163076ffe6bcb7674a54fe7b673141d992b" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20585192" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Protection" />
@@ -32,7 +32,7 @@
     <summary>Представляет различные типы защиты параметры, доступные для листа.</summary>
     <remarks>
       <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.Protection" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объекта возвращает объект <b>защиты</b> .</para>
-      <para>После возвращения объекта <b>защиты</b> , можно использовать следующие свойства или возвращает параметры защиты:</para>
+      <para>После возвращения объекта <b>защиты</b> , задает или возвращает параметры защиты можно использовать следующие свойства:</para>
       <list type="bullet">
         <item>
           <description>
@@ -84,6 +84,11 @@
             <see cref="P:Microsoft.Office.Interop.Excel.Protection.AllowSorting" />
           </description>
         </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.Interop.Excel.Protection.AllowUsingPivotTables" />
+          </description>
+        </item>
       </list>
       <para></para>
     </remarks>
@@ -116,7 +121,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Свойство <b>AllowDeletingColumns</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
-          <para>Столбцы, содержащие ячейки к удалению необходимо разблокировать, когда лист защищен.</para>
+          <para>Столбцы, содержащие ячейки к удалению необходимо разблокировать, когда защиты листа.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -148,7 +153,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Свойство <b>AllowDeletingRows</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
-          <para>Строки, содержащие ячейки к удалению необходимо разблокировать, когда лист защищен.</para>
+          <para>Строки, содержащие ячейки к удалению необходимо разблокировать, когда защиты листа.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -207,8 +212,11 @@
         <summary>Возвращает <b>значение True</b> , если пользователю разрешено использование автофильтра, созданный перед защищенного листа.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Свойство <b>AllowFiltering</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para> Свойство 
-          <para><b>AllowFiltering</b> пользователь может изменить критерии фильтрации на существующий автофильтра. Пользователь не может создать или удалить автофильтра на защищенном листе.</para><para>Ячейки для фильтрации необходимо разблокировать, когда лист защищен.</para><para></para></remarks>
+          <para>Свойство <b>AllowFiltering</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
+          <para>Свойство <b>AllowFiltering</b> пользователь может изменить критерии фильтрации на существующий автофильтра. Пользователь не может Создание или удаление автофильтра защищенного рабочего листа.</para>
+          <para>Необходимо разблокировать ячейки для фильтрации, когда защиты листа.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="AllowFormattingCells">
@@ -331,7 +339,7 @@
         <summary>Возвращает <b>значение True</b> , если вставки столбцов разрешен защищенного рабочего листа.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Вставленный столбец наследует форматирование (по умолчанию) в столбце слева от нее, что означает, что она может заблокированные ячейки. Другими словами, пользователи не смогут удалять столбцы, которые они вставлены.</para>
+          <para>Вставленный столбец наследует форматирование (по умолчанию) в столбце слева от нее, что означает, что она может заблокированные ячейки. Другими словами пользователи не смогут удалять столбцы, которые они вставлены.</para>
           <para>Свойство <b>AllowInsertingColumns</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
           <para></para>
         </remarks>
@@ -363,7 +371,7 @@
         <summary>Возвращает <b>значение True</b> , если разрешен вставки гиперссылки на защищенном листе.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Гиперссылки можно вставить в разблокированными или незащищенный ячеек на защищенном листе.</para>
+          <para>Гиперссылки может быть вставлен только в ячейках разблокированными или незащищенный защищенного рабочего листа.</para>
           <para>Свойство <b>AllowInsertingHyperlinks</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
           <para></para>
         </remarks>
@@ -426,7 +434,7 @@
         <summary>Возвращает <b>значение True</b> , если параметр сортировки разрешен защищенного рабочего листа.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>На защищенном листе сортировка выполняется только для ячеек разблокированными или незащищенный.</para>
+          <para>На защищенном листе сортировка может выполняться только на разблокированными или незащищенный ячеек.</para>
           <para>Свойство <b>AllowSorting</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
           <para></para>
         </remarks>
@@ -458,7 +466,7 @@
         <summary>Возвращает <b>значение True</b> , если пользователь для работы с сводных таблиц на защищенном листе.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Свойство <b>AllowUsingPivotTables</b> применяется к источнику данных не OLAP.</para>
+          <para>Свойство <b>AllowUsingPivotTables</b> применяется к не OLAP источника данных.</para>
           <para>Свойство <b>AllowUsingPivotTables</b> можно задать с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Protect(System.Object,System.Object,System.Object)" /> аргументы метода.</para>
           <para></para>
         </remarks>

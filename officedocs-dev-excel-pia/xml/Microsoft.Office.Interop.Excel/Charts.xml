@@ -1,10 +1,10 @@
 <Type Name="Charts" FullName="Microsoft.Office.Interop.Excel.Charts">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f0e75c27ff1370b7c1737585a6a29f589fcd20eb" />
+    <Meta Name="ms.openlocfilehash" Value="21bb7adb80852e2d82d5897dcd0ffec87dcefadd" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20581741" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Charts : System.Collections.IEnumerable" />
@@ -36,10 +36,10 @@
     <summary>Коллекция всех листы диаграмм в указанный или активной книги. Каждый лист диаграммы представлены <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объекта. Это не относится к диаграммы на листах диалогов или таблицы, внедренной. Сведения о встроенные диаграммы можно <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> объекта.</summary>
     <remarks>
       <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Charts" /> свойство для возврата коллекции <b>диаграмм</b> . Использование <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод, чтобы создать новый лист диаграммы и добавить его в книгу.</para>
-      <para>, Можно объединить <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод с <see cref="M:Microsoft.Office.Interop.Excel._Chart.ChartWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить новую диаграмму, содержащую данные из листа.</para>
-      <para>Использования <b>диаграмм</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса лист диаграммы или имя, чтобы возвратить объект <b>диаграммы</b> .</para>
+      <para>Вы можете сочетать <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод с <see cref="M:Microsoft.Office.Interop.Excel._Chart.ChartWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить новую диаграмму, содержащую данные из листа.</para>
+      <para>Использование <b>диаграмм</b>(<paramref name="index" />), где <paramref name="index" /> — это имя, чтобы возвратить объект <b>диаграммы</b> или номер индекса лист диаграммы.</para>
       <para>
-        <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> Содержит коллекцию всех листов в книге (листы диаграмм и таблиц). Использование <b>стилей</b>(<paramref name="index" />), где <paramref name="index" /> — это имя листа или номер, чтобы вернуть один лист.</para>
+        <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> Содержит коллекцию всех листов в книге (листы диаграмм и таблиц). Использование <b>стилей</b>(<paramref name="index" />), где <paramref name="index" /> — это имя листа или номер для возврата одного листа.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -273,7 +273,7 @@
         <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться копируемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
         <summary>Копирование таблицы в другое место в книге.</summary>
         <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создает новую книгу, содержащую копируемый лист.</para>
+          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей копируемый лист Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -331,7 +331,10 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -417,7 +420,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> разрывов коллекции, представляющей горизонтальной страницы на листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Существует ограничение 1026 горизонтальных разрывов страниц на листе.</para>
+          <para>Существует ограничение в 1026 горизонтальных разрывов страниц на листе.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -481,7 +484,7 @@
         <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться перемещаемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
         <summary>Перемещает окно в другое место в книге.</summary>
         <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создает новую книгу, содержащее перемещаемый лист.</para>
+          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей перемещаемый лист Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -556,7 +559,7 @@
         <param name="PrToFileName">Необязательный элемент <b>Object</b>. Если <paramref name="PrintToFile" /> имеет значение <b>True</b>, этот аргумент указывает имя файла, который вы хотите напечатать для.</param>
         <summary>Печатает объект.</summary>
         <remarks>
-          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц, не в целом страниц на листе или книге.</para>
+          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц, не в целом страниц на листе или рабочей книги.</para>
           <para></para>
         </remarks>
       </Docs>

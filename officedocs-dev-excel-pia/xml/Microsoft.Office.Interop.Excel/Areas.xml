@@ -1,10 +1,10 @@
 <Type Name="Areas" FullName="Microsoft.Office.Interop.Excel.Areas">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7cdbce4233c98945faa9b4ad7a5d8d53b5756c20" />
+    <Meta Name="ms.openlocfilehash" Value="3d66092e7ce8a02412645f2fcf1c40d1d7d63d9e" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20584359" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Areas : System.Collections.IEnumerable" />
@@ -36,7 +36,11 @@
     <summary>Коллекция областей или непрерывных блоков ячеек в выделение.</summary>
     <remarks>
       <para>Нет единственного объекта <b>области</b> ; отдельные элементы коллекции <b>областей</b> являются <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объектов. Коллекция <b>областей</b> содержит один объект <b>Range</b> для каждого диапазона дискретные, смежных ячеек в выделение. Если выделение содержит только одну область, коллекция <b>областей</b> содержит один объект <b>Range</b> , соответствующий выделенного фрагмента.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Excel.Range.Areas" /> свойство для возврата коллекции <b>областей</b> .</para> Использование <b>области</b><para>(<paramref name="index" />), где <paramref name="index" /> является номером индекса область для возврата объекта <b>диапазон</b> из коллекции. Номера индекса соответствуют порядке, в котором были выбраны области.</para><para>Некоторые операции нельзя выполнить на несколько областей в выборе в то же время, необходимо выполняют цикл по отдельные области в выделении и выполнения операций в каждой области отдельно.</para><para></para></remarks>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Areas" /> свойство для возврата коллекции <b>областей</b> .</para>
+      <para>Использование <b>области</b>(<paramref name="index" />), где <paramref name="index" /> является номером индекса область для возврата объекта <b>диапазон</b> из коллекции. Номера индекса соответствуют порядке, в котором были выбраны области.</para>
+      <para>Некоторые операции не удается выполнить на несколько областей в выборе в то же время; необходимо выполняют цикл по отдельные области в выделении и выполнения операций в каждой области отдельно.</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -156,8 +160,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">

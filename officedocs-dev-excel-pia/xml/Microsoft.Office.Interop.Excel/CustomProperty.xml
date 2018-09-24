@@ -1,10 +1,10 @@
 <Type Name="CustomProperty" FullName="Microsoft.Office.Interop.Excel.CustomProperty">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d14ae8362b79561c7d6899990e1114bc9cb70ea8" />
+    <Meta Name="ms.openlocfilehash" Value="afd9b6d75b6603043ecdd7f87755c3b197664c26" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20582427" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface CustomProperty" />
@@ -122,8 +122,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -149,7 +151,7 @@
       <Docs>
         <summary>Удаляет объект.</summary>
         <remarks>
-          <para>Можно удалить настраиваемых свойств документов, но нельзя удалить встроенное свойство документа.</para>
+          <para>Можно удалить настраиваемые свойства документа, но нельзя удалить встроенное свойство документа.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -186,36 +188,50 @@
           <para>В следующей таблице показаны значения примере свойство <b>Name</b> и связанных с ними свойств, присвоенное источника данных OLAP с уникальным именем «[Европа]. [Франции]. [Париж]» и «Париж» имя источника данных не OLAP с элементом.</para>
           <list type="table">
             <item>
-              <description>Париж</description>
               <term>
-                <b>caption</b>
+                <b>Заголовок</b>
               </term>
+              <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>имя</b>
+                <b>Имя</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
-              <description>(Такой же, как значение свойства SQL, только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>(То же, что значение свойства SQL, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para> выражение, 
-          <list type="table"><item><term>. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term><description>выражение. PivotItems("Paris")</description></item></list><para>при использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para><list type="table"><item><term>[Европа]. [ Франция]. [Париж]</term><description>Париж</description></item></list><para></para></remarks>
+          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term>
+              <description>выражение. PivotItems("Paris")</description>
+            </item>
+          </list>
+          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>[Европа]. [Франции]. [Париж]</term>
+              <description>Париж</description>
+            </item>
+          </list>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">

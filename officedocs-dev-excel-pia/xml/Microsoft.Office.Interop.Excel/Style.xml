@@ -1,10 +1,10 @@
 <Type Name="Style" FullName="Microsoft.Office.Interop.Excel.Style">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d16dc7a8953f4adcd743c663cce1a8e9c3cd90e3" />
+    <Meta Name="ms.openlocfilehash" Value="c4f738901e25e0863ca50d9f0bc3e164a839d737" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20574048" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Style" />
@@ -33,10 +33,13 @@
     <remarks>
       <para>Объект <b>стиля</b> содержит все атрибуты стиля (шрифта, числовой формат, выравнивание и т.д.) как свойства. Существует несколько встроенных стилей, включая Normal, валюты и процентов. С помощью объекта <b>стиля</b> — это способ изменить несколько свойств форматирования ячейки на несколько ячеек в то же время быстрее и эффективнее.</para>
       <para>Для <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекта, объект <b>стиля</b> , который входит в состав <see cref="T:Microsoft.Office.Interop.Excel.Styles" /> семейства сайтов. Коллекция <b>стилей</b> содержит все определенные стили для книги.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Excel.Range.Style" /> свойство возвращает объект <b>стиля</b> , используемый с <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект.</para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Style" /> свойство возвращает объект <b>стиля</b> , используемый с <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</para>
       <para>Можно изменить внешний вид ячейки с помощью изменения свойства стиль, примененный к этой ячейке. Однако имейте в виду, свойство стиля, изменение повлияет на ячейки, уже отформатированные стиля.</para>
-      <para>Использование <b>стилей</b>(<paramref name="index" />), где <paramref name="index" /> стиль порядковый номер или имя для возврата объекта <b>стиля</b> из книги коллекцию <b>стилей</b> .</para> Стили 
-      <para>сортируются в алфавитном порядке по имени стиля. Номер индекса стиль указывает положение указанного стиля в отсортированный список имен стилей. Styles(1) — это первый стиль в списке к буквам и цифрам и Styles(Styles.Count) является последним в списке.</para><para>Дополнительные сведения о создании и изменение стиля можно <see cref="T:Microsoft.Office.Interop.Excel.Styles" /> объект.</para><para></para></remarks>
+      <para>Использование <b>стилей</b>(<paramref name="index" />), где <paramref name="index" /> стиль порядковый номер или имя для возврата объекта <b>стиля</b> из книги коллекцию <b>стилей</b> .</para>
+      <para>Стили сортируются в алфавитном порядке по имени стиля. Номер индекса стиль указывает положение указанного стиля в отсортированный список имен стилей. Styles(1) — это первый стиль в списке к буквам и цифрам и Styles(Styles.Count) является последним в списке.</para>
+      <para>Дополнительные сведения о создании и изменение стиля можно <see cref="T:Microsoft.Office.Interop.Excel.Styles" /> объекта.</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -100,7 +103,7 @@
           <b>Значение true,</b> Если текст автоматически с отступом при выравнивания текста в ячейку задано значение равномерного распределения по горизонтали или по вертикали.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для выравнивания текста по равномерное распределение, можно задать <see cref="P:Microsoft.Office.Interop.Excel.Style.VerticalAlignment" /> свойства <b>xlVAlignDistributed</b> при значение <see cref="P:Microsoft.Office.Interop.Excel.Style.Orientation" /><b>xlVertical</b>— это свойство, а также можно задать <see cref="P:Microsoft.Office.Interop.Excel.Style.HorizontalAlignment" /> свойства <b>xlHAlignDistributed</b> при имеет значение свойство <b>Orientation</b><b>xlHorizontal</b>.</para>
+          <para>Чтобы установить равномерное выравнивание текста, можно задать <see cref="P:Microsoft.Office.Interop.Excel.Style.VerticalAlignment" /> свойства <b>xlVAlignDistributed</b> при значение <see cref="P:Microsoft.Office.Interop.Excel.Style.Orientation" /><b>xlVertical</b>— это свойство, а также можно задать <see cref="P:Microsoft.Office.Interop.Excel.Style.HorizontalAlignment" /> свойства <b>xlHAlignDistributed</b> при Свойство <b>Orientation</b> равен <b>xlHorizontal</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -216,8 +219,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -304,7 +309,7 @@
           <b>Значение true,</b> Если формула будет скрыта при использовании защищенного рабочего листа.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Не следует путать это свойство с <see cref="P:Microsoft.Office.Interop.Excel.Range.Hidden" /> свойство. Формула не скрывается, если книга защищена, а лист не, но только в том случае, если лист защищен.</para>
+          <para>Не следует путать это свойство с <see cref="P:Microsoft.Office.Interop.Excel.Range.Hidden" /> свойство. Формула будет скрыта не в том случае, если книга защищена, а лист не, но только в том случае, если лист защищен.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -359,12 +364,12 @@
             <b>xlHAlignJustify</b>
           </para>
           <para>
-            <b> xlHAlignLeft</b>
+            <b>xlHAlignLeft</b>
           </para>
           <para>
             <b>xlHAlignRight</b>
           </para>
-          <para>некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
+          <para>Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -684,7 +689,7 @@
           <b>Значение true,</b> Если стиль содержит объединенные ячейки.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Если выбрать диапазон, который содержит объединенные ячейки, выделенный фрагмент в итоге может отличаться от предполагаемого выбора. Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Address(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlReferenceStyle,System.Object,System.Object)" /> свойство Проверьте адрес выбранного диапазона.</para>
+          <para>Если выбрать диапазон, который содержит объединенные ячейки, выделенный фрагмент в итоге может отличаться от предполагаемого выбора. Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Address(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlReferenceStyle,System.Object,System.Object)" /> свойство Проверьте адрес выбранного диапазона.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -718,36 +723,50 @@
           <para>В следующей таблице показаны значения примере свойство <b>Name</b> и связанных с ними свойств, присвоенное источника данных с уникальным именем «[Европа]. [Франции]. [Париж]» и «Париж» имя источника данных не OLAP с элементом.</para>
           <list type="table">
             <item>
-              <description>Париж</description>
               <term>
-                <b>caption</b>
+                <b>Заголовок</b>
               </term>
+              <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>имя</b>
+                <b>Имя</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
-              <description>(Такой же, как значение свойства SQL, только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>(То же, что значение свойства SQL, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para> выражение, 
-          <list type="table"><item><term>. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term><description>выражение. PivotItems("Paris")</description></item></list><para>при использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para><list type="table"><item><term>[Европа]. [ Франция]. [Париж]</term><description>Париж</description></item></list><para></para></remarks>
+          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term>
+              <description>выражение. PivotItems("Paris")</description>
+            </item>
+          </list>
+          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>[Европа]. [Франции]. [Париж]</term>
+              <description>Париж</description>
+            </item>
+          </list>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="NameLocal">
@@ -776,7 +795,7 @@
         <summary>Возвращает имя объекта на языке пользователя.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если выбран стиль встроенных стилей, данное свойство возвращает имя стиля на языке текущей языковой стандарт.</para>
+          <para>Если выбран стиль встроенных стилей, данное свойство возвращает имя стиля на языке текущего языкового стандарта.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -809,7 +828,10 @@
       <Docs>
         <summary>Возвращает или задает код формата для объекта.</summary>
         <value>To be added.</value>
-        <remarks>Код <para>формата является ту же строку как вариант кодов формата в диалоговом окне Формат ячеек. Функция <b>Format</b> использует строки кода другой формат, чем <b>Формат числа</b> и <see cref="P:Microsoft.Office.Interop.Excel.Style.NumberFormatLocal" /> свойств.</para><para></para></remarks>
+        <remarks>
+          <para>Код формата является ту же строку как вариант кодов формата в диалоговом окне Формат ячеек. Функция <b>Format</b> использует строки кода другой формат, чем <b>Формат числа</b> и <see cref="P:Microsoft.Office.Interop.Excel.Style.NumberFormatLocal" /> свойства.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberFormatLocal">
@@ -841,7 +863,7 @@
         <summary>Возвращает или задает код формата для объекта в виде строки на языке пользователя.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Функция <b>Format</b> использует строки кода другой формат, чем <see cref="P:Microsoft.Office.Interop.Excel.Style.NumberFormat" /> и свойства <b>NumberFormatLocal</b> .</para>
+          <para>Функция <b>Format</b> использует строки кода другой формат, чем <see cref="P:Microsoft.Office.Interop.Excel.Style.NumberFormat" /> и <b>NumberFormatLocal</b> свойства.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1062,7 +1084,7 @@
           <para>
             <b>xlVAlignTop</b>
           </para>
-          <para>некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
+          <para>Некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен.</para>
           <para></para>
         </remarks>
       </Docs>

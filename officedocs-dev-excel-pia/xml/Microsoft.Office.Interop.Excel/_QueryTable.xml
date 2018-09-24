@@ -4,7 +4,7 @@
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20587845" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface _QueryTable" />
@@ -182,7 +182,7 @@
         <summary>Возвращает или задает командную строку для указанного источника данных. Чтение и запись <b>объектов</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Источников для OLE DB <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.CommandType" /> свойство описывает значение свойства <b>CommandText</b> .</para>
+          <para>Для источников OLE DB <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.CommandType" /> свойство описывает значение свойства <b>CommandText</b> .</para>
           <para></para>
         </remarks>
       </Docs>
@@ -216,8 +216,8 @@
         <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Excel.XlCmdType" /> константа, которая описывает тип команды связанных с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.CommandText" /> свойство. Значение по умолчанию — <b>xlCmdSQL</b>. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlCmdType" />.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Можно задать значение свойства <b>QueryType</b> для таблицы запросов, только если свойство <b>CommandType</b> или кэш сводной таблицы — это <b>xlOLEDBQuery</b>.</para>
-          <para>Если значение свойства <b>CommandType</b><b>xlCmdCube</b>, не может изменить это значение, если отчет сводной таблицы, связанный с таблицей запроса.</para>
+          <para>Можно задать значение свойства <b>QueryType</b> для таблицы запросов, только если свойство <b>CommandType</b> или <b>xlOLEDBQuery</b>— это кэш сводной таблицы.</para>
+          <para>Если значение свойства <b>CommandType</b><b>xlCmdCube</b>, нельзя изменить это значение, если имеется отчет сводной таблицы, связанный с таблицей запроса.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -251,11 +251,11 @@
         <summary>Возвращает или задает строку, которая содержит сведения о подключении для таблицы запросов. Чтение и запись <b>объектов</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Свойство <b>Connection</b> может иметь одно из следующих действий: источник OLE DB параметры, которые позволяют Microsoft Excel для подключения к источнику данных OLE DB, ODBC параметры, которые позволяют Microsoft Excel для подключения к базе данных ODBC, URL-адрес, который позволяет Microsoft Excel для подключения к Веб-данных источника, путь и имя файла в текстовый файл или путь и имя файла, который указывает базу данных или веб-запросов.</para>
+          <para>Свойство <b>Connection</b> может иметь одно из следующих действий: источник OLE DB параметры, которые позволяют Microsoft Excel для подключения к источнику данных OLE DB, ODBC параметры, которые позволяют Microsoft Excel для подключения к базе данных ODBC, URL-адрес, который позволяет Microsoft Excel для подключения к Веб-источник данных, путь и имя файла в текстовый файл или путь и имя файла, который указывает базу данных или веб-запросов.</para>
           <para>Свойства <b>подключения</b> не инициировать сразу же подключения к источнику данных. Необходимо использовать <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.Refresh(System.Object)" /> метод для подключения и извлечения данных.</para>
           <para>При использовании автономного файла, установить <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> значение <b>True</b> и использование <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.LocalConnection" /> вместо свойства <b>подключения</b> .</para>
-          <para>Дополнительные сведения о синтаксисе строки подключения можно <see cref="M:Microsoft.Office.Interop.Excel.QueryTables.Add(System.Object,Microsoft.Office.Interop.Excel.Range,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.QueryTables" /> семейства сайтов и <see cref="M:Microsoft.Office.Interop.Excel.PivotCaches.Add(Microsoft.Office.Interop.Excel.XlPivotTableSourceType,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> семейства.</para>
-          <para>Также можно получить доступ к источнику данных с помощью Microsoft ActiveX Data Objects (ADO).</para>
+          <para>Дополнительные сведения о синтаксисе строки подключения можно <see cref="M:Microsoft.Office.Interop.Excel.QueryTables.Add(System.Object,Microsoft.Office.Interop.Excel.Range,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.QueryTables" /> семейства сайтов и <see cref="M:Microsoft.Office.Interop.Excel.PivotCaches.Add(Microsoft.Office.Interop.Excel.XlPivotTableSourceType,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> семейства сайтов.</para>
+          <para>Кроме того можно получить доступ к источнику данных с помощью Microsoft ActiveX Data Objects (ADO).</para>
           <para></para>
         </remarks>
       </Docs>
@@ -285,7 +285,10 @@
       <Docs>
         <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> перечисление, указывающее, приложения, в котором был создан этот объект. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -370,8 +373,8 @@
         <summary>Возвращает или задает веб-страницу унифицированный указатель ресурсов (URL) для веб-запросов. Чтение и запись <b>объектов</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Свойство <b>EditWebPage</b> возвращает <b>значение Null</b> , если не установить. Свойство <b>EditWebPage</b> применяется, только если тип запроса <b>xlWebQuery</b> или <b>xlOLEDBQuery</b>.</para>
-          <para>Если <b>EditWebPage</b> не равно null, игнорировать <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.WebTables" /> свойство для обновления. В результате запроса XML и свойство <b>WebTable</b> относится к таблице в исходной веб-страницы и можно использовать только в случае изменения для предварительного заполнения диалоговое окно веб-запросов.</para>
+          <para>Свойство <b>EditWebPage</b> возвращает <b>значение Null</b> , если не установить. Свойство <b>EditWebPage</b> применяется только в том случае, если тип запроса <b>xlWebQuery</b> или <b>xlOLEDBQuery</b>.</para>
+          <para>Если <b>EditWebPage</b> не равно null, игнорировать <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.WebTables" /> свойство для обновления. В результате XML-запрос и свойство <b>WebTable</b> относится к таблице в исходной веб-страницы и можно использовать только в случае изменения для предварительного заполнения диалоговое окно веб-запросов.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -440,7 +443,7 @@
         <remarks>
           <para>
             <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.RefreshOnFileOpen" /> Свойство игнорируется, если свойство <b>EnableRefresh</b> имеет значение <b>False</b>.</para>
-          <para>Для источников данных OLAP, назначить этому свойству значение <b>False</b> отключает обновлений.</para>
+          <para>Для источников данных OLAP назначить этому свойству значение <b>False</b> отключает обновлений.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -634,7 +637,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Можно задать только если свойство <b>MaintainConnection</b><see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> запроса таблицы или сводной таблицы кэша задано значение <b>xlOLEDBQuery</b>.</para>
-          <para>, Если предполагается частых запросов на сервер, установка для этого свойства <b>значения True</b> может улучшить производительность за счет сокращения времени повторного подключения. Свойство <b>значение False,</b> при указании открытое подключение к закрытию.</para>
+          <para>Если предполагается частых запросов на сервер, установка для этого свойства <b>значения True</b> может улучшить производительность за счет сокращения времени повторного подключения. Свойство <b>значение False,</b> при указании открытое подключение будет закрыто.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -671,36 +674,50 @@
           <para>В следующей таблице показаны значения примере свойство <b>Name</b> и связанных с ними свойств, присвоенное источника данных с уникальным именем «[Европа]. [Франции]. [Париж]» и «Париж» имя источника данных не OLAP с элементом.</para>
           <list type="table">
             <item>
-              <description>Париж</description>
               <term>
-                <b>caption</b>
+                <b>Заголовок</b>
               </term>
+              <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>имя</b>
+                <b>Имя</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
-              <description>(Такой же, как значение свойства SQL, только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>(То же, что значение свойства SQL, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para> выражение, 
-          <list type="table"><item><term>. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term><description>Expression.PivotItems("Paris")</description></item></list><para>при использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para><list type="table"><item><term>[Европа]. [ Франция]. [Париж]</term><description>Париж</description></item></list><para></para></remarks>
+          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term>
+              <description>Expression.PivotItems("Paris")</description>
+            </item>
+          </list>
+          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>[Европа]. [Франции]. [Париж]</term>
+              <description>Париж</description>
+            </item>
+          </list>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Parameters">
@@ -859,8 +876,8 @@
         <summary>Это свойство имеет <b>значение True</b> , если любое форматирования, общие для первых пяти строк данных применяются к новые строки данных в таблице запроса. Пустые ячейки форматируются. Свойство имеет <b>значение False,</b> Если последний Автоформат применяется к таблице запросов применяются к новые строки данных. Значение по умолчанию — <b>True</b> (если не в таблице запрос был создан в Microsoft Excel 97 и <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.HasAutoFormat" /> свойство имеет <b>значение True</b>, в котором case <b>PreserveFormatting</b> присвоено <b>значение False</b>). Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для таблицы запросов базы данных, параметры форматирования по умолчанию является <b>xlSimple</b>.</para>
-          <para>Нового стиля Автоформат применяется к таблице запроса при обновлении таблицы. Автоформат сбрасывается значение <b>None</b><b>PreserveFormatting</b> имеет значение <b>False</b>. В результате любой Автоформат, заданное перед <b>PreserveFormatting</b> имеет значение <b>False</b> и до запроса обновления таблицы не вступили в силу, а конечная таблица запросов имеет без форматирования, применяемые к нему.</para>
+          <para>Для таблицы запросов базы данных параметры форматирования по умолчанию является <b>xlSimple</b>.</para>
+          <para>Новый стиль Автоформат применяется к таблице запроса при обновлении таблицы. Автоформат сбрасывается значение <b>None</b><b>PreserveFormatting</b> имеет значение <b>False</b>. В результате любой Автоформат, заданное перед <b>PreserveFormatting</b> имеет значение <b>False</b> и до запроса обновления таблицы не вступили в силу, и конечная таблица запроса имеет без форматирования применяется к нему.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -956,7 +973,17 @@
         <summary>Обновления диапазона внешних данных (<see cref="T:Microsoft.Office.Interop.Excel.QueryTable" />). <b>Boolean</b>.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>Следующие вычисляются в <b>QueryTable</b> объекты, которые основаны на результаты запроса SQL.</para> Метод <b>обновления на</b><para>вызывает Microsoft Excel для подключения к источнику данных объекта <b>QueryTable</b> , выполнить запрос SQL и отправка данных в диапазоне, основанный на объекте <b>QueryTable</b> . Если не вызывает этот метод объекта <b>QueryTable</b> не общаться с источником данных.</para><para>Для подключения к источнику данных OLE DB или ODBC, Microsoft Excel использует строку подключения, указанного идентификатором <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойство. Если указанная строка подключения отсутствуют необходимые значения, чтобы запрашивать у пользователя для необходимой информации отображается диалоговых окон. Если <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство имеет <b>значение False</b>, диалоговые окна не отображаются и не удается выполнить метод <b>Refresh</b> за исключением недостаточно сведения о подключении.</para><para>После Microsoft Excel делает успешное подключение, она сохраняет выполненную строку связи, чтобы запросы не будут отображаться для последующих вызовов метод <b>Refresh</b> во время текущего сеанса редактирования. Строка подключения завершенных можно получить с помощью проверки значения <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойство.</para><para>Проверяется после подключения к базе данных SQL-запроса. Если запрос не подходит, за исключением SQL синтаксическая ошибка происходит сбой метода <b>обновления на</b> .</para><para>, Если запрос необходимы параметры, <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> до вызова метода <b>обновления</b> семейства сайтов должен быть инициализирован с помощью параметра сведения о привязке. Если не связаны достаточно параметров, не удается выполнить метод <b>Refresh</b> за исключением параметра ошибки. Если запрос на их значения параметров, диалоговые окна отображаются для пользователя независимо от того, параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство. Если пользователь отменил диалоговое окно параметров, метод <b>Refresh</b> будет останавливать и возвращает <b>значение False</b>. Если дополнительные параметры связываются с набором <b>параметров</b> , эти дополнительные параметры игнорируются.</para><para>Метод <b>Refresh</b> возвращает <b>значение True,</b> Если запрос будет успешно завершена или работы; он возвращает <b>значение False</b> , если пользователь отменил диалоговое окно подключения или параметр.</para><para>Для просмотра, превышает ли число извлеченных строк число строк, доступные в рабочем листе, проверьте <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.FetchedRowOverflow" /> свойство. Это свойство инициализируется каждый раз при вызове метода <b>обновления на</b> .</para><para></para></remarks>
+          <para>Следующие замечания относятся к <b>QueryTable</b> объекты, которые основаны на результаты запроса SQL.</para>
+          <para>Метод <b>Refresh</b> вызывает Microsoft Excel для подключения к источнику данных объекта <b>QueryTable</b> , выполнить запрос SQL и отправка данных в диапазоне, основанный на объекте <b>QueryTable</b> . Если не вызывает этот метод объекта <b>QueryTable</b> не общаться с источником данных.</para>
+          <para>Для подключения к источнику данных OLE DB или ODBC, Microsoft Excel использует строку подключения, указанного идентификатором <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойство. Если указанная строка подключения отсутствуют необходимые значения, чтобы запрашивать у пользователя для необходимой информации отображается диалоговых окон. Если <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство имеет <b>значение False</b>, диалоговые окна не отображаются и не удается выполнить метод <b>Refresh</b> за исключением недостаточно сведения о подключении.</para>
+          <para>После Microsoft Excel делает успешное подключение, сохранение выполненную строку связи, чтобы запросы не будут отображаться для последующих вызовов метод <b>Refresh</b> во время текущего сеанса редактирования. Строка подключения завершенных можно получить с помощью проверки значения <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойство.</para>
+          <para>После подключения к базе данных SQL-запрос проходит проверку. Если запрос не подходит, происходит сбой метода <b>обновления</b> с исключение SQL синтаксическая ошибка.</para>
+          <para>Если запрос необходимы параметры, <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> до вызова метода <b>обновления</b> семейства сайтов должен быть инициализирован с помощью параметра сведения о привязке. Если не связаны достаточно параметров, не удается выполнить метод <b>Refresh</b> за исключением параметра ошибки. Если запрос на их значения параметров, диалоговые окна отображаются для пользователя независимо от того, параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство. Если пользователь отменил диалоговое окно параметров, метод <b>Refresh</b> будет останавливать и возвращает <b>значение False</b>. Если дополнительные параметры связываются с набором <b>параметров</b> , эти дополнительные параметры игнорируются.</para>
+          <para>
+            <b>Обновить</b> метод возвращает <b>значение True,</b> Если запрос будет успешно завершена или работы; она возвращает <b>значение False</b> , если пользователь отменил диалоговое окно подключения или параметр.</para>
+          <para>Чтобы просмотреть, превышает ли число извлеченных строк число строк, доступные в рабочем листе, проверьте <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.FetchedRowOverflow" /> свойство. Это свойство инициализируется каждый раз при вызове метода <b>обновления</b> .</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Refreshing">
@@ -986,7 +1013,7 @@
           <b>Значение true,</b> Если фоновый запрос выполняется для заданного запроса таблицы. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.CancelRefresh" /> метод Отмена запросов в фоновом режиме.</para>
+          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.CancelRefresh" /> метод Отмена запросов в фоновом режиме.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1021,7 +1048,7 @@
           <b>Значение true,</b> Если сводной таблицы, кэш или запроса в таблице является автоматически обновляется каждый раз, книга будет открыта. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Запрос таблицы и отчеты сводных таблиц не обновляются автоматически при открытии книги с помощью <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод. Использование <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.Refresh(System.Object)" /> метод для обновления данных после открытия книги.</para>
+          <para>Таблицы запросов и отчеты сводных таблиц не обновляются автоматически при открытии книги с помощью <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод. Использование <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.Refresh(System.Object)" /> метод для обновления данных после открытия книги.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1055,7 +1082,7 @@
         <summary>Возвращает или задает число минут между обновлениями. Чтение и запись <b>целое число</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Установка периода 0 (ноль) отключает автоматическую истекшим временем обновится и соответствует назначить этому свойству значение <b>Null</b>.</para>
+          <para>Установка периода для нуль (0) отключает автоматические обновления по времени и эквивалентно назначить этому свойству значение <b>Null</b>.</para>
           <para>Значение свойства <b>RefreshPeriod</b> может быть целое число от 0 до 32 767.</para>
           <para></para>
         </remarks>
@@ -1143,7 +1170,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий область листа, занятых в таблице указанному запросу. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Диапазон сюда не включены в строке имени поля или столбце число строки.</para>
+          <para>Диапазон сюда не включены в строке имени поля или столбца номер строки.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1209,7 +1236,7 @@
           <b>Значение true,</b> Если номера строк добавляются в качестве первого столбца в таблице указанному запросу. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Установка для этого свойства <b>значения True</b> не вызывает сразу же номера строк для отображения. Номер строки появляется следующий раз обновления таблицы запросов и их в случае перенастроено каждом обновлении таблицы запросов.</para>
+          <para>Установка для этого свойства <b>значения True</b> не вызывает сразу же номера строк для отображения. Номер строки появляется при следующем запуске обновления таблицы запросов и их в случае перенастроено каждом обновлении таблицы запросов.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1276,7 +1303,7 @@
           <b>Значение true,</b> Если сохранить данные для отчета сводной таблицы с помощью рабочей книги. <b>Значение false,</b> если только для сохранения определения отчета. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>OLAP для источников данных, это свойство всегда имеет значение <b>False</b>.</para>
+          <para>Для источников данных OLAP это свойство всегда присвоено <b>значение False</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1344,10 +1371,9 @@
           <see cref="T:Microsoft.Office.Interop.Excel.Sort" />
         </value>
         <remarks>
-          <para>При импорте данных с помощью пользовательского интерфейса, данные из веб-запросов или полнотекстовых запросов импортировано как <see cref="T:Microsoft.Office.Interop.Excel._QueryTable" /> , пока объект все другие внешние данные импортируются как <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объект.</para>
-          <para>При импорте данных с помощью объектной модели, данные из веб-запросов или полнотекстовых запросов необходимо импортировать как <b>QueryTable</b>, в то время как другие внешние данные могут быть импортированы как <b>ListObject</b> или <b>QueryTable</b>.</para>
-          <para>
-            <b>QueryTable</b> свойств объекта <b>ListObject</b> можно использовать для доступа к свойству <b>сортировки</b> .</para>
+          <para>При импорте данных с помощью пользовательского интерфейса, данные из веб-запросов или полнотекстовых запросов импортировано как <see cref="T:Microsoft.Office.Interop.Excel._QueryTable" /> , пока объект все другие внешние данные импортируются как <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объекта.</para>
+          <para>При импорте данных с помощью объектной модели, данные из веб-запросов или полнотекстовых запросов необходимо импортировать как <b>QueryTable</b>в то время как другие внешние данные могут быть импортированы как <b>ListObject</b> или <b>QueryTable</b>.</para>
+          <para>Свойство <b>QueryTable</b> объекта <b>ListObject</b> доступ к свойству <b>сортировки</b> .</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1412,7 +1438,7 @@
         <summary>Возвращает или задает <b>строку</b> , определяющую исходный файл данных для таблицы запросов.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Данных на основе файла источниках (например, Access), свойство <b>SourceDataFile</b> содержит полный путь к исходному файлу данных. Он имеет значение null для источников данных на стороне сервера (например, SQL Server). Свойство <b>SourceDataFile</b> имеет значение null, если <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойство изменяется программным путем.</para>
+          <para>Для источников данных на основе файла (например, Access) свойство <b>SourceDataFile</b> содержит полный путь к исходному файлу данных. Он имеет значение null для источников данных на стороне сервера (например, SQL Server). Свойство <b>SourceDataFile</b> имеет значение null, если <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> программным путем изменения свойства.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1489,7 +1515,7 @@
         <summary>Создает таблицу данных, на основе входного значения и формулы, определенных на листе.</summary>
         <value>Variant</value>
         <remarks>
-          <para>Таблицы данных используются для выполнения анализа что если при изменении некоторых постоянных значений на листе, чтобы увидеть, как влияет на значения в других ячейках.</para>
+          <para>Таблицы данных используются для выполнения анализа при изменении некоторых постоянных значений на листе, чтобы увидеть, как влияет на другие ячейки.</para>
           <para></para>
         </remarks>
         <example>
@@ -29201,7 +29227,7 @@ dataTableRange.&lt;/span&gt;
               <term>
                 <b>xlTextFormat</b>
               </term>
-              <description>текст</description>
+              <description>Текст</description>
             </item>
             <item>
               <term>
@@ -29219,13 +29245,13 @@ dataTableRange.&lt;/span&gt;
               <term>
                 <b>xlDYMFormat</b>
               </term>
-              <description>день года месяц формат даты</description>
+              <description>Формат даты день года месяц</description>
             </item>
             <item>
               <term>
                 <b>xlEMDFormat</b>
               </term>
-              <description>EMD даты</description>
+              <description>Дата EMD</description>
             </item>
             <item>
               <term>
@@ -29249,12 +29275,13 @@ dataTableRange.&lt;/span&gt;
               <term>
                 <b>xlYMDFormat</b>
               </term>
-              <description>Формат даты год, месяц, день</description>
+              <description>Формат даты года, месяца, дня</description>
             </item>
           </list>
           <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>).</para>
           <para>При указании нескольких элементов в массиве, чем столбцов, эти значения игнорируются.</para>
-          <para>Можно использовать <b>xlEMDFormat</b> , только если установлен и выбранные Тайваня языковая поддержка. Константа <b>xlEMDFormat</b> задает использование даты Тайваня эра.</para>
+          <para>
+            <b>XlEMDFormat</b> можно использовать только в том случае, если установлен и выбранные Тайваня языковая поддержка. Константа <b>xlEMDFormat</b> задает использование Тайваня эра даты.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29289,7 +29316,7 @@ dataTableRange.&lt;/span&gt;
           <b>Значение true,</b> Если запятой, которая является разделителем при импорте текстового файла в таблицу запроса. <b>Значение false,</b> Если вы хотите использовать другие символы в качестве разделителя. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /> свойства — это <b>xlDelimited</b>.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /><b>xlDelimited</b>— это свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29324,7 +29351,7 @@ dataTableRange.&lt;/span&gt;
           <b>Значение true,</b> Если последовательные разделители интерпретируются как один разделитель при импорте текстового файла в таблицу запроса. Значение по умолчанию — <b>Fals</b>e. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /> свойства — это <b>xlDelimited</b>.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /><b>xlDelimited</b>— это свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29358,48 +29385,48 @@ dataTableRange.&lt;/span&gt;
         <summary>Возвращает или задает символ разделителя целой и дробной части, которая используется Microsoft Excel при импорте текстового файла в таблицу запроса. Значение по умолчанию — знака разделителя целой и дробной части системы. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>), которая содержит тип decimal или тысячи разделители, отличных от тех, которые используются на компьютере, из-за другой язык Настройка использования.</para>
-          <para>Приведенной ниже таблице показаны результаты при импорте текста в Microsoft Excel с помощью различных разделителей. Числовые результаты отображаются в правом столбце.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>), которая содержит тип decimal или тысячи разделители, отличных от тех, которые используются на компьютере, из-за другой язык параметр используется.</para>
+          <para>В следующей таблице показаны результаты при импорте текста в Microsoft Excel с помощью различных разделителей. Числовые результаты отображаются в правом столбце.</para>
           <list type="table">
             <item>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Разделители</description>
+              <description>Period</description>
               <description>123.123,45</description>
-              <term>периода</term>
-              <description>запятой</description>
-              <description>запятой</description>
-              <description>периода</description>
-              <description>123,123.45 (числовой)</description>
+              <description>123,123.45 (числовых)</description>
             </item>
             <item>
-              <term>периода</term>
-              <description>запятой</description>
-              <description>запятой</description>
-              <description>запятой</description>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Разделители</description>
+              <description>Разделители</description>
               <description>123.123,45</description>
-              <description> 123.123,45 (текст)</description>
+              <description>123.123,45 (текст)</description>
             </item>
             <item>
-              <term>запятой</term>
-              <description>периода</description>
-              <description>запятой</description>
-              <description>периода</description>
+              <term>Разделители</term>
+              <description>Period</description>
+              <description>Разделители</description>
+              <description>Period</description>
               <description>123,123.45</description>
-              <description>123,123.45 (числовой)</description>
+              <description>123,123.45 (числовых)</description>
             </item>
             <item>
-              <description>запятой</description>
-              <term>период</term>
-              <description>периода</description>
-              <description>запятой </description>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Period</description>
+              <description>Разделители</description>
               <description>123 123,45</description>
               <description>123 123,45 (текст)</description>
             </item>
             <item>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Period</description>
+              <description>ПРОБЕЛ</description>
               <description>123 123,45</description>
-              <term>периода</term>
-              <description>запятой</description>
-              <description>периода</description>
-              <description>пространства</description>
-              <description>(числовой) 123,123.45</description>
+              <description>123,123.45 (числовых)</description>
             </item>
           </list>
           <para></para>
@@ -29435,8 +29462,10 @@ dataTableRange.&lt;/span&gt;
         <summary>Возвращает или задает массив целых чисел, которые соответствуют ширину столбцов (в знаках) в текстовый файл, который Импорт в таблицу запроса. Допустимый ширина — от 1 до 32 767 символов. Чтение и запись <b>объектов</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /> свойства — это <b>xlFixedWidth</b>.</para> Необходимо указать допустимое неотрицательное столбец ширины 
-          <para>. При указании столбцов, размер которых превышает ширину в текстовом файле, эти значения игнорируются. Если ширина текстового файла больше, чем общая ширина столбцов, можно указать, баланс текстовый файл импортируется в дополнительных столбца.</para><para></para></remarks>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /><b>xlFixedWidth</b>— это свойство.</para>
+          <para>Необходимо указать допустимое неотрицательное столбец ширины. При указании столбцов, размер которых превышает ширину в текстовом файле, эти значения игнорируются. Если ширина текстового файла больше, чем общая ширина столбцов, которые можно указать, баланс текстовый файл импортируется в дополнительных столбца.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="TextFileOtherDelimiter">
@@ -29468,8 +29497,8 @@ dataTableRange.&lt;/span&gt;
         <summary>Возвращает или задает знак, используемый в качестве разделителя, при импорте текстового файла в таблицу запроса. Значение по умолчанию имеет <b>значение Null</b>. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /> свойства — это <b>xlDelimited</b>.</para>
-          <para>При указании нескольких символов в строке, используется только первый символ.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /><b>xlDelimited</b>— это свойство.</para>
+          <para>Если указать несколько символов в строке, используется только первый символ.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29574,7 +29603,7 @@ dataTableRange.&lt;/span&gt;
         <remarks>
           <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>).</para>
           <para>Если значение этого свойства имеет <b>значение True</b>, диалоговое окно не отображается при первом обновлении таблицы запроса.</para>
-          <para>По умолчанию значение равно <b>True,</b> в пользовательском интерфейсе.</para>
+          <para>Значение по умолчанию — <b>True</b> в пользовательском интерфейсе.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29644,7 +29673,7 @@ dataTableRange.&lt;/span&gt;
           <b>Значение true,</b> Если пробела является разделителем при импорте текстового файла в таблицу запроса. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /> свойства — это <b>xlDelimited</b>.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /><b>xlDelimited</b>— это свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29713,7 +29742,7 @@ dataTableRange.&lt;/span&gt;
           <b>Значение true,</b> Если символ табуляции является разделителем при импорте текстового файла в таблицу запроса. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /> свойства — это <b>xlDelimited</b>.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>) и только если значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.TextFileParseType" /><b>xlDelimited</b>— это свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -29781,48 +29810,48 @@ dataTableRange.&lt;/span&gt;
         <summary>Возвращает или задает тысяч знака разделителя, Microsoft Excel использует при импорте текстового файла в таблицу запроса. Значение по умолчанию — разделитель разрядов системы. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>), особенно в том случае, если файл содержит тип decimal или тысячи разделители, отличных от тех, которые используются на компьютере, из-за языковые параметры используемые.</para>
-          <para>Приведенной ниже таблице показаны результаты при импорте текста в Microsoft Excel с помощью различных разделителей. Числовые результаты отображаются в правом столбце.</para>
+          <para>Это свойство используется только в том случае, если запрос таблицы основан на данных из текстового файла (с <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> , имеющим значение <b>xlTextImport</b>), особенно в том случае, если файл содержит тип decimal или тысячи разделители, отличных от тех, которые используются на компьютере, из-за используется другой язык.</para>
+          <para>В следующей таблице показаны результаты при импорте текста в Microsoft Excel с помощью различных разделителей. Числовые результаты отображаются в правом столбце.</para>
           <list type="table">
             <item>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Разделители</description>
+              <description>Period</description>
               <description>123.123,45</description>
-              <term>периода</term>
-              <description>запятой</description>
-              <description>запятой</description>
-              <description>периода</description>
-              <description>123,123.45 (числовой)</description>
+              <description>123,123.45 (числовых)</description>
             </item>
             <item>
-              <term>периода</term>
-              <description>запятой</description>
-              <description>запятой</description>
-              <description>запятой</description>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Разделители</description>
+              <description>Разделители</description>
               <description>123.123,45</description>
-              <description> 123.123,45 (текст)</description>
+              <description>123.123,45 (текст)</description>
             </item>
             <item>
-              <term>запятой</term>
-              <description>периода</description>
-              <description>запятой</description>
-              <description>периода</description>
+              <term>Разделители</term>
+              <description>Period</description>
+              <description>Разделители</description>
+              <description>Period</description>
               <description>123,123.45</description>
-              <description>123,123.45 (числовой)</description>
+              <description>123,123.45 (числовых)</description>
             </item>
             <item>
-              <description>запятой</description>
-              <term>период</term>
-              <description>периода</description>
-              <description>запятой </description>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Period</description>
+              <description>Разделители</description>
               <description>123 123,45</description>
               <description>123 123,45 (текст)</description>
             </item>
             <item>
+              <term>Period</term>
+              <description>Разделители</description>
+              <description>Period</description>
+              <description>ПРОБЕЛ</description>
               <description>123 123,45</description>
-              <term>периода</term>
-              <description>запятой</description>
-              <description>периода</description>
-              <description>пространства</description>
-              <description>(числовой) 123,123.45</description>
+              <description>123,123.45 (числовых)</description>
             </item>
           </list>
           <para></para>
@@ -30161,7 +30190,7 @@ dataTableRange.&lt;/span&gt;
         <summary>Возвращает или задает разделенный запятыми список имен таблиц или индексов таблицы при импорте веб-страницы в таблицу запроса. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется только тогда, когда таблицы запросов <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> свойство имеет значение <b>xlWebQuery</b>, запрос возвращает HTML-документ и значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.WebSelectionType" /> свойства — это <b>xlSpecifiedTables</b>.</para>
+          <para>Это свойство используется только тогда, когда таблицы запросов <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.QueryType" /> задано значение <b>xlWebQuery</b>, запрос возвращает HTML-документ и значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.WebSelectionType" /><b>xlSpecifiedTables</b>— это свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -30194,8 +30223,8 @@ dataTableRange.&lt;/span&gt;
           <b>WorkbookConnection</b>
         </value>
         <remarks>
-          <para>При импорте данных с помощью пользовательского интерфейса, данные из веб-запросов или текст запроса импортируются как <see cref="T:Microsoft.Office.Interop.Excel._QueryTable" /> , пока объект все другие внешние данные импортируются как <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объект.</para>
-          <para>При импорте данных с помощью объектной модели, данные из веб-запросов или текст запроса необходимо импортировать как <b>QueryTable</b>, в то время как другие внешние данные могут быть импортированы как <b>ListObject</b> или <b>QueryTable</b>.</para>
+          <para>При импорте данных с помощью пользовательского интерфейса, данные из веб-запросов или текст запроса импортируются как <see cref="T:Microsoft.Office.Interop.Excel._QueryTable" /> , пока объект все другие внешние данные импортируются как <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объекта.</para>
+          <para>При импорте данных с помощью объектной модели, данные из веб-запросов или текст запроса необходимо импортировать как <b>QueryTable</b>в то время как другие внешние данные могут быть импортированы как <b>ListObject</b> или <b>QueryTable</b>.</para>
           <para>Свойство <b>WorkbookConnection</b> применяется только к объектам <b>QueryTable</b> .</para>
           <para></para>
         </remarks>

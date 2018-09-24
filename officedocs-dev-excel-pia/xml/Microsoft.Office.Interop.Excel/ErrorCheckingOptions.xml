@@ -1,10 +1,10 @@
 <Type Name="ErrorCheckingOptions" FullName="Microsoft.Office.Interop.Excel.ErrorCheckingOptions">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9e4747600167fd2eed7dd64b83d8c7d1cb5b951d" />
+    <Meta Name="ms.openlocfilehash" Value="fcbc54c7e67e1b8642a95dec50c04ef275b48f27" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20585640" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ErrorCheckingOptions" />
@@ -31,9 +31,9 @@
   <Docs>
     <summary>Представляет параметры проверки ошибок для приложения.</summary>
     <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.ErrorCheckingOptions" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта возвращает объект <b>ErrorCheckingOptions</b> .</para>
-      <para>Справочник по <see cref="P:Microsoft.Office.Interop.Excel.Errors.Item(System.Object)" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Errors" /> объект для просмотра списка значений индекса, связанный с проверки ошибок варианты.</para>
-      <para>Можно использовать следующие свойства, которые являются членами объекта <b>ErrorCheckingOptions</b> , задает или возвращает параметров проверки ошибок.</para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.ErrorCheckingOptions" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Application" /> для возвращаемого объекта <b>ErrorCheckingOptions</b> объекта.</para>
+      <para>Справочник по <see cref="P:Microsoft.Office.Interop.Excel.Errors.Item(System.Object)" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Errors" /> объект для просмотра списка значений индекса, связанный с проверки ошибок параметры.</para>
+      <para>Можно использовать следующие свойства, которые являются членами объекта <b>ErrorCheckingOptions</b> , задает или возвращает способы проверки ошибок.</para>
       <list type="bullet">
         <item>
           <description>
@@ -73,6 +73,11 @@
         <item>
           <description>
             <see cref="P:Microsoft.Office.Interop.Excel.ErrorCheckingOptions.TextDate" />
+          </description>
+        </item>
+        <item>
+          <description>
+            <see cref="P:Microsoft.Office.Interop.Excel.ErrorCheckingOptions.UnlockedFormulaCells" />
           </description>
         </item>
       </list>
@@ -138,7 +143,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Если свойство <b>BackgroundChecking</b> имеет значение <b>True</b> (по умолчанию), кнопка Параметры автозамены отображается рядом с элементом все ячейки, которые нарушают включенные ошибки. <b>False</b> отключает поиск ошибок фона.</para>
-          <para>Обращайтесь к <see cref="T:Microsoft.Office.Interop.Excel.ErrorCheckingOptions" /> объект, который требуется просмотреть список его члены, которые могут быть включены.</para>
+          <para>Обратитесь к <see cref="T:Microsoft.Office.Interop.Excel.ErrorCheckingOptions" /> объект, который требуется просмотреть список его члены, которые могут быть включены.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -169,8 +174,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EmptyCellReferences">
@@ -264,7 +271,7 @@
         <summary>Если параметр имеет значение <b>True</b> (по умолчанию), Microsoft Excel определяет ячеек, содержащих несогласованные формулы в области. <b>Значение false</b> отключает формул несогласованные проверку.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Должны располагаться согласованные формул в области слева и справа или выше и ниже ячейку, содержащую несогласованные формулы для свойства <b>InconsistentFormula</b> для правильной работы.</para>
+          <para>Согласованные формул в области должны располагаться слева и справа или выше и ниже ячейку, содержащую несогласованные формулы для свойства <b>InconsistentFormula</b> для правильной работы.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -334,9 +341,9 @@
           <para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" />может иметь одно из следующих констант <b>XlColorIndex</b> :</para>
           <para>
-            <b>xlColorIndexAutomatic</b> цвет системы по умолчанию.</para>
+            <b>xlColorIndexAutomatic</b> Цвет системы по умолчанию.</para>
           <para>
-            <b>xlColorIndexNone</b> не используется с этим свойством.</para>
+            <b>xlColorIndexNone</b> Не используется с этим свойством.</para>
           <para>Можно указать определенный цвет индикатора, введя соответствующее значение индекса. Можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Colors(System.Object)" /> свойство для возвращения текущей цветовой палитры.</para>
           <para>На следующем рисунке показана значения индекса цветовой палитры по умолчанию.</para>
           <para></para>
@@ -373,7 +380,7 @@
           <b>Логическое</b> значение, равное <b>True</b> , если включена проверка данных в виде списка.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Проверки данных для списка можно также включить или выключить с в пользовательском интерфейсе, установив или сняв флажок списка данных проверки ошибок, на вкладке Проверка ошибок диалогового окна Параметры.</para>
+          <para>Проверка данных для списка можно также преобразовать включено или отключено, в пользовательском интерфейсе, установив или сняв флажок списка данных проверки ошибок, на вкладке Проверка ошибок диалогового окна Параметры.</para>
           <para></para>
         </remarks>
       </Docs>

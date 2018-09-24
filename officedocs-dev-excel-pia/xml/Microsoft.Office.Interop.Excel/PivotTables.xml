@@ -1,10 +1,10 @@
 <Type Name="PivotTables" FullName="Microsoft.Office.Interop.Excel.PivotTables">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fec2de78dcf640219cb44f66becd0a0dbc77878e" />
+    <Meta Name="ms.openlocfilehash" Value="b1b870f7e0d404abd82b95ed4e0d3df8f815f25c" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20578024" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface PivotTables : System.Collections.IEnumerable" />
@@ -36,9 +36,11 @@
     <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объектов на указанный лист.</summary>
     <remarks>
       <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTables(System.Object)" /> метод для возврата коллекции <b>сводных таблиц</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTableWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового отчета сводной таблицы и добавления его в коллекцию.</para>
-      <para>Использование <b>сводных таблиц</b>(<paramref name="index" />), где <paramref name="index" /> имя для возврата объекта <b>сводной таблицы</b> или сводной таблицы индекс.</para> Программирование отчетов сводной таблицы, так как 
-      <para>может оказаться сложной задачей, обычно удобнее для записи действий отчета сводной таблицы и затем измените записанный код. Запись макроса, в меню Сервис выберите пункт Макрос и нажмите кнопку Начать запись.</para><para></para></remarks>
+      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTableWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового отчета сводной таблицы и добавления его в коллекцию.</para>
+      <para>Использование <b>сводных таблиц</b>(<paramref name="index" />), где <paramref name="index" /> имя для возврата объекта <b>сводной таблицы</b> или сводной таблицы порядковый номер.</para>
+      <para>Так как программировании решений на базе отчета сводной таблицы может быть сложным, обычно проще для записи действий отчета сводной таблицы и затем измените записанный код. Запись макроса, в меню Сервис выберите пункт Макрос и нажмите кнопку Начать запись.</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -157,7 +159,10 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">

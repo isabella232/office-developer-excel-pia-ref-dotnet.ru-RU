@@ -1,10 +1,10 @@
 <Type Name="ChartGroup" FullName="Microsoft.Office.Interop.Excel.ChartGroup">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="91aeed6a7dfc46c2d925ce34ca5aa8b7e1be919f" />
+    <Meta Name="ms.openlocfilehash" Value="d867c9c484716da4b2528f8d662af2030b791599" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20578248" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ChartGroup" />
@@ -31,7 +31,37 @@
   <Docs>
     <summary>Представляет один или несколько рядов на диаграмме с тот же формат. Объект <b>ChartGroup</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> семейства сайтов.</summary>
     <remarks>
-      <para>Диаграммы содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек. Отдельных диаграмм может содержать, например, группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</para> Используйте <b>коллекцию ChartGroups</b><para>(<paramref name="index" />), где <paramref name="index" /> — номер индекса группа диаграммы, чтобы возвратить объект <b>ChartGroup</b> . Если диаграмма была активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> свойство.</para><para>Так как номер индекса для конкретной диаграммы группы могут изменяться при изменении формата диаграммы, используемой для этой группы, можно также использовать один из методов ярлык группы именованные диаграммы для возвращения группы диаграммы. <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> Метод возвращает коллекцию групп круговой диаграммы на диаграмме <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод возвращает коллекцию групп диаграммы строки и т. д. Каждый из этих методов можно использовать с числом индекса для возврата объекта <b>ChartGroup</b> или без числом индекса для возврата коллекции <b>коллекцию ChartGroups</b> . Доступны следующие методы группы диаграммы:</para><list type="bullet"><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод</description></item><item><description><see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> метод</description></item></list><para></para></remarks>
+      <para>Диаграмма содержит одну или несколько групп диаграммы, каждой группе диаграммы содержит один или несколько рядов и ряды содержит одну или несколько точек. К примеру отдельных диаграмм может содержать группу диаграммы строк, содержащий все ряд, отложенный с формат линейной диаграммы и группа линейчатая диаграмма, содержащий все ряд, отложенный с помощью формата линейчатая диаграмма.</para>
+      <para>Используйте <b>коллекцию ChartGroups</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса группа диаграммы, чтобы возвратить объект <b>ChartGroup</b> . Если диаграмма была активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> свойство.</para>
+      <para>Так как номер индекса для конкретной диаграммы группы могут изменяться при изменении формата диаграммы, используемой для этой группы, может быть проще использовать один из методов ярлык группы именованные диаграммы для возвращения группы диаграммы. <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> Метод возвращает коллекцию групп круговой диаграммы на диаграмме <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод возвращает коллекцию групп диаграммы строки и т. д. Каждый из этих методов можно использовать с числом индекса для возврата объекта <b>ChartGroup</b> или без числом индекса для возврата коллекции <b>коллекцию ChartGroups</b> . Доступны следующие методы группы диаграммы:</para>
+      <list type="bullet">
+        <item>
+          <description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" />метод</description>
+        </item>
+        <item>
+          <description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" />метод</description>
+        </item>
+        <item>
+          <description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" />метод</description>
+        </item>
+        <item>
+          <description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" />метод</description>
+        </item>
+        <item>
+          <description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" />метод</description>
+        </item>
+        <item>
+          <description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" />метод</description>
+        </item>
+      </list>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -91,7 +121,7 @@
         <summary>Возвращает группу для указанной диаграммы группы или серии.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для объемных диаграмм только <b>xlPrimary</b> является допустимым.</para>
+          <para>Для объемных диаграмм действителен только <b>xlPrimary</b> .</para>
           <para></para>
         </remarks>
       </Docs>
@@ -180,7 +210,10 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DoughnutHoleSize">
@@ -638,7 +671,7 @@
         <summary>Указывает расположение строки и столбцы. Может быть в диапазоне от – 100 до 100. Применяется только к плоских диаграмм и гистограмм 2-D.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если задано значение – 100, полосы расположены так, чтобы одно полоса между ними. Если перекрытие нуль (0), нет места между панелей (одной строки начинается сразу после предыдущего панели). Если перекрытие 100, полосы расположены друг на друга.</para>
+          <para>Если задано значение – 100, полосы расположением, чтобы не одно полоса между ними. Если перекрытие нуль (0), нет места между панелей (одной строки начинается сразу после предыдущего панели). Если перекрытие 100, полосы расположены друг на друга.</para>
           <para></para>
         </remarks>
       </Docs>

@@ -1,10 +1,10 @@
 <Type Name="PivotTable" FullName="Microsoft.Office.Interop.Excel.PivotTable">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="712758e7feaa480772d8b4950b401c1829bedb75" />
+    <Meta Name="ms.openlocfilehash" Value="364b8d02df1ff32fe7432d4ed2dd804098003fda" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20587712" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface PivotTable" />
@@ -31,8 +31,10 @@
   <Docs>
     <summary>Представляет отчет сводной таблицы на листе. <b>Сводная таблица</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> семейства сайтов. Коллекция <b>Сводные таблицы</b> содержит все объекты <b>сводной таблицы</b> на одном листе.</summary>
     <remarks>
-      <para>Использование <b>сводных таблиц</b>(<paramref name="index" />), где <paramref name="index" /> имя для возврата объекта <b>сводной таблицы</b> или сводной таблицы индекс.</para> Программирование отчетов сводной таблицы, так как 
-      <para>может оказаться сложной задачей, обычно удобнее для записи действий отчета сводной таблицы и затем измените записанный код. Запись макроса, в меню Сервис выберите пункт Макрос и выберите команду Начать запись.</para><para></para></remarks>
+      <para>Использование <b>сводных таблиц</b>(<paramref name="index" />), где <paramref name="index" /> имя для возврата объекта <b>сводной таблицы</b> или сводной таблицы порядковый номер.</para>
+      <para>Так как программировании решений на базе отчета сводной таблицы может быть сложным, обычно проще для записи действий отчета сводной таблицы и затем измените записанный код. Запись макроса, в меню Сервис выберите пункт Макрос и выберите команду Начать запись.</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -199,7 +201,7 @@
         <returns>To be added.</returns>
         <remarks>
           <para>Необходимо указать один из аргументов поля.</para>
-          <para>Имена полей укажите уникальное имя, возвращенное <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект.</para>
+          <para>Имена полей укажите уникальное имя, возвращенное <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
           <para>Этот метод недоступен для источников данных OLAP.</para>
           <para></para>
         </remarks>
@@ -264,7 +266,7 @@
         <value>
           <see cref="T:Microsoft.Office.Interop.Excel.XlAllocation" /> Объекта.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
             <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Allocation" /> Свойство соответствует рассчитать с помощью изменения установки в диалоговом окне Параметры анализа "что если". Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlAllocation.xlManualAllocation" />, который соответствует вручную (если выбор вычисление сводной таблицы с изменениями) параметр.</para>
           <para></para>
@@ -301,9 +303,9 @@
         <value>
           <see cref="T:Microsoft.Office.Interop.Excel.XlAllocationMethod" /> Объекта.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> Свойство соответствует параметру метод распределения в диалоговом окне Параметры анализа "что если". Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlEqualAllocation" />, которой соответствует параметру равно выделения. Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> свойству <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" />, которой соответствует параметру взвешенные распределения, можно указать выражение веса для использования, установив <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> свойство. Если не указать выражение веса, эквивалентное выражение веса &lt;конечные значения ячейки&gt; / &lt;существующее значение&gt; служит.</para>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> Свойство соответствует параметру метод распределения в диалоговом окне Параметры анализа "что если". Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlEqualAllocation" />, которой соответствует параметру равно выделения. Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> свойству <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" />, которой соответствует параметру взвешенные распределения, можно указать выражение веса для использования, установив <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> свойство. Если не указать выражение веса, эквивалентное выражение веса &lt;конечные значения ячейки&gt; / &lt;существующее значение&gt; используется.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -338,7 +340,7 @@
         <value>
           <see cref="T:Microsoft.Office.Interop.Excel.XlAllocationValue" /> Объекта.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
             <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationValue" /> Свойства соответствует значению параметра распределения в диалоговом окне Параметры анализа "что если". Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationValue.xlAllocateValue" />, который соответствует значение введенный разделенная на число выделений параметру.</para>
           <para></para>
@@ -374,7 +376,7 @@
         <summary>Получает или задает вес Многомерное выражение для выполнения анализа в отчете сводной таблицы на основе источника данных OLAP.</summary>
         <value>Вес Многомерное выражение для выполнения анализа в отчете сводной таблицы на основе источника данных OLAP.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
             <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> Свойство соответствует параметру вес выражение в диалоговом окне Параметры анализа "что если". Прежде чем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> может быть установлено, необходимо установить <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" />.</para>
           <para></para>
@@ -414,7 +416,9 @@
         </value>
         <remarks>
           <para>Значение по умолчанию — <b>False</b>.</para>
-          <para>Если этому свойству присвоено <b>значение True</b>, несколько фильтров может применяться к отдельной <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Если он имеет значение <b>False</b>, применение фильтра к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> , уже отфильтрованные будет удалить существующий фильтр и применить новую.  Назначить этому свойству значение <b>False</b> при <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> имеет поля, содержащие более одного будет применен фильтр без предупреждения удалить все фильтры в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> без отображения оповещения. Однако существует оповещение, после этого через пользовательский интерфейс.</para>
+          <para>Если этому свойству присвоено <b>значение True</b>, несколько фильтров может применяться к отдельной <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Если он имеет значение <b>False</b>, применение фильтра к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> , уже отфильтрованные будет удалить существующий фильтр и применить новую.
+
+Назначить этому свойству значение <b>False</b> при <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> имеет поля, содержащие более одного будет применен фильтр без предупреждения удалить все фильтры в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> без отображения оповещения. Однако существует оповещение, после этого посредством пользовательского интерфейса.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -448,7 +452,7 @@
         <summary>Получает или задает строку описательный текст (альтернативный) для указанного сводной таблицы.</summary>
         <value>Строка описательный текст (альтернативный) для указанного сводной таблицы.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Значение <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AlternativeText" /> свойства соответствует значению в поле название на вкладке замещающий текст в диалоговом окне Параметры сводной таблицы.</para>
           <para></para>
         </remarks>
@@ -511,7 +515,7 @@
         <summary>Возвращает или задает номер индекса в кэш сводной таблицы. Чтение и запись <b>целое число</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если свойство <b>CacheIndex</b> , чтобы один отчет сводной таблицы с помощью кэша второго отчет сводной таблицы, поля первого отчета должен быть допустимый подмножество полей в отчете о втором.</para>
+          <para>Если свойство <b>CacheIndex</b> , чтобы один отчет сводной таблицы с помощью кэша второго отчет сводной таблицы, первый отчет поля должны быть допустимый подмножество полей в отчете о втором.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -568,7 +572,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> семейства сайтов, представляющее вычисляемые элементы и вычисляемые показатели сводной таблицы OLAP.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется для источников интерактивной аналитической обработки (OLAP); не OLAP источника возвратит ошибку времени выполнения.</para>
+          <para>Это свойство используется для источников интерактивной аналитической обработки (OLAP); источник не OLAP возвратит ошибку времени выполнения.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -603,9 +607,9 @@
         <value>
           <b>значение true,</b> если должно оцениваться вычисляемые элементы из серверов OLAP в фильтрах; в противном случае — <b>false</b>.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
-            <b>значение true,</b> если расчет члены вычисляются в фильтрах; в противном случае — <b>false</b>.</para>
+            <b>значение true,</b> Если вычисляемые элементы оцениваются в фильтрах; в противном случае — <b>false</b>.</para>
           <para>Значение этого свойства соответствует параметру Evaluate вычисляемых элементов из серверов OLAP в флажок фильтры на итоги &amp; вкладку Фильтры в диалоговом окне Параметры сводной таблицы для отчета сводной таблицы на основании источника данных OLAP.</para>
           <para></para>
         </remarks>
@@ -763,7 +767,7 @@
           <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> Метод используется для очистки <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. Очистка <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s включает в себя удаление всех полей и удаление всех фильтрации и сортировки, применяемые к <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" />. Этот метод сбрасывает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> в состояние использовался сразу после его создания, перед любой поля были добавлены к нему.</summary>
         <remarks>
           <para>
-            <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> Функция не принимает аргументы и доступна для реляционных и OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s.</para>
+            <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> Функция не принимает аргументы и доступна для реляционных и OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s. </para>
           <para></para>
         </remarks>
       </Docs>
@@ -918,7 +922,7 @@
         <summary>Задает заголовок, отображаемый в заголовке столбца <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> в компактном строку макета формы. Для чтения и записи.</summary>
         <value>String</value>
         <remarks>
-          <para>При пользователь настраивает следующие заголовки в сетке, он также отражаются в этих свойств.</para>
+          <para>Когда пользователь настраивает следующие заголовки в сетке, также отражены в этих свойств.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -954,7 +958,7 @@
           <b>Строка</b>
         </value>
         <remarks>
-          <para>При пользователь настраивает следующие заголовки в сетке, он также отражаются в этих свойств.</para>
+          <para>Когда пользователь настраивает следующие заголовки в сетке, также отражены в этих свойств.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -990,7 +994,7 @@
           <b>Integer</b>
         </value>
         <remarks>
-          <para>По умолчанию значение равно 1. Допустимые значения для этого параметра: от 0 до максимального отступ, указанных в Microsoft Excel.</para>
+          <para>Значение по умолчанию — 1. Допустимые значения для этого параметра: от 0 до максимального отступ, указанных в Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1022,7 +1026,7 @@
         <summary>
           <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ConvertToFormulas(System.Boolean)" /> Метод новые возможности 1st_Excel12 и используется для преобразования <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> в кубе формулы.</summary>
         <remarks>
-          <para>Аргумент управляет ли преобразовать области ReportFilter <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />.</para>
+          <para>Аргумент управляет ли преобразовать области ReportFilter <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. </para>
           <para></para>
         </remarks>
       </Docs>
@@ -1089,7 +1093,10 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CubeFields">
@@ -1258,7 +1265,11 @@
       <Parameters />
       <Docs>
         <summary>Отменяет все изменения в отредактированных ячейках отчета сводной таблицы на основе источника данных OLAP.</summary>
-        <remarks>Отчет о <para>для сводной таблицы на основе источника данных OLAP, метод удаляет все значения и формул в ячейках значение и затем выполняет операцию обновления сводной таблицы для получения значений из источника данных. Задает значения источника данных пустая ссылка (Nothing в Visual Basic) для всех ячеек значений, выполняется изменение, а также выполняет инструкцию ОТКАТА ТРАНЗАКЦИЙ сервера OLAP.</para><para>При попытке выполнить этот метод для отчета сводной таблицы на основе источника данных не OLAP, этот метод вызывает ошибку времени выполнения.</para><para></para></remarks>
+        <remarks>
+          <para>Для отчета сводной таблицы на основе источника данных OLAP метод удаляет все значения и формул в ячейках значение и затем выполняет операцию обновления сводной таблицы для получения значений из источника данных. Пустая ссылка (Nothing в Visual Basic) для всех ячеек значений, выполняется изменение, а также выполняет инструкцию ОТКАТА ТРАНЗАКЦИЙ сервера OLAP задает значения источника данных.</para>
+          <para>При попытке выполнить этот метод для отчета сводной таблицы на основе источника данных не OLAP, этот метод вызывает ошибку времени выполнения.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayContextTooltips">
@@ -1292,7 +1303,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayContextTooltips" /> имеет значение <b>False</b>, контекстные всплывающие подсказки для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> ячеек не будут отображаться. Если он имеет значение <b>True</b>, всплывающие подсказки для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> ячеек в области строк, столбцов и данных будет отображаться.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayContextTooltips" /> имеет значение <b>False</b>, контекстные всплывающие подсказки для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> ячеек не будут отображаться. Если он имеет значение <b>True</b>, всплывающие подсказки для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> будет отображаться ячеек в области строк, столбцов и данных.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1326,7 +1337,7 @@
         <summary>Возвращает <b>значение True</b> , если ключевое слово многомерных Выражений непустые включен в запрос к поставщику OLAP для оси значений. Поставщик данных OLAP не возвращает пустые столбцы в наборе результатов. Возвращает <b>значение False</b> , когда опущена ключевое слово пустым. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Сводной таблицы должен быть подключен к источнику данных интерактивной аналитической обработки (OLAP), чтобы избежать ошибки времени выполнения.</para>
+          <para>Сводные таблицы должен быть подключен к источнику данных интерактивной аналитической обработки (OLAP), чтобы избежать ошибки времени выполнения.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1360,7 +1371,7 @@
         <summary>Возвращает <b>значение True</b> , если ключевое слово многомерных Выражений непустые включен в запрос к поставщику OLAP для оси категорий. Поставщик данных OLAP не возвращает пустые строки в наборе результатов. Возвращает <b>значение False</b> , когда опущена ключевое слово пустым. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Сводной таблицы должен быть подключен к источнику данных интерактивной аналитической обработки (OLAP), чтобы избежать ошибки времени выполнения.</para>
+          <para>Сводные таблицы должен быть подключен к источнику данных интерактивной аналитической обработки (OLAP), чтобы избежать ошибки времени выполнения.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1499,7 +1510,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayMemberPropertyTooltips" /> имеет значение <b>False</b>, не член свойства будет отображаться во всплывающих подсказках. Если он имеет значение <b>True</b>, свойства элемента будет отображаться во всплывающих подсказках.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayMemberPropertyTooltips" /> имеет значение <b>False</b>, не член свойства будет отображаться во всплывающих подсказках. Если он имеет значение <b>True</b>, свойства элемента отображаются во всплывающих подсказках.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1534,7 +1545,7 @@
           <b>Значение true,</b> Если в отчет сводной таблицы отображение настраиваемой строки в ячейках, содержащих значения null. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.NullString" /> свойство, чтобы задать настраиваемые пустая строка.</para>
+          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.NullString" /> свойство, чтобы задать настраиваемые пустая строка.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1783,7 +1794,7 @@
           <b>Значение true,</b> Чтобы отключить оповещения для когда пользователь может заменить значения в области данных сводной таблицы. <b>Значение true,</b> также позволяет пользователям изменять значения данных, которые ранее не может быть изменен. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Любое изменение значениям данных теряется при обновлении.</para>
+          <para>Любые изменения значениям данных будут потеряны при обновлении.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1818,8 +1829,8 @@
           <b>Значение true,</b> Если этот параметр включен углубленной детализации. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этого свойства для отчета сводной таблицы устанавливает для всех полей в этот отчет.</para>
-          <para>Для источников данных OLAP, значение всегда равно <b>True</b>.</para>
+          <para>Установка для этого свойства для отчета сводной таблицы задает для всех полей в этот отчет.</para>
+          <para>Для источников данных OLAP значение всегда равно <b>True</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1854,7 +1865,7 @@
           <b>Значение true,</b> Если в диалоговом окне <b>Поле сводной таблицы</b> при двойном щелчке поле сводной таблицы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этого свойства для отчета сводной таблицы устанавливает для всех полей в этот отчет.</para>
+          <para>Установка для этого свойства для отчета сводной таблицы задает для всех полей в этот отчет.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1956,8 +1967,15 @@
         <value>
           <b>значение true,</b> Если обратной записи в источник данных включено для указанного сводной таблицы; в противном случае — <b>false</b>. Значение по умолчанию — <b>false</b>.</value>
         <remarks>
-          <para>Чтение и запись.</para> Источники данных OLAP для 
-          <para>, установка для <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> значение <b>true</b> для включает обратной записи и отключает оповещения для когда пользователь может заменить значения в области данных сводной таблицы. Для источников данных не OLAP, параметру <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> значение <b>true</b> включает обратной записи в коде и также позволяет пользователю изменять значения данных, которые ранее не может быть изменен.</para><para><see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> И <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект не может быть присвоено <b>значение true,</b> в то же время.</para><para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> задано значение <b>true,</b> а затем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> свойство имеет значение <b>true</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> свойству присвоено <b>значение false,</b> автоматически, сводные таблицы обновляется и любое изменение значениям данных — это потеряно.</para><para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> задано значение <b>true,</b> а затем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> задано значение <b>true</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" />свойству присвоено <b>значение false,</b> автоматически, сводные таблицы не обновляется и значения источника данных будут восстановлены.</para><para>Для источников данных, не OLAP, установка для этого свойства приводит к ошибке времени выполнения.</para><para></para></remarks>
+          <para>Для чтения и записи.</para>
+          <para>Для источников данных OLAP, установка для <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> значение <b>true</b> для включает обратной записи и отключает оповещения для когда пользователь может заменить значения в области данных сводной таблицы. Для источников данных не OLAP, параметру <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> значение <b>true</b> включает обратной записи в коде и также позволяет пользователю изменять значения данных, которые ранее не может быть изменен.</para>
+          <para>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> И <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект не может быть присвоено <b>значение true,</b> в то же время.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> задано значение <b>true,</b> а затем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> свойство имеет значение <b>true</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> свойству присвоено <b>значение false,</b> автоматически, сводные таблицы обновляется и любое изменение значениям данных теряется.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> задано значение <b>true,</b> а затем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> задано значение <b>true</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" />свойству присвоено <b>значение false,</b> автоматически, сводные таблицы не обновляется и значения источника данных будут восстановлены.</para>
+          <para>Для источников данных, не OLAP Установка для этого свойства приводит к ошибке времени выполнения.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ErrorString">
@@ -2262,7 +2280,7 @@
         <summary>Проверяет, существует ли сводной таблицы на уровне рабочего листа. <b>Логическое</b> (<b>bool</b> в C#). Только для чтения</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если свойства <b>Hidden</b> установлено значение <b>True</b>, объект <b>сводной таблицы</b> скрыт на уровне рабочего листа. Если свойство имеет значение <b>False</b>, сводные таблицы существует на листе.</para>
+          <para>Если свойства <b>Hidden</b> установлено значение <b>True</b>, объект <b>сводной таблицы</b> является скрытым на уровне рабочего листа. Если свойство имеет значение <b>False</b>, сводные таблицы, существует на листе.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2297,7 +2315,7 @@
         <summary>Возвращает объект, представляющий либо одного поля сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект) или коллекцию всех полей ( <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> объект), которая в настоящее время не отображаются в виде строки, столбца, страницы или данных поля. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>OLAP для источников данных, это свойство всегда возвращает пустую коллекцию.</para>
+          <para>Для источников данных OLAP это свойство всегда возвращает пустую коллекцию.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2333,7 +2351,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>При <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.InGridDropZones" />задано значение <b>True</b>, в сетке представление <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> — это же, как и в Excel 2003. Свойство имеет значение <b>False</b>, при нет зон перетаскивания в сетке. <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> Макета также изменяется с этим свойством.</para>
+          <para>При <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.InGridDropZones" />задано значение <b>True</b>, в сетке представление <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> — это же, как и в Excel 2003. Свойство имеет значение <b>False</b>, при нет зон перетаскивания в сетке. <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> Макета также изменяется с помощью этого свойства.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2404,7 +2422,7 @@
         </value>
         <remarks>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutRowType" /> может быть xlCompactRow, xlTabularRow или xlOutlineRow.</para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutRowType" />может быть xlCompactRow, xlTabularRow или xlOutlineRow.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2500,7 +2518,7 @@
           <b>Значение true,</b> Если в отчет сводной таблицы пересчитываются только на пользователя запроса. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство имеет значение <b>False</b> сразу же после окончания работы программы.</para>
+          <para>Это свойство имеет значение <b>False</b> , сразу же после окончания работы программы.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2691,8 +2709,8 @@
         <summary>Возвращает объект, представляющий либо одного поля сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект) или коллекцию всех полей ( <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> объект), который в данный момент отображаются как поля страниц. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Иерархии может содержать только одно поле страницы.</para>
-          <para>Для отчета сводной таблицы на основе кэша сводной таблицы, возвращается коллекция поля сводной таблицы отражает возможности в текущий момент в кэше.</para>
+          <para>Иерархия может содержать только одно поле страницы.</para>
+          <para>Для отчета сводной таблицы на основе кэша сводной таблицы возвращается коллекция поля сводной таблицы отражает возможности в текущий момент в кэше.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2726,7 +2744,7 @@
         <summary>Возвращает или задает стиль, используемый в область полей связанной страницы. Значение по умолчанию — пустая строка (стиль не применяется по умолчанию). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этот стиль используется по умолчанию для области фон и перед пользовательского форматирования. Ячейки, освободившиеся при поля сведения из области полей страниц в другое расположение сохранять этот стиль.</para>
+          <para>Этот стиль используется по умолчанию для области фона и перед пользовательского форматирования. Ячейки, освободившиеся при поля сведения из области полей страниц в другое расположение сохранить этот стиль.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2956,7 +2974,7 @@
         <summary>Возвращает объект, представляющий либо одного поля сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект) или коллекцию видимых и скрытых полей ( <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> объект) в отчете сводной таблицы. Только для чтения.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>Источника данных OLAP для существует не не скрытых полей, а объекта или коллекции, возвращаемой отражает, что в данный момент виден.</para>
+          <para>Для источников данных OLAP, которые не скрытых полей и объекта или коллекции, возвращаемой отражает, что в данный момент виден.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2987,7 +3005,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotFormulas" /> объект, представляющий коллекцию формулы для указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> отчета. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Источников данных для OLAP, данное свойство возвращает пустую коллекцию.</para>
+          <para>Для источников данных OLAP данное свойство возвращает пустую коллекцию.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3052,7 +3070,7 @@
         <param name="UseStandardName">Необязательный элемент <b>Object</b>. <b>Значение true</b> для записи макросов, которые будут воспроизводиться в других языковых стандартов.</param>
         <summary>Выбирает частью отчета сводной таблицы.</summary>
         <remarks>
-          <para>Указанного режима можно использовать только для выбора соответствующего элемента в отчете сводной таблицы. Например с помощью режима <b>xlButton</b> ; выберите данные и подписи Аналогичным образом, невозможно выбрать кнопки с помощью режима <b>xlDataOnly</b> .</para>
+          <para>Указанный режим только для выбора соответствующего элемента в отчете сводной таблицы. Например с помощью режима <b>xlButton</b> ; выберите данные и подписи Аналогичным образом невозможно выбрать кнопки с помощью режима <b>xlDataOnly</b> .</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3086,7 +3104,7 @@
         <summary>Возвращает или задает область выделения сводной таблицы в стандартный формат выбора отчета сводной таблицы. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этого свойства эквивалентно вызову метода <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotSelect(System.String,Microsoft.Office.Interop.Excel.XlPTSelectionMode,System.Object)" /> метод с <paramref name="Mode" /> аргумент значение <b>xlDataAndLabel</b>.</para>
+          <para>Это свойство эквивалентно вызову метода <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotSelect(System.String,Microsoft.Office.Interop.Excel.XlPTSelectionMode,System.Object)" /> метод с <paramref name="Mode" /> аргумент значение <b>xlDataAndLabel</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3309,8 +3327,11 @@
         <summary>
           <b>Значение true,</b> Если значение заголовков печати листа на основании отчета сводной таблицы. <b>Значение false,</b> Если используются заголовков печати для рабочего листа. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>Печать заголовков <para>строку устанавливаются строки, содержащие элементы полей столбцов отчета сводной таблицы. Печать заголовков столбцов, присваивается столбцов, которые содержат элементы строк.</para> Отчет сводной таблицы 
-          <para>должен быть единственным в область печати. Чтобы задать структурированный формат для отчета сводной таблицы, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.Format(Microsoft.Office.Interop.Excel.XlPivotFormatType)" /> метод.</para><para></para></remarks>
+        <remarks>
+          <para>Печать заголовков строк устанавливаются строки, содержащие элементы полей столбцов отчета сводной таблицы. Печать заголовков столбцов устанавливаются столбцов, которые содержат элементы строк.</para>
+          <para>Отчет сводной таблицы должен быть единственным в область печати. Чтобы задать структурированный формат для отчета сводной таблицы, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.Format(Microsoft.Office.Interop.Excel.XlPivotFormatType)" /> метод.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="RefreshDataSourceValues">
@@ -3336,8 +3357,8 @@
       <Docs>
         <summary>Получает текущие значения из источника данных для всех отредактированных ячеек в отчете сводной таблицы, которая находится в режиме обратной записи.</summary>
         <remarks>
-          <para>Чтобы определить, если отчет сводной таблицы в режиме обратной записи, установите флажок <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> или <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта, один из которых возвращает значение True. Для отчетов сводной таблицы, не входящих в режиме обратной записи, пытается выполнить этот метод вызывает ошибку времени выполнения.</para>
-          <para>Для отчетов сводной таблицы с источниками данных OLAP, выполнение <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RefreshDataSourceValues" /> метод создает отдельное подключение к серверу OLAP и выполняет полный запрос многомерных Выражений (значение <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />.<see cref="P:Microsoft.Office.Interop.Excel.PivotTable.MDX" /> свойство), который используется для выполнения операции обновления для Заполните отчет сводной таблицы. Извлекает значения для всех ячеек, которые были изменены в представлении сводной таблицы Excel и сохраняет их в <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> свойства для этих ячеек.</para>
+          <para>Чтобы определить, если отчет сводной таблицы в режиме обратной записи, установите флажок <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> или <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта, один из которых возвращает значение True. Для отчетов сводной таблицы, не входящих в режиме обратной записи пытается выполнить этот метод вызывает ошибку времени выполнения.</para>
+          <para>Для отчета сводной таблицы с источниками данных OLAP, выполнение <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RefreshDataSourceValues" /> метод создает отдельное подключение к серверу OLAP и выполняет полный запрос многомерных Выражений (значение <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />.<see cref="P:Microsoft.Office.Interop.Excel.PivotTable.MDX" /> свойство), который используется для выполнения операции обновления для заполнения отчета сводной таблицы. Извлекает значения для всех ячеек, которые были изменены в представлении сводной таблицы Excel и сохраняет их в <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> свойства для этих ячеек.</para>
           <para>Этот метод применяется только к отчета сводной таблицы с источниками данных OLAP. Попытка выполнить этот метод и сводной таблицы с источниками данных, не OLAP приводит к ошибке времени выполнения.</para>
           <para></para>
         </remarks>
@@ -3369,7 +3390,7 @@
         <summary>Возвращает дату последнего обновления отчета сводной таблицы. Только для чтения <b>даты и времени</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников данных OLAP, это свойство обновляется после каждого запроса.</para>
+          <para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3400,7 +3421,7 @@
         <summary>Возвращает имя человека, который последнее обновление данных отчета сводной таблицы или сводной таблицы кэша. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников данных OLAP, это свойство обновляется после каждого запроса.</para>
+          <para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3457,7 +3478,7 @@
         <param name="Repeat">Указывает, следует ли повторять подписи для всех сводные поля в указанном сводной таблицы.</param>
         <summary>Задает необходимость повторять подписи для всех сводные поля в указанном сводной таблицы.</summary>
         <remarks>
-          <para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RepeatAllLabels(Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels)" /> метод соответствует команды повторите подписи всех элементов и не повторять подписи элементов в раскрывающемся списке Формат отчета из вкладку средств разработки сводной таблицы</para>
+          <para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RepeatAllLabels(Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels)" /> метод соответствует команды повторите подписи всех элементов и не повторять подписи элементов в раскрывающемся списке Формат отчета сводной таблицы средств разработки вкладки.</para>
           <para>Чтобы указать, следует ли повторять подписи элементов для одного сводных полей, используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotField.RepeatLabels" /> свойство.</para>
           <para></para>
         </remarks>
@@ -3652,7 +3673,7 @@
           <b>Значение true,</b> Если сохранить данные для отчета сводной таблицы с помощью рабочей книги. <b>Значение false,</b> если только для сохранения определения отчета. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>OLAP для источников данных, это свойство всегда имеет значение <b>False</b>.</para>
+          <para>Для источников данных OLAP это свойство всегда присвоено <b>значение False</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3686,7 +3707,7 @@
         <summary>Возвращает или задает режим структурированных выбора отчета сводной таблицы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlPTSelectionMode" />.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если поле сводной таблицы не находится в виде структуры, определяющее суммы любые константы и <b>xlFirstRow</b> эквивалентен сам по себе он константу.</para>
+          <para>Если поле сводной таблицы не находится в виде структуры, задание суммы любые константы и <b>xlFirstRow</b> аналогично указание сам по себе он константу.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3727,7 +3748,7 @@
           <b>Значение true,</b> Если многомерных Выражений (многомерные выражения), который отправляет серверу Microsoft Excel включает в себя <see cref="P:Microsoft.Office.Interop.Excel.ChartFillFormat.BackColor" /> свойства для каждой ячейки в области данных, соответствующий ячейки в наборе данных интерактивной аналитической обработки (OLAP). Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Набора данных OLAP возвращает значение свойства <b>BackColor</b> , а затем цвет заливки ячейки задано значение ближайший цвет в палитре Microsoft Excel для этого рабочего листа. Если пользователь применяется шаблон ячейки, форматирование в ячейку вручную, который будет блокировать все форматирование из набора данных OLAP.</para>
+          <para>Если набора данных OLAP возвращает значение свойства <b>BackColor</b> , цвет заливки ячейки присваивается ближайший цвет в палитре Microsoft Excel для этого рабочего листа. Если пользователь применяет шаблон ячейки вручную, форматирование в ячейку, будет блокировать все форматирование из набора данных OLAP.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3764,7 +3785,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Возвращает <b>значение True,</b> Если в отображаются индикаторы детализации <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> и возвращает <b>значение False</b> , если не отображаются индикаторы детализации в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />.</para>
+          <para>Возвращает <b>значение True,</b> Если в отображаются индикаторы детализации <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> и возвращает <b>значение False</b> , если не отображаются индикаторы детализации в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. </para>
           <para></para>
         </remarks>
       </Docs>
@@ -4019,7 +4040,7 @@
         <value>
           <b>значение true,</b> Если отображается строка значений; в противном случае — <b>false</b>.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Это свойство соответствует параметру Показать флажок строку значения на вкладке Отображение диалогового окна Параметры сводной таблицы.</para>
           <para></para>
         </remarks>
@@ -4052,8 +4073,10 @@
         <value>
           <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> Семейство сайтов для указанного сводной таблицы.</value>
         <remarks>
-          <para>Только для чтения.</para> Срезы 
-          <para>можно использовать для фильтрации данных в отчетах сводной таблицы. <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> Содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекты, которые представляют срезы, связанные с указанной сводной таблицы.</para><para></para></remarks>
+          <para>Только для чтения.</para>
+          <para>Срезы можно использовать для фильтрации данных в отчетах сводной таблицы. <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> Содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекты, которые представляют срезы, связанные с указанной сводной таблицы.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SmallGrid">
@@ -4123,7 +4146,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Назначить этому свойству значение <b>False</b> можно оптимизировать производительность для поля, содержащие много элементов, а также позволяет пользователям, у которых не воспроизводились, настраиваемые на основе списка сортировка во избежание его.</para>
+          <para>Назначить этому свойству значение <b>False,</b> можно оптимизировать производительность для поля, содержащие много элементов, и он также позволяет пользователям, которые не воспроизводились, настраиваемые на основе списка сортировка во избежание его.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4157,23 +4180,23 @@
         <summary>Возвращает источник данных для отчета сводной таблицы. Режим чтения записи <b>объекта</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Возвращаемое значение зависит от источника данных, как показано ниже:</para>
+          <para>Значение, возвращаемое зависит от источника данных, как показано ниже:</para>
           <list type="table">
             <item>
-              <term>Списка Microsoft Excel или базы данных</term>
-              <description>ссылка на ячейку, как текст.</description>
+              <term>Список Microsoft Excel или базы данных</term>
+              <description>Ссылка на ячейку, как текст.</description>
             </item>
             <item>
-              <term>Внешнего источника данных</term>
-              <description>массив. Каждая строка состоит из строку подключения SQL с оставшиеся элементы как строки запроса, разбитым на сегменты 255 знаков.</description>
+              <term>Внешний источник данных</term>
+              <description>Массив. Каждая строка состоит из строку подключения SQL с оставшиеся элементы как строки запроса, разбитым на сегменты 255 знаков.</description>
             </item>
             <item>
               <term>Несколько диапазонов консолидации</term>
-              <description>двумерного массива. Каждая строка состоит из ссылки и его элементы, поле связанных страниц.</description>
+              <description>Двухмерный массив. Каждая строка состоит из ссылки и его элементы, поле связанных страниц.</description>
             </item>
             <item>
-              <term>Другой сводной</term>
-              <description>один из трех выше виды информации.</description>
+              <term>Другой отчет сводной таблицы</term>
+              <description>Один из трех выше виды информации.</description>
             </item>
           </list>
           <para>Это свойство недоступно для источников данных OLE DB.</para>
@@ -4211,7 +4234,7 @@
           <b>Значение true,</b> Если скрытых элементов поля страницы в отчете сводной таблицы, включаются в строку и промежуточные итоги, блок итоги и общие итоги. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников данных OLAP, значение всегда равно <b>True</b>.</para>
+          <para>Для источников данных OLAP значение всегда равно <b>True</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4277,7 +4300,7 @@
         <summary>Получает или задает описание, связанное со строки замещающий текст для указанного сводной таблицы.</summary>
         <value>Описание, связанное с строка замещающий текст для указанного сводной таблицы.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Значение <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Summary" /> свойства соответствует значению в поле Описание на вкладке замещающий текст в диалоговом окне Параметры сводной таблицы.</para>
           <para></para>
         </remarks>
@@ -4382,7 +4405,7 @@
         <summary>Возвращает или задает стиль, используемый в теле отчета сводной таблицы. Значение по умолчанию — пустая строка (стиль не применяется по умолчанию). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этот стиль используется по умолчанию для области фон и перед пользовательского форматирования.</para>
+          <para>Этот стиль используется по умолчанию для области фона и перед пользовательского форматирования.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4419,7 +4442,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>Вызывает свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle2" /> из-за существующего свойства с именем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle" />.</para>
+          <para>Свойство называется <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle2" /> из-за существующего свойства с именем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle" />.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4485,8 +4508,8 @@
           <b>Значение true,</b> Если отображается символ звездочки (*) рядом с каждой промежуточных и общих общее значение указанного отчета сводной таблицы, если отчет основан на источнике данных OLAP. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если этому свойству присвоено <b>значение True</b>, звездочка указывает, что скрытые элементы включаются в общее. Независимо от того, является ли были скрыты все элементы в отчете отображается звездочка.</para>
-          <para>Для источников данных, не OLAP, значение этого свойства всегда имеет <b>значение False</b>.</para>
+          <para>Если этому свойству присвоено <b>значение True</b>, звездочка указывает, что скрытые элементы включаются в общее. Звездочка отображается независимо от того, является ли были скрыты все элементы в отчете.</para>
+          <para>Для источников данных, не OLAP значение этого свойства всегда имеет <b>значение False</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4667,7 +4690,7 @@
         <summary>Возвращает объект, представляющий либо одного поля в отчет сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект) или набор видимых полей ( <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> объект). Видимые поля отображаются в виде строки, столбца, страницы или поля данных. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>OLAP для источников данных существует, не скрытых полей, и данное свойство возвращает все поля в кэш сводной таблицы.</para>
+          <para>Для OLAP существует источников данных, не скрытых полей, и данное свойство возвращает все поля в кэш сводной таблицы.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4702,9 +4725,9 @@
           <b>Значение true</b> (по умолчанию) для включения сводных таблиц интерактивной аналитической обработки (OLAP) для пересчета общая после элемента скрыт из представления. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>В не - сводных таблиц OLAP, если скрыть элемент, общая является пересчитывать в соответствии с только элементы, которые отображаются в сводной таблице. В сводной таблицы OLAP общая вычисляется на сервере и поэтому не влияет, является ли все элементы являются скрытыми в представлении сводной таблицы. Тем не менее, если свойство <b>VisualTotals</b> задано значение <b>False</b> для сводной таблицы OLAP, затем результаты сводной таблицы OLAP будет соответствовать те из не - сводной таблицы OLAP.</para>
-          <para>Для сводных таблиц OLAP, значение свойства <b>VisualTotals</b> , <b>значение True</b> (по умолчанию) работает так же, как описано для не - сводных таблиц OLAP.</para>
-          <para>Свойство <b>VisualTotals</b> возвращает <b>значение True</b> для всех новых сводных таблиц. Тем не менее, при открытии книги в текущей версии Microsoft Excel и сводные таблицы, созданной в предыдущей версии Excel, <b>VisualTotals</b> свойство возвращает <b>значение False</b>.</para>
+          <para>В не - сводных таблиц OLAP, если скрыть элемент, общая является пересчитывать в соответствии с только элементы, которые отображаются в сводной таблице. В сводной таблицы OLAP общая вычисляется на сервере и поэтому не влияет, является ли все элементы являются скрытыми в представлении сводной таблицы. Тем не менее если свойство <b>VisualTotals</b> задано значение <b>False</b> для сводной таблицы OLAP, затем результаты сводной таблицы OLAP будет совпадать не - OLAP сводной таблицы.</para>
+          <para>Для сводных таблиц OLAP <b>VisualTotals</b> свойство значение <b>True</b> (по умолчанию) работает так же, как, как описано для не - сводных таблиц OLAP.</para>
+          <para>Свойство <b>VisualTotals</b> возвращает <b>значение True</b> для всех новых сводных таблиц. Тем не менее при открытии книги в текущей версии Microsoft Excel и сводные таблицы, созданной в предыдущей версии Excel, свойство <b>VisualTotals</b> возвращает <b>значение False</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4739,10 +4762,10 @@
         <value>
           <b>значение true,</b> Если фильтрация элементов в итоги именованные наборы для указанного сводных таблиц включены; в противном случае — <b>false</b>. Значение по умолчанию — <b>false</b></value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
             <b>значение true,</b> если отфильтрованные элементы включаются в итоги для именованные наборы; в противном случае — <b>false</b>. Значение по умолчанию этого свойства имеет <b>значение false</b>.</para>
-          <para>В сводной таблицы на основе источника данных OLAP можно настроить ли итоговые значения для именованные наборы в сводной таблице будет включать элементы, которые исключены. Параметр <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.VisualTotalsForSets" /> свойство соответствует параметру включить отфильтрованные элементы флажка итоговые значения набора на итоги &amp; вкладку Фильтры диалогового окна Параметры сводной таблицы.</para>
+          <para>В сводной таблице, на основе источника данных OLAP можно настроить ли итоговые значения для именованные наборы в сводной таблице будет включать элементы, которые исключены. Параметр <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.VisualTotalsForSets" /> свойство соответствует параметру включить отфильтрованные элементы флажка итоговые значения набора на итоги &amp; вкладку Фильтры диалогового окна Параметры сводной таблицы.</para>
           <para></para>
         </remarks>
       </Docs>

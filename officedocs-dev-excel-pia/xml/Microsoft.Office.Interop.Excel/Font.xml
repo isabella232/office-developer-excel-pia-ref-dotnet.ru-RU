@@ -1,10 +1,10 @@
 <Type Name="Font" FullName="Microsoft.Office.Interop.Excel.Font">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="04a0bbf6cf70448fc91575d6e89513f6621293f7" />
+    <Meta Name="ms.openlocfilehash" Value="a8ba6992514b1438faa9fc74351cb46d6d8e0551" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20585696" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Font" />
@@ -32,7 +32,7 @@
     <summary>Содержит атрибуты шрифта (шрифт, размер шрифта, цвета и т. п.) для объекта.</summary>
     <remarks>
       <para>Свойство <b>шрифта</b> возвращает объект <b>Font</b> .</para>
-      <para>Форматирование всего текста в ячейку или рисунок, так же, как не требуется, используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Characters(System.Object,System.Object)" /> свойство для возвращения подмножество текст.</para>
+      <para>Если форматирование всего текста в ячейку или рисунок, так же, как не требуется, используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Characters(System.Object,System.Object)" /> свойство для возвращения подмножество текст.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -99,19 +99,19 @@
               <term>
                 <b>xlBackgroundAutomatic</b>
               </term>
-              <description>фона шрифта автоматически изменится Фоновая область вокруг текста цвет, что наиболее отображение текста диаграммы на цвет применяется к элементам в разделе текст</description>
+              <description>Фон шрифта автоматически изменится на цвет, лучше всего текста диаграммы на цвет, применяемый к элементам в разделе текст Фоновая область вокруг текста</description>
             </item>
             <item>
               <term>
                 <b>xlBackgroundOpaque</b>
               </term>
-              <description>Фон шрифта устанавливающей фона шрифтов в черный цвет текста и заливки под текстом — это очень закрыть или одинаковый цвет, таким образом, чтобы текст не будут отображаться</description>
+              <description>Фон шрифта устанавливающей фона шрифта в черный цвет текста и заливки под текстом — это очень закрыть или одинаковый цвет таким образом, чтобы текст не будут отображаться</description>
             </item>
             <item>
               <term>
                 <b>xlBackgroundTransparent</b>
               </term>
-              <description>фона шрифта имеет значение transparent, чтобы текст фон не изменяется цвет текста приближается к завершению цвет под текстом</description>
+              <description>Фон шрифта задано значение transparent, чтобы текст фон не изменяется цвет текста приближается к завершению цвет под текст</description>
             </item>
           </list>
           <para></para>
@@ -210,9 +210,9 @@
         <summary>Возвращает или задает цвет шрифта.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Цвет указан как значение индекса в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант:</para>
+          <para>Цвет указан как значение индекса в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> константы:</para>
           <para>
-            <b>xlColorIndexAutomatic</b>. Можно указать автоматическое цвет.</para>
+            <b>xlColorIndexAutomatic</b>. Позволяет указать автоматическое цвет.</para>
           <para>
             <b>xlColorIndexNone</b>.</para>
           <para></para>
@@ -245,8 +245,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FontStyle">
@@ -347,36 +349,43 @@
           <para>В следующей таблице показаны значения примере свойство <b>Name</b> и связанных с ними свойств, присвоенное <a href="mk:@MSITStore:C:\Program%20Files\Microsoft%20Office\OFFICE11\1033\VBAXL10.CHM::/html/xlproName1.htm">OLAP</a></para>
           <list type="table">
             <item>
-              <description>Париж</description>
               <term>
-                <b>Caption</b>
+                <b>Заголовок</b>
               </term>
+              <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>имя</b>
+                <b>Имя</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
-              <description>(Такой же, как значение свойства SQL, только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>(То же, что значение свойства SQL, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [ Франция]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para> выражение, 
-          <list type="table"><item><term>. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term><description>выражение. PivotItems("Paris")</description></item></list><para></para></remarks>
+          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para>
+          <list type="table">
+            <item>
+              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term>
+              <description>выражение. PivotItems("Paris")</description>
+            </item>
+          </list>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="OutlineFont">
@@ -646,7 +655,7 @@
           <b>Integer</b>
         </value>
         <remarks>
-          <para>Попытки подключения к цвет темы для объекта, цвет которого не является в настоящее время темой приводит к ошибке времени выполнения недопустимый запрос.</para>
+          <para>Попытки подключения к цвет темы для объекта, цвет которого не является в настоящее время темой приведет к ошибку времени выполнения недопустимый запрос.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -715,7 +724,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для <see cref="P:Microsoft.Office.Interop.Excel.Font.TintAndShade" /> свойство. Нуль (0) нейтральный.</para>
+          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для <see cref="P:Microsoft.Office.Interop.Excel.Font.TintAndShade" /> свойство. Нейтральный нуль (0).</para>
           <para>Попытки подключения к этому свойству присвоено значение меньше, чем значение -1 или более 1 приводит к ошибке времени выполнения: «указанное значение находится вне диапазона».  Это свойство работает для цвета темы и цвета nontheme.</para>
           <para></para>
         </remarks>

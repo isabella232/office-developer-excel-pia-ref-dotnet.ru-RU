@@ -1,10 +1,10 @@
 <Type Name="SlicerPivotTables" FullName="Microsoft.Office.Interop.Excel.SlicerPivotTables">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="b123a1bc4260dc8310b68183d37e0c58e2055b96" />
+    <Meta Name="ms.openlocfilehash" Value="e7cf06ad9737671167d43d23e4d02fbaa27f0834" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20580985" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface SlicerPivotTables : System.Collections.IEnumerable" />
@@ -37,7 +37,7 @@
     <remarks>
       <para>
         <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> Семейства сайтов содержит сведения о сводных таблицах кэш среза в настоящее время фильтрации. Предоставляет свойства, для определения количества срез связан с сводные таблицы, а также для получения <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекты, которые представляют фильтрации сводных таблицах. Он также предоставляет методы для добавления и удаления сводные таблицы из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> Коллекции будет пустым, если срез, связанное с указанным <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> не подключен к любой сводных таблиц.</para>
-      <para>Использования <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.PivotTables" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> для возвращаемого объекта <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции, связанной с <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />, который в свою очередь могут быть связаны с одного или нескольких срезов.</para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.PivotTables" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> для возвращаемого объекта <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции, связанной с <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />, который в свою очередь могут быть связаны с одного или нескольких срезов.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -102,7 +102,7 @@
         <param name="PivotTable">A <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект, представляющий сводной таблицы, чтобы добавить.</param>
         <summary>Добавляет ссылку на сводной таблицы, чтобы <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов.</summary>
         <remarks>
-          <para>При сводной таблицы добавляется в <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов, его можно фильтровать по родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> и срезы, связанные с каждым</para>
+          <para>При добавлении сводной таблицы <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов, его можно фильтровать по родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> и срезы, связанные с ним.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -193,7 +193,7 @@
         <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
         <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
         <remarks>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerPivotTables.Creator" />Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerPivotTables.Creator" />Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -320,7 +320,7 @@
         <param name="PivotTable">A <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект, представляющий со сводными таблицами remove, или имени или индекса сводной таблицы в коллекции.</param>
         <summary>Удаляет ссылку на сводной таблицы из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов.</summary>
         <remarks>
-          <para>При сводной таблицы удаляется из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов, больше не фильтруется по родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> и срезы, связанные с каждым</para>
+          <para>При удалении сводной таблицы с <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> семейства сайтов, больше не фильтруется по родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> и срезы, связанные с ним.</para>
           <para></para>
         </remarks>
       </Docs>

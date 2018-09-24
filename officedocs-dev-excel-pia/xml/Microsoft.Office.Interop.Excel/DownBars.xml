@@ -1,10 +1,10 @@
 <Type Name="DownBars" FullName="Microsoft.Office.Interop.Excel.DownBars">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="86b025151902b86185c6a47185ca8e79c9861e63" />
+    <Meta Name="ms.openlocfilehash" Value="8a11ccac0189762102efaa1f69baea1cafc3ed8e" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20587537" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface DownBars" />
@@ -30,7 +30,12 @@
   </Attributes>
   <Docs>
     <summary>Представляет вниз панелей в группе диаграммы.</summary>
-    <remarks>Полосы повышения и понижения <para>подключение точек от первого ряда в группе диаграммы с помощью меньше значения на последний ряд (строки перейти от первого ряда). Закрытие может иметь только график групп, которые содержат по крайней мере два ряда. Этот объект не является частью коллекции. Нет объекта, который представляет один сервер панели; необходимо полос и закрытие включено для всех точек в группе диаграммы или у вас есть их отключения</para><para>Использования <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.DownBars" /> свойство для возврата объекта <b>DownBars</b> .</para><para>Если <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.HasUpDownBars" /> свойство имеет <b>значение False</b>, большая часть свойств объекта <b>DownBars</b> отключены.</para><para></para></remarks>
+    <remarks>
+      <para>Закрытие подключение точек от первого ряда в группе диаграммы с меньше значения на последний ряд (строки перейти от первого ряда). Закрытие может иметь только график групп, которые содержат по крайней мере два ряда. Этот объект не является частью коллекции. Нет объекта, который представляет один сервер панели; необходимо полос и закрытие включено для всех точек в группе диаграммы или у вас есть их отключена.</para>
+      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.DownBars" /> свойство для возврата объекта <b>DownBars</b> .</para>
+      <para>Если <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.HasUpDownBars" /> свойство имеет <b>значение False</b>, большая часть свойств объекта <b>DownBars</b> отключены.</para>
+      <para></para>
+    </remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -118,8 +123,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -320,7 +327,7 @@
         <summary>Выбор объекта.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>Выберите ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Activate" /> метод.</para>
+          <para>Чтобы выбрать ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Activate" /> метод.</para>
           <para></para>
         </remarks>
       </Docs>

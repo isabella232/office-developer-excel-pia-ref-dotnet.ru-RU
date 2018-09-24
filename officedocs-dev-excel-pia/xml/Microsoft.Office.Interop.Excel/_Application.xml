@@ -4,7 +4,7 @@
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20587789" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface _Application" />
@@ -404,7 +404,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, представляющего активную ячейку в активном окне (окно верхней части окна) или в указанном окне. Если окно не выводится листа, происходит сбой этого свойства.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Будьте внимательны, чтобы различать активную ячейку и выделение. Активную ячейку — это одна ячейка в текущем выборе. Выделение может содержать несколько ячеек, но только один является активной ячейки.</para>
+          <para>Следите за тем различать активную ячейку и выделение. Активную ячейку — это одна ячейка в текущем выборе. Выделение может содержать несколько ячеек, но только один является активной ячейки.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -623,7 +623,7 @@
         <summary>Возвращает объект, представляющий активный лист (лист сверху) в активной книги или в указанном окне или рабочей книги. Возвращает <b>значение Nothing</b> , если ни одна таблица не активно.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если книги в более одного окна, свойство <b>ActiveSheet</b> может отличаться в разных окнах.</para>
+          <para>Если в более одного окна книги, свойство <b>ActiveSheet</b> может отличаться в разных окнах.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -752,7 +752,7 @@
         <param name="ByRow">Необязательный элемент <b>Object</b>. Использовать, только если <paramref name="ListArray" /> — это объект <b>диапазона</b> . <b>Значение true,</b> Чтобы создать настраиваемый список из каждой строки в диапазоне. <b>Значение false,</b> Чтобы создать настраиваемый список из каждого столбца в диапазоне. Если этот аргумент указан, и имеется несколько строк, чем столбцов (или равно числу строк и столбцов) в диапазоне, Microsoft Excel создает настраиваемый список из каждого столбца в диапазоне. Если этот аргумент указан, существует несколько столбцов, чем строк в диапазоне Microsoft Excel создает настраиваемый список из каждой строки в диапазоне.</param>
         <summary>Добавление настраиваемого списка для настраиваемого автозаполнения и/или сортировки.</summary>
         <remarks>
-          <para>Если список, вы пытаетесь добавить, уже существует, этот метод не имеет никакого эффекта.</para>
+          <para>Если список, который вы пытаетесь добавить, уже существует, этот метод не имеет никакого эффекта.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -925,7 +925,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Даже в том случае, если параметр Microsoft Windows для ClearType отключен, установка для этого свойства <b>значения True</b> переопределяет параметр Windows и во всех приложениях Microsoft Office с помощью ClearType.</para>
+          <para>Даже в том случае, если параметр Microsoft Windows для ClearType отключен, установка для этого свойства <b>значения True</b> переопределяет параметр Windows и использует ClearType во всех приложениях Microsoft Office.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1211,24 +1211,24 @@
         <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoAutomationSecurity" /> константа, которая представляет режим безопасности Microsoft Excel использует при открытии файлов программными средствами.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство автоматически устанавливается значение <b>msoAutomationSecurityLow</b> при запуске приложения. Таким образом Чтобы избежать нарушения решений, опирающихся на значение по умолчанию, можно следует сбросить это свойство до <b>msoAutomationSecurityLow</b> после открытия файла программными средствами. Кроме того, это свойство необходимо задать непосредственно перед и после открытия файла программными средствами во избежание вредоносных subversion.</para>
+          <para>Это свойство автоматически устанавливается значение <b>msoAutomationSecurityLow</b> при запуске приложения. Таким образом Чтобы избежать нарушения решений, опирающихся на значение по умолчанию, можно следует сбросить это свойство до <b>msoAutomationSecurityLow</b> после открытия файла программными средствами. Кроме того это свойство необходимо задать непосредственно перед и после открытия файла программными средствами во избежание вредоносных subversion.</para>
           <para>
             <b>MsoAutomationSecurity</b> может иметь одно из следующих констант <b>MsoAutomationSecurity</b> :</para>
           <list type="bullet">
             <item>
               <description>
-                <b>msoAutomationSecurityByUI</b> использует параметры безопасности, указанные в диалоговом окне " <b>Безопасность</b> ".</description>
+                <b>msoAutomationSecurityByUI</b>  Использует параметры безопасности, указанные в диалоговом окне " <b>Безопасность</b> ".</description>
             </item>
             <item>
               <description>
-                <b>msoAutomationSecurityForceDisable</b> отключены все макросы в все файлы, открытые программными средствами без отображения любой оповещение системы безопасности.</description>
+                <b>msoAutomationSecurityForceDisable</b>  Отключает все макросы в все файлы, открытые программными средствами без отображения любой оповещение системы безопасности.</description>
             </item>
             <item>
               <description>
-                <b>msoAutomationSecurityLow</b> включает все макросы. Это значение по умолчанию при запуске приложения.</description>
+                <b>msoAutomationSecurityLow</b>  Включает все макросы. Это значение по умолчанию при запуске приложения.</description>
             </item>
           </list>
-          <para>Параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.ScreenUpdating" /> значение <b>False</b> не повлияет на оповещения и будет не влияет на предупреждения системы безопасности. <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> Политика не применяется для предупреждения системы безопасности. Например если пользователь устанавливает <b>DisplayAlerts</b> равно <b>False</b> и <b>БезопасностьПрограммированияОбъектов</b><b>msoAutomationSecurityByUI</b>, а пользователь находится на уровне средний уровень безопасности, затем будет предупреждений системы безопасности при макрос под управлением. Это позволяет макроса для перехвата ошибок открытия файла, продолжая при этом отображать предупреждения при открытии файла успешно безопасности.</para>
+          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel._Application.ScreenUpdating" /> значение <b>False</b> не повлияет на оповещения и будет не влияет на предупреждения системы безопасности. <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> Политика не применяется для предупреждения системы безопасности. Например если пользователь устанавливает <b>DisplayAlerts</b> равно <b>False</b> и <b>БезопасностьПрограммированияОбъектов</b><b>msoAutomationSecurityByUI</b>, а пользователь находится на уровне средний уровень безопасности, затем будет предупреждений системы безопасности во время выполнения макроса. Это позволяет макроса для перехвата ошибок открытия файла, продолжая при этом отображать предупреждения при открытии файла успешно безопасности.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1291,7 +1291,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AutoRecover" /> объект, который выполняет резервное копирование всех форматов файлов через определенный период времени.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Допустимый временных интервалов являются целые числа от 1 до 120.</para>
+          <para>Допустимое время интервалов являются целые числа от 1 до 120.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1325,7 +1325,7 @@
         <summary>Возвращает номер сборки Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Обычно лучше тестирование <see cref="P:Microsoft.Office.Interop.Excel._Application.Version" /> свойства, если вы уверены, необходимо знать номер построения.</para>
+          <para>Обычно лучше тестирование <see cref="P:Microsoft.Office.Interop.Excel._Application.Version" /> свойства, если вы уверены, необходимо знать номер сборки.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1444,7 +1444,7 @@
       <Docs>
         <summary>Для всех открытых книг принудительно полного вычисления данных и повторное построение зависимости.</summary>
         <remarks>
-          <para>Зависимости являются формул, которые зависят от других ячеек. Например формула «= A1» зависит от ячейки A1. Метод <b>CalculateFullRebuild</b> похож на повторный ввод всех формул.</para>
+          <para>Зависимости являются формул, которые зависят от других ячеек. Например формула «= A1» зависит от ячейки A1. Метод <b>CalculateFullRebuild</b> аналогично повторного ввода всех формул.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1509,7 +1509,7 @@
         <summary>Возвращает или задает режим вычисления. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlCalculation" />.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Для источников данных OLAP, это свойство может возвращать только или иметь значение <b>xlNormal</b>.</para>
+          <para>Для источников данных OLAP это свойство может возвращать только или иметь значение <b>xlNormal</b>.</para>
           <para>
             <b>XlCalculation</b> может иметь одно из следующих констант <b>XlCalculation</b> :</para>
           <para>
@@ -1557,10 +1557,10 @@
           <para>
             <b>XlCalculationInterruptKey</b> может иметь одно из следующих констант <b>XlCalculationInterruptKey</b> :</para>
           <para>
-            <b>xlEscKey</b>
+            <b>xlAnyKey</b>
           </para>
           <para>
-            <b>xlAnyKey</b>
+            <b>xlEscKey</b>
           </para>
           <para>
             <b>xlNoKey</b>
@@ -1598,10 +1598,10 @@
           <para>
             <b>XlCalculationState</b> может иметь одно из следующих констант <b>XlCalculationState</b> :</para>
           <para>
-            <b>xlDone</b>
+            <b>xlCalculating</b>
           </para>
           <para>
-            <b>xlCalculating</b>
+            <b>xlDone</b>
           </para>
           <para>
             <b>xlPending</b>
@@ -1636,7 +1636,7 @@
         <summary>Возвращает число, чьи последние четыре цифры являются номер версии модуля незначительные вычислений, для которых другие цифры (слева) — основной номер версии Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>При сохранении книги в более ранней версии Excel, и если книга не полный пересчет, это свойство возвращает значение 0.</para>
+          <para>Если книга была сохранена в более ранней версии Excel, и если книга не полный пересчет, это свойство возвращает значение 0.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -1677,23 +1677,23 @@
           <para>Данное свойство возвращает сведения о как вызван Visual Basic, как показано в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>Пользовательской функции, введенный на одну ячейку</term>
+              <term>Настраиваемые функции, введенный на одну ячейку</term>
               <description>A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, задающий эту ячейку</description>
             </item>
             <item>
-              <term>A пользовательской функции, которая является частью формулы массива в диапазоне ячеек</term>
-              <description>объекта <b>Range</b> , определяющее диапазон ячеек</description>
+              <term>Пользовательская функция, которая является частью формулы массива в диапазоне ячеек</term>
+              <description>Объект <b>Range</b> , определяющее диапазон ячеек</description>
             </item>
             <item>
-              <term>Макрос Авто_открыть, Auto_Close, Auto_Activate или Auto_Deactivate</term>
-              <description>имя документ как текст</description>
+              <term>Авто_открыть, Auto_Close, Auto_Activate или Auto_Deactivate макросов</term>
+              <description>Имя документа в виде текста</description>
             </item>
             <item>
               <term>Задайте с помощью одного <see cref="P:Microsoft.Office.Interop.Excel._Application.OnDoubleClick" /> или <see cref="P:Microsoft.Office.Interop.Excel._Application.OnEntry" /> свойство</term>
-              <description>имя объекта диаграммы идентификатор или ячейки ссылки (если применимо), к которым применяется макрос</description>
+              <description>Имя диаграммы идентификатор объекта или ячейки ссылку (если применимо), к которой применяется макрос</description>
             </item>
             <item>
-              <term>диалоговое окно "макрос" (меню Сервис), или любой вызывающего абонента, не указанных выше</term>
+              <term>Диалоговое окно "макрос" (меню "Сервис") или любой вызывающего абонента, не указанных выше</term>
               <description>#REF! значение ошибки</description>
             </item>
           </list>
@@ -1858,7 +1858,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий все ячейки на активном листе. Если активный документ не листа, происходит сбой этого свойства.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Из-за <see cref="P:Microsoft.Office.Interop.Excel.Range.Item(System.Object,System.Object)" /> свойство является свойством по умолчанию для объекта <b>Range</b> , можно указать индекс строки и столбца сразу же после ключевого слова <b>ячеек</b> . Дополнительные сведения можно <see cref="P:Microsoft.Office.Interop.Excel.Range.Item(System.Object,System.Object)" /> свойство.</para>
+          <para>Так как <see cref="P:Microsoft.Office.Interop.Excel.Range.Item(System.Object,System.Object)" /> свойство является свойством по умолчанию для объекта <b>Range</b> , можно указать индекс строки и столбца сразу же после ключевого слова <b>ячеек</b> . Дополнительные сведения можно <see cref="P:Microsoft.Office.Interop.Excel.Range.Item(System.Object,System.Object)" /> свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2051,21 +2051,18 @@
         <summary>Возвращает форматы, которые в настоящий момент в буфер обмена как массив числовых значений. Чтобы определить, является ли определенный формат в буфер обмена, сравнение каждого элемента в массиве с соответствующие константа, перечисленные в разделе "Примечания".</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Данное свойство возвращает массив числовых значений. Чтобы определить, является ли определенный формат в буфер обмена, сравнение каждого элемента массива с одним из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlClipboardFormat" /> констант:</para>
-          <para>
-            <b>xlClipboardFormatBIFF2</b>
-          </para>
+          <para>Данное свойство возвращает массив числовых значений. Чтобы определить, является ли определенный формат в буфер обмена, сравнение каждого элемента массива с одним из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlClipboardFormat" /> константы:</para>
           <para>
             <b>xlClipboardFormatBIFF</b>
+          </para>
+          <para>
+            <b>xlClipboardFormatBIFF2</b>
           </para>
           <para>
             <b>xlClipboardFormatBIFF3</b>
           </para>
           <para>
-            <b> xlClipboardFormatBIFF4</b>
-          </para>
-          <para>
-            <b>xlClipboardFormatDspText</b>
+            <b>xlClipboardFormatBIFF4</b>
           </para>
           <para>
             <b>xlClipboardFormatBinary</b>
@@ -2081,6 +2078,9 @@
           </para>
           <para>
             <b>xlClipboardFormatDIF</b>
+          </para>
+          <para>
+            <b>xlClipboardFormatDspText</b>
           </para>
           <para>
             <b>xlClipboardFormatEmbeddedObject</b>
@@ -2184,11 +2184,11 @@
         <summary>Получает или задает имя соединителя кластера высокопроизводительных вычислительных систем (HPC), который используется для запуска пользовательских функций в надстройках XLL.</summary>
         <value>Имя соединителя кластера высокопроизводительных вычислительных систем (HPC), который используется для запуска пользовательских функций в надстройках XLL.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.ClusterConnector" /> свойство соответствует кластера раскрывающемся поле Тип в разделе формул в категории Дополнительно диалогового окна Параметры Excel.</para>
           <para>
-            <b>Примечание</b>: для указания <see cref="P:Microsoft.Office.Interop.Excel._Application.ClusterConnector" /> свойства, необходимо установить соединитель кластера высокопроизводительных вычислительных систем (HPC). Соединитель кластера позволяет выполнять функции XLL кластера safe удаленно в кластере высокопроизводительных вычислительных СИСТЕМ для повышения производительности.</para>
-          <para>Перед можно указать <see cref="P:Microsoft.Office.Interop.Excel._Application.ClusterConnector" /> свойства, необходимо использовать <see cref="P:Microsoft.Office.Interop.Excel._Application.UseClusterConnector" /> свойство, чтобы разрешить Microsoft Excel 2010 для запуска пользовательских функций в надстроек XLL</para>
+            <b>Примечание</b>: для указания <see cref="P:Microsoft.Office.Interop.Excel._Application.ClusterConnector" /> свойства, необходимо установить соединитель кластера высокопроизводительных вычислительных систем (HPC). Соединитель кластера позволяет запускать функции XLL кластера safe удаленно в кластере высокопроизводительных вычислительных СИСТЕМ для повышения производительности.</para>
+          <para>Прежде чем можно указать <see cref="P:Microsoft.Office.Interop.Excel._Application.ClusterConnector" /> свойства, необходимо использовать <see cref="P:Microsoft.Office.Interop.Excel._Application.UseClusterConnector" /> свойство, чтобы разрешить Microsoft Excel 2010 для запуска пользовательских функций в надстройках XLL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2315,7 +2315,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Core.CommandBars" /> объект, представляющий панелей команд Excel.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Данное свойство возвращает набор панелей команд встроенные и пользовательские доступны приложению.</para>
+          <para>Данное свойство возвращает набор панелей команд встроенные и пользовательские доступны для приложения.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2366,7 +2366,7 @@
           <para>
             <b>xlCommandUnderlinesAutomatic</b>
           </para>
-          <para>в Microsoft Excel для Windows, чтение это свойство всегда возвращает <b> xlCommandUnderlinesOn</b>, и назначить этому свойству значение, отличное от <b>xlCommandUnderlinesOn</b> является ошибкой.</para>
+          <para>В Microsoft Excel для Windows это свойство всегда возвращает <b>xlCommandUnderlinesOn</b>и назначить этому свойству значение, отличное от <b>xlCommandUnderlinesOn</b> является ошибкой.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2448,7 +2448,7 @@
           <b>Значение true,</b> Если в Microsoft Excel отображается элемент управления символов для языков для письма справа налево.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство можно задать только в том случае, если право левой языковой поддержки установлено и выбранные.</para>
+          <para>Это свойство можно задать только в том случае, если установлено и выбранные право на левой языковая поддержка.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -2555,7 +2555,10 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</summary>
         <value>To be added.</value>
-        <remarks>Свойство <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+        <remarks>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Cursor">
@@ -2596,14 +2599,16 @@
           <para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlMousePointer" />может иметь одно из следующих констант <b>XlMousePointer</b> :</para>
           <para>
-            <b>xlDefault</b> указатель по умолчанию.</para>
+            <b>xlDefault</b> Указатель по умолчанию.</para>
           <para>
-            <b>xlIBeam</b> i-образный указатель.</para>
+            <b>xlIBeam</b> Указатель i-образный курсор.</para>
           <para>
-            <b>xlNorthwestArrow</b> северо-запад стрелки.</para>
+            <b>xlNorthwestArrow</b> Северо-запад стрелки.</para>
           <para>
-            <b>xlWait</b> песочные часы.</para> Свойство 
-          <para><b>курсор</b> не будет сбросить автоматически, если выполнение макроса останавливается. Необходимо переустановить указатель мыши на <b>xlDefault</b> перед закрытием макрос.</para><para></para></remarks>
+            <b>xlWait</b> Песочные часы.</para>
+          <para>Свойство <b>курсор</b> не будет сбросить автоматически, если выполнение макроса останавливается. Необходимо переустановить указатель мыши на <b>xlDefault</b> перед закрытием макроса.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="CursorMovement">
@@ -2717,35 +2722,35 @@
           <list type="table">
             <item>
               <term>
-                <b>Значение false,</b>
+                <b>Значение false</b>
               </term>
-              <description>не в режиме Вырезать или копировать</description>
+              <description>Не в режиме Вырезать или копировать</description>
             </item>
             <item>
               <term>
                 <b>xlCopy</b>
               </term>
-              <description>копии в режиме</description>
+              <description>В режиме копии</description>
             </item>
             <item>
               <term>
                 <b>xlCut</b>
               </term>
-              <description>в Вырезать режим</description>
+              <description>В режиме Вырезать</description>
             </item>
           </list>
           <list type="table">
             <item>
               <term>
-                <b>False</b>
+                <b>Значение false</b>
               </term>
-              <description>отменяет Вырезать или режим копирования и удаляет перемещение граница.</description>
+              <description>Отменяет режим Вырезать или копировать и удаляет перемещение границы.</description>
             </item>
             <item>
               <term>
-                <b>Значение true,</b>
+                <b>Значение true</b>
               </term>
-              <description>отменяет Вырезать или режим копирования и удаляет перемещение граница.</description>
+              <description>Отменяет режим Вырезать или копировать и удаляет перемещение границы.</description>
             </item>
           </list>
           <para></para>
@@ -2792,19 +2797,19 @@
               <term>
                 <b>xlOn</b>
               </term>
-              <description>включен режим ввода данных.</description>
+              <description>Включен режим ввода данных.</description>
             </item>
             <item>
               <term>
                 <b>xlOff</b>
               </term>
-              <description>режим ввода данных отключения</description>
+              <description>Режим ввода данных отключен.</description>
             </item>
             <item>
               <term>
                 <b>xlStrict</b>
               </term>
-              <description>включен режим ввода данных и при нажатии клавиши ESC не включить эту возможность отключения</description>
+              <description>Включен режим ввода данных и при нажатии клавиши ESC не отключить его.</description>
             </item>
           </list>
           <para></para>
@@ -2873,44 +2878,44 @@
           <b>Строковое значение.</b> Сообщение, определенное в приложение-получатель.</param>
         <summary>Выполнение команды или выполняет другие действия или действия в другом приложении путем получения указанного канала DDE.</summary>
         <remarks>
-          <para>Метод <b>DDEExecute</b> предназначен для отправки команд в другом приложении. Можно также использовать его для отправки нажатия клавиш для другого приложения, хотя <see cref="M:Microsoft.Office.Interop.Excel._Application.SendKeys(System.Object,System.Object)" /> метод — это основной способ Отправка клавиатурных команд. <paramref name="String" /> Аргумент можно указать любой один ключ в сочетании с ALT, CTRL или SHIFT или любое сочетание клавиш. Каждый раздел представлен один или несколько знаков, например «» для символа, или «{введите}» ввод ключа.</para>
-          <para>Для указания символов, которые не отображаются при нажатии клавиши соответствующий ключ (например, ввод или TAB), используйте коды, перечисленные в следующей таблице. Каждый код в таблице представляет один ключ на клавиатуре.</para>
+          <para>Метод <b>DDEExecute</b> предназначен для отправки команд в другом приложении. Можно также использовать его для отправки нажатия клавиш для другого приложения, хотя <see cref="M:Microsoft.Office.Interop.Excel._Application.SendKeys(System.Object,System.Object)" /> метод — это основной способ Отправка клавиатурных команд. <paramref name="String" /> Аргумент можно указать любой один ключ в сочетании с ALT, CTRL или SHIFT или любое сочетание клавиш. Каждый раздел представлен один или несколько знаков, например «» для символа, или «{введите}» для клавишу ВВОД.</para>
+          <para>Чтобы задать символы, которые не отображаются при нажатии клавиши соответствующий ключ (например, ввод или TAB), используйте коды, перечисленные в следующей таблице. Каждый код в таблице представляет один ключ на клавиатуре.</para>
           <list type="table">
             <item>
               <term>BACKSPACE</term>
               <description>{BACKSPACE} или {BS}</description>
             </item>
             <item>
-              <term>приостановки ВЫПОЛНЕНИЯ</term>
-              <description>{нарушение}</description>
+              <term>BREAK</term>
+              <description>{РАЗРЫВ}</description>
             </item>
             <item>
               <term>CAPS LOCK</term>
               <description>{CAPSLOCK}</description>
             </item>
             <item>
-              <term>Очистить</term>
-              <description>{Очистить}</description>
+              <term>ОЧИСТИТЬ</term>
+              <description>{ОЧИСТИТЬ}</description>
             </item>
             <item>
               <term>DELETE или DEL</term>
-              <description>{Удалить} или {DEL}</description>
+              <description>{УДАЛИТЬ} или {DEL}</description>
             </item>
             <item>
-              <term>Стрелка вниз</term>
-              <description>{вниз}</description>
+              <term>СТРЕЛКА ВНИЗ</term>
+              <description>{ВНИЗ}</description>
             </item>
             <item>
-              <term>Конец</term>
-              <description>{END}</description>
+              <term>END</term>
+              <description>{КОНЕЦ}</description>
             </item>
             <item>
-              <term>Ввод</term>
+              <term>ВВОД</term>
               <description>~ (тильдой)</description>
             </item>
             <item>
               <term>Ввод (цифровая панель)</term>
-              <description>{ENTER}</description>
+              <description>{ВВЕДИТЕ}</description>
             </item>
             <item>
               <term>ESC</term>
@@ -2921,19 +2926,19 @@
               <description>{F1} до {F15}</description>
             </item>
             <item>
-              <term>СПРАВКА</term>
-              <description>{помочь}</description>
+              <term>HELP</term>
+              <description>{СПРАВКИ}</description>
             </item>
             <item>
-              <term>Домашняя страница</term>
-              <description>{Домашняя страница}</description>
+              <term>HOME</term>
+              <description>{ДОМАШНЕЙ}</description>
             </item>
             <item>
               <term>INS</term>
               <description>{ВСТАВЬТЕ}</description>
             </item>
             <item>
-              <term>Стрелка влево</term>
+              <term>СТРЕЛКА ВЛЕВО</term>
               <description>{СЛЕВА}</description>
             </item>
             <item>
@@ -2946,14 +2951,14 @@
             </item>
             <item>
               <term>PAGE UP</term>
-              <description>{клавиши PGUP}</description>
+              <description>{КЛАВИШИ PGUP}</description>
             </item>
             <item>
               <term>ВОЗВРАЩАЕТ</term>
-              <description>{возврата}</description>
+              <description>{ВОЗВРАТА}</description>
             </item>
             <item>
-              <term>Стрелка вправо</term>
+              <term>СТРЕЛКА ВПРАВО</term>
               <description>{ПРАВО}</description>
             </item>
             <item>
@@ -2961,15 +2966,15 @@
               <description>{SCROLLLOCK}</description>
             </item>
             <item>
-              <term>ВКЛАДКА</term>
-              <description>{ВКЛАДКИ}</description>
+              <term>TAB</term>
+              <description>ВКЛАДКА "{"}</description>
             </item>
             <item>
-              <term>Стрелка вверх</term>
-              <description>{копирование}</description>
+              <term>СТРЕЛКА ВВЕРХ</term>
+              <description>{КОПИРОВАНИЕ}</description>
             </item>
           </list>
-          <para>Также можно указать сочетание клавиш с SHIFT и/или CTRL и ALT. Используйте следующую таблицу, чтобы указать ключ, в сочетании с одним или несколькими разделов упомянутой выше,.</para>
+          <para>Также можно задать сочетание клавиш с SHIFT и/или CTRL и ALT. Чтобы указать ключ, в сочетании с одним или несколькими упомянутой выше разделов, используйте следующую таблицу.</para>
           <list type="table">
             <item>
               <term>SHIFT</term>
@@ -3022,7 +3027,7 @@
         <summary>Открытие канала DDE для приложения.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>В случае успешного выполнения, метод <b>DDEInitiate</b> возвращает номер open канала. Все последующие функции DDE используйте этот номер, чтобы указать в канале.</para>
+          <para>В случае успешного выполнения метода <b>DDEInitiate</b> возвращает число open канала. Все последующие функции DDE используйте этот номер для указания канала.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3060,7 +3065,7 @@
         <param name="Data">Требуется <b>объект</b>. Данные, отправленные в приложение.</param>
         <summary>Отправляет данные приложения.</summary>
         <remarks>
-          <para>Возникает ошибка, если вызов метода не удается.</para>
+          <para>Если не удается вызова метода, возникает ошибка.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3329,7 +3334,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Свойства <b>DeferAsyncQueries</b> значение <b>True</b> запрещает выполнение формы любого асинхронных запросов до <see cref="M:Microsoft.Office.Interop.Excel._Application.CalculateUntilAsyncQueriesDone" /> вызывается метод.</para>
+          <para>Свойство <b>DeferAsyncQueries</b> значение <b>True</b> , будет отключено выполнение формы любого асинхронных запросов до <see cref="M:Microsoft.Office.Interop.Excel._Application.CalculateUntilAsyncQueriesDone" /> вызывается метод.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3398,7 +3403,7 @@
         <param name="ListNum">Требуется <b>целое число</b>. Номер настраиваемый список. Этот номер должен быть больше или равно 5 (в Microsoft Excel имеется четыре встроенных настраиваемых списков, которые не могут быть удалены).</param>
         <summary>Удаляет настраиваемый список.</summary>
         <remarks>
-          <para>Этот метод создает сообщение об ошибке, если номер списка — меньше 5 или без соответствующего настраиваемого списка.</para>
+          <para>Этот метод приводит к ошибке, если номер списка — меньше 5 или без соответствующего настраиваемого списка.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3499,8 +3504,8 @@
         <value>To be added.</value>
         <remarks>
           <para>Значение по умолчанию — <b>True</b>. Этому свойству присвоено значение <b>False</b> , если вы не хотите задействуются, приглашения и сообщения с оповещением, во время выполнения программы; любое время сообщение требует ответа, Microsoft Excel выбирает ответ по умолчанию.</para>
-          <para>Если этому свойству присвоено значение <b>False</b>, Microsoft Excel этому свойству присваивается <b>значение True,</b> после окончания код выполняется перекрестные обработки кодов.</para>
-          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для книг на перезапись существующего файла оповещение «Перезаписать» имеет значение по умолчанию «Нет», а по Excel выбран ответ «Да», если свойство <b>DisplayAlerts</b> установлено значение <b>False</b>.</para>
+          <para>Если этому свойству присвоено значение <b>False</b>, Microsoft Excel этому свойству присваивается <b>значение True,</b> после окончания код выполняется перекрестные обработки кода.</para>
+          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для книг на перезапись существующего файла оповещение «Перезаписи» имеет значение по умолчанию «Нет», а по Excel выбран ответ «Да», если свойство <b>DisplayAlerts</b> установлено значение <b>False</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3602,7 +3607,7 @@
         <summary>Значение <b>True</b> для отображения области задач действия с документами; Установите значение <b>False</b> , чтобы скрыть область задач действия с документами.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Установка для этого свойства <b>значения True</b> приведет к ошибке времени выполнения при активной книги не является смарт-документа.</para>
+          <para>Назначить этому свойству значение <b>True</b> приведет к ошибке времени выполнения если активной книги не смарт-документ.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3785,7 +3790,7 @@
           <b>Значение true,</b> Если Microsoft Excel, находится в полноэкранном режиме.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Полноэкранном режиме разворачивает окно приложения, чтобы оно занимает весь экран и скрывает заголовке окна приложения. Панели инструментов, в строке состояния и формул Ведение параметров отображения отдельных полноэкранный режим и обычном режиме.</para>
+          <para>Полноэкранный режим разворачивает окно приложения, чтобы оно занимает весь экран и скрывает заголовке окна приложения. Панели инструментов, в строке состояния и формул Ведение параметров отображения отдельных полноэкранный режим и обычном режиме.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -3953,7 +3958,7 @@
           <b>Значение true,</b> Если может отображаться кнопка Параметры вставки.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этот параметр используется на уровне с Microsoft Office. Этот параметр влияет на других приложений Microsoft Office. Параметр <b>DisplayPasteOptions</b> значение <b>True</b> отключает кнопку Параметры автозаполнения в Microsoft Excel. Кнопка <b>Параметры автозаполнения</b> только в Excel, но кнопки Параметры вставки в других приложениях Microsoft Office.</para>
+          <para>Это значение всей с Microsoft Office. Этот параметр влияет на других приложений Microsoft Office. Параметр <b>DisplayPasteOptions</b> значение <b>True</b> отключает кнопку Параметры автозаполнения в Microsoft Excel. Кнопка <b>Параметры автозаполнения</b> только в Excel, но кнопки Параметры вставки в других приложениях Microsoft Office.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -4968,11 +4973,21 @@
           <list type="bullet">
             <item>
               <description>
-                <b>xlDisabled</b> "Отмена" ключевые перехват полностью отключается.</description>
-            </item> прерывание 
-            <item><description><b>xlErrorHandler</b> сообщения для выполнения процедуры, как ошибка перехватываемые ошибки обработчиком Настройка с помощью оператора On Error GoTo. Код перехватываемые ошибки: 18.</description></item><item><description><b>xlInterrupt</b> текущей процедуры будет прервана и пользователь имеет возможность отладки и закончить процедуру.</description></item></list>
-          <para>Это свойство используется очень тщательно. Если вы используете <b>xlDisabled</b>, нет возможности для приостановки предельное число цикла или другой код, который не самостоятельно завершается. Аналогичным образом, если вы используете <b>xlErrorHandler</b> , но обработчик ошибок всегда возвращается с помощью оператора <b>Resume</b> , нет возможности для остановки кода выхода.</para> Свойство 
-          <para><b>EnableCancelKey</b> всегда Сброс <b>xlInterrupt</b> каждый раз, когда Microsoft Excel возвращается в состояние простоя и нет выполнение кода. Блокирование или отключение отмены процедуры, необходимо явно изменить свойство <b>EnableCancelKey</b> каждый раз при вызове процедуры.</para><para></para></remarks>
+                <b>xlDisabled</b>  Отмена ключевые перехват полностью отключается.</description>
+            </item>
+            <item>
+              <description>
+                <b>xlErrorHandler</b>  Прерывание отправляется выполнение процедуры как ошибка перехватываемые ошибки обработчиком Настройка с помощью оператора On Error GoTo. Код перехватываемые ошибки — 18.</description>
+            </item>
+            <item>
+              <description>
+                <b>xlInterrupt</b>  Прерывание текущей процедуры и отладки или окончания действия пользователя.</description>
+            </item>
+          </list>
+          <para>Это свойство используется очень тщательно. Если вы используете <b>xlDisabled</b>, нет возможности для приостановки предельное число цикла или другой код, который не самостоятельно завершается. Аналогичным образом Если вы используете <b>xlErrorHandler</b> , но обработчик ошибок всегда возвращается с помощью оператора <b>Resume</b> , нет возможности для остановки предельное число кода.</para>
+          <para>Свойство <b>EnableCancelKey</b> всегда Сброс <b>xlInterrupt</b> каждый раз, когда Microsoft Excel возвращается в состояние простоя и нет выполнение кода. Блокирование или отключение отмены процедуры, необходимо явно изменить свойство <b>EnableCancelKey</b> каждый раз при вызове процедуры.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableCheckFileExtensions">
@@ -5274,9 +5289,25 @@
         <summary>Преобразуется в Microsoft Excel имя объекта или значение.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>С помощью этого метода можно использовать следующие типы имен в Microsoft Excel:</para> Справочные материалы 
-          <list type="bullet"><item><description>стиля A1. Можно использовать любые ссылку на одну ячейку в нотации стиля A1. Все ссылки, относящаяся к абсолютные ссылки.</description></item> Диапазоны 
-            <item><description>. Можно использовать диапазон, пересечения и операторы объединения (двоеточие, пробел и запятая, соответственно) ссылок на.</description></item><item><description>Определенные имена. Можно указать любое имя на языке макрос.</description></item><item><description>Внешние ссылки. Вы можете использовать! оператор, который должен ссылаться на ячейку или имя, определенное в другой книге — например, Evaluate («[книга 1. XLS] Sheet1! A1»).</description></item></list><para><b>Примечание</b>: для вызова метода <b>Evaluate</b> с строковый аргумент совпадает с помощью квадратные скобки (например, «[A1:C5]»). Преимущество использования квадратные скобки является более короткий срок, код. — Это преимущество использования <b>Evaluate</b> , что аргумент — это строка, чтобы создать строку в коде или использовать переменную.</para><para></para></remarks>
+          <para>С помощью этого метода можно использовать следующие типы имен в Microsoft Excel:</para>
+          <list type="bullet">
+            <item>
+              <description>Справочные материалы стиля a1. Можно использовать любые ссылку на одну ячейку в нотации стиля A1. Все ссылки считаются абсолютные ссылки.</description>
+            </item>
+            <item>
+              <description>Диапазоны. Можно использовать диапазон, пересечения и операторы объединения (двоеточие, пробел и запятая, соответственно) с помощью ссылки.</description>
+            </item>
+            <item>
+              <description>Определенные имена. В разделе Язык макрос можно указать любое имя.</description>
+            </item>
+            <item>
+              <description>Внешние ссылки. Вы можете использовать! оператор, который должен ссылаться на ячейку или имя, определенное в другой книге — например, Evaluate («[книга 1. XLS] Sheet1! A1»).</description>
+            </item>
+          </list>
+          <para>
+            <b>Примечание</b>: для вызова метода <b>Evaluate</b> с строковый аргумент совпадает с помощью квадратные скобки (например, «[A1:C5]»). Преимущество использования квадратные скобки является более короткий срок, код. Преимущество использования <b>Evaluate</b> — это, что аргумент — это строка, чтобы создать строку в коде или использовать переменную.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Excel4IntlMacroSheets">
@@ -5364,7 +5395,10 @@
           <b>Строковое значение.</b> Функция языка макрос Microsoft Excel 4.0 без знака равенства. Все ссылки должно быть задано как R1C1 строки. Если <paramref name="String" /> содержит внедренные двойные кавычки, двойные их необходимо. Например, чтобы запустить функцию макрос = MID("sometext",1,4), <paramref name="String" /> должна быть «MID(""sometext"",1,4)».</param>
         <summary>Выполняет функцию макрос Microsoft Excel 4.0 и возвращает результат функции. Возвращаемый тип зависит от функции.</summary>
         <returns>To be added.</returns>
-        <remarks>Макрос <para>Microsoft Excel 4.0 не оценивается в контексте текущего книги или листа. Это означает, что все ссылки должен быть внешний и необходимо указать имя явные книги. Например чтобы запустить макрос Microsoft Excel 4.0 «My_Macro» в Книга1, необходимо использовать «книга 1! My_Macro()». Если не указать имя книги, этот метод не удается выполнить.</para><para></para></remarks>
+        <remarks>
+          <para>Макрос Microsoft Excel 4.0 не оценивается в контексте текущего книги или листа. Это означает, что все ссылки должен быть внешний и необходимо указать имя явные книги. Например чтобы запустить макрос Microsoft Excel 4.0 «My_Macro» в Книга1, необходимо использовать «книга 1! My_Macro()». Если не указать имя книги, этот метод не удается выполнить.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="ExtendList">
@@ -5397,7 +5431,7 @@
           <b>Значение true,</b> Если Microsoft Excel автоматически расширяет форматирование и формулы к новым данным, который добавляется в список.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Расширяются, форматов и формул, которые должны встречаться в по крайней мере три из пяти список строк или столбцов, перед новой строки или столбца и данных необходимо добавить в конец или правой части списка.</para>
+          <para>Расширение, форматов и формул, которые должны встречаться в по крайней мере три из пяти список строк или столбцов, перед новой строки или столбца необходимо добавить данные в нижней или правой части списка.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -5436,19 +5470,21 @@
           <list type="bullet">
             <item>
               <description>
-                <b>msoFeatureInstallNone</b> приводит к возникновению ошибки Общая ошибка автоматизации во время выполнения при вызове удаленных компонентов. Это константа по умолчанию.</description>
+                <b>msoFeatureInstallNone</b>  Общая ошибка автоматизации создает во время выполнения при вызове удаленных компонентов. Это константа по умолчанию.</description>
             </item>
             <item>
               <description>
-                <b>msoFeatureInstallOnDemand</b> запрос на установку новых функций.</description>
+                <b>msoFeatureInstallOnDemand</b>  Запрос на установку новых функций.</description>
             </item>
             <item>
               <description>
-                <b>msoFeatureInstallOnDemandWithUI</b> отображает индикатор выполнения во время установки; не запрашивать пользователя, чтобы установить новые функции.</description>
+                <b>msoFeatureInstallOnDemandWithUI</b>  Отображает индикатор выполнения во время установки; не запрашивать пользователя для установки новых функций.</description>
             </item>
           </list>
-          <para>Можно использовать константу <b>msoFeatureInstallOnDemandWithUI</b> запрещает пользователям, что приложение не будет отвечать на запросы при установке компонента. Используйте константу <b>msoFeatureInstallNone</b> разработчику единственный, кто может устанавливать компоненты.</para> При наличии 
-          <para><see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойства задано значение <b>False</b>, пользователи не будет предложено установить новые функции даже в том случае, если свойство <b>FeatureInstall</b> имеет значение <b>msoFeatureInstallOnDemand</b>. Если <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> задано значение <b>True</b>, если свойство <b>FeatureInstall</b> имеет значение <b>msoFeatureInstallOnDemand</b>будет отображаться индикатор выполнения установки.</para><para></para></remarks>
+          <para>Можно использовать константу <b>msoFeatureInstallOnDemandWithUI</b> запрещает пользователям, что приложение не будет отвечать на запросы при установке компонента. Используйте константу <b>msoFeatureInstallNone</b> , если требуется разработчику единственный, кто может устанавливать компоненты.</para>
+          <para>Если у вас есть <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойства задано значение <b>False</b>, пользователи не будет предложено установить новые функции даже в том случае, если свойство <b>FeatureInstall</b> имеет значение <b>msoFeatureInstallOnDemand</b>. Если <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> задано значение <b>True</b>, если свойство <b>FeatureInstall</b> имеет значение <b>msoFeatureInstallOnDemand</b>будет отображаться индикатор выполнения установки.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="FileConverters">
@@ -5486,19 +5522,19 @@
         <summary>Возвращает сведения о конвертеры установленных файлов. Возвращает <b>значение Null</b> , при наличии конвертеры, не установлен.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Если не указать аргументы, данное свойство возвращает массив, содержащий сведения о всех установленных файлов конвертеров. Каждая строка в массиве содержит сведения об преобразователь одного файла, как показано в следующей таблице.</para>
+          <para>Если не указать аргументы, данное свойство возвращает массив, содержащий сведения о всех установленных файлов конвертеров. Каждую строку в массиве содержит сведения о преобразователь одного файла, как показано в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>2</term>
-              <description>путь DLL-Библиотеку конвертера или ресурс кода</description>
+              <term>1</term>
+              <description>Длинное имя конвертера</description>
             </item>
             <item>
-              <term>1</term>
-              <description>длинное имя конвертера</description>
+              <term>2</term>
+              <description>Путь конвертера DLL или ресурсе кода</description>
             </item>
             <item>
               <term>3</term>
-              <description>строки поиска расширение файла</description>
+              <description>Строка поиска расширение файла</description>
             </item>
           </list>
           <para></para>
@@ -5656,7 +5692,7 @@
         <summary>Получает или задает способ проверки Microsoft Excel файлы перед их открытием.</summary>
         <value>A <see cref="T:Microsoft.Office.Core.MsoFileValidationMode" /> объекта.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Файлы, которые не прошли проверку будет открыт в режиме защищенного просмотра окна. Если задать <see cref="P:Microsoft.Office.Interop.Excel._Application.FileValidation" /> свойство, в том, что параметр будет работать для всего сеанса приложения open.</para>
           <para></para>
         </remarks>
@@ -5691,7 +5727,7 @@
         <summary>Получает или задает способ проверки содержимого кэша данных для отчетов сводных таблиц Microsoft Excel.</summary>
         <value>A <see cref="T:Microsoft.Office.Interop.Excel.XlFileValidationPivotMode" /> объекта.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>Файлы, содержащие кэша данных, которые не проверять будет открыт в режиме защищенного просмотра окна. Если задать <see cref="P:Microsoft.Office.Interop.Excel._Application.FileValidationPivot" /> свойство, в том, что параметр будет работать для всего сеанса приложения open.</para>
           <para></para>
         </remarks>
@@ -5864,7 +5900,7 @@
           <b>Значение TRUE,</b> указывает, что компонент Flash заполнения Excel была включена и active. <b>Логическое</b> (<b>bool</b> в C#) Чтение и запись</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Flash заполнения определяет, когда выполняется изменение данных, соответствующий шаблон заполнения вниз и применяемые к дополнительных данных в книге и затем автоматически заполняет в столбце с результатами.</para>
+          <para>Флэш-заливки определяет, когда выполняется изменение данных, соответствующий шаблон заполнения вниз и применяемые к дополнительных данных в книге и затем автоматически заполняет в столбце с результатами.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -6070,7 +6106,7 @@
         <summary>Возвращает номер настраиваемый список для массива строк. Этот метод можно использовать для сравнения встроенных списков и настраиваемого списков.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>Этот метод приводит к ошибке, если список не соответствующего.</para>
+          <para>Этот метод приводит к ошибке, если без соответствующего списка.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -6222,7 +6258,7 @@
           <para>Этот метод отличается от <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Select(System.Object)" /> метод следующим образом:</para>
           <list type="bullet">
             <item>
-              <description>, если указать диапазон на листе, который не является верхней части окна, Microsoft Excel будет перейти на этот лист перед выбором. (При использовании с диапазоном на листе, который не является верхней части окна, <b>выберите</b> диапазон, будет выбран, но не активирован листа).</description>
+              <description>Если указать диапазон на листе, который не является верхней части окна, Microsoft Excel будет перейти на этот лист перед выбором. (При использовании с диапазоном на листе, который не является верхней части окна, <b>выберите</b> диапазон, будет выбран, но не активирован листа).</description>
             </item>
             <item>
               <description>Этот метод имеет <paramref name="Scroll" /> аргумент, который позволяет прокрутите окно назначения.</description>
@@ -6231,7 +6267,8 @@
               <description>При использовании метода <b>Goto</b> предыдущее выделение (до выполнения метода <b>Goto</b> ) добавляется в массив удаляемых (Дополнительные сведения можно <see cref="P:Microsoft.Office.Interop.Excel._Application.PreviousSelections(System.Object)" /> свойства). Этот компонент можно использовать для быстрого перехода между более четырех выбранные элементы.</description>
             </item>
             <item>
-              <description>Имеет метод <b>Select</b> a <paramref name="Replace" /> аргумент; <b>Goto</b> метод не.</description>
+              <description>
+                <b>Выбор</b> метода имеет <paramref name="Replace" /> аргумент; метод <b>Goto</b> — нет.</description>
             </item>
           </list>
           <para></para>
@@ -6398,8 +6435,13 @@
         <value>Дескриптор экземпляра Microsoft Excel 2010, представленный в указанном <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объекта.</value>
         <remarks>
           <para>Только для чтения <b>Variant</b>.</para>
-          <para>Данное свойство возвращает правильный маркер в 32 - и 64-разрядные версии из Excel. Расширяет функциональные возможности <see cref="P:Microsoft.Office.Interop.Excel._Application.Hinstance" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, который работает только правильно в 32-разрядная версия Excel.</para> Тип 
-          <para>лучше всего использовать с этим свойством — это тип данных <b>LongPtr</b> . Назначение значение, возвращаемое этим свойством переменной <b>LongPtr</b> будут работать должным образом в обе 32 - и 64-разрядные версии Excel. Свойство определяется как <b>Variant</b> в целях внутренней реализации. Тем не менее, он всегда возвращает значение 32-разрядная версия на 32-разрядных систем и 64-разрядное значение в 64-разрядных системах.</para><para>Это свойство только работы начиная с Excel 2010 и только необходимых 64-разрядной версии Microsoft Excel. Если необходимо написать код, который также работать с более ранними версиями Excel, чтобы избежать ошибки компиляции чтение этого свойства в разделе директива #if Win64 условной компиляции и использовать <see cref="P:Microsoft.Office.Interop.Excel._Application.Hinstance" /> свойства в разделе #else директива.</para><para><b>Примечание</b>: это свойство работает в обоих 32 - и 64-разрядные среды, начиная с Excel 2010. Таким образом, если код предназначен для использования только в Excel 2010 и более поздних версий, либо 32 - или 64-разрядная версия, чтение этого свойства без условной компиляции.</para><para></para></remarks>
+          <para>Данное свойство возвращает правильный маркер в 32 - и 64-разрядные версии из Excel. Расширяет функциональные возможности <see cref="P:Microsoft.Office.Interop.Excel._Application.Hinstance" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, который работает только правильно в 32-разрядная версия Excel.</para>
+          <para>Тип данных идеально подходит для работы с это свойство имеет тип данных <b>LongPtr</b> . Назначение значение, возвращаемое этим свойством переменной <b>LongPtr</b> будут работать должным образом в обе 32 - и 64-разрядные версии Excel. Свойство определяется как <b>Variant</b> в целях внутренней реализации. Тем не менее он всегда возвращает значение 32-разрядная версия на 32-разрядных систем и 64-разрядное значение в 64-разрядных системах.</para>
+          <para>Это свойство только работы начиная с Excel 2010 и только необходимых 64-разрядной версии Microsoft Excel. Если необходимо написать код, который также работать с более ранними версиями Excel, чтобы избежать ошибки компиляции чтение этого свойства в разделе директива #if Win64 условной компиляции и использовать <see cref="P:Microsoft.Office.Interop.Excel._Application.Hinstance" /> свойства в разделе #else директивы.</para>
+          <para>
+            <b>Примечание</b>: это свойство работает в обоих 32 - и 64-разрядные среды, начиная с Excel 2010. Таким образом Если код предназначен для использования только в Excel 2010 и более поздних версий, либо 32 - или 64-разрядная версия, чтение этого свойства без условной компиляции.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Hwnd">
@@ -6546,8 +6588,10 @@
           <para>Используйте <b>InputBox</b> для отображения простого диалогового окна таким образом, можно ввести сведения, которые используются в макросе. Диалоговое окно имеет кнопку "ОК" и "Отмена". Если нажмите кнопку ОК, <b>InputBox</b> возвращает значение, введенное в диалоговом окне. Если нажать кнопку "Отмена" <b>InputBox</b> возвращает <b>значение False</b>.</para>
           <para>Если <paramref name="Type" /> равно 0, <b>InputBox</b> возвращает формулу в виде текста — например, «= 2 * пи () / 360». Если имеются ссылки в формуле, они будут возвращены в качестве ссылок стиля A1. (Использование <see cref="M:Microsoft.Office.Interop.Excel._Application.ConvertFormula(System.Object,Microsoft.Office.Interop.Excel.XlReferenceStyle,System.Object,System.Object,System.Object)" /> преобразование между стили ссылки.)</para>
           <para>Если <paramref name="Type" /> — 8, <b>InputBox</b> возвращает объект <b>Range</b> .</para>
-          <para>При использовании метода <b>InputBox</b> запрашивать у пользователя для формулы, необходимо использовать <see cref="P:Microsoft.Office.Interop.Excel.Range.FormulaLocal" /> свойство назначение формулу для объекта <b>Range</b> . Входной формула будет находиться в языке пользователя.</para> Метод 
-          <para><b>InputBox</b> отличается от функции <b>InputBox</b> , что позволяет Выборочный проверки ввода пользователя и его можно использовать с объектами, ошибочные значения и формулы Microsoft Excel. InputBox с не описатель объекта вызывает функцию <b>InputBox</b> .</para><para></para></remarks>
+          <para>При использовании метода <b>InputBox</b> запрашивать у пользователя для формулы, необходимо использовать <see cref="P:Microsoft.Office.Interop.Excel.Range.FormulaLocal" /> свойство назначение формулу для объекта <b>Range</b> . Входной формула будет на языке пользователя.</para>
+          <para>Метод <b>InputBox</b> отличается от функции <b>InputBox</b> , что позволяет Выборочный проверки ввода пользователя и его можно использовать с объектами, ошибочные значения и формулы Microsoft Excel. InputBox с не описатель объекта вызывает функцию <b>InputBox</b> .</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Interactive">
@@ -6587,7 +6631,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Это свойство можно использовать при написании кода для взаимодействия с Microsoft Excel из другого приложения.</para>
-          <para>Если этому свойству присвоено значение <b>False</b>, не забудьте задайте значение <b>True</b>. Microsoft Excel не будет автоматически этому свойству присвоено обратно в <b>значение True,</b> после завершения выполнения кода.</para>
+          <para>Если этому свойству присвоено значение <b>False</b>, не забудьте задайте значение <b>True</b>. Microsoft Excel не будет автоматически это свойство снова установить <b>значение True,</b> после завершения выполнения кода.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -6632,72 +6676,72 @@
                 <b>xlLeftBrace</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>знак, используемый вместо левая фигурная скобка ({}) в массиве литералов.</description>
+              <description>Знак, используемый вместо левая фигурная скобка ({}) в литералы массива.</description>
             </item>
             <item>
               <term>
                 <b>xlLeftBracket</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>знак, используемый вместо левую скобку ([]) в относительные ссылки в стиле R1C1.</description>
+              <description>Использовать знак вместо левую скобку ([]) в стиле R1C1 относительные ссылки.</description>
             </item>
             <item>
               <term>
                 <b>xlLowerCaseColumnLetter</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>столбца строчные буквы.</description>
+              <description>Буквы нижнего регистра столбца.</description>
             </item>
             <item>
               <term>
                 <b>xlLowerCaseRowLetter</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>строки в строчные буквы.</description>
+              <description>Буквы нижнего регистра строки.</description>
             </item>
             <item>
               <term>
                 <b>xlRightBrace</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>знак, используемый вместо правой скобки (}) в массиве литералов.</description>
+              <description>Знак, используемый вместо правой скобки (}) в литералы массива.</description>
             </item>
             <item>
               <term>
                 <b>xlRightBracket</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>знак, используемый вместо правая квадратная скобка (]) в ссылках в стиле R1C1.</description>
+              <description>Использовать знак вместо правая квадратная скобка (]) в ссылках в стиле R1C1.</description>
             </item>
             <item>
               <term>
                 <b>xlUpperCaseColumnLetter</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>столбца прописные буквы.</description>
+              <description>Столбец прописные буквы.</description>
             </item>
             <item>
               <term>
                 <b>xlUpperCaseRowLetter</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>буквы верхнего регистра строки (для ссылки на стиль R1C1).</description>
+              <description>Буквы верхнего регистра строки (для ссылки на стиль R1C1).</description>
             </item>
           </list>
           <para>Параметры страны или региона</para>
@@ -6707,114 +6751,116 @@
                 <b>xlCountryCode</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>страны или региона версии Microsoft Excel.</description>
+              <description>Страна или регион версия Microsoft Excel.</description>
             </item>
             <item>
               <term>
                 <b>xlCountrySetting</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>текущее значение страны или региона, в панели управления Windows.</description>
+              <description>Текущий параметр страны или региона в панели управления Windows.</description>
             </item>
             <item>
               <term>
                 <b>xlGeneralFormatName</b>
               </term>
               <description>
-                <b>строки</b>
+                <b>Строка</b>
               </description>
-              <description>имя общий числовой формат.</description>
+              <description>Имя общий числовой формат.</description>
             </item>
           </list>
-          <para>Валюта</para>
+          <para>Денежный</para>
           <list type="table">
             <item>
               <term>
                 <b>xlCurrencyBefore</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <b>значение True,</b> Если символ валюты предшествует денежными значениями;
-              <description><b>Значение false,</b> если их следует.</description></item>
+              <description>
+                <b>Значение true,</b> Если символ валюты предшествует денежными значениями; <b>Значение false,</b> если их следует.</description>
+            </item>
             <item>
               <term>
                 <b>xlCurrencyCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символ валюты.</description>
+              <description>Символ валюты.</description>
             </item>
             <item>
               <term>
                 <b>xlCurrencyDigits</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>число десятичных знаков для использования в форматы валют.</description>
+              <description>Число десятичных знаков для использования в форматы валют.</description>
             </item>
             <item>
               <term>
                 <b>xlCurrencyLeadingZeros</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
               <description>
-                <b>значение True,</b> Если нуля в начале, отображаются на нулевые значения валюты.</description>
+                <b>Значение true,</b> Если нуля в начале, отображаются на нулевые значения валюты.</description>
             </item>
             <item>
               <term>
                 <b>xlCurrencyMinusSign</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <b>значение True,</b> Если вы используете минус отрицательными числами;
-              <description><b>Значение false,</b> Если вы используете скобки.</description></item>
+              <description>
+                <b>Значение true,</b> Если вы используете минус отрицательными числами; <b>Значение false,</b> Если вы используете скобки.</description>
+            </item>
             <item>
               <term>
                 <b>xlCurrencyNegative</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>Формат валюты для отрицательных денежных значений: 0 = (symbolx) или (xsymbol) 1 = - symbolx или - xsymbol2 = x символ или x symbol3 = symbolx - или xsymbol-where символа — это символ валюты Страна или регион. Обратите внимание на то, что позиция символа валюты, определяется <b>xlCurrencyBefore</b>.</description>
+              <description>Формат валюты для отрицательных денежных значений: 0 = (symbolx) или (xsymbol) 1 = - symbolx или - xsymbol2 = x символ или x symbol3 = symbolx или xsymbol where символа — это символ валюты страны или региона. Обратите внимание на то, что позиция символа валюты, определяется <b>xlCurrencyBefore</b>.</description>
             </item>
             <item>
               <term>
                 <b>xlCurrencySpaceBefore</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
               <description>
-                <b>значение True,</b> Если перед символом валюты, который добавляется пробел.</description>
+                <b>Значение true,</b> если пробел добавляется перед символ валюты.</description>
             </item>
             <item>
               <term>
                 <b>xlCurrencyTrailingZeros</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
               <description>
-                <b>значение True,</b> Если конечные нули отображаются на нулевые значения валюты.</description>
+                <b>Значение true,</b> Если конечные нули отображаются на нулевые значения валюты.</description>
             </item>
             <item>
               <term>
                 <b>xlNoncurrencyDigits</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>число десятичных знаков для использования в форматах, отличных от валюты.</description>
+              <description>Число десятичных знаков для использования в форматах, отличных от валюты.</description>
             </item>
           </list>
           <para>Дата и время</para>
@@ -6824,155 +6870,158 @@
                 <b>xl24HourClock</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <b>значение True,</b> Если вы используете 24-часовом формате;
-              <description><b>Значение false,</b> Если вы используете 12-часовом формате времени.</description></item>
+              <description>
+                <b>Значение true,</b> Если вы используете 24-часовом формате; <b>Значение false,</b> Если вы используете 12-часовом формате времени.</description>
+            </item>
             <item>
               <term>
                 <b>xl4DigitYears</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <b>значение True,</b> Если вы используете цифрами;
-              <description><b>Значение false,</b> Если вы используете двузначным.</description></item>
+              <description>
+                <b>Значение true,</b> Если вы используете цифрами; <b>Значение false,</b> Если вы используете года из двух цифр.</description>
+            </item>
             <item>
               <term>
                 <b>xlDateOrder</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>порядок элементов даты: 0 = месяц, день, year1 = день месяца year2 = год, месяц, день</description>
+              <description>Порядок элементов даты: 0 = месяц, день, year1 = день месяца year2 = год, месяц, день</description>
             </item>
             <item>
               <term>
                 <b>xlDateSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>разделителя даты (/).</description>
+              <description>Разделитель даты (/).</description>
             </item>
             <item>
               <term>
                 <b>xlDayCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символ день (d).</description>
+              <description>Символ день (d).</description>
             </item>
             <item>
               <term>
                 <b>xlDayLeadingZero</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <description>имеет значение True, если нуля в начале отображается в днях.</description>
+              <description>Значение true, если нуля в начале отображается в днях.</description>
             </item>
             <item>
               <term>
                 <b>xlHourCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символ час (h).</description>
+              <description>Символ час (h).</description>
             </item>
             <item>
               <term>
                 <b>xlMDY</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <b>значение True,</b> Если порядок даты месяц, день, год
-              <description>для даты, отображаемые в длинные формы; <b>Значение false,</b> Если дата является день месяца года.</description></item>
+              <description>
+                <b>Значение true,</b> Если порядок даты месяц день года для даты, отображаемые в длинные формы; <b>Значение false,</b> Если дата является день месяца года.</description>
+            </item>
             <item>
               <term>
                 <b>xlMinuteCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>Minute символ (МБ).</description>
+              <description>Символ, минуты (m).</description>
             </item>
             <item>
               <term>
                 <b>xlMonthCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символ месяца (МБ).</description>
+              <description>Символ месяца (МБ).</description>
             </item>
             <item>
               <term>
                 <b>xlMonthLeadingZero</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
               <description>
-                <b>значение True,</b> Если в месяцев (когда месяцев отображаются как числа) отображается нуля в начале.</description>
+                <b>Значение true,</b> Если отображается нуля в начале месяца (когда месяцев отображаются как числа).</description>
             </item>
             <item>
               <term>
                 <b>xlMonthNameChars</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>всегда возвращает трех символов для обеспечения обратной совместимости. Имена сокращенного названия месяца чтение из Microsoft Windows и может быть любой длины.</description>
+              <description>Всегда возвращает трех символов для обеспечения обратной совместимости. Имена сокращенного названия месяца чтение из Microsoft Windows и может быть любой длины.</description>
             </item>
             <item>
               <term>
                 <b>xlSecondCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>второго символа (s).</description>
+              <description>Второй символ (s).</description>
             </item>
             <item>
               <term>
                 <b>xlTimeSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>разделителя времени (:).</description>
+              <description>Разделитель времени (:).</description>
             </item>
             <item>
               <term>
                 <b>xlTimeLeadingZero</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
               <description>
-                <b>значение True,</b> Если на время отображать нуля в начале.</description>
+                <b>Значение true,</b> Если на время отображать нуля в начале.</description>
             </item>
             <item>
               <term>
                 <b>xlWeekdayNameChars</b>
               </term>
               <description>
-                <b>целое число</b>
+                <b>Целое число</b>
               </description>
-              <description>всегда возвращает трех символов для обеспечения обратной совместимости. Чтение из Microsoft Windows и может быть любой длины названия дней недели сокращенный.</description>
+              <description>Всегда возвращает трех символов для обеспечения обратной совместимости. Названия дней недели сокращенный чтение из Microsoft Windows и может быть любой длины.</description>
             </item>
             <item>
               <term>
                 <b>xlYearCode</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символа года в числовые форматы (y).</description>
+              <description>Символ года в числовые форматы (y).</description>
             </item>
           </list>
           <para>Системы измерений</para>
@@ -6982,19 +7031,20 @@
                 <b>xlMetric</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
-              <b>значение True,</b> Если вы используете метрическая система;
-              <description><b>Значение false,</b> Если вы используете системы английской измерений.</description></item>
+              <description>
+                <b>Значение true,</b> Если вы используете метрическая система; <b>Значение false,</b> Если вы используете system английской измерения.</description>
+            </item>
             <item>
               <term>
                 <b>xlNonEnglishFunctions</b>
               </term>
               <description>
-                <b>логическое</b>
+                <b>Логическое значение</b>
               </description>
               <description>
-                <b>значение True,</b> Если функции не отображаются на английском языке.</description>
+                <b>Значение true,</b> Если функции не отображаются на английском языке.</description>
             </item>
           </list>
           <para>Разделители</para>
@@ -7004,57 +7054,57 @@
                 <b>xlAlternateArraySeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>разделитель альтернативного массив элементов для использования в том случае, если текущий разделитель массива совпадает с разделителя целой и дробной части.</description>
+              <description>Разделитель альтернативного массив элементов для использования в том случае, если текущий разделитель массива совпадает с разделителя целой и дробной части.</description>
             </item>
             <item>
               <term>
                 <b>xlColumnSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символ, используемый для разделения столбцов в литералы массива.</description>
+              <description>Знак, используемый для разделения столбцов в литералы массива.</description>
             </item>
             <item>
               <term>
                 <b>xlDecimalSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>разделителя целой и дробной части.</description>
+              <description>Разделителя целой и дробной части.</description>
             </item>
             <item>
               <term>
                 <b>xlListSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>разделителями списков.</description>
+              <description>Разделитель элементов списка.</description>
             </item>
             <item>
               <term>
                 <b>xlRowSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>символ используется для разделения строк в массиве литералов.</description>
+              <description>Знак, используемый для разделения строк в литералы массива.</description>
             </item>
             <item>
               <term>
                 <b>xlThousandsSeparator</b>
               </term>
               <description>
-                <b>строка</b>
+                <b>Строка</b>
               </description>
-              <description>ноль или тысячи разделителя групп разрядов.</description>
+              <description>Ноль или тысячи разделителя групп разрядов.</description>
             </item>
           </list>
-          <para>Символы, разделители и денежных единиц форматов, указанных в предыдущей таблице, могут отличаться от тех, которые используются языка и региона и могут быть недоступны, в зависимости от языка Английский (США, например), который был выбран или установленные.</para>
+          <para>Символы, разделители и денежных единиц форматов, указанных в предыдущей таблице, могут отличаться от тех, которые используются языка и региона и могут быть недоступны, в зависимости от языка Английский (США, например), который установлен или установлен .</para>
           <para></para>
         </remarks>
       </Docs>
@@ -7176,7 +7226,7 @@
           <b>значение true,</b> Если указанный книга открыта в режиме защищенного просмотра окна. в противном случае — <b>false</b>.</value>
         <remarks>
           <para>Только для чтения</para>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Excel._Application.IsSandboxed" /> свойства, чтобы определить, открыт ли книги в режиме защищенного просмотра окна.</para>
+          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.IsSandboxed" /> свойства, чтобы определить, открыт ли книги в режиме защищенного просмотра окна.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -7352,7 +7402,7 @@
         <summary>Расстояние в пунктах от левого края экрана, чтобы левой части главного окна Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Если окно развернуто, это свойство возвращает отрицательное значение, которое может значительно изменяться в зависимости от ширины границы окна. Назначить этому свойству значение 0 (ноль) будет убедитесь, что окно немного меньше, чем было бы, если окно приложения было развернуто. Другими словами, если это свойство является нуль (0), левая граница главного окна Microsoft Excel ровно столько будут видны на экране.</para>
+          <para>Если окно развернуто, это свойство возвращает отрицательное значение, которое может значительно изменяться в зависимости от ширины границы окна. Назначить этому свойству значение 0 (ноль) будет убедитесь, что окно немного меньше, чем было бы, если окно приложения было развернуто. Другими словами Если это свойство является нуль (0), левая граница главного окна Microsoft Excel ровно столько будут видны на экране.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -7437,66 +7487,66 @@
         <param name="HelpFile">Необязательный элемент <b>Object</b>. Имя файла справки, содержащего раздел справки, определенные в <paramref name="HelpContextId" />.</param>
         <summary>Соответствует параметры в диалоговом окне Параметры макросов. Этот метод используется для отображения пользовательскую функцию (UDF) в встроенные или новой категории в диалоговом окне Вставка функции.</summary>
         <remarks>
-          <para>В следующей таблице перечислены какие целых чисел, сопоставляются с встроенных категорий, которые могут использоваться в параметр Category.</para>
+          <para>В следующей таблице перечислены какие целых чисел, сопоставляются с встроенных категорий, которые могут использоваться в параметре категории.</para>
           <list type="table">
             <item>
               <term>1</term>
               <description>
-                <b>финансовые</b>
+                <b>Финансовые</b>
               </description>
             </item>
             <item>
               <term>2</term>
               <description>
-                <b>даты &amp; время</b>
+                <b>Дата &amp; времени</b>
               </description>
             </item>
             <item>
               <term>3</term>
               <description>
-                <b>Math &amp; активация</b>
+                <b>Математические &amp; активация</b>
               </description>
             </item>
             <item>
               <term>4</term>
               <description>
-                <b>статистические</b>
+                <b>Статистические</b>
               </description>
             </item>
             <item>
               <term>5</term>
               <description>
-                <b>подстановки &amp; Справочник по</b>
+                <b>Поиск &amp; Справочник</b>
               </description>
             </item>
             <item>
               <term>6</term>
               <description>
-                <b>базы данных</b>
+                <b>Базы данных</b>
               </description>
             </item>
             <item>
               <term>7</term>
               <description>
-                <b>текст</b>
+                <b>Текст</b>
               </description>
             </item>
             <item>
               <term>8</term>
               <description>
-                <b>логических</b>
+                <b>Логическая</b>
               </description>
             </item>
             <item>
               <term>9</term>
               <description>
-                <b>сведения</b>
+                <b>Сведения о</b>
               </description>
             </item>
             <item>
               <term>10</term>
               <description>
-                <b>команд</b>
+                <b>Команды</b>
               </description>
             </item>
             <item>
@@ -7508,7 +7558,7 @@
             <item>
               <term>12</term>
               <description>
-                <b>управления макрос</b>
+                <b>Элемент управления макросов</b>
               </description>
             </item>
             <item>
@@ -7520,36 +7570,36 @@
             <item>
               <term>14</term>
               <description>
-                <b>определенные пользователем</b>
+                <b>Определенные пользователем</b>
               </description>
             </item>
             <item>
               <term>15</term>
-              <description>первый настраиваемые категории</description>
-            </item>
-            <item>
-              <term>17</term>
-              <description>третий настраиваемые категории</description>
+              <description>Первый настраиваемые категории</description>
             </item>
             <item>
               <term>16</term>
-              <description>второй настраиваемые категории</description>
+              <description>Второй настраиваемые категории</description>
+            </item>
+            <item>
+              <term>17</term>
+              <description>Третий настраиваемые категории</description>
             </item>
             <item>
               <term>18</term>
-              <description>четвертый настраиваемые категории</description>
+              <description>Четвертая настраиваемые категории</description>
             </item>
             <item>
               <term>19</term>
-              <description>пятый custom Категория</description>
-            </item>
-            <item>
-              <term>21</term>
-              <description>седьмой настраиваемые категории</description>
+              <description>Пятой настраиваемые категории</description>
             </item>
             <item>
               <term>20</term>
-              <description>шестой настраиваемые категории</description>
+              <description>Шестой настраиваемые категории</description>
+            </item>
+            <item>
+              <term>21</term>
+              <description>Седьмой настраиваемые категории</description>
             </item>
             <item>
               <term>22</term>
@@ -7557,43 +7607,43 @@
             </item>
             <item>
               <term>23</term>
-              <description>девятого custom Категория</description>
-            </item>
-            <item>
-              <term>25</term>
-              <description>одиннадцатого настраиваемые категории</description>
+              <description>Девятого настраиваемые категории</description>
             </item>
             <item>
               <term>24</term>
-              <description>десятой настраиваемые категории</description>
+              <description>Десятое настраиваемые категории</description>
+            </item>
+            <item>
+              <term>25</term>
+              <description>Eleventh настраиваемые категории</description>
             </item>
             <item>
               <term>26</term>
-              <description>двенадцатый настраиваемые категории</description>
+              <description>Twelfth настраиваемые категории</description>
             </item>
             <item>
               <term>27</term>
               <description>Thirteenth настраиваемые категории</description>
             </item>
             <item>
-              <term>29</term>
-              <description>пятнадцатый настраиваемые категории</description>
+              <term>28</term>
+              <description>Fourteenth настраиваемые категории</description>
             </item>
             <item>
-              <term>28</term>
-              <description>четырнадцатый настраиваемые категории</description>
+              <term>29</term>
+              <description>Пятнадцатого настраиваемые категории</description>
             </item>
             <item>
               <term>30</term>
-              <description>находится 16-й настраиваемые категории</description>
+              <description>Sixteenth настраиваемые категории</description>
             </item>
             <item>
               <term>31</term>
-              <description>Семнадцатый настраиваемые категории</description>
+              <description>Seventeenth настраиваемые категории</description>
             </item>
             <item>
               <term>32</term>
-              <description>18 настраиваемые категории</description>
+              <description>Eighteenth настраиваемые категории</description>
             </item>
           </list>
           <para></para>
@@ -7710,8 +7760,8 @@
         <param name="DownloadNewMail">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы загрузить новые сообщения сразу же.</param>
         <summary>Входит в систему на почту MAPI или Microsoft Exchange и устанавливает сеанс почты. Если Microsoft Mail еще не запущена, необходимо использовать этот метод для установления сеанса почты перед почты или можно использовать функции маршрутизации документов.</summary>
         <remarks>
-          <para>Microsoft Excel отключает все сеансы почты ранее созданные до попытки создания нового сеанса.</para>
-          <para>Дальше на сеанс почты по умолчанию система опустить параметры имя и пароль.</para>
+          <para>Microsoft Excel отключает все ранее созданные до попытки создания нового сеанса сеансов почты.</para>
+          <para>Дальше на сеанс почты по умолчанию система опустите параметры имя и пароль.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -7746,7 +7796,7 @@
         <value>To be added.</value>
         <remarks>
           <para>Это свойство применяется только к сеансам почты, созданные в Microsoft Excel (он не возвращает номер сеанса почты для Microsoft Mail).</para>
-          <para>Это свойство не используется в системах почты PowerTalk.</para>
+          <para>Это свойство не используется на PowerTalk почтовых систем.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -7783,10 +7833,10 @@
           <para>
             <b>XlMailSystem</b> может иметь одно из следующих констант <b>XlMailSystem</b> :</para>
           <para>
-            <b>xlNoMailSystem</b>
+            <b>xlMAPI</b>
           </para>
           <para>
-            <b>xlMAPI</b>
+            <b>xlNoMailSystem</b>
           </para>
           <para>
             <b>xlPowerTalk</b>
@@ -8237,7 +8287,7 @@
           <b>Значение true,</b> Если будут перемещены активной ячейки, сразу после нажатия клавиши ВВОД (возврат).</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Excel._Application.MoveAfterReturnDirection" /> свойство, чтобы указать направление, в котором является активной ячейки, перемещаемых.</para>
+          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.MoveAfterReturnDirection" /> свойство, чтобы указать направление, в котором будет перемещать активную ячейку.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -8767,44 +8817,44 @@
         <summary>Запускает указанной процедуры при нажатии определенной клавиши или сочетания клавиш.</summary>
         <remarks>
           <para>
-            <paramref name="Key" /> Аргумент можно указать любой один ключ в сочетании с сочетание клавиш ALT, CTRL или SHIFT или любое сочетание следующих клавиш. Каждый раздел представлен один или несколько знаков, например «» для символа, или «{введите}» ввод ключа.</para>
-          <para>, Чтобы задать символы, которые не отображаются при нажатии клавиши соответствующий ключ (Ввод или TAB, например), используйте коды, перечисленные в следующей таблице. Каждый код в таблице представляет один ключ на клавиатуре.</para>
+            <paramref name="Key" /> Аргумент можно указать любой один ключ в сочетании с сочетание клавиш ALT, CTRL или SHIFT или любое сочетание следующих клавиш. Каждый раздел представлен один или несколько знаков, например «» для символа, или «{введите}» для клавишу ВВОД.</para>
+          <para>Чтобы задать символы, которые не отображаются при нажатии клавиши соответствующий ключ (Ввод или TAB, например), используйте коды, перечисленные в следующей таблице. Каждый код в таблице представляет один ключ на клавиатуре.</para>
           <list type="table">
             <item>
               <term>BACKSPACE</term>
               <description>{BACKSPACE} или {BS}</description>
             </item>
             <item>
-              <term>приостановки ВЫПОЛНЕНИЯ</term>
-              <description>{нарушение}</description>
+              <term>BREAK</term>
+              <description>{РАЗРЫВ}</description>
             </item>
             <item>
               <term>CAPS LOCK</term>
               <description>{CAPSLOCK}</description>
             </item>
             <item>
-              <term>Очистить</term>
-              <description>{Очистить}</description>
+              <term>ОЧИСТИТЬ</term>
+              <description>{ОЧИСТИТЬ}</description>
             </item>
             <item>
               <term>DELETE или DEL</term>
-              <description>{ Удаление} или {DEL}</description>
+              <description>{УДАЛИТЬ} или {DEL}</description>
             </item>
             <item>
-              <term>Стрелка вниз</term>
-              <description>{вниз}</description>
+              <term>СТРЕЛКА ВНИЗ</term>
+              <description>{ВНИЗ}</description>
             </item>
             <item>
-              <term>конечных</term>
-              <description>{END}</description>
+              <term>END</term>
+              <description>{КОНЕЦ}</description>
             </item>
             <item>
-              <term>Ввод</term>
+              <term>ВВОД</term>
               <description>~ (тильдой)</description>
             </item>
             <item>
               <term>Ввод (цифровая панель)</term>
-              <description>{ENTER}</description>
+              <description>{ВВЕДИТЕ}</description>
             </item>
             <item>
               <term>ESC</term>
@@ -8815,19 +8865,19 @@
               <description>{F1} до {F15}</description>
             </item>
             <item>
-              <term>СПРАВКА</term>
-              <description>{помочь}</description>
+              <term>HELP</term>
+              <description>{СПРАВКИ}</description>
             </item>
             <item>
-              <term>Домашняя страница</term>
-              <description>{Домашняя страница}</description>
+              <term>HOME</term>
+              <description>{ДОМАШНЕЙ}</description>
             </item>
             <item>
               <term>INS</term>
               <description>{ВСТАВЬТЕ}</description>
             </item>
             <item>
-              <term>Стрелка влево</term>
+              <term>СТРЕЛКА ВЛЕВО</term>
               <description>{СЛЕВА}</description>
             </item>
             <item>
@@ -8840,14 +8890,14 @@
             </item>
             <item>
               <term>PAGE UP</term>
-              <description>{клавиши PGUP}</description>
+              <description>{КЛАВИШИ PGUP}</description>
             </item>
             <item>
               <term>ВОЗВРАЩАЕТ</term>
-              <description>{возврата}</description>
+              <description>{ВОЗВРАТА}</description>
             </item>
             <item>
-              <term>Стрелка вправо</term>
+              <term>СТРЕЛКА ВПРАВО</term>
               <description>{ПРАВО}</description>
             </item>
             <item>
@@ -8855,15 +8905,15 @@
               <description>{SCROLLLOCK}</description>
             </item>
             <item>
-              <term>ВКЛАДКА</term>
-              <description>{ВКЛАДКИ}</description>
+              <term>TAB</term>
+              <description>ВКЛАДКА "{"}</description>
             </item>
             <item>
-              <term>Стрелка вверх</term>
-              <description>{копирование}</description>
+              <term>СТРЕЛКА ВВЕРХ</term>
+              <description>{КОПИРОВАНИЕ}</description>
             </item>
           </list>
-          <para>Также можно указать сочетание клавиш с SHIFT и/или CTRL и ALT. Используйте следующую таблицу, чтобы задать ключ, в сочетании с другой ключ или ключи.</para>
+          <para>Также можно задать сочетание клавиш с SHIFT и/или CTRL и ALT. Чтобы указать ключ, в сочетании с другой ключ или ключи, используйте следующую таблицу.</para>
           <list type="table">
             <item>
               <term>SHIFT</term>
@@ -8917,7 +8967,7 @@
         <summary>Задает элемент меню повторять и имя процедуры, которая будет выполняться при выборе команды повторять (меню "Правка") после выполнения процедуры, которая задает это свойство.</summary>
         <remarks>
           <para>Если процедура не использует метод <b>OnRepeat</b> , повторите команду повторяет процедуру, которая была выполнена большинство недавно.</para>
-          <para>Процедуру необходимо использовать <b>OnRepeat</b> и <see cref="M:Microsoft.Office.Interop.Excel._Application.OnUndo(System.String,System.String)" /> последние методы для предотвращения повторять и отмены процедуры от перезаписи при последующих действий в процедуре.</para>
+          <para>Процедуры необходимо использовать <b>OnRepeat</b> и <see cref="M:Microsoft.Office.Interop.Excel._Application.OnUndo(System.String,System.String)" /> последние методы для предотвращения повторять и отмены процедуры от перезаписи при последующих действий в процедуре.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -9043,7 +9093,7 @@
         <param name="Schedule">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы запланировать новую процедуру <b>OnTime</b> . <b>Значение false,</b> Чтобы удалить ранее заданные процедуры. Значение по умолчанию — <b>True</b>.</param>
         <summary>Планирует процедуру для запуска в указанное время в будущем (либо в определенное время суток, или по истечении указанного периода времени).</summary>
         <remarks>
-          <para>Now+TimeValue(time) используется для планирования, что-нибудь для запуска по истечении указанного периода времени, (начиная с момента). Используйте TimeValue(time), чтобы запланировать что-нибудь для запуска определенное время.</para>
+          <para>Используйте Now+TimeValue(time) для планирования, что-нибудь для запуска по истечении указанного периода времени, (начиная с момента). Используйте TimeValue(time) для планирования, что-нибудь для запуска определенное время.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -9081,7 +9131,7 @@
           <b>Строковое значение.</b> Имя процедуры, которая будет выполняться при выборе команды отмены (меню "Правка").</param>
         <summary>Задает текст отмены и имя процедуры, которые выполняются при выборе команды отмены (меню "Правка") после выполнения процедуры, которая задает это свойство.</summary>
         <remarks>
-          <para>Если процедура не использует метод <b>OnUndo</b> , команда Undo отключен.</para>
+          <para>Если процедура не использует метод <b>OnUndo</b> , отключено команды "Отменить".</para>
           <para>Необходимо использовать процедуру <see cref="M:Microsoft.Office.Interop.Excel._Application.OnRepeat(System.String,System.String)" /> и методы <b>OnUndo</b> последней, для предотвращения повторять и отмены процедуры от перезаписи при последующих действий в процедуре.</para>
           <para></para>
         </remarks>
@@ -9122,7 +9172,7 @@
         <summary>Возвращает или задает имя процедуры, которые выполняются при активации окна.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Процедуры, заданного этим свойством не будет запускаться при других процедур переключитесь в окно или при получении команду, чтобы переключиться в окно через канал DDE. Вместо этого процедура отвечает на действия пользователя, например, нажав кнопку окна с помощью мыши, нажав кнопку Перейти в меню Правка и т. д.</para>
+          <para>Процедуры, заданного этим свойством не будет запускаться при других процедур переключитесь в окно или при получении команду, чтобы переключиться в окно через канал DDE. Вместо этого процедура отвечает на запросы пользователя действий, например щелкнув окна с помощью мыши, нажав кнопку Перейти в меню Правка и т. д.</para>
           <para>Если лист или лист макросов Auto_Activate или Auto_Deactivate макрос, определенных для его, эти макросы будет выполняться после процедуры, указанного в свойстве <b>OnWindow</b> .</para>
           <para></para>
         </remarks>
@@ -9345,7 +9395,7 @@
         <summary>Возвращает массив последние четыре диапазонов или выделенных имен. Каждый элемент в массиве является <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Каждый раз при переходе к ячейки или диапазона, используя команду Go To (меню "Правка") или в поле имя или каждый раз вызывает макроса <see cref="M:Microsoft.Office.Interop.Excel._Application.Goto(System.Object,System.Object)" /> метод, предыдущей диапазон добавляется в этот массив как элемент номер 1 и другие элементы в массиве, перемещение.</para>
+          <para>Каждый раз при переходе к ячейки или диапазона, используя команду Go To (меню "Правка") или в поле имя или каждый раз вызывает макроса <see cref="M:Microsoft.Office.Interop.Excel._Application.Goto(System.Object,System.Object)" /> метод, предыдущей диапазон добавляется в этот массив как элемент номер 1 и другие элементы в массиве перемещаются.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -9382,7 +9432,7 @@
         <remarks>
           <para>
             <b>логическое</b> Чтение и запись.</para>
-          <para>Набора <see cref="P:Microsoft.Office.Interop.Excel._Application.PrintCommunication" /> свойство значение <b>false</b> для ускорения выполнения кода, который задает свойства PageSetup. Установка <see cref="P:Microsoft.Office.Interop.Excel._Application.PrintCommunication" /> значение <b>true,</b> после установки свойств, чтобы зафиксировать все кэширования команд PageSetup.</para>
+          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel._Application.PrintCommunication" /> свойство значение <b>false</b> для ускорения выполнения кода, который задает свойства PageSetup. Установка <see cref="P:Microsoft.Office.Interop.Excel._Application.PrintCommunication" /> значение <b>true,</b> после установки свойств, чтобы зафиксировать все кэширования PageSetup команды.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -9535,7 +9585,7 @@
       <Docs>
         <summary>Выход из Microsoft Excel.</summary>
         <remarks>
-          <para>Если несохраненные книги открыты, при использовании этого метода, Microsoft Excel отображает диалоговое окно с вопросом, следует ли сохранить изменения. Можно отключить, сохранение всех книг, прежде чем использовать метод <b>Quit</b> или установив <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> значение <b>False</b>. Если это свойство имеет <b>значение False</b>, Microsoft Excel не отображает диалоговое окно при завершении работы с несохраненные книги; Завершает без сохранения в.</para>
+          <para>Если несохраненные книги открыты, при использовании этого метода, Microsoft Excel отображает диалоговое окно с вопросом, следует ли сохранить изменения. Можно отключить, сохранение всех книг, прежде чем использовать метод <b>Quit</b> или установив <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> значение <b>False</b>. Если это свойство имеет <b>значение False</b>, Microsoft Excel не отображает диалоговое окно при завершении работы с несохраненные книги; завершает работу без сохранения.</para>
           <para>Если задать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Saved" /> свойства для книги на <b>значение True,</b> без сохранения книги на диске, Microsoft Excel будет завершена без запроса на сохранение книги.</para>
           <para></para>
         </remarks>
@@ -9604,7 +9654,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет ячейки или диапазона ячеек.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Является ли данное свойство относящиеся к объекту <b>диапазона</b> . К примеру, если выделение ячейке C3, затем Selection.Range("B1") возвращает ячейка D3 из-за относительно <b>диапазон</b> объект, возвращенный свойством <see cref="P:Microsoft.Office.Interop.Excel._Application.Selection" /> свойство. С другой стороны, ActiveSheet.Range("B1") всегда возвращает код ячейки B1.</para>
+          <para>Является ли данное свойство относящиеся к объекту <b>диапазона</b> . К примеру, если выделение ячейке C3, затем Selection.Range("B1") возвращает ячейка D3 из-за относительно <b>диапазон</b> объект, возвращенный свойством <see cref="P:Microsoft.Office.Interop.Excel._Application.Selection" /> свойство. С другой стороны код ActiveSheet.Range("B1") всегда возвращает ячейки B1.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -9696,7 +9746,7 @@
         <summary>Код записи при записи макроса на.</summary>
         <remarks>
           <para>Метод <b>RecordMacro</b> не удается записать в активный модуль (модуль, в котором существует метод <b>RecordMacro</b> ).</para>
-          <para>Для предотвращения записи (например, если пользователь отменил диалоговое окно ""), эта функция с двумя пустые строки.</para>
+          <para>Чтобы запретить запись (например, если пользователь отменил диалоговое окно ""), эта функция с двумя пустые строки.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -9815,22 +9865,22 @@
         <summary>Возвращает сведения о функциях в любого из библиотеки динамической компоновки (DLL) или код ресурсы, которые были зарегистрированы с помощью функций макрос регистратор или РЕГИСТРАТОР.ИД.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Если не указать следующие аргументы, данное свойство возвращает массив, содержащий список всех зарегистрированных функций. Каждая строка в массиве содержит сведения об одном функции, как показано в следующей таблице.</para>
-          <item>
-            <term>1</term>
-            <description>имя DLL или программный ресурс</description>
-          </item>
+          <para>Если не указать следующие аргументы, данное свойство возвращает массив, содержащий список всех зарегистрированных функций. Каждая строка в массиве содержит сведения об одном функции, как показано в следующей таблице.</para>
           <list type="table">
             <item>
+              <term>1</term>
+              <description>Имя DLL или кода ресурса</description>
+            </item>
+            <item>
               <term>2</term>
-              <description>имя процедуры в ресурсе DLL или код</description>
+              <description>Имя процедуры в ресурсе DLL или код</description>
             </item>
             <item>
               <term>3</term>
-              <description>Задание типов данных возвращаемого значения и числа и данных типов строк аргументы</description>
+              <description>Указание типов данных возвращаемые значения и число и типы аргументов строк</description>
             </item>
           </list>
-          <para>возвращает <b>значение Null,</b>Если нет зарегистрированных функций, это свойство.</para>
+          <para>Если нет зарегистрированных функций, данное свойство возвращает <b>значение Null</b>.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -10043,7 +10093,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий все строки на активном листе. Если активный документ не листа, свойство <b>строки</b> не удается выполнить.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>При применении объект <b>Range</b> , который является выбор нескольких строк, это свойство возвращает строки из первой части диапазона. Например, если объект <b>Range</b> имеет две области — a1: B2 и C3:D4 — Selection.Rows.Count возвращает 2 не 4. Чтобы использовать это свойство в диапазоне, который может содержать несколько фрагментов, тестирование <b>Areas.Count</b> , чтобы определить, является ли диапазон несколько фрагментов. Если это так, цикл по каждой области в диапазоне.</para>
+          <para>При применении объекта <b>диапазона</b> , имеет несколько фрагментов, данное свойство возвращает строки из первой части диапазона. Например, если объект <b>Range</b> имеет две области — a1: B2 и C3:D4 — Selection.Rows.Count возвращает 2 не 4. Чтобы использовать это свойство в диапазоне, который может содержать несколько фрагментов, тестирование <b>Areas.Count</b> , чтобы определить, является ли диапазон несколько фрагментов. Если это так, цикл по каждой области в диапазоне.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -10162,8 +10212,10 @@
         <summary>Запускает макрос или вызывает функцию.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>С помощью этого метода нельзя использовать именованные аргументы. Аргументов, передаваемых по позиции.</para> Метод 
-          <para>, <b>запустите</b> возвращает все, что вызываемый макрос возвращает. Объекты, передаваемые в качестве аргументов в макрос преобразуются в значения (с применением <see cref="P:Microsoft.Office.Interop.Excel._Application.Value" /> свойство объект). Это означает, что нельзя передавать объекты макросов с помощью метода <b>выполните</b> .</para><para></para></remarks>
+          <para>Этот метод нельзя использовать именованные аргументы. Аргументы должны передаваться по позиции.</para>
+          <para>Метод <b>Run</b> возвращает все, что вызываемый макрос возвращает. Объекты, передаваемые в качестве аргументов в макрос преобразуются в значения (с применением <see cref="P:Microsoft.Office.Interop.Excel._Application.Value" /> свойство объект). Это означает, что нельзя передавать объекты макросов с помощью метода <b>выполните</b> .</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Save">
@@ -10199,13 +10251,13 @@
         <remarks>
           <para>Чтобы открыть файл книги, используйте <see cref="&quot;M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String" /> метод.</para>
           <para></para>
-          <para>Чтобы пометить книги сохранения без записи на диск, задайте его <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.SaveData" /> значение <b>True</b>.</para>
+          <para>Чтобы отметить книги сохранения без записи на диск, задайте его <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.SaveData" /> значение <b>True</b>.</para>
           <para></para>
           <para>При первом сохранении книги, используйте <see cref="&quot;M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object" /> метод, чтобы указать имя для файла.</para>
           <para></para>
         </remarks>
         <example>
-          <para>В этом примере сохраняется активной рабочей книги.</para>
+          <para>В этом примере сохраняет активной рабочей книги.</para>
           <code>&lt;span class="label"&gt;ActiveWorkbook.&lt;/span&gt;
 &lt;i&gt;Save&lt;/i&gt;</code>
           <para>В этом примере сохранение всех открытых книг и затем закрытие Microsoft Excel.</para>
@@ -10214,7 +10266,7 @@
 &lt;span class="label"&gt;Next w Application.Quit&lt;/span&gt;</code>
         </example>
         <example>
-          <para>В этом примере сохраняется активной рабочей книги.</para>
+          <para>В этом примере сохраняет активной рабочей книги.</para>
           <code>&lt;span class="label"&gt;ActiveWorkbook.&lt;/span&gt;
 &lt;i&gt;Save&lt;/i&gt;</code>
           <para>В этом примере сохранение всех открытых книг и затем закрытие Microsoft Excel.</para>
@@ -10223,7 +10275,7 @@
 &lt;span class="label"&gt;Next w Application.Quit&lt;/span&gt;</code>
         </example>
         <example>
-          <para>В этом примере сохраняется активной рабочей книги.</para>
+          <para>В этом примере сохраняет активной рабочей книги.</para>
           <code>&lt;span class="label"&gt;ActiveWorkbook.&lt;/span&gt;
 &lt;i&gt;Save&lt;/i&gt;</code>
           <para>В этом примере сохранение всех открытых книг и затем закрытие Microsoft Excel.</para>
@@ -10338,7 +10390,11 @@
         <summary>
           <b>Значение true,</b> Если обновление экрана включен.</summary>
         <value>To be added.</value>
-        <remarks>Обновление отключено для ускорения кода <para>параметр Включить экрана. Не могут видеть, что делает код, но его можно было запускать быстрее.</para><para>Не забудьте присвойте свойству <b>свойство ScreenUpdating</b> обратно в <b>значение True,</b> после окончания кода.</para><para></para></remarks>
+        <remarks>
+          <para>Включите обновление экрана для ускорения кода. Не могут видеть, что делает код, но его можно было запускать быстрее.</para>
+          <para>Помните, что необходимо задать свойство <b>свойство ScreenUpdating</b> обратно в <b>значение True,</b> после окончания кода.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Selection">
@@ -10369,7 +10425,10 @@
       <Docs>
         <summary>Возвращает выбранный объект в активном окне.</summary>
         <value>To be added.</value>
-        <remarks>Тип <para>возвращенного объекта зависит от текущего выделения (например, если при выборе ячейки, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект). Свойство <b>Выделение</b> возвращает <b>значение Nothing</b> , если ничего не выбрано.</para><para></para></remarks>
+        <remarks>
+          <para>Тип возвращаемого объекта зависит от текущего выделения (например, если при выборе ячейки, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект). Свойство <b>Выделение</b> возвращает <b>значение Nothing</b> , если ничего не выбрано.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="SendKeys">
@@ -10402,46 +10461,46 @@
         <param name="Wait">Необязательный элемент <b>Object</b>. <b>Значение true</b> для Microsoft Excel ожидает нажатия клавиши обрабатываемых перед возвратом управления макрос. <b>Значение false</b> (или опущен) продолжить выполнение макроса, не дожидаясь клавиш для обработки.</param>
         <summary>Отправляет нажатия клавиш в активное приложение.</summary>
         <remarks>
-          <para>Этот метод помещает клавиатурных команд в буфер ключа. В некоторых случаях необходимо вызвать этот метод перед вызовом метода, который будет использоваться нажатия клавиш. Например, чтобы отправить пароль диалоговое окно, необходимо вызвать метод <b>SendKeys</b> перед Отображение диалогового окна.</para>
+          <para>Этот метод помещает клавиатурных команд в буфер ключа. В некоторых случаях необходимо вызвать этот метод перед вызовом метода, который будет использоваться нажатия клавиш. К примеру Чтобы отправить пароль диалоговое окно, необходимо вызвать метод <b>SendKeys</b> перед Отображение диалогового окна.</para>
           <para>
-            <paramref name="Keys" /> Аргумент можно задать любую клавишу или сочетание с ALT, CTRL или SHIFT (или любое сочетание клавиш). Каждый раздел представлен один или несколько знаков, например «» для символа, или «{введите}» ввод ключа.</para>
-          <para>Для указания символов, которые не отображаются при нажатии клавиши соответствующий ключ (например, ввод или TAB), используйте коды, перечисленные в следующей таблице. Каждый код в таблице представляет один ключ на клавиатуре.</para>
+            <paramref name="Keys" /> Аргумент можно задать любую клавишу или сочетание с ALT, CTRL или SHIFT (или любое сочетание клавиш). Каждый раздел представлен один или несколько знаков, например «» для символа, или «{введите}» для клавишу ВВОД.</para>
+          <para>Чтобы задать символы, которые не отображаются при нажатии клавиши соответствующий ключ (например, ввод или TAB), используйте коды, перечисленные в следующей таблице. Каждый код в таблице представляет один ключ на клавиатуре.</para>
           <list type="table">
             <item>
               <term>BACKSPACE</term>
               <description>{BACKSPACE} или {BS}</description>
             </item>
             <item>
-              <term>приостановки ВЫПОЛНЕНИЯ</term>
-              <description>{нарушение}</description>
+              <term>BREAK</term>
+              <description>{РАЗРЫВ}</description>
             </item>
             <item>
               <term>CAPS LOCK</term>
               <description>{CAPSLOCK}</description>
             </item>
             <item>
-              <term>Очистить</term>
-              <description>{Очистить}</description>
+              <term>ОЧИСТИТЬ</term>
+              <description>{ОЧИСТИТЬ}</description>
             </item>
             <item>
               <term>DELETE или DEL</term>
-              <description>{Удалить} или {DEL}</description>
+              <description>{УДАЛИТЬ} или {DEL}</description>
             </item>
             <item>
-              <term>Стрелка вниз</term>
-              <description>{вниз}</description>
+              <term>СТРЕЛКА ВНИЗ</term>
+              <description>{ВНИЗ}</description>
             </item>
             <item>
-              <term>Конец</term>
-              <description>{END}</description>
+              <term>END</term>
+              <description>{КОНЕЦ}</description>
             </item>
             <item>
-              <term>Ввод</term>
+              <term>ВВОД</term>
               <description>~ (тильдой)</description>
             </item>
             <item>
               <term>Ввод (цифровая панель)</term>
-              <description>{ENTER}</description>
+              <description>{ВВЕДИТЕ}</description>
             </item>
             <item>
               <term>ESC</term>
@@ -10452,19 +10511,19 @@
               <description>{F1} до {F15}</description>
             </item>
             <item>
-              <term>СПРАВКА</term>
-              <description>{помочь}</description>
+              <term>HELP</term>
+              <description>{СПРАВКИ}</description>
             </item>
             <item>
-              <term>Домашняя страница</term>
-              <description>{Домашняя страница}</description>
+              <term>HOME</term>
+              <description>{ДОМАШНЕЙ}</description>
             </item>
             <item>
               <term>INS</term>
               <description>{ВСТАВЬТЕ}</description>
             </item>
             <item>
-              <term>Стрелка влево</term>
+              <term>СТРЕЛКА ВЛЕВО</term>
               <description>{СЛЕВА}</description>
             </item>
             <item>
@@ -10477,14 +10536,14 @@
             </item>
             <item>
               <term>PAGE UP</term>
-              <description>{клавиши PGUP}</description>
+              <description>{КЛАВИШИ PGUP}</description>
             </item>
             <item>
               <term>ВОЗВРАЩАЕТ</term>
-              <description>{возврата}</description>
+              <description>{ВОЗВРАТА}</description>
             </item>
             <item>
-              <term>Стрелка вправо</term>
+              <term>СТРЕЛКА ВПРАВО</term>
               <description>{ПРАВО}</description>
             </item>
             <item>
@@ -10492,15 +10551,15 @@
               <description>{SCROLLLOCK}</description>
             </item>
             <item>
-              <term>ВКЛАДКА</term>
-              <description>{ВКЛАДКИ}</description>
+              <term>TAB</term>
+              <description>ВКЛАДКА "{"}</description>
             </item>
             <item>
-              <term>Стрелка вверх</term>
-              <description>{копирование}</description>
+              <term>СТРЕЛКА ВВЕРХ</term>
+              <description>{КОПИРОВАНИЕ}</description>
             </item>
           </list>
-          <para>Также можно указать сочетание клавиш с SHIFT и/или CTRL и ALT. Используйте следующую таблицу, чтобы задать ключ, в сочетании с другой ключ или ключи.</para>
+          <para>Также можно задать сочетание клавиш с SHIFT и/или CTRL и ALT. Чтобы указать ключ, в сочетании с другой ключ или ключи, используйте следующую таблицу.</para>
           <list type="table">
             <item>
               <term>SHIFT</term>
@@ -10777,7 +10836,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Это свойство соответствует параметру Показывать вкладку разработчика в ленте флажок в диалоговом окне Параметры Excel.</para>
+          <para>Это свойство соответствует Показывать вкладку разработчика в ленте флажок в диалоговом окне Параметры Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -11197,7 +11256,7 @@
         <summary>Возвращает или задает имя стандартного шрифта.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>С помощью этого свойства изменить шрифт, изменения не вступают в силу только после перезапуска Microsoft Excel.</para>
+          <para>Если изменить шрифт с помощью этого свойства, изменения не вступят в силу только после перезапуска Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -11237,7 +11296,7 @@
         <summary>Возвращает или задает обычного размера шрифта, в точках.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Обычного размера шрифта изменить с помощью этого свойства, изменения не вступают в силу только после перезапуска Microsoft Excel.</para>
+          <para>С помощью этого свойства, чтобы изменить обычного размера шрифта, изменения не вступят в силу только после перезапуска Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -11308,7 +11367,7 @@
         <summary>Возвращает или задает текст в строке состояния.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Данное свойство возвращает <b>значение False</b> , если в Microsoft Excel есть управления в строке состояния. Чтобы восстановить текст в строке состояния по умолчанию, задайте для свойства значение <b>False</b>; Это работает даже в том случае, если в строке состояния скрыта.</para>
+          <para>Данное свойство возвращает <b>значение False</b> , если в Microsoft Excel есть управления в строке состояния. Чтобы восстановить текст в строке состояния по умолчанию, задайте для свойства значение <b>False</b>; Это работает даже в том случае, если скрыта в строке состояния.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -11404,7 +11463,7 @@
         <summary>Возвращает вызвана ячейки пользовательской функции в качестве <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Следует не доступ к свойствам или методам объекта <b>Range</b> внутри пользовательской функции. Пользователи могут кэшировать объекта <b>Range</b> для дальнейшего использования и выполнить дополнительные действия по завершении пересчета.</para>
+          <para>Пользователи должны не получить доступ к свойствам или методам объекта <b>Range</b> внутри пользовательской функции. Пользователи могут кэшировать объекта <b>Range</b> для дальнейшего использования и выполнить дополнительные действия по завершении пересчета.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -11438,8 +11497,8 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект, представляющий книгу, где выполняется текущий код макроса.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство используется для ссылки на книги, содержащей код макроса. <b>ThisWorkbook</b> является единственным способом для ссылки на добавить в книге из внутри самого надстройки. Свойство <b>ActiveWorkbook</b> не возвращает книги надстройки; Возвращает книгу, вызов надстройки. <see cref="P:Microsoft.Office.Interop.Excel._Application.Workbooks" /> Свойство могут завершиться с ошибкой, так как имя книги, вероятно, изменил во время создания надстройки <b>ThisWorkbook</b> всегда возвращает рабочей книги, в котором выполняется код.</para>
-          <para>Это свойство можно использовать только в Excel. Его нельзя использовать для доступа к книге из любого другого приложения,.</para>
+          <para>Это свойство используется для ссылки на книги, содержащей код макроса. <b>ThisWorkbook</b> является единственным способом для ссылки на добавить в книге из внутри самого надстройки. Свойство <b>ActiveWorkbook</b> не возвращает книги надстройки; Возвращает книгу, вызов надстройки. <see cref="P:Microsoft.Office.Interop.Excel._Application.Workbooks" /> Свойство могут завершиться с ошибкой, так как имя книги, вероятно, изменил во время создания надстройки. <b>ThisWorkbook</b> всегда возвращает рабочей книги, в котором выполняется код.</para>
+          <para>Это свойство можно использовать только в Excel. Его нельзя использовать для доступа к книге из любого другого приложения.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -11910,11 +11969,11 @@
         <value>
           <b>значение true,</b> Если Excel позволяет пользовательских функций в надстроек XLL для запуска на вычислительном кластере; в противном случае — <b>false</b>.</value>
         <remarks>
-          <para>Чтение и запись.</para>
+          <para>Для чтения и записи.</para>
           <para>
             <b>значение true,</b> Если Excel позволяет пользовательских функций в надстроек XLL для запуска на вычислительном кластере; в противном случае — <b>false</b>. Параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.UseClusterConnector" /> свойство соответствует Разрешить пользовательские функции XLL для запуска на compute cluster флажок в разделе формул в категории Дополнительно диалогового окна Параметры Excel.</para>
           <para>
-            <b>Примечание</b>: Включение <see cref="P:Microsoft.Office.Interop.Excel._Application.UseClusterConnector" /> свойства, необходимо установить соединитель кластера высокопроизводительных вычислительных систем (HPC). Соединитель кластера позволяет выполнять функции XLL кластера safe удаленно в кластере высокопроизводительных вычислительных СИСТЕМ для повышения производительности.</para>
+            <b>Примечание</b>: Включение <see cref="P:Microsoft.Office.Interop.Excel._Application.UseClusterConnector" /> свойства, необходимо установить соединитель кластера высокопроизводительных вычислительных систем (HPC). Соединитель кластера позволяет запускать функции XLL кластера safe удаленно в кластере высокопроизводительных вычислительных СИСТЕМ для повышения производительности.</para>
           <para>После настройки <see cref="P:Microsoft.Office.Interop.Excel._Application.UseClusterConnector" /> свойства, используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.ClusterConnector" /> свойство для указания соединитель кластера высокопроизводительных вычислительных СИСТЕМ для использования.</para>
           <para></para>
         </remarks>
@@ -11978,7 +12037,7 @@
           <b>Значение true,</b> Если приложение является видимым или создания или работы пользователя. <b>Значение false,</b> Если создан или работы приложения программным путем с помощью функции <b>GetObject</b> или <b>CreateObject</b> и приложение является скрытым.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Когда <b>параметр UserControl</b> присвоено <b>значение False</b> для объекта, этот объект освобождается после выхода последнего программный ссылку на объект. Если это свойство имеет <b>значение False</b>, Microsoft Excel завершает работу после выхода последнего объекта в сеансе.</para>
+          <para>Если <b>параметр UserControl</b> присвоено <b>значение False</b> для объекта, этот объект освобождается после выхода последнего программный ссылку на объект. Если это свойство имеет <b>значение False</b>, Microsoft Excel завершает работу после выхода последнего объекта в сеансе.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -12265,7 +12324,7 @@
         <returns>To be added.</returns>
         <remarks>
           <para>
-            <b>Важно</b>: метод <b>Wait</b> , как приостановить все действия, выполненные с Microsoft Excel и может помешать во время <b>ожидания</b> фактически для выполнения других операций на вашем компьютере. Тем не менее, обрабатывает фона, такие как печати и пересчет продолжить.</para>
+            <b>Важно</b>: метод <b>Wait</b> , как приостановить все действия, выполненные с Microsoft Excel и может помешать во время <b>ожидания</b> фактически для выполнения других операций на вашем компьютере. Тем не менее фона обрабатывает, такие как печати и пересчет продолжить.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -12470,10 +12529,10 @@
           <para>
             <b>XlWindowState</b> может иметь одно из следующих констант <b>XlWindowState</b> :</para>
           <para>
-            <b>xlNormal</b>
+            <b>xlMaximized</b>
           </para>
           <para>
-            <b>xlMaximized</b>
+            <b>xlNormal</b>
           </para>
           <para>
             <b>xlMinimized</b>
@@ -12508,7 +12567,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbooks" /> коллекции, представляющей всех открытых книг.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Коллекции, возвращаемой свойством <b>книг</b> сюда не включены открытых надстроек, представляющие собой особый тип скрытую книгу. Тем не менее, можно вернуть одной open надстройки, если вы знаете имя файла. Например, возвращает Workbooks("Oscar.xla") open надстройки с именем «Oscar.xla» как объект <b>книги</b> .</para>
+          <para>Коллекции, возвращаемой свойством <b>книг</b> сюда не включены открытых надстроек, представляющие собой особый тип скрытую книгу. Тем не менее, можно вернуть одной open надстройки, если вы знаете имя файла. Например Workbooks("Oscar.xla") возвращает open надстройки с именем «Oscar.xla» как объект <b>книги</b> .</para>
           <para></para>
         </remarks>
       </Docs>
@@ -12567,7 +12626,7 @@
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекции, представляющей всех листов в активной рабочей книги.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Это свойство не возвращает листы макросов; используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.Excel4MacroSheets" /> свойство или <see cref="P:Microsoft.Office.Interop.Excel._Application.Excel4IntlMacroSheets" /> свойство для возвращения этих листов.</para>
+          <para>Это свойство не возвращает листы макросов; Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.Excel4MacroSheets" /> свойство или <see cref="P:Microsoft.Office.Interop.Excel._Application.Excel4IntlMacroSheets" /> свойство для возвращения этих стилей.</para>
           <para></para>
         </remarks>
       </Docs>

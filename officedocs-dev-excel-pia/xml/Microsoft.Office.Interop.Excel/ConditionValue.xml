@@ -1,10 +1,10 @@
 <Type Name="ConditionValue" FullName="Microsoft.Office.Interop.Excel.ConditionValue">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a502761111afad4e3e8a449a28ce61efad23c0b4" />
+    <Meta Name="ms.openlocfilehash" Value="81c793a0733604f15df8956de448166bd0681dac" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20587313" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ConditionValue" />
@@ -32,7 +32,7 @@
     <summary>Представляет способ оценки Минимальная строку или дольше строку для данных панели правила условного форматирования.</summary>
     <remarks>
       <para>
-        <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> Возвращается объект с помощью <see cref="P:Microsoft.Office.Interop.Excel.Databar.MaxPoint" /> или <see cref="P:Microsoft.Office.Interop.Excel.Databar.MinPoint" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Databar" /> объект.</para>
+        <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> Возвращается объект с помощью <see cref="P:Microsoft.Office.Interop.Excel.Databar.MaxPoint" /> или <see cref="P:Microsoft.Office.Interop.Excel.Databar.MinPoint" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Databar" /> объекта.</para>
       <para>Тип оценки значения по умолчанию (наименьшее значение для панели минимальная) и максимальное значение для панели дольше можно изменить с помощью <see cref="M:Microsoft.Office.Interop.Excel.ConditionValue.Modify(Microsoft.Office.Interop.Excel.XlConditionValueTypes,System.Object)" /> метод.</para>
       <para></para>
     </remarks>
@@ -98,7 +98,7 @@
           <see cref="F:Microsoft.Office.Interop.Excel.XlCreator.xlCreatorCode" />
         </value>
         <remarks>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -130,37 +130,43 @@
         <param name="newvalue">Значение, назначенное Минимальная или дольше гистограммы. В зависимости от <paramref name="newtype" /> аргумент, это можно указать номер телефона или формулу, вычисляющий значение числа.</param>
         <summary>Изменяет способ оценки дольше строку или минимальная строку для данных панели правила условного форматирования.</summary>
         <remarks>
-          <para>В следующей таблице описываются допустимые пороговые значения для каждого типа оценки.</para>
+          <para>Ниже перечислены допустимые пороговые значения для каждого типа оценки.</para>
           <list type="table">
             <item>
               <term>
                 <see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionLowestValue" />
-              </term>аргумент игнорируется
+              </term>
+              <description>аргумент игнорируется</description>
             </item>
             <item>
               <term>
                 <see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionHighestValue" />
-              </term>аргумент игнорируется
+              </term>
+              <description>аргумент игнорируется</description>
             </item>
             <item>
               <term>
                 <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueNumber" />
-              </term>любое число
+              </term>
+              <description>любой номер</description>
             </item>
             <item>
               <term>
                 <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercent" />
-              </term>любое число в диапазоне от 0 до 100 
+              </term>
+              <description>любое число в диапазоне от 0 до 100 </description>
             </item>
             <item>
               <term>
                 <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercentile" />
-              </term>любое число в диапазоне от 0 до 100
+              </term>
+              <description>любое число в диапазоне от 0 до 100</description>
             </item>
             <item>
               <term>
                 <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueFormula" />
-              </term>формулы, Возвращает одно число
+              </term>
+              <description>Формула, которая возвращает одно число</description>
             </item>
           </list>
           <para></para>
@@ -256,7 +262,7 @@
         </value>
         <remarks>
           <para>Можно задать значение только в том случае, если <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Type" /> условного форматирования задано значение одной из следующих констант: <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueNumber" />, <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercent" />, <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercentile" />, или <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueFormula" />.</para>
-          <para>, Если тип пороговое значение формулы, можно задать формулу в <b>строке</b>. Формула должен возвращать одно число.</para>
+          <para>Если тип пороговое значение формулы, можно задать формулу в <b>строке</b>. Формула должен возвращать одно число.</para>
           <para></para>
         </remarks>
       </Docs>

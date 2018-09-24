@@ -1,10 +1,10 @@
 <Type Name="ServerViewableItems" FullName="Microsoft.Office.Interop.Excel.ServerViewableItems">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c2be0679f4fcc0da628343344a5b5b0cce8a4549" />
+    <Meta Name="ms.openlocfilehash" Value="6a49378a5a672e109bb0d1469a510a5d3faf8153" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20579452" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ServerViewableItems : System.Collections.IEnumerable" />
@@ -37,7 +37,7 @@
     <remarks>
       <para>Это — это набор ссылок на объекты в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. Только объекты этой коллекции будут отображаться на сервере.  По умолчанию отображается рабочей книги целиком (включая все листы).  </para>
       <para>Только один <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> может существовать объект <see cref="T:Microsoft.Office.Interop.Excel._Workbook" />.  В этом семействе не индексируются по имени, так как нет гарантии того, что имена объектов, которые помечены как доступные для просмотра на сервере уникальны.</para>
-      <para>Пользовательского интерфейса в Excel, можно просмотреть коллекцию объектов, которые помечены как доступные для просмотра на сервере в диалоговом окне Параметры служб Excel.</para>
+      <para>В пользовательском интерфейсе Excel можно просмотреть коллекцию объектов, которые помечены как доступные для просмотра на сервере в диалоговом окне Параметры служб Excel.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -105,7 +105,10 @@
         <returns>
           <b>Объект</b>
         </returns>
-        <remarks>При попытке добавить сочетание листов и именованные элементы для <para><see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> семейства сайтов, возвращается ошибка.  <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> Семейства сайтов может содержать ссылки только на таблицы или ссылок только на именованные элементы, но не оба в одном вызове.  </para><para></para></remarks>
+        <remarks>
+          <para>При попытке добавить сочетание листов и именованные элементы для <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> семейства сайтов, возвращается ошибка.  <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> Семейства сайтов может содержать ссылки только на таблицы или ссылок только на именованные элементы, но не оба в одном вызове.  </para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -136,7 +139,7 @@
           <see cref="T:Microsoft.Office.Interop.Excel._Application" />
         </value>
         <remarks>
-          <para>При использовании без квалификатор объекта, данное свойство возвращает приложение Microsoft Office Excel. При использовании с квалификатор объекта, это свойство возвращает объект <b>приложения</b> , представляющего создателя указанный объект.</para>
+          <para>При использовании без квалификатор объекта, данное свойство возвращает приложение Microsoft Office Excel. При использовании с квалификатор объекта, данное свойство возвращает объект <b>приложения</b> , представляющего создателя указанный объект.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -199,7 +202,7 @@
           <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
         </value>
         <remarks>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>

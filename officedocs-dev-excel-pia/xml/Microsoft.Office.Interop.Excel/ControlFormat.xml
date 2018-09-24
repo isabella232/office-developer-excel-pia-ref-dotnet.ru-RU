@@ -1,10 +1,10 @@
 <Type Name="ControlFormat" FullName="Microsoft.Office.Interop.Excel.ControlFormat">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="482ee10d764810f337717c2623a0421ee3669708" />
+    <Meta Name="ms.openlocfilehash" Value="d88e80486b6e3c8db83afbc148105146372d3b01" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20578283" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ControlFormat" />
@@ -32,7 +32,7 @@
     <summary>Содержит свойства элемента управления Microsoft Excel.</summary>
     <remarks>
       <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Shape.ControlFormat" /> свойство возвращает объект <b>ControlFormat</b> .</para>
-      <para>Если фигуры не элемент управления, свойство <b>ControlFormat</b> завершается неудачно, и, если элемент управления не будет поле со списком, <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойство возникает ошибка.</para>
+      <para>Если фигура не элемент управления, свойство <b>ControlFormat</b> завершается неудачно, и, если элемент управления не будет поле со списком, <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойство возникает ошибка.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -161,8 +161,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="DropDownLines">
@@ -288,8 +290,8 @@
         <summary>Возвращает или задает диапазон ячеек, связанной со значением элемента управления.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>, Если значение в ячейке, элемент управления использует это значение. Аналогичным образом, чтобы изменить значение элемента управления, это значение также помещается в ячейке.</para>
-          <para>Этого свойства нельзя использовать вместе с multiselect списки.</para>
+          <para>Если значение в ячейке, элемент управления использует это значение. Аналогичным образом Чтобы изменить значение элемента управления, это значение также помещается в ячейке.</para>
+          <para>Это свойство нельзя использовать вместе с multiselect списков.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -324,7 +326,7 @@
         <summary>Возвращает или задает текст записей в указанном списке или поле со списком, как массив строк, или возвращает или задает с одной текстовой записью. Если в списке нет ни одной записи, возникает ошибка.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этого свойства очищает диапазона, указанного операторами <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойство.</para>
+          <para>Установка для этого свойства очищает диапазона, указанного операторами <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойство.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -389,7 +391,7 @@
         <summary>Возвращает или задает диапазон ячеек, используемый для заполнения указанного поля со списком.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Этого свойства уничтожает любой существующий список в поле со списком.</para>
+          <para>Установка для этого свойства уничтожает любой существующий список в поле со списком.</para>
           <para>Microsoft Excel считывает содержимое каждой ячейки в диапазоне и вставляет значения ячеек в поле со списком. Изменения в диапазоне ячеек, отслеживаются в списке.</para>
           <para>Если список в поле со списком был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.AddItem(System.String,System.Object)" /> метод, данное свойство возвращает пустую строку (»»).</para>
           <para></para>
@@ -556,10 +558,10 @@
         <summary>Возвращает или задает режим выбора из указанного поля со списком. Может иметь одно из следующих констант: <b>xlNone</b>, <b>xlSimple</b>или <b>xlExtended</b>.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Выбор одного (<b>xlNone</b>) разрешает только один элемент за раз, чтобы выбрать. Щелчок мышью или нажатие клавиши ПРОБЕЛ отменяет выбор и выбирает элемент для переходов.</para>
+          <para>Выбор одного (<b>xlNone</b>) разрешает только один элемент за раз, чтобы выбрать. Щелчок мышью или нажатие клавиши ПРОБЕЛ отменяет выбор и выделение выбранного элемента.</para>
           <para>Простой multiselect (<b>xlSimple</b>) включает или выключает выделение элемента в списке щелкните мышью или нажмите клавишу ПРОБЕЛ, когда фокус находится на элементе. Этот режим подходит для списков выбора, в которых будут часто выбрать несколько элементов.</para>
-          <para>Extended multiselect (<b>xlExtended</b>) обычно действует как поля со списком множественного выбора. При выборе элемента отменить другие выбранные элементы. Если при щелчок мышью или нажатие клавиши со стрелкой удерживайте нажатой клавишу SHIFT, следует выбрать элементы последовательно в текущего элемента. Удерживая нажатой клавишу CTRL при щелчке мышью, добавлении отдельных элементов в список. В этом режиме можно использовать, когда несколько элементов допускается, но не часто используемые.</para>
-          <para>Можно использовать <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.Value" /> или <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListIndex" /> свойство для возвращения и задания выбранного элемента в поле со списком выбирать.</para>
+          <para>Расширенные multiselect (<b>xlExtended</b>) обычно действует как поля со списком множественного выбора. При выборе элемента отменить другие выбранные элементы. Если при щелчок мышью или нажатие клавиши со стрелкой удерживайте нажатой клавишу SHIFT, следует выбрать элементы последовательно в текущего элемента. Удерживая нажатой клавишу CTRL при щелчке мышью, добавлении отдельных элементов в список. Этот режим подходит в тех случаях, когда несколько элементов допускается, но не часто используется.</para>
+          <para>Можно использовать <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.Value" /> или <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListIndex" /> свойство для возвращения и задания выбранного элемента в поле со списком одного выбора.</para>
           <para>Невозможно связать multiselect списков с помощью <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.LinkedCell" /> свойство.</para>
           <para></para>
         </remarks>
@@ -678,7 +680,7 @@
         <summary>Удаляет один или несколько элементов из списка или поля со списком.</summary>
         <remarks>
           <para>Если указанный объект заливки диапазон, определенное для его, этот метод не удается выполнить.</para>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.RemoveAllItems" /> метод, чтобы удалить все записи из списка или поля со списком Microsoft Excel.</para>
+          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.RemoveAllItems" /> метод, чтобы удалить все записи из списка или поля со списком Microsoft Excel.</para>
           <para></para>
         </remarks>
       </Docs>

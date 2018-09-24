@@ -1,10 +1,10 @@
 <Type Name="Scenarios" FullName="Microsoft.Office.Interop.Excel.Scenarios">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="643f9e1ff16bc3d2d264dd9c590ffbf0e6a728ad" />
+    <Meta Name="ms.openlocfilehash" Value="ae2d83b0cebf35ca68c44e96b1d08c3bd0e82529" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20584681" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface Scenarios : System.Collections.IEnumerable" />
@@ -36,9 +36,8 @@
     <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Scenario" /> объектов на указанный лист. Сценарий — это группа входных значений (называется <paramref name="changing cells" />), который с именем и сохранения.</summary>
     <remarks>
       <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Scenarios(System.Object)" /> метод для возврата коллекции <b>сценариев</b> .</para>
-      <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.Scenarios.Add(System.String,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод Создание сценария и добавляет его в коллекцию.</para>
-      <para>
-        <b>Сценариев</b>(<paramref name="index" />), где <paramref name="index" /> — сценарий имя или номер индекса, чтобы возвратить объект <b>сценария</b> .</para>
+      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Scenarios.Add(System.String,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод Создание сценария и добавляет его в коллекцию.</para>
+      <para>Использование <b>сценариев</b>(<paramref name="index" />), где <paramref name="index" /> — сценарий имя или номер индекса, чтобы возвратить объект <b>сценария</b> .</para>
       <para></para>
     </remarks>
   </Docs>
@@ -79,7 +78,10 @@
         <param name="Hidden">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы скрыть сценария. Значение по умолчанию — <b>False</b>.</param>
         <summary>Создает новый сценарий и добавляет его в список сценариев, доступных для текущего листа.</summary>
         <returns>To be added.</returns>
-        <remarks>Сценарий A <para>имя должно быть уникальным; Microsoft Excel, приведет к ошибке при попытке создать сценарий с именем, которое уже используется.</para><para></para></remarks>
+        <remarks>
+          <para>Имя сценария должно быть уникальным; Microsoft Excel приводит к ошибке при попытке создать сценарий с именем, которое уже используется.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -194,8 +196,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -286,7 +290,7 @@
         <summary>Объединяет сценарии из другой лист в <see cref="T:Microsoft.Office.Interop.Excel.Scenarios" /> семейства сайтов.</summary>
         <returns>To be added.</returns>
         <remarks>
-          <para>Указано значение объединенного диапазона в ячейке диапазона левый верхний угол.</para>
+          <para>В ячейке диапазона левый верхний угол заданное значение объединенного диапазона.</para>
           <para></para>
         </remarks>
       </Docs>

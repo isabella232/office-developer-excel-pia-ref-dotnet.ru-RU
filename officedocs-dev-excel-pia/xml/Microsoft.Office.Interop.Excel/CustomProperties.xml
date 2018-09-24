@@ -1,10 +1,10 @@
 <Type Name="CustomProperties" FullName="Microsoft.Office.Interop.Excel.CustomProperties">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="564b2e7e7736a68bf5b30982c78ebd00481f015e" />
+    <Meta Name="ms.openlocfilehash" Value="5fa7755a939da1d185231965c1c4aa599e110df3" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20584464" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface CustomProperties : System.Collections.IEnumerable" />
@@ -36,9 +36,9 @@
     <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Excel.CustomProperty" /> объекты, которые представляют дополнительной информации. Сведения можно использовать в качестве метаданных для XML.</summary>
     <remarks>
       <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SmartTag" /> объекта, или <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объекта, чтобы вернуть коллекцию <b>настраиваемые свойства</b> .</para>
-      <para>После возвращается коллекция <b>настраиваемые свойства</b> , можно добавить метаданных в листы и смарт-тегов в зависимости от того, что выбран для работы с.</para>
-      <para>Добавление метаданных с листом, используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> свойства с <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод.</para>
-      <para>Добавление метаданных для смарт-тег, используйте <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойства с помощью метода <b>Add</b> .</para>
+      <para>После возвращения коллекции <b>настраиваемые свойства</b> , можно добавить метаданные для таблиц и смарт-тегов в зависимости от того, что выбран для работы с.</para>
+      <para>Чтобы добавить метаданных с листом, используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> свойства с <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод.</para>
+      <para>Чтобы добавить метаданных смарт-тег, используйте <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойства с помощью метода <b>Add</b> .</para>
       <para></para>
     </remarks>
   </Docs>
@@ -192,8 +192,10 @@
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
         <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454 C.</para> Свойство 
-          <para><b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para><para></para></remarks>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
+          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">

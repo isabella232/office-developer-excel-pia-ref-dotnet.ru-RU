@@ -1,10 +1,10 @@
 <Type Name="ODBCConnection" FullName="Microsoft.Office.Interop.Excel.ODBCConnection">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e5e615f4da82b798a1e4b0d3975b38e694467344" />
+    <Meta Name="ms.openlocfilehash" Value="492ad873be2d6a4f1713ad14d80112f787219f44" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20578052" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface ODBCConnection" />
@@ -31,7 +31,7 @@
   <Docs>
     <summary>Представляет подключение к ODBC.</summary>
     <remarks>
-      <para>Подключения ODBC могут храниться в книге Excel.  При открытии книги Micrososft Excel Excel создает в памяти копию подключения ODBC, известных как <see cref="T:Microsoft.Office.Interop.Excel.ODBCConnection" /> объект.</para>
+      <para>Подключения ODBC могут храниться в книге Excel.  При открытии книги Micrososft Excel Excel создает в памяти копию подключения ODBC, известных как <see cref="T:Microsoft.Office.Interop.Excel.ODBCConnection" /> объекта.</para>
       <para>
         <see cref="T:Microsoft.Office.Interop.Excel.ODBCConnection" /> Объект содержит сведения, связанные с подключением, такие как имя сервера для подключения и имя объекты открывать их на этом сервере.  Кроме того <see cref="T:Microsoft.Office.Interop.Excel.ODBCConnection" /> объекта также может включать учетные данные проверки подлинности, или команды, который будет передан на сервер и выполнять (например, инструкции SELECT для выполнения SQL Server).</para>
       <para></para>
@@ -70,7 +70,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>, Если это свойство имеет <b>значение True</b>, файл подключения будет использоваться для установления подключения к источнику данных.  Если подключение, встроенном в книге отличается от на внешний файл подключения, внедренное подключение будет игнорироваться и на внешний файл подключения будет считаться только версию.</para>
+          <para>Если это свойство имеет <b>значение True</b>, файл подключения будет использоваться для установления подключения к источнику данных.  Если подключение, встроенном в книге отличается от на внешний файл подключения, внедренное подключение будет игнорироваться и на внешний файл подключения будет считаться только версию.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -164,7 +164,7 @@
       <Docs>
         <summary>Отменяет все операции обновления хода выполнения для указанного подключения ODBC.</summary>
         <remarks>
-          <para>Использования <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Refreshing" /> свойства, чтобы определить, будет ли операция обновления в данный момент.</para>
+          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Refreshing" /> свойства, чтобы определить, будет ли операция обновления в данный момент.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -200,7 +200,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>Следует использовать <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> вместо свойства <b>SQL</b> , который теперь существует в первую очередь для обеспечения совместимости с предыдущими версиями Microsoft Excel. Если вы используете оба свойства <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> значение свойства имеет преимущество.</para>
+          <para>Следует использовать <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> вместо свойства <b>SQL</b> , который теперь существует в первую очередь для обеспечения совместимости с предыдущими версиями Microsoft Excel. Если вы используете оба свойства <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> приоритет имеет значение свойства.</para>
           <para>
             <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandType" /> Свойство описывает значение <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> свойства.</para>
           <para></para>
@@ -237,7 +237,10 @@
         <value>
           <see cref="T:Microsoft.Office.Interop.Excel.XlCmdType" />
         </value>
-        <remarks>Описывает <para>константу, возвращенный или задать значение <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> свойства. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlCmdType.xlCmdSql" />. </para><para></para></remarks>
+        <remarks>
+          <para>Константа, возвращаются или задаются в описывает значение <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.CommandText" /> свойства. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlCmdType.xlCmdSql" />. </para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Connection">
@@ -271,7 +274,7 @@
           <b>Объект</b>
         </value>
         <remarks>
-          <para>Параметр <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> свойство не сразу же инициировать подключения к источнику данных. Необходимо использовать <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод для подключения и извлечения данных.</para>
+          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> свойство не сразу же инициировать подключения к источнику данных. Необходимо использовать <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод для подключения и извлечения данных.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -304,7 +307,7 @@
           <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
         </value>
         <remarks>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -342,7 +345,7 @@
         </value>
         <remarks>
           <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.RefreshOnFileOpen" /> Свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.EnableRefresh" /> задано значение <b>False</b>. Для источников данных OLAP, назначить этому свойству значение <b>False</b> отключает обновлений.</para>
+            <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.RefreshOnFileOpen" /> Свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.EnableRefresh" /> задано значение <b>False</b>. Для источников данных OLAP назначить этому свойству значение <b>False</b> отключает обновлений.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -401,12 +404,12 @@
         <summary>Обновляет подключения ODBC.</summary>
         <remarks>
           <para>Для подключения к источнику данных ODBC, Microsoft Excel использует строку подключения, указанного идентификатором <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> свойство. Если указанная строка подключения отсутствуют необходимые значения, чтобы запрашивать у пользователя для необходимой информации отображается диалоговых окон. Если <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство имеет <b>значение False</b>, диалоговые окна не отображаются и <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> не удается выполнить метод за исключением недостаточно сведения о подключении.</para>
-          <para>После Microsoft Excel делает успешное подключение, он сохраняет выполненную строку связи, чтобы запросы не будет отображаться для последующих вызовов <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод во время текущего сеанса редактирования. Строка подключения завершенных можно получить с помощью проверки значения <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> свойство.</para>
-          <para>Проверяется после подключения к базе данных SQL-запроса. Если запрос не является допустимым, <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод выдает исключение SQL синтаксическая ошибка.</para>
-          <para>, Если запрос необходимы параметры, <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> семейства сайтов должен быть инициализирован с помощью параметра сведения о привязке перед <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> вызывается метод. Если связаны недостаточно параметров <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> не удается выполнить метод за исключением параметра ошибки. Если запрос на их значения параметров, диалоговые окна отображаются для пользователя независимо от того, параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство. Если пользователь отменил диалоговое окно параметров, <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод останавливает и возвращает <b>значение False</b>. Если дополнительные параметры связываются с <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> семейства сайтов, эти дополнительные параметры игнорируются.</para>
+          <para>После Microsoft Excel создает успешное соединение хранит выполненную строку связи, чтобы запросы не будет отображаться для последующих вызовов <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод во время текущего сеанса редактирования. Строка подключения завершенных можно получить с помощью проверки значения <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> свойство.</para>
+          <para>После подключения к базе данных SQL-запрос проходит проверку. Если запрос не является допустимым, <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод выдает исключение SQL синтаксическая ошибка.</para>
+          <para>Если запрос необходимы параметры, <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> семейства сайтов должен быть инициализирован с помощью параметра сведения о привязке перед <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> вызывается метод. Если связаны недостаточно параметров <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> не удается выполнить метод за исключением параметра ошибки. Если запрос на их значения параметров, диалоговые окна отображаются для пользователя независимо от того, параметр <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> свойство. Если пользователь отменил диалоговое окно параметров, <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> метод останавливает и возвращает <b>значение False</b>. Если дополнительные параметры связываются с <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> семейства сайтов, эти дополнительные параметры игнорируются.</para>
           <para>
-            <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> Метод возвращает <b>значение True</b> , если запрос будет успешно завершена или работы; он возвращает <b>значение False</b> , если пользователь отменил диалоговое окно подключения или параметр.</para>
-          <para>Для просмотра, превышает ли число извлеченных строк число строк, доступные в рабочем листе, проверьте <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.FetchedRowOverflow" /> свойство. Это свойство инициализируется каждый раз <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> вызывается метод.</para>
+            <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> Метод возвращает <b>значение True,</b> Если запрос будет успешно завершена или работы; она возвращает <b>значение False</b> , если пользователь отменил диалоговое окно подключения или параметр.</para>
+          <para>Чтобы просмотреть, превышает ли число извлеченных строк число строк, доступные в рабочем листе, проверьте <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.FetchedRowOverflow" /> свойство. Это свойство инициализируется каждый раз <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.Refresh" /> вызывается метод.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -439,7 +442,7 @@
           <b>DateTime</b>
         </value>
         <remarks>
-          <para>Для источников данных OLAP, это свойство обновляется после каждого запроса.</para>
+          <para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -473,7 +476,7 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Использования <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.CancelRefresh" /> метод Отмена запросов в фоновом режиме.</para>
+          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.ODBCConnection.CancelRefresh" /> метод Отмена запросов в фоновом режиме.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -546,7 +549,9 @@
           <b>Integer</b>
         </value>
         <remarks>
-          <para>Установка периода для нуль (0) отключает автоматические обновления по времени и соответствует назначить этому свойству значение <b>Null</b>.  Значение <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.RefreshPeriod" /> свойства может быть целое число от 0 до 32767.</para>
+          <para>Установка периода для нуль (0) отключает автоматические обновления по времени и эквивалентно назначить этому свойству значение <b>Null</b>.
+
+Значение <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.RefreshPeriod" /> свойства может быть целое число от 0 до 32767.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -582,8 +587,8 @@
           <see cref="T:Microsoft.Office.Interop.Excel.XlRobustConnect" />
         </value>
         <remarks>
-          <para>При использовании надежное подключение к Microsoft Excel не удается установить соединение с помощью сведения о подключении к книге, Excel будет установите флажок, если подключения к книге путь внешний файл подключения.  В этом случае Excel откройте на внешний файл подключения и попытайтесь подключиться, используя сведения, содержащиеся в на внешний файл подключения.  Если соединение можно установить после использования на внешний файл подключения, обновляют объект подключения рабочей книги Excel.  </para>
-          <para>Предоставляет надежную связь в сценариях, где отдел хранит и обновляет подключений в центральном расположении, позволяя книги пользователя автоматически получать те обновляется каждый раз, когда предыдущей версии не удается выполнить подключение (кэширования данных в книге). </para>
+          <para>При использовании надежную связь, когда Microsoft Excel не удается установить соединение с помощью сведения о подключении к книге Excel будет установите флажок, если подключения к книге путь внешний файл подключения.  В этом случае Excel откройте на внешний файл подключения и попытайтесь подключиться, используя сведения, содержащиеся в на внешний файл подключения.  Если соединение можно установить после использования на внешний файл подключения, обновляют объект подключения рабочей книги Excel.  </para>
+          <para>Это обеспечивает надежную связь в сценариях, где отдел хранит и обновляет подключений в центральном расположении, позволяя книги пользователя автоматически получать те обновляется каждый раз, когда предыдущей версии (подключение) кэширования данных в книге) не удается выполнить. </para>
           <para></para>
         </remarks>
       </Docs>
@@ -651,7 +656,8 @@
           <b>Boolean</b>
         </value>
         <remarks>
-          <para>Это свойство используется в запросах OLE DB и ODBC, а также с сводные таблицы и QueryTables.</para>
+          <para>Это свойство используется в запросах OLE DB и ODBC, а также с сводные таблицы и QueryTables.
+</para>
           <para></para>
         </remarks>
       </Docs>
@@ -790,16 +796,16 @@
               <description>Ссылка на ячейку, как текст.</description>
             </item>
             <item>
-              <term>Внешнего источника данных</term>
-              <description>массив. Каждая строка состоит из строку подключения SQL с оставшиеся элементы как строки запроса, разбитым на сегменты 255 знаков.</description>
+              <term>Внешний источник данных</term>
+              <description>Массив. Каждая строка состоит из строку подключения SQL с оставшиеся элементы как строки запроса, разбитым на сегменты 255 знаков.</description>
             </item>
             <item>
               <term>Несколько диапазонов консолидации</term>
-              <description>двумерного массива. Каждая строка состоит из ссылки и его элементы, поле связанных страниц.</description>
+              <description>Двухмерный массив. Каждая строка состоит из ссылки и его элементы, поле связанных страниц.</description>
             </item>
             <item>
-              <term>Другой сводной</term>
-              <description>один из трех выше виды информации.</description>
+              <term>Другой отчет сводной таблицы</term>
+              <description>Один из трех выше виды информации.</description>
             </item>
           </list>
           <para>Это свойство недоступно для источников данных OLE DB.</para>
@@ -838,7 +844,7 @@
           <b>Строка</b>
         </value>
         <remarks>
-          <para>Для источников данных на основе файла (например, Access) <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.SourceDataFile" /> свойство содержит полный путь к исходному файлу данных. Он имеет значение null для источников данных на стороне сервера (например, SQL Server). <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.SourceDataFile" /> Свойство имеет значение null, если <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> свойство изменяется программным путем.</para>
+          <para>Для источников данных на основе файла (например, Access) <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.SourceDataFile" /> свойство содержит полный путь к исходному файлу данных. Он имеет значение null для источников данных на стороне сервера (например, SQL Server). <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.SourceDataFile" /> Свойство имеет значение null, если <see cref="P:Microsoft.Office.Interop.Excel.ODBCConnection.Connection" /> программным путем изменения свойства.</para>
           <para></para>
         </remarks>
       </Docs>

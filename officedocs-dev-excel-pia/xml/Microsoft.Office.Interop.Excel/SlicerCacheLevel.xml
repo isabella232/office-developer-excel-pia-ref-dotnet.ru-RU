@@ -1,10 +1,10 @@
 <Type Name="SlicerCacheLevel" FullName="Microsoft.Office.Interop.Excel.SlicerCacheLevel">
   <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="43900a2e801ac6164f29d0632611e43dbce1a178" />
+    <Meta Name="ms.openlocfilehash" Value="3e50741c9a2b1462398bc2cd7a9e64c639d93725" />
     <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
     <Meta Name="ms.translationtype" Value="MT" />
     <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/03/2018" />
+    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
     <Meta Name="ms.locfileid" Value="20587271" />
   </Metadata>
   <TypeSignature Language="C#" Value="public interface SlicerCacheLevel" />
@@ -31,7 +31,7 @@
   <Docs>
     <summary>Представляет уровень иерархии в источнике данных OLAP, которому выполняется фильтрация срез.</summary>
     <remarks>
-      <para>При использовании среза для фильтрации источника данных OLAP, кэш срез, связанным с ним может содержать несколько уровней иерархии из источника данных. Использование <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevels" /> коллекции родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект для доступа к <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекты, которые представляют эти уровни иерархии.</para>
+      <para>Когда среза используется для фильтрации источника данных OLAP, кэш срез, связанным с ним может содержать несколько уровней иерархии из источника данных. Использование <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevels" /> коллекции родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект для доступа к <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекты, которые представляют эти уровни иерархии.</para>
       <para></para>
     </remarks>
   </Docs>
@@ -125,8 +125,8 @@
         <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
         <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
         <remarks>
-          <para>Только для чтения <b>длинное</b>.</para>
-          <para>, Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например, Microsoft Excel содержит код создателя XCEL.</para>
+          <para>Только для чтения <b>времени</b>.</para>
+          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
           <para></para>
         </remarks>
       </Docs>
@@ -160,10 +160,12 @@
         <summary>Получает или задает ли срез участвует в нескольких Фильтрация с использованием других срезов, совместно использующих один и тот же кэш среза и отображение перекрестных фильтрации.</summary>
         <value>Указывает, отображается ли срез участвует в перекрестные Фильтрация с использованием других срезов, которые совместно использовать тот же кэш срез и как кросс-фильтрации.</value>
         <remarks>
-          <para>Чтение и запись.</para>
-          <para>Если более одного срез связан с одной сводной таблицы, по умолчанию, если элемент или элементы, фильтровать по в один срез не имеющие соответствующих данных в другой срез, эти элементы будет недоступен. Например при наличии срез страны и состояние среза и выберите страны в страны срезов, все состояния в состояние срезов, которые не в том, что страны будет недоступна. Эта функция используется для ссылки на «перекрестное фильтрации».</para> Параметры 
-          <para>пользовательского интерфейса, которые соответствуют параметр <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> , свойство отображения элементов без данных и отображать элементы с данным последнего флажки отсутствуют в диалоговом окне Параметры среза. Установка <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithDataAtTop" /> соответствующий выбор обоих выделять пустые элементы без данных, а также отображать элементы без данных последнего флажки. Установка <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithNoData" /> соответствует выбору только выделять пустые элементы флажок Нет данных. Если снять оба флажка соответствует параметру <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerNoCrossFilter" />.</para> Фильтрация источников данных не OLAP срезы 
-          <para>(<see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />.<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" />  =  <b>значение false</b>) не поддерживаются <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта. Для фильтрации сводных таблиц срезы на основании диапазоны, списки и не OLAP реляционным источникам данных, используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объектов, вместо.</para><para></para></remarks>
+          <para>Для чтения и записи.</para>
+          <para>Если более одного срез связан с одной сводной таблицы, по умолчанию, если элемент или элементы, которые можно фильтровать по в один срез не имеющие соответствующих данных в другой срез, эти элементы будет недоступен. Например при наличии срез страны и состояние среза и выберите страны в страны срезов, все состояния в состояние срезов, которые не в том, что страны будет недоступна. Эта функция называется «перекрестное фильтрации».</para>
+          <para>Параметры пользовательского интерфейса, которые соответствуют параметр <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> , свойство отображения элементов без данных и отображать элементы с данным последнего флажки отсутствуют в диалоговом окне Параметры среза. Установка <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithDataAtTop" /> соответствующий выбор обоих выделять пустые элементы без данных, а также отображать элементы без данных последнего флажки. Установка <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithNoData" /> соответствует выбору только выделять пустые элементы флажок Нет данных. Если снять оба флажка соответствует параметру <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerNoCrossFilter" />.</para>
+          <para>Фильтрация источников данных не OLAP срезы (<see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />.<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false</b>) не поддерживаются <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта. Для фильтрации сводных таблиц срезы на основании диапазоны, списки и не OLAP реляционным источникам данных, используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> вместо этого объекта.</para>
+          <para></para>
+        </remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -317,8 +319,8 @@
         <summary>Получает или задает ли сортировка элементов в срез.</summary>
         <value>Указывает, сортируются ли элементы в срез.</value>
         <remarks>
-          <para>Чтение и запись.</para>
-          <para>По умолчанию этого свойства — это <b>xlDataSourceOrder</b> (1).</para>
+          <para>Для чтения и записи.</para>
+          <para>Значение по умолчанию этого свойства — <b>xlDataSourceOrder</b> (1).</para>
           <para></para>
         </remarks>
       </Docs>
@@ -350,7 +352,7 @@
         <value>Список элементов срез, включенные в данный момент в фильтре срез.</value>
         <remarks>
           <para>Только для чтения.</para>
-          <para>Список элементов срез возвращаются в виде строки уникальное имя многомерных Выражений. Если этот список пуст, срез не является фильтрация источника данных и всех заголовков отображаются как срез.</para>
+          <para>Список элементов срез возвращаются в виде строки уникальное имя многомерных Выражений. Если этот список пуст, срез не является фильтрация источника данных и отображается состояние всех заголовков срез установлен.</para>
           <para></para>
         </remarks>
       </Docs>
