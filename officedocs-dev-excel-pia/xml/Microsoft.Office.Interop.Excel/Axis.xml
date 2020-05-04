@@ -1,13 +1,5 @@
 <Type Name="Axis" FullName="Microsoft.Office.Interop.Excel.Axis">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d10d4e8e1ee2a7c304ba94c879df8f19e1748061" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20572935" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Axis" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d10d4e8e1ee2a7c304ba94c879df8f19e1748061" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572935" /></Metadata><TypeSignature Language="C#" Value="public interface Axis" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Axis" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Axis" />
   <TypeSignature Language="VB.NET" Value="Public Interface Axis" />
@@ -30,11 +22,9 @@
   </Attributes>
   <Docs>
     <summary>Представляет одну ось на диаграмме.</summary>
-    <remarks>
-      <para>Объект <b>оси</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Excel.Axes" /> семейства сайтов.</para>
-      <para>Использование <b>осей</b>(<paramref name="type, group" />) где тип — тип оси, а группа — группа оси для возврата объекта <b>оси</b> . <paramref name="Type" />может иметь одно из следующих значений <see cref="ff" /> констант: <b>xlCategory</b>, <b>xlSeries</b>или <b>xlValue</b>. <paramref name="Group" />может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>xlSecondary</b>. Дополнительные сведения можно <see cref="M:Microsoft.Office.Interop.Excel._Chart.Axes(System.Object,Microsoft.Office.Interop.Excel.XlAxisGroup)" /> метод.</para>
-      <para></para>
-    </remarks>
+    <remarks><para>Объект <b>Axis</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Axes" /> коллекции.</para>
+      <para>Используйте <b>оси</b>(<paramref name="type, group" />), где Type — это тип оси, а группа — группа осей, которая возвращает один объект <b>Axis</b> . <paramref name="Type" />может быть <see cref="ff" /> одной из следующих констант: <b>xlCategory</b>, <b>кслсериес</b>или <b>xlValue</b>. <paramref name="Group" />может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>кслсекондари</b>. Для получения дополнительных сведений обратитесь к <see cref="M:Microsoft.Office.Interop.Excel._Chart.Axes(System.Object,Microsoft.Office.Interop.Excel.XlAxisGroup)" /> методу.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -91,13 +81,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если оси значений пересечения оси категорий.</summary>
+        <summary><b>Значение true</b> , если ось значений пересекает ось категорий между категориями.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется только к категории осей, и он не используется для объемных диаграмм.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство применяется только к осям категорий и не применяется к объемным диаграммам.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AxisGroup">
@@ -125,10 +112,8 @@
       <Docs>
         <summary>Возвращает группу для указанной оси.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для объемных диаграмм действителен только <b>xlPrimary</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для объемных диаграмм допустимы только <b>xlPrimary</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AxisTitle">
@@ -154,7 +139,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.AxisTitle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AxisTitle" /> объект, представляющий заголовок указанного оси.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AxisTitle" /> объект, представляющий название указанной оси.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -185,13 +170,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTimeUnit</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает единицу для оси указанной категории.</summary>
+        <summary>Возвращает или задает базовую единицу измерений для указанной оси категории.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка для этого свойства не имеет видимого эффекта при <see cref="P:Microsoft.Office.Interop.Excel.Axis.CategoryType" /> свойства для указанного оси задано значение <b>xlCategoryScale</b>. Значение набора сохраняется, однако и, если свойство <b>CategoryType</b> имеет значение <b>xlTimeScale</b>.</para>
-          <para>Не удается установить это свойство для оси значений.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установка этого свойства не оказывает никакого действия, если <see cref="P:Microsoft.Office.Interop.Excel.Axis.CategoryType" /> для свойства указанной оси задано значение <b>кслкатегорискале</b>. Значение SET сохраняется, но вступает в силу, если для свойства <b>categoryType</b> задано значение <b>кслтимескале</b>.</para>
+          <para>Невозможно задать это свойство для оси значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BaseUnitIsAuto">
@@ -220,13 +203,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel выбирает соответствующие базовые единицы измерения для оси указанной категории. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel выбирает подходящие базовые единицы для указанной оси категорий. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Не удается установить это свойство для оси значений.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Невозможно задать это свойство для оси значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Border">
@@ -252,7 +232,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Border</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границы объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -283,13 +263,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает все имена категорий для указанной оси как массив текста.</summary>
+        <summary>Возвращает или задает все имена категорий указанной оси в виде текстового массива.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При установке этого свойства может быть задана на любой массив или <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, содержащий имена категорий.</para>
-          <para>Это свойство применяется только к категории осей.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При задании этого свойства можно задать для него значение либо массив, либо <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, содержащий имена категорий.</para>
+          <para>Это свойство применяется только к осям категорий.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CategoryType">
@@ -320,10 +298,8 @@
       <Docs>
         <summary>Возвращает или задает тип оси категории.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Не удается установить это свойство для оси значений.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Невозможно задать это свойство для оси значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -351,11 +327,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Crosses">
@@ -384,42 +358,39 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlAxisCrosses</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает точку на оси указанного пересечения другой оси.</summary>
+        <summary>Возвращает или задает точку на указанной оси, в которой пересекается другая ось.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>пересечение</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Excel.XlAxisCrosses" /> константы, перечисленные в следующей таблице.</para>
+        <remarks><para>Свойство <b>crosss</b> может быть одной из констант, <see cref="T:Microsoft.Office.Interop.Excel.XlAxisCrosses" /> перечисленных в следующей таблице.</para>
           <list type="table">
             <item>
               <term>
-                <b>xlAxisCrossesAutomatic</b>
+                <b>кслаксискроссесаутоматик</b>
               </term>
-              <description>Microsoft Excel устанавливает точку пересечения оси.</description>
+              <description>Microsoft Excel задает точку пересечения осей.</description>
             </item>
             <item>
               <term>
-                <b>xlMinimum</b>
+                <b>кслминимум</b>
               </term>
-              <description>Ось пересечение в минимальное значение.</description>
+              <description>Ось пересекается с минимальным значением.</description>
             </item>
             <item>
               <term>
-                <b>xlMaximum</b>
+                <b>кслмаксимум</b>
               </term>
-              <description>Максимальное значение пересечение оси.</description>
+              <description>Ось пересекается с максимальным значением.</description>
             </item>
             <item>
               <term>
-                <b>xlAxisCrossesCustom</b>
+                <b>кслаксискроссескустом</b>
               </term>
-              <description>
-                <see cref="P:Microsoft.Office.Interop.Excel.Axis.CrossesAt" /> Свойство определяет точку пересечения оси.</description>
+              <description><see cref="P:Microsoft.Office.Interop.Excel.Axis.CrossesAt" /> Свойство указывает точку пересечения осей.</description>
             </item>
           </list>
-          <para>Это свойство недоступно для лепестковые диаграммы. Для объемных диаграмм это свойство может применяться только для оси значений и указывает пересечения оси значений плоскости, определяемой осей категорий.</para>
-          <para>Это свойство можно использовать для оси категорий и значений. На оси категорий <b>xlMinimum</b> задает ось преодолевают в первой категории и <b>xlMaximum</b> задает ось преодолевают в последний категории.</para>
-          <para>Обратите внимание на то, что <b>xlMinimum</b> и <b>xlMaximum</b> имеют различные значения, в зависимости от оси.</para>
-          <para></para>
-        </remarks>
+          <para>Это свойство недоступно для лепестковых диаграмм. Для объемных диаграмм это свойство может быть применено только к оси значений и указывает, где плоскость, определенная осями категорий, пересекает ось значений.</para>
+          <para>Это свойство можно использовать как для категорий, так и для осей значений. На оси категорий <b>кслминимум</b> устанавливает для оси значений значение Cross в первой категории, а <b>кслмаксимум</b> задает для оси значений значение "перекрестное" в последней категории.</para>
+          <para>Обратите внимание, что в зависимости от оси <b>кслминимум</b> и <b>кслмаксимум</b> могут иметь различные значения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CrossesAt">
@@ -448,13 +419,11 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает точку на оси значений оси пересечения его. Применяется только к оси значений.</summary>
+        <summary>Возвращает или задает точку на оси значений, в которой ось категорий пересекает ее. Применяется только к оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство вызывает параметр <see cref="P:Microsoft.Office.Interop.Excel.Axis.Crosses" /> изменение <b>xlAxisCrossesCustom</b>свойства.</para>
-          <para>Это свойство не может использоваться на лепестковые диаграммы. Для объемных диаграмм это свойство показывает пересечения оси значений плоскости, определяемой осей категорий.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Задание этого свойства приводит к <see cref="P:Microsoft.Office.Interop.Excel.Axis.Crosses" /> изменению свойства на <b>кслаксискроссескустом</b>.</para>
+          <para>Это свойство нельзя использовать в лепестковых диаграммах. Для объемных диаграмм это свойство указывает, где плоскость, определяемая осями категорий, пересекает ось значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -509,48 +478,46 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlDisplayUnit</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает метку подразделения для оси значений.</summary>
+        <summary>Возвращает или задает метку единицы измерения оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование заголовки устройства при диаграммы большие значения делает ваше тактов пометить меток более удобным для чтения. К примеру Если пометить вашей оси значений единиц измерения сотен тысяч и миллионов меньшего размера числовых значений можно использовать в деления на оси.</para>
+        <remarks><para>Использование меток единицы при диаграмме с большими значениями позволяет упростить чтение меток меток делений. Например, если вы Наметите ось значений в числах сотен, тысяч или миллионов, вы можете использовать меньшие числовые значения на делениях оси.</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlDisplayUnit" />может иметь одно из следующих констант <b>XlDisplayUnit</b> :</para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlDisplayUnit" />может быть одной из следующих констант <b>кслдисплайунит</b> :</para>
           <para>
-            <b>xlHundredMillions</b>
+            <b>кслхундредмиллионс</b>
           </para>
           <para>
-            <b>xlHundredThousands</b>
+            <b>кслхундредсаусандс</b>
           </para>
           <para>
-            <b>xlMillions</b>
+            <b>кслмиллионс</b>
           </para>
           <para>
-            <b>xlTenThousands</b>
+            <b>кслтенсаусандс</b>
           </para>
           <para>
-            <b>xlThousands</b>
+            <b>кслсаусандс</b>
           </para>
           <para>
-            <b>xlHundreds</b>
+            <b>кслхундредс</b>
           </para>
           <para>
-            <b>xlMillionMillions</b>
+            <b>кслмиллионмиллионс</b>
           </para>
           <para>
-            <b>xlTenMillions</b>
+            <b>кслтенмиллионс</b>
           </para>
           <para>
-            <b>xlThousandMillions</b>
+            <b>кслсаусандмиллионс</b>
           </para>
-          <para>Метка элемента также может иметь одно из следующих констант:</para>
+          <para>Подпись единицы также может быть одной из следующих констант:</para>
           <para>
-            <b>xlCustom</b>
+            <b>кслкустом</b>
           </para>
           <para>
-            <b>xlNone</b>
+            <b>кслноне</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayUnitCustom">
@@ -579,12 +546,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если значение <see cref="P:Microsoft.Office.Interop.Excel.Axis.DisplayUnit" /> свойство <b>xlCustom</b>, свойство <b>DisplayUnitCustom</b> Возвращает или задает значение из отображаемых единиц измерения. Значение должно быть от 0 до 10E307.</summary>
+        <summary>Если для <see cref="P:Microsoft.Office.Interop.Excel.Axis.DisplayUnit" /> свойства задано значение <b>Кслкустом</b>, свойство <b>дисплайуниткустом</b> Возвращает или задает значение отображаемых единиц. Значение должно находиться в диапазоне от 0 до 10E307.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование заголовки устройства при диаграммы большие значения делает ваше тактов пометить меток более удобным для чтения. К примеру Если пометить вашей оси значений единиц измерения сотен тысяч и миллионов меньшего размера числовых значений можно использовать в деления на оси.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Использование меток единицы при диаграмме с большими значениями позволяет упростить чтение меток меток делений. Например, если вы Наметите ось значений в числах сотен, тысяч или миллионов, вы можете использовать меньшие числовые значения на делениях оси.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayUnitLabel">
@@ -610,7 +575,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DisplayUnitLabel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DisplayUnitLabel" /> объект для указанной оси. Возвращает <b>значение Null,</b> Если <see cref="P:Microsoft.Office.Interop.Excel.Axis.HasDisplayUnitLabel" /> свойство имеет значение False.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DisplayUnitLabel" /> объект указанной оси. Возвращает <b>значение NULL</b> , <see cref="P:Microsoft.Office.Interop.Excel.Axis.HasDisplayUnitLabel" /> если свойству присвоено значение false.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -638,10 +603,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> объекта. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> объект. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -671,8 +634,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный метку <see cref="P:Microsoft.Office.Interop.Excel.Axis.DisplayUnit" /> или <see cref="P:Microsoft.Office.Interop.Excel.Axis.DisplayUnitCustom" /> отображения свойства на указанной оси. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>Значение true</b> , если метка, <see cref="P:Microsoft.Office.Interop.Excel.Axis.DisplayUnit" /> заданная <see cref="P:Microsoft.Office.Interop.Excel.Axis.DisplayUnitCustom" /> свойством или, отображается на указанной оси. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -703,8 +665,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для оси основные линии сетки. Только осей в группе основная ось может иметь линии сетки.</summary>
+        <summary>Имеет <b>значение true</b> , если у оси есть основные линии сетки. Линии сетки могут быть только у осей в основной группе осей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -735,8 +696,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для оси вспомогательные линии сетки. Только осей в группе основная ось может иметь линии сетки.</summary>
+        <summary>Имеет <b>значение true</b> , если у оси есть небольшие линии сетки. Линии сетки могут быть только у осей в основной группе осей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -767,14 +727,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для оси или диаграммы отображается название.</summary>
+        <summary><b>Значение true</b> , если у оси или диаграммы есть видимое название.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Название оси представлен <see cref="T:Microsoft.Office.Interop.Excel.AxisTitle" /> объекта.</para>
-          <para>Название диаграммы представлены <see cref="T:Microsoft.Office.Interop.Excel.ChartTitle" /> объекта.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Заголовок оси представлен <see cref="T:Microsoft.Office.Interop.Excel.AxisTitle" /> объектом.</para>
+          <para>Заголовок диаграммы представлен <see cref="T:Microsoft.Office.Interop.Excel.ChartTitle" /> объектом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -800,7 +757,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота в пунктах объекта.</summary>
+        <summary>Высота объекта (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -828,7 +785,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от левого края объекта по левому краю области диаграммы.</summary>
+        <summary>Расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -859,14 +816,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает основание логарифма при использовании шкал журнала. Для чтения и записи, <b>Double</b>.</summary>
-        <value>
-          <b>Double</b>
-        </value>
-        <remarks>
-          <para>Попытки подключения к этому свойству присвоено значение меньше или равно 0, приводит к ошибке. Значение по умолчанию — 10.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает основу логарифма при использовании масштабирования журнала. Для чтения и записи, <b>Double</b>.</summary>
+        <value><b>Double</b></value>
+        <remarks><para>При попытке присвоить этому свойству значение, меньшее или равное нулю (0), возникает ошибка. Значение по умолчанию — 10.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MajorGridlines">
@@ -892,7 +845,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Gridlines</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Gridlines" /> объект, представляющий основные линии сетки для указанной оси. Только осей в группе основная ось может иметь линии сетки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Gridlines" /> объект, представляющий основные линии сетки для указанной оси. Линии сетки могут быть только у осей в основной группе осей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -923,25 +876,23 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTickMark</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип основные деления для указанной оси.</summary>
+        <summary>Возвращает или задает тип основной деления для указанной оси.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlTickMark" />может быть одной из следующих констант <b>кслтиккмарк</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlTickMark" />может иметь одно из следующих констант <b>XlTickMark</b> :</para>
-          <para>
-            <b>xlTickMarkInside</b>
+            <b>кслтиккмаркинсиде</b>
           </para>
           <para>
-            <b>xlTickMarkOutside</b>
+            <b>кслтиккмаркаутсиде</b>
           </para>
           <para>
-            <b>xlTickMarkCross</b>
+            <b>кслтиккмарккросс</b>
           </para>
           <para>
-            <b>xlTickMarkNone</b>
+            <b>кслтиккмаркноне</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MajorUnit">
@@ -970,13 +921,11 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает основных единиц измерения для оси значений.</summary>
+        <summary>Возвращает или задает основные единицы измерения оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство задает параметр <see cref="P:Microsoft.Office.Interop.Excel.Axis.MajorUnitIsAuto" /> значение <b>False</b>.</para>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Axis.TickMarkSpacing" /> свойство, чтобы задать интервалы на оси категорий деления.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При установке этого свойства <see cref="P:Microsoft.Office.Interop.Excel.Axis.MajorUnitIsAuto" /> свойству присваивается <b>значение false</b>.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Axis.TickMarkSpacing" /> свойство, чтобы задать расстояние между делениями на оси категорий.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MajorUnitIsAuto">
@@ -1005,13 +954,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel вычисляет основных единиц измерения для оси значений.</summary>
+        <summary><b>Имеет значение true</b> , если Microsoft Excel вычисляет основные единицы для оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MajorUnit" /> свойство этому свойству значение <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MajorUnit" /> свойства задает для этого свойства <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MajorUnitScale">
@@ -1040,22 +986,20 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTimeUnit</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение масштаба основные единицы для оси категорий при <see cref="P:Microsoft.Office.Interop.Excel.Axis.CategoryType" /> задано значение <b>xlTimeScale</b>.</summary>
+        <summary>Возвращает или задает значение основной шкалы единицы измерения для оси категорий, <see cref="P:Microsoft.Office.Interop.Excel.Axis.CategoryType" /> если для свойства задано значение <b>кслтимескале</b>.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlTimeUnit" />может быть одной из следующих констант <b>кслтимеунит</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlTimeUnit" />может иметь одно из следующих констант <b>XlTimeUnit</b> :</para>
-          <para>
-            <b>xlMonths</b>
+            <b>кслмонсс</b>
           </para>
           <para>
-            <b>xlDays</b>
+            <b>кслдайс</b>
           </para>
           <para>
-            <b>xlYears</b>
+            <b>кслеарс</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MaximumScale">
@@ -1086,10 +1030,8 @@
       <Docs>
         <summary>Возвращает или задает максимальное значение на оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство задает параметр <see cref="P:Microsoft.Office.Interop.Excel.Axis.MaximumScaleIsAuto" /> значение <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При установке этого свойства <see cref="P:Microsoft.Office.Interop.Excel.Axis.MaximumScaleIsAuto" /> свойству присваивается <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MaximumScaleIsAuto">
@@ -1118,13 +1060,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel вычисляет максимальное значение для оси значений.</summary>
+        <summary><b>Имеет значение true</b> , если Microsoft Excel вычисляет максимальное значение для оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MaximumScale" /> свойство этому свойству значение <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MaximumScale" /> свойства задает для этого свойства <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinimumScale">
@@ -1155,10 +1094,8 @@
       <Docs>
         <summary>Возвращает или задает минимальное значение на оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство задает параметр <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinimumScaleIsAuto" /> значение <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При установке этого свойства <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinimumScaleIsAuto" /> свойству присваивается <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinimumScaleIsAuto">
@@ -1187,13 +1124,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel вычисляет минимальное значение для оси значений.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel вычисляет минимальное значение для оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinimumScale" /> свойство этому свойству значение <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinimumScale" /> свойства задает для этого свойства <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinorGridlines">
@@ -1219,7 +1153,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Gridlines</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Gridlines" /> объект, представляющий вспомогательные линии сетки для указанной оси. Только осей в группе основная ось может иметь линии сетки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Gridlines" /> объект, представляющий вспомогательные линии сетки для указанной оси. Линии сетки могут быть только у осей в основной группе осей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1250,25 +1184,23 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTickMark</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип вспомогательные деления для указанной оси.</summary>
+        <summary>Возвращает или задает тип вспомогательного деления для указанной оси.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlTickMark" />может быть одной из следующих констант <b>кслтиккмарк</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlTickMark" />может иметь одно из следующих констант <b>XlTickMark</b> :</para>
-          <para>
-            <b>xlTickMarkInside</b>
+            <b>кслтиккмаркинсиде</b>
           </para>
           <para>
-            <b>xlTickMarkOutside</b>
+            <b>кслтиккмаркаутсиде</b>
           </para>
           <para>
-            <b>xlTickMarkCross</b>
+            <b>кслтиккмарккросс</b>
           </para>
           <para>
-            <b>xlTickMarkNone</b>
+            <b>кслтиккмаркноне</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinorUnit">
@@ -1297,13 +1229,11 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает промежуточных делений на оси значений.</summary>
+        <summary>Возвращает или задает дополнительные единицы измерения оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство задает параметр <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinorUnitIsAuto" /> значение <b>False</b>.</para>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Axis.TickMarkSpacing" /> свойство, чтобы задать интервалы на оси категорий деления.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При установке этого свойства <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinorUnitIsAuto" /> свойству присваивается <b>значение false</b>.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Axis.TickMarkSpacing" /> свойство, чтобы задать расстояние между делениями на оси категорий.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinorUnitIsAuto">
@@ -1332,13 +1262,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если дополнительный номер единиц измерения для оси значений вычисляет Microsoft Excel.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel вычисляет промежуточные единицы для оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinorUnit" /> свойство этому свойству значение <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установка <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinorUnit" /> свойства задает для этого свойства <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MinorUnitScale">
@@ -1367,22 +1294,20 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTimeUnit</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение масштаба Вспомогательные единицы для оси категорий при <see cref="P:Microsoft.Office.Interop.Excel.Axis.CategoryType" /> задано значение <b>xlTimeScale</b>.</summary>
+        <summary>Возвращает или задает значение промежуточной шкалы для оси категорий, если для <see cref="P:Microsoft.Office.Interop.Excel.Axis.CategoryType" /> этого свойства задано значение <b>кслтимескале</b>.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlTimeUnit" />может быть одной из следующих констант <b>кслтимеунит</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlTimeUnit" />может иметь одно из следующих констант <b>XlTimeUnit</b> :</para>
-          <para>
-            <b>xlMonths</b>
+            <b>кслмонсс</b>
           </para>
           <para>
-            <b>xlDays</b>
+            <b>кслдайс</b>
           </para>
           <para>
-            <b>xlYears</b>
+            <b>кслеарс</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -1439,13 +1364,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel представлены данные указывает последний из первого.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel отображает точки данных от последней к первой.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не может использоваться на лепестковые диаграммы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство нельзя использовать в лепестковых диаграммах.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScaleType">
@@ -1474,19 +1396,17 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlScaleType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип шкалы оси значения.</summary>
+        <summary>Возвращает или задает тип масштаба оси значений.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlScaleType" />может быть одной из следующих констант <b>кслскалетипе</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlScaleType" />может иметь одно из следующих констант <b>XlScaleType</b> :</para>
-          <para>
-            <b>xlScaleLinear</b>
+            <b>кслскалелинеар</b>
           </para>
           <para>
-            <b>xlScaleLogarithmic</b>
+            <b>кслскалелогарисмик</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -1510,12 +1430,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
+        <summary>Выбирает объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Чтобы выбрать ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Activate" /> метод.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Чтобы выбрать ячейку или диапазон ячеек, используйте метод <b>SELECT</b> . Чтобы сделать одну ячейку активной ячейкой, используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Activate" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TickLabelPosition">
@@ -1544,26 +1462,24 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTickLabelPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Описывает положение меток делений на указанной оси.</summary>
+        <summary>Описывает положение подписей делений на указанной оси.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlTickLabelPosition" />может быть одной из следующих констант <b>кслтикклабелпоситион</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlTickLabelPosition" />может иметь одно из следующих констант <b>XlTickLabelPosition</b> :</para>
-          <para>
-            <b>xlTickLabelPositionLow</b>
+            <b>кслтикклабелпоситионлов</b>
           </para>
           <para>
-            <b>xlTickLabelPositionNone</b>
+            <b>кслтикклабелпоситионноне</b>
           </para>
           <para>
-            <b>xlTickLabelPositionHigh</b>
+            <b>кслтикклабелпоситионхигх</b>
           </para>
           <para>
-            <b>xlTickLabelPositionNextToAxis</b>
+            <b>кслтикклабелпоситионнексттоаксис</b>
           </para>
-          <para>Константа <b>xlTickLabelPositionHigh</b> нельзя использовать в объемных диаграммах.</para>
-          <para></para>
-        </remarks>
+          <para>Нельзя использовать константу <b>кслтикклабелпоситионхигх</b> на объемных диаграммах.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TickLabels">
@@ -1589,7 +1505,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TickLabels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TickLabels" /> объект, представляющий меток делений для указанной оси.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TickLabels" /> объект, представляющий подписи делений для указанной оси.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1620,12 +1536,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число категорий или рядов между меток делений. Применяется только к осей категорий и рядов.</summary>
+        <summary>Возвращает или задает количество категорий или рядов между подписями делений. Применяется только к осям категорий и рядам.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Интервал метки делений на оси значений всегда вычисляется с Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Расстояние между метками подписей делений на оси значений всегда вычисляется Microsoft Excel.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TickLabelSpacingIsAuto">
@@ -1654,15 +1568,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ли интервал метки делений происходит автоматически. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.Axis.TickLabelSpacing" /> Свойство возвращает текущий интервал метки делений ли параметр происходит автоматически.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает значение, указывающее, является ли интервал меток деления автоматическим. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Excel.Axis.TickLabelSpacing" /> Свойство возвращает текущий интервал измерения делений, независимо от того, является ли параметр автоматическим.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TickMarkSpacing">
@@ -1691,12 +1600,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число категорий или рядов между деления. Применяется только к осей категорий и рядов.</summary>
+        <summary>Возвращает или задает количество категорий или рядов между делениями. Применяется только к осям категорий и рядам.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Axis.MajorUnit" /> и <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinorUnit" /> свойства, чтобы задать делений интервал на оси значений.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте свойства <see cref="P:Microsoft.Office.Interop.Excel.Axis.MajorUnit" /> и <see cref="P:Microsoft.Office.Interop.Excel.Axis.MinorUnit" /> для задания интервала делений на оси значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Top">
@@ -1722,7 +1629,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от верхнего края к объекту, чтобы в верхней части строки 1 (на рабочем листе) или верхнего края области диаграммы (на диаграмме).</summary>
+        <summary>Расстояние (в пунктах) от верхнего края объекта до верхнего края строки 1 (на листе) или сверху области диаграммы (на диаграмме).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1755,21 +1662,19 @@
       <Docs>
         <summary>Возвращает тип оси.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" />может иметь одно из следующих констант <b>XlAxisType</b> :</para>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" />может быть одной из следующих констант <b>XlAxisType</b> :</para>
           <para>
             <b>xlCategory</b>
           </para>
           <para>
-            <b>xlSeriesAxis</b>
+            <b>кслсериесаксис</b>
           </para>
           <para>
             <b>xlValue</b>
           </para>
-          <para>При использовании этого свойства для горизонтальной оси точечные диаграммы, будут возвращены <b>xlCategory</b> как тип оси.</para>
-          <para></para>
-        </remarks>
+          <para>При использовании этого свойства для горизонтальной оси точечных диаграмм <b>xlCategory</b> будет возвращено как тип оси.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -1795,7 +1700,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина в точках объекта.</summary>
+        <summary>Ширина объекта (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

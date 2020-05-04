@@ -1,13 +1,5 @@
 <Type Name="PublishObjects" FullName="Microsoft.Office.Interop.Excel.PublishObjects">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="f387dc9c018dbd0378441a0c44743179b7b5fb9c" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20574041" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PublishObjects : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f387dc9c018dbd0378441a0c44743179b7b5fb9c" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20574041" /></Metadata><TypeSignature Language="C#" Value="public interface PublishObjects : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PublishObjects implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PublishObjects" />
   <TypeSignature Language="VB.NET" Value="Public Interface PublishObjects&#xA;Implements IEnumerable" />
@@ -33,12 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.PublishObject" /> объектов в книге. Каждый объект <b>PublishObject</b> представляет элемент в книге, который был сохранен на веб-страницы и могут быть обновлены в соответствии с значения, заданные свойства и методы объекта.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Workbook.PublishObjects" /> свойство для возврата коллекции <b>PublishObjects</b> .</para>
-      <para>Используйте <b>PublishObjects</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса выбранного элемента в книге, чтобы возвратить объект <b>PublishObject</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.PublishObject" /> объектов в книге. Каждый объект <b>PublishObject</b> представляет элемент книги, сохраненный на веб-странице, и может обновляться в соответствии со значениями, указанными в свойствах и методах объекта.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.PublishObjects" /> свойство, чтобы возвратить коллекцию <b>PublishObjects</b> .</para>
+      <para>Используйте <b>PublishObjects</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса указанного элемента в книге, чтобы вернуть один объект <b>PublishObject</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -104,15 +94,14 @@
         <Parameter Name="Title" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SourceType">Требуется <see cref="T:Microsoft.Office.Interop.Excel.XlSourceType" />. Тип источника.</param>
-        <param name="Filename">
-          <b>Строковое значение.</b> URL-адрес (в интрасети или Интернете) или путь (локальный или сетевой) которой был сохранен исходный объект.</param>
-        <param name="Sheet">Необязательный элемент <b>Object</b>. Имя листа, который был сохранен в виде веб-страницы.</param>
-        <param name="Source">Необязательный элемент <b>Object</b>. Уникальное имя, используемое для идентификации элементов, которые имеют один из следующих констант, как их <paramref name="SourceType" /> аргумент: <b>xlSourceAutoFilter</b>, <b>xlSourceChart</b>, <b>xlSourcePivotTable</b>, <b>xlSourcePrintArea</b>, <b>xlSourceQuery</b>или <b> xlSourceRange</b>. Если <paramref name="SourceType" /> — это <b>xlSourceRange</b>источника указывает диапазон, который может быть определенное имя. Если <paramref name="SourceType" /><b>xlSourceChart</b>, <b>xlSourcePivotTable</b>или <b>xlSourceQuery</b><paramref name="Source" /> указывает имя диаграммы, отчет сводной таблицы или запроса в таблице.</param>
-        <param name="HtmlType">Необязательный элемент <b>Object</b>. Указывает, является ли элемент сохраняется как интерактивные компонент Microsoft Office Web или статический текст и изображения. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlHtmlType" /> константы. ConstantDescription<b>xlHtmlCalc</b>элемент, сохраняемый в виде компонента интерактивных электронных таблиц Microsoft Office. <b>xlHtmlChart</b> Элемент, сохраняемый в виде интерактивных компонент диаграммы Microsoft Office. <b>xlHtmlList</b> Элемент, сохраняемый в виде компонента интерактивная Сводная таблица Microsoft Office. <b>xlHtmlStatic</b> Элемент, сохраняемый в виде статический текст и изображения.</param>
-        <param name="DivID">Необязательный элемент <b>Object</b>. Уникальный идентификатор, используемый в теге DIV HTML-код для идентификации элемента на веб-странице.</param>
-        <param name="Title">Необязательный элемент <b>Object</b>. Заголовок веб-страницы.</param>
-        <summary>Создает объект, который представляет элемент в документе, сохраненный на веб-страницы. Такие объекты, упрощающих последующие обновления в веб-страницы во время автоматической внесения изменений в документ в Microsoft Excel. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PublishObject" /> объекта.</summary>
+        <param name="SourceType">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlSourceType" />. Тип источника.</param>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. URL-адрес (в интрасети или Интернете) или путь (локальная или в сети), для которого был сохранен исходный объект.</param>
+        <param name="Sheet">Необязательный <b>объект</b>. Имя листа, сохраненного в качестве веб-страницы.</param>
+        <param name="Source">Необязательный <b>объект</b>. Уникальное имя <paramref name="SourceType" /> , используемое для идентификации элементов с одной из следующих констант в качестве аргумента: <b>кслсаурцеаутофилтер</b>, <b>кслсаурцечарт</b>, <b>кслсаурцепивоттабле</b>, <b>кслсаурцепринтареа</b>, <b>кслсаурцекуери</b>или <b>xlSourceRange</b>. Если <paramref name="SourceType" /> задано значение <b>кслсаурцеранже</b>, Source указывает диапазон, который может быть определенным именем. Если <paramref name="SourceType" /> задано значение <b>кслсаурцечарт</b>, <b>кслсаурцепивоттабле</b>или <b>кслсаурцекуери</b>, <paramref name="Source" /> указывает имя диаграммы, отчета сводной таблицы или таблицы запросов.</param>
+        <param name="HtmlType">Необязательный <b>объект</b>. Указывает, сохраняется ли элемент как интерактивный веб-компонент Microsoft Office или как статический текст и изображения. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlHtmlType" /> констант. Константдескриптион<b>кслхтмлкалк</b>элемент, сохраненный как интерактивный компонент электронной таблицы Microsoft Office. <b>кслхтмлчарт</b> Элемент, сохраненный как интерактивный компонент Microsoft Office Chart. <b>кслхтмллист</b> Элемент, сохраненный как интерактивный сводный компонент Microsoft Office. <b>кслхтмлстатик</b> Элемент, сохраненный как статический текст и изображения.</param>
+        <param name="DivID">Необязательный <b>объект</b>. Уникальный идентификатор, используемый в теге HTML DIV для идентификации элемента на веб-странице.</param>
+        <param name="Title">Необязательный <b>объект</b>. Заголовок веб-страницы.</param>
+        <summary>Создает объект, который представляет элемент в документе, сохраненном на веб-странице. Такие объекты упрощают последующие обновления веб-страницы при внесении в документ автоматических изменений в Microsoft Excel. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PublishObject" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -198,11 +187,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -288,7 +275,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -343,7 +330,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сохраняет элемент или набор элементов в документе на веб-страницу.</summary>
+        <summary>Сохраняет элемент или коллекцию элементов в документе на веб-странице.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

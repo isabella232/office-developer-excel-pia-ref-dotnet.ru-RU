@@ -1,13 +1,5 @@
 <Type Name="Scenario" FullName="Microsoft.Office.Interop.Excel.Scenario">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="86d8d02ae441f3ac07255a45ae9cd0cf278fe5fe" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20575224" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Scenario" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="86d8d02ae441f3ac07255a45ae9cd0cf278fe5fe" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575224" /></Metadata><TypeSignature Language="C#" Value="public interface Scenario" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Scenario" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Scenario" />
   <TypeSignature Language="VB.NET" Value="Public Interface Scenario" />
@@ -29,12 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет сценарий на листе. Сценарий — это группа входных значений (называется <paramref name="changing cells" />), который с именем и сохранения.</summary>
-    <remarks>
-      <para>Объект <b>сценария</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.Scenarios" /> семейства сайтов. Коллекция <b>сценариев</b> содержит все определенные сценарии для листа.</para>
-      <para>Использование <b>сценариев</b>(<paramref name="index" />), где <paramref name="index" /> — сценарий имя или номер индекса, чтобы возвратить объект <b>сценария</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет сценарий на листе. Сценарий — это группа входных значений (называемых <paramref name="changing cells" />), которые были названы и сохранены.</summary>
+    <remarks><para>Объект <b>Scenario</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Scenarios" /> коллекции. Коллекция <b>сценариев</b> содержит все определенные сценарии для листа.</para>
+      <para>Используйте <b>сценарии</b>(<paramref name="index" />), где <paramref name="index" /> — это имя сценария или номер индекса, чтобы вернуть один объект <b>сценария</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -88,14 +78,12 @@
         <Parameter Name="Values" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ChangingCells">Требуется <b>объект</b>. A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, который задает новый набор изменяемых ячеек для сценария. Изменение ячейки должны находиться на том же листе сценария.</param>
-        <param name="Values">Необязательный элемент <b>Object</b>. Массив, содержащий новые значения сценарий ячеек. Если этот аргумент задан, сценарий значения считаются текущие значения в изменяемых ячеек.</param>
-        <summary>Изменяет сценарий новый набор изменение ячеек и (при необходимости) значения сценария.</summary>
+        <param name="ChangingCells">Обязательный <b>объект</b>. <see cref="T:Microsoft.Office.Interop.Excel.Range" /> Объект, задающий новый набор изменяемых ячеек для сценария. Изменяемые ячейки должны находиться на том же листе, что и сценарий.</param>
+        <param name="Values">Необязательный <b>объект</b>. Массив, содержащий значения новых сценариев изменяемых ячеек. Если этот аргумент опущен, предполагается, что значения сценария являются текущими значениями в изменяемых ячейках.</param>
+        <summary>Изменяет сценарий, чтобы он был новым набором изменяемых ячеек и (необязательно) значениями сценария.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>При указании v<paramref name="alues" />, этот массив должен содержать элемент для каждой ячейки в <paramref name="ChangingCells" /> диапазона; в противном случае Microsoft Excel приводит к ошибке.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если указать v<paramref name="alues" />, массив должен содержать элемент для каждой ячейки в <paramref name="ChangingCells" /> диапазоне; в противном случае Microsoft Excel выдает ошибку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ChangingCells">
@@ -121,7 +109,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий изменение ячейки для сценария.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий изменяемые ячейки для сценария.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -152,7 +140,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает комментарий, связанный с помощью сценария. Текст комментария не может превышать 255 знаков.</summary>
+        <summary>Возвращает или задает комментарий, связанный с сценарием. Длина текста комментария не может превышать 255 символов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,11 +170,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -241,13 +227,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если сценарий является скрытым. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>Значение true</b> , если сценарий скрыт. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Не следует путать это свойство с <see cref="P:Microsoft.Office.Interop.Excel.Range.FormulaHidden" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Не путайте это свойство со <see cref="P:Microsoft.Office.Interop.Excel.Range.FormulaHidden" /> свойством.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -273,7 +256,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции подобных объектов индекса.</summary>
+        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -304,8 +287,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если объект был заблокирован; <b>Значение false,</b> Если объект могут быть изменены после защиты листа.</summary>
+        <summary><b>Значение true</b> , если объект заблокирован; <b>False</b> , если объект можно изменить, когда лист защищен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -390,7 +372,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Показывает одним из сценариев, вставив его значения в рабочем листе. Выбранных ячеек — изменение ячейки сценария.</summary>
+        <summary>Показывает сценарий, вставляя его значения на листе. Затронутые ячейки это изменяемые ячейки сценария.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -421,8 +403,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Положение значения.</param>
-        <summary>Возвращает массив, содержащий текущие значения изменяемых ячеек для сценария.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Положение значения.</param>
+        <summary>Возвращает массив, который содержит текущие значения изменяемых ячеек для сценария.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="ModelChanges" FullName="Microsoft.Office.Interop.Excel.ModelChanges">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9f59d830c9bcb2ca9333087af48cbeb26d3d390d" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20572830" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ModelChanges" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9f59d830c9bcb2ca9333087af48cbeb26d3d390d" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572830" /></Metadata><TypeSignature Language="C#" Value="public interface ModelChanges" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ModelChanges" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ModelChanges" />
   <TypeSignature Language="VB.NET" Value="Public Interface ModelChanges" />
@@ -30,10 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет изменения, внесенные в модель данных.</summary>
-    <remarks>
-      <para>Объект <b>ModelChanges</b> содержит сведения о том, какие изменения были внесены в данные модели при <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.ModelChange" /> событие происходит после операции модели. Когда Excel вносятся изменения в модели данных, несколько вступили в силу изменения в одной операции и объект <b>ModelChanges</b> будет включать информацию обо всех изменений, внесенных в одну модель операции.</para>
-      <para></para>
-    </remarks>
+    <remarks><para>Объект <b>ModelChanges</b> содержит сведения о том, какие изменения были внесены в модель данных при <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.ModelChange" /> возникновении события после операции модели. Когда Excel вносит изменения в модель данных, в одной операции можно внести несколько изменений, а объект <b>ModelChanges</b> будет содержать сведения обо всех изменениях, внесенных в одну операцию модели.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -87,7 +77,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelColumnNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnNames" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnName" /> объектов, которые представляют все столбцы, добавленные в процессе выполнения операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnNames" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnName" /> объектов, представляющих все столбцы, добавленные в составе операции модели. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +105,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelColumnChanges</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnChanges" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnChange" /> объектов, которые представляют имена таблиц и имена столбцов из всех столбцов в таблице, для которых был изменен тип данных (добавить дополнительные типы изменения в будущем) во время операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnChanges" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnChange" /> объектов, представляющих имена таблиц и имена столбцов всех столбцов таблицы, для которых был изменен тип данных (в будущем могут добавляться другие типы изменений), как часть операции с моделью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -143,7 +133,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelColumnNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnNames" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnName" /> объектов, которые представляют все столбцы, которые были удалены в процессе выполнения операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnNames" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelColumnName" /> объектов, представляющих все столбцы, которые были удалены в рамках операции с моделью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -171,12 +161,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>Integer</b> (<b>целое</b> в C#).</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. <b>Целое число</b> , доступное только для чтения (<b>int</b> в C#).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Так как объект был создан в Microsoft Excel, данное свойство возвращает шестнадцатеричное значение 5843454C, который представляет строку «XCEL».</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Так как объект был создан в Excel, это свойство возвращает шестнадцатеричное значение 5843454C, которое представляет строку "КСЦЕЛ".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MeasuresAdded">
@@ -202,7 +190,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelMeasureNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelMeasureNames" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelMeasureName" /> объектов, которые представляют все столбцы, которые были удалены в процессе выполнения операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelMeasureNames" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelMeasureName" /> объектов, представляющих все столбцы, которые были удалены в рамках операции с моделью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +218,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект на указанный объект <b>ModelChanges</b> . Только для чтения.</summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>ModelChanges</b> . Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,7 +246,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Когда <b>значение True</b>, одну или несколько связей в модели были изменены (добавлены, удаленные или измененные) во время операции модели. Если <b>значение False</b>, без отношения были изменены во время операции. <b>Логическое</b> (<b>bool</b> в C#) Только для чтения.</summary>
+        <summary>Если задано <b>значение true</b>, одна или несколько связей в модели были изменены (добавлены, удалены или изменены) в рамках операции модели. Если <b>значение равно false</b>, во время операции отношения не изменялись. <b>Boolean</b> (<b>bool</b> в C#) только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -286,12 +274,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlModelChangeSource</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Источник данных модели.</summary>
+        <summary>Источник модели данных.</summary>
         <value>XlModelChangeSource</value>
-        <remarks>
-          <para>Источник может быть Excel или надстройки PowerPivot.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Источником может быть как Excel, так и надстройка PowerPivot.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TableNamesChanged">
@@ -317,7 +303,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelTableNameChanges</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNameChanges" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNameChange" /> объектов, представляющих старой и новой имена всех таблиц, которые были переименованы в модели в процессе выполнения операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNameChanges" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNameChange" /> объектов, представляющих старое и новое имена всех таблиц, которые были переименованы в модели в составе операции с моделью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -345,7 +331,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelTableNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNames" /> коллекцию имен в таблице как строки, представляющие все таблицы, которые были добавлены к модели как часть операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNames" /> коллекцию имен таблиц в виде строк, представляющих все таблицы, добавленные в модель в составе операции модели. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -373,7 +359,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelTableNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNames" /> коллекцию имен в таблице как строки, представляющие все таблицы, которые были удалены из модели во время операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNames" /> коллекцию имен таблиц в виде строк, представляющих все таблицы, которые были удалены из модели в рамках операции с моделью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -401,7 +387,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelTableNames</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNames" /> коллекцию имен в таблице как строки, представляющие все таблицы, которые были обновления или перерасчете как часть операции модели. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ModelTableNames" /> коллекцию имен таблиц в виде строк, представляющих все таблицы, которые были обновлены или пересчитаны в рамках операции с моделью. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -429,8 +415,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если не указан был изменен в модель как часть модели транзакции. <b>Логическое</b> (<b>bool</b> в C#) Только для чтения</summary>
+        <summary><b>Имеет значение true</b> , если в модель была выполнена неопределенное изменение в рамках транзакции модели. <b>Логическое значение</b> (<b>bool</b> в C#) только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

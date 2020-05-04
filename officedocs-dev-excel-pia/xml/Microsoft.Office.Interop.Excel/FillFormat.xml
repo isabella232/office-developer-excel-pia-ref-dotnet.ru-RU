@@ -1,13 +1,5 @@
 <Type Name="FillFormat" FullName="Microsoft.Office.Interop.Excel.FillFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d51378ea225e992f908efc9e6730e1e261e2887c" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20577275" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FillFormat : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d51378ea225e992f908efc9e6730e1e261e2887c" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20577275" /></Metadata><TypeSignature Language="C#" Value="public interface FillFormat : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FillFormat implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FillFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface FillFormat&#xA;Implements _IMsoDispObj" />
@@ -30,13 +22,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет заполнения форматирования для фигуры.</summary>
-    <remarks>
-      <para>Фигура может иметь сплошной, градиентной, текстуры, шаблон, рисунков или частично прозрачной заливки.</para>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Shape.Fill" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объекта.</para>
-      <para>Многие из свойств <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объекта доступны только для чтения. Чтобы задать одно из этих свойств, необходимо применить соответствующий метод.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет форматирование заливки для фигуры.</summary>
+    <remarks><para>Фигура может иметь сплошную, градиентную, текстуру, узор, изображение или полупрозрачную заливку.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.Fill" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект.</para>
+      <para>Многие свойства <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объекта доступны только для чтения. Чтобы задать одно из этих свойств, необходимо применить соответствующий метод.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -96,7 +86,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ColorFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorFormat" /> объект, представляющий указанного заливки фона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorFormat" /> объект, представляющий указанный цвет фона заливки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -157,11 +147,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ForeColor">
@@ -190,7 +178,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ColorFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorFormat" /> объект, который представляет указанный основной заливки или цвета фона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorFormat" /> объект, представляющий заданный цвет переднего плана или сплошной заливки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -221,13 +209,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает угол градиентной заливки для заливки указанного формата.</summary>
-        <value>Угол градиентной заливки для заливки указанного формата.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>Градиентную заливку можно указать форматирование для различных элементов (фигуры) на диаграмме. Например можно использовать диалоговое окно Формат рядов данных форматирование столбцов в гистограмму, градиентной заливки. В этом случае <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.GradientAngle" /> свойство соответствует параметру угла в категории заливки диалогового окна Формат рядов данных. Диапазон допустимых значений для <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.GradientAngle" /> свойства составляет от 0 до 359.9.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает угол градиентной заливки для указанного формата заливки.</summary>
+        <value>Угол градиентной заливки для указанного формата заливки.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para>Градиентная заливка может быть указана в формате различных элементов (фигур) на диаграмме. Например, с помощью диалогового окна "Формат рядов данных" можно отформатировать столбцы в гистограмме до градиентной заливки. В этом случае <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.GradientAngle" /> свойство соответствует значению поля "угол" в категории "Заливка" диалогового окна "формат ряда данных". Допустимый диапазон значений для <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.GradientAngle" /> свойства — от 0 до 359,9.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GradientColorType">
@@ -253,27 +239,25 @@
         <ReturnType>Microsoft.Office.Core.MsoGradientColorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип градиента для указанного заливки.</summary>
+        <summary>Возвращает тип цвета градиента для заданной заливки.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoGradientColorType" />может быть одной из следующих констант <b>мсоградиентколортипе</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoGradientColorType" />может иметь одно из следующих констант <b>MsoGradientColorType</b> :</para>
-          <para>
-            <b>msoGradientColorMixed</b>
+            <b>мсоградиентколормиксед</b>
           </para>
           <para>
-            <b>msoGradientOneColor</b>
+            <b>мсоградиентонеколор</b>
           </para>
           <para>
-            <b>msoGradientPresetColors</b>
+            <b>мсоградиентпресетколорс</b>
           </para>
           <para>
-            <b>msoGradientTwoColors</b>
+            <b>мсоградиенттвоколорс</b>
           </para>
           <para>
-            <b>MsoGradientColorMixed</b> — это значение, возвращаемое только что указывает сочетание другие состояния в указанном диапазоне. Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.OneColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,System.Single)" />, <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.PresetGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,Microsoft.Office.Core.MsoPresetGradientType)" />, или <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.TwoColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32)" /> метод, чтобы задать тип градиента для заполнения.</para>
-          <para></para>
-        </remarks>
+            <b>Мсоградиентколормиксед</b> — это возвращаемое значение, которое указывает комбинацию других состояний в указанном диапазоне. Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.OneColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,System.Single)" />, <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.PresetGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,Microsoft.Office.Core.MsoPresetGradientType)" />или <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.TwoColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32)" /> , чтобы задать тип градиента для заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GradientDegree">
@@ -299,12 +283,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает градиента степень указанного один цвет заливки затемненные как значение с плавающей запятой от 0,0 (темный) до 1.0 (недоступно).</summary>
+        <summary>Возвращает степень градиента указанного одноцветного затененного заливки в виде значения с плавающей запятой от 0,0 (темное) до 1,0 (Light).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>GradiantDegree</b> доступен только для чтения. Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.OneColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,System.Single)" /> метод установка градиента степени для заполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>градиантдегри</b> доступно только для чтения. Используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.OneColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,System.Single)" /> метод, чтобы задать степень градиента для заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GradientStops">
@@ -331,9 +313,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает конечную точку для градиентной заливки. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.GradientStops" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Core.GradientStops" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -360,37 +340,35 @@
         <ReturnType>Microsoft.Office.Core.MsoGradientStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип градиента для указанного заполнения.</summary>
+        <summary>Возвращает стиль градиента для заданной заливки.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />может быть одной из следующих констант <b>мсоградиентстиле</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />может иметь одно из следующих констант <b>MsoGradientStyle</b> :</para>
-          <para>
-            <b>msoGradientDiagonalDown</b>
+            <b>мсоградиентдиагоналдовн</b>
           </para>
           <para>
-            <b>msoGradientDiagonalUp</b>
+            <b>мсоградиентдиагоналуп</b>
           </para>
           <para>
-            <b>msoGradientFromCenter</b>
+            <b>мсоградиентфромцентер</b>
           </para>
           <para>
-            <b>msoGradientFromCorner</b>
+            <b>мсоградиентфромкорнер</b>
           </para>
           <para>
-            <b>msoGradientFromTitle</b>
+            <b>мсоградиентфромтитле</b>
           </para>
           <para>
-            <b>msoGradientHorizontal</b>
+            <b>мсоградиенсоризонтал</b>
           </para>
           <para>
-            <b>msoGradientMixed</b>
+            <b>мсоградиентмиксед</b>
           </para>
           <para>
-            <b>msoGradientVertical</b>
+            <b>мсоградиентвертикал</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GradientVariant">
@@ -416,13 +394,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает variant тень для указанного заливки как целое число от 1 до 4.</summary>
+        <summary>Возвращает вариант тени для указанного заполнения в виде целого значения от 1 до 4.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значения для этого свойства соответствуют градиента вариантов (нумерованные слева направо и сверху вниз) на вкладке градиентной заливки диалоговое окно "".</para>
-          <para>Это свойство доступно только для чтения. Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.OneColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,System.Single)" /> или <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.TwoColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32)" /> метод, чтобы задать градиента variant для заполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Значения этого свойства соответствуют вариантам градиента (пронумерованы слева направо и сверху вниз) на вкладке градиент в диалоговом окне "способы заливки".</para>
+          <para>Это свойство доступно только для чтения. Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.OneColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,System.Single)" /> or <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.TwoColorGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32)" /> , чтобы задать вариант градиента для заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OneColorGradient">
@@ -450,10 +426,10 @@
         <Parameter Name="Degree" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Style">Требуется <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />. Может иметь одно из следующих констант <b>MsoGradientStyle</b> :<b>msoGradientDiagonalDown</b><b>msoGradientDiagonalUp</b><b>msoGradientFromCenter</b><b>msoGradientFromCorner</b><b>msoGradientFromTitle</b><b> msoGradientHorizontal</b><b>msoGradientMixed</b><b>msoGradientVertical</b></param>
-        <param name="Variant">Требуется <b>целое число</b>. Градиентный variant. Может быть в диапазоне от 1 до 4, соответствующее одному из четырех вариантов на вкладке градиентной заливки диалоговое окно "". Если <paramref name="GradientStyle" /> — это <b>msoGradientFromCenter</b><paramref name="Variant" /> аргумент может быть только 1 или 2.</param>
-        <param name="Degree">Требуется <b>один</b>. Определяет, насколько градиента. Может быть в диапазоне от 0,0 (темный) до 1.0 (недоступно).</param>
-        <summary>Устанавливает указанный заливки градиентной один цвет.</summary>
+        <param name="Style">Обязательный <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />. Может быть одной из следующих констант <b>мсоградиентстиле</b> :<b>мсоградиентдиагоналдовн</b><b>мсоградиентдиагоналуп</b><b>мсоградиентфромцентер</b><b>msoGradientFromCorner</b><b>msoGradientFromTitle</b><b>msoGradientHorizontal</b><b>msoGradientMixed</b><b>msoGradientVertical</b></param>
+        <param name="Variant">Обязательный атрибут типа <b>Integer</b>. Вариант градиента. Может принимать значения от 1 до 4, соответствующие одному из четырех вариантов на вкладке градиент в диалоговом окне "способы заливки". Если <paramref name="GradientStyle" /> параметр <b>msoGradientFromCenter</b>имеет значение мсоградиентфромцентер <paramref name="Variant" /> , аргумент может иметь значение только 1 или 2.</param>
+        <param name="Degree">Обязательное <b>одно</b>. Степень градиента. Может принимать значение от 0,0 (темная) до 1,0 (светло).</param>
+        <summary>Задает Одноцветный градиент для указанной заливки.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -508,13 +484,11 @@
         <ReturnType>Microsoft.Office.Core.MsoPatternType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает шаблон заполнения.</summary>
+        <summary>Возвращает или задает шаблон заливки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойства <b>шаблон</b> может иметь одно из <see cref="T:Microsoft.Office.Core.MsoPatternType" /> константы.</para>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.Patterned(Microsoft.Office.Core.MsoPatternType)" /> метод, чтобы задать тип расписания для заполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>pattern</b> может быть одной из <see cref="T:Microsoft.Office.Core.MsoPatternType" /> констант.</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.Patterned(Microsoft.Office.Core.MsoPatternType)" /> метод, чтобы задать тип шаблона заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Patterned">
@@ -540,8 +514,8 @@
         <Parameter Name="Pattern" Type="Microsoft.Office.Core.MsoPatternType" />
       </Parameters>
       <Docs>
-        <param name="Pattern">Требуется <see cref="T:Microsoft.Office.Core.MsoPatternType" />.</param>
-        <summary>Устанавливает указанный заливки с шаблоном.</summary>
+        <param name="Pattern">Обязательный <see cref="T:Microsoft.Office.Core.MsoPatternType" />.</param>
+        <summary>Задает заданный узор заливки.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -568,13 +542,11 @@
         <ReturnType>Microsoft.Office.Core.PictureEffects</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, представляющий заливки рисунка или текстуры для заполнения указанного формата.</summary>
-        <value>Представляет заливки рисунка или текстуры для заполнения указанного формата.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>Заливки рисунка или текстуры можно указать форматирование для различных элементов (фигуры) на диаграмме. Например можно использовать диалоговое окно Формат рядов данных форматирование столбцов в гистограмму, изображение или текстуры заливки. В этом случае <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.PictureEffects" /> возвращает свойство <see cref="T:Microsoft.Office.Core.PictureEffects" /> коллекции, соответствующий параметры, связанные с параметром заливки рисунка или текстуры в категории заливки диалогового окна Формат рядов данных.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает объект, представляющий изображение или текстурную заливку для указанного формата заливки.</summary>
+        <value>Представляет изображение или текстурную заливку для указанного формата заливки.</value>
+        <remarks><para>Только для чтения.</para>
+          <para>Изображение или текстурную заливку можно задать в формате для различных элементов (фигур) на диаграмме. Например, с помощью диалогового окна "Формат рядов данных" можно отформатировать столбцы в гистограмме на изображение или текстурную заливку. В этом случае <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.PictureEffects" /> свойство возвращает <see cref="T:Microsoft.Office.Core.PictureEffects" /> коллекцию, соответствующую параметрам, связанным с параметром рисунок или Текстурная заливка, в категории Заливка диалогового окна Формат ряда данных.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PresetGradient">
@@ -602,10 +574,10 @@
         <Parameter Name="PresetGradientType" Type="Microsoft.Office.Core.MsoPresetGradientType" />
       </Parameters>
       <Docs>
-        <param name="Style">Требуется <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />. Может иметь одно из следующих констант <b>MsoGradientStyle</b> :<b>msoGradientDiagonalDown</b><b>msoGradientDiagonalUp</b><b>msoGradientFromCenter</b><b>msoGradientFromCorner</b><b>msoGradientFromTitle</b><b> msoGradientHorizontal</b><b>msoGradientMixed</b><b>msoGradientVertical</b></param>
-        <param name="Variant">Требуется <b>целое число</b>. Градиентный variant. Может быть в диапазоне от 1 до 4, соответствующее одному из четырех вариантов на вкладке градиентной заливки диалоговое окно "". Если <paramref name="GradientStyle" /> — это <b>msoGradientFromCenter</b><paramref name="Variant" /> аргумент может быть только 1 или 2.</param>
-        <param name="PresetGradientType">Требуется <see cref="T:Microsoft.Office.Core.MsoPresetGradientType" />.</param>
-        <summary>Устанавливает указанный заливки предварительно заданного градиента.</summary>
+        <param name="Style">Обязательный <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />. Может быть одной из следующих констант <b>мсоградиентстиле</b> :<b>мсоградиентдиагоналдовн</b><b>мсоградиентдиагоналуп</b><b>мсоградиентфромцентер</b><b>msoGradientFromCorner</b><b>msoGradientFromTitle</b><b>msoGradientHorizontal</b><b>msoGradientMixed</b><b>msoGradientVertical</b></param>
+        <param name="Variant">Обязательный атрибут типа <b>Integer</b>. Вариант градиента. Может принимать значения от 1 до 4, соответствующие одному из четырех вариантов на вкладке градиент в диалоговом окне "способы заливки". Если <paramref name="GradientStyle" /> параметр <b>msoGradientFromCenter</b>имеет значение мсоградиентфромцентер <paramref name="Variant" /> , аргумент может иметь значение только 1 или 2.</param>
+        <param name="PresetGradientType">Обязательный <see cref="T:Microsoft.Office.Core.MsoPresetGradientType" />.</param>
+        <summary>Задает заданное заполнение заранее заданным градиентом.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -632,13 +604,11 @@
         <ReturnType>Microsoft.Office.Core.MsoPresetGradientType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип предварительно градиента для указанного заполнения.</summary>
+        <summary>Возвращает предварительно заданный тип градиента для заданной заливки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>PresetGradiantType</b> может иметь одно из <see cref="T:Microsoft.Office.Core.MsoPresetGradientType" /> константы.</para>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.PresetGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,Microsoft.Office.Core.MsoPresetGradientType)" /> метод, чтобы задать тип предварительно градиента для заполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>пресетградианттипе</b> может быть одной из <see cref="T:Microsoft.Office.Core.MsoPresetGradientType" /> констант.</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.PresetGradient(Microsoft.Office.Core.MsoGradientStyle,System.Int32,Microsoft.Office.Core.MsoPresetGradientType)" /> метод, чтобы задать предустановленный тип градиента для заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PresetTexture">
@@ -664,13 +634,11 @@
         <ReturnType>Microsoft.Office.Core.MsoPresetTexture</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает предварительно текстуры для указанного заполнения.</summary>
+        <summary>Возвращает подготовленную текстуру для указанной заливки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>PresetTexture</b> может иметь одно из <see cref="T:Microsoft.Office.Core.MsoPresetTexture" /> константы.</para>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.PresetTextured(Microsoft.Office.Core.MsoPresetTexture)" /> метод для задания стиля текстуры для заполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>пресеттекстуре</b> может быть одной из <see cref="T:Microsoft.Office.Core.MsoPresetTexture" /> констант.</para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.PresetTextured(Microsoft.Office.Core.MsoPresetTexture)" /> метод для установки заданной текстуры заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PresetTextured">
@@ -696,8 +664,8 @@
         <Parameter Name="PresetTexture" Type="Microsoft.Office.Core.MsoPresetTexture" />
       </Parameters>
       <Docs>
-        <param name="PresetTexture">Требуется <see cref="T:Microsoft.Office.Core.MsoPresetTexture" />.</param>
-        <summary>Задает формат указанного заливки предварительно текстуры.</summary>
+        <param name="PresetTexture">Обязательный <see cref="T:Microsoft.Office.Core.MsoPresetTexture" />.</param>
+        <summary>Устанавливает заданный формат заливки в предустановленную текстуру.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -727,12 +695,11 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает значение, определяющее стиль заливки следует поворот с объектом. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Core.MsoTriState" />.</value>
-        <remarks>
-          <list type="table">
+        <summary>Возвращает или задает значение, указывающее, должен ли стиль заливки вращаться вместе с объектом. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Core.MsoTriState" />значение.</value>
+        <remarks><list type="table">
             <item>
-              <term>MsoTriState может иметь одно из следующих констант <b>MsoTriState</b> .</term>
+              <term>MsoTriState может быть одной из этих констант <b>MsoTriState</b> .</term>
             </item>
             <item>
               <term>
@@ -760,8 +727,7 @@
               </term>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Solid">
@@ -785,11 +751,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Устанавливает указанный заливки единый цвет.</summary>
-        <remarks>
-          <para>Используйте этот метод для преобразования градиент, текстурой, узором или фона заливки обратно в сплошной заливке.</para>
-          <para></para>
-        </remarks>
+        <summary>Задает для заданной заливки одинаковый цвет.</summary>
+        <remarks><para>Используйте этот метод, чтобы преобразовать градиентную, текстурную, узорную или фоновую заливку обратно к сплошной заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextureAlignment">
@@ -819,9 +783,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает выравнивание текста для указанного <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" />объекта. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -851,10 +813,8 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение для масштабирования по горизонтали текст для <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объекта. Чтение и запись <b>одного</b>.</summary>
-        <value>
-          <b>Single</b>
-        </value>
+        <summary>Возвращает или задает значение горизонтального масштабирования текста для <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объекта. Для чтения и записи, <b>Single</b>.</summary>
+        <value><b>Одинарное с плавающей точкой</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -881,12 +841,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя файла текстуры для указанного заполнения.</summary>
+        <summary>Возвращает имя настраиваемого файла текстуры для заданной заливки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserPicture(System.String)" /> или <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserTextured(System.String)" /> метод, чтобы задать файл текстуры для заполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserPicture(System.String)" /> или <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserTextured(System.String)" /> для задания файла текстуры для заполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextureOffsetX">
@@ -915,10 +873,8 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение смещения X для указанного заливки. Чтение и запись <b>одного</b>.</summary>
-        <value>
-          <b>Single</b>
-        </value>
+        <summary>Возвращает значение смещения X для указанной заливки. Для чтения и записи, <b>Single</b>.</summary>
+        <value><b>Одинарное с плавающей точкой</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -948,10 +904,8 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение смещения Y для указанного заливки. Чтение и запись <b>одного</b>.</summary>
-        <value>
-          <b>Single</b>
-        </value>
+        <summary>Возвращает значение смещения по оси Y для указанной заливки. Для чтения и записи, <b>Single</b>.</summary>
+        <value><b>Одинарное с плавающей точкой</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -981,12 +935,11 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает стиля заголовков текстуры для указанного заполнения. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Core.MsoTriState" />.</value>
-        <remarks>
-          <list type="table">
+        <summary>Возвращает стиль плитки текстуры для заданной заливки. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Core.MsoTriState" />значение.</value>
+        <remarks><list type="table">
             <item>
-              <term>MsoTriState может иметь одно из следующих констант <b>MsoTriState</b> .</term>
+              <term>MsoTriState может быть одной из этих констант <b>MsoTriState</b> .</term>
             </item>
             <item>
               <term>
@@ -1014,8 +967,7 @@
               </term>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextureType">
@@ -1041,13 +993,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTextureType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип текстуры для указанного заливки. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoTextureType" />
-        </value>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Core.MsoTextureType" />может иметь одно из следующих констант <b>MsoTextureType</b> :</para>
+        <summary>Возвращает тип текстуры для заданной заливки. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoTextureType" /></value>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTextureType" />может быть одной из следующих констант <b>мсотекстуретипе</b> :</para>
           <para>
             <see cref="F:Microsoft.Office.Core.MsoTextureType.msoTexturePreset" />
           </para>
@@ -1057,9 +1006,8 @@
           <para>
             <see cref="F:Microsoft.Office.Core.MsoTextureType.msoTextureUserDefined" />
           </para>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserTextured(System.String)" /> метод для задания типа текстуры для заполнения.</para>
-          <para></para>
-        </remarks>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserTextured(System.String)" /> метод, чтобы задать тип текстуры для заливки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TextureVerticalScale">
@@ -1088,10 +1036,8 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает горизонтальное вертикальной текстуры для указанного заливки. Чтение и запись <b>одного</b>.</summary>
-        <value>
-          <b>Single</b>
-        </value>
+        <summary>Возвращает вертикальный масштаб текстуры для указанной заливки. Для чтения и записи, <b>Single</b>.</summary>
+        <value><b>Одинарное с плавающей точкой</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1121,12 +1067,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает степень прозрачности указанного заливки как значение от 0,0 (Непрозрачный) до 1.0 (Очистить).</summary>
+        <summary>Возвращает или задает степень прозрачности указанной заливки как значение от 0,0 (непрозрачная) до 1,0 (полностью прозрачная).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение этого свойства влияет на внешний вид сплошного заливки и линии. он не влияет на внешний вид Узорные линии или узора, градиента, рисунков или текстуры заливки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Значение этого свойства влияет только на внешний вид сплошных заливок и линий; Он не оказывает никакого действия над видом узорных линий или узором, градиентом, рисунком или текстурным заполнением.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TwoColorGradient">
@@ -1153,9 +1097,9 @@
         <Parameter Name="Variant" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Style">Требуется <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />. Может иметь одно из следующих констант <b>MsoGradientStyle</b> :<b>msoGradientDiagonalDown</b><b>msoGradientDiagonalUp</b><b>msoGradientFromCenter</b><b>msoGradientFromCorner</b><b>msoGradientFromTitle</b><b> msoGradientHorizontal</b><b>msoGradientMixed</b><b>msoGradientVertical</b></param>
-        <param name="Variant">Требуется <b>целое число</b>. Градиентный variant. Может быть в диапазоне от 1 до 4, соответствующее одному из четырех вариантов на вкладке градиентной заливки диалоговое окно "". Если <paramref name="Style" /> — это <b>msoGradientFromCenter</b><paramref name="Variant" /> аргумент может быть только 1 или 2.</param>
-        <summary>Устанавливает указанный заливки градиентом двух цветов.</summary>
+        <param name="Style">Обязательный <see cref="T:Microsoft.Office.Core.MsoGradientStyle" />. Может быть одной из следующих констант <b>мсоградиентстиле</b> :<b>мсоградиентдиагоналдовн</b><b>мсоградиентдиагоналуп</b><b>мсоградиентфромцентер</b><b>msoGradientFromCorner</b><b>msoGradientFromTitle</b><b>msoGradientHorizontal</b><b>msoGradientMixed</b><b>msoGradientVertical</b></param>
+        <param name="Variant">Обязательный атрибут типа <b>Integer</b>. Вариант градиента. Может принимать значения от 1 до 4, соответствующие одному из четырех вариантов на вкладке градиент в диалоговом окне "способы заливки". Если <paramref name="Style" /> параметр <b>msoGradientFromCenter</b>имеет значение мсоградиентфромцентер <paramref name="Variant" /> , аргумент может иметь значение только 1 или 2.</param>
+        <summary>Задает для указанного заполнения градиент в два цвета.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1184,35 +1128,33 @@
       <Docs>
         <summary>Возвращает тип заливки.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoFillType" />может быть одной из следующих констант:</para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoFillType" />может иметь одно из следующих констант:</para>
-          <para>
-            <b>msoFillGradient</b>
+            <b>мсофиллградиент</b>
           </para>
           <para>
-            <b>msoFillMixed</b>
+            <b>мсофиллмиксед</b>
           </para>
           <para>
-            <b>msoFillPatterned</b>
+            <b>мсофиллпаттернед</b>
           </para>
           <para>
-            <b>msoFillPicture</b>
+            <b>мсофиллпиктуре</b>
           </para>
           <para>
-            <b>msoFillSolid</b>
+            <b>мсофиллсолид</b>
           </para>
           <para>
-            <b>msoFillTextured</b>
+            <b>мсофиллтекстуред</b>
           </para>
           <para>
-            <b>xlAutomatic</b>
+            <b>кслаутоматик</b>
           </para>
           <para>
-            <b>xlNone</b>
+            <b>кслноне</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UserPicture">
@@ -1238,9 +1180,8 @@
         <Parameter Name="PictureFile" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="PictureFile">
-          <b>Строковое значение.</b> Имя файла изображения.</param>
-        <summary>Заливка указанной фигуры с изображением.</summary>
+        <param name="PictureFile">Обязательный атрибут типа <b>String</b>. Имя файла изображения.</param>
+        <summary>Заполняет указанную фигуру изображением.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1267,13 +1208,10 @@
         <Parameter Name="TextureFile" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="TextureFile">
-          <b>Строковое значение.</b> Имя файла изображения.</param>
-        <summary>Заполняет указанный фигуры малых заголовков изображения.</summary>
-        <remarks>
-          <para>Если необходимо заполнить форму одно большое изображение, используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserPicture(System.String)" /> метод.</para>
-          <para></para>
-        </remarks>
+        <param name="TextureFile">Обязательный атрибут типа <b>String</b>. Имя файла изображения.</param>
+        <summary>Заполняет указанную фигуру мелкими костями изображения.</summary>
+        <remarks><para>Если вы хотите заполнить фигуру одним большим изображением, используйте <see cref="M:Microsoft.Office.Interop.Excel.FillFormat.UserPicture(System.String)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Visible">
@@ -1304,27 +1242,25 @@
       <Docs>
         <summary>Определяет, является ли объект видимым.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может иметь одно из следующих констант <b>MsoTriState</b> :</para>
-          <para>
-            <b>msoCTrue</b>
+            <b>мсоктруе</b>
           </para>
           <para>
-            <b>msoFalse</b>
+            <b>мсофалсе</b>
           </para>
           <para>
-            <b>msoTriStateMixed</b>
+            <b>мсотристатемиксед</b>
           </para>
           <para>
-            <b>msoTriStateToggle</b>
+            <b>мсотристатетоггле</b>
           </para>
           <para>
-            <b>msoTrue</b> Объект является видимым.</para>
-          <para>Свойство <b>Visible</b> для элемента сводной таблицы имеет <b>значение True</b> , если элемент в данный момент виден в таблице.</para>
-          <para>Если свойство <b>Visible</b> для имени задано значение <b>False</b>, имя не будет отображаться в диалоговом окне Определение имени.</para>
-          <para></para>
-        </remarks>
+            <b>мсотруе</b> Объект является видимым.</para>
+          <para>Свойство <b>Visible</b> элемента сводной таблицы имеет <b>значение true</b> , если элемент в данный момент отображается в таблице.</para>
+          <para>Если свойству <b>Visible</b> присвоено значение <b>false</b>, имя не будет отображаться в диалоговом окне Определение имени.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

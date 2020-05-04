@@ -1,13 +1,5 @@
 <Type Name="PivotField" FullName="Microsoft.Office.Interop.Excel.PivotField">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="680708caecb98e691d345621d9a0f7ee47fedab0" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20577240" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PivotField" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="680708caecb98e691d345621d9a0f7ee47fedab0" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20577240" /></Metadata><TypeSignature Language="C#" Value="public interface PivotField" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotField" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotField" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotField" />
@@ -29,38 +21,36 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет поле в отчете сводной таблицы. Объект <b>сводных полей</b> должна быть членом <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> семейства сайтов. Коллекция <b>Сводные поля</b> содержит все поля в отчет сводной таблицы, в том числе скрытых полей.</summary>
-    <remarks>
-      <para>Использовать <b>Сводные поля</b>(<paramref name="index" />), где <paramref name="index" /> поля имя или номер индекса, чтобы возвратить объект <b>сводных полей</b> .</para>
-      <para>В некоторых случаях может быть проще использовать один из свойства, которые возвращает подмножество поля сводной таблицы. Доступны следующие свойства:</para>
+    <summary>Представляет поле в отчете сводной таблицы. Объект <b>PivotField</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> коллекции. Коллекция <b>PivotFields</b> содержит все поля отчета сводной таблицы, в том числе скрытые поля.</summary>
+    <remarks><para>Используйте <b>PivotFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя поля или номер индекса, чтобы вернуть один объект <b>PivotField</b> .</para>
+      <para>В некоторых случаях может быть проще использовать одно из свойств, возвращающих подмножество полей сводной таблицы. Доступны следующие свойства:</para>
       <list type="bullet">
         <item>
           <description>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.CubeFields" />Свойство</description>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.CubeFields" />свойств</description>
         </item>
         <item>
           <description>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DataFields(System.Object)" />Свойство</description>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DataFields(System.Object)" />свойств</description>
         </item>
         <item>
           <description>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.HiddenFields(System.Object)" />Свойство</description>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.HiddenFields(System.Object)" />свойств</description>
         </item>
         <item>
           <description>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.PageFields(System.Object)" />Свойство</description>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.PageFields(System.Object)" />свойств</description>
         </item>
         <item>
           <description>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.RowFields(System.Object)" />Свойство</description>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.RowFields(System.Object)" />свойств</description>
         </item>
         <item>
           <description>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.VisibleFields(System.Object)" />Свойство</description>
+            <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.VisibleFields(System.Object)" />свойств</description>
         </item>
       </list>
-      <para></para>
-    </remarks>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -123,14 +113,11 @@
         <Parameter Name="ClearList" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Item">
-          <b>Строковое значение.</b> Имя источника <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объекта, соответствующие определенным уникальное имя элемента интерактивной аналитической обработки (OLAP).</param>
-        <param name="ClearList">Необязательный элемент <b>Object</b>. Если <b>значение False</b> (по умолчанию), добавляет элемент страницы в существующий список. Если <b>значение True</b>, удаляет все текущие элементы и добавляет <paramref name="Item" />.</param>
-        <summary>Добавляет дополнительный элемент несколько поля страницы элемента.</summary>
-        <remarks>
-          <para>Чтобы избежать ошибок во время выполнения, источник данных должен быть источника OLAP поля, выбранный в текущий момент должен быть в положение страницы и <see cref="P:Microsoft.Office.Interop.Excel.CubeField.EnableMultiplePageItems" /> свойство должно быть присвоено <b>значение True</b>.</para>
-          <para></para>
-        </remarks>
+        <param name="Item">Обязательный атрибут типа <b>String</b>. Имя источника <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объекта, соответствующее определенному уникальному имени элемента интерактивной аналитической обработки (OLAP).</param>
+        <param name="ClearList">Необязательный <b>объект</b>. Если задано <b>значение false</b> (по умолчанию), элемент страницы добавляется в существующий список. Если задано <b>значение true</b>, удаляются все <paramref name="Item" />текущие элементы и добавляются.</param>
+        <summary>Добавляет дополнительный элемент в поле страницы с несколькими элементами.</summary>
+        <remarks><para>Чтобы избежать ошибок во время выполнения, источником данных должен быть источник OLAP, в настоящее время выбранное поле должно находиться в позиции страницы, а <see cref="P:Microsoft.Office.Interop.Excel.CubeField.EnableMultiplePageItems" /> свойству должно быть присвоено значение <b>true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AllItemsVisible">
@@ -156,19 +143,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, ли вручную фильтрации применяется к <see cref="T:Microsoft.Office.Interop.Excel.Pivotfield" />.
+        <summary>Получает значение, указывающее, применяется ли фильтрация вручную к <see cref="T:Microsoft.Office.Interop.Excel.Pivotfield" />.
 Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство предоставляет простой способ, чтобы быстро проверить, применяется ли фильтрация вручную для <b>сводных полей</b> или <see cref="T:Microsoft.Office.Interop.Excel.CubeField" />.</para>
-          <para>Для сводных таблиц OLAP это свойство доступно только для объекта <b>CubeField</b> . Пытается получить или задать его на объекте <b>сводных полей</b> в OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> возвратит ошибку времени выполнения.</para>
-          <para>Для <b>сводных таблиц</b>это свойство доступно для объекта <b>сводных полей</b> .</para>
-          <para>Значение по умолчанию — <b>True</b>.  Это свойство автоматически устанавливается значение <b>True</b> , при применении без ручной фильтрации (вне зависимости от необходимости <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> свойство имеет <b>значение True</b> или <b>False</b>). Автоматически принимает значение <b>False</b> , при применении вручную фильтрации (вне зависимости от необходимости <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> свойство имеет <b>значение True</b> или <b>False</b>).</para>
-          <para>Это свойство напрямую отражает состояние установите флажок все в раскрывающемся списке фильтр для <b>сводных полей</b> или <b>CubeField</b>.</para>
-          <para></para>
-        </remarks>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство предоставляет простой способ проверки того, применяется ли ручная фильтрация к <b>PivotField</b> или <see cref="T:Microsoft.Office.Interop.Excel.CubeField" />.</para>
+          <para>Для сводных таблиц OLAP это свойство доступно только для объекта <b>CubeField</b> . Попытка получить или задать его для объекта <b>PivotField</b> в OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> будет возвращать ошибку времени выполнения.</para>
+          <para>Для <b>сводных таблиц</b>это свойство доступно для объекта <b>PivotField</b> .</para>
+          <para>Значение по умолчанию — <b>True</b>.  Для этого свойства автоматически задается значение <b>true</b> , если фильтрация вручную не применяется (независимо от <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> того, имеет ли свойство <b>значение true</b> или <b>false</b>). Он автоматически устанавливается в <b>значение false</b> при применении фильтрации вручную (независимо от того, имеет ли <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> свойство <b>значение true</b> или <b>false</b>).</para>
+          <para>Это свойство напрямую отражает состояние флажка выбрать все в раскрывающемся списке фильтров для <b>PivotField</b> или <b>CubeField</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -195,9 +178,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Excel. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel._Application" />
-        </value>
+        <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -227,12 +208,11 @@
         <Parameter Name="Field" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <b>целое число</b>. Используйте <b>xlAutomatic</b> указанного отчета сводной таблицы для отображения элементов, которые соответствуют определенным условиям. Используйте <b>xlManual</b> , чтобы отключить эту функцию.</param>
-        <param name="Range">Требуется <b>целое число</b>. Расположение, с которого следует начать отображение элементов. Может быть одним из следующих констант: <b>xlTop</b> или <b>xlBottom</b>.</param>
-        <param name="Count">Требуется <b>целое число</b>. Количество элементов, которые будут показаны.</param>
-        <param name="Field">
-          <b>Строковое значение.</b> Имя поля базы данных. Укажите уникальное имя (в виде, возвращаемом из <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойство) и не отображаемое имя.</param>
-        <summary>Отображает количество элементов в верхней или нижней поле строки, страницы или столбца в указанном отчет сводной таблицы.</summary>
+        <param name="Type">Обязательный атрибут типа <b>Integer</b>. Используйте <b>кслаутоматик</b> , чтобы отобразить элементы, которые совпадают с указанными критериями, в указанном отчете сводной таблицы. Чтобы отключить эту функцию, используйте <b>кслмануал</b> .</param>
+        <param name="Range">Обязательный атрибут типа <b>Integer</b>. Расположение, с которого начинается показ элементов. Может быть любой из следующих констант: <b>кслтоп</b> или <b>кслботтом</b>.</param>
+        <param name="Count">Обязательный атрибут типа <b>Integer</b>. Количество отображаемых элементов.</param>
+        <param name="Field">Обязательный атрибут типа <b>String</b>. Имя базового поля данных. Необходимо указать уникальное имя (которое возвращается из <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойства), а не отображаемое имя.</param>
+        <summary>Отображает количество верхних и нижних элементов для поля строки, страницы или столбца в указанном отчете сводной таблицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -259,7 +239,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число вверх или вниз элементов, отображаемых в указанном поле сводной таблицы автоматически. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число верхних и нижних элементов, которые автоматически отображаются в указанном поле сводной таблицы. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -287,7 +267,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя поля данных, используется для определения верхней или нижней элементов, отображаемых в указанном поле сводной таблицы автоматически. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает имя поля данных, используемое для определения верхних и нижних элементов, которые автоматически отображаются в указанном поле сводной таблицы. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -315,7 +295,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>xlTop</b> Если автоматически показаны основные элементы в указанном поле сводной таблицы; Возвращает <b>xlBottom</b> , если показаны последних элементов. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает <b>кслтоп</b> , если верхние элементы отображаются автоматически в указанном поле сводной таблицы; Возвращает <b>кслботтом</b> , если отображаются нижние элементы. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -343,7 +323,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>xlAutomatic</b> , если <see cref="M:Microsoft.Office.Interop.Excel.PivotField.AutoShow(System.Int32,System.Int32,System.Int32,System.String)" /> включен для указанного поля сводной таблицы. Возвращает <b>xlManual</b> , если этот параметр отключен <b>отображения</b> . Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает <b>кслаутоматик</b> , <see cref="M:Microsoft.Office.Interop.Excel.PivotField.AutoShow(System.Int32,System.Int32,System.Int32,System.String)" /> если параметр включен для указанного поля сводной таблицы; Возвращает <b>кслмануал</b> , если <b>Автоотображение</b> отключено. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -375,10 +355,9 @@
         <Parameter Name="Field" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Order">Требуется <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" />. Порядок сортировки.</param>
-        <param name="Field">
-          <b>Строковое значение.</b> Имя поля ключа сортировки. Укажите уникальное имя (в виде, возвращаемом из <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойство) и не отображаемое имя.</param>
-        <summary>Устанавливает автоматическая сортировка поля правила для отчета сводной таблицы.</summary>
+        <param name="Order">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" />. Порядок сортировки.</param>
+        <param name="Field">Обязательный атрибут типа <b>String</b>. Имя поля ключа сортировки. Необходимо указать уникальное имя (которое возвращается из <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойства), а не отображаемое имя.</param>
+        <summary>Устанавливает автоматические правила сортировки полей для отчетов сводных таблиц.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -405,68 +384,64 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение типа integer, соответствующее для настраиваемых итогов, используемый для сортировки в указанном <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> поле автоматически. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Значение по умолчанию — 1 (автоматически).
-Если свойство <b>AutoSortCustomSubtotal</b> 1 (автоматически), данные сортируются по регулярных промежуточные итоги.
-Свойство <b>AutoSortCustomSubtotal</b> может иметь одно из значений индекса, перечисленные в следующей таблице.</para>
+        <summary>Возвращает целое число, соответствующее настраиваемому промежуточному итогу, используемому для автоматической сортировки указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> поля. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Значение по умолчанию — 1 (автоматический).
+Если для свойства <b>аутосорткустомсубтотал</b> задано значение 1 (автоматический), данные сортируются по обычным промежуточным итогам.
+Свойство <b>аутосорткустомсубтотал</b> может иметь одно из значений индекса, приведенных в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>1</term>
-              <description>Automatic</description>
+              <term>1,1</term>
+              <description>Автоматически</description>
             </item>
             <item>
               <term>2</term>
               <description>Sum</description>
             </item>
             <item>
-              <term>3</term>
+              <term>4</term>
               <description>Count</description>
             </item>
             <item>
-              <term>4</term>
-              <description>Среднее значение</description>
+              <term>4 </term>
+              <description>СРЗНАЧ</description>
             </item>
             <item>
-              <term>5</term>
+              <term>5 </term>
               <description>Max</description>
             </item>
             <item>
-              <term>6</term>
+              <term>6 </term>
               <description>Min</description>
             </item>
             <item>
-              <term>7</term>
+              <term>7 </term>
               <description>Продукт</description>
             </item>
             <item>
-              <term>8</term>
-              <description>Количество значений</description>
+              <term>8 </term>
+              <description>Количество Нумс</description>
             </item>
             <item>
-              <term>9</term>
-              <description>StdDev</description>
+              <term>9 </term>
+              <description>стддев</description>
             </item>
             <item>
-              <term>10</term>
-              <description>StdDevp</description>
+              <term>10 </term>
+              <description>стддевп</description>
             </item>
             <item>
-              <term>11</term>
+              <term>11 </term>
               <description>Var</description>
             </item>
             <item>
-              <term>12</term>
+              <term>12 </term>
               <description>VARP</description>
             </item>
           </list>
-          <para>Сортировка поддерживается только настраиваемые промежуточные итоги, отображаемых в сводной таблице, поэтому попытке присвоено значение, представляющее настраиваемые промежуточные итоги не <b>AutoSortCustomSubtotal</b> в сводной таблице представления возвратит ошибку времени выполнения.</para>
-          <para>Если сортировка применяется в зависимости от настраиваемого промежуточные итоги и что промежуточные итоги удаляется из сводной таблицы, свойство <b>AutoSortCustomSubtotal</b> автоматически устанавливается значение по умолчанию (1).</para>
-          <para></para>
-        </remarks>
+          <para>Сортировка поддерживается только настраиваемыми промежуточными суммами, которые фактически отображаются в сводной таблице, поэтому при попытке задать для <b>аутосорткустомсубтотал</b> значение, представляющее настраиваемый итог в режиме сводной таблицы, будет возвращать ошибку во время выполнения.</para>
+          <para>Если сортировка применяется на основе настраиваемого промежуточного итога, а промежуточный итог удаляется из сводной таблицы, то для свойства <b>аутосорткустомсубтотал</b> будет автоматически задано значение по умолчанию (1).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoSortEx">
@@ -525,7 +500,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя поля данных, используемый для сортировки указанного поля сводной таблицы автоматически. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает имя поля данных, используемого для автоматического упорядочения указанного поля сводной таблицы. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -553,7 +528,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает порядок, используемый для сортировки указанного поля сводной таблицы автоматически. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> константы. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает порядок, используемый для автоматического упорядочения указанного поля сводной таблицы. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlSortOrder" /> констант. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -581,10 +556,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotLine</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> используется для сортировки в указанном <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> поле автоматически. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" />
-        </value>
+        <summary>Возвращает значение <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> , используемое для сортировки <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> указанного поля автоматически. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -614,12 +587,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает поле для настраиваемых вычислений. Это свойство является допустимым только для поля данных. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Возвращает или задает базовое поле для настраиваемого вычисления. Это свойство является допустимым только для полей данных. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство недоступно для источников данных OLAP.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство недоступно для источников данных OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BaseItem">
@@ -648,7 +619,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает элемент в поле для настраиваемых вычислений. Действительно только для поля данных. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Возвращает или задает элемент в базовом поле для настраиваемого вычисления. Допускается только для полей данных. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -674,12 +645,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CalculatedItems" /> коллекции, представляющей все вычисляемые элементы в указанном отчет сводной таблицы. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CalculatedItems" /> коллекцию, которая представляет все Вычисляемые элементы в указанном отчете сводной таблицы. Только для чтения.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Для источников данных OLAP этот метод возвращает пустую коллекцию.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP этот метод возвращает коллекцию нулевой длины.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Calculation">
@@ -708,12 +677,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotFieldCalculation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип вычислений, выполняемых указанного поля. Это свойство является допустимым только для поля данных. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldCalculation" />.</summary>
+        <summary>Возвращает или задает тип вычисления, выполняемого указанным полем. Это свойство является допустимым только для полей данных. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldCalculation" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP это свойство может возвращать только или иметь значение <b>xlNormal</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP это свойство может возвращать только значение <b>кслнормал</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Caption">
@@ -742,7 +709,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Текст метки для поля сводной. Только для чтения, <b>String</b>.</summary>
+        <summary>Текст метки для поля сводной таблицы. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -770,13 +737,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющий поле дочерних для указанного поля (если поле по группам и имеется поле дочерних). Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющий дочернее поле для указанного поля (если поле является сгруппированным и имеет дочернее поле). Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если указанное поле не имеет дочерние поля, это свойство приводит к ошибке.</para>
+        <remarks><para>Если указанное поле не имеет дочернего поля, это свойство вызывает ошибку.</para>
           <para>Это свойство недоступно для источников данных OLAP.</para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ChildItems">
@@ -805,13 +770,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Имя или номер (может быть массив, чтобы указать несколько элементов).</param>
-        <summary>Возвращает объект, представляющий либо один элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или коллекцию всех элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект), которые группа дочерние элементы в указанном поле или дочерние элементы выбранного элемента. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Имя или номер элемента (может быть массивом, чтобы указать несколько элементов).</param>
+        <summary>Возвращает объект, представляющий один элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или коллекцию всех элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект), которые являются дочерними объектами группы в указанном поле, или дочерними элементами указанного элемента. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство недоступно для источников данных OLAP.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство недоступно для источников данных OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClearAllFilters">
@@ -835,7 +798,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вызывающий этот метод удаляет все фильтры, примененного к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Этот компонент включает удаление все фильтры из <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> и их удаление любой вручную фильтрации применяется к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> также. Если <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> находится в области фильтра отчета, выбранного элемента будет иметь значение элемента по умолчанию.</summary>
+        <summary>При вызове этого метода удаляются все фильтры, <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />которые в данный момент применены к. Сюда входит удаление всех фильтров из <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> коллекции <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> и удаление любой фильтрации вручную, примененной к. <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> Если в области фильтра отчета выбран элемент, для него будет задан элемент по умолчанию.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -860,54 +823,53 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Этот метод удаляет все фильтры меток или все фильтры дат в <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />.</summary>
-        <remarks>
-          <para>В следующей таблице перечислены типы фильтра разные метки, которые будут удалены этим методом.</para>
+        <summary>Этот метод удаляет все фильтры меток или все фильтры дат в <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> коллекции. <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /></summary>
+        <remarks><para>В следующей таблице перечислены различные типы фильтров меток, которые будут удалены этим методом.</para>
           <list type="table">
             <item>
               <term />
             </item>
             <item>
-              <term>xlCaptionEquals</term>
+              <term>кслкаптионекуалс</term>
             </item>
             <item>
-              <term>xlCaptionDoesNotEqual</term>
+              <term>кслкаптиондоеснотекуал</term>
             </item>
             <item>
-              <term>xlCaptionIsGreaterThan</term>
+              <term>кслкаптионисгреатерсан</term>
             </item>
             <item>
-              <term>xlCaptionIsGreaterThanOrEqualTo</term>
+              <term>кслкаптионисгреатерсанорекуалто</term>
             </item>
             <item>
-              <term>xlCaptionIsLessThan</term>
+              <term>кслкаптионислесссан</term>
             </item>
             <item>
-              <term>xlCaptionIsLessThanOrEqualTo</term>
+              <term>кслкаптионислесссанорекуалто</term>
             </item>
             <item>
-              <term>xlCaptionBeginsWith</term>
+              <term>кслкаптионбегинсвис</term>
             </item>
             <item>
-              <term>xlCaptionDoesNotBeginWith</term>
+              <term>кслкаптиондоеснотбегинвис</term>
             </item>
             <item>
-              <term>xlCaptionEndsWith</term>
+              <term>кслкаптионендсвис</term>
             </item>
             <item>
-              <term>xlCaptionDoesNotEndWith</term>
+              <term>кслкаптиондоеснотендвис</term>
             </item>
             <item>
-              <term>xlCaptionContains</term>
+              <term>кслкаптионконтаинс</term>
             </item>
             <item>
-              <term>xlCaptionDoesNotContain </term>
+              <term>кслкаптиондоеснотконтаин </term>
             </item>
             <item>
-              <term>xlCaptionIsBetween</term>
+              <term>кслкаптионисбетвин</term>
             </item>
             <item>
-              <term>xlCaptionIsNotBetween</term>
+              <term>кслкаптиониснотбетвин</term>
             </item>
             <item>
               <term />
@@ -916,82 +878,82 @@
               <term />
             </item>
           </list>
-          <para>В следующей таблице перечислены типы фильтра разные даты, которые будут удалены этим методом.</para>
+          <para>В приведенной ниже таблице перечислены различные типы фильтров дат, которые будут удалены этим методом.</para>
           <list type="table">
             <item>
               <term />
             </item>
             <item>
-              <term>xlSpecificDate</term>
+              <term>кслспеЦификдате</term>
             </item>
             <item>
-              <term>xlNotSpecificDate</term>
+              <term>кслнотспеЦификдате</term>
             </item>
             <item>
-              <term>xlBefore</term>
+              <term>кслбефоре</term>
             </item>
             <item>
-              <term>xlBeforeOrEqualTo</term>
+              <term>кслбефореорекуалто</term>
             </item>
             <item>
-              <term>xlAfter</term>
+              <term>кслафтер</term>
             </item>
             <item>
-              <term>xlAfterOrEqualTo</term>
+              <term>кслафтерорекуалто</term>
             </item>
             <item>
-              <term>xlDateBetween</term>
+              <term>кслдатебетвин</term>
             </item>
             <item>
-              <term>xlDateNotBetween</term>
+              <term>кслдатенотбетвин</term>
             </item>
             <item>
-              <term>xlDateToday</term>
+              <term>кслдатетодай</term>
             </item>
             <item>
-              <term>xlDateYesterday</term>
+              <term>кслдатэйестердай</term>
             </item>
             <item>
-              <term>xlDateTomorrow</term>
+              <term>кслдатетоморров</term>
             </item>
             <item>
-              <term>xlDateThisWeek</term>
+              <term>кслдатесисвик</term>
             </item>
             <item>
-              <term>xlDateLastWeek</term>
+              <term>кслдателаствик</term>
             </item>
             <item>
-              <term>xlDateNextWeek</term>
+              <term>кслдатенекствик</term>
             </item>
             <item>
-              <term>xlDateThisMonth</term>
+              <term>кслдатесисмонс</term>
             </item>
             <item>
-              <term>xlDateLastMonth</term>
+              <term>кслдателастмонс</term>
             </item>
             <item>
-              <term>xlDateNextMonth</term>
+              <term>кслдатенекстмонс</term>
             </item>
             <item>
-              <term>xlDateThisQuarter</term>
+              <term>кслдатесискуартер</term>
             </item>
             <item>
-              <term>xlDateLastQuarter</term>
+              <term>кслдателасткуартер</term>
             </item>
             <item>
-              <term>xlDateNextQuarter</term>
+              <term>кслдатенексткуартер</term>
             </item>
             <item>
-              <term>xlDateThisYear</term>
+              <term>кслдатесисеар</term>
             </item>
             <item>
-              <term>xlDateLastYear</term>
+              <term>кслдателастеар</term>
             </item>
             <item>
-              <term>xlDateNextYear</term>
+              <term>кслдатенекстеар</term>
             </item>
             <item>
-              <term>xlYearToDate</term>
+              <term>кслеартодате</term>
             </item>
             <item>
               <term>xlAllDatesInPeriodQuarter1</term>
@@ -1006,44 +968,43 @@
               <term>xlAllDatesInPeriodQuarter4</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodJanuary</term>
+              <term>кслаллдатесинпериоджануари</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodFebruary</term>
+              <term>кслаллдатесинпериодфебруари</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodMarch</term>
+              <term>кслаллдатесинпериодмарч</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodApril</term>
+              <term>кслаллдатесинпериодаприл</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodMay</term>
+              <term>кслаллдатесинпериодмай</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodJune</term>
+              <term>кслаллдатесинпериоджуне</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodJuly</term>
+              <term>кслаллдатесинпериоджули</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodAugust</term>
+              <term>кслаллдатесинпериодаугуст</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodSeptember</term>
+              <term>кслаллдатесинпериодсептембер</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodOctober</term>
+              <term>кслаллдатесинпериодоктобер</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodNovember</term>
+              <term>кслаллдатесинпериодновембер</term>
             </item>
             <item>
-              <term>xlAllDatesInPeriodDecember</term>
+              <term>кслаллдатесинпериоддецембер</term>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClearManualFilter">
@@ -1067,12 +1028,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Предоставляет простой способ присвойте свойству <b>Visible</b> значение <b>True</b> для всех элементов этого <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> в <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" />и, чтобы очистить коллекций <b>HiddenItemsList</b> и <b>VisibleItemsList</b> в OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" />.</summary>
-        <remarks>
-          <para>Этот метод доступен для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /><b>объект</b> в <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> , а также для <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объект в OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" />. Ее для вызова <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> в OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> возвратит ошибку времени выполнения.</para>
-          <para>После вызова этого метода, являются пустыми следующие семейства: <b>HiddenItemsList</b>, <b>HiddenItems</b>, <b>VisibleItemsList</b>и <b>VisibleItems</b>.</para>
-          <para></para>
-        </remarks>
+        <summary>Предоставляет простой способ задать для свойства <b>Visible</b> <b>значение true</b> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> для всех элементов in <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" />и для пустых коллекций <b>хидденитемслист</b> и висиблеитемслист в OLAP. <b>VisibleItemsList</b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /></summary>
+        <remarks><para>Этот метод доступен для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <b>объекта</b> в <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> и для <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта в OLAP. <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> При вызове метода <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> a в OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> будет возвращать ошибку времени выполнения.</para>
+          <para>После вызова этого метода следующие коллекции пусты: <b>хидденитемслист</b>, <b>хидденитемс</b>, <b>висиблеитемслист</b>и <b>висиблеитемс</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ClearValueFilters">
@@ -1096,54 +1055,53 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вызывающий этот метод удаляет все фильтры значения в <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> коллекцию <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />.</summary>
-        <remarks>
-          <para>В следующей таблице перечислены типы фильтра разные значения, которые будут удалены этим методом.</para>
+        <summary>При вызове этого метода удаляются все фильтры <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> значений в коллекции <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />.</summary>
+        <remarks><para>В следующей таблице перечислены различные типы фильтров значений, которые будут удалены этим методом.</para>
           <list type="table">
             <item>
               <term />
             </item>
             <item>
-              <term>xlTopCount</term>
+              <term>кслтопкаунт</term>
             </item>
             <item>
-              <term>xlBottomCount</term>
+              <term>кслботтомкаунт</term>
             </item>
             <item>
-              <term>xlTopPercent</term>
+              <term>кслтопперцент</term>
             </item>
             <item>
-              <term>xlBottomPercent</term>
+              <term>кслботтомперцент</term>
             </item>
             <item>
-              <term>xlTopSum</term>
+              <term>кслтопсум</term>
             </item>
             <item>
-              <term>xlBottomSum</term>
+              <term>кслботтомсум</term>
             </item>
             <item>
-              <term>xlValueEquals</term>
+              <term>кслвалуикуалс</term>
             </item>
             <item>
-              <term>xlValueDoesNotEqual</term>
+              <term>кслвалуедоеснотекуал</term>
             </item>
             <item>
-              <term>xlValueIsGreaterThan</term>
+              <term>кслвалуеисгреатерсан</term>
             </item>
             <item>
-              <term>xlValueIsGreaterThanOrEqualTo</term>
+              <term>кслвалуеисгреатерсанорекуалто</term>
             </item>
             <item>
-              <term>xlValueIsLessThan</term>
+              <term>кслвалуеислесссан</term>
             </item>
             <item>
-              <term>xlValueIsLessThanOrEqualTo</term>
+              <term>кслвалуеислесссанорекуалто</term>
             </item>
             <item>
-              <term>xlValueIsBetween</term>
+              <term>кслвалуеисбетвин</term>
             </item>
             <item>
-              <term>xlValueIsNotBetween </term>
+              <term>кслвалуеиснотбетвин </term>
             </item>
             <item>
               <term />
@@ -1152,8 +1110,7 @@
               <term />
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -1179,12 +1136,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CubeField">
@@ -1210,7 +1165,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.CubeField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта из потомки указанного поля сводной таблицы. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объект, из которого заданное поле сводной таблицы имеет нисходящее значение. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1241,7 +1196,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текущую страницу отображения для поля страницы (применяется только для поля страниц). Чтение и запись <b>объектов</b>.</summary>
+        <summary>Возвращает или задает текущую страницу, отображаемую для поля Page (допускается только для полей страницы). <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1272,12 +1227,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает массив строк, соответствующие списку элементов, включенных в поле страницы нескольких элементов отчета сводной таблицы. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Возвращает или задает массив строк, соответствующий списку элементов, включенных в поле страницы с несколькими элементами отчета сводной таблицы. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы избежать ошибок во время выполнения, источник данных должен быть источника OLAP поля, выбранный в текущий момент должен быть в положение страницы и <see cref="P:Microsoft.Office.Interop.Excel.CubeField.EnableMultiplePageItems" /> свойство должно быть присвоено <b>значение True</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Чтобы избежать ошибок во время выполнения, источником данных должен быть источник OLAP, в настоящее время выбранное поле должно находиться в позиции страницы, а <see cref="P:Microsoft.Office.Interop.Excel.CubeField.EnableMultiplePageItems" /> свойству должно быть присвоено значение <b>true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CurrentPageName">
@@ -1306,12 +1259,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текущей отображаемой страницы указанного отчета сводной таблицы. Имя страницы отображается в поле страницы. Обратите внимание на то, что это свойство работает только в том случае, если уже существует текущей отображаемой страницы. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает отображаемую в текущий момент страницу указанного отчета сводной таблицы. Имя страницы отображается в поле Page (страница). Обратите внимание, что это свойство работает только в том случае, если текущая страница уже существует. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется к сводные таблицы, подключенной к источнику данных OLAP. Попытки подключения для возвращения или задания этого свойства с помощью сводной таблицы, не подключенных к источнику данных OLAP приведет к ошибке времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство применяется к сводным таблицам, подключенным к источнику данных OLAP. Попытка возврата или установки этого свойства со сводной таблицей, не подключенной к источнику данных OLAP, приведет к ошибке во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DatabaseSort">
@@ -1340,17 +1291,15 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если задано значение <b>True</b>, может вручную изменения положения элементов в поле сводной таблицы. Возвращает <b>значение True</b> , если это поле имеет вручную не размещенный элементов. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Если задано <b>значение true</b>, расположение элементов в поле сводной таблицы вручную разрешено. Возвращает <b>значение true</b> , если в поле нет элементов, размещенных вручную. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DatabaseSort</b> возвращает <b>значение False</b> , если источник данных не источник данных интерактивной аналитической обработки (OLAP).</para>
-          <para>Данное свойство возвращает <b>значение True</b> , если источник данных OLAP и Настраиваемая сортировка ни автоматическая сортировка была применена к полю.</para>
-          <para>Свойства <b>DatabaseSort</b> значение <b>True</b>, сводной таблицы OLAP, приведет к удалению любые изменения порядка или автоматическая сортировка применяется к полю (иными словами, со сводными таблицами поведение по умолчанию при восстановится было выполнено подключение).</para>
-          <para>Свойство <b>DatabaseSort</b><b>False</b> будет отображено порядок сортировки текущей порядку элементов, если нет автоматическая сортировка.</para>
-          <para>Свойство <b>DatabaseSort</b> значение <b>True</b> или <b>False</b> при указании обновление.</para>
-          <para>Свойства <b>DatabaseSort</b> значение <b>True</b> для источника не OLAP и полей данных OLAP вызывает ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>датабасесорт</b> возвращает <b>значение false</b> , если источник данных не является источником данных OLAP (Online Analytical Processing).</para>
+          <para>Это свойство возвращает <b>значение true</b> , если источником данных является OLAP, а для поля не было применено ни настраиваемая упорядочивание, ни автоматическая сортировка.</para>
+          <para>Если задать <b>DatabaseSort</b> для свойства Датабасесорт <b>значение true</b>, то в сводной таблице OLAP будут удалены все настраиваемые упорядочивания или автоматическая сортировка, примененные к полю (другими словами, в сводной таблице возвращается поведение по умолчанию при создании подключения).</para>
+          <para>Если задать <b>DatabaseSort</b> для свойства Датабасесорт <b>значение false</b> , порядок сортировки будет текущим для текущего порядка элементов, если автоматическая сортировка не применяется.</para>
+          <para>Установка для свойства <b>датабасесорт</b> значения <b>true</b> или <b>false</b> приводит к обновлению.</para>
+          <para>Если задать <b>DatabaseSort</b> для свойства Датабасесорт <b>значение true</b> для источника, отличного от OLAP, или поля данных OLAP, возникает ошибка времени выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataRange">
@@ -1376,26 +1325,24 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DataRange</b> возвращает следующие, в зависимости от объекта:</para>
+        <remarks><para>Свойство <b>Range</b> возвращает следующее значение в зависимости от объекта:</para>
           <list type="table">
             <item>
               <term>Поле данных</term>
-              <description>Данные, содержащиеся в поле</description>
+              <description>Данные, хранящиеся в поле</description>
             </item>
             <item>
-              <term>Строка, столбец или поле страницы</term>
+              <term>Поле "строка", "столбец" или "страница"</term>
               <description>Элементы в поле</description>
             </item>
             <item>
               <term>Item</term>
-              <description>Рекомендованные элементы данных</description>
+              <description>Данные, определяемые элементом</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataType">
@@ -1421,7 +1368,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotFieldDataType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу с описанием типа данных в поле сводной таблицы. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldDataType" />.</summary>
+        <summary>Возвращает константу, описывающую тип данных в поле сводной таблицы. Только <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldDataType" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1474,14 +1421,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство используется для отображения свойств элемента <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s подписями. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если свойство данный элемент используется в качестве заголовка и <b>значение False,</b> Если свойство элемента <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> не используется в качестве заголовка. Попытка использовать это свойство для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, свойства элемента, не будет возвращать ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <summary>Это свойство используется для отображения свойств элемента <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s в виде заголовков. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если данное свойство элемента используется в качестве заголовка, и <b>false</b> , если свойство <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> элемента не используется в качестве заголовка. Попытка использовать это свойство для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, не являющиеся свойствами элемента, возвратит ошибку во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayAsTooltip">
@@ -1510,15 +1453,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство используется для указания ли конкретный элемент свойство <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> отображаются во всплывающих подсказках.  Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Пытается получить или задать эти свойства для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, свойства элемента, не будет возвращать ошибку времени выполнения.</para>
-          <para>Свойство указанного элемента выводились во всплывающих подсказках, если свойство <b>DisplayAsTooltip</b> имеет значение <b>True</b>и не отображаются во всплывающих подсказках, если он имеет значение <b>False</b>. Значение по умолчанию — <b>True</b>.</para>
-          <para></para>
-        </remarks>
+        <summary>Это свойство используется, чтобы указать, отображается ли свойство <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> элемента в подсказках.  Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Попытка получить или задать эти свойства для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, которые не являются свойствами элемента, возвратит ошибку во время выполнения.</para>
+          <para>Заданное свойство элемента отображается в подсказках, если свойство <b>дисплайастултип</b> имеет значение <b>true</b>, и не отображается в подсказках, если для него задано значение <b>false</b>. Значение по умолчанию — <b>True</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayInReport">
@@ -1547,10 +1486,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство используется для указания ли свойство указанного элемента <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> отображается в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> или нет. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Это свойство используется, чтобы указать, отображается ли указанное свойство <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> элемента в поле <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> или нет. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1580,13 +1517,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанного поля можно перетаскивать в положение столбца. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если указанное поле можно перетащить в позицию столбца. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP значение равно <b>False</b> для полей измерения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP значение <b>false</b> для полей Measure.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DragToData">
@@ -1615,13 +1549,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанного поля можно перетаскивать в положение данных. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если указанное поле можно перетащить в позицию данных. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP значение равно <b>False</b> для полей измерения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP значение <b>false</b> для полей Measure.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DragToHide">
@@ -1650,8 +1581,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если поле может быть скрыт перетаскивается off отчет сводной таблицы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если поле может быть скрыто при перетаскивании из отчета сводной таблицы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1682,13 +1612,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если поле можно перетаскивать в положение страницы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если поле можно перетащить в положение страницы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP значение равно <b>False</b> для полей измерения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP значение <b>false</b> для полей Measure.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DragToRow">
@@ -1717,13 +1644,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если поле можно перетаскивать в положение строки. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если поле можно перетащить в позицию строки. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP значение равно <b>False</b> для полей измерения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP значение <b>false</b> для полей Measure.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DrilledDown">
@@ -1752,14 +1676,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если флаг для указанного поля сводной таблицы или сводной таблицы элемента задано значение «выполнен переход» (расширенное или видимым). Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если флаг для указанного поля сводной таблицы или элемента сводной таблицы имеет значение "детализированный" (развернуто или отображается). Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство можно использовать только для источников данных OLAP.</para>
-          <para>Это свойство нельзя установить, если поле или элемент скрыт.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство можно использовать только для источников данных OLAP.</para>
+          <para>Невозможно задать это свойство, если поле или элемент скрыто.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DrillTo">
@@ -1785,14 +1706,10 @@
         <Parameter Name="Field" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Field">
-          <b>Строковое значение, имя</b>
-          <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> перейти детализации.</param>
-        <summary>Метод <b>DrillTo</b> поддерживает перехода к заданному <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> от другого <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />.</summary>
-        <remarks>
-          <para>Эту операцию можно выполнить только на поля, которые на самом деле не <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. Поэтому либо иерархии, содержащий запрашиваемый <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> должен быть в строк или столбцов из <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />, или атрибут или реляционной поля должен быть в строк или столбцов из <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> помещены рядом с пунктом по крайней мере один атрибут или реляционной поля. Кроме того осуществляется детализация поля должен быть в цепочке одной иерархии или атрибута. Если эти условия не выполняются, возникает ошибка времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <param name="Field">Обязательная <b>строка</b> имя <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> для детализации.</param>
+        <summary>Метод <b>дриллто</b> поддерживает детализацию указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> элемента на основе другого <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />.</summary>
+        <remarks><para>Эту операцию можно выполнить только для полей, которые находятся на самом деле <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />. Таким образом, иерархия, содержащая <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> запрошенный запрос <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />, должна находиться в строках или столбцах, или поле атрибут/реляционное поле должно находиться в строках или <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> столбцах, расположенных рядом с одним другим атрибутом/реляционным полем. Кроме того, поле, для которого выполняется детализация, должно находиться в той же иерархии или цепочке атрибутов. Если эти условия не выполняются, возникает ошибка времени выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableItemSelection">
@@ -1821,12 +1738,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если параметр имеет значение <b>False</b>, отключает возможность использования раскрывающийся список полей в пользовательском интерфейсе. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Если задано значение <b>false</b>, отключает возможность использования раскрывающегося списка полей в пользовательском интерфейсе. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Ошибка во время выполнения произойдет, если поле сводной таблицы OLAP не является самым верхним уровнем иерархии.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если поле сводной таблицы OLAP не является высшим уровнем иерархии, возникает ошибка времени выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableMultiplePageItems">
@@ -1855,16 +1770,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Используется для указания ли флажки присутствуют в раскрывающемся списке фильтра для полей в область страницы. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Существующее значение свойства сохраняется для OLAP.</para>
+        <summary>Используется для указания того, присутствуют ли флажки в раскрывающемся списке фильтров для полей в области страницы. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Существующее значение свойства сохраняется для OLAP.</para>
           <para>
-            <b>Примечание</b>: В short_Excel2007, если вы создаете OLAP версии, предшествующей short_Excel2007 <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s (PivotTable.Version &lt; 3) с <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.SubtotalHiddenPageItems" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.EnableMultiplePageItems" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта значение <b>True</b>, изменение состояние флажков в раскрывающемся меню фильтра области страницы не будет действовать.  В этом случае фильтра будут всегда иметь значение <b>все</b>, включая снимаются (скрытых) элементов.</para>
-          <para></para>
-        </remarks>
+            <b>Примечание</b>: в short_Excel2007, если вы создадите предварительную short_Excel2007 OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s (PivotTable. Version &lt; 3) со <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.SubtotalHiddenPageItems" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.EnableMultiplePageItems" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта, для которого установлено значение <b>true</b>, то изменение состояния флажков в раскрывающемся меню фильтра области страницы не даст никакого результата.  В этом случае для фильтра всегда будет задано значение " <b>все</b>", включая неотмеченные (скрытые) элементы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Formula">
@@ -1893,16 +1804,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает объект формулы в нотации стиля A1 чтение и запись <b>строки</b>.</summary>
+        <summary>Возвращает или задает формулу объекта в <b>строке</b>чтения/записи в нотации стиля a1.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство недоступно для источников данных OLAP.</para>
-          <para>Если ячейка содержит константу, это свойство возвращает константу. Если пустые ячейки, это свойство <b>Формула</b> возвращает пустую строку. Если ячейка содержит формулу, свойство <b>Формула</b> возвращает формулу как строку в том же формате, которое будет отображаться в строке формулы (включая знак равенства).</para>
-          <para>Если задать значение или формула ячейки к дате, Microsoft Excel проверяет, отформатирован ли уже эту ячейку с одним из числовые форматы даты и времени. В противном случае Microsoft Excel изменяет числовой формат по умолчанию короткий формат даты.</para>
-          <para>Если диапазон — это одно - или двухмерные диапазон, можно включить формулы массива Visual Basic такой же размерности. Аналогично можно поместить формулу в массив Visual Basic.</para>
-          <para>Настройка формулы для диапазона ячеек несколько заполняет все ячейки в диапазоне с формулой.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство недоступно для источников данных OLAP.</para>
+          <para>Если ячейка содержит константу, это свойство возвращает константу. Если ячейка пуста, свойство <b>формулы</b> возвращает пустую строку. Если ячейка содержит формулу, свойство <b>формулы</b> возвращает формулу в виде строки в том же формате, который будет отображаться в строке формул (включая знак равенства).</para>
+          <para>Если присвоить значение или формулу ячейки для даты, Microsoft Excel проверяет, отформатирована ли эта ячейка с помощью одного из форматов даты или времени. В противном случае Microsoft Excel изменяет формат чисел на формат короткой даты по умолчанию.</para>
+          <para>Если диапазон состоит из одного или двух измерений, можно установить формулу для массива Visual Basic с теми же размерами. Аналогично, можно поместить формулу в массив Visual Basic.</para>
+          <para>При установке формулы для диапазона с несколькими ячейками все ячейки в диапазоне заполняются формулой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Function">
@@ -1931,12 +1840,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlConsolidationFunction</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает функцию, используемый для суммирования поле сводной таблицы (только для полей данных). Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" />.</summary>
+        <summary>Возвращает или задает функцию, используемую для суммирования поля сводной таблицы (только поля данных). Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP это свойство доступно только для чтения и всегда возвращает <b>xlUnknown</b>. Для других источников данных это свойство не может иметь значение <b>xlUnknown</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP это свойство доступно только для чтения и всегда возвращает <b>кслункновн</b>. Для других источников данных этому свойству не может быть присвоено значение <b>кслункновн</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GroupLevel">
@@ -1962,13 +1869,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает размещение указанного поля в группу полей (если поле входит в состав групповой набор полей). Только для чтения.</summary>
+        <summary>Возвращает расположение указанного поля в группе полей (если поле является членом сгруппированного набора полей). Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство недоступно для источников данных OLAP.</para>
-          <para>Верхнего уровня родительского поле (самые левые родительского) — это один уровень, его дочерних уровня 2 и т. д.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство недоступно для источников данных OLAP.</para>
+          <para>Родительское поле верхнего уровня (крайнее левое родительское поле) — это уровень 1, его дочерний уровень равен 2 и т. д.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Hidden">
@@ -1998,17 +1903,13 @@
       </ReturnValue>
       <Docs>
         <summary>Это свойство используется для скрытия отдельных уровней иерархии OLAP. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Возвращает <b>значение True</b> для скрытые уровни и <b>значение False</b> для уровней visible (не скрытым).</para>
-          <para>Это свойство можно применять только к уровней иерархии OLAP.</para>
-          <para>Для реляционных источников данных и атрибуты OLAP это свойство всегда имеет <b>значение False</b>. Попытка задано значение <b>True</b> для атрибута или реляционной поля возвратит ошибку времени выполнения.
+        <value><b>Boolean</b></value>
+        <remarks><para>Возвращает <b>значение true</b> для скрытых уровней и <b>false</b> для видимых (не скрытых) уровней.</para>
+          <para>Это свойство применяется только к уровням иерархий OLAP.</para>
+          <para>Для реляционных источников данных и атрибутов OLAP это свойство всегда имеет <b>значение false</b>. При попытке установить <b>значение true</b> для атрибута или реляционного поля будет возвращать ошибку во время выполнения.
 
-Не удается этому свойству присвоено значение <b>True</b> для уровня при всех уровней одной иерархии уже этого параметра значение <b>True</b>. По крайней мере один уровень иерархии должен иметь этому свойству присвоено <b>значение False</b>. Попытка возвращает ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+Невозможно задать для этого свойства <b>значение true</b> , если для всех остальных уровней такой же иерархии уже задано значение <b>true</b>. По крайней мере один уровень иерархии должен иметь для этого свойства значение <b>false</b>. При попытке сделать это будет возвращаться ошибка во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HiddenItems">
@@ -2037,13 +1938,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Номер или имя элемента должно быть возвращено (можно задать массив для указания более одного элемента).</param>
-        <summary>Возвращает объект, представляющий либо отдельных скрытых элементов сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или коллекцию всех скрытых элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект) в указанном поле. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Число или имя возвращаемого элемента (может быть массивом, чтобы указать несколько элементов).</param>
+        <summary>Возвращает объект, представляющий либо один скрытый элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект), либо коллекцию всех скрытых элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект) в указанном поле. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP это свойство всегда возвращает пустую коллекцию.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP это свойство всегда возвращает пустую коллекцию.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HiddenItemsList">
@@ -2072,12 +1971,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>объект</b> указание массив строк, которые являются скрытых элементов в поле сводной таблицы. Для чтения и записи.</summary>
+        <summary>Возвращает или задает <b>объект</b> , задающий массив строк, которые являются скрытыми элементами для поля сводной таблицы. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>HiddenItemsList</b> допустимо только для источников данных интерактивной аналитической обработки (OLAP); Использование этого свойства в источники данных не OLAP возвратит ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>хидденитемслист</b> является допустимым только для источников данных OLAP (Online Analytical Processing); Использование этого свойства для источников данных, не являющихся OLAP, возвратит ошибку во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncludeNewItemsInFilter">
@@ -2106,24 +2003,20 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Разработчики могут указать, следует ли отслеживать включенные и исключенные элементы вручную фильтрации, применяемая к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Значение по умолчанию для этого свойства — <b>False</b>.</para>
-          <para>При применении фильтра вручную, можно задать разработчики <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> значение <b>True</b> для отслеживания исключенных элементов. Они присвойте свойству значение <b>False</b> для отслеживания элементов включена.
+        <summary>Позволяет разработчикам указывать, <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />следует ли отслеживать исключенные или включенные элементы при применении к ним фильтрации вручную. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>По умолчанию для этого свойства задано значение <b>false</b>.</para>
+          <para>При применении фильтрации вручную разработчики могут задать для этого <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> свойства <b>значение true</b> , чтобы отслеживать исключенные элементы. Можно установить для свойства <b>значение false</b> для отслеживания включенных элементов.
 
-Новые элементы, добавляемые к исходным данным после <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> свойство имеет значение <b>True</b>, новые элементы отображаются в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> после следующего обновления операцию, так как они не находятся в коллекции элементов, отслеживание Excel.</para>
-          <para>Для OLAP иерархий этот параметр имеет значение на <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта и установке на <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, входящих в состав иерархии завершится с ошибкой (с ошибкой во время выполнения). Можно получить из этого параметра <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, которые являются частью иерархии и он будет возвращать то же, что соответствующий <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> свойство.</para>
-          <para>Включение и выключение этого параметра будет снимите следующие семейства: <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItemsList" />, <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItems(System.Object)" />, <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItemsList" />, и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItems(System.Object)" />.
+Если новые элементы добавляются к источнику данных после того <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IncludeNewItemsInFilter" /> , как свойству присвоено <b>значение true</b>, новые элементы <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> отображаются в следующей операции обновления, так как они не находятся в коллекции элементов, которые отслеживает Excel.</para>
+          <para>Для иерархий OLAP этот параметр задается для <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта, и попытка задать его для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, входящих в иерархию, завершится с ошибкой (при возникновении ошибки времени выполнения). Этот параметр можно получить из <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s, входящих в иерархию, и будет возвращать то же значение, что и соответствующее <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> свойство.</para>
+          <para>При включении этого параметра будут удалены следующие коллекции: <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItemsList" />, <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItems(System.Object)" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItemsList" />, и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItems(System.Object)" />.
 
-При <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> имеет значение <b>False</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItemsList" /> и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItems(System.Object)" /> пусты семейств сайтов и элементы нельзя добавить к ним.  При попытке добавить элементы, возвращается ошибка во время выполнения.
+Если <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> задано <b>значение false</b>, то <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItemsList" /> коллекции <see cref="P:Microsoft.Office.Interop.Excel.PivotField.HiddenItems(System.Object)" /> и коллекции пусты, и к ним невозможно добавить элементы.  При попытке добавить элементы возвращается ошибка во время выполнения.
 
-При <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> имеет значение <b>True</b>, <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItemsList" /> и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItems(System.Object)" /> пусты семейств сайтов и элементы нельзя добавить к ним.  При попытке добавить элементы, возвращается ошибка во время выполнения.</para>
-          <para>В <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s, этот параметр имеет значение на <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта. Включение и выключение этого параметра не изменится состояние фильтра.</para>
-          <para></para>
-        </remarks>
+Если <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> задано <b>значение true</b>, коллекции <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItemsList" /> и <see cref="P:Microsoft.Office.Interop.Excel.PivotField.VisibleItems(System.Object)" /> коллекции пусты, а элементы не могут быть добавлены к ним.  При попытке добавить элементы возвращается ошибка во время выполнения.</para>
+          <para>В <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s Этот параметр устанавливается для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта. При включении этого параметра состояние фильтра не изменится.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsCalculated">
@@ -2149,13 +2042,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если поле сводной таблицы или сводной таблицы элемента вычисляемого поля или элемента. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если поле сводной таблицы или элемент сводной таблицы является вычисляемым полем или элементом. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP это свойство всегда возвращает <b>значение False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP это свойство всегда возвращает <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsMemberProperty">
@@ -2181,12 +2071,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>значение True</b> , если сводных полей содержит свойства элементов. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>значение true</b> , если свойство PivotField содержит свойства элемента. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает ошибку времени выполнения, если источник данных интерактивной аналитической обработки (OLAP) не используется.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство возвращает ошибку времени выполнения, если источник данных OLAP (Online Analytical Processing) не используется.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LabelRange">
@@ -2212,7 +2100,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта, возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейку (или ячеек), которые содержат подпись поля. Для <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объекта, возвращающее объект <b>диапазон</b> , представляющий все ячейки в отчете сводной таблицы, которые содержат элемент. Только для чтения.</summary>
+        <summary>Для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейку (или ячейки), содержащую метку поля. Для <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объекта возвращает объект <b>Range</b> , представляющий все ячейки отчета сводной таблицы, содержащие элемент. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2243,14 +2131,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если после указанной строке поля в отчет сводной таблицы будет вставлена пустая строка. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если после указанного поля строки в отчете сводной таблицы вставляется пустая строка. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно задать это свойство для любого поля сводной таблицы. Тем не менее пустая строка отображается только в том случае, если указанное поле — это поле строки, отличный от внутреннего (низкий уровень) поля строки. Для источников данных, не OLAP значение этого свойства не меняется при поля изменяется или добавить в отчет сводной таблицы.</para>
-          <para>Нельзя вводить данные в пустую строку в отчете сводной таблицы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство можно задать для любого поля сводной таблицы; Однако пустая строка отображается, только если указанное поле является полем строки, отличным от самого внутреннего поля строки (самого нижнего уровня). Для источников данных, не относящихся к OLAP, значение этого свойства не изменяется при переупорядочении поля или его добавлении в отчет сводной таблицы.</para>
+          <para>Вы не можете вводить данные в пустую строку отчета сводной таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LayoutCompactRow">
@@ -2279,14 +2164,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает ли <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> сжатии (элементы нескольких <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s отображаются в одном столбце) при выборе строк. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Назначить этому свойству значение <b>True</b> (по умолчанию) не будет действовать интерпретации visual <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> при <see cref="P:Microsoft.Office.Interop.Excel.PivotField.LayoutForm" /> свойству <see cref="F:Microsoft.Office.Interop.Excel.XlLayoutFormType.xlTabular" />, но может быть установлен отдельно.</para>
-          <para></para>
-        </remarks>
+        <summary>Указывает, <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> будет ли сжиматься (элементы нескольких <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />s отображаются в отдельном столбце) при выборе строк. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Если для <see cref="P:Microsoft.Office.Interop.Excel.PivotField.LayoutForm" /> свойства задано значение <b>true</b> (по умолчанию) <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="F:Microsoft.Office.Interop.Excel.XlLayoutFormType.xlTabular" />, немедленный визуальный визуальный элемент не будет иметь значение, но его можно задать независимо.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LayoutForm">
@@ -2315,12 +2196,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlLayoutFormType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ отображения выбранные элементы сводной таблицы — в табличном формате или в формате структуры. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutFormType" />.</summary>
+        <summary>Возвращает или задает способ отображения указанных элементов сводной таблицы — в формате таблицы или в формате структуры. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutFormType" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно задать это свойство для любого поля сводной таблицы. Тем не менее форматирование появляется только в том случае, если указанное поле — это поле строки, отличный от внутреннего (поле строки самого низкого уровня. Для источников данных, не OLAP значение этого свойства не изменяется при упорядочить поля или при добавлении или удалены из отчета сводной таблицы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство можно задать для любого поля сводной таблицы; Однако форматирование отображается только в том случае, если указанное поле является полем строки, отличным от самого внутреннего (поля строки самого нижнего уровня. Для источников данных, не относящихся к OLAP, значение этого свойства не изменяется при переупорядочении поля, а также при его добавлении в отчет сводной таблицы или удалении из него.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LayoutPageBreak">
@@ -2349,13 +2228,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если вставить разрыв страницы после каждого поля. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если после каждого поля вставляется разрыв страницы. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Несмотря на то, что это свойство для любого поля сводной таблицы, параметр печати появляется только в том случае, если указанное поле — это поле строки, отличный от внутреннего (низкий уровень) поля строки. Для источников данных, не OLAP значение этого свойства не изменяется при упорядочить поля или при добавлении или удалены из отчета сводной таблицы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Несмотря на то, что это свойство можно задать для любого поля сводной таблицы, параметр Печать отображается только в том случае, если указанное поле является полем строки, отличным от самого внутреннего поля строки (самого нижнего уровня). Для источников данных, не относящихся к OLAP, значение этого свойства не изменяется при переупорядочении поля, а также при его добавлении в отчет сводной таблицы или удалении из него.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LayoutSubtotalLocation">
@@ -2384,14 +2260,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSubtototalLocationType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или устанавливает позицию промежуточные итоги поля сводной таблицы при использовании (либо выше или ниже) указанного поля. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlSubtototalLocationType" />.</summary>
+        <summary>Возвращает или задает положение промежуточных итогов поля сводной таблицы по отношению к указанному полю (как выше, так и ниже). Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlSubtototalLocationType" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно задать это свойство для любого поля сводной таблицы в формате структуры; Тем не менее форматирование появляется только в том случае, если указанное поле — это поле строки, отличное от поля строк внутреннего (низкий уровень). Для источников данных, не OLAP значение этого свойства не изменяется при упорядочить поля или при добавлении или удалены из отчета.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.PivotField.LayoutForm" /> Свойство определяет, отображается ли отчет в табличном формате или в формате структуры.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство можно задать для любого поля сводной таблицы в формате структуры; Однако форматирование отображается только в том случае, если указанное поле является полем строки, отличным от самого внутреннего поля строки (самого нижнего уровня). Для источников данных, не относящихся к OLAP, значение этого свойства не изменяется при переупорядочении поля, а также при его добавлении в отчет или удалении из него.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Excel.PivotField.LayoutForm" /> Свойство определяет, отображается ли отчет в формате таблицы или в формате структуры.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MemberPropertyCaption">
@@ -2420,16 +2293,12 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Установка <see cref="P:Microsoft.Office.Interop.Excel.PivotField.MemberPropertyCaption" /> свойство определяет, какие свойства элемента используется как заголовок для данного уровня.  Для чтения и записи.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>
-            <b>Примечание</b>: этот параметр имеет визуальный эффект только тогда, когда <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> имеет значение <b>True</b> для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />.</para>
-          <para>При <see cref="P:Microsoft.Office.Interop.Excel.PivotField.MemberPropertyCaption" /> не установлен, параметр запоминается во время переключения <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <summary>Задание <see cref="P:Microsoft.Office.Interop.Excel.PivotField.MemberPropertyCaption" /> свойств элемента определяет, какое свойство элемента используется в качестве подписи для данного уровня.  Для чтения и записи.</summary>
+        <value><b>Строка</b></value>
+        <remarks><para>
+            <b>Note</b>: этот параметр имеет визуальный визуальный элемент <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> , только если для свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />задано значение <b>true</b> .</para>
+          <para>Когда <see cref="P:Microsoft.Office.Interop.Excel.PivotField.MemberPropertyCaption" /> задано, параметр запоминается во время переключения <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="MemoryUsed">
@@ -2455,7 +2324,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объем памяти в байтах, используемые в настоящее время объект. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает объем памяти в байтах, используемый объектом в данный момент. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2519,11 +2388,9 @@
       <Docs>
         <summary>Возвращает или задает код формата для объекта. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, можно задать свойство <b>Формат числа</b> только для поля данных.</para>
-          <para>Код формата является ту же строку как вариант кодов формата в диалоговом окне Формат ячеек. Функция <b>Format</b> использует строки кода другой формат, чем <b>Формат числа</b> и <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.NumberFormatLocal" /> свойства.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта можно задать свойство <b>NumberFormat</b> только для поля данных.</para>
+          <para>Код формата – это строка в параметрах Коды форматов в диалоговом окне Формат ячеек. Функция <b>Format</b> использует разные строки кода формата, чем <b>NumberFormat</b> и <see cref="P:Microsoft.Office.Interop.Excel.CellFormat.NumberFormatLocal" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Orientation">
@@ -2552,12 +2419,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotFieldOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расположение поля в указанном отчет сводной таблицы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" />.</summary>
+        <summary>Расположение поля в указанном отчете сводной таблицы. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP этого свойства для одного поля в иерархии задает направление для других полей в той же иерархии. На оказании полей аналитики можно только в строк, столбцов и области поля страницы отчета сводной таблицы. На оказании мер полей можно только в области данных. Установка иерархии или данных поля для <b>xlHidden</b> удаляет иерархии или поле из отчета сводной таблицы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP Установка этого свойства для одного поля в иерархии задает ориентацию для других полей в той же иерархии. Поля измерений могут быть ориентированы только в области полей строк, столбцов и страниц отчета сводной таблицы. Поля мер могут быть ориентированы только в области данных. При установке иерархии или поля данных в <b>кслхидден</b> удаляется иерархия или поле из отчета сводной таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -2611,12 +2476,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющий поле сводной таблицы, являющийся родительским группы из указанного объекта. Поля должны группироваться и должны иметь родительского поля. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющий поле сводной таблицы, которое является родительским для указанного объекта. Поле должно быть сгруппировано и должно иметь родительское поле. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство недоступно для источника данных OLAP.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство недоступно для источников данных OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ParentItems">
@@ -2645,13 +2508,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Номер или имя элемента должно быть возвращено (можно задать массив для указания более одного элемента).</param>
-        <summary>Возвращает объект, представляющий либо один элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или коллекцию всех элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект), которые родительские группы в указанном поле. Указанного поля должен быть родителем группы другого поля. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Число или имя возвращаемого элемента (может быть массивом, чтобы указать несколько элементов).</param>
+        <summary>Возвращает объект, представляющий один элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или коллекцию всех элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект), которые являются родительскими для группы в указанном поле. Указанное поле должно быть родителем группы другого поля. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство недоступно для источника данных OLAP.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство недоступно для источников данных OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotFilters">
@@ -2677,10 +2538,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotFilters</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="P:Microsoft.Office.Interop.Excel.PivotField.PivotFilters" /> для указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта. Только для чтения.</summary>
-        <value>
-          <see cref="P:Microsoft.Office.Interop.Excel.PivotField.PivotFilters" />
-        </value>
+        <summary>Возвращает или задает значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.PivotFilters" /> для указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта. Только для чтения.</summary>
+        <value><see cref="P:Microsoft.Office.Interop.Excel.PivotField.PivotFilters" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2706,13 +2565,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Имя или номер элемента должно быть возвращено.</param>
-        <summary>Возвращает объект, представляющий либо один элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или коллекцию всех видимых и скрытых элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект) в указанном поле. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Имя или номер возвращаемого элемента.</param>
+        <summary>Возвращает объект, представляющий либо один элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект), либо коллекцию всех видимых и скрытых элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект) в указанном поле. Только для чтения.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Для источников данных OLAP, коллекция индексируется с уникальным именем (имя, возвращенное <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойство), не по отображаемому имени.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP коллекция индексируется по уникальному имени (имя, возвращаемое <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойством), а не отображаемым именем.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Position">
@@ -2741,7 +2598,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расположение поля (первый, второй, в-третьих, и т. д) среди всех полей в его ориентацию (строк, столбцов, страниц, данные). Чтение и запись <b>объектов</b>.</summary>
+        <summary>Положение поля (первый, второй, третий и т. д.) между всеми полями в его ориентации (строках, столбцах, страницах, данных). <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2772,13 +2629,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Действительно только для поля сводной таблицы, которые являются поля свойств элементов. Возвращает <b>целое число</b> , указывающее положение отображения свойства элемента в поле куба, к которой он принадлежит. Для чтения и записи.</summary>
+        <summary>Действует только для полей сводной таблицы, которые являются полями свойств элементов. Возвращает <b>целое число</b> , обозначающее позицию отображения свойства элемента в поле Куба, к которому оно принадлежит. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка для этого свойства будет изменить порядок свойств для этого поля куба. Это свойство соответствует индексацией. Допустимые значения — от одного до максимальное число полей свойство элементов, отображаемых для иерархической структуры.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IsMemberProperty" /> свойство имеет <b>значение False</b>, с помощью <b>PropertyOrder</b> свойство будет создавать ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Задание этого свойства приводит к изменению порядка свойств для этого поля Куба. Это свойство основано на основе единицы. Допустимый диапазон — от единицы до максимального числа полей свойств элемента, отображаемых в иерархии.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IsMemberProperty" /> свойство имеет <b>значение false</b>, то при использовании свойства <b>пропертйордер</b> будет создана ошибка во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PropertyParentField">
@@ -2804,13 +2659,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта, представляющего поле, к которому свойства в этом поле pertain.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющий поле, к которому относятся свойства этого поля.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Действительно только для полей, которые являются поля свойств элементов.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IsMemberProperty" /> свойство имеет <b>значение False</b>, с помощью <b>PropertyParentField</b> свойство будет возвращать ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Допустимо только для полей свойств элемента.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.IsMemberProperty" /> свойство имеет <b>значение false</b>, использование свойства <b>пропертипарентфиелд</b> возвратит ошибку во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RepeatLabels">
@@ -2839,15 +2692,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает подписи элементов повторяются в сводной таблице для указанного сводных полей.</summary>
-        <value>
-          <b>значение true,</b> Если подписи элементов повторяются в сводной таблице для указанного сводных полей; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
+        <summary>Получает или задает значение, указывающее, повторяются ли подписи элементов в сводной таблице для указанного PivotField.</summary>
+        <value><b>значение true</b> , если подписи элементов повторяются в сводной таблице для указанного PivotField; в противном случае — <b>false</b>.</value>
+        <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>значение true,</b> Если подписи элементов повторяются для указанного сводных полей; в противном случае — <b>false</b>. Параметр <see cref="P:Microsoft.Office.Interop.Excel.PivotField.RepeatLabels" /> свойство соответствующий флажок повторять подписи элемента в макете &amp; вкладку печать диалогового окна Параметры поля для поля в PivotTable.To укажите, нужно ли повторять подписи элементов для всех сводные поля в сводной таблице в одном Операция, использование <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RepeatAllLabels(Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels)" /> метод.</para>
-          <para></para>
-        </remarks>
+            <b>значение true</b> , если подписи элементов повторяются для указанного PivotField; в противном случае — <b>false</b>. Значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.RepeatLabels" /> свойства соответствует флажку повторять метки элементов на вкладке макет раскладка &amp; диалогового окна Параметры поля в PivotTable.to укажите, следует ли повторять подписи элементов для всех PivotFields в сводной таблице в одной операции, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RepeatAllLabels(Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ServerBased">
@@ -2876,28 +2726,26 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получить <b>значение true,</b> Если внешний источник данных для указанного отчета сводной таблицы и только элементы, соответствующие Выбор поля страницы. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если источник данных для указанного отчета сводной таблицы является внешним и извлекаются только элементы, которые соответствуют выделению поля страницы. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство не применяется к источникам данных OLAP и всегда имеет <b>значение False</b>.</para>
-          <para>Если это свойство имеет <b>значение True</b>, извлекаются только записей в базе данных, которые соответствуют выбранного элемента. В дальнейшем каждый раз, когда пользователь изменяет Выбор поля страницы, элемента поля новой выбранной страницы передается как параметр запроса и обновления кэша.</para>
-          <para>Это свойство не могут задаваться, если хотя бы одно из следующих условий:</para>
+        <remarks><para>Это свойство не применяется к источникам данных OLAP и всегда имеет <b>значение false</b>.</para>
+          <para>Если это свойство имеет <b>значение true</b>, извлекаются только записи в базе данных, которые совпадают с выбранным элементом поля страницы. В этом случае, когда пользователь изменяет выбор поля страницы, новый элемент поля страницы передается в запрос в качестве параметра, а кэш обновляется.</para>
+          <para>Это свойство не может быть задано, если выполняется любое из следующих условий:</para>
           <list type="bullet">
             <item>
-              <description>Поле в группу.</description>
+              <description>Поле является сгруппированным.</description>
             </item>
             <item>
-              <description>Не внешнего источника данных.</description>
+              <description>Источник данных не является внешним.</description>
             </item>
             <item>
-              <description>Кэш совместно с двумя или более отчета сводной таблицы.</description>
+              <description>Кэш совместно используется двумя или более отчетами сводной таблицы.</description>
             </item>
             <item>
-              <description>Это поле имеет тип данных, который не может быть на основе сервера (поле memo или объекта OLE).</description>
+              <description>Поле — это тип данных, который не может быть основан на сервере (поле MEMO или объект OLE).</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowAllItems">
@@ -2926,13 +2774,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображаются все элементы в отчете сводной таблицы, даже если они не содержат итоговых данных. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если отображаются все элементы отчета сводной таблицы, даже если они не содержат сводных данных. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP значение всегда имеет <b>значение False</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP значение всегда равно <b>false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowDetail">
@@ -2961,10 +2806,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает ли указанный <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> отображением сведений. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Получает или задает значение, указывающее <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> , отображается ли указанный элемент. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2991,14 +2834,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, если <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> в данный момент виден в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> или нет. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство возвращает <b>значение True</b> , если <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> в данный момент виден и возвращает <b>значение False</b> , если не отображается в текущий момент. Видимость <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> , определяется ли <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> название отображается в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> в виде таблицы (без сжатия).</para>
-          <para></para>
-        </remarks>
+        <summary>Указывает, отображается <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> ли в данный момент в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> поле или нет. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Свойство возвращает <b>значение true</b> , если <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> видимое в данный момент значение равно <b>false</b> , если в настоящее время в данный момент не отображается. Видимость элемента <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> зависит от того, отображается ли <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> подпись в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> табличной (не компактной) форме.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SourceCaption">
@@ -3024,15 +2863,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceCaption" /> Свойство используется только для OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s и возвращает исходные надпись с сервера OLAP для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Только для чтения.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Можно использовать <see cref="T:Microsoft.Office.Interop.Excel.PivotField.Name" /> или <see cref="T:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> для не OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s.</para>
-          <para></para>
-        </remarks>
+        <summary><see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceCaption" /> Свойство применяется только для OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s и возвращает исходный заголовок с сервера OLAP для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Только для чтения.</summary>
+        <value><b>Строка</b></value>
+        <remarks><para>Вы можете использовать параметр <see cref="T:Microsoft.Office.Interop.Excel.PivotField.Name" /> или <see cref="T:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> для не для OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SourceName">
@@ -3058,7 +2892,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя указанного объекта, как оно отображается в источником данных для указанного отчета сводной таблицы. Это может быть отличается от имени текущего элемента, если пользователь переименовано элемента после создания отчета сводной таблицы. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает имя указанного объекта в том виде, в котором оно отображается в исходном источнике данных для указанного отчета сводной таблицы. Это может отличаться от имени текущего элемента, если пользователь переименовал элемент после создания отчета сводной таблицы. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3089,13 +2923,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , определяющую формулы стандарт английский (США), форматирование. Для чтения и записи.</summary>
+        <summary>Возвращает или задает <b>строку</b> , определяющую формулы со стандартным форматированием английского языка (США). Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>StandardFormula</b> в первую очередь влияет на имена элементов с датой или форматирование чисел. Она предоставляет способ указания или запроса формулу для заданного элемента вычисляемые.</para>
-          <para>Свойство <b>StandardFormula</b> «international удобных», в то время как <see cref="P:Microsoft.Office.Interop.Excel.PivotField.Formula" /> свойство не подлежит.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>стандардформула</b> в основном влияет на имена элементов с форматом даты или числа. Он предоставляет способ указания или запроса формулы для определенного вычисляемого элемента.</para>
+          <para>Свойство <b>стандардформула</b> имеет значение "Международный", а <see cref="P:Microsoft.Office.Interop.Excel.PivotField.Formula" /> свойство — нет.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SubtotalName">
@@ -3124,7 +2956,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку метки текст отображается в заголовке столбца или строки, промежуточных итогов в отчете сводной таблицы указанного. Значение по умолчанию — строка «Промежуточные итоги». Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает метку текстовой строки, отображаемую в заголовке столбца промежуточных итогов или строки в указанном отчете сводной таблицы. Значением по умолчанию является строка "подытог". Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3158,13 +2990,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Промежуточных итогов индекса, как показано в следующей таблице. Если этот аргумент указан, метод <b>промежуточные итоги</b> возвращает массив, содержащий <b>логическое</b> значение для каждого промежуточные итоги. Nums9StdDev10StdDevp11Var12VarpIf IndexMeaning1Automatic2Sum3Count4Average5Max6Min7Product8Count индекс — это <b>значение True</b>, в этом поле отображается, промежуточные итоги. Если индекса 1 (автоматически) имеет <b>значение True</b>, все остальные значения значение <b>False</b>.</param>
-        <summary>Возвращает или задает промежуточные итоги, отображаемые с указанного поля. Действительно только для полей, не содержащих данных. Чтение и запись <b>объектов</b>.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Индекс промежуточных итогов, как показано в следующей таблице. Если этот аргумент опущен, метод <b>подытогов</b> возвращает массив, содержащий <b>логическое</b> значение для каждого подытога. IndexMeaning1Automatic2Sum3Count4Average5Max6Min7Product8Count Nums9StdDev10StdDevp11Var12VarpIf индекс имеет <b>значение true</b>, в поле отображается подытог. Если индекс 1 (автоматический) имеет <b>значение true</b>, для всех остальных значений задано значение <b>false</b>.</param>
+        <summary>Возвращает или задает отображение промежуточных итогов с указанным полем. Допускается только для полей, не являющихся данными. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP <paramref name="Index" /> только может вернуть или задать значение 1 (автоматически). Возвращаемый массив всегда содержит <b>True</b> или <b>False</b> для первого элемента массива, а его <b>значение False</b> для других элементов. Массив значений элементов, которые являются все <b>False</b> означает, что нет промежуточные итоги.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP <paramref name="Index" /> возможен только возврат или установка значения 1 (автоматический). Возвращаемый массив всегда содержит <b>значение true</b> или <b>false</b> для первого элемента массива и содержит <b>значение false</b> для всех других элементов. Массив значений элементов, которые имеют <b>значение false</b> , указывает на отсутствие промежуточных итогов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TotalLevels">
@@ -3190,12 +3020,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает общее число полей в текущей группе полей. Если это поле не будет сгруппированные или источника данных на основе OLAP, <b>TotalLevels</b> возвращает значение 1. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает общее число полей в текущей группе полей. Если поле не является группированным или если источник данных основан на OLAP, <b>тоталлевелс</b> возвращает значение 1. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Все поля в наборе поля таким же значением <b>TotalLevels</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Все поля в наборе сгруппированных полей имеют одно и то же значение <b>тоталлевелс</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UseMemberPropertyAsCaption">
@@ -3224,16 +3052,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство используется для управления ли заголовки свойства, используемые для <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> названий <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />. Для чтения и записи.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> имеет значение <b>True</b> для <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />, затем <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> указывает, какие название свойства элементов для отображения. Если не указано, первого свойства элемента, <see cref="P:Microsoft.Office.Interop.Excel.PivotField" /> (в порядке источника данных) отображается как заголовок для элементов, <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> имеет значение <b>False</b>, затем регулярных <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> заголовки используются для <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />.</para>
-          <para>При попытке установить <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /><b>значение True</b> для <see cref="P:Microsoft.Office.Interop.Excel.PivotField" /> без свойств элемента, возвращается ошибка во время выполнения. Для <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />s без свойств члена, свойство всегда будет иметь <b>значение False</b>.</para>
-          <para></para>
-        </remarks>
+        <summary>Это свойство используется для управления тем, <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />используются ли подписи свойств элемента для заголовков элемента. Для чтения и записи.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> для a <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />задано значение <b>true</b> , то <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> указывает, какую подпись свойства элемента отображать. Если не указано, то первое свойство элемента <see cref="P:Microsoft.Office.Interop.Excel.PivotField" /> (в порядке источника данных) будет отображаться как заголовок для элементов этого <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />элемента.</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> задано <b>значение false</b>, то обычные <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> заголовки используются для. <see cref="P:Microsoft.Office.Interop.Excel.PivotField" /></para>
+          <para>Если вы попытаетесь <see cref="P:Microsoft.Office.Interop.Excel.PivotField.UseMemberPropertyAsCaption" /> установить <b>значение true</b> для <see cref="P:Microsoft.Office.Interop.Excel.PivotField" /> свойства элемента без свойств, возвращается ошибка времени выполнения. Для <see cref="P:Microsoft.Office.Interop.Excel.PivotField" />s без свойств элементов свойство всегда будет иметь <b>значение false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Value">
@@ -3293,13 +3117,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Номер или имя элемента должно быть возвращено (можно задать массив для указания более одного элемента).</param>
-        <summary>Возвращает объект, представляющий либо видны одного элемента сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект) или набор видимых элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект) в указанном поле. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Число или имя возвращаемого элемента (может быть массивом, чтобы указать несколько элементов).</param>
+        <summary>Возвращает объект, представляющий либо один видимый элемент сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект), либо коллекцию всех видимых элементов ( <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> объект) в указанном поле. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для источников данных OLAP это свойство доступно только для чтения и всегда возвращает <b>значение True</b>. Нет скрытых элементов.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для источников данных OLAP это свойство доступно только для чтения и всегда возвращает <b>значение true</b>. Нет скрытых элементов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VisibleItemsList">
@@ -3328,14 +3150,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>объект</b> , указывающий массив строк, представляющих включены элементы в фильтр, применяемые к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />. Для чтения и записи.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Это свойство можно применять к OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />только s.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>объект</b> , задающий массив строк, которые представляют включенные элементы в фильтр, примененный к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" />элементу. Для чтения и записи.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>Это свойство применяется только к OLAP <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />s.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

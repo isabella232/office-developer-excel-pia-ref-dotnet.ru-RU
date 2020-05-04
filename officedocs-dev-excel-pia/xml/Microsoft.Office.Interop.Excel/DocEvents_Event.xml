@@ -1,13 +1,5 @@
 <Type Name="DocEvents_Event" FullName="Microsoft.Office.Interop.Excel.DocEvents_Event">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5e626628e90f279c5e3d34630e7bc5d563d84aae" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20572613" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface DocEvents_Event" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5e626628e90f279c5e3d34630e7bc5d563d84aae" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572613" /></Metadata><TypeSignature Language="C#" Value="public interface DocEvents_Event" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DocEvents_Event" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.DocEvents_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface DocEvents_Event" />
@@ -29,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Интерфейс события для Microsoft Excel <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объекта события.</summary>
+    <summary>Интерфейс событий для событий объектов <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> Microsoft Excel.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -48,7 +40,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_ActivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при активации рабочего листа.</summary>
+        <summary>Возникает при активации листа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -67,7 +59,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_BeforeDeleteEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Событие <b>BeforeDelete</b> происходит перед удалением любого листа.</summary>
+        <summary>Событие <b>BeforeDelete</b> возникает перед удалением любого листа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -86,13 +78,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_BeforeDoubleClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при двойном щелчке листа перед двойного щелчка по умолчанию.</summary>
-        <remarks>
-          <para>
-            <see cref="M:Microsoft.Office.Interop.Excel._Application.DoubleClick" /> Метод не вызывает это событие будет выполнена.</para>
-          <para>Это событие не возникает при двойном щелчке границы ячейки.</para>
-          <para></para>
-        </remarks>
+        <summary>Возникает при двойном щелчке листа до действия двойного щелчка по умолчанию.</summary>
+        <remarks><para>Этот <see cref="M:Microsoft.Office.Interop.Excel._Application.DoubleClick" /> метод не приводит к возникновению этого события.</para>
+          <para>Это событие не происходит, когда пользователь дважды щелкает границу ячейки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BeforeRightClick">
@@ -110,11 +99,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_BeforeRightClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при щелчке правой кнопкой мыши листа перед кнопкой по умолчанию.</summary>
-        <remarks>
-          <para>Как и другие события листа это событие не возникает при щелчке правой кнопкой мыши указатель находится на фигуры или в командной строке (панели инструментов или меню).</para>
-          <para></para>
-        </remarks>
+        <summary>Возникает при щелчке правой кнопкой мыши на листе до действия, выполняемого по умолчанию при щелчке правой кнопкой мыши.</summary>
+        <remarks><para>Как и в случае с другими событиями листа, это событие не происходит, если щелкнуть правой кнопкой мыши, когда указатель наведен на фигуру или панель команд (панель инструментов или строка меню).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Calculate">
@@ -132,7 +119,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_CalculateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после пересчета рабочего листа.</summary>
+        <summary>Возникает после пересчета листа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -151,11 +138,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_ChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении ячейки листа пользователем или внешней ссылкой.</summary>
-        <remarks>
-          <para>Это событие не возникает, если ячейки изменяются во время пересчета. Использование <see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.Calculate" /> события для перехвата пересчета листа.</para>
-          <para></para>
-        </remarks>
+        <summary>Возникает при изменении ячеек листа пользователем или внешней ссылкой.</summary>
+        <remarks><para>Это событие не происходит при изменении ячеек во время пересчета. Используйте <see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.Calculate" /> событие для перехвата пересчета листа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Deactivate">
@@ -173,7 +158,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_DeactivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при отключении рабочего листа.</summary>
+        <summary>Возникает при отключении рабочего листа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -192,7 +177,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_FollowHyperlinkEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при нажатии любой гиперссылке на рабочем листе. Событие <b>SheetFollowHyperlink</b> событий на уровне приложения и книги, см.</summary>
+        <summary>Возникает при нажатии любой гиперссылки на листе. События на уровне приложения и рабочей книги содержатся в событии <b>шитфолловхиперлинк</b> .</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -211,11 +196,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_LensGalleryRenderCompleteEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит после завершения отображения значков коллекция выносок (динамических и статических).</summary>
-        <remarks>
-          <para>Это событие можно использовать для указания, когда повторно включить обновление экрана или отображение дополнительных диалоговых окон, например.</para>
-          <para></para>
-        </remarks>
+        <summary>Происходит, когда значки (динамические и статические) коллекции выноски завершают обработку.</summary>
+        <remarks><para>Это событие можно использовать, чтобы показать, когда повторно включить обновление экрана или отобразить дополнительные диалоговые окна, например.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotTableAfterValueChange">
@@ -233,12 +216,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_PivotTableAfterValueChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после изменения или пересчета (для ячеек, содержащих формулы) ячейки или диапазона ячеек в сводной таблице.</summary>
-        <remarks>
-          <para>
-            <see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableAfterValueChange" /> Не происходит при каких обстоятельствах, отличный от редактирования или перерасчете ячеек. Например он будет не возникает, когда со сводными таблицами обновления, сортировки, фильтрации или детализации, даже если эти операции перемещения ячеек и потенциально получают новые значения из источника данных OLAP.</para>
-          <para></para>
-        </remarks>
+        <summary>Возникает после изменения или пересчета ячейки или диапазона ячеек в сводной таблице (для ячеек, содержащих формулы).</summary>
+        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableAfterValueChange" /> Событие не происходит при любых условиях, кроме изменения или пересчета ячеек. Например, она не будет выполняться при обновлении, сортировке, фильтрации или детализации сводной таблицы, даже если эти операции перемещают ячейки и потенциально получают новые значения из источника данных OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotTableBeforeAllocateChanges">
@@ -256,12 +236,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_PivotTableBeforeAllocateChangesEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает перед применением изменений в сводной таблице.</summary>
-        <remarks>
-          <para>
-            <see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableBeforeAllocateChanges" /> Событие происходит непосредственно перед Excel выполняет инструкцию обновления КУБА, чтобы применить все изменения к источнику данных OLAP со сводными таблицами и сразу же после пользователь выбрал для применения изменений в пользовательском интерфейсе.</para>
-          <para></para>
-        </remarks>
+        <summary>Происходит перед применением изменений к сводной таблице.</summary>
+        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableBeforeAllocateChanges" /> Событие возникает сразу же после того, как Excel выполняет инструкцию UPDATE CUBE, чтобы применить все изменения к источнику данных OLAP сводной таблицы, а сразу же после того, как пользователь выбрал применение изменений в пользовательском интерфейсе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotTableBeforeCommitChanges">
@@ -279,12 +256,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_PivotTableBeforeCommitChangesEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает перед изменения применяются к источнику данных OLAP для сводной таблицы.</summary>
-        <remarks>
-          <para>
-            <see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableBeforeAllocateChanges" /> Событие происходит непосредственно перед Excel выполняет операции ФИКСАЦИИ источнике данных OLAP со сводными таблицами и сразу же после пользователь выбрал для сохранения изменений для всей сводной таблицы.</para>
-          <para></para>
-        </remarks>
+        <summary>Происходит перед фиксацией изменений в источнике данных OLAP для сводной таблицы.</summary>
+        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableBeforeAllocateChanges" /> Событие происходит сразу после того, как Excel выполняет транзакцию Commit для источника данных OLAP сводной таблицы, а сразу же после того, как пользователь выбрал сохранение изменений для всей сводной таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotTableBeforeDiscardChanges">
@@ -303,10 +277,8 @@
       </ReturnValue>
       <Docs>
         <summary>Возникает перед отменой изменений в сводной таблице.</summary>
-        <remarks>
-          <para>Происходит непосредственно перед Excel выполняет инструкцию ОТКАТА ТРАНЗАКЦИЙ в источнике данных OLAP, если транзакция все еще активна и очищает все измененные значения в сводной таблице, после пользователь выбрал для отмены изменений.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Возникает непосредственно перед тем, как Excel выполняет инструкцию ROLLBACK TRANSACTION для источника данных OLAP, если транзакция все еще активна, а затем удаляет все измененные значения в сводной таблице после того, как пользователь решил отменить изменения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotTableChangeSync">
@@ -324,12 +296,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_PivotTableChangeSyncEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после внесения изменений в сводной таблице.</summary>
-        <remarks>
-          <para>
-            <see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableChangeSync" /> Событие происходит во время большинство изменений в сводной таблице, чтобы можно написать код для реагировать на действия пользователя, такие как очистка, группировки или обновлении элементов в сводной таблице.</para>
-          <para></para>
-        </remarks>
+        <summary>Возникает после внесения изменений в сводную таблицу.</summary>
+        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.DocEvents_Event.PivotTableChangeSync" /> Событие возникает во время большинства изменений в сводной таблице, поэтому вы можете написать код для реагирования на действия пользователя, такие как очистка, группировка или обновление элементов в сводной таблице.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotTableUpdate">
@@ -347,7 +316,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_PivotTableUpdateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при обновлении отчета сводной таблицы на листе.</summary>
+        <summary>Возникает после обновления отчета сводной таблицы на листе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -366,7 +335,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_SelectionChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении выбора на листе.</summary>
+        <summary>Возникает при изменении выделения на листе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -385,7 +354,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DocEvents_TableUpdateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после обновления запроса таблицы, подключенной к модели данных в таблицу.</summary>
+        <summary>Возникает после обновления таблицы запроса, подключенной к модели данных, на листе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

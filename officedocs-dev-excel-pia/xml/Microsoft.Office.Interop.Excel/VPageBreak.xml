@@ -1,13 +1,5 @@
 <Type Name="VPageBreak" FullName="Microsoft.Office.Interop.Excel.VPageBreak">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="65c80ebf5b3756b2bfa8393565d0d99bd3d8cc23" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20574769" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface VPageBreak" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="65c80ebf5b3756b2bfa8393565d0d99bd3d8cc23" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20574769" /></Metadata><TypeSignature Language="C#" Value="public interface VPageBreak" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract VPageBreak" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.VPageBreak" />
   <TypeSignature Language="VB.NET" Value="Public Interface VPageBreak" />
@@ -29,12 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет разрыв страницы по вертикали.</summary>
-    <remarks>
-      <para>Объект <b>VPageBreak</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> семейства сайтов.</para>
-      <para>Используйте <b>VPageBreaks</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса приостановки выполнения разрыв страницы, чтобы возвратить объект <b>VPageBreak</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет вертикальный разрыв страницы.</summary>
+    <remarks><para>Объект <b>VPageBreak</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> коллекции.</para>
+      <para>Используйте <b>VPageBreaks</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса разрыва страницы, чтобы возвратить объект <b>VPageBreak</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,11 +80,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -146,13 +134,11 @@
         <Parameter Name="RegionIndex" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Direction">Требуется <see cref="T:Microsoft.Office.Interop.Excel.XlDirection" />. Направление, в котором находится разрыв страницы.</param>
-        <param name="RegionIndex">Требуется <b>целое число</b>. Индекс области область печати для разрыв страницы (регион, где находится указатель мыши при нажатии кнопки мыши, если пользователь перетаскивает разрыв страницы). Если область печати сплошного, существует только одна область печати. Если область печати отдельных, существует более одного региона печати.</param>
-        <summary>Перетаскиваний новой страницы вне области печати.</summary>
-        <remarks>
-          <para>Этот метод используется в основном для записи макроса. Можно использовать <see cref="M:Microsoft.Office.Interop.Excel.VPageBreak.Delete" /> метод, чтобы удалить разрыв страницы.</para>
-          <para></para>
-        </remarks>
+        <param name="Direction">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlDirection" />. Направление перетаскивания разрыва страницы.</param>
+        <param name="RegionIndex">Обязательный атрибут типа <b>Integer</b>. Индекс области области печати для разрыва страницы (область, в которой находится указатель мыши при нажатии кнопки мыши, если пользователь перетаскивает разрыв страницы). Если область печати непрерывна, существует только одна область печати. Если область печати является ненепрерывной, существует несколько областей печати.</param>
+        <summary>Перетаскивание разрыва страницы из области печати.</summary>
+        <remarks><para>Этот метод в основном существует для средства записи макросов. Для удаления разрыва <see cref="M:Microsoft.Office.Interop.Excel.VPageBreak.Delete" /> страницы можно использовать метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Extent">
@@ -178,12 +164,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPageBreakExtent</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип указанного страничный: полноэкранный режим или только в область печати.</summary>
+        <summary>Возвращает тип указанного разрыва страницы: весь экран или только в области печати.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>степени</b> может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlPageBreakExtent" /> констант: <b>xlPageBreakFull</b> или <b>xlPageBreakPartial</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>экстента</b> может иметь одно из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlPageBreakExtent" /> констант: <b>кслпажебреакфулл</b> или <b>кслпажебреакпартиал</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Location">
@@ -212,12 +196,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ячейку ( <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект), которое определяет расположение разрыв страницы.</summary>
+        <summary>Возвращает или задает ячейку ( <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект), определяющую расположение разрыва страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Горизонтальных разрывов выравнивается верхнего края ячейки расположения; Вертикальный выровненные по левому краю ячейки расположения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Горизонтальные разрывы страниц выравниваются по верхнему краю ячейки расположения; вертикальные разрывы страниц выравниваются по левому краю ячейки "расположение".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">

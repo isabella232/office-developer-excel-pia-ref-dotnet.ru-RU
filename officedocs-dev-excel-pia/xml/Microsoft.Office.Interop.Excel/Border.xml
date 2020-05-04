@@ -1,13 +1,5 @@
 <Type Name="Border" FullName="Microsoft.Office.Interop.Excel.Border">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="615b6d793dd88e23d55febf94b9549b59f9d20c5" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20576785" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Border" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="615b6d793dd88e23d55febf94b9549b59f9d20c5" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20576785" /></Metadata><TypeSignature Language="C#" Value="public interface Border" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Border" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Border" />
   <TypeSignature Language="VB.NET" Value="Public Interface Border" />
@@ -30,15 +22,13 @@
   </Attributes>
   <Docs>
     <summary>Представляет границу объекта.</summary>
-    <remarks>
-      <para>Наиболее Обычная рамка объекты (за исключением для <see cref="T:Microsoft.Office.Interop.Excel.Range" /> и <see cref="T:Microsoft.Office.Interop.Excel.Style" /> объекты) имеет границы, который обрабатывается как одного объекта, независимо от того, сколько стороны, он имеет. Всего границы должны возвращаться как одно целое. Используйте свойство <b>границы</b> для возврата объекта <b>границы</b> для данного объекта.</para>
+    <remarks><para>Большинство объектов с границами (все, кроме <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объектов <see cref="T:Microsoft.Office.Interop.Excel.Style" /> и) имеют границу, которая обрабатывается как единый объект, независимо от того, сколько у него сторон. Всю границу необходимо возвращать как единое целое. Используйте свойство <b>border</b> , чтобы возвратить объект <b>border</b> для этого типа объекта.</para>
+      <para>Объекты 
+        <b>Range</b> и <b>Style</b> имеют четыре дискретных обрамления — левое, правое, верхнее и нижнее — которые можно возвратить по отдельности или в виде группы. Используйте свойство <b>Borders</b> объекта <b>Range</b> или <b>Style</b> , чтобы возвратить коллекцию <b>Borders</b> , содержащую все четыре границы, и обрабатывают границы как единое целое.</para>
+      <para>Используйте <b>Borders</b>(<paramref name="index" />), <paramref name="index" /> где определяет границу, чтобы получить одиночный объект <b>border</b> .</para>
       <para>
-        <b>Диапазон</b> и <b>стиль</b> объекты имеют четыре отдельных границы — слева, справа, верхние и нижние — по отдельности или группами, которое может быть возвращено. Используйте свойство <b>границы</b> объекта <b>диапазон</b> или <b>стиля</b> для возврата коллекции <b>границы</b> , которая содержит всех четырех границ и рассматривает границы как блок.</para>
-      <para>Используйте <b>границы</b>(<paramref name="index" />), где <paramref name="index" /> определяет границы, чтобы возвратить объект <b>границы</b> .</para>
-      <para>
-        <paramref name="Index" />может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> констант: <b>xlDiagonalDown</b>, <b>xlDiagonalUp</b>, <b>xlEdgeBottom</b>, <b>xlEdgeLeft</b>, <b>xlEdgeRight</b>, <b>xlEdgeTop</b>, <b>xlInsideHorizontal</b>или <b>xlInsideVertical</b>.</para>
-      <para></para>
-    </remarks>
+        <paramref name="Index" />может <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> быть одной из следующих констант: <b>кслдиагоналдовн</b>, <b>кслдиагоналуп</b>, <b>кследжеботтом</b>, <b>кследжелефт</b>, <b>кследжеригхт</b>, <b>кследжетоп</b>, <b>кслинсидехоризонтал</b>или <b>xlInsideVertical</b>.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -97,10 +87,8 @@
       <Docs>
         <summary>Возвращает или задает основной цвет границы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте функцию для создания значение цвета <b>RGB</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте функцию <b>RGB</b> для создания значения цвета.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ColorIndex">
@@ -131,16 +119,14 @@
       <Docs>
         <summary>Возвращает или задает цвет границы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Цвет указан как значение индекса в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> константы:</para>
+        <remarks><para>Цвет задается в виде значения индекса в текущей цветовой палитре или в виде одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант:</para>
           <para>
-            <b>xlColorIndexAutomatic</b>
+            <b>кслколориндексаутоматик</b>
           </para>
           <para>
-            <b>xlColorIndexNone</b>
+            <b>кслколориндексноне</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -168,11 +154,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LineStyle">
@@ -201,37 +185,35 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип линии границы.</summary>
+        <summary>Возвращает или задает стиль линии для границы.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" />может быть одной из следующих констант <b>ксллинестиле</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" />может иметь одно из следующих <b>xlLineStyle задается тип</b> константы:</para>
-          <para>
-            <b>xlContinuous</b>
+            <b>кслконтинуаус</b>
           </para>
           <para>
-            <b>xlDash</b>
+            <b>кслдаш</b>
           </para>
           <para>
-            <b>xlDashDot</b>
+            <b>кслдашдот</b>
           </para>
           <para>
-            <b>xlDashDotDot</b>
+            <b>кслдашдотдот</b>
           </para>
           <para>
-            <b>xlDot</b>
+            <b>кслдот</b>
           </para>
           <para>
-            <b>xlDouble</b>
+            <b>кслдаубле</b>
           </para>
           <para>
-            <b>xlSlantDashDot</b>
+            <b>кслслантдашдот</b>
           </para>
           <para>
-            <b>xlLineStyleNone</b>
+            <b>ксллинестиленоне</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -288,14 +270,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет темы в применяемые цветовая схема, связанного с указанным объектом.  Чтение и запись <b>объектов</b>.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Попытки подключения к цвет темы для объекта, цвет которого не является в настоящее время темой приведет к ошибку времени выполнения недопустимый запрос.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает цвет темы примененной цветовой схемы, связанной с указанным объектом.  <b>Объект</b>для чтения и записи.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>При попытке доступа к цвету темы для объекта, цвет которого в настоящее время не является темой, возникает ошибка времени выполнения запроса.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TintAndShade">
@@ -324,15 +302,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>единого</b> , осветляет или затемняет цвет.</summary>
-        <value>
-          <b>Single</b>
-        </value>
-        <remarks>
-          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для <see cref="P:Microsoft.Office.Interop.Excel.Border.TintAndShade" /> свойство. Нейтральный нуль (0).</para>
-          <para>Попытки подключения к этому свойству присвоено значение меньше, чем значение -1 или более 1 приводит к ошибке времени выполнения: «указанное значение находится вне диапазона».  Это свойство работает для цвета темы и цвета nontheme.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>одно</b> значение, которое осветляет или затемняет цвет.</summary>
+        <value><b>Одинарное с плавающей точкой</b></value>
+        <remarks><para>Можно ввести число от-1 (самый темный) до 1 (самое светлое) для <see cref="P:Microsoft.Office.Interop.Excel.Border.TintAndShade" /> свойства. Ноль (0) не является нейтральным.</para>
+          <para>При попытке присвоить этому свойству значение, меньшее-1 или превышающее 1, возникает ошибка времени выполнения: "указанное значение выходит за пределы допустимого диапазона".  Это свойство применимо как к цветам темы, так и к цветам.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Weight">
@@ -361,25 +335,23 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает Вес границы.</summary>
+        <summary>Возвращает или задает вес границы.</summary>
         <value>To be added.</value>
-        <remarks>
+        <remarks><para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" />может быть одной из следующих констант <b>кслбордервеигхт</b> :</para>
           <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" />может иметь одно из следующих констант <b>XlBorderWeight</b> :</para>
-          <para>
-            <b>xlHairline</b>
+            <b>кслхаирлине</b>
           </para>
           <para>
-            <b>xlThin</b>
+            <b>кслсин</b>
           </para>
           <para>
-            <b>xlMedium</b>
+            <b>кслмедиум</b>
           </para>
           <para>
-            <b>xlThick</b>
+            <b>кслсикк</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

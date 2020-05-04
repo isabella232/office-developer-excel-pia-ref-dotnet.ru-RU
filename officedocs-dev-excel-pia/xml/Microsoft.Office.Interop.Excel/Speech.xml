@@ -1,13 +1,5 @@
 <Type Name="Speech" FullName="Microsoft.Office.Interop.Excel.Speech">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1a463e61ce556cdcc28ee34539e04ed33852d6ca" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20576225" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Speech" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1a463e61ce556cdcc28ee34539e04ed33852d6ca" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20576225" /></Metadata><TypeSignature Language="C#" Value="public interface Speech" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Speech" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Speech" />
   <TypeSignature Language="VB.NET" Value="Public Interface Speech" />
@@ -29,14 +21,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит методы и свойства, которые относятся к речи.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.Speech" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект для возврата объекта <b>речи</b> .</para>
-      <para>После возвращения объекта <b>речи</b> , можно использовать <see cref="M:Microsoft.Office.Interop.Excel.Speech.Speak(System.String,System.Object,System.Object,System.Object)" /> метод объекта <b>речи</b> для воспроизведения содержимого строки.</para>
+    <summary>Содержит методы и свойства, которые относятся к голосовым операциям.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.Speech" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта для возврата <b>голосового</b> объекта.</para>
+      <para>После возврата <b>речевого</b> объекта можно использовать <see cref="M:Microsoft.Office.Interop.Excel.Speech.Speak(System.String,System.Object,System.Object,System.Object)" /> метод объекта <b>Speech</b> для воспроизведения содержимого строки.</para>
       <para>
-        <b>Примечание</b>: в дереве программы установки, которая относится к диктовки и команд функция речь &amp; элемента управления, который не должен быть установлен.</para>
-      <para></para>
-    </remarks>
+        <b>Note</b>: в дереве установки есть функция распознавания речи, которая относится к диктовке и командному &amp; элементу управления, которые не нужно устанавливать.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Direction">
@@ -65,12 +55,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSpeakDirection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок, в котором будет голосовые ячейки.</summary>
+        <summary>Возвращает или задает порядок, в котором будут проговариваться ячейки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>— Это значение свойства <b>направление</b><see cref="T:Microsoft.Office.Interop.Excel.XlSpeakDirection" /> константу.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Direction</b> имеет значение <see cref="T:Microsoft.Office.Interop.Excel.XlSpeakDirection" /> константы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Speak">
@@ -98,12 +86,11 @@
         <Parameter Name="Purge" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Text">
-          <b>Строковое значение.</b> Текст, который разговаривать.</param>
-        <param name="SpeakAsync">Необязательный элемент <b>Object</b>. <b>Значение true</b> приведет к <paramref name="Text" /> для асинхронно голосовые (метод не будет дожидаться <paramref name="Text" /> для разговаривать). <b>Значение false,</b> приведет к <paramref name="Text" /> для синхронно голосовые (метод ожидает <paramref name="Text" /> в речь для продолжения). Значение по умолчанию — <b>False</b>.</param>
-        <param name="SpeakXML">Необязательный атрибут типа <b>Boolean</b>.  <b>Значение true</b> приведет к <paramref name="Text" /> воспринимается как XML. <b>Значение false,</b> приведет к <paramref name="Text" /> не следует интерпретировать как XML, все XML-теги будут прочитаны и не рассматриваются. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Purge">Необязательный элемент <b>Object</b>. <b>Значение true</b> приведет к текущей речи завершить и какие-либо в буфер текст, который очищено до <paramref name="Text" /> говорят. <b>Значение false,</b> не приведет к текущей речи завершить и не будет очистить буфер текста перед <paramref name="Text" /> говорят. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Microsoft Excel воспроизводит указанной текстовой строки.</summary>
+        <param name="Text">Обязательный атрибут типа <b>String</b>. Текст, который будет использоваться для озвучивания.</param>
+        <param name="SpeakAsync">Необязательный <b>объект</b>. <b>Значение true</b> приведет к <paramref name="Text" /> тому, что будет выполняться асинхронно (метод не ждет, <paramref name="Text" /> пока не будет выполнен речь). <b>Значение false</b> вызывает <paramref name="Text" /> синхронный голос (метод ожидает, <paramref name="Text" /> пока будет выполнен разговор перед продолжением). Значение по умолчанию - <b>false</b>.</param>
+        <param name="SpeakXML">Необязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> приводит к <paramref name="Text" /> тому, что он интерпретируется как XML. <b>Значение false</b> приводит к <paramref name="Text" /> тому, что он не будет интерпретирован как XML, поэтому все теги XML будут прочитаны и не будут интерпретироваться. Значение по умолчанию - <b>false</b>.</param>
+        <param name="Purge">Необязательный <b>объект</b>. <b>Значение true</b> приведет к прекращению текущей голосовой речи и очистке всех буферизованных текста перед <paramref name="Text" /> продолжением. <b>Значение false</b> не приводит к завершению текущей голосовой речи и не очищает буферизованный текст перед <paramref name="Text" /> его продолжением. Значение по умолчанию - <b>false</b>.</param>
+        <summary>Microsoft Excel воспроизводит указанную текстовую строку.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -133,7 +120,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Microsoft Excel поддерживает режим, где голосовые активной ячейки при нажатии клавиши ВВОД или после завершения активную ячейку сейчас изменяется. Для свойства <b>SpeakCellOnEnter</b> значение <b>True,</b> будут включены в этом режиме. <b>False</b> отключает этот режим.</summary>
+        <summary>Microsoft Excel поддерживает режим, в котором активная ячейка обрабатывается при нажатии клавиши ВВОД или при редактировании активной ячейки. Если задать <b>SpeakCellOnEnter</b> для свойства Спеакцеллонентер <b>значение true</b> , этот режим будет включен. <b>False</b> выключает этот режим.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

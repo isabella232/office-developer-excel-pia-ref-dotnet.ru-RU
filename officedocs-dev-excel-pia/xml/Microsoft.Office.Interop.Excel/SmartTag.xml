@@ -1,13 +1,5 @@
 <Type Name="SmartTag" FullName="Microsoft.Office.Interop.Excel.SmartTag">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c097490d40a579edaf6a024de2d42f5d5c8fb233" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20575238" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SmartTag" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c097490d40a579edaf6a024de2d42f5d5c8fb233" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575238" /></Metadata><TypeSignature Language="C#" Value="public interface SmartTag" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SmartTag" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SmartTag" />
   <TypeSignature Language="VB.NET" Value="Public Interface SmartTag" />
@@ -29,13 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет идентификатор, назначенный ячейки.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.SmartTags.Add(System.String)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.SmartTags" /> семейства сайтов, чтобы возвратить объект <b>смарт-тега</b> .</para>
-      <para>После возвращения объекта <b>смарт-тега</b> , вы можете хранить дополнительных метаданных для смарт-тег с помощью <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод с <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойство.</para>
-      <para>Для просмотра дополнительных метаданных, используйте <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.XML" /> свойства объекта <b>смарт-тега</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет идентификатор, назначенный ячейке.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.SmartTags.Add(System.String)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.SmartTags" /> коллекции для возврата объекта <b>SmartTag</b> .</para>
+      <para>После возврата объекта <b>SmartTag</b> вы можете хранить дополнительные метаданные в смарт-теге, используя <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод со <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойством.</para>
+      <para>Чтобы просмотреть дополнительные метаданные, используйте <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.XML" /> свойство объекта <b>SmartTag</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -122,11 +112,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -177,12 +165,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую Locator универсальный код ресурса (URL) для смарт-тега.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую URL-адрес смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>URL-адрес указан в файле средства распознавания связанных с ними смарт-тег. Если фрагмент текста распознанные и помеченные, URL-адрес становится частью сведения, содержащиеся в смарт-тег. Свойство <b>DownloadURL</b> можно использовать, если документ отправляется тому, кто не имеет необходимые файлы средства распознавания и действия, установленного на их компьютерах. Пользователя можно следовать URL-адрес для загрузки файлов необходимые смарт-тег.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>URL-адрес указывается в соответствующем файле распознавателя смарт-тегов. Когда фрагмент текста распознается и помечается, URL-адрес становится частью данных, включенных в смарт-тег. Свойство <b>довнлоадурл</b> удобно, если документ отправляется пользователю, у которого нет необходимых распознавателей и файлов действий, установленных на компьютере. Пользователь может следовать URL-адресу, чтобы скачать необходимые файлы смарт-тегов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -210,54 +196,52 @@
       <Docs>
         <summary>Возвращает имя объекта.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>В следующей таблице показаны значения примере свойство <b>Name</b> и связанных с ними свойств, присвоенное источника данных OLAP с уникальным именем «[Европа]. [Франции]. [Париж]» и «Париж» имя источника данных не OLAP с элементом.</para>
+        <remarks><para>В следующей таблице приведены примеры значений свойства <b>Name</b> и связанных свойств для источника данных OLAP с уникальным именем "[Европа]". [Франция]. [Париж] и источник данных, не относящийся к OLAP, с именем элемента "Париж".</para>
           <list type="table">
             <item>
               <term>
-                <b>Заголовок</b>
+                <b>Присваивает</b>
               </term>
               <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>Имя</b>
+                <b>Расширением</b>
               </term>
-              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
               <description>(То же, что значение свойства SQL, только для чтения)</description>
             </item>
             <item>
               <term>
-                <b>Значение</b>
+                <b>Оно</b>
               </term>
-              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para>
+          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> коллекции можно использовать синтаксис, приведенный в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term>
-              <description>выражение. PivotItems("Paris")</description>
+              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж])</term>
+              <description>выражение. PivotItems ("Париж")</description>
             </item>
           </list>
-          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para>
+          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойства для ссылки на определенный член коллекции можно использовать имя текстового индекса, как показано в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>[Европа]. [Франции]. [Париж]</term>
+              <term>[Европа]. [Франция]. Париже</term>
               <description>Париж</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -311,12 +295,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.CustomProperties</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CustomProperties" /> объект, представляющий свойства для смарт-тега.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CustomProperties" /> объект, представляющий свойства смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод с <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойство для хранения дополнительных метаданных для смарт-тега.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод со <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойством для хранения дополнительных метаданных смарт-тега.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Range">
@@ -342,7 +324,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон указанной смарт-тег применяется к.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон, к которому применяется указанный смарт-тег.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -370,12 +352,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SmartTagActions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SmartTagActions" /> объекта, который задает тип действия для выбранного смарт-тег.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SmartTagActions" /> объект, задающий тип действия для выбранного смарт-тега.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Нераспознанный смарт-тега действия элемента возвращает ошибку времени выполнения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Нераспознанный элемент действия смарт-тега возвратит ошибку во время выполнения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="XML">
@@ -401,7 +381,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую образец XML-кода, которые передаются обработчика события.</summary>
+        <summary>Возвращает <b>строку</b> , представляющую пример XML-кода, который передается обработчику действий.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="SortFields" FullName="Microsoft.Office.Interop.Excel.SortFields">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="053d286026d02ae74ebae1ee6cae51deb4e561ec" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20578115" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SortFields : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="053d286026d02ae74ebae1ee6cae51deb4e561ec" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20578115" /></Metadata><TypeSignature Language="C#" Value="public interface SortFields : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SortFields implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SortFields" />
   <TypeSignature Language="VB.NET" Value="Public Interface SortFields&#xA;Implements IEnumerable" />
@@ -33,12 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>
-      <see cref="T:Microsoft.Office.Interop.Excel.SortFields" /> Коллекции представляет собой коллекцию <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объектов. Она позволяет разработчикам хранить состояние сортировки в рабочих книгах, списки и автофильтра.</summary>
-    <remarks>
-      <para>Объект содержит свойства для добавления, count, сортировка и удаление <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объектов.</para>
-      <para></para>
-    </remarks>
+    <summary><see cref="T:Microsoft.Office.Interop.Excel.SortFields" /> Коллекция — это коллекция <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объектов. Позволяет разработчикам сохранять состояние сортировки для книг, списков и автофильтров.</summary>
+    <remarks><para>Объект содержит свойства для добавления, учета, сортировки и удаления <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объектов.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -102,15 +91,13 @@
         <Parameter Name="DataOption" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Key">Указывает значение ключа для сортировки.</param>
-        <param name="SortOn">Поле для сортировки.</param>
-        <param name="Order">Указывает порядок сортировки.</param>
-        <param name="CustomOrder">Указывает, если необходимо использовать пользовательский порядок сортировки.</param>
-        <param name="DataOption">Задает параметр данные.</param>
-        <summary>Создает новое поле, сортировки и возвращает <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объекта.</summary>
-        <returns>
-          <see cref="T:Microsoft.Office.Interop.Excel.SortField" />
-        </returns>
+        <param name="Key">Задает значение ключа для сортировки.</param>
+        <param name="SortOn">Поле, по которому выполняется сортировка.</param>
+        <param name="Order">Задает порядок сортировки.</param>
+        <param name="CustomOrder">Указывает, следует ли использовать настраиваемый порядок сортировки.</param>
+        <param name="DataOption">Задает параметр Data.</param>
+        <summary>Создает новое поле сортировки и возвращает <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объект.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.SortField" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,14 +124,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объекта, представляющего создателя указанный объект. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel._Application" />
-        </value>
-        <remarks>
-          <para>Это свойство можно использовать с помощью объекта OLE-автоматизации возвращает приложение этого объекта.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий создателя указанного объекта. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
+        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Clear">
@@ -168,7 +151,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет все <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объектов.</summary>
+        <summary>Удаляет все <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объекты.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -196,9 +179,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает число объектов в коллекции. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -226,13 +207,9 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -293,8 +270,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Значение индекса <see cref="T:Microsoft.Office.Interop.Excel.SortField" />.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объект, представляющий коллекцию элементов, которые можно сортировать в книге. Только для чтения.</summary>
+        <param name="Index">Значение индекса объекта <see cref="T:Microsoft.Office.Interop.Excel.SortField" />.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SortField" /> объект, представляющий коллекцию элементов, которые можно отсортировать в книге. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -323,9 +300,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

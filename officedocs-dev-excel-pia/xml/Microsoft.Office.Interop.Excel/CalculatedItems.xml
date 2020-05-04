@@ -1,13 +1,5 @@
 <Type Name="CalculatedItems" FullName="Microsoft.Office.Interop.Excel.CalculatedItems">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="803d3690114439928c366959ebf02ca6bbb754d4" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20578738" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CalculatedItems : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="803d3690114439928c366959ebf02ca6bbb754d4" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20578738" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedItems : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CalculatedItems implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CalculatedItems" />
   <TypeSignature Language="VB.NET" Value="Public Interface CalculatedItems&#xA;Implements IEnumerable" />
@@ -33,13 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объекты, которые представляют все вычисляемые элементы в указанном отчет сводной таблицы.</summary>
-    <remarks>
-      <para>Например отчет сводной таблицы, содержащей элементы январь, февраль и март может иметь вычисляемый элемент с именем «FirstQuarter», которая представляет собой сумму сумм в января, февраля и марта.</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.PivotField.CalculatedItems" /> метод для возврата коллекции <b>CalculatedItems</b> .</para>
-      <para>Используйте <b>CalculatedItems</b>(<paramref name="index" />), где <paramref name="index" /> — имя или номер индекса поля, чтобы возвратить объект <b>элемент сводной таблицы</b> из коллекции <b>CalculatedItems</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объектов, представляющих все Вычисляемые элементы в указанном отчете сводной таблицы.</summary>
+    <remarks><para>Например, отчет сводной таблицы, содержащий элементы "Январь", "Февраль" и "Март", может иметь вычисляемый элемент "Фирсткуартер", который определяется как сумма сумм в январе, Февраль и март.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotField.CalculatedItems" /> метод, чтобы возвратить коллекцию <b>CalculatedItems</b> .</para>
+      <para>Используйте <b>CalculatedItems</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса поля, чтобы вернуть один объект <b>PivotItem</b> из коллекции <b>CalculatedItems</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Add">
@@ -135,12 +125,10 @@
         <Parameter Name="UseStandardFormula" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Имя элемента.</param>
-        <param name="Formula">
-          <b>Строковое значение.</b> Формула для элемента.</param>
-        <param name="UseStandardFormula">Необязательный элемент <b>Object</b>. <b>Значение false</b> (по умолчанию) для обеспечения совместимости вверх. <b>Значение true</b> для строк, содержащихся в аргументы, которые являются имена элементов (будет рассматриваться как отформатирован в стандартный английский (США) вместо локальной параметры).</param>
-        <summary>Создает новый вычисляемый элемент. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объекта.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя элемента.</param>
+        <param name="Formula">Обязательный атрибут типа <b>String</b>. Формула для элемента.</param>
+        <param name="UseStandardFormula">Необязательный <b>объект</b>. <b>False</b> (по умолчанию) для обеспечения совместимости с вверх. <b>Значение true</b> для строк, хранящихся в аргументах, которые являются именами элементов (интерпретируются как отформатированные в стандартном американском английском, а не в локальных параметрах).</param>
+        <summary>Создает новый вычисляемый элемент. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,11 +214,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -288,13 +274,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Текстовое имя объекта — это значение <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Name" /> и <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Value" /> свойства.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Текстовое имя объекта является значением свойства <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Name" /> и. <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Value" /></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">

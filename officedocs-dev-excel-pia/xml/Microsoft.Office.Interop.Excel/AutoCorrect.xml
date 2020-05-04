@@ -1,13 +1,5 @@
 <Type Name="AutoCorrect" FullName="Microsoft.Office.Interop.Excel.AutoCorrect">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="782c79cfc9bebcca05b2fc4c4e554571d4077391" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20572725" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AutoCorrect" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="782c79cfc9bebcca05b2fc4c4e554571d4077391" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572725" /></Metadata><TypeSignature Language="C#" Value="public interface AutoCorrect" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoCorrect" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AutoCorrect" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoCorrect" />
@@ -29,11 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит атрибуты, Microsoft Excel автозамены (регистр букв названия дней, исправление двумя прописными буквами, автоматическое исправление списка и т.д.).</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.AutoCorrect" /> свойство для возврата объекта <b>автозамены</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Содержит атрибуты автозамены Microsoft Excel (прописные названия дней, исправление двух начальных заглавных букв, список автоматических исправлений и т. д.).</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.AutoCorrect" /> свойство, чтобы возвратить объект <b>автозамены</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddReplacement">
@@ -60,11 +50,9 @@
         <Parameter Name="Replacement" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="What">
-          <b>Строковое значение.</b> Текст, который будет заменен. Если эта строка уже существует в массиве замены автозамены, новый текст заменяется существующий текст замены.</param>
-        <param name="Replacement">
-          <b>Строковое значение.</b> Замещающий текст.</param>
-        <summary>Добавляет запись в массив замены автозамены.</summary>
+        <param name="What">Обязательный атрибут типа <b>String</b>. Заменяемый текст. Если эта строка уже существует в массиве замен автозамены, существующий замещающий текст заменяется новым текстом.</param>
+        <param name="Replacement">Обязательный атрибут типа <b>String</b>. Замещающий текст.</param>
+        <summary>Добавляет запись в массив замен.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -123,13 +111,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Логическое</b> значение, указывающее, включено ли автоматическое расширение для списков.</summary>
+        <summary><b>Логическое</b> значение, указывающее, включено ли автоматическое расширение для списков.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При вводе в ячейку пустую строку или столбец рядом с элементом списка, список развертывается для включения этой строки или столбца, если включено автоматическое расширение.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Когда вы вводите ячейку пустой строки или столбца рядом со списком, список будет расширен, чтобы включить эту строку или столбец, если включено автоматическое расширение.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoFillFormulasInLists">
@@ -158,14 +143,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Влияет на создание вычисляемых столбцов, созданные автоматическое заполнение списка списков. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Свойство не влияет на существующие вычисляемых столбцов или вычисляемых столбцов, созданных, где автоматически заполнять не было.</para>
-          <para></para>
-        </remarks>
+        <summary>Влияет на создание вычисляемых столбцов, созданных автоматическими заполненными списками. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Свойство не влияет на существующие вычисляемые столбцы или вычисляемые столбцы, которые не были автоматически заполнены.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CapitalizeNamesOfDays">
@@ -194,8 +175,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если первая буква названия дней становится прописной автоматически.</summary>
+        <summary><b>Имеет значение true</b> , если имена первых букв дней автоматически заменяются прописными.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,8 +206,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel автоматически исправляет случайное использование клавиша CAPS LOCK.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel автоматически исправляет случайное использование клавиши Caps Lock.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,8 +237,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel автоматически исправляет предложение (сначала word) правильно.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel автоматически исправляет прописные буквы предложений (первого слова).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -289,11 +267,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DeleteReplacement">
@@ -319,9 +295,8 @@
         <Parameter Name="What" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="What">
-          <b>Строковое значение.</b> Текст, который будет заменен, как оно отображается в строке к удалению из массива замены автозамены. Если эта строка не существует в массиве замены автозамены, этот метод не удается выполнить.</param>
-        <summary>Удаляет элемент из массива замены автозамены.</summary>
+        <param name="What">Обязательный атрибут типа <b>String</b>. Заменяемый текст, отображаемый в строке, которая будет удалена из массива замен. Если эта строка не существует в массиве замен автозамены, этот метод завершается с ошибкой.</param>
+        <summary>Удаляет запись из массива замен, выполняемых при автозамене.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -352,13 +327,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Позволяет пользователю Показать или скрыть кнопку Параметры автозамены. Значение по умолчанию — <b>True</b>.</summary>
+        <summary>Позволяет пользователю отображать или скрывать кнопку Параметры автозамены. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>DisplayAutoCorrectOptions</b> — параметр всей с Microsoft Office. Изменение этого свойства в Microsoft Excel будут влиять на других приложений Microsoft Office также.</para>
-          <para>В Excel параметры автозамены кнопка отображается, только когда автоматически создается гиперссылка.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>дисплайаутокорректоптионс</b> — это параметр уровня Microsoft Office. Изменение этого свойства в Microsoft Excel также повлияет на другие приложения Office.</para>
+          <para>В Excel кнопка Параметры автозамены отображается только при автоматическом создании гиперссылки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -418,24 +391,22 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Индекс строки массива замены автозамены должно быть возвращено. Строка возвращается как одномерный массив с двумя элементами: первый элемент — это текст в столбце 1, а второй элемент — это текст в столбце 2.</param>
-        <summary>Возвращает массив замены автозамены.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Индекс строки для возвращаемого массива замен. Строка возвращается в виде одномерного массива с двумя элементами: первый элемент — это текст в столбце 1, второй элемент — текст в столбце 2.</param>
+        <summary>Возвращает массив замен.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <paramref name="Index" /> не указан, этот метод возвращает двухмерный массив. Каждая строка в массиве содержит замещающих, как показано в следующей таблице.</para>
+        <remarks><para>Если <paramref name="Index" /> значение не указано, метод возвращает двухмерный массив. Каждая строка в массиве содержит одну замену, как показано в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>1</term>
-              <description>Текст, который будет заменен</description>
+              <term>1,1</term>
+              <description>Заменяемый текст</description>
             </item>
             <item>
               <term>2</term>
               <description>Замещающий текст</description>
             </item>
           </list>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.AutoCorrect.AddReplacement(System.String,System.String)" /> метод, чтобы добавить запись в список замены.</para>
-          <para></para>
-        </remarks>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.AutoCorrect.AddReplacement(System.String,System.String)" /> метод, чтобы добавить запись в список замены.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReplaceText">
@@ -464,8 +435,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст в списке автозамены замены будет заменен автоматически.</summary>
+        <summary><b>True</b> , если текст в списке замен автозамены заменяется автоматически.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -496,8 +466,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если автоматически исправляются слова, начинающиеся с двумя прописными буквами.</summary>
+        <summary><b>True</b> , если слова, начинающиеся с двух прописных букв, будут исправлены автоматически.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

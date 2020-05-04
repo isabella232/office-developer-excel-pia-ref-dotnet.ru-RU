@@ -1,13 +1,5 @@
 <Type Name="PivotTables" FullName="Microsoft.Office.Interop.Excel.PivotTables">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="b1b870f7e0d404abd82b95ed4e0d3df8f815f25c" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20578024" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PivotTables : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b1b870f7e0d404abd82b95ed4e0d3df8f815f25c" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20578024" /></Metadata><TypeSignature Language="C#" Value="public interface PivotTables : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotTables implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotTables" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotTables&#xA;Implements IEnumerable" />
@@ -33,14 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объектов на указанный лист.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTables(System.Object)" /> метод для возврата коллекции <b>сводных таблиц</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTableWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового отчета сводной таблицы и добавления его в коллекцию.</para>
-      <para>Использование <b>сводных таблиц</b>(<paramref name="index" />), где <paramref name="index" /> имя для возврата объекта <b>сводной таблицы</b> или сводной таблицы порядковый номер.</para>
-      <para>Так как программировании решений на базе отчета сводной таблицы может быть сложным, обычно проще для записи действий отчета сводной таблицы и затем измените записанный код. Запись макроса, в меню Сервис выберите пункт Макрос и нажмите кнопку Начать запись.</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объектов на указанном листе.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTables(System.Object)" /> метод, чтобы возвратить коллекцию <b>сводных таблиц</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.PivotTableWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы создать новый отчет сводной таблицы и добавить его в коллекцию.</para>
+      <para>Используйте <b>Сводные таблицы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер или имя индекса сводной таблицы, чтобы вернуть один объект <b>сводной таблицы</b> .</para>
+      <para>Так как программирование отчетов сводных таблиц может быть сложным, обычно проще записать действия отчета сводной таблицы и затем изменить записанный код. Чтобы записать макрос, наведите указатель мыши на пункт Макрос в меню Сервис и выберите пункт запись нового макроса.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Add">
@@ -68,12 +58,12 @@
         <Parameter Name="DefaultVersion" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PivotCache">Требуется <b>сводный кэш</b>. Кэш сводной таблицы, на котором основан новый отчет сводной таблицы. Кэш предоставляет данные для отчета.</param>
-        <param name="TableDestination">Требуется <b>объект</b>. Ячейка в левом верхнем углу отчета сводной таблицы конечного диапазона (диапазона на листе, где размещается итоговый отчет). Необходимо указать диапазон назначения на лист, содержащий <paramref name="PivotTables" /> объектом, заданным с <paramref name="expression" />.</param>
-        <param name="TableName">Необязательный элемент <b>Object</b>. Название нового отчета сводной таблицы.</param>
-        <param name="ReadData">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы создать кэш сводной таблицы, содержащий все записи из внешней базы данных; в этом кэше может быть очень большим. <b>Значение false</b> для установки некоторые поля как на стороне сервера поля страниц перед фактически чтения данных.</param>
-        <param name="DefaultVersion">Необязательный элемент <b>Object</b>. Версия Microsoft Excel со сводными таблицами был создан.</param>
-        <summary>Добавляет новый отчет сводной таблицы. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.</summary>
+        <param name="PivotCache">Обязательный <b>PivotCache</b>. Кэш сводной таблицы, на основе которой создан новый отчет сводной таблицы. Кэш предоставляет данные для отчета.</param>
+        <param name="TableDestination">Обязательный <b>объект</b>. Ячейка в левом верхнем углу диапазона назначения отчета сводной таблицы (диапазон на листе, на котором будет помещен итоговый отчет). Необходимо указать конечный диапазон на листе, содержащем <paramref name="PivotTables" /> объект, указанный в параметре. <paramref name="expression" /></param>
+        <param name="TableName">Необязательный <b>объект</b>. Имя нового отчета сводной таблицы.</param>
+        <param name="ReadData">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы создать кэш сводной таблицы, который содержит все записи из внешней базы данных; Этот кэш может быть очень большим. <b>Значение false</b> , чтобы включить настройку некоторых полей в качестве полей страницы на сервере перед фактическим чтением данных.</param>
+        <param name="DefaultVersion">Необязательный <b>объект</b>. Версия Microsoft Excel, в которой была создана сводная таблица.</param>
+        <summary>Добавляет новый отчет сводной таблицы. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -129,7 +119,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -157,12 +147,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -220,7 +208,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

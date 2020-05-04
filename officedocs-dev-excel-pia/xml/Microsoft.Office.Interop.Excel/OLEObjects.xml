@@ -1,13 +1,5 @@
 <Type Name="OLEObjects" FullName="Microsoft.Office.Interop.Excel.OLEObjects">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c7a55aea3278bf57d03536464456af6c54d9afe8" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20575637" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface OLEObjects : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c7a55aea3278bf57d03536464456af6c54d9afe8" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575637" /></Metadata><TypeSignature Language="C#" Value="public interface OLEObjects : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OLEObjects implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.OLEObjects" />
   <TypeSignature Language="VB.NET" Value="Public Interface OLEObjects&#xA;Implements IEnumerable" />
@@ -33,14 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" /> объектов на указанный лист. Каждый объект <b>OLEObject</b> представляет элемент управления ActiveX или объект связанного или внедренного OLE.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.OLEObjects(System.Object)" /> метод для возврата коллекции <b>OLEObjects</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.OLEObjects.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового объекта OLE и добавить его в коллекцию <b>OLEObjects</b> .</para>
-      <para>Элемент управления ActiveX на листе имеет два имени: имя формы, которая содержит элемент управления, который при просмотре листа и имя кода для элемента управления, который можно просматривать в ячейке справа от (имя) в окне Свойства могут отображаться в поле имя. При первом добавлении элемента управления в лист, соответствующие имени фигуры и с кодовым именем. Тем не менее если изменить код имени или имени фигуры, другой не изменяется автоматически в соответствии с.</para>
-      <para>Использование кода имя элемента управления в именах его процедур обработки событий. Тем не менее, при возвращении управления из <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> или <b>OLEObjects</b> набор для листа, необходимо использовать имя фигуры, а не имя кода, для ссылки на элемент управления по имени. Например предположим, что флажок Добавить в лист и наличия CheckBox1 фигуры имя по умолчанию и имя кода по умолчанию. Нажмите, чтобы изменить имя элемента управления кода с помощью следующей команды chkFinished рядом с пунктом (имя) в окне Свойства, необходимо использовать chkFinished в процедуры имен событий, но по-прежнему необходимо использовать CheckBox1 возвращает элемент управления из <b>фигур</b> или <b>OLEObjects</b> семейства сайтов.</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" /> объектов на указанном листе. Каждый объект <b>OLEObject</b> представляет элемент управления ActiveX или связанный или внедренный объект OLE.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.OLEObjects(System.Object)" /> метод, чтобы возвратить коллекцию <b>OLEObjects</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.OLEObjects.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы создать новый объект OLE и добавить его в коллекцию <b>OLEObjects</b> .</para>
+      <para>У элемента управления ActiveX на листе есть два имени: имя фигуры, содержащей элемент управления, которое отображается в поле имя при просмотре листа, и имя кода для элемента управления, которое отображается в ячейке справа от поля (имя) в окне Свойства. При первом добавлении элемента управления на лист имя фигуры и имя кода совпадают. Тем не менее, если вы измените имя фигуры или имя кода, другое автоматически не изменится на "совпадают".</para>
+      <para>Имя кода элемента управления можно использовать в именах процедур обработки событий. Однако при возврате элемента управления из коллекции <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> или коллекции <b>OLEObjects</b> для листа необходимо использовать имя фигуры, а не имя кода, для ссылки на элемент управления по имени. Например, предположим, что на лист добавляется флажок, а для имени фигуры по умолчанию и имени кода по умолчанию задано значение CheckBox1. Если затем изменить имя кода элемента управления, введя Чкфинишед Next To (Name) в окне Свойства, необходимо использовать Чкфинишед в именах процедур обработки событий, но по-прежнему необходимо использовать CheckBox1, чтобы возвратить элемент управления из коллекции <b>Shapes</b> или <b>OLEObjects</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Dummy12">
@@ -467,18 +457,18 @@
         <Parameter Name="Height" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ClassType">Необязательный элемент <b>Object</b>. (Необходимо указать либо <paramref name="ClassType" /> или <paramref name="FileName" />.) Строка, содержащая программный идентификатор объекта будет создан. Если <paramref name="ClassType" /> указано, <paramref name="FileName" /> и <paramref name="Link" /> игнорируются.</param>
-        <param name="Filename">Необязательный элемент <b>Object</b>. (Необходимо указать либо <paramref name="ClassType" /> или <paramref name="FileName" />.) Строка, которая указывает файл, который будет использоваться для создания объекта OLE.</param>
-        <param name="Link">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы новый объект OLE, на основе <paramref name="FileName" /> необходимо связать этот файл. Если не связан объект, объект будет создан как копию файла. Значение по умолчанию — <b>False</b>.</param>
-        <param name="DisplayAsIcon">Необязательный элемент <b>Object</b>. <b>Значение true</b> для отображения на новый объект OLE как значок или его регулярных рисунков. Если этот аргумент имеет <b>значение True</b>, <paramref name="IconFileName" /> и <paramref name="IconIndex" /> можно использовать для указания значка.</param>
-        <param name="IconFileName">Необязательный элемент <b>Object</b>. Строка, которая указывает файл, содержащий значок для отображения. Этот аргумент используется только в том случае, если <paramref name="DisplayAsIcon" /> имеет <b>значение True</b>. Если этот аргумент не указан или файл не содержит значки, используется значок по умолчанию для класса OLE</param>
-        <param name="IconIndex">Необязательный элемент <b>Object</b>. Номер значка в файл значка. Используется только в том случае, если <paramref name="DisplayAsIcon" /> имеет <b>значение True</b> и <paramref name="IconFileName" /> ссылается на файл, содержащий значки. Если значок с заданным индексом не существует в файл, указанный в <paramref name="IconFileName" />, используется первый значок в файле.</param>
-        <param name="IconLabel">Необязательный элемент <b>Object</b>. Строка, которая определяет метку для отображения под значок. Используется только в том случае, если <paramref name="DisplayAsIcon" /> имеет <b>значение True</b>. Если этот аргумент задан, или пустая строка ("»), заголовок не отображается.</param>
-        <param name="Left">Необязательный элемент <b>Object</b>. Начальное координаты нового объекта в пунктах, относящиеся к левый верхний угол ячейки A1 на листе или в левый верхний угол диаграммы.</param>
-        <param name="Top">Необязательный элемент <b>Object</b>. Начальное координаты нового объекта в пунктах, относящиеся к левый верхний угол ячейки A1 на листе или в левый верхний угол диаграммы.</param>
-        <param name="Width">Необязательный элемент <b>Object</b>. Исходный размер нового объекта в пунктах.</param>
-        <param name="Height">Необязательный элемент <b>Object</b>. Исходный размер нового объекта в пунктах.</param>
-        <summary>Добавляет новый объект OLE в лист. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" /> объекта.</summary>
+        <param name="ClassType">Необязательный <b>объект</b>. (Необходимо указать один <paramref name="ClassType" /> или <paramref name="FileName" />.) Строка, содержащая программный идентификатор для создаваемого объекта. Если <paramref name="ClassType" /> указан, <paramref name="FileName" /> <paramref name="Link" /> он игнорируется.</param>
+        <param name="Filename">Необязательный <b>объект</b>. (Необходимо указать один <paramref name="ClassType" /> или <paramref name="FileName" />.) Строка, указывающая файл, который будет использоваться для создания объекта OLE.</param>
+        <param name="Link">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы новый объект OLE, основанный на <paramref name="FileName" /> , был связан с этим файлом. Если объект не связан, объект создается как копия файла. Значение по умолчанию — <b>False</b>.</param>
+        <param name="DisplayAsIcon">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отобразить новый объект OLE в виде значка или обычного рисунка. Если этот аргумент имеет <b>значение true</b> <paramref name="IconFileName" /> и <paramref name="IconIndex" /> может использоваться для указания значка.</param>
+        <param name="IconFileName">Необязательный <b>объект</b>. Строка, указывающая файл, который содержит отображаемый значок. Этот аргумент используется только в том <paramref name="DisplayAsIcon" /> случае, если имеет <b>значение true</b>. Если этот аргумент не указан или файл не содержит значков, используется значок по умолчанию для класса OLE</param>
+        <param name="IconIndex">Необязательный <b>объект</b>. Номер значка в файле значка. Он используется только в том <paramref name="DisplayAsIcon" /> случае, если <paramref name="IconFileName" /> имеет <b>значение true</b> и ссылается на допустимый файл, содержащий значки. Если значок с указанным номером не существует в указанном файле <paramref name="IconFileName" />, то используется первый значок в файле.</param>
+        <param name="IconLabel">Необязательный <b>объект</b>. Строка, указывающая метку, отображаемую под значком. Используется только в том случае <paramref name="DisplayAsIcon" /> , если имеет <b>значение true</b>. Если этот аргумент опущен или содержит пустую строку (""), заголовок не отображается.</param>
+        <param name="Left">Необязательный <b>объект</b>. Начальные координаты нового объекта в пунктах, зависят от левого верхнего угла ячейки a1 на листе или к верхнему левому углу диаграммы.</param>
+        <param name="Top">Необязательный <b>объект</b>. Начальные координаты нового объекта в пунктах, зависят от левого верхнего угла ячейки a1 на листе или к верхнему левому углу диаграммы.</param>
+        <param name="Width">Необязательный <b>объект</b>. Исходный размер нового объекта в пунктах.</param>
+        <param name="Height">Необязательный <b>объект</b>. Исходный размер нового объекта в пунктах.</param>
+        <summary>Добавляет новый объект OLE на лист. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -537,14 +527,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если объект OLE автоматически загружается при рабочей книги, которая содержит он будет открыта.</summary>
+        <summary><b>Значение true</b> , если объект OLE автоматически загружается при открытии книги, содержащей этот объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство игнорируется, элементы управления ActiveX. Элементы управления ActiveX, всегда загружаются при открытии книги.</para>
-          <para>Для большинства типов объектов OLE это свойство не должно быть присвоено <b>значение True</b>. По умолчанию свойство <b>AutoLoad</b> имеет значение <b>False</b> для новые объекты OLE; сохраняет времени и памяти при загрузке книг Microsoft Excel. Преимущество автоматической загрузки объектов OLE —, что для объектов, которые представляют переменные данных, можно сразу же заново установить ссылки на источник данных и объекты можно отобразить еще раз, при необходимости.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство игнорируется элементами управления ActiveX. Элементы управления ActiveX всегда загружаются при открытии книги.</para>
+          <para>Для большинства типов объектов OLE этому свойству не следует присвоить <b>значение true</b>. По умолчанию для свойства <b>autoload</b> для новых объектов OLE задано значение <b>false</b> ; Это экономит время и память при загрузке книг в Microsoft Excel. Преимущество автоматической загрузки объектов OLE заключается в том, что для объектов, представляющих переменные данные, можно немедленно повторно установить ссылки на исходные данные и при необходимости снова отобразить объекты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Border">
@@ -570,7 +557,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Border</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границы объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -596,7 +583,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает объект на передний план в z порядке.</summary>
+        <summary>Переводит объект на передний план по оси z.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -622,7 +609,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирование объекта в буфер обмена.</summary>
+        <summary>Копирует объект в буфер обмена.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -650,9 +637,9 @@
         <Parameter Name="Format" Type="Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />
       </Parameters>
       <Docs>
-        <param name="Appearance">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" />. Указывает, как скопировать изображение.</param>
-        <param name="Format">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />. Формат рисунка.</param>
-        <summary>Копирование выбранного объекта в буфер обмена как рисунок.</summary>
+        <param name="Appearance">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" />параметр. Задает способ копирования изображения.</param>
+        <param name="Format">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />параметр. Формат рисунка.</param>
+        <summary>Копирует выбранный объект в буфер обмена как рисунок.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -710,11 +697,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -738,13 +723,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаление объекта в буфер обмена или вставляет в выбранное место.</summary>
+        <summary>Вырезает объект в буфер обмена или вставляет его в указанное место.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Вырезать диапазон должен состоять из смежных ячеек.</para>
-          <para>Вырезать можно только внедренные диаграммы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Вырезанный диапазон должен состоять из смежных ячеек.</para>
+          <para>Только внедренные диаграммы можно вырезать.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -794,7 +777,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Дублирует объекта и возвращает ссылку на новую копию.</summary>
+        <summary>Дублирует объект и возвращает ссылку на новую копию.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -825,8 +808,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если этот параметр включен объект.</summary>
+        <summary><b>Значение true</b> , если объект включен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -918,7 +900,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота в пунктах объекта.</summary>
+        <summary>Высота объекта (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -946,7 +928,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутренней указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -974,7 +956,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1006,7 +988,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от левого края объекта для левого края столбца А (на рабочем листе) или левого края области диаграммы (на диаграмме).</summary>
+        <summary>Расстояние в пунктах от левого края объекта до левого края столбца A (на листе) или левого края области диаграммы (на диаграмме).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1037,8 +1019,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если объект был заблокирован; <b>Значение false,</b> Если объект могут быть изменены после защиты листа.</summary>
+        <summary><b>Значение true</b> , если объект заблокирован; <b>False</b> , если объект можно изменить, когда лист защищен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1134,21 +1115,19 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ объект подключенный к ячейкам.</summary>
+        <summary>Возвращает или задает способ присоединения объекта к ячейкам, расположенным под ним.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Используйте один из следующих констант:</para>
+        <remarks><para>Используйте одну из следующих констант:</para>
           <para>
-            <b>xlFreeFloating</b>
+            <b>кслфрифлоатинг</b>
           </para>
           <para>
-            <b>xlMove</b>
+            <b>кслмове</b>
           </para>
           <para>
-            <b>xlMoveAndSize</b>
+            <b>кслмовеандсизе</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintObject">
@@ -1177,8 +1156,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если объект будет выводиться при печати документа.</summary>
+        <summary><b>Значение true</b> , если объект будет распечатан при печати документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1205,8 +1183,8 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы заменить текущее выделение с указанным объектом. <b>Значение false</b> для расширения текущего выделения в содержит каких-либо ранее выбранные объекты и указанный объект.</param>
-        <summary>Выбор объекта.</summary>
+        <param name="Replace">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы заменить текущий выделенный фрагмент на указанный объект. <b>Значение false</b> , чтобы расширить текущий выделенный фрагмент для включения всех ранее выбранных объектов и указанного объекта.</param>
+        <summary>Выбирает объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1232,7 +1210,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отправляет объект на задний план z-порядка.</summary>
+        <summary>Отправляет объект на задний план z.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1263,8 +1241,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если шрифт является теневой или объект имеет тень.</summary>
+        <summary><b>Значение true</b> , если шрифт является теневым или объект имеет тень.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1292,7 +1269,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ShapeRange</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, который представляет указанный объект или объекты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, представляющий заданный объект или объекты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1323,7 +1300,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя источника ссылку на указанный объект.</summary>
+        <summary>Возвращает или задает имя источника ссылки указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1354,7 +1331,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от верхнего края к объекту, чтобы в верхней части строки 1 (на рабочем листе) или верхнего края области диаграммы (на диаграмме).</summary>
+        <summary>Расстояние (в пунктах) от верхнего края объекта до верхнего края строки 1 (на листе) или сверху области диаграммы (на диаграмме).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1416,7 +1393,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина в точках объекта.</summary>
+        <summary>Ширина объекта (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1444,12 +1421,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение по оси z объекта.</summary>
+        <summary>Возвращает положение объекта по оси z.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>В любой коллекции объектов объект на задней z порядка является <paramref name="collection" />(1), и — это объект в начале z порядка <paramref name="collection" />(<paramref name="collection" />.<b> Число</b>).</para>
-          <para></para>
-        </remarks>
+        <remarks><para>В любой коллекции объектов объект, расположенный на обратной стороне z-порядка, равен <paramref name="collection" />(1), а объект в начале z-порядка равен <paramref name="collection" />(.<paramref name="collection" /><b> Count</b>).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

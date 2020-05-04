@@ -1,13 +1,5 @@
 <Type Name="Model" FullName="Microsoft.Office.Interop.Excel.Model">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="828748126cb216cd88900a55932d3ae0cccf6925" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20577541" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Model" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="828748126cb216cd88900a55932d3ae0cccf6925" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20577541" /></Metadata><TypeSignature Language="C#" Value="public interface Model" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Model" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Model" />
   <TypeSignature Language="VB.NET" Value="Public Interface Model" />
@@ -29,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Сохранение ссылки на сведения о связях, содержащихся в модели данных и таблицы и подключения к книге.</summary>
+    <summary>Хранит ссылки на подключения к книге, а также сведения о таблицах и связях, содержащихся в модели данных.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -56,8 +48,8 @@
         <Parameter Name="ConnectionToDataSource" Type="Microsoft.Office.Interop.Excel.WorkbookConnection" />
       </Parameters>
       <Docs>
-        <param name="ConnectionToDataSource">Подключения к книге.</param>
-        <summary>Добавляет новое подключение книги в модели с помощью те же свойства, передаваемые в качестве аргумента.</summary>
+        <param name="ConnectionToDataSource">Подключение к книге.</param>
+        <summary>Добавляет новое подключение к модели с теми же свойствами, что и в качестве аргумента.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,8 +105,8 @@
         <Parameter Name="ModelTable" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ModelTable">Имя таблицы модель или объект таблицы модели.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> тип объекта <see cref="T:Microsoft.Office.Interop.Excel.ModelConnection" />.</summary>
+        <param name="ModelTable">Либо имя таблицы модели, либо объект таблицы Model.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объект типа <see cref="T:Microsoft.Office.Interop.Excel.ModelConnection" />.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -142,12 +134,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, которое указывает, приложения, в котором был создан указанный объект. Только для чтения <b>Integer</b> (<b>целое</b> в C#).</summary>
+        <summary>Возвращает 32 — разрядное целое число, которое указывает приложение, в котором был создан указанный объект. <b>Целое число</b> , доступное только для чтения (<b>int</b> в C#).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Так как объект был создан в Microsoft Excel, данное свойство возвращает шестнадцатеричное значение 5843454C, который представляет строку «XCEL».</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Так как объект был создан в Excel, это свойство возвращает шестнадцатеричное значение 5843454C, которое представляет строку "КСЦЕЛ".</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataModelConnection">
@@ -173,7 +163,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookConnection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект подключения к книге модели из коллекцию подключения к книге, которая подключается к модели.</summary>
+        <summary>Возвращает объект подключения книги модели из коллекции подключений к книге, которая подключается к модели.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,7 +189,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Инициализирует модели данных книги. Этот процесс называется с моделью используется по умолчанию первый раз.</summary>
+        <summary>Инициализирует модель данных книги. Он вызывается по умолчанию при первом использовании модели.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -226,7 +216,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelRelationships</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию отношений между таблицами в модели данных. Только для чтения</summary>
+        <summary>Возвращает коллекцию связей между таблицами модели данных. Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -254,7 +244,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ModelTables</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию из таблицы в модели данных. Только для чтения</summary>
+        <summary>Возвращает коллекцию таблиц в модели данных. Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -282,7 +272,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>String</b> (строка в C#), представляющее имя объектной <b>модели</b> . Только для чтения</summary>
+        <summary>Возвращает значение <b>типа String</b> (строка в C#), представляющее имя объекта <b>model</b> . Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -310,7 +300,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект на указанный объект <b>модели</b> . Только для чтения.</summary>
+        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанного объекта <b>model</b> . Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -336,7 +326,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет все источники данных, связанные с моделью, полностью время обработки модели и обновляет все компоненты данных Excel, связанные с моделью.</summary>
+        <summary>Обновляет все источники данных, связанные с моделью, полностью переобрабатывает модель и обновляет все функции данных Excel, связанные с моделью.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,13 +1,5 @@
 <Type Name="IRtdServer" FullName="Microsoft.Office.Interop.Excel.IRtdServer">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="91b1868ee8a3354dc6036654d8402e4aad54ba45" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20579130" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface IRtdServer" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="91b1868ee8a3354dc6036654d8402e4aad54ba45" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20579130" /></Metadata><TypeSignature Language="C#" Value="public interface IRtdServer" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRtdServer" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.IRtdServer" />
   <TypeSignature Language="VB.NET" Value="Public Interface IRtdServer" />
@@ -27,10 +19,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет интерфейс для сервера данных в режиме реального времени.</summary>
-    <remarks>
-      <para>Объект <b>IRTDServer</b> может создать экземпляр или только созданные реализация интерфейса <b>IRTDServer</b> , с помощью ключевого слова <b>Implements</b> .</para>
-      <para></para>
-    </remarks>
+    <remarks><para>Объект <b>IRTDServer</b> можно создать или создать только путем реализации интерфейса <b>IRTDServer</b> с помощью ключевого слова <b>Implements</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="ConnectData">
@@ -58,10 +48,10 @@
         <Parameter Name="GetNewValues" Type="System.Boolean&amp;" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="TopicID">Требуется <b>целое число</b>. Уникальное значение, назначенный с Microsoft Excel, который определяет раздел.</param>
-        <param name="Strings">Требуется <b>объект</b>. Одномерный массив строк, идентифицирующий с разделом.</param>
-        <param name="GetNewValues">Требуется <b>Boolean</b>. <b>Значение true,</b> чтобы определить, если новые значения, которые необходимо получить.</param>
-        <summary>Добавляет новые разделы из сервера данных в режиме реального времени. Метод <b>ConnectData</b> вызывается при открытии файла, который содержит данные в реальном времени функции или когда пользователь вводит в новую формулу, который содержит функцию <b>RTD</b> .</summary>
+        <param name="TopicID">Обязательный атрибут типа <b>Integer</b>. Уникальное значение, назначенное Microsoft Excel, которое определяет раздел.</param>
+        <param name="Strings">Обязательный <b>объект</b>. Одномерный массив строк, идентифицирующий раздел.</param>
+        <param name="GetNewValues">Обязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , чтобы определить, следует ли получить новые значения.</param>
+        <summary>Добавляет новые темы с сервера данных в режиме реального времени. Метод <b>коннектдата</b> вызывается при открытии файла, содержащего функции данных в режиме реального времени, или при вводе пользователем новой формулы, содержащей функцию <b>RTD</b> .</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -89,8 +79,8 @@
         <Parameter Name="TopicID" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="TopicID">Требуется <b>целое число</b>. Уникальное значение, назначенное к разделу, назначенный с Microsoft Excel.</param>
-        <summary>Уведомляет данных реального времени (RTD) серверное приложение, которое раздела больше не используется.</summary>
+        <param name="TopicID">Обязательный атрибут типа <b>Integer</b>. Уникальное значение, назначенное теме, назначенному Microsoft Excel.</param>
+        <summary>Уведомляет серверное приложение данных реального времени (RTD) о том, что тема больше не используется.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -115,12 +105,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Определяет, является ли по-прежнему active сервера данных в режиме реального времени. Ноль или отрицательное значение указывает на ошибку; положительное число указывает, что сервер активен.</summary>
+        <summary>Определяет, активен ли сервер данных реального времени. Ноль или отрицательное число указывает на сбой; положительное число означает, что сервер активен.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Периодический сигнал метод вызывается с Microsoft Excel, если <see cref="P:Microsoft.Office.Interop.Excel.IRTDUpdateEvent.HeartbeatInterval" /> истечения Excel вызван с момента последнего <see cref="M:Microsoft.Office.Interop.Excel.IRTDUpdateEvent.UpdateNotify" /> метод.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Метод пульса вызывается Microsoft Excel, если <see cref="P:Microsoft.Office.Interop.Excel.IRTDUpdateEvent.HeartbeatInterval" /> свойство прошло с момента последнего вызова Excel с помощью <see cref="M:Microsoft.Office.Interop.Excel.IRTDUpdateEvent.UpdateNotify" /> метода.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RefreshData">
@@ -146,13 +134,11 @@
         <Parameter Name="TopicCount" Type="System.Int32&amp;" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="TopicCount">Требуется <b>целое число</b>. Сервер RTD необходимо изменить значение <paramref name="TopicCount" /> число элементов в массиве возвращаются.</param>
-        <summary>Этот метод вызывается с Microsoft Excel для получения новых данных.</summary>
+        <param name="TopicCount">Обязательный атрибут типа <b>Integer</b>. Сервер RTD должен изменить значение свойства <paramref name="TopicCount" /> на число возвращенных элементов в возвращенном массиве.</param>
+        <summary>Этот метод вызывается Microsoft Excel для получения новых данных.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Данные, возвращаемые в Excel — это <b>объект</b> , содержащий двухмерный массив. Первый измерения представляет список идентификаторы разделов. Второй измерения представляет значения, связанные с разделом идентификаторы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Возвращаемые в Excel данные представляют собой <b>объект</b> , содержащий двухмерный массив. Первое измерение представляет список идентификаторов разделов. Второе измерение представляет значения, связанные с идентификаторами разделов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ServerStart">
@@ -178,8 +164,8 @@
         <Parameter Name="CallbackObject" Type="Microsoft.Office.Interop.Excel.IRTDUpdateEvent" />
       </Parameters>
       <Docs>
-        <param name="CallbackObject">Требуется <see cref="T:Microsoft.Office.Interop.Excel.IRTDUpdateEvent" /> объекта. Объект обратного вызова.</param>
-        <summary>Метод <b>ServerStart</b> вызывается сразу же после создания экземпляра сервера данных в режиме реального времени. Отрицательное значение или ноль указывает на ошибку для запуска сервера; положительное значение указывает на успешное завершение.</summary>
+        <param name="CallbackObject">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.IRTDUpdateEvent" /> объект. Объект обратного вызова.</param>
+        <summary>Метод <b>серверстарт</b> вызывается сразу после создания экземпляра сервера данных в режиме реального времени. Отрицательное значение или ноль означает, что не удается запустить сервер; положительное значение указывает на успешное выполнение.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,7 +191,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Завершение работы подключения к серверу данных реального времени.</summary>
+        <summary>Завершает подключение к серверу данных в режиме реального времени.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

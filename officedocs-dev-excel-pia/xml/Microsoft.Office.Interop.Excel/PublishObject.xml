@@ -1,13 +1,5 @@
 <Type Name="PublishObject" FullName="Microsoft.Office.Interop.Excel.PublishObject">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fcc61ded7b33a1797bd24a5447641b388b7f9f14" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20574748" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PublishObject" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="fcc61ded7b33a1797bd24a5447641b388b7f9f14" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20574748" /></Metadata><TypeSignature Language="C#" Value="public interface PublishObject" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PublishObject" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PublishObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface PublishObject" />
@@ -26,12 +18,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет элемент в книге, который был сохранен на веб-страницы и могут быть обновлены в соответствии с значения, заданные свойства и методы объекта <b>PublishObject</b> .</summary>
-    <remarks>
-      <para>Объект <b>PublishObject</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.PublishObjects" /> семейства сайтов.</para>
-      <para>Используйте <b>PublishObjects</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса выбранного элемента в книге, чтобы возвратить объект <b>PublishObject</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет элемент книги, сохраненный на веб-странице, и его можно обновлять в соответствии со значениями, указанными в свойствах и методах объекта <b>PublishObject</b> .</summary>
+    <remarks><para>Объект <b>PublishObject</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.PublishObjects" /> коллекции.</para>
+      <para>Используйте <b>PublishObjects</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса указанного элемента в книге, чтобы вернуть один объект <b>PublishObject</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -88,7 +78,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При сохранении книги Microsoft Excel определяет, если какие-либо элемент <see cref="T:Microsoft.Office.Interop.Excel.PublishObjects" /> коллекции <b>автоматического переиздания</b> свойство имеет значение <b>True</b> и если да, заново опубликует ее. Значение по умолчанию — <b>False</b>.</summary>
+        <summary>При сохранении книги Microsoft Excel определяет, имеет ли элемент <see cref="T:Microsoft.Office.Interop.Excel.PublishObjects" /> коллекции свойство <b>Автопереиздание</b> , для которого установлено <b>значение true</b> , и, если это так, повторно публикует его. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,11 +108,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -173,12 +161,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уникальный идентификатор, используемый для идентификации HTML &lt;DIV&gt; тега на веб-странице.</summary>
+        <summary>Возвращает уникальный идентификатор, используемый для идентификации тега HTML &lt;div&gt; на веб-странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Тег связан с элементом в документ, сохраненный на веб-страницу. Элемент может быть всей книги, листа, выбранный диапазон печати, диапазон автофильтра, диапазона ячеек, диаграммы, отчет сводной таблицы или таблицы запроса.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Тег связан с элементом в документе, сохраненном на веб-странице. Элемент может быть целой книгой, листом, выделенным диапазоном печати, диапазоном автофильтра, диапазоном ячеек, диаграммой, отчетом сводной таблицы или таблицей запросов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Filename">
@@ -207,12 +193,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает URL-адрес (в интрасети или Интернете) или путь (локальный или сетевой) в расположение, где был сохранен объект указанного источника.</summary>
+        <summary>Возвращает или задает URL-адрес (в интрасети или Интернете) или путь (локальная или в сети) для расположения, в котором был сохранен указанный исходный объект.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Filename</b> приводит к ошибке, если не существует папка по указанному пути.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>filename</b> создает ошибку, если папка по указанному пути не существует.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HtmlType">
@@ -241,12 +225,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlHtmlType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип HTML, создаваемые Microsoft Excel при сохранении указанного элемента на веб-страницу.</summary>
+        <summary>Возвращает или задает тип HTML, создаваемый Microsoft Excel при сохранении указанного элемента на веб-странице.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>HtmlType</b> может иметь одно из <see cref="T:Microsoft.Office.Interop.Excel.XlHtmlType" /> константы, указание статических или интерактивных веб-странице элемента. Значение по умолчанию — <b>xlHtmlStatic</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>хтмлтипе</b> может быть одной из констант, <see cref="T:Microsoft.Office.Interop.Excel.XlHtmlType" /> указывающих на то, является ли элемент статическим или интерактивным на веб-странице. Значение по умолчанию — <b>кслхтмлстатик</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -299,13 +281,10 @@
         <Parameter Name="Create" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Create">Необязательный элемент <b>Object</b>. Если HTML-файл существует, задание этого аргумента <b>значение True,</b> заменяет файл, а если задать этот аргумент значение <b>False</b> вставляет элемент или элементы в конце файла. Если файл не существует, независимо от значения создается файл <paramref name="Create" /> аргумент.</param>
-        <summary>Сохраняет элемент или набор элементов в документе на веб-страницу.</summary>
-        <remarks>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.PublishObject.Filename" /> Свойство Возвращает или задает расположение и имя HTML-файла.</para>
-          <para></para>
-        </remarks>
+        <param name="Create">Необязательный <b>объект</b>. Если HTML-файл существует, присвоив этому аргументу <b>значение true</b> заменяет файл, и если задать для этого аргумента <b>значение false</b> , элемент или элементы добавляются в конец файла. Если файл не существует, файл создается независимо от значения <paramref name="Create" /> аргумента.</param>
+        <summary>Сохраняет элемент или коллекцию элементов в документе на веб-странице.</summary>
+        <remarks><para><see cref="P:Microsoft.Office.Interop.Excel.PublishObject.Filename" /> Свойство возвращает или задает расположение и имя HTML-файла.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Sheet">
@@ -359,12 +338,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уникальное имя, которое определяет элементы, которые имеют <see cref="P:Microsoft.Office.Interop.Excel.PublishObject.SourceType" /> значение свойства <b>xlSourceRange</b>, <b>xlSourceChart</b>, <b>xlSourcePrintArea</b>, <b>xlSourceAutoFilter</b>, <b>xlSourcePivotTable</b>или <b>xlSourceQuery</b> .</summary>
+        <summary>Возвращает уникальное имя, определяющее элементы <see cref="P:Microsoft.Office.Interop.Excel.PublishObject.SourceType" /> со значением свойства <b>кслсаурцеранже</b>, <b>кслсаурцечарт</b>, <b>кслсаурцепринтареа</b>, <b>кслсаурцеаутофилтер</b>, <b>кслсаурцепивоттабле</b>или <b>xlSourceQuery</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если <b>Тип источника</b> задано значение <b>xlSourceRange</b>, данное свойство возвращает диапазон, который может быть определенное имя. Если <b>Тип источника</b> задано значение <b>xlSourceChart</b>, <b>xlSourcePivotTable</b>или <b>xlSourceQuery</b>, данное свойство возвращает имя объекта, таких как имя диаграммы, имя отчета сводной таблицы или имя таблицы запросов.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если для свойства <b>sourceType</b> задано значение <b>кслсаурцеранже</b>, это свойство возвращает диапазон, который может быть определенным именем. Если для свойства <b>sourceType</b> задано значение <b>кслсаурцечарт</b>, <b>кслсаурцепивоттабле</b>или <b>кслсаурцекуери</b>, это свойство возвращает имя объекта, например имя диаграммы, имя отчета сводной таблицы или имя таблицы запроса.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SourceType">
@@ -390,7 +367,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSourceType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее тип публикуемого элемента.</summary>
+        <summary>Возвращает значение, определяющее тип публикуемого элемента.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -421,12 +398,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает заголовок веб-страницы при сохранении документа в качестве веб-страницы.</summary>
+        <summary>Возвращает или задает заголовок веб-страницы при сохранении документа в виде веб-страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Заголовок обычно отображается в строке заголовка окна при просмотре документа в веб-браузере.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Заголовок обычно отображается в строке заголовка окна, когда документ просматривается в веб-браузере.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

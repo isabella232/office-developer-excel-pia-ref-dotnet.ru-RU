@@ -1,13 +1,5 @@
 <Type Name="ShapeNodes" FullName="Microsoft.Office.Interop.Excel.ShapeNodes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fcefaa651f73c2e96e8b51711d14e2e3ee8df786" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20578101" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ShapeNodes : Microsoft.Office.Core._IMsoDispObj, System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="fcefaa651f73c2e96e8b51711d14e2e3ee8df786" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20578101" /></Metadata><TypeSignature Language="C#" Value="public interface ShapeNodes : Microsoft.Office.Core._IMsoDispObj, System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ShapeNodes implements class Microsoft.Office.Core._IMsoDispObj, class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ShapeNodes" />
   <TypeSignature Language="VB.NET" Value="Public Interface ShapeNodes&#xA;Implements _IMsoDispObj, IEnumerable" />
@@ -33,14 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.ShapeNode" /> объекты в указанном freeform.</summary>
-    <remarks>
-      <para>Каждый объект <b>ShapeNode</b> представляет узел между сегменты в произвольный или контрольной точки для сегмент произвольной формы. Можно создать freeform вручную или с помощью <see cref="M:Microsoft.Office.Interop.Excel.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> и <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.ConvertToShape" /> методы.</para>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Shape.Nodes" /> свойство для возврата коллекции <b>ShapeNodes</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод для создания нового узла и добавления его в коллекцию <b>ShapeNodes</b> .</para>
-      <para>С помощью <b>узлов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса узел, чтобы возвратить объект <b>ShapeNode</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.ShapeNode" /> объектов в указанной полилинии.</summary>
+    <remarks><para>Каждый объект <b>ShapeNode</b> представляет узел между сегментами в полилинии или контрольную точку для криволинейного сегмента полилинии. Можно создать полилинию вручную или с помощью методов <see cref="M:Microsoft.Office.Interop.Excel.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> и. <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.ConvertToShape" /></para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.Nodes" /> свойство, чтобы возвратить коллекцию <b>ShapeNodes</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.ShapeNodes.Insert(System.Int32,Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)" /> метод, чтобы создать новый узел и добавить его в коллекцию <b>ShapeNodes</b> .</para>
+      <para>Используйте <b>nodes</b>(<paramref name="index" />), <paramref name="index" /> где — это номер индекса узла, чтобы вернуть один объект <b>ShapeNode</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -97,7 +87,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -128,12 +118,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -159,7 +147,7 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>.</param>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>.</param>
         <summary>Удаляет объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -226,16 +214,16 @@
         <Parameter Name="Y3" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Число фигур узел после вставки новый узел.</param>
-        <param name="SegmentType">Требуется <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Тип сегмента.</param>
-        <param name="EditingType">Требуется <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Типа редактирования.</param>
-        <param name="X1">Требуется <b>один</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingAuto</b>, этот аргумент указывает расстояние по горизонтали, измеряемую в точках, в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> новый узел <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали, измеряемую в точках в левом верхнем углу документа для первой контрольной точки для нового сегмента.</param>
-        <param name="Y1">Требуется <b>один</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingAuto</b>, этот аргумент определяет расстояние по вертикали, измеряемую в точках в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> новый узел <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали, измеряемую в точках в левом верхнем углу документа для первой контрольной точки для нового сегмента.</param>
-        <param name="X2">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали, измеряемую в точках в левом верхнем углу документа для второй контрольной точки для нового сегмента. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="Y2">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали, измеряемую в точках в левом верхнем углу документа для второй контрольной точки для нового сегмента. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="X3">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали, измеряемую в точках в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="Y3">Необязательный <b>одного</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали, измеряемую в точках в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <summary>Вставка узлов в произвольные фигуры.</summary>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер узла фигуры, после которого вставляется новый узел.</param>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Тип сегмента.</param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Тип редактирования.</param>
+        <param name="X1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали в пунктах от левого верхнего угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="Y1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по вертикали в пунктах от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по вертикали в пунктах от левого верхнего угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="X2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали в пунктах от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y2">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по вертикали в пунктах от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="X3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали в пунктах от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y3">Необязательный параметр <b>Single</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по вертикали в пунктах от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <summary>Вставляет узел в фигуру полилинии.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -262,7 +250,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -320,13 +308,11 @@
         <Parameter Name="EditingType" Type="Microsoft.Office.Core.MsoEditingType" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Узел, тип которого редактирования не должно быть задано.</param>
-        <param name="EditingType">Требуется <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство редактирования вершины.</param>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Узел, для которого задается тип редактирования.</param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство Edit для вершины.</param>
         <summary>Задает тип редактирования указанного узла.</summary>
-        <remarks>
-          <para>Если узел является контрольной точки для сегмент, этого метода можно задать редактирования тип узла рядом с ней, соединяет два сегмента. Обратите внимание на то, что, в зависимости от типа редактирования, этот метод может повлиять на положение рядом с узлами.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если узел является контрольной точкой для криволинейного сегмента, этот метод задает тип редактирования соседнего узла, который присоединяется к двум сегментам. Обратите внимание, что в зависимости от типа редактирования этот метод может повлиять на положение смежных узлов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetPosition">
@@ -354,14 +340,12 @@
         <Parameter Name="Y1" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Узел является позиция которого должно быть задано.</param>
-        <param name="X1">Требуется <b>один</b>. Положение новый узел относительно левого верхнего угла документа (в точках).</param>
-        <param name="Y1">Требуется <b>один</b>. Положение новый узел относительно левого верхнего угла документа (в точках).</param>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Узел, позиция которого должна быть задана.</param>
+        <param name="X1">Обязательное <b>одно</b>. Положение (в пунктах) нового узла относительно левого верхнего угла документа.</param>
+        <param name="Y1">Обязательное <b>одно</b>. Положение (в пунктах) нового узла относительно левого верхнего угла документа.</param>
         <summary>Задает расположение указанного узла.</summary>
-        <remarks>
-          <para>Обратите внимание на то, что, в зависимости от типа редактирования узла, этот метод может повлиять на положение рядом с узлами.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Обратите внимание, что в зависимости от типа редактирования узла этот метод может повлиять на положение смежных узлов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetSegmentType">
@@ -388,13 +372,11 @@
         <Parameter Name="SegmentType" Type="Microsoft.Office.Core.MsoSegmentType" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Узел, тип которого сегмент не должно быть задано.</param>
-        <param name="SegmentType">Требуется <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Указывает, если сегмент прямых или изогнутых. Может иметь одно из следующих констант <b>MsoSegmentType</b> :<b>msoSegmentCurve</b><b>MsoSegmentType</b><b>msoSegmentLine</b></param>
-        <summary>Задает тип сегмента сегмент, исходя из указанного узла.</summary>
-        <remarks>
-          <para>Если узел является контрольной точки для сегмент, этого метода можно задать тип сегмента для этот график. Обратите внимание на то, что это может повлиять на общее число узлов, вставка или удаление рядом с узлами.</para>
-          <para></para>
-        </remarks>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Узел, для которого задается тип сегмента.</param>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Core.MsoSegmentType" />. Указывает, является ли сегмент прямым или изогнутым. Может быть одной из следующих констант <b>мсосегменттипе</b> :<b>мсосегменттипе</b><b>мсосегменткурве</b><b>мсосегментлине</b></param>
+        <summary>Задает тип сегмента, который следует за указанным узлом.</summary>
+        <remarks><para>Если узел является контрольной точкой для криволинейного сегмента, этот метод задает тип сегмента для этой кривой. Обратите внимание, что это может повлиять на общее число узлов, вставляя или удаляя соседние узлы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

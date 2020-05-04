@@ -1,13 +1,5 @@
 <Type Name="PivotTableChangeList" FullName="Microsoft.Office.Interop.Excel.PivotTableChangeList">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="636cf57ba1c7b70d9eb9e8e8297d99ac0acff5dc" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20574720" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface PivotTableChangeList : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="636cf57ba1c7b70d9eb9e8e8297d99ac0acff5dc" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20574720" /></Metadata><TypeSignature Language="C#" Value="public interface PivotTableChangeList : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotTableChangeList implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotTableChangeList&#xA;Implements IEnumerable" />
@@ -33,12 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет список изменения, внесенные пользователем в значение ячейки в отчете сводной таблицы на основе источника данных OLAP.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> Содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекты, которые представляют изменения внесенные пользователем на значение ячейки в отчете сводной таблицы. Для возврата <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейство сайтов для сводной таблицы, используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ChangeList" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет список изменений, внесенных пользователем в ячейки значений в отчете сводной таблицы на основе источника данных OLAP.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> Коллекция содержит <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекты, представляющие изменения, внесенные пользователем в ячейки значений в отчете сводной таблицы. Чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекцию для сводной таблицы, используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ChangeList" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -72,7 +61,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>To be added.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" />.</value>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -102,18 +91,15 @@
         <Parameter Name="AllocationWeightExpression" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Tuple">Кортеж многомерных Выражений, значения для изменения в источнике данных OLAP.</param>
-        <param name="Value">Значение, чтобы зафиксировать.</param>
-        <param name="AllocationValue">Значение распределения при выполнении анализ "что если". Если этот параметр не задан, будет использоваться значение по умолчанию для распределения OLAP-сервера.</param>
-        <param name="AllocationMethod">Метод распределения это значение при выполнении анализ "что если". Если этот параметр не задан, будет использоваться метод распределения по умолчанию сервера OLAP.</param>
-        <param name="AllocationWeightExpression">Вес Многомерное выражение будет использоваться для этого значения при анализ "что если" для выполнения. Если этот параметр не задан, будет использоваться выражение веса по умолчанию для распределения OLAP-сервера.</param>
-        <summary>Добавляет <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект в заданный <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</summary>
-        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" />.</returns>
-        <remarks>
-          <para>
-            <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> Метод позволяет добавить <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объектов, которые представляют изменения в отчет сводной таблицы в коде. При этом будут добавлены в оператор обновления КУБА, который создает Excel на основе этого списка изменений. Обратите внимание на то, что если пользователь изменяет параметры выделения, чтобы не все изменения имеют те же параметры, Excel будет выполняться несколько операторов обновление КУБА, другая — для каждой группы изменения, внесенные во время применяются те же параметры.</para>
-          <para></para>
-        </remarks>
+        <param name="Tuple">Кортеж многомерных выражений значения, которое необходимо изменить в источнике данных OLAP.</param>
+        <param name="Value">Значение, которое необходимо зафиксировать.</param>
+        <param name="AllocationValue">Значение, выделенное при выполнении анализа "что если". Если этот параметр не указан, будет использоваться значение выделения по умолчанию для сервера OLAP.</param>
+        <param name="AllocationMethod">Метод, используемый для выделения этого значения при выполнении анализа "что если". Если этот параметр не указан, будет использоваться метод выделения по умолчанию для сервера OLAP.</param>
+        <param name="AllocationWeightExpression">Выражение веса МНОГОМЕРного выражения, которое используется для этого значения при выполнении анализа "что если". Если этот параметр не указан, будет использоваться выражение веса распределения по умолчанию для сервера OLAP.</param>
+        <summary>Добавляет <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект в указанную <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекцию.</summary>
+        <returns>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" />значение.</returns>
+        <remarks><para><see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> Метод позволяет добавлять <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекты, представляющие изменения в отчете сводной таблицы, с помощью кода. Это приведет к добавлению в инструкцию UPDATE CUBE, созданную на основе этого списка изменений. Обратите внимание, что если пользователь изменяет параметры выделения таким образом, что не все изменения имеют одинаковые параметры, Excel будет запускать несколько инструкций UPDATE, по одному для каждой группы изменений, выполненных при применении одних и тех же параметров.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -139,13 +125,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -171,7 +154,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее количество объектов в коллекции.</summary>
+        <summary>Получает значение, представляющее число объектов в коллекции.</summary>
         <value>Число объектов в коллекции.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -199,13 +182,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
-        <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>.</para>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.PivotTableChangeList.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para><b>Доступно только для</b>чтения.</para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.PivotTableChangeList.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -236,7 +217,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -266,9 +247,9 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Имя многомерных Выражений (кортеж) или номер объекта.</param>
-        <summary>Возвращает элемент single <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект из указанного семейства <b>PivotTableChangeList</b> .</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" />.</value>
+        <param name="Index">Имя многомерного выражения (кортеж) или номер индекса объекта.</param>
+        <summary>Возвращает один <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект из указанной коллекции <b>PivotTableChangeList</b> .</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,12 +276,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> для указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</summary>
-        <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> для указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект для указанной <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</summary>
+        <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект для указанной <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

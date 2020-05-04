@@ -1,13 +1,5 @@
 <Type Name="RoutingSlip" FullName="Microsoft.Office.Interop.Excel.RoutingSlip">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d1e265b4ea2021fff6dba4ef91746a75aeaa3e17" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20572704" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface RoutingSlip" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d1e265b4ea2021fff6dba4ef91746a75aeaa3e17" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572704" /></Metadata><TypeSignature Language="C#" Value="public interface RoutingSlip" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract RoutingSlip" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.RoutingSlip" />
   <TypeSignature Language="VB.NET" Value="Public Interface RoutingSlip" />
@@ -29,12 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет маршрут для книги. Маршрут используется для отправки книге с помощью системы электронной почты.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Workbook.RoutingSlip" /> свойство для возврата объекта <b>RoutingSlip</b> .</para>
-      <para>Объект <b>RoutingSlip</b> не существует и не может быть возвращено, если не <see cref="P:Microsoft.Office.Interop.Excel._Workbook.HasRoutingSlip" /> свойство для книги имеет <b>значение True</b>.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет маршрут для книги. Этот маршрут используется для отправки книги через систему электронной почты.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.RoutingSlip" /> свойство, чтобы возвратить объект <b>RoutingSlip</b> .</para>
+      <para>Объект <b>RoutingSlip</b> не существует и не может быть возвращен, если <see cref="P:Microsoft.Office.Interop.Excel._Workbook.HasRoutingSlip" /> свойство книги не имеет <b>значение true</b>.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,11 +80,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delivery">
@@ -123,12 +111,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlRoutingSlipDelivery</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает метод маршрутизации доставки. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlRoutingSlipDelivery" /> констант: <b>xlOneAfterAnother</b> или <b>xlAllAtOnce</b>.</summary>
+        <summary>Возвращает или задает метод доставки по маршруту. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRoutingSlipDelivery" /> констант: <b>кслонеафтераносер</b> или <b>кслаллатонце</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство нельзя установить, если маршрутизация находится в стадии разработки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство невозможно задать, если выполняется маршрутизация.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Message">
@@ -157,7 +143,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст сообщения для маршрута. Этот текст используется в качестве основного текста сообщения, которые используются для отправки книги.</summary>
+        <summary>Возвращает или задает текст сообщения для маршрута. Этот текст используется в качестве основного текста почтовых сообщений, которые используются для маршрутизации книги.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -219,14 +205,12 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Получатель. Если этот аргумент не указан, возвращаемый свойством <b>получателей</b> (или может быть установлено) массив, содержащий все получатели.</param>
-        <summary>Возвращает или задает получателей на маршрут.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Получатель. Если этот аргумент не указан, свойство <b>Recipients</b> возвращает (или может задавать) массив, содержащий всех получателей.</param>
+        <summary>Возвращает или задает получателей в маршруте.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Порядок списка получателей определяет порядок доставки, если маршрутизации параметр доставки — <b>xlOneAfterAnother</b>.</para>
-          <para>Если маршрут находится в стадии разработки, возвращаются или задаются только тех получатели, которые еще не уже полученные и маршрутизация документа.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Порядок доставки списка получателей определяет порядок доставки, если параметр доставки по маршруту имеет значение <b>кслонеафтераносер</b>.</para>
+          <para>Если выполняется маршрутизация маршрута, возвращаются и задаются только те получатели, которые еще не получили и не перенаправляли документ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Reset">
@@ -250,12 +234,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сброс маршрут новый маршрут может быть инициирован с одной накладной (с использованием того же списка и доставки сведений о получателе).</summary>
+        <summary>Сбрасывает маршрут, чтобы можно было инициировать новую маршрутизацию с помощью одного и того же маршрута (с использованием того же списка получателей и сведений о доставке).</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Маршрутизация необходимо выполнить, прежде чем использовать этот метод. С помощью этого метода в других случаях приводит к ошибке.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Перед использованием этого метода необходимо завершить маршрутизацию. Использование этого метода в других случаях приводит к ошибке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ReturnWhenDone">
@@ -284,8 +266,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если книга возвращается отправителю при маршрутизации завершена.</summary>
+        <summary><b>Имеет значение true</b> , если книга возвращается отправителю при завершении маршрутизации.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -313,7 +294,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlRoutingSlipStatus</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает состояние маршрут.</summary>
+        <summary>Указывает состояние маршрута.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -344,12 +325,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тему для рассылки или маршрута.</summary>
+        <summary>Возвращает или задает тему для почтового ящика или маршрута.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Тема для <see cref="T:Microsoft.Office.Interop.Excel.RoutingSlip" /> объект используется в качестве темы для почтовых сообщений, используемые для отправки книги.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Тема <see cref="T:Microsoft.Office.Interop.Excel.RoutingSlip" /> объекта используется в качестве темы для почтовых сообщений, используемых для маршрутизации книги.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TrackStatus">
@@ -378,13 +357,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если для маршрута включено отслеживание состояния.</summary>
+        <summary><b>Имеет значение true</b> , если для маршрута включена функция отслеживания состояния.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство нельзя установить, если маршрутизация находится в стадии разработки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство невозможно задать, если выполняется маршрутизация.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

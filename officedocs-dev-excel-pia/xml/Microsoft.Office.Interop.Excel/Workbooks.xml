@@ -1,13 +1,5 @@
 <Type Name="Workbooks" FullName="Microsoft.Office.Interop.Excel.Workbooks">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="e216142f85071dc6b33c9b1eb3c9ddffaa7369de" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20574937" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Workbooks : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e216142f85071dc6b33c9b1eb3c9ddffaa7369de" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20574937" /></Metadata><TypeSignature Language="C#" Value="public interface Workbooks : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Workbooks implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Workbooks" />
   <TypeSignature Language="VB.NET" Value="Public Interface Workbooks&#xA;Implements IEnumerable" />
@@ -30,14 +22,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекты, которые в настоящий момент открыть в приложении Microsoft Excel.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.Workbooks" /> свойство для возвращения коллекции <b>рабочих книг</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Add(System.Object)" /> метод, чтобы создать новую пустую книгу и добавить его в коллекцию.</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы открыть файл.</para>
-      <para>Дополнительные сведения об использовании объекта <b>рабочей книги</b> можно <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекта.</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объектов, которые в данный момент открыты в приложении Microsoft Excel.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.Workbooks" /> свойство, чтобы возвратить коллекцию <b>книг</b> .</para>
+      <para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Add(System.Object)" /> метода создайте новую пустую книгу и добавьте ее в коллекцию.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы открыть файл.</para>
+      <para>Для получения дополнительных сведений об использовании одного объекта <b>книги</b> , просмотрите <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="__OpenText">
@@ -313,13 +303,11 @@
         <Parameter Name="Template" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Template">Необязательный элемент <b>Object</b>. Определяет способ создания новой книги. Если этот аргумент — это строка, указав имя существующего файла Microsoft Excel, новой книги будет создан с помощью указанного файла как шаблон. Если аргумент является константой, новая книга содержит один лист для указанного типа. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlWBATemplate" /> констант: <b>xlWBATChart</b>, <b>xlWBATExcel4IntlMacroSheet</b>, <b>xlWBATExcel4MacroSheet</b>или <b>xlWBATWorksheet</b>. Если этот аргумент указан, Microsoft Excel создает новую книгу с номером пустой листов (количество листов задаются свойством <b>SheetsInNewWorkbook</b> ).</param>
-        <summary>Создает новую книгу. Новая книга становится активной рабочей книги. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекта.</summary>
+        <param name="Template">Необязательный <b>объект</b>. Определяет, как создается новая книга. Если этот аргумент является строкой, указывающей имя существующего файла Microsoft Excel, создается новая книга с указанным файлом в качестве шаблона. Если этот аргумент является константой, Новая книга содержит один лист указанного типа. Может быть одной <see cref="T:Microsoft.Office.Interop.Excel.XlWBATemplate" /> из следующих констант: <b>кслвбатчарт</b>, <b>xlWBATExcel4IntlMacroSheet</b>, <b>xlWBATExcel4MacroSheet</b>или <b>кслвбатворкшит</b>. Если этот аргумент опущен, Microsoft Excel создает новую книгу с числом пустых листов (количество листов задается свойством <b>шитсинневворкбук</b> ).</param>
+        <summary>Создает новую книгу. Новая книга становится активной книгой. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <paramref name="Template" /> аргумент указывает файл, имя файла можно включить путь.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если <paramref name="Template" /> аргумент указывает файл, имя файла может содержать путь.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -373,10 +361,8 @@
         <Parameter Name="Filename" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Имя файла для извлечения.</param>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel можно извлечь указанной книги с сервера. Для чтения и записи, <b>Boolean</b>.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя файла для извлечения.</param>
+        <summary><b>Имеет значение true</b> , если Microsoft Excel может извлекать указанную книгу с сервера. Для чтения и записи, <b>Boolean</b>.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -404,9 +390,8 @@
         <Parameter Name="Filename" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Имя файла для извлечения.</param>
-        <summary>Копирует указанный книги с сервера на локальный компьютер для редактирования.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя файла для извлечения.</param>
+        <summary>Копирует указанную книгу с сервера на локальный компьютер для редактирования.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -435,10 +420,8 @@
       <Parameters />
       <Docs>
         <summary>Закрывает объект.</summary>
-        <remarks>
-          <para>Закрытие книги с помощью метода <b>Close</b> не запустилось макросы Auto_Close в книге. Использование <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска автоматического закрытия макросов.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Закрытие книги с помощью метода <b>Close</b> не приводит к выполнению AUTO_CLOSE макросов в книге. Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска макросов автоматического закрытия.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -464,7 +447,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -492,12 +475,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -558,7 +539,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -603,28 +584,25 @@
         <Parameter Name="CorruptLoad" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Имя файла для открытия книги.</param>
-        <param name="UpdateLinks">Необязательный элемент <b>Object</b>. Указывает, что способ ссылки в файле обновляются. Если этот аргумент задан, пользователю предлагается указать, каким образом будут обновлены ссылки. В противном случае этот аргумент представляет одно из значений, приведенных в следующей таблице. Если Microsoft Excel открывает файл в WKS, WK1 или WK3 формат и <paramref name="UpdateLinks" /> аргумент — 2, Microsoft Excel создает диаграммы на основе диаграмм, присоединенного к файлу. Если аргумент имеет значение 0, диаграмм не создаются.</param>
-        <param name="ReadOnly">Необязательный элемент <b>Object</b>. Значение true, для открытия книги в режиме только для чтения.</param>
-        <param name="Format">Необязательный элемент <b>Object</b>. Если Microsoft Excel открывает текстовый файл, этот аргумент указывает символ разделителя, как показано в следующей таблице. Если этот аргумент задан, используется текущий разделителя.</param>
-        <param name="Password">Необязательный элемент <b>Object</b>. Строка, содержащая пароль, необходимый для открытия защищенного книги. Если этот аргумент задан, книги требуется пароль пользователя будет запрашиваться пароль.</param>
-        <param name="WriteResPassword">Необязательный элемент <b>Object</b>. Строка, содержащая пароль, необходимый для записи в книге записи. Если указан этот аргумент и книги требуется пароль, пользователь будет предложено ввести пароль.</param>
-        <param name="IgnoreReadOnlyRecommended">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Microsoft Excel не отображать поле только для чтения рекомендуется сообщения (если книга была сохранена с помощью параметра <b>Рекомендуется только для чтения</b> ).</param>
-        <param name="Origin">Необязательный элемент <b>Object</b>. Если файл является текстовым файлом, этот аргумент указывает источник (, чтобы код страницы и возврат каретки строки веб-канала (возврат каретки) можно сопоставить правильно). Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlPlatform" /> констант: <b>xlMacintosh</b>, <b>xlWindows</b>или <b>xlMSDOS</b>. Если этот аргумент задан, используется текущий операционной системы.</param>
-        <param name="Delimiter">Необязательный элемент <b>Object</b>. Если файл является текстовым файлом и аргумент <b>Format</b> равно 6, этот аргумент представляет строку, которая определяет символ для использования в качестве разделителя. Например, используйте Chr(9) для вкладки, используйте «,» для их запятыми, использования «;» для использования настраиваемых символ или точкой с запятой. Используется только первый символ строки.</param>
-        <param name="Editable">Необязательный элемент <b>Object</b>. Если файл надстройки Microsoft Excel 4.0, этот аргумент является <b>значение True,</b> откройте надстройки, чтобы оно отображается окно. Если этот аргумент имеет <b>значение False</b> или этот параметр опущен, надстройки, открыт как скрытые, и не может быть не скрытым. Этот параметр не применяется к надстройки, созданные в Microsoft Excel 5.0 или более поздней версии. Если файла шаблона Microsoft Excel, используйте <b>значение True,</b> чтобы открыть указанный шаблон для редактирования или <b>значение False,</b> чтобы открыть новую книгу на основе указанного шаблона. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Notify">Необязательный элемент <b>Object</b>. Если файл не открываются в режиме чтения и записи, этот аргумент представляет <b>значение True,</b> Чтобы добавить файл в список уведомлений. Microsoft Excel откройте файл только для чтения, опрос список уведомлений файл и затем уведомления пользователя, когда он становится доступен. Если этот аргумент имеет <b>значение False</b> или опущен, уведомление не запрашивается и любые попытки открыть файл недоступен завершится с ошибкой.</param>
-        <param name="Converter">Необязательный элемент <b>Object</b>. Индекс первого конвертера файлов для пробного при открытии файла. Конвертер указанный файл является первым; Если этот конвертер не распознает файл, проверяются все другие конвертеры. Индекс конвертера состоит из номера строк конвертеров, возвращаемые <see cref="P:Microsoft.Office.Interop.Excel._Application.FileConverters(System.Object,System.Object)" /> свойство.</param>
-        <param name="AddToMru">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить эту книгу в список недавно использовавшихся файлов. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Local">Необязательный элемент <b>Object</b>. <b>Значение true,</b> сохранение файлов с языковыми Microsoft Excel (в том числе настройки панели управления). <b>Значение false</b> (по умолчанию) — сохранение файлов с языка Visual Basic для приложений (VBA) (как правило английский (США) Если проекта VBA, где выполняется Workbooks.Open из старого международные проекта VBA XL5/95).</param>
-        <param name="CorruptLoad">Необязательный элемент <b>Object</b>. Может иметь одно из следующих констант: <b>xlNormalLoad</b>, <b>xlRepairFile</b>и <b>xlExtractData</b>. Поведение по умолчанию, если значение не указано обычно обычное, но может быть безопасных нагрузки или восстановления данных, если Excel уже пытается открыть файл. Первая попытка — normal. Если Excel остановки работы при открытии файла, вторая попытка будет безопасный нагрузки. Если Excel снова остановки работы, следующей попытке операция — восстановление данных.</param>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя файла книги, которую необходимо открыть.</param>
+        <param name="UpdateLinks">Необязательный <b>объект</b>. Указывает способ обновления ссылок в файле. Если этот аргумент не указан, пользователю предлагается указать, как будут обновляться ссылки. В противном случае этот аргумент является одним из значений, приведенных в следующей таблице. Если Microsoft Excel открывает файл в формате WKS, WK1 или WK3, а <paramref name="UpdateLinks" /> аргумент равен 2, Microsoft Excel создает диаграммы на основе диаграмм, вложенных в файл. Если для аргумента задано значение 0, диаграммы не создаются.</param>
+        <param name="ReadOnly">Необязательный <b>объект</b>. Значение true, чтобы открыть книгу в режиме только для чтения.</param>
+        <param name="Format">Необязательный <b>объект</b>. Если Microsoft Excel открывает текстовый файл, этот аргумент определяет символ-разделитель, как показано в следующей таблице. Если этот аргумент не указан, используется текущий разделитель.</param>
+        <param name="Password">Необязательный <b>объект</b>. Строка, содержащая пароль, необходимый для открытия защищенной книги. Если этот аргумент опущен и для книги требуется пароль, пользователю предлагается ввести пароль.</param>
+        <param name="WriteResPassword">Необязательный <b>объект</b>. Строка, содержащая пароль, необходимый для записи в книгу, зарезервированную для записи. Если этот аргумент опущен и для книги требуется пароль, пользователю будет выдан запрос на ввод пароля.</param>
+        <param name="IgnoreReadOnlyRecommended">Необязательный <b>объект</b>. <b>True</b> , чтобы Microsoft Excel не отображал рекомендуемое только для чтения сообщение (рекомендуется ли книга была сохранена с помощью параметра " <b>только для чтения</b> ").</param>
+        <param name="Origin">Необязательный <b>объект</b>. Если файл является текстовым, этот аргумент указывает на то, где он поступил (чтобы страницы кода и возврат каретки/перевод строки (CR/LF) могли быть правильно сопоставлены). Может быть <see cref="T:Microsoft.Office.Interop.Excel.XlPlatform" /> одной из следующих констант: <b>кслмаЦинтош</b>, <b>кслвиндовс</b>или <b>кслмсдос</b>. Если этот аргумент не указан, используется текущая операционная система.</param>
+        <param name="Delimiter">Необязательный <b>объект</b>. Если файл является текстовым файлом, а аргумент <b>Format</b> имеет значение 6, этот аргумент представляет собой строку, задающую символ, который будет использоваться в качестве разделителя. Например, используйте Chr (9) для табуляции, используйте "," для запятых, введите ";" для точки с запятой или используйте специальный символ. Используется только первый символ строки.</param>
+        <param name="Editable">Необязательный <b>объект</b>. Если файл является надстройкой Microsoft Excel 4,0, этот аргумент имеет <b>значение true</b> , чтобы открыть надстройку, чтобы она стала видимым окном. Если этот аргумент имеет <b>значение false</b> или опущен, надстройка открывается как скрытая и не может быть скрыта. Этот параметр не применяется к надстройкам, созданным в Microsoft Excel 5,0 или более поздней версии. Если файл является шаблоном Excel, используйте <b>значение true</b> , чтобы открыть указанный шаблон для редактирования или <b>значение false</b> , чтобы открыть новую книгу на основе указанного шаблона. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Notify">Необязательный <b>объект</b>. Если файл не может быть открыт в режиме чтения и записи, этот аргумент имеет <b>значение true</b> , чтобы добавить файл в список уведомлений о файле. Microsoft Excel откроет файл как доступный только для чтения, опросить список уведомлений о файле, а затем уведомить пользователя, когда файл станет доступен. Если этот аргумент имеет <b>значение false</b> или опущено, уведомления не запрашиваются, а все попытки открыть недоступный файл завершатся ошибкой.</param>
+        <param name="Converter">Необязательный <b>объект</b>. Индекс первого конвертера файлов, который будет пытаться открыть файл. Заданный конвертер файлов сначала пытается выполнить операцию. Если этот конвертер не распознает файл, попытаются выполнить все другие конвертеры. Индекс преобразователя состоит из номеров строк преобразователей, возвращаемых <see cref="P:Microsoft.Office.Interop.Excel._Application.FileConverters(System.Object,System.Object)" /> свойством.</param>
+        <param name="AddToMru">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить эту книгу в список недавно использовавшихся файлов. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Local">Необязательный <b>объект</b>. <b>True</b> — сохраняет файлы на языке Microsoft Excel (включая параметры панели управления). <b>False</b> (по умолчанию) — сохранение файлов на языке Visual Basic для приложений (VBA) (обычно это английский (США)), если проект VBA, где запущены книги, не является устаревшим международным проектом Xl5/95 VBA.</param>
+        <param name="CorruptLoad">Необязательный <b>объект</b>. Может быть одной из следующих констант: <b>кслнормаллоад</b>, <b>кслрепаирфиле</b>и <b>кслекстрактдата</b>. Поведение по умолчанию, если значение не указано, обычно является нормальным, но может быть безопасной или восстановление данных, если Excel уже пытался открыть файл. Первая попытка является нормальной. Если приложение Excel перестает работать при открытии файла, вторая попытка является безопасной. Если Excel снова перестанет работать, то следующая попытка является восстановлением данных.</param>
         <summary>Открывает книгу.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>По умолчанию макросы включаются при открытия файлов программными средствами. Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.AutomationSecurity" /> свойство, чтобы задать режим безопасности макросов, используемый при открытии файлов программными средствами.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>По умолчанию при открытии файлов программным способом включаются макросы. Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.AutomationSecurity" /> свойство, чтобы задать режим безопасности макросов, используемый при программном открытии файлов.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OpenDatabase">
@@ -653,12 +631,11 @@
         <Parameter Name="ImportDataAs" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Строка подключения.</param>
-        <param name="CommandText">Необязательный элемент <b>Object</b>. Текст команды запроса.</param>
-        <param name="CommandType">Необязательный элемент <b>Object</b>. Тип команды запроса. Доступны следующие команды: по умолчанию, SQL и таблицы.</param>
-        <param name="BackgroundQuery">Необязательный элемент <b>Object</b>. Фон для запроса.</param>
-        <param name="ImportDataAs">Необязательный элемент <b>Object</b>. Определяет формат запроса.</param>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Строка подключения.</param>
+        <param name="CommandText">Необязательный <b>объект</b>. Текст команды запроса.</param>
+        <param name="CommandType">Необязательный <b>объект</b>. Тип команды запроса. Доступны следующие типы команд: Default, SQL и Table.</param>
+        <param name="BackgroundQuery">Необязательный <b>объект</b>. Фон запроса.</param>
+        <param name="ImportDataAs">Необязательный <b>объект</b>. Определяет формат запроса.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект, представляющий базу данных.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -706,26 +683,25 @@
         <Parameter Name="Local" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Задает имя файла в текстовом файле для открытия и анализа.</param>
-        <param name="Origin">Необязательный элемент <b>Object</b>. Задает исходное текстовый файл. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlPlatform" /> констант: <b>xlMacintosh</b>, <b>xlWindows</b>или <b>xlMSDOS</b>. Кроме того это может быть integer, представляющее номер страницы нужный код кода. Например «1256» будет указания того, что кодировка текста исходный файл арабский (Windows). Если этот аргумент указан, метод использует текущего значения параметра исходного файла в окне <b>Мастер импорта текста</b>.</param>
-        <param name="StartRow">Необязательный элемент <b>Object</b>. Номер строки, с которого следует начать анализ текста. Значение по умолчанию — 1.</param>
-        <param name="DataType">Необязательный элемент <b>Object</b>. Задает формат столбцов данных в файле. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlTextParsingType" /> констант: <b>xlDelimited</b> или <b>xlFixedWidth</b>. Если этот параметр не задан, Microsoft Excel пытается определить формат столбца при открытии файла.</param>
-        <param name="TextQualifier">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" />. Задает квалификатор текста. Может быть одно из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> константы. <b>xlTextQualifierDoubleQuote</b><paramref name="default" /><b>xlTextQualifierNone</b><b>xlTextQualifierSingleQuote</b></param>
-        <param name="ConsecutiveDelimiter">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы иметь последовательные разделители оценить как один разделитель. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Tab">Необязательный элемент <b>Object</b>. Значение true, чтобы символ табуляции, в качестве разделителя (<paramref name="DataType" /> должно быть <b>xlDelimited</b>). Значение по умолчанию — <b>False</b>.</param>
-        <param name="Semicolon">Необязательный элемент <b>Object</b>. <b>Значение true,</b> иметь запятой в качестве разделителя (<paramref name="DataType" /> должно быть <b>xlDelimited</b>). Значение по умолчанию — <b>False</b>.</param>
-        <param name="Comma">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы иметь запятую в качестве разделителя (<paramref name="DataType" /> должно быть <b>xlDelimited</b>). Значение по умолчанию — <b>False</b>.</param>
-        <param name="Space">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы пробела в качестве разделителя (<paramref name="DataType" /> должно быть <b>xlDelimited</b>). Значение по умолчанию — <b>False</b>.</param>
-        <param name="Other">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы символ <paramref name="OtherChar" /> аргумент быть разделитель (<paramref name="DataType" /> должно быть <b>xlDelimited</b>). Значение по умолчанию — <b>False</b>.</param>
-        <param name="OtherChar">Необязательный элемент <b>Object</b> (обязателен, если <paramref name="Other" /> имеет <b>значение True</b>). Задает разделитель символов при <paramref name="Other" /> имеет <b>значение True</b>. Если более одного символа указано, используется только первый символ строки; оставшиеся символы игнорируются.</param>
-        <param name="FieldInfo">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" />. Массив, содержащий сведения о синтаксического анализа для отдельных столбцов данных. Интерпретация зависит от значения <paramref name="DataType" />. Когда данные разделены, этот аргумент представляет собой массив из двух элементов массивов по каждой двух элементов массива, указав параметры преобразования для определенного столбца. Первый элемент является номер столбца (на основе 1), а второй элемент является одним из<b>XlColumnDataType</b> константы, определяющее, как выполняется синтаксический анализ столбца. <b>xlGeneralFormat</b> Общие<b>xlTextFormat</b> текст<b>xlMDYFormat</b> MDY даты<b>xlDMYFormat</b> ДМГ даты<b>xlYMDFormat</b> гмд даты<b>xlMYDFormat</b> МГД даты<b>xlDYMFormat</b> ДГМ Дата<b>xlYDMFormat</b> ГДМ дата дата EMD<b>xlEMDFormat</b><b>xlSkipColumn</b> Пропустить ColumnYou можно использовать <b>xlEMDFormat</b> только в том случае, если установлен и выбранные Тайваня языковая поддержка. Константа <b>xlEMDFormat</b> задает использование Тайваня эра даты. Спецификаторы столбцов могут быть в любом порядке. Если нет описателя столбца для определенного столбца входных данных, столбец анализа с общего параметра. <b>Примечания</b> Если указывается, что столбец был пропущен, необходимо явно объявить тип для всех остальных столбцов или данные не анализирует правильно. Если в данных распознавание даты, ячейки будут отформатированы как даты в рабочем листе даже в том случае, если значение для столбца — Общие. Кроме того Если указать один из выше форматов даты для столбца и данные не содержит распознанный дату, формат ячеек на листе будет General.If исходных данных имеет Фиксированная ширина столбцов, к первому элементу в каждом двух элементов массива Определяет положение начального символа в столбце (как целое число; символ нуль (0) является первым символом). Второй элемент массива двух элементов указывает параметр синтаксического анализа для столбца как число от 0 до 9, как указано в предыдущей таблице.</param>
-        <param name="TextVisualLayout">Необязательный элемент <b>Object</b>. Визуальный макет текста.</param>
-        <param name="DecimalSeparator">Необязательный элемент <b>Object</b>. Десятичный разделитель, который Microsoft Excel использует при распознавании чисел. По умолчанию является параметр системы.</param>
-        <param name="ThousandsSeparator">Необязательный элемент <b>Object</b>. Тысяч разделитель, который Excel использует при распознавании чисел. По умолчанию является параметр системы. В следующей таблице показаны результаты импорта текста в Excel для различных параметров импорта. Числовые результаты отображаются в правом столбце.</param>
-        <param name="TrailingMinusNumbers">Необязательный элемент <b>Object</b>.</param>
-        <param name="Local">Необязательный элемент <b>Object</b>.</param>
-        <summary>Загружает и анализирует текстовый файл как новой книги с одного листа, который содержит данные проанализированного текстовый файл.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Указывает имя текстового файла, который необходимо открыть и проанализировать.</param>
+        <param name="Origin">Необязательный <b>объект</b>. Указывает происхождение текстового файла. Может быть <see cref="T:Microsoft.Office.Interop.Excel.XlPlatform" /> одной из следующих констант: <b>кслмаЦинтош</b>, <b>кслвиндовс</b>или <b>кслмсдос</b>. Кроме того, это может быть целое число, представляющее номер кодовой страницы необходимой кодовой страницы. Например, "1256" указывает на то, что кодировка исходного текстового файла — "Арабский (Windows)". Если этот аргумент опущен, метод использует текущее значение параметра "источник файла" в <b>мастере импорта текста</b>.</param>
+        <param name="StartRow">Необязательный <b>объект</b>. Номер строки, с которой начинается синтаксический анализ текста. Значение по умолчанию равно 1.</param>
+        <param name="DataType">Необязательный <b>объект</b>. Задает формат столбцов данных в файле. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlTextParsingType" /> констант: <b>кслделимитед</b> или <b>кслфикседвидс</b>. Если этот аргумент не указан, Microsoft Excel пытается определить формат столбца при открытии файла.</param>
+        <param name="TextQualifier">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" />параметр. Указывает ограничитель текста. Может быть одной из этих <see cref="T:Microsoft.Office.Interop.Excel.XlTextQualifier" /> констант. <b>кслтексткуалифиердаублекуоте</b><paramref name="default" /><b>кслтексткуалифиерноне</b><b>кслтексткуалифиерсинглекуоте</b></param>
+        <param name="ConsecutiveDelimiter">Необязательный <b>объект</b>. <b>Значение true</b> , если последовательные разделители считаются одним разделителем. Значение по умолчанию - <b>false</b>.</param>
+        <param name="Tab">Необязательный <b>объект</b>. Значение true, чтобы знак табуляции был разделителем (<paramref name="DataType" /> должен быть <b>кслделимитед</b>). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Semicolon">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы символ точки с запятой был разделителем (<paramref name="DataType" /> должен быть <b>кслделимитед</b>). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Comma">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы разделитель был разделителем (<paramref name="DataType" /> должен быть <b>кслделимитед</b>). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Space">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы символ пробела был разделителем (<paramref name="DataType" /> должен быть <b>кслделимитед</b>). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Other">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы символ, указываемый <paramref name="OtherChar" /> аргументом, был разделителем (<paramref name="DataType" /> должен быть <b>кслделимитед</b>). Значение по умолчанию — <b>False</b>.</param>
+        <param name="OtherChar">Необязательный <b>объект</b> ( <paramref name="Other" /> обязательный, если имеет <b>значение true</b>). Задает символ разделителя, если <paramref name="Other" /> он имеет <b>значение true</b>. Если указано более одного символа, используется только первый символ строки; остальные символы игнорируются.</param>
+        <param name="FieldInfo">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlColumnDataType" />параметр. Массив, содержащий сведения о синтаксическом анализе для отдельных столбцов данных. Интерпретация зависит от значения <paramref name="DataType" />. Если данные разделены, этот аргумент является массивом массивов из двух элементов, каждый из которых указывает массив из двух элементов, указывающий параметры преобразования для определенного столбца. Первый элемент — это номер столбца (от 1), а второй — одна из констант<b>кслколумндататипе</b> , указывающих способ синтаксического анализа столбца. <b>кслженералформат</b> Общие<b>кслтекстформат</b> текст<b>Кслмдиформат</b> МДИ Date<b>кслдмиформат</b> ДМИ Date<b>кслимдформат</b> ИМД Date<b>Кслмидформат</b> МИД Date<b>Кслдимформат</b> Dym Date<b>xlYDMFormat</b> YDM Date<b>xlEMDFormat</b> EMD Date<b>xlSkipColumn</b> Skip ColumnYou xlEMDFormat Taiwanese Skip <b>xlEMDFormat</b> Константа <b>кслемдформат</b> указывает, что используются даты эры таиванесе. Описатели столбцов могут быть в любом порядке. Если для определенного столбца входных данных нет спецификатора столбца, то столбец анализируется с использованием общих параметров. <b>Примечания</b> Если указать, что столбец должен быть пропущен, необходимо явно указать тип для всех оставшихся столбцов, иначе данные не будут анализироваться должным образом. Если в данных есть распознаваемые даты, ячейка будет отформатирована как дата на листе, даже если для столбца задано значение "Общие". Кроме того, если указать один из указанных выше форматов даты для столбца, а данные не содержат распознанной даты, после этого формат ячейки на листе будет общим. Если источник данных содержит столбцы фиксированной ширины, первый элемент в каждом массиве из двух элементов указывает позицию начального символа в столбце (в виде целого числа; символ 0 (ноль) — первый символ). Второй элемент в массиве из двух элементов задает параметр Parse для столбца в виде числа от 0 до 9, как показано в приведенной выше таблице.</param>
+        <param name="TextVisualLayout">Необязательный <b>объект</b>. Визуальная структура текста.</param>
+        <param name="DecimalSeparator">Необязательный <b>объект</b>. Разделитель целой и дробной части, который Microsoft Excel использует при распознавании чисел. Значение по умолчанию — параметр системы.</param>
+        <param name="ThousandsSeparator">Необязательный <b>объект</b>. Разделитель групп разрядов, который Excel использует при распознавании чисел. Значение по умолчанию — параметр системы. В следующей таблице показаны результаты импорта текста в Excel для различных параметров импорта. Числовые результаты отображаются в самом правом столбце.</param>
+        <param name="TrailingMinusNumbers">Необязательный <b>объект</b>.</param>
+        <param name="Local">Необязательный <b>объект</b>.</param>
+        <summary>Загружает и анализирует текстовый файл в виде новой книги с одним листом, который содержит проанализированные данные текстового файла.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -753,16 +729,13 @@
         <Parameter Name="LoadOption" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Имя открываемого файла.</param>
-        <param name="Stylesheets">Необязательный элемент <b>Object</b>. Одиночное значение или массив значений, которые задают какие инструкции по обработке таблицы стилей преобразования XSL (XSLT) для применения.</param>
-        <param name="LoadOption">Необязательный элемент <b>Object</b>. Указывает, как Excel открывает файл данных XML. Может быть одно из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlXmlLoadOption" /> констант:<b>xlXmlLoadImportToList</b> помещает содержимое XML-файла данных в XML-список. <b>xlXmlLoadMapXml</b> Схема XML-файла данных в области задач <b>Структура XML</b> . <b>xlXmlLoadOpenXml</b> Открывает файл данных XML. Содержимое файла, предназначенных. <b>xlXmlLoadPromptUser</b> Предлагать пользователю выбрать, как открыть файл.</param>
-        <summary>Открывает файл данных XML. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекта.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя открываемого файла.</param>
+        <param name="Stylesheets">Необязательный <b>объект</b>. Одно значение или массив значений, указывающих, какие инструкции по обработке XSL-преобразования (XSLT) необходимо применить.</param>
+        <param name="LoadOption">Необязательный <b>объект</b>. Указывает, как Excel открывает файл данных XML. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlXmlLoadOption" /> констант:<b>кслксмллоадимпорттолист</b> размещает содержимое XML-файла данных в XML-списке. <b>кслксмллоадмапксмл</b> Отображает схему XML-файла данных в области задач <b>Структура XML</b> . <b>кслксмллоадопенксмл</b> Открывает файл данных XML. Содержимое файла будет выровнено. <b>кслксмллоадпромптусер</b> Предлагает пользователю выбрать способ открытия файла.</param>
+        <summary>Открывает файл данных XML. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Средства XML, за исключением сохранения файлов в формате таблиц XML, доступны только в профессиональном выпуске Microsoft Office 2003 и Microsoft Office Excel 2003.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
