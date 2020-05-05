@@ -1,13 +1,5 @@
 <Type Name="ChartColorFormat" FullName="Microsoft.Office.Interop.Excel.ChartColorFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="deb6994bf1703cd29b935ef38c58228a26d6f7d9" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20582308" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartColorFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="deb6994bf1703cd29b935ef38c58228a26d6f7d9" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582308" /></Metadata><TypeSignature Language="C#" Value="public interface ChartColorFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartColorFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ChartColorFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartColorFormat" />
@@ -29,9 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Использовать только с диаграммы. Представляет цвет переднего плана или объект один цвет или цвет фона объекта с градиента и узорные заливки.</summary>
-    <remarks>
-      <para>Возвращает объект <b>ChartColorFormat</b> , используйте один из свойств, перечисленных в следующей таблице.</para>
+    <summary>Используется только с диаграммами. Представляет цвет объекта с одним цветом или переднего плана или цвета фона объекта с градиентной или узорной заливкой.</summary>
+    <remarks><para>Используйте одно из свойств, приведенных в следующей таблице, для возврата объекта <b>ChartColorFormat</b> .</para>
       <list type="table">
         <item>
           <term>
@@ -40,7 +31,7 @@
           <description>
             <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" />
           </description>
-          <description>Цвет заливки фона (используется в затемненные или узорную заливку)</description>
+          <description>Цвет заливки фона (используется в затененной или узорной заливки)</description>
         </item>
         <item>
           <term>
@@ -49,11 +40,10 @@
           <description>
             <b>ChartFillFormat</b>
           </description>
-          <description>Передний план заливки цвет (или просто цвет заливки сплошной заливке)</description>
+          <description>Цвет заливки переднего плана (или только цвет заливки для сплошной заливки)</description>
         </item>
       </list>
-      <para></para>
-    </remarks>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -140,11 +130,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -198,7 +186,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение красный зеленый синий указанного цвета.</summary>
+        <summary>Возвращает значение красного, зеленого и синего для указанного цвета.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -229,7 +217,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет <see cref="T:Microsoft.Office.Interop.Excel.ChartColorFormat" /> объект в качестве индекса в текущем цветовая схема.</summary>
+        <summary>Возвращает или задает цвет <see cref="T:Microsoft.Office.Interop.Excel.ChartColorFormat" /> объекта в виде индекса в текущей цветовой схеме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -257,12 +245,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, является ли цвета RGB или схема типа.</summary>
+        <summary>Возвращает значение, указывающее, является ли цвет типом RGB или схемой.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>ChartColorFormat</b> может иметь одно из следующих значений<b /><see cref="T:Microsoft.Office.Core.MsoColorType" /> констант: <b>msoColorTypeRGB</b> или <b>msoColorTypeScheme</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>ChartColorFormat</b> может быть<b /> <see cref="T:Microsoft.Office.Core.MsoColorType" /> одной из следующих констант: <b>мсоколортипергб</b> или <b>мсоколортипесчеме</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

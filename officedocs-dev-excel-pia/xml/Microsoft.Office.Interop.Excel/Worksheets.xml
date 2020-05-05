@@ -1,13 +1,5 @@
 <Type Name="Worksheets" FullName="Microsoft.Office.Interop.Excel.Worksheets">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="a754235a311170e13d0d4825decb297f28a9fa27" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20581503" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Worksheets : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a754235a311170e13d0d4825decb297f28a9fa27" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581503" /></Metadata><TypeSignature Language="C#" Value="public interface Worksheets : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Worksheets implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Worksheets" />
   <TypeSignature Language="VB.NET" Value="Public Interface Worksheets&#xA;Implements IEnumerable" />
@@ -33,14 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объектов в указанный или активной книги. Каждый объект <b>Worksheet</b> представляет лист.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Application.Worksheets" /> свойство для возврата коллекции <b>листов</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Worksheets.Add(System.Object,System.Object,System.Object,System.Object)" /> метод для создания нового листа и добавить его в коллекцию.</para>
-      <para>Используйте <b>таблицы</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса рабочего листа или имя, чтобы возвратить объект <b>рабочего листа</b> .</para>
-      <para>Объект <b>Worksheet</b> также является членом <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> семейства сайтов. Коллекция <b>стилей</b> содержит всех листов в книге (листы диаграмм и таблиц).</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объектов в указанной или активной книге. Каждый объект <b>листа</b> представляет лист.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.Worksheets" /> свойство, чтобы возвратить коллекцию <b>листы</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Worksheets.Add(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы создать новый лист и добавить его в коллекцию.</para>
+      <para>Используйте <b>листы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер или имя индекса листа, чтобы вернуть один объект <b>листа</b> .</para>
+      <para>Объект <b>листа</b> также является членом <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекции. Коллекция <b>Sheets</b> содержит все листы в книге (листы и листы диаграммы).</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -145,16 +135,14 @@
         <Parameter Name="Type" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Объект, указывающий лист, перед которым будет добавлен новый лист.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Объект, указывающий листа, после которого добавляется новый лист.</param>
-        <param name="Count">Необязательный элемент <b>Object</b>. Число лист, который требуется добавить. Значение по умолчанию — это один.</param>
-        <param name="Type">Необязательный элемент <b>Object</b>. Указывает тип листа. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlSheetType" /> констант: <b>xlWorksheet</b>, <b>xlChart</b>, <b>xlExcel4MacroSheet</b>или <b>xlExcel4IntlMacroSheet</b>. При вставке таблицы, на основе существующего шаблона, укажите путь к шаблону. Значение по умолчанию — <b>xlWorksheet</b>.</param>
+        <param name="Before">Необязательный <b>объект</b>. Объект, указывающий лист, перед которым добавляется новый лист.</param>
+        <param name="After">Необязательный <b>объект</b>. Объект, указывающий лист, после которого добавляется новый лист.</param>
+        <param name="Count">Необязательный <b>объект</b>. Количество добавляемых листов. Значение по умолчанию — один.</param>
+        <param name="Type">Необязательный <b>объект</b>. Определяет тип листа. Может быть одной <see cref="T:Microsoft.Office.Interop.Excel.XlSheetType" /> из следующих констант: <b>xlWorksheet</b>, <b>кслчарт</b>, <b>xlExcel4MacroSheet</b>или <b>xlExcel4IntlMacroSheet</b>. Если вставляется лист на основе существующего шаблона, укажите путь к шаблону. Значение по умолчанию — <b>xlWorksheet</b>.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <paramref name="Before" /> и <paramref name="After" /> являются оба этот параметр опущен, новый лист вставляется перед активный лист.</para>
-          <para></para>
-        </remarks>
+        <remarks><para><paramref name="After" /> Если <paramref name="Before" /> оба параметра опущены, новый лист вставляется перед активным листом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Add2">
@@ -182,16 +170,14 @@
         <Parameter Name="NewLayout" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Объект, указывающий лист, перед которым будет добавлен новый лист.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Объект, указывающий листа, после которого добавляется новый лист.</param>
-        <param name="Count">Необязательный элемент <b>Object</b>. Число лист, который требуется добавить. Значение по умолчанию — это один</param>
-        <param name="NewLayout">Необязательный элемент <b>Object</b>. Объект, указывающий макета, которое будет использоваться для нового листа.</param>
-        <summary>Этот метод реализован только для объекта коллекции <b>диаграмм</b> и приведет к ошибке времени выполнения, если используется для <b>таблиц</b> и <b>таблиц</b> объектов.</summary>
+        <param name="Before">Необязательный <b>объект</b>. Объект, указывающий лист, перед которым добавляется новый лист.</param>
+        <param name="After">Необязательный <b>объект</b>. Объект, указывающий лист, после которого добавляется новый лист.</param>
+        <param name="Count">Необязательный <b>объект</b>. Количество добавляемых листов. Значение по умолчанию — 1</param>
+        <param name="NewLayout">Необязательный <b>объект</b>. Объект, задающий макет, который будет использоваться для нового листа.</param>
+        <summary>Этот метод реализован только для объекта коллекции <b>Charts</b> <b>и при использовании объектов</b> <b>Sheets и Sheets</b> будет возвращать ошибку времени выполнения.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <paramref name="Before" /> и <paramref name="After" /> являются оба этот параметр опущен, новый лист вставляется перед активный лист.</para>
-          <para></para>
-        </remarks>
+        <remarks><para><paramref name="After" /> Если <paramref name="Before" /> оба параметра опущены, новый лист вставляется перед активным листом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -245,13 +231,11 @@
         <Parameter Name="After" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Лист, перед которым будет размещаться копируемый лист. Не удается задать <paramref name="Before" /> при указании <paramref name="After" />.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться копируемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
-        <summary>Копирование таблицы в другое место в книге.</summary>
-        <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей копируемый лист Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <param name="Before">Необязательный <b>объект</b>. Лист, на котором будет размещаться скопированный лист. Вы не можете <paramref name="Before" /> указать, если <paramref name="After" />вы указали.</param>
+        <param name="After">Необязательный <b>объект</b>. Лист, после которого будет размещаться скопированный лист. Вы не можете <paramref name="After" /> указать, если <paramref name="Before" />вы указали.</param>
+        <summary>Копирует лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не укажете <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создаст новую книгу, содержащую скопированный лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -277,7 +261,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -305,12 +289,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -335,10 +317,8 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <remarks>
-          <para>При удалении <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />, этот метод отображает диалоговое окно с запросом подтверждения удаления. Это диалоговое окно отображается по умолчанию. Метод <b>Delete</b> возвращает <b>логическое</b> значение, которое присвоено <b>значение False</b> , если пользователь нажатия кнопки "Отмена" в диалоговом окне или <b>значение True,</b> Если пользователь выбрал удалить.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При удалении объекта <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> or <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />этот метод отображает диалоговое окно, предлагающее пользователю подтвердить удаление. Это диалоговое окно отображается по умолчанию. Метод <b>Delete</b> возвращает <b>логическое</b> значение <b>false</b> , если пользователь нажимает кнопку Cancel (Отмена) в диалоговом окне или <b>значение true</b> , если пользователь нажимает кнопку Delete (удалить).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FillAcrossSheets">
@@ -363,9 +343,9 @@
         <Parameter Name="Type" Type="Microsoft.Office.Interop.Excel.XlFillWith" />
       </Parameters>
       <Docs>
-        <param name="Range">Требуется <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта. Диапазон для заполнения на всех листах в коллекции. Диапазон должен быть из листа в коллекции.</param>
-        <param name="Type">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XlFillWith" />. Указывает, как скопировать диапазон.</param>
-        <summary>Копирует диапазон в одной области на всех листах в семействе сайтов.</summary>
+        <param name="Range">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект. Диапазон для заполнения на всех листах в коллекции. Диапазон должен находиться на листе в пределах коллекции.</param>
+        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFillWith" />параметр. Указывает, как копировать диапазон.</param>
+        <summary>Копирует диапазон в ту же область на всех остальных листах в коллекции.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -424,12 +404,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.HPageBreaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> разрывов коллекции, представляющей горизонтальной страницы на листе. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> коллекцию, представляющую горизонтальные разрывы страниц на листе. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Существует ограничение в 1 026 горизонтальных разрывов страниц на листе.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>На листе может быть не более 1 026 горизонтальных страниц.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -458,7 +436,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -487,13 +465,11 @@
         <Parameter Name="After" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Лист, перед которым будет размещаться перемещаемый лист. Не удается задать <paramref name="Before" /> при указании <paramref name="After" />.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться перемещаемый лист. Не удается задать <paramref name="After" /> при указании <b>перед</b>.</param>
-        <summary>Перемещает окно в другое место в книге.</summary>
-        <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей перемещаемый лист Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <param name="Before">Необязательный <b>объект</b>. Лист, на котором будет размещаться перемещенный лист. Вы не можете <paramref name="Before" /> указать, если <paramref name="After" />вы указали.</param>
+        <param name="After">Необязательный <b>объект</b>. Лист, после которого будет помещен перемещенный лист. Вы не можете <paramref name="After" /> указать, если вы указали <b>Before</b>.</param>
+        <summary>Перемещает лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не укажете <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создаст новую книгу, содержащую перемещенный лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -556,19 +532,17 @@
         <Parameter Name="PrToFileName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="From">Необязательный элемент <b>Object</b>. Номер страницы, с которого следует начинать печати. Если этот аргумент задан, печать начинается с самого начала.</param>
-        <param name="To">Необязательный элемент <b>Object</b>. Номер последней страницы для печати. Если этот аргумент задан, печать заканчивается на последней странице.</param>
-        <param name="Copies">Необязательный элемент <b>Object</b>. Число копий для печати. Если этот аргумент задан, печатается одна копия.</param>
-        <param name="Preview">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы вызвать предварительного просмотра перед печатью объекта Microsoft Excel. <b>Значение false</b> (или опущен) для печати на объект немедленно.</param>
-        <param name="ActivePrinter">Необязательный элемент <b>Object</b>. Задает имя активного принтера.</param>
-        <param name="PrintToFile">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> не указан, Microsoft Excel выводит запрос на ввод имени выходного файла.</param>
-        <param name="Collate">Необязательный элемент <b>Object</b>. <b>Значение true</b> для сортировки нескольких копий.</param>
-        <param name="PrToFileName">Необязательный элемент <b>Object</b>. Если <paramref name="PrintToFile" /> имеет значение <b>True</b>, этот аргумент указывает имя файла, который вы хотите напечатать для.</param>
+        <param name="From">Необязательный <b>объект</b>. Номер страницы, с которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
+        <param name="To">Необязательный <b>объект</b>. Номер последней страницы, которую требуется напечатать. Если этот аргумент опущен, печать заканчивается на последней странице.</param>
+        <param name="Copies">Необязательный <b>объект</b>. Число копий для печати. Если этот аргумент не задан, печатается одна копия.</param>
+        <param name="Preview">Необязательный <b>объект</b>. <b>Значение true</b> , если Microsoft Excel вызывает предварительный просмотр перед печатью объекта. <b>Значение false</b> (или опущено) для немедленной печати объекта.</param>
+        <param name="ActivePrinter">Необязательный <b>объект</b>. Задает имя активного принтера.</param>
+        <param name="PrintToFile">Необязательный <b>объект</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> параметр не указан, Microsoft Excel предлагает пользователю ввести имя выходного файла.</param>
+        <param name="Collate">Необязательный <b>объект</b>. <b>Значение true</b> для разбора по копиям нескольких копий.</param>
+        <param name="PrToFileName">Необязательный <b>объект</b>. Если <paramref name="PrintToFile" /> задано <b>значение true</b>, этот аргумент указывает имя файла, в который будет выполняться печать.</param>
         <summary>Печатает объект.</summary>
-        <remarks>
-          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц — не ко всем страницам на листе или рабочей книги.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>"Pages" (страницы) <paramref name="From" /> в <paramref name="To" /> описаниях и относится к печатным страницам, а не к общим страницам листа или книги.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintOutEx">
@@ -636,8 +610,8 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">Включение изменения объекта.</param>
-        <summary>Показывает предварительного просмотра объекта, как будет выглядеть при печати.</summary>
+        <param name="EnableChanges">Позволяет вносить изменения в объект.</param>
+        <summary>Показывает предварительный просмотр объекта в том виде, в котором он будет выглядеть при печати.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -663,12 +637,10 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный элемент <b>Object</b> (используется только с листами). <b>Значение true,</b> Чтобы заменить текущее выделение с указанным объектом. <b>Значение false</b> для расширения текущего выделения в содержит каких-либо ранее выбранные объекты и указанный объект.</param>
-        <summary>Выбор объекта.</summary>
-        <remarks>
-          <para>Чтобы выбрать ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Activate" /> метод.</para>
-          <para></para>
-        </remarks>
+        <param name="Replace">Необязательный <b>объект</b> (используется только с листами). <b>Значение true</b> , чтобы заменить текущий выделенный фрагмент на указанный объект. <b>Значение false</b> , чтобы расширить текущий выделенный фрагмент для включения всех ранее выбранных объектов и указанного объекта.</param>
+        <summary>Выбирает объект.</summary>
+        <remarks><para>Чтобы выбрать ячейку или диапазон ячеек, используйте метод <b>SELECT</b> . Чтобы сделать одну ячейку активной ячейкой, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.Activate" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Visible">
@@ -697,7 +669,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли объект видимым. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Определяет, является ли объект видимым. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -725,7 +697,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.VPageBreaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> разрывов коллекции, представляющей вертикальной страницы на листе. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> коллекцию, представляющую вертикальные разрывы страниц на листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

@@ -1,13 +1,5 @@
 <Type Name="IconSetCondition" FullName="Microsoft.Office.Interop.Excel.IconSetCondition">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="60529c90129fadd3409df7f77d68bfab6f56e963" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20580726" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface IconSetCondition" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="60529c90129fadd3409df7f77d68bfab6f56e963" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580726" /></Metadata><TypeSignature Language="C#" Value="public interface IconSetCondition" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IconSetCondition" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.IconSetCondition" />
   <TypeSignature Language="VB.NET" Value="Public Interface IconSetCondition" />
@@ -29,12 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет значок набора правила условного форматирования.</summary>
-    <remarks>
-      <para>Все объекты условного форматирования в составе <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекцию, содержащую объект, который является дочерним из <see cref="T:Microsoft.Office.Interop.Excel.Range" /> семейства сайтов. Можно создать правило форматирования с помощью одного набора значков <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition" /> методу коллекции <b>FormatConditions</b> .</para>
-      <para>Каждый значок набор содержит три, четыре или пять значков. Вы используете <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> для возвращаемого объекта <see cref="T:Microsoft.Office.Interop.Excel.IconSets" /> объект, который требуется указать один из встроенных наборов значков. Каждый отдельный значок в наборе значок присваивается подмножество значений диапазона членов <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> объекта. Тип пороговое значение задается на этот объект.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет правило условного форматирования "набор значков".</summary>
+    <remarks><para>Все объекты условного форматирования находятся в объекте <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> Collection, который является дочерним по отношению <see cref="T:Microsoft.Office.Interop.Excel.Range" /> к коллекции. Правило форматирования набора значков можно создать с помощью <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метода или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddIconSetCondition" /> метода коллекции <b>FormatConditions</b> .</para>
+      <para>Каждый набор значков содержит три, четыре или пять значков. <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> Свойство <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объекта используется для возврата <see cref="T:Microsoft.Office.Interop.Excel.IconSets" /> объекта, чтобы указать один из встроенных наборов значков. Каждый отдельный значок в наборе значков затем назначается подмножеству значений диапазона с помощью элементов объекта <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> changefolder. Тип порога также задается этим объектом.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -60,13 +50,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатор объекта, данное свойство возвращает объект <b>приложения</b> , представляющего создателя указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Приложения</b> (см. выше)</value>
-        <remarks>
-          <para>Это свойство можно использовать с помощью объекта OLE-автоматизации возвращает приложение этого объекта.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает объект <b>Application</b> , представляющий создателя указанного объекта. Только для чтения.</summary>
+        <value><b>Приложение</b> (см. выше)</value>
+        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AppliesTo">
@@ -92,10 +79,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, задающий диапазон ячеек, к которым применяется правило форматирования.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Range" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, указывающий диапазон ячеек, к которому применяется правило форматирования.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Range" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -122,14 +107,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное целое число, эквивалентный <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> значение, указывающее, приложения, в котором был создан этот объект. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> значение, которое указывает приложение, в котором был создан объект, в качестве значения, равного 32 бит. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -153,7 +134,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаление указанного условного форматирования правила.</summary>
+        <summary>Удаляет указанный объект правила условного форматирования.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -183,14 +164,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , представляющую формулу, которая определяет значения, к которым будет применяться набора значков.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Это свойство можно использовать для ограничения диапазона значения, которые будут отображать условное форматирование. Типичный сценарий — при наличии диапазона номеров, содержащий положительные и отрицательные значения. Может потребоваться создать более одного условного форматирования для этого диапазона номеров — один для положительных значений, а другой — для отрицательных значений.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>строку</b> , представляющую формулу, которая определяет значения, к которым будет применен набор значков.</summary>
+        <value><b>Строка</b></value>
+        <remarks><para>Это свойство полезно для ограничения диапазона значений, которые будут отображать условное форматирование. Типичный сценарий состоит в том, что у вас есть диапазон чисел, содержащий положительные и отрицательные значения. Вы можете создать несколько условных форматов для этого диапазона чисел — одно для положительных значений и другое для отрицательных значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IconCriteria">
@@ -216,14 +193,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.IconCriteria</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> семейства сайтов, который представляет набор критериев для значка набора правила условного форматирования.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" />
-        </value>
-        <remarks>
-          <para>После того как <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" />семейства сайтов, можно использовать <see cref="P:Microsoft.Office.Interop.Excel.IconCriteria.Item(System.Object)" /> свойство коллекции для возврата <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> объекта. <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> Объект представляет условие одного набора значков.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> коллекцию, представляющую набор условий для правила условного форматирования "набор значков".</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /></value>
+        <remarks><para>После создания <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" />коллекции можно использовать <see cref="P:Microsoft.Office.Interop.Excel.IconCriteria.Item(System.Object)" /> свойство коллекции, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> объект. <see cref="T:Microsoft.Office.Interop.Excel.IconCriterion" /> Объект представляет одно условие набора значков.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IconSet">
@@ -252,14 +225,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Excel.IconSets" /> семейства сайтов, который определяет значок, используемые в условное форматирование.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
-        <remarks>
-          <para>Вы можете назначить значок установки с помощью <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объекта. </para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Interop.Excel.IconSets" /> коллекцию, которая задает набор значков, используемых в условном формате.</summary>
+        <value><b>Object</b></value>
+        <remarks><para>Набор значков можно назначить с помощью <see cref="P:Microsoft.Office.Interop.Excel._Workbook.IconSets" /> свойства <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объекта. </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ModifyAppliesToRange">
@@ -284,13 +253,11 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Excel.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Диапазон, к которому будет применяться это правило форматирования.</param>
-        <summary>Задает диапазон ячеек, к которому применяется этот правила форматирования.</summary>
-        <remarks>
-          <para>Диапазон должен быть в стиль ссылок A1 и полностью содержаться в таблице, являющийся родительским <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Также можно использовать знак доллара, но они игнорируются.</para>
-          <para>Также можно использовать локально определенное имя в любой части диапазона, но имя должно быть языке макрос.</para>
-          <para></para>
-        </remarks>
+        <param name="Range">Диапазон, к которому будет применено это правило форматирования.</param>
+        <summary>Задает диапазон ячеек, к которому применяется это правило форматирования.</summary>
+        <remarks><para>Диапазон должен находиться в стиле a1 Reference и полностью содержаться в пределах листа, который является родительским для <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Знаки доллара также можно использовать, но они игнорируются.</para>
+          <para>Вы также можете использовать локально определенное имя в любой части диапазона, но имя должно быть на языке макроса.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -317,9 +284,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -349,14 +314,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, указывающее, если пороговые значения для условного формата набора значков определяются с помощью процентили.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Это свойство будет возвращать <b>значение False</b> , если не задано каждые пороговое значение процентиль. Установка для этого свойства <b>значения True</b> устанавливающей процентиль каждый тип пороговое значение.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>логическое</b> значение, указывающее, определяются ли пороговые значения для условного формата набора значков с помощью процентили.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Это свойство возвращает <b>значение false</b> , если не все пороговые значения заданы как персентиль. Если для этого свойства задано <b>значение true</b> , для каждого порогового значения устанавливается значение процентиля.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Priority">
@@ -385,14 +346,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок вычисления, при наличии нескольких правила условного форматирования на листе.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>При задании приоритета, значение должно быть положительное целое число от 1 до общее число правила условного форматирования в рабочем листе. Приоритет должен быть уникальное значение для всех правил в рабочем листе, поэтому изменение приоритета для указанного правила условного форматирования может стать причиной значение приоритета других правил на листе удаляются.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок оценки при наличии нескольких правил условного форматирования на листе.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>При задании приоритета значение должно быть положительным целым числом между 1 и общим числом правил условного форматирования на листе. Приоритет должен быть уникальным значением для всех правил на листе, поэтому изменение приоритета указанного правила условного форматирования может привести к сдвигу значения приоритета других правил на листе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PTCondition">
@@ -418,10 +375,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>логическое</b> значение, указывающее, если условное форматирование применяется к диаграмме сводной таблицы. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает <b>логическое</b> значение, которое указывает, применяется ли условное форматирование к сводной диаграмме. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -451,14 +406,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, указывающее, если изменен на обратный порядок значков для наборов значков.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>По умолчанию большая часть наборов значков, которые можно использовать связывание положительное изображения с более высокие значения. К примеру набора значков «3 трафика освещение» применяется зеленый кружок к пороговое значение максимального и красный кружок низшего значений в диапазоне. Если данные таким образом, что меньшие значения более предпочтительным, такие как marathon время результаты, может потребоваться в обратном порядке, применения значки для диапазона связывание зеленый кружок низшего значениям.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>логическое</b> значение, указывающее, является ли порядок значков обратным для набора значков.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>По умолчанию большинство наборов значков можно использовать для связывания положительных изображений с более высокими значениями. Например, набор значков "3 светофора светофора" применяет зеленый круг к пороговому значению верхнего значения и красному кругу с наименьшими значениями в диапазоне. Если данные имеют более низкие значения, например результаты марасон, может потребоваться обратить порядок, в котором значки применяются к диапазону, чтобы связать зеленый круг с минимальными значениями.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScopeType">
@@ -487,14 +438,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotConditionScope</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одной из констант из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> перечисления, который определяет область условное форматирование, при применении диаграммы сводной таблицы.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" />
-        </value>
-        <remarks>
-          <para>Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" />, который задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.IconSetCondition.AppliesTo" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> перечисления, которая определяет область действия условного формата при его применении к сводной диаграмме.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /></value>
+        <remarks><para>Значение по умолчанию <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" />, которое задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.IconSetCondition.AppliesTo" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetFirstPriority">
@@ -518,11 +465,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Устанавливает значение приоритета для данного правила условного форматирования значение «1», чтобы вычисляется перед всех правил в рабочем листе.</summary>
-        <remarks>
-          <para>При наличии нескольких правила условного форматирования на листе, если правило не было установлено ранее приоритет «1», этот метод будет отображено приоритет все существующие правила на листе увеличено с помощью одного.</para>
-          <para></para>
-        </remarks>
+        <summary>Задает значение приоритета для этого правила условного форматирования равным "1", чтобы оно проверялось перед всеми остальными правилами на листе.</summary>
+        <remarks><para>При наличии нескольких правил условного форматирования на листе, если для правила не было задано значение "1", этот метод приведет к увеличению приоритета всех существующих правил на листе на один.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetLastPriority">
@@ -546,11 +491,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает порядок вычисления для данного правила условного форматирования, поэтому оценивается после всех правил в рабочем листе.</summary>
-        <remarks>
-          <para>Фактическое значение приоритета будет совпадать с общим количеством правила условного форматирования в рабочем листе. При наличии нескольких правила условного форматирования на листе этот метод будет отображено приоритет правил, которым пришлось больше, чем правило будет увеличено с помощью одного значения приоритета.</para>
-          <para></para>
-        </remarks>
+        <summary>Задает порядок оценки для этого правила условного форматирования, чтобы оно проверялось после всех других правил на листе.</summary>
+        <remarks><para>Фактическое значение приоритета будет равно общему числу правил условного форматирования на листе. При наличии нескольких правил условного форматирования на листе этот метод приведет к увеличению приоритета правил, которые имеют значение приоритет, превышающее это правило.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ShowIconOnly">
@@ -579,14 +522,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, указывающее, если только для значка отображается значок набора условного форматирования.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Значение по умолчанию для этого свойства — <b>False</b>.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>логическое</b> значение, указывающее, отображается ли значок для условного форматирования набора значков.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>По умолчанию для этого свойства задано значение <b>false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopIfTrue">
@@ -612,14 +551,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, определяющее, если должно оцениваться дополнительных правил форматирования для ячейки, если текущее правило имеет значение <b>True</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Для поддержки обратной совместимости, значение по умолчанию для этого свойства — <b>True</b>, которое является противоположным образом поведение форматирования правила, созданные в пользовательском интерфейсе.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>логическое</b> значение, определяющее, следует ли оценивать дополнительные правила форматирования ячейки, если текущее правило имеет <b>значение true</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Для поддержки обратной совместимости значение этого свойства по умолчанию равно <b>true</b>, что является противоположным поведением правила форматирования, созданного в пользовательском интерфейсе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -645,14 +580,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает один или константы <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> перечисление, который определяет тип условное форматирование. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Это свойство всегда возвращает значение 6, что соответствует <see cref="T:Microsoft.Office.Interop.Excel.XlIconSet" />.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> перечисления, определяющую тип условного форматирования. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Это свойство всегда будет возвращать значение 6, которое эквивалентно <see cref="T:Microsoft.Office.Interop.Excel.XlIconSet" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

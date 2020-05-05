@@ -1,13 +1,5 @@
 <Type Name="ShapeNode" FullName="Microsoft.Office.Interop.Excel.ShapeNode">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="fa83a8cb318b1dacf1a4becb1cd2c657c30e27e3" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20580915" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ShapeNode : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="fa83a8cb318b1dacf1a4becb1cd2c657c30e27e3" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580915" /></Metadata><TypeSignature Language="C#" Value="public interface ShapeNode : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ShapeNode implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ShapeNode" />
   <TypeSignature Language="VB.NET" Value="Public Interface ShapeNode&#xA;Implements _IMsoDispObj" />
@@ -30,12 +22,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет геометрии и редактирования геометрии свойства узлов в определенный пользователем freeform.</summary>
-    <remarks>
-      <para>Узлы включают грани между сегменты фигуру и контрольные точки для изогнутые сегменты. Объект <b>ShapeNode</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.ShapeNodes" /> семейства сайтов. Коллекция <b>ShapeNodes</b> содержит все узлы в произвольной формы.</para>
-      <para>С помощью <b>узлов</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса узел, чтобы возвратить объект <b>ShapeNode</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет геометрию и свойства редактирования геометрии для узлов в пользовательской полилинии.</summary>
+    <remarks><para>Узлы включают вершины между сегментами полилинии и контрольные точки для искривленных сегментов. Объект <b>ShapeNode</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.ShapeNodes" /> коллекции. Коллекция <b>ShapeNodes</b> содержит все узлы полилинии.</para>
+      <para>Используйте <b>nodes</b>(<paramref name="index" />), <paramref name="index" /> где — это номер индекса узла, чтобы вернуть один объект <b>ShapeNode</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -95,12 +85,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EditingType">
@@ -126,12 +114,10 @@
         <ReturnType>Microsoft.Office.Core.MsoEditingType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если указанный узел является узел, данное свойство возвращает значение, указывающее влияние изменений, внесенных в узел на двух сегментах, подключенные к узлу.</summary>
+        <summary>Если указанный узел является вершиной, это свойство возвращает значение, которое указывает, как изменения, вносимые в узел, влияют на два сегмента, подключенных к узлу.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.ShapeNodes.SetEditingType(System.Int32,Microsoft.Office.Core.MsoEditingType)" /> метод, чтобы задать значение этого свойства.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.ShapeNodes.SetEditingType(System.Int32,Microsoft.Office.Core.MsoEditingType)" /> метод, чтобы задать значение этого свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -185,12 +171,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение указанного узла как парой координат. Каждый координата выражается в точках.</summary>
+        <summary>Возвращает позицию указанного узла в виде покоординатной точки. Каждая координата выражается в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.ShapeNodes.SetPosition(System.Int32,System.Single,System.Single)" /> метод, чтобы задать значение этого свойства.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.ShapeNodes.SetPosition(System.Int32,System.Single,System.Single)" /> метод, чтобы задать значение этого свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SegmentType">
@@ -216,7 +200,7 @@
         <ReturnType>Microsoft.Office.Core.MsoSegmentType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, является ли сегмент, связанные с указанного узла прямых или изогнутых. Если указанный узел контрольной точки для сегмент, данное свойство возвращает <b>msoSegmentCurve</b>.</summary>
+        <summary>Возвращает значение, которое указывает, является ли сегмент, связанный с указанным узлом, прямым или изогнутым. Если указанный узел является контрольной точкой для криволинейного сегмента, это свойство возвращает <b>мсосегменткурве</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

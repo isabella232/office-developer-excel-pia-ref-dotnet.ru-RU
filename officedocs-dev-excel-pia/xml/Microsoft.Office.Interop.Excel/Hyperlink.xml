@@ -1,13 +1,5 @@
 <Type Name="Hyperlink" FullName="Microsoft.Office.Interop.Excel.Hyperlink">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0dfd3a08d223fb5d9858e759d9369366737cb84c" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20580691" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Hyperlink" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0dfd3a08d223fb5d9858e759d9369366737cb84c" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580691" /></Metadata><TypeSignature Language="C#" Value="public interface Hyperlink" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Hyperlink" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Hyperlink" />
   <TypeSignature Language="VB.NET" Value="Public Interface Hyperlink" />
@@ -29,13 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет гиперссылки.</summary>
-    <remarks>
-      <para>Объект <b>гиперссылки</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Hyperlinks" /> семейства сайтов.</para>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Shape.Hyperlink" /> свойство для возвращения гиперссылки для фигуры (фигура может иметь только одну гиперссылку).</para>
-      <para>Диапазон или таблицу может иметь несколько гиперссылок. Использование <b>гиперссылок</b>(<paramref name="index" />), где <paramref name="index" /> является номером гиперссылку для возврата объекта <b>гиперссылки</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет гиперссылку.</summary>
+    <remarks><para>Объект <b>Hyperlink</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Hyperlinks" /> коллекции.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.Hyperlink" /> свойство, чтобы возвратить гиперссылку для фигуры (фигура может иметь только одну гиперссылку).</para>
+      <para>Диапазон или лист могут иметь более одной гиперссылки. Используйте <b>Hyperlinks</b>гиперссылки<paramref name="index" />(), где <paramref name="index" /> — это номер гиперссылки, чтобы вернуть один объект <b>Hyperlink</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Address">
@@ -90,7 +80,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Добавление ярлыка книги или гиперссылки в папку "Избранное".</summary>
+        <summary>Добавляет ярлык для книги или гиперссылки в папку "Избранное".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -147,11 +137,10 @@
         <Parameter Name="Overwrite" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Имя файла, указанного документа.</param>
-        <param name="EditNow">Требуется <b>Boolean</b>. <b>Значение true</b> для указанного документа сразу же открыть в его связанного среды редактирования. Значение по умолчанию — True.</param>
-        <param name="Overwrite">Требуется <b>Boolean</b>. <b>Значение true,</b> чтобы перезаписать существующий файл с таким же именем в той же папке. <b>Значение false,</b> Если сохраняется существующий файл с таким же именем и <paramref name="Filename" /> аргумент указывает новое имя файла. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Создает новый документ, связанный с указанным гиперссылки.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя файла указанного документа.</param>
+        <param name="EditNow">Обязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , чтобы указанный документ открывался непосредственно в связанной среде редактирования. Значение по умолчанию — True.</param>
+        <param name="Overwrite">Обязательный атрибут типа <b>Boolean</b>. <b>Значение true</b> , чтобы перезаписать существующий файл с тем же именем в той же папке. <b>False</b> , если существующий файл с тем же именем сохраняется, а <paramref name="Filename" /> аргумент задает новое имя файла. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Создает новый документ, связанный с указанной гиперссылкой.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -180,11 +169,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -238,13 +225,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку текста в строку темы электронной почты указанного гиперссылки. Строка темы добавляется адрес гиперссылки.</summary>
+        <summary>Возвращает или задает текстовую строку темы сообщения электронной почты указанной гиперссылки. Строка темы добавляется к адресу гиперссылки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство обычно используется с гиперссылками электронной почты.</para>
-          <para>Значение этого свойства имеют приоритет над электронной почты в строке темы, указанного с помощью <see cref="P:Microsoft.Office.Interop.Excel.Hyperlink.Address" /> свойство один и тот же объект <b>гиперссылки</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство обычно используется с гиперссылками электронной почты.</para>
+          <para>Значение этого свойства имеет приоритет перед любой строкой темы сообщения электронной почты, указанной с помощью <see cref="P:Microsoft.Office.Interop.Excel.Hyperlink.Address" /> свойства того же объекта <b>Hyperlink</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Follow">
@@ -273,12 +258,12 @@
         <Parameter Name="HeaderInfo" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="NewWindow">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы отобразить конечного приложения в новом окне. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AddHistory">Необязательный элемент <b>Object</b>. Не используется. Зарезервировано для последующего использования.</param>
-        <param name="ExtraInfo">Необязательный элемент <b>Object</b>. <b>Строку</b> или массив байтов, который указывает Дополнительные сведения для протокола HTTP, используемого для разрешения гиперссылки. Например, можно использовать <paramref name="ExtraInfo" /> для указания координат гиперкарты, содержимого формы или имени файла FAT.</param>
-        <param name="Method">Необязательный элемент <b>Object</b>. Указывает способ <paramref name="ExtraInfo" /> подключении. Может иметь одно из следующих значений <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" /> константы.</param>
-        <param name="HeaderInfo">Необязательный элемент <b>Object</b>. <b>Строка</b> , определяющая сведения заголовка для запроса HTTP. Значение по умолчанию — пустая строка.</param>
-        <summary>Отображает кэшированный документ, если она уже загружена. В противном случае этот метод разрешает гиперссылку, загружает целевой документ и отображает документа в соответствующем приложении.</summary>
+        <param name="NewWindow">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отобразить конечное приложение в новом окне. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AddHistory">Необязательный <b>объект</b>. Не используется. Зарезервировано для последующего использования.</param>
+        <param name="ExtraInfo">Необязательный <b>объект</b>. <b>Строка</b> или байтовый массив, указывающий дополнительные сведения об использовании HTTP для разрешения гиперссылки. Например, вы можете <paramref name="ExtraInfo" /> указать координаты карты изображения, содержимое формы или имя файла FAT.</param>
+        <param name="Method">Необязательный <b>объект</b>. Задает способ <paramref name="ExtraInfo" /> подключения. Может быть одной из следующих <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" /> констант.</param>
+        <param name="HeaderInfo">Необязательный <b>объект</b>. <b>Строка</b> , задающая сведения о заголовке HTTP-запроса. Значение по умолчанию: пустая строка.</param>
+        <summary>Отображает кэшированный документ, если он уже был загружен. В противном случае этот метод разрешает гиперссылку, загружает целевой документ и отображает документ в соответствующем приложении.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -361,7 +346,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон указанной гиперссылки подключенный к.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон, к которому присоединена указанная гиперссылка.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -392,12 +377,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст подсказки для указанного гиперссылки.</summary>
+        <summary>Возвращает или задает текст подсказки для указанной гиперссылки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>После сохранения документа на веб-страницу текст подсказки может отображаться (например) при наведении указателя мыши на гиперссылку при просмотре документа в веб-браузере. Некоторые веб-браузеры могут не поддерживать всплывающие подсказки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>После сохранения документа на веб-странице может появиться текст подсказки (например,), когда указатель мыши наведен на гиперссылку, а документ просматривается в веб-браузере. Некоторые веб-браузеры могут не поддерживать подсказки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shape">
@@ -423,7 +406,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий форму, подключенного к заданным комментарием, узла диаграммы или гиперссылки.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру, присоединенную к указанному комментарию, узлу схемы или гиперссылке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -454,7 +437,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расположение в документ, связанный с гиперссылки.</summary>
+        <summary>Возвращает или задает расположение в документе, связанном с гиперссылкой.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -485,7 +468,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текст, который будет отображаться для указанного гиперссылки. Значение по умолчанию — адрес гиперссылки.</summary>
+        <summary>Возвращает или задает текст, отображаемый для указанной гиперссылки. Значение по умолчанию — адрес гиперссылки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -513,12 +496,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает расположение HTML frame.</summary>
+        <summary>Возвращает расположение фрейма HTML.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Type</b> может иметь одно из следующих значений <see cref="T:Microsoft.Office.Core.MsoHyperlinkType" /> констант: <b>msoHyperlinkInlineShape</b>, <b>msoHyperlinkRange</b>или <b>msoHyperlinkShape</b>.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Type</b> может быть <see cref="T:Microsoft.Office.Core.MsoHyperlinkType" /> одной из следующих констант: <b>мсохиперлинкинлинешапе</b>, <b>мсохиперлинкранже</b>или <b>мсохиперлинкшапе</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="CustomProperties" FullName="Microsoft.Office.Interop.Excel.CustomProperties">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5fa7755a939da1d185231965c1c4aa599e110df3" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20584464" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface CustomProperties : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5fa7755a939da1d185231965c1c4aa599e110df3" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20584464" /></Metadata><TypeSignature Language="C#" Value="public interface CustomProperties : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomProperties implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CustomProperties" />
   <TypeSignature Language="VB.NET" Value="Public Interface CustomProperties&#xA;Implements IEnumerable" />
@@ -33,14 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Excel.CustomProperty" /> объекты, которые представляют дополнительной информации. Сведения можно использовать в качестве метаданных для XML.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SmartTag" /> объекта, или <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объекта, чтобы вернуть коллекцию <b>настраиваемые свойства</b> .</para>
-      <para>После возвращения коллекции <b>настраиваемые свойства</b> , можно добавить метаданные для таблиц и смарт-тегов в зависимости от того, что выбран для работы с.</para>
-      <para>Чтобы добавить метаданных с листом, используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> свойства с <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> метод.</para>
-      <para>Чтобы добавить метаданных смарт-тег, используйте <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойства с помощью метода <b>Add</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.CustomProperty" /> объектов, представляющих дополнительные сведения. Эти сведения можно использовать в качестве метаданных для XML.</summary>
+    <remarks><para><see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> Используйте <see cref="T:Microsoft.Office.Interop.Excel.SmartTag" /> свойство объекта <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> или свойство <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объекта, чтобы возвратить коллекцию <b>CustomProperties</b> .</para>
+      <para>После возвращения коллекции <b>CustomProperties</b> вы можете добавлять метаданные в листы и смарт-теги в зависимости от того, с какой целью работать.</para>
+      <para>Чтобы добавить метаданные на лист, используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.CustomProperties" /> свойство с <see cref="M:Microsoft.Office.Interop.Excel.CustomProperties.Add(System.String,System.Object)" /> методом.</para>
+      <para>Чтобы добавить метаданные в смарт-тег, используйте <see cref="P:Microsoft.Office.Interop.Excel.SmartTag.Properties" /> свойство с методом <b>Add</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -102,10 +92,9 @@
         <Parameter Name="Value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Имя настраиваемого свойства.</param>
-        <param name="Value">Требуется <b>объект</b>. Значение настраиваемого свойства.</param>
-        <summary>Добавление сведений о настраиваемых свойствах. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CustomProperty" /> объекта.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя настраиваемого свойства.</param>
+        <param name="Value">Обязательный <b>объект</b>. Значение настраиваемого свойства.</param>
+        <summary>Добавляет сведения о настраиваемых свойствах. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CustomProperty" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -191,11 +180,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -256,7 +243,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

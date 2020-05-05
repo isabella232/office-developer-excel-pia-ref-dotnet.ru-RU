@@ -1,13 +1,5 @@
 <Type Name="ShapeRange" FullName="Microsoft.Office.Interop.Excel.ShapeRange">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ffea79e6ef3bb0175b91650070af45326d337d7f" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20582903" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ShapeRange : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ffea79e6ef3bb0175b91650070af45326d337d7f" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582903" /></Metadata><TypeSignature Language="C#" Value="public interface ShapeRange : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ShapeRange implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ShapeRange" />
   <TypeSignature Language="VB.NET" Value="Public Interface ShapeRange&#xA;Implements IEnumerable" />
@@ -33,11 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет диапазона фигуры, которая представляет собой набор фигур в документе.</summary>
-    <remarks>
-      <para>Диапазона фигур может содержать всего лишь одну или более всех фигур в документе. Можно включить независимо от выбранного фигур, требуется — выбран из всех фигур в документе или всех фигур в выборе — для создания диапазона фигуры. Например, можно было создавать <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> семейства сайтов, содержащего первые три фигур в документе, выбранные фигуры в документе или все полилинии в документе.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет диапазон фигуры, который представляет собой набор фигур в документе.</summary>
+    <remarks><para>Диапазон фигуры может содержать как одну фигуру, так и столько же, сколько все фигуры в документе. Можно добавить любую нужную фигуру, выбранную из всех фигур в документе или всех фигур в выделенном фрагменте, для создания диапазона фигур. Например, можно создать <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> коллекцию, содержащую первые три фигуры в документе, все выбранные фигуры в документе или все полилинии в документе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -95,7 +85,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Adjustments</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Adjustments" /> объект, содержащий значения настройки для всех настроек в указанном фигуры. Применяется к любому <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, представляющий автофигуры, объекты WordArt или соединитель. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Adjustments" /> объект, который содержит значения коррекции для всех корректировок в указанной фигуре. Применяется к любому <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекту, представляющему автофигуру, объект WordArt или соединитель. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -124,9 +114,9 @@
         <Parameter Name="RelativeTo" Type="Microsoft.Office.Core.MsoTriState" />
       </Parameters>
       <Docs>
-        <param name="AlignCmd">Требуется <see cref="T:Microsoft.Office.Core.MsoAlignCmd" />. Указывает способ фигур в диапазоне указанные форму для выравнивания.</param>
-        <param name="RelativeTo">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. Не используется в Microsoft Excel. Должен иметь <b>значение False</b>.</param>
-        <summary>Выравнивает фигур в указанный диапазон фигур.</summary>
+        <param name="AlignCmd">Обязательный <see cref="T:Microsoft.Office.Core.MsoAlignCmd" />. Указывает способ выравнивания фигур в указанном диапазоне фигур.</param>
+        <param name="RelativeTo">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. Не используется в Microsoft Excel. Должно иметь <b>значение false</b>.</param>
+        <summary>Выравнивает фигуры в указанном диапазоне фигур.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -156,12 +146,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку (альтернативный) текст описания для <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекта при сохранении объекта на веб-страницу. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает текстовую строку с описанием (альтернативным) для <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекта при сохранении объекта на веб-странице. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Замещающий текст может отображаться либо вместо изображения фигуры в веб-браузере или непосредственно на изображение при наведении указателя мыши на изображение (в браузерах, которые поддерживают эти функции).</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Замещающий текст может отображаться либо вместо изображения фигуры в веб-браузере, либо непосредственно над изображением, когда указатель мыши наведен на изображение (в браузерах, поддерживающих эти функции).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -213,7 +201,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Применяется для форматирования указанной фигуры, которые копируются с помощью <see cref="M:Microsoft.Office.Interop.Excel.ShapeRange.PickUp" /> метод.</summary>
+        <summary>Применяется к указанному форматированию фигуры, которое было скопировано с <see cref="M:Microsoft.Office.Interop.Excel.ShapeRange.PickUp" /> помощью метода.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -243,13 +231,11 @@
         <ReturnType>Microsoft.Office.Core.MsoAutoShapeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип фигуры для указанного <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, который должен представлять автофигуры отличный от строки, freeform документа или соединителя. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoAutoShapeType" />.</summary>
+        <summary>Возвращает или задает тип фигуры для указанного <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекта, который должен представлять автофигуру, отличную от линии, формы полилинии или соединителя. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoAutoShapeType" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>При изменении типа фигуры фигуры сохраняет его размер, цвет и другие атрибуты.</para>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.ConnectorFormat.Type" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.ConnectorFormat" /> объект, который требуется установить или возвращаемый тип соединителя.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Когда вы изменяете тип фигуры, фигура сохраняет ее размер, цвет и другие атрибуты.</para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ConnectorFormat.Type" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.ConnectorFormat" /> объекта, чтобы задать или вернуть тип соединителя.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="BackgroundStyle">
@@ -278,10 +264,8 @@
         <ReturnType>Microsoft.Office.Core.MsoBackgroundStyleIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тиль фона. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoBackgroundStyleIndex" />
-        </value>
+        <summary>Возвращает или задает стиль фона. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoBackgroundStyleIndex" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -311,7 +295,7 @@
         <ReturnType>Microsoft.Office.Core.MsoBlackWhiteMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, отображается как указанные форму при просмотре презентации в черно-белом режиме. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoBlackWhiteMode" />.</summary>
+        <summary>Возвращает или задает значение, указывающее, как заданная фигура отображается при просмотре презентации в черно-белом режиме. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoBlackWhiteMode" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -339,7 +323,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.CalloutFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CalloutFormat" /> объект, который содержит параметры форматирования для указанного фигура выноски. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекты, которые представляют выноски строки. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CalloutFormat" /> объект, который содержит свойства форматирования выноски для указанной фигуры. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объектам, представляющим выноски линий. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -522,10 +506,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Chart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий диаграмму, содержащихся в диапазоне фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel._Chart" />
-        </value>
+        <summary>Возвращает объект, представляющий диаграмму, содержащуюся в диапазоне фигур. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel._Chart" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -552,7 +534,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>msoTrue</b> , если указанный фигуры является фигурой дочерних или всех фигур в диапазоне фигуры являются фигуры потомков того же родителя. Только для чтения <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary>Возвращает <b>мсотруе</b> , если указанная фигура является дочерней, или если все фигуры в диапазоне фигуры являются дочерними формами того же родителя. Только <see cref="T:Microsoft.Office.Core.MsoTriState" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -580,7 +562,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число подключений сайтов на указанные форму. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число сайтов подключения к указанной фигуре. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -608,8 +590,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры соединитель. Только для чтения <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary><b>Значение true</b> , если указанная фигура является соединителем. Только <see cref="T:Microsoft.Office.Core.MsoTriState" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -637,7 +618,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ConnectorFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ConnectorFormat" /> объект, который содержит соединитель свойства форматирования. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекты, которые представляют соединители. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ConnectorFormat" /> объект, который содержит свойства форматирования соединителя. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объектам, представляющим соединители. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -665,7 +646,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -693,12 +674,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -752,7 +731,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Diagram</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Diagram" /> объект, представляющий схему.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.Diagram" /> , представляющий схему.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -812,9 +791,9 @@
         <Parameter Name="RelativeTo" Type="Microsoft.Office.Core.MsoTriState" />
       </Parameters>
       <Docs>
-        <param name="DistributeCmd">Требуется <see cref="T:Microsoft.Office.Core.MsoDistributeCmd" />. Указывает, будет ли фигур в диапазоне распределенных по горизонтали или по вертикали.</param>
-        <param name="RelativeTo">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. Не используется в Microsoft Excel. Должен иметь <b>значение False</b>.</param>
-        <summary>По горизонтали или вертикали распределяет фигур в указанный диапазон фигур.</summary>
+        <param name="DistributeCmd">Обязательный <see cref="T:Microsoft.Office.Core.MsoDistributeCmd" />. Указывает, следует ли распределять фигуры в диапазоне по горизонтали или по вертикали.</param>
+        <param name="RelativeTo">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. Не используется в Microsoft Excel. Должно иметь <b>значение false</b>.</param>
+        <summary>Горизонтально или вертикально распределяет фигуры в указанном диапазоне фигур.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -839,7 +818,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Дублирует объекта и возвращает ссылку на новую копию.</summary>
+        <summary>Дублирует объект и возвращает ссылку на новую копию.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -867,7 +846,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.FillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект, который содержит параметры форматирования для указанной диаграммы или фигуры заливки. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект, содержащий свойства форматирования заливки для указанной диаграммы или фигуры. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -895,8 +874,8 @@
         <Parameter Name="FlipCmd" Type="Microsoft.Office.Core.MsoFlipCmd" />
       </Parameters>
       <Docs>
-        <param name="FlipCmd">Требуется <see cref="T:Microsoft.Office.Core.MsoFlipCmd" />. Указывает, является ли фигура зеркально по горизонтали или по вертикали.</param>
-        <summary>Зеркальное отражение указанного фигуры относительно его вертикальной или горизонтальной оси.</summary>
+        <param name="FlipCmd">Обязательный <see cref="T:Microsoft.Office.Core.MsoFlipCmd" />. Указывает, должна ли фигура быть зеркально отражена по горизонтали или по вертикали.</param>
+        <summary>Переворачивает указанную фигуру вокруг горизонтальной или вертикальной оси.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -955,14 +934,10 @@
         <ReturnType>Microsoft.Office.Core.GlowFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который содержит свечения свойства форматирования для диапазона фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.GlowFormat" />
-        </value>
-        <remarks>
-          <para>Эффект свечения добавляет живые цветного edge графики.  </para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает объект, который содержит свойства форматирования свечения для диапазона фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.GlowFormat" /></value>
+        <remarks><para>Эффект свечения добавляет насыщенный цветной край в графические изображения.  </para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Group">
@@ -986,12 +961,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Группы фигур в указанном диапазоне. Возвращает группы фигур в виде одного <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта.</summary>
+        <summary>Группирует фигуры в указанном диапазоне. Возвращает сгруппированные фигуры в виде одного <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Так как в группы фигур обрабатывается как одну форму, Группировка и разгруппировка фигур изменения количество элементов в коллекции <b>фигур</b> и изменяет номера индекса элементов, следующие за затронутых элементов в коллекции.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Так как Группа фигур обрабатывается как отдельная форма, группирование и разгруппирование фигур изменяет количество элементов в коллекции <b>Shape</b> и изменяет номера индексов элементов, поступающих после затронутых элементов в коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GroupItems">
@@ -1017,12 +990,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.GroupShapes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.GroupShapes" /> объект, который представляет отдельные фигуры в указанную группу. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекты, которые представляют группы фигур. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.GroupShapes" /> объект, представляющий отдельные фигуры в указанной группе. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объектам, представляющим сгруппированные фигуры. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.GroupShapes.Item(System.Object)" /> метод объекта <b>GroupShapes</b> возвращает одну из группы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.GroupShapes.Item(System.Object)" /> метод объекта <b>GroupShapes</b> для возврата отдельной фигуры из группы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="HasChart">
@@ -1048,10 +1019,8 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает сведения о том случае, если <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange" /> содержит диаграммы. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoTriState" />
-        </value>
+        <summary>Возвращает сведения о том, <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange" /> содержит ли диаграмма. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoTriState" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1081,7 +1050,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли фигура или диапазона фигур с диаграммой. Только для чтения <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary>Возвращает значение, указывающее, содержит ли схема диапазон фигуры или фигуры. Только <see cref="T:Microsoft.Office.Core.MsoTriState" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1112,7 +1081,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение, указывающее, существует ли узел диаграммы в заданной фигуры или диапазона фигуры. Только для чтения <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary>Возвращает значение, указывающее, существует ли узел схемы в заданном диапазоне фигуры или фигуры. Только <see cref="T:Microsoft.Office.Core.MsoTriState" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1143,7 +1112,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота объекта. Чтение и запись <b>одного</b>.</summary>
+        <summary>Высота объекта. Для чтения и записи, <b>Single</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1171,8 +1140,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры отражается относительно горизонтальной оси. Только для чтения <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary><b>Значение true</b> , если указанная фигура перевернута вокруг горизонтальной оси. Только <see cref="T:Microsoft.Office.Core.MsoTriState" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1200,12 +1168,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип для указанного объекта. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает тип указанного объекта. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Метку идентификатор можно использовать как гиперссылку в других HTML-документов или на той же странице.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Вы можете использовать метку ID в качестве ссылки на гиперссылку в других HTML-документах или на той же веб-странице.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncrementLeft">
@@ -1231,8 +1197,8 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько фигуры перемещаемых по горизонтали в точках. Положительное значение перемещает фигуру справа; отрицательное значение перемещает его слева.</param>
-        <summary>Перемещение указанного фигуры по горизонтали указанное число точек.</summary>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко фигура перемещается по горизонтали в точках. Положительное значение перемещает фигуру вправо; отрицательное значение перемещается влево.</param>
+        <summary>Перемещает указанную фигуру по горизонтали на указанное количество точек.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1259,12 +1225,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько фигуры будет вращаться по горизонтали в градусов. Положительное значение Поворот фигуры часовой; отрицательное значение поворот против.</param>
-        <summary>Изменяет вращение указанного фигуры относительно оси z указанное число градусов. Использование <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.Rotation" /> свойство, чтобы задать абсолютные Поворот фигуры.</summary>
-        <remarks>
-          <para>Поворот объемной фигуры вокруг оси x или y, используйте <see cref="M:Microsoft.Office.Interop.Excel.ThreeDFormat.IncrementRotationX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.ThreeDFormat.IncrementRotationY(System.Single)" /> метод.</para>
-          <para></para>
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко фигура вращается горизонтально в градусах. Положительное значение поворачивает фигуру по часовой стрелке; отрицательное значение поворачивает его против часовой стрелки.</param>
+        <summary>Изменяет поворот указанной фигуры вокруг оси z на заданное число градусов. Используйте <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.Rotation" /> свойство, чтобы задать абсолютный поворот фигуры.</summary>
+        <remarks><para>Чтобы повернуть трехмерную форму вокруг оси x или оси y, используйте <see cref="M:Microsoft.Office.Interop.Excel.ThreeDFormat.IncrementRotationX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.ThreeDFormat.IncrementRotationY(System.Single)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncrementTop">
@@ -1290,8 +1254,8 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько объекта shape переместить по вертикали в точках. Положительное значение перемещает фигуру; отрицательное значение перемещает его вверх.</param>
-        <summary>Перемещает указанные форму на указанное число точек по вертикали.</summary>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко объект Shape должен перемещаться вертикально в точках. Положительное значение перемещает фигуру вниз; отрицательное значение перемещается вверх.</param>
+        <summary>Перемещает указанную фигуру на заданное количество точек по вертикали.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1318,13 +1282,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Текстовое имя объекта — это значение <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.Name" /> и <see cref="P:Microsoft.Office.Interop.Excel.Range.Value(System.Object)" /> свойства.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Текстовое имя объекта является значением свойства <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.Name" /> и. <see cref="P:Microsoft.Office.Interop.Excel.Range.Value(System.Object)" /></para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Left">
@@ -1353,7 +1315,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от левого края объекта до левого края столбца А (на рабочем листе) или левого края области диаграммы (на диаграмме). Чтение и запись <b>одного</b>.</summary>
+        <summary>Расстояние от левого края объекта до левого края столбца A (на листе) или левого края области диаграммы (на диаграмме). Для чтения и записи, <b>Single</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1381,12 +1343,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.LineFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.LineFormat" /> объект, содержащий свойства для указанного фигуры форматирования строки. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.LineFormat" /> объект, который содержит свойства форматирования линии для указанной фигуры. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для строки объект <b>LineFormat</b> представляет строки для фигуры с границей объект <b>LineFormat</b> представляет границы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для строки объект <b>LineFormat</b> представляет саму линию; для фигуры с границей объект <b>LineFormat</b> представляет границу.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="LockAspectRatio">
@@ -1415,8 +1375,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры сохраняются исходные пропорции при изменении размера. <b>Значение false,</b> Если при изменении размера можно изменить высоту и ширину фигуры независимо друг от друга. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary><b>Значение true</b> , если указанная фигура сохраняет исходные пропорции при изменении размера. <b>False</b> , если вы можете изменить высоту и ширину фигуры независимо друг от друга при изменении размера. Чтение и запись <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1449,54 +1408,52 @@
       <Docs>
         <summary>Возвращает или задает имя объекта. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>В следующей таблице показаны значения примере свойство <b>Name</b> и связанных с ними свойств, присвоенное источника данных OLAP с уникальным именем «[Европа]. [Франции]. [Париж]» и «Париж» имя источника данных не OLAP с элементом.</para>
+        <remarks><para>В следующей таблице приведены примеры значений свойства <b>Name</b> и связанных свойств для источника данных OLAP с уникальным именем "[Европа]". [Франция]. [Париж] и источник данных, не относящийся к OLAP, с именем элемента "Париж".</para>
           <list type="table">
             <item>
               <term>
-                <b>Заголовок</b>
+                <b>Присваивает</b>
               </term>
               <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>Имя</b>
+                <b>Расширением</b>
               </term>
-              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
               <description>(То же, что значение свойства SQL, только для чтения)</description>
             </item>
             <item>
               <term>
-                <b>Значение</b>
+                <b>Оно</b>
               </term>
-              <description>[Европа]. [Франции]. [Париж] (только для чтения)</description>
+              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> семейства сайтов, можно использовать следующий синтаксис, приведенные в следующей таблице.</para>
+          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> коллекции можно использовать синтаксис, приведенный в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж]»)</term>
-              <description>выражение. PivotItems("Paris")</description>
+              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж])</term>
+              <description>выражение. PivotItems ("Париж")</description>
             </item>
           </list>
-          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойство ссылку конкретный элемент коллекции, можно использовать имя индекса текста, как показано в следующей таблице.</para>
+          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойства для ссылки на определенный член коллекции можно использовать имя текстового индекса, как показано в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>[Европа]. [Франции]. [Париж]</term>
+              <term>[Европа]. [Франция]. Париже</term>
               <description>Париж</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Nodes">
@@ -1522,7 +1479,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ShapeNodes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeNodes" /> коллекции, представляющей геометрические описание указанной фигуры. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекты, которые представляют freeform документы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeNodes" /> коллекцию, представляющую геометрическое описание указанной фигуры. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объектам, представляющим полилинии.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1578,7 +1535,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий общие родительскую фигуру фигуры дочерних или диапазона фигуры потомков.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий общую родительскую форму дочерней фигуры или диапазон дочерних фигур.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1604,7 +1561,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирование форматирования указанной фигуры. Использование <see cref="M:Microsoft.Office.Interop.Excel.ShapeRange.Apply" /> метод Применение скопированного форматирования на другую фигуру.</summary>
+        <summary>Копирует форматирование указанной фигуры. Используйте <see cref="M:Microsoft.Office.Interop.Excel.ShapeRange.Apply" /> метод для применения скопированного форматирования к другой фигуре.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1631,7 +1588,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PictureFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PictureFormat" /> объект, содержащий свойства для указанного фигуры форматирования рисунков. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекты, которые представляют изображения или объекты OLE. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PictureFormat" /> объект, который содержит свойства форматирования рисунка для указанной фигуры. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объектам, представляющим изображения или объекты OLE. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1659,10 +1616,8 @@
         <ReturnType>Microsoft.Office.Core.ReflectionFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.ReflectionFormat" /> объект для диапазона указанной фигуры, содержащий отражения параметры форматирования для диапазона фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.ReflectionFormat" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.ReflectionFormat" /> объект для указанного диапазона фигур, который содержит свойства форматирования отражения для диапазона фигуры. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.ReflectionFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1687,13 +1642,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Regroups группы, ранее принадлежавшее диапазона указанной фигуры. Возвращает regrouped фигур в виде одного <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта.</summary>
+        <summary>Перегруппировка группы, к которой ранее появлялся указанный диапазон фигур. Возвращает пересгруппированные фигуры в виде одного <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Метод <b>сгруппировать</b> только восстанавливает группы для первого ранее сгруппированных фигуры, найденные в указанный <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> семейства сайтов. Таким образом Если диапазон указанной фигуры содержит фигуры, которые ранее входившее для различных групп, только одну из групп будут восстановлены.</para>
-          <para>Обратите внимание на то, что так как в группы фигур обрабатывается как одну, Группировка и разгруппировка фигур изменения количество элементов в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов и изменения номера индекса элементов, следующие за затронутых элементов в коллекции.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Метод <b>REGROUP</b> только восстанавливает группу для первой ранее сгруппированной фигуры, найденной в указанной <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> коллекции. Таким образом, если указанный диапазон фигур содержит фигуры, которые ранее содержали различные группы, будет восстановлена только одна из этих групп.</para>
+          <para>Обратите внимание, что поскольку Группа фигур считается одной фигурой, группирование и разгруппирование фигур изменяет количество элементов в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции и изменяет номера индексов элементов, поступающих после затронутых элементов в коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RerouteConnections">
@@ -1717,12 +1670,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Изменение пути соединители, чтобы они вступили Минимальная возможные пути между фигурами, которые они подключаются.</summary>
-        <remarks>
-          <para>Переадресация соединители, метод <b>RerouteConnections</b> может отсоединить концах соединитель и присоедините их различных связи сайтов на присоединенными фигурами. Этот метод перенаправляет все соединители, подключенного к указанной фигуры; Если указанный фигуры соединитель, пересылаются его.</para>
-          <para>Если этот метод применяется в соединитель, будут перенаправляться только этот соединитель. Если этот метод применяется для подключенных фигуры, будут перенаправляться всех соединителей для фигуры.</para>
-          <para></para>
-        </remarks>
+        <summary>Перенаправляет соединители так, чтобы они выходили кратчайший путь между фигурами, к которым они подключаются.</summary>
+        <remarks><para>Чтобы перенаправить соединители, метод <b>рераутеконнектионс</b> может отсоединить концы соединителя и повторно присоединить их к разным подключенным сайтам на подключенных фигурах. Этот метод перенаправляет все соединители, вложенные в указанную фигуру; Если указанная фигура является соединителем, она перенаправляется.</para>
+          <para>Если этот метод применяется к соединителю, маршрутизация будет выполнена только для этого соединителя. Если этот метод применяется к подключенной фигуре, все соединители для этой фигуры будут перенаправлены.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Rotation">
@@ -1751,7 +1702,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает поворот фигуры в градусов. Чтение и запись <b>одного</b>.</summary>
+        <summary>Возвращает или задает Поворот фигуры в градусах. Для чтения и записи, <b>Single</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1780,14 +1731,12 @@
         <Parameter Name="Scale" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Factor">Требуется <b>один</b>. Указывает отношение между высота формы при изменении размера и высота текущей или исходной. Например чтобы сделать прямоугольник более 50 процентов, укажите 1,5 для этого аргумента.</param>
-        <param name="RelativeToOriginalSize">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>msoTrue</b> для масштабирования фигуры относительно исходного размера. <b>msoFalse</b> для масштабирования относительно его текущий размер. <b>MsoTrue</b> для этого аргумента можно указать только в том случае, если указанный фигуры изображения или объекта OLE.</param>
-        <param name="Scale">Необязательные <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />. Указывает, какие части фигуры сохраняет положение при масштабировании фигуры.</param>
-        <summary>Масштабирование высота формы с указанным коэффициентом.</summary>
-        <remarks>
-          <para>Для изображений и объекты OLE можно указать, следует ли масштабировать фигуры, относящиеся к исходной или текущего размера. Их текущей высоте всегда масштабируются фигур, отличный от изображения и объекты OLE.</para>
-          <para></para>
-        </remarks>
+        <param name="Factor">Обязательное <b>одно</b>. Задает отношение высоты фигуры после изменения ее размера и текущей или исходной высоты. Например, чтобы увеличить размер прямоугольника 50 в процентах, укажите значение 1,5 для этого аргумента.</param>
+        <param name="RelativeToOriginalSize">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>мсотруе</b> для масштабирования фигуры относительно исходного размера. <b>мсофалсе</b> для масштабирования по отношению к текущему размеру. Можно указать <b>мсотруе</b> для этого аргумента, только если указанная фигура является рисунком или объектом OLE.</param>
+        <param name="Scale">Необязательный <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />параметр. Указывает, какая часть фигуры сохраняет свое положение при масштабировании фигуры.</param>
+        <summary>Масштабирует высоту фигуры с применением указанного коэффициента.</summary>
+        <remarks><para>Для рисунков и объектов OLE можно указать, следует ли масштабировать фигуру относительно исходного или текущего размера. Фигуры, отличные от изображений и объектов OLE, всегда масштабируются относительно текущей высоты.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScaleWidth">
@@ -1814,14 +1763,12 @@
         <Parameter Name="Scale" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Factor">Требуется <b>один</b>. Указывает отношение между ширина формы при изменении размера и текущей или исходной ширины. Например чтобы сделать прямоугольник более 50 процентов, укажите 1,5 для этого аргумента.</param>
-        <param name="RelativeToOriginalSize">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>Значение false</b> для масштабирования относительно его текущий размер. Можно указать <b>значение True</b> для этого аргумента только в том случае, если указанный фигуры изображения или объекта OLE.</param>
-        <param name="Scale">Необязательные <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />. Указывает, какие части фигуры сохраняет положение при масштабировании фигуры.</param>
-        <summary>Масштабирование ширины фигуры с указанного коэффициента.</summary>
-        <remarks>
-          <para>Для изображений и объекты OLE можно указать, следует ли масштабировать фигуры, относящиеся к исходной или текущего размера. Их текущей ширине всегда масштабируются фигур, отличный от изображения и объекты OLE.</para>
-          <para></para>
-        </remarks>
+        <param name="Factor">Обязательное <b>одно</b>. Задает отношение ширины фигуры после изменения ее размера и текущей или исходной ширины. Например, чтобы увеличить размер прямоугольника 50 в процентах, укажите значение 1,5 для этого аргумента.</param>
+        <param name="RelativeToOriginalSize">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. <b>Значение false</b> , чтобы масштабировать его относительно текущего размера. <b>Значение true</b> для этого аргумента можно задать только в том случае, если указанная фигура является рисунком или объектом OLE.</param>
+        <param name="Scale">Необязательный <see cref="T:Microsoft.Office.Core.MsoScaleFrom" />параметр. Указывает, какая часть фигуры сохраняет свое положение при масштабировании фигуры.</param>
+        <summary>Масштабирует ширину фигуры с применением указанного коэффициента.</summary>
+        <remarks><para>Для рисунков и объектов OLE можно указать, следует ли масштабировать фигуру относительно исходного или текущего размера. Фигуры, отличные от изображений и объектов OLE, всегда масштабируются относительно текущей ширины.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Select">
@@ -1846,8 +1793,8 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный элемент <b>Object</b>. Объект для замены.</param>
-        <summary>Выбор объекта.</summary>
+        <param name="Replace">Необязательный <b>объект</b>. Заменяемый объект.</param>
+        <summary>Выбирает объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1872,7 +1819,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выполняет форматирование указанного фигуры форматирования формы по умолчанию.</summary>
+        <summary>Форматирует заданную фигуру с помощью форматирования по умолчанию для фигуры.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1899,8 +1846,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ShadowFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если шрифт является теневой или объект имеет тень. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если шрифт является теневым или объект имеет тень. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1931,10 +1877,8 @@
         <ReturnType>Microsoft.Office.Core.MsoShapeStyleIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoShapeStyleIndex" /> , что представляет стиль для диапазона фигуры фигуры. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoShapeStyleIndex" />
-        </value>
+        <summary>Возвращает или задает значение <see cref="T:Microsoft.Office.Core.MsoShapeStyleIndex" /> , представляющее стиль фигуры для диапазона фигуры. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoShapeStyleIndex" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1961,10 +1905,8 @@
         <ReturnType>Microsoft.Office.Core.SoftEdgeFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который содержит параметры форматирования для диапазона указанной фигуры программных пограничного сервера. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.SoftEdgeFormat" />
-        </value>
+        <summary>Возвращает объект, который содержит свойства необратимого пограничного края для указанного диапазона фигур. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Core.SoftEdgeFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1991,7 +1933,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TextEffectFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> объект, содержащий свойства форматирования текста влияние для указанной фигуры. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекты, которые представляют WordArt. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> объект, который содержит свойства форматирования текстового действия для указанной фигуры. Применяется к <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объектам, представляющим объект WordArt. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2019,10 +1961,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TextFrame</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TextFrame" /> объект, содержащий выравнивание и свойства для указанного фигуры диапазона привязки. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.TextFrame" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.TextFrame" /> объект, который содержит свойства выравнивания и привязки для указанного диапазона фигур. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.TextFrame" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2049,10 +1989,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TextFrame2</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который содержит форматирование текста для диапазона указанной фигуры. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.TextFrame2" />
-        </value>
+        <summary>Возвращает объект, который содержит форматирование текста для указанного диапазона фигур. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.TextFrame2" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2079,7 +2017,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ThreeDFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ThreeDFormat" /> объект, содержащий объемных — влияние параметры форматирования для указанной фигуры. Только для чтения.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.ThreeDFormat" /> , который содержит свойства форматирования для указанной фигуры в трехмерном стиле. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2110,13 +2048,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает заголовок замещающий текст, связанный с диапазона указанной фигуры.</summary>
-        <value>Заголовок замещающий текст, связанный с диапазона указанной фигуры.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>Чтобы задать строки описательный текст замещающий текст для диапазона фигуры, используйте <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.AlternativeText" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает заголовок альтернативного текста, связанного с указанным диапазоном фигур.</summary>
+        <value>Заголовок альтернативного текста, связанного с указанным диапазоном фигур.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para>Чтобы задать строку описания замещающего текста для диапазона фигур, используйте <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.AlternativeText" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Top">
@@ -2145,7 +2081,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от верхнего края верхних фигур в диапазоне фигуры по верхнему краю рабочего листа. Чтение и запись <b>одного</b>.</summary>
+        <summary>Расстояние от верхнего края верхней фигуры до верхнего края листа в диапазоне фигуры. Для чтения и записи, <b>Single</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2173,7 +2109,7 @@
         <ReturnType>Microsoft.Office.Core.MsoShapeType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип фигуры. Только для чтения <see cref="T:Microsoft.Office.Core.MsoShapeType" />.</summary>
+        <summary>Возвращает или задает тип фигуры. Только <see cref="T:Microsoft.Office.Core.MsoShapeType" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2199,12 +2135,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отменяет группировку сгруппированные фигуры в указанные форму или диапазона фигур. Дизассемблируется изображения и объекты OLE указанные форму или диапазона фигур. Возвращает разгруппировании фигур в виде одного <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекта.</summary>
+        <summary>Разгруппирование сгруппированных фигур в указанной фигуре или диапазоне фигур. Разбираются изображения и объекты OLE внутри указанной фигуры или диапазона фигур. Возвращает несгруппированные фигуры в виде одного <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекта.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Так как в группы фигур обрабатывается как один объект, Группировка и разгруппировка фигур изменения количество элементов в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов и изменения номера индекса элементов, следующие за затронутых элементов в коллекции.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Так как Группа фигур обрабатывается как одиночный объект, группирование и разгруппирование фигур изменяет количество элементов в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции и изменяет номера индексов элементов, поступающих после затронутых элементов в коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VerticalFlip">
@@ -2230,8 +2164,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если указанный фигуры отражается вокруг вертикальной оси. Только для чтения <see cref="T:Microsoft.Office.Core.MsoTriState" />.</summary>
+        <summary><b>Значение true</b> , если указанная фигура перевернута вокруг вертикальной оси. Только <see cref="T:Microsoft.Office.Core.MsoTriState" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2259,39 +2192,37 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает координаты вершин указанного freeform документа (и контрольные точки для кривых Безье) в формате пары координат. Только для чтения, <b>объект</b>.</summary>
+        <summary>Возвращает координаты заданных вершин полилинии (и контрольные точки для кривых Безье) в виде ряда пар координат. <b>Объект</b>только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Можно использовать массива, возвращаемого этим свойством как аргумент <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddCurve(System.Object)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddPolyline(System.Object)" /> метод.</para>
-          <para>В следующей таблице показаны как свойство <b>вершин</b> связывает значения в vertArray() массива с координаты вершины треугольника.</para>
+        <remarks><para>Вы можете использовать массив, возвращенный этим свойством, в качестве аргумента <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddCurve(System.Object)" /> метода <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddPolyline(System.Object)" /> или метода.</para>
+          <para>В следующей таблице показано, как свойство <b>вершины</b> связывает значения в массиве вертаррай () с координатами вершин треугольника.</para>
           <list type="table">
             <item>
-              <term>vertArray (1, 1)</term>
-              <description>Расстояние по горизонтали из первой вершины в левой части документа</description>
+              <term>Вертаррай (1, 1)</term>
+              <description>Горизонтальное расстояние от первой вершины до левой части документа.</description>
             </item>
             <item>
-              <term>vertArray (1, 2)</term>
-              <description>Расстояние по вертикали из первой вершины в начало документа</description>
+              <term>Вертаррай (1, 2)</term>
+              <description>Вертикальное расстояние от первой вершины до верха документа.</description>
             </item>
             <item>
-              <term>vertArray (2, 1)</term>
-              <description>Горизонтальная расстояние от второй вершины в левой части документа</description>
+              <term>Вертаррай (2, 1)</term>
+              <description>Расстояние по горизонтали от второй вершины до левой части документа</description>
             </item>
             <item>
-              <term>vertArray (2, 2)</term>
-              <description>Вертикальная расстояние от второй вершины в начало документа</description>
+              <term>Вертаррай (2, 2)</term>
+              <description>Вертикальное расстояние от второй вершины до верха документа.</description>
             </item>
             <item>
-              <term>vertArray (3, 1)</term>
-              <description>Горизонтальная расстояние от третьей вершины в левой части документа</description>
+              <term>Вертаррай (3, 1)</term>
+              <description>Горизонтальное расстояние от третьей вершины до левой части документа.</description>
             </item>
             <item>
-              <term>vertArray (3, 2)</term>
-              <description>Вертикальная расстояние от третьей вершины в начало документа</description>
+              <term>Вертаррай (3, 2)</term>
+              <description>Вертикальное расстояние от третьей вершины до верха документа.</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Visible">
@@ -2351,7 +2282,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина объекта. Чтение и запись <b>одного</b>.</summary>
+        <summary>Ширина объекта. Для чтения и записи, <b>Single</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2379,12 +2310,10 @@
         <Parameter Name="ZOrderCmd" Type="Microsoft.Office.Core.MsoZOrderCmd" />
       </Parameters>
       <Docs>
-        <param name="ZOrderCmd">Требуется <see cref="T:Microsoft.Office.Core.MsoZOrderCmd" />. Указывает, где для перемещения указанного фигуры относительно других фигур.</param>
-        <summary>Перемещает указанный фигуры на переднем плане или из-за других фигур в коллекции (то есть, изменяется фигуры позицию в z порядке).</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.ZOrderPosition" /> свойства, чтобы определить фигуры текущую позицию в z порядке.</para>
-          <para></para>
-        </remarks>
+        <param name="ZOrderCmd">Обязательный <see cref="T:Microsoft.Office.Core.MsoZOrderCmd" />. Указывает, куда перемещать указанную фигуру относительно других фигур.</param>
+        <summary>Помещает указанную фигуру перед или за другими фигурами в коллекции (то есть изменяет положение фигуры по оси Z).</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ShapeRange.ZOrderPosition" /> свойство, чтобы определить текущую позицию фигуры в z — порядке.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ZOrderPosition">
@@ -2410,14 +2339,12 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение указанного фигуры в z порядке. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает позицию указанной фигуры в z — порядке. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы задать положение фигуры в z порядке, используйте <see cref="M:Microsoft.Office.Interop.Excel.ShapeRange.ZOrder(Microsoft.Office.Core.MsoZOrderCmd)" /> метод.</para>
-          <para>Фигура позицию в z порядке, соответствует номеру индекса фигуры в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов. К примеру Если myDocument четыре фигуры, myDocument.Shapes(1) выражение возвращает фигуры на задней z порядка и myDocument.Shapes(4) выражение значение фигуры в начале z порядка.</para>
-          <para>При добавлении новой фигуры в семейство сайтов по умолчанию будет добавлена в начало z порядка.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Чтобы задать положение фигуры в z, используйте <see cref="M:Microsoft.Office.Interop.Excel.ShapeRange.ZOrder(Microsoft.Office.Core.MsoZOrderCmd)" /> метод.</para>
+          <para>Положение фигуры в z-порядке соответствует номеру индекса фигуры в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции. Например, если в Мидокумент имеется четыре фигуры, выражение Мидокумент. Shapes (1) Возвращает фигуру с обратной стороны z-порядка, а выражение Мидокумент. Shapes (4) Возвращает фигуру в начале z-порядка.</para>
+          <para>Когда вы добавляете новую фигуру в коллекцию, она добавляется в начало z-порядка по умолчанию.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="_Worksheet" FullName="Microsoft.Office.Interop.Excel._Worksheet">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7f0ab611aa4d579db9ac504ef7ee328ea8f5b52e" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20583134" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface _Worksheet" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7f0ab611aa4d579db9ac504ef7ee328ea8f5b52e" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20583134" /></Metadata><TypeSignature Language="C#" Value="public interface _Worksheet" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _Worksheet" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel._Worksheet" />
   <TypeSignature Language="VB.NET" Value="Public Interface _Worksheet" />
@@ -26,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Это основной интерфейс в компонентном классе COM, необходимые для управляемого кода для взаимодействия с соответствующим COM-объектом. Этот основной интерфейс используется только в том случае, если метод, который будет использоваться совместно совпадает с именем событие COM-объектом; в этом случае преобразовывается этот интерфейс для вызова метода и приведены последние интерфейс события для подключения к событию. В противном случае используется интерфейс .NET, который является производным от компонентного класса COM для доступа к методы, свойства и события COM-объектом. Дополнительные сведения о COM-объектом, можно <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />.</summary>
+    <summary>Это основной интерфейс в компонентном классе COM, который требуется управляемому программному коду для взаимодействия с соответствующим объектом COM. Используйте этот основной интерфейс только в тех случаях, когда метод, который предполагается использовать, имеет такое же имя, как событие объекта COM; в таких случаях для вызова метода приведите к этому интерфейсу, для соединения с событием приведите к интерфейсу последних событий. Иначе используйте интерфейс .NET, который создается но основе компонентного класса COM для доступа к методам, свойствам и событиям объекта COM. Для получения дополнительных сведений об объекте COM см <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -390,7 +382,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Делает текущий лист активный лист. Эквивалент, щелкнув ярлычок листа.</summary>
+        <summary>Делает текущий лист активным. Эквивалентно щелчку вкладки листа.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -417,7 +409,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -479,12 +471,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.AutoFilter</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" /> объекта, если фильтрация включена. Возвращает <b>значение Nothing</b> , если фильтрация выключена. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" /> объект, если фильтрация включена. Возвращает <b>значение Nothing</b> , если фильтрация отключена. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Чтобы создать объект <b>автофильтра</b> для листа, необходимо включить автофильтра для диапазона на листе либо вручную или с помощью <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Чтобы создать объект <b>автофильтра</b> для листа, необходимо включить функцию автофильтрации для диапазона на листе вручную или с помощью <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> метода <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AutoFilterMode">
@@ -525,13 +515,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если в настоящее время стрелки раскрывающегося списка автофильтра отображаются на листе. Это свойство не зависит от <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.FilterMode" /> свойство. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если стрелки раскрывающегося меню автофильтра отображаются на листе. Это свойство не зависит от <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.FilterMode" /> свойства. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Данное свойство возвращает <b>значение True</b> , если стрелки раскрывающегося списка в данный момент отображаются. Это свойство можно задать значение <b>False</b> для удаления стрелки, но не может быть задано значение <b>True</b>. Использование <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> метод для фильтрации списка и отображения стрелки раскрывающегося списка.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство возвращает <b>значение true</b> , если стрелки раскрывающихся раскрывающихся сообщений в данный момент отображаются. Для этого свойства можно задать <b>значение false</b> , чтобы удалить стрелки, но задать для этого свойства значение <b>true</b>. Используйте <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> метод, чтобы отфильтровать список и отобразить стрелки раскрывающегося списка.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Buttons">
@@ -592,24 +579,22 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Расчет всех открытых книг, определенного рабочего листа в книге или указанный диапазон ячеек на листе, как показано в следующей таблице.</summary>
-        <remarks>
-          <list type="table">
+        <summary>Вычисляет все открытые книги, определенный лист в книге или определенный диапазон ячеек на листе, как показано в следующей таблице.</summary>
+        <remarks><list type="table">
             <item>
-              <term>Всех открытых книг</term>
-              <description>Application.Calculate</description>
+              <term>Все открытые книги</term>
+              <description>Application. Calculate</description>
             </item>
             <item>
-              <term>Один лист</term>
-              <description>Worksheets(1). Вычисление</description>
+              <term>Определенный лист</term>
+              <description>Листы (1). Вычисление</description>
             </item>
             <item>
               <term>Указанный диапазон</term>
-              <description>Worksheets(1). Rows(2). Вычисление</description>
+              <description>Листы (1). Rows (2). Вычисление</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cells">
@@ -635,13 +620,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий все ячейки на листе (не только те ячейки, которые в настоящее время используются). Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет все ячейки на листе (а не только используемые в данный момент ячейки). Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Так как <see cref="P:Microsoft.Office.Interop.Excel.Worksheets.Item(System.Object)" /> свойство является свойством по умолчанию для объекта <b>Range</b> , можно указать индекс строки и столбца сразу же после ключевого слова <b>ячеек</b> . Для получения дополнительных сведений см свойство <b>Item</b> .</para>
-          <para>С помощью этого свойства без квалификатор объекта возвращает объект <b>Range</b> , представляющий все ячейки на активном листе.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Так как <see cref="P:Microsoft.Office.Interop.Excel.Worksheets.Item(System.Object)" /> свойство является свойством по умолчанию для объекта <b>Range</b> , можно указать индекс строки и столбца сразу же после ключевого слова <b>Cells</b> . Дополнительные сведения можно найти в разделе свойство <b>Item</b> .</para>
+          <para>При использовании этого свойства без квалификатора объекта возвращается объект <b>Range</b>, который представляет все ячейки на активном листе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ChartObjects">
@@ -669,13 +652,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный <b>Variant</b>. Имя или номер диаграммы. Этот аргумент может быть массив, чтобы указать несколько диаграмм.</param>
-        <summary>Возвращает объект, представляющий либо одного внедренную диаграмму ( <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> объект) или коллекцию всех внедренных диаграмм ( <see cref="T:Microsoft.Office.Interop.Excel.ChartObjects" /> объекта) на листе.</summary>
+        <param name="Index">Необязательный <b>вариант</b>. Имя или номер диаграммы. Этот аргумент может быть массивом, чтобы указать более одной диаграммы.</param>
+        <summary>Возвращает объект, представляющий либо одну внедренную диаграмму ( <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> объект), либо коллекцию всех внедренных диаграмм ( <see cref="T:Microsoft.Office.Interop.Excel.ChartObjects" /> объект) на листе.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Этот метод не соответствует <see cref="T:Microsoft.Office.Interop.Excel.Charts" /> свойство. Этот метод возвращает внедренные диаграммы; Свойство <b>диаграммы</b> возвращает листы диаграмм. Использование <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объект для внедренную диаграмму.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Этот метод не эквивалентен <see cref="T:Microsoft.Office.Interop.Excel.Charts" /> свойству. Этот метод возвращает внедренные диаграммы; Свойство <b>Charts</b> возвращает листы диаграммы. Используйте <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объект для внедренной диаграммы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CheckBoxes">
@@ -740,15 +721,13 @@
         <Parameter Name="SpellLang" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="CustomDictionary">Необязательный элемент <b>Object</b>. Строка, указывающая имя файла пользовательского словаря, который необходимо проверить, если слово не найдено в основном словаре. Если этот аргумент задан, используется в настоящее время указанного словаря.</param>
-        <param name="IgnoreUppercase">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы пропускать слова, которые являются прописными буквами Microsoft Excel. <b>Значение false</b> для Microsoft Excel слов, которые являются прописными буквами. Если этот аргумент указан, будет использоваться текущее значение.</param>
-        <param name="AlwaysSuggest">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы отобразить список предлагаемых альтернативных вариантов при обнаружении неправильных правописания Microsoft Excel. , <b>Значение false,</b> чтобы ожидать ввода правописания Microsoft Excel. Если этот аргумент указан, будет использоваться текущее значение.</param>
-        <param name="SpellLang">Необязательный элемент <b>Object</b>. Язык словаря. Может иметь одно из значений <b>MsoLanguageID</b> , используемые <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> свойство.</param>
-        <summary>Проверка орфографии в объекте. Эта форма не имеет возвращаемого значения; Microsoft Excel отображает диалоговое окно проверки орфографии.</summary>
-        <remarks>
-          <para>Используйте этот метод для проверки заголовков, нижних колонтитулов и объекты на листе.</para>
-          <para></para>
-        </remarks>
+        <param name="CustomDictionary">Необязательный <b>объект</b>. Строка, указывающая имя файла настраиваемого словаря, который необходимо проверить, если слово не найдено в основном словаре. Если этот аргумент опущен, используется текущий словарь.</param>
+        <param name="IgnoreUppercase">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы Microsoft Excel проигнорировал слова, которые являются прописными. Если выбрано <b>значение false</b> , Microsoft Excel проверяет слова, которые являются прописными. Если этот аргумент не указан, будет использоваться текущий параметр.</param>
+        <param name="AlwaysSuggest">Необязательный <b>объект</b>. <b>Значение true</b> , если в Microsoft Excel отображается список предлагаемых альтернативных слов, если обнаружена Неправильное правописание. <b>Значение false</b> , чтобы Microsoft Excel ожидал ввода правильного правописания. Если этот аргумент не указан, будет использоваться текущий параметр.</param>
+        <param name="SpellLang">Необязательный <b>объект</b>. Язык используемого словаря. Может быть одним из значений <b>мсолангуажеид</b> , используемых <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> свойством.</param>
+        <summary>Проверяет правописание объекта. В этой форме нет возвращаемого значения; В Microsoft Excel отображается диалоговое окно "Правописание".</summary>
+        <remarks><para>Используйте этот метод для проверки верхних и нижних колонтитулов и объектов на листе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CircleInvalid">
@@ -772,7 +751,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Недопустимые записи круга в рабочем листе.</summary>
+        <summary>Раскружков недопустимых записей на листе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -802,7 +781,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон, который содержит первую циклическую ссылку на листе или возвращает <b>значение Nothing</b> , если нет циклические ссылки на листе. Циклические ссылки необходимо удалить перед продолжением вычислений. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон, содержащий первую циклическую ссылку на листе, или <b>значение Nothing</b> , если на листе нет циклической ссылки. Перед выполнением вычисления необходимо удалить циклическую ссылку. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -831,7 +810,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Очищает стрелки с листа. Стрелки трассировки добавляются с помощью функции аудита.</summary>
+        <summary>Удаляет из листа стрелки трассировки. Стрелки слежения добавляются с помощью функции аудита.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -856,11 +835,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Очищает круга из недопустимые записи в рабочем листе.</summary>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.CircleInvalid" /> метод круг ячеек, содержащих недопустимые данные.</para>
-          <para></para>
-        </remarks>
+        <summary>Удаляет круги из недопустимых записей на листе.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.CircleInvalid" /> метод для круга ячеек, содержащих недопустимые данные.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CodeName">
@@ -888,12 +865,10 @@
       <Docs>
         <summary>Возвращает имя кода для объекта. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение, используемое в ячейке справа от <b>(имя)</b> в окне Свойства — это имя кода выбранного объекта. Во время разработки можно изменить имя кода объекта, изменив это значение. Программная не может изменить это свойство во время выполнения.</para>
-          <para>Имя кода для объекта можно использовать вместо выражение, которое возвращает объект.</para>
-          <para>Существует возможность имя должно отличаться от имени кода. При создании листа, имя листа и с кодовым именем совпадают, но изменение имя листа не влияет на имя кода и изменение имени кода (с помощью свойства окно в редакторе Visual Basic) не влияет на имя листа.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Значение, которое отображается в ячейке справа от <b>(имя)</b> в окне Свойства, — это имя выбранного объекта. Во время создания можно изменить имя кода объекта, изменив это значение. Невозможно программно изменить это свойство во время выполнения.</para>
+          <para>Имя кода для объекта можно использовать вместо выражения, которое возвращает объект.</para>
+          <para>Имя листа может отличаться от имени кода. При создании листа имя листа и имя кода одинаковы, но изменение имени листа не приводит к изменению имени кода, а изменение имени кода (с помощью окна свойств в редакторе Visual Basic) не приводит к изменению имени листа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Columns">
@@ -922,7 +897,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий все столбцы на указанный лист. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет все столбцы на указанном листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -950,7 +925,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Comments</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comments" /> коллекции, представляющей все комментарии указанный лист. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comments" /> коллекцию, которая представляет все комментарии для указанного листа. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -981,7 +956,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlConsolidationFunction</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает код функции для текущей консолидации. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> константы. Только для чтения.</summary>
+        <summary>Возвращает код функции, используемый для текущей консолидации. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" /> констант. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1012,25 +987,23 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает массив трех элементов из вариантов консолидации, как показано в следующей таблице. Если элемент имеет <b>значение True</b>, этот параметр имеет значение. Только для чтения, <b>объект</b>.</summary>
+        <summary>Возвращает массив параметров консолидации из трех элементов, как показано в следующей таблице. Если элемент имеет <b>значение true</b>, этот параметр задается. <b>Объект</b>только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <list type="table">
+        <remarks><list type="table">
             <item>
-              <term>1</term>
-              <description>Использование меток в верхней строке.</description>
+              <term>1,1</term>
+              <description>Используйте метки в верхней строке.</description>
             </item>
             <item>
               <term>2</term>
               <description>Использование меток в левом столбце.</description>
             </item>
             <item>
-              <term>3</term>
-              <description>Создание ссылки на источник данных.</description>
+              <term>4</term>
+              <description>Создание ссылок на исходные данные.</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ConsolidationSources">
@@ -1059,7 +1032,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает массив строковых значений, содержащих имена листов источника для текущей консолидации рабочего листа. Возвращает <b>пустой</b> , если нет Консолидация на листе. Только для чтения, <b>объект</b>.</summary>
+        <summary>Возвращает массив строковых значений, которые наименают исходные листы для текущей консолидации листа. Возвращает значение <b>Empty</b> , если на листе отсутствует консолидация. <b>Объект</b>только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1090,13 +1063,11 @@
         <Parameter Name="After" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Лист, перед которым будет размещаться копируемый лист. Не удается задать <paramref name="Before" /> при указании <paramref name="After" />.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться копируемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
-        <summary>Копирование таблицы в другое место в книге.</summary>
-        <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей копируемый лист Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <param name="Before">Необязательный <b>объект</b>. Лист, на котором будет размещаться скопированный лист. Вы не можете <paramref name="Before" /> указать, если <paramref name="After" />вы указали.</param>
+        <param name="After">Необязательный <b>объект</b>. Лист, после которого будет размещаться скопированный лист. Вы не можете <paramref name="After" /> указать, если <paramref name="Before" />вы указали.</param>
+        <summary>Копирует лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не укажете <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создаст новую книгу, содержащую скопированный лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -1122,14 +1093,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> перечисление, указывающее, приложения, в котором был создан этот объект. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <b>xlCreatorCode</b>.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
-        </value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> перечислении, указывающую приложение, в котором был создан этот объект. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только для чтения, <b>кслкреаторкоде</b>.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="CustomProperties">
@@ -1155,12 +1122,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.CustomProperties</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CustomProperties" /> объект, представляющий идентификатор сведения, связанные с рабочим листом.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CustomProperties" /> объект, представляющий сведения об идентификаторе, связанном с листом.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Для свойства <b>настраиваемые свойства</b> сведения о идентификатор для листа может представлять метаданных для XML.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для свойства <b>CustomProperties</b> данные идентификатора листа могут представлять метаданные для XML.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -1188,10 +1153,8 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <remarks>
-          <para>При удалении <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />, этот метод отображает диалоговое окно с запросом подтверждения удаления. Это диалоговое окно отображается по умолчанию. Метод <b>Delete</b> возвращает <b>логическое</b> значение, которое присвоено <b>значение False</b> , если пользователь нажатия кнопки "Отмена" в диалоговом окне или <b>значение True,</b> Если пользователь выбрал удалить.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При удалении <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" />этого метода отображается диалоговое окно, предлагающее пользователю подтвердить удаление. Это диалоговое окно отображается по умолчанию. Метод <b>Delete</b> возвращает <b>логическое</b> значение <b>false</b> , если пользователь нажимает кнопку Cancel (Отмена) в диалоговом окне или <b>значение true</b> , если пользователь нажимает кнопку Delete (удалить).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayAutomaticPageBreaks">
@@ -1263,13 +1226,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если отображать разрывов страниц (Автоматическая и ручная) на указанный лист. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если на указанном листе отображаются разрывы страниц (автоматические и ручные). Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство нельзя установить, если у вас нет установленного принтера.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Невозможно задать это свойство, если принтер не установлен.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayRightToLeft">
@@ -1304,8 +1264,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если в указанном окне, лист или <b>ListObject</b> отображается справа налево, а не слева направо. <b>Значение false,</b> Если объект отображается слева направо. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если заданное окно, лист или <b>ListObject</b> отображаются справа налево, а не слева направо. <b>False</b> , если объект отображается слева направо. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1444,13 +1403,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если стрелки автофильтра включены при использовании защиты только пользовательского интерфейса. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True</b> , если стрелки автофильтра включены при включении защиты только пользовательских интерфейсов. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется для каждого листа и не будет сохранен с листом или сеанса.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство применяется к каждому листу и не сохраняется в рабочем листе или сеансе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableCalculation">
@@ -1479,13 +1435,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel будут автоматически перерассчитаны рабочего листа при необходимости. <b>Значение false,</b> Если Excel не пересчитывать лист. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если Microsoft Excel автоматически пересчитывает лист при необходимости. <b>False</b> , если Excel не пересчитывает лист. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если значение этого свойства имеет <b>значение False</b>, запрос перерасчета невозможен. При изменении значения с <b>False</b> на <b>True</b>лист пересчитывается.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если для этого свойства задано значение <b>false</b>, запрос на пересчет невозможен. При изменении значения с " <b>false</b> " на <b>true</b>Excel пересчитывает лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableFormatConditionsCalculation">
@@ -1514,15 +1467,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает в случае условные форматы будут автоматически по мере необходимости. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Если параметр имеет значение <b>True</b> (по умолчанию), ознакомительная версия условные форматы происходит автоматически по мере необходимости.  Если задано значение <b>False</b>, условные форматы не будет повторно вычисляется.  Все ранее примененное условное форматирование будет отображаться, но он не будет как значения ячейки или <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.AppliesTo" /> изменены диапазонов.  </para>
-          <para>Этот флаг это позволяет разработчикам полностью настроить правило перед его оценкой.  Это особенно удобно в тех случаях, когда условие применяется через большой диапазон как производительности может быть медленным, в таких случаях.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает значение, указывающее, будут ли условные форматы выполняться автоматически по мере необходимости. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Если задано <b>значение true</b> (по умолчанию), при необходимости Оценка условных форматов будет выполнена автоматически.  Если задано значение <b>false</b>, условные форматы не будут переоцениваться.  Все ранее примененные условные форматирования будут отображаться, но не будут обновляться по мере изменения значений <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.AppliesTo" /> в ячейках или диапазонов.  </para>
+          <para>Назначение этого флага позволяет программистам полностью настроить правило перед его оценкой.  Это особенно полезно, если условие применяется к большому диапазону, так как в таких случаях производительность может быть низкой.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableOutlining">
@@ -1557,13 +1506,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если символы структуры отображаются при использовании защиты только пользовательского интерфейса. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если структурированные символы включены при включении защиты только пользовательских интерфейсов. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется для каждого листа и не будет сохранен с листом или сеанса.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство применяется к каждому листу и не сохраняется в рабочем листе или сеансе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnablePivotTable">
@@ -1598,14 +1544,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если элементы управления сводной таблицы и действия включены при использовании защиты только пользовательского интерфейса. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если элементы управления и действия сводной таблицы включены при включении защиты только пользовательских интерфейсов. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство применяется для каждого листа и не будет сохранен с листом или сеанса.</para>
-          <para>Должен быть достаточное количество Незаблокированные ячейки, в правой части отчета сводной таблицы для Microsoft Excel для пересчета и отображения отчета сводной таблицы.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство применяется к каждому листу и не сохраняется в рабочем листе или сеансе.</para>
+          <para>Должно быть достаточное количество незаблокированных ячеек ниже и справа от отчета сводной таблицы для Microsoft Excel, чтобы пересчитать и отобразить отчет сводной таблицы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="EnableSelection">
@@ -1634,12 +1577,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlEnableSelection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, что можно выбрать на листе. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlEnableSelection" />.</summary>
+        <summary>Возвращает или задает значение, которое может быть выбрано на листе. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlEnableSelection" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство действует только в том случае, когда лист защищен: <b>xlNoSelection</b> отключает все параметры, выбранные на листе, <b>xlUnlockedCells</b> разрешает только те ячейки, для свойства <b>Locked</b> имеет <b>значение False</b> для выбора и <b> xlNoRestrictions</b> позволяет выбрать любую ячейку.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство вступает в силу только в том случае, если лист защищен: <b>кслноселектион</b> предотвращает выбор на листе, <b>кслунлоккедцеллс</b> разрешает выбирать только те ячейки, для которых свойство <b>locked</b> имеет <b>значение false</b> , а <b>кслнорестриктионс</b> позволяет выбрать любую ячейку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Evaluate">
@@ -1668,22 +1609,19 @@
         <Parameter Name="Name" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">
-          <b>Строковое значение.</b> Имя объекта, используя соглашение об именовании Microsoft Excel.</param>
-        <summary>Преобразуется в Microsoft Excel имя объекта или значение.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя объекта с использованием соглашения об именовании Microsoft Excel.</param>
+        <summary>Преобразует имя Microsoft Excel в объект или значение.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>С помощью этого метода можно использовать следующие типы имен в Microsoft Excel:</para>
+        <remarks><para>С этим методом можно использовать следующие типы имен в Microsoft Excel:</para>
           <list type="bullet">
             <item>
               <description>Определенные имена. Можно указать любое имя.</description>
             </item>
             <item>
-              <description>Внешние ссылки. Вы можете использовать! оператор, который должен ссылаться на таблицу, определенные в другой книге.</description>
+              <description>Внешние ссылки. Вы можете использовать параметр! оператор для ссылки на лист, определенный в другой книге.</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ExportAsFixedFormat">
@@ -1716,23 +1654,18 @@
         <Parameter Name="FixedFormatExtClassPtr" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Тип формата файла для экспорта.</param>
-        <param name="Filename">Имя файла для сохранения файла. Можно включить полный путь или short_Excel2007 сохраняет файл в текущей папке.</param>
-        <param name="Quality">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XlFixedFormatQuality" />. Задает качество публикуемого файла.</param>
-        <param name="IncludeDocProperties">
-          <b>Значение true,</b> Чтобы включить свойства документа; в противном случае — <b>False</b>.</param>
-        <param name="IgnorePrintAreas">
-          <b>Значение true,</b> следует ли игнорировать области печати, установленные при публикации; в противном случае — <b>False</b>.</param>
-        <param name="From">Номер страницы, с которого следует начинать публикации. Если этот аргумент задан, публикация начинается с начала.</param>
-        <param name="To">Номер последней страницы для публикации. Если этот аргумент задан, публикация заканчивается на последней странице.</param>
-        <param name="OpenAfterPublish">
-          <b>Значение true</b> для отображения файла в средстве просмотра после его публикации; в противном случае — <b>False</b>.</param>
-        <param name="FixedFormatExtClassPtr">Указатель на класс <b>FixedFormatExt</b> .</param>
-        <summary>Экспорт в файл указанного формата.</summary>
-        <remarks>
-          <para>Этот метод также поддерживает инициализацию надстройки для экспорта файла в файл фиксированного формата. Например Excel выполнит преобразование формата файла, если имеются преобразователи. Преобразование обычно запущенных пользователем.</para>
-          <para></para>
-        </remarks>
+        <param name="Type">Формат файла для экспорта.</param>
+        <param name="Filename">Имя файла, который необходимо сохранить. Вы можете включить полный путь или short_Excel2007 сохранит файл в текущей папке.</param>
+        <param name="Quality">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFixedFormatQuality" />параметр. Указывает качество опубликованного файла.</param>
+        <param name="IncludeDocProperties"><b>Значение true</b> , чтобы включить свойства документа; в противном случае — <b>false</b>.</param>
+        <param name="IgnorePrintAreas"><b>Значение true</b> , чтобы игнорировать области печати, заданные при публикации; в противном случае — <b>false</b>.</param>
+        <param name="From">Номер страницы, с которой начинается публикация. Если этот аргумент опущен, публикация начинается с самого начала.</param>
+        <param name="To">Номер последней публикуемой страницы. Если этот аргумент опущен, публикация завершается с последней страницей.</param>
+        <param name="OpenAfterPublish"><b>Значение true</b> для отображения файла в средстве просмотра после его публикации; в противном случае — <b>false</b>.</param>
+        <param name="FixedFormatExtClassPtr">Указатель на класс <b>фикседформатекст</b> .</param>
+        <summary>Экспортирует в файл указанного формата.</summary>
+        <remarks><para>Этот метод также поддерживает инициализацию надстройки для экспорта файла в файл фиксированного формата. Например, при наличии конвертеров Excel будет выполнять преобразование формата файлов. Преобразование обычно инициируется пользователем.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FilterMode">
@@ -1761,13 +1694,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если лист находится в режиме фильтра. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если рабочий лист находится в режиме фильтрации. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство равно <b>True</b> , если таблица содержит фильтрованный список, в котором есть скрытые строки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство имеет <b>значение true</b> , если лист содержит отфильтрованный список, в котором есть скрытые строки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GroupBoxes">
@@ -1861,12 +1791,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.HPageBreaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> разрывов коллекции, представляющей горизонтальной страницы на листе. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> коллекцию, представляющую горизонтальные разрывы страниц на листе. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Существует ограничение в 1 026 горизонтальных разрывов страниц на листе.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>На листе может быть не более 1 026 горизонтальных страниц.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Hyperlinks">
@@ -1892,7 +1820,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Hyperlinks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Hyperlinks" /> коллекции, представляющей гиперссылок для диапазон или таблицу.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Hyperlinks" /> коллекцию, представляющую гиперссылки для диапазона или листа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1923,7 +1851,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции подобных объектов индекса. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает номер индекса объекта в коллекции схожих объектов. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2053,7 +1981,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ListObjects</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объектов в книге. Семейство <b>объектов ListObject</b> только для чтения.</summary>
+        <summary>Возвращает коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объектов в рабочем листе. Коллекция объектов <b>ListObject</b> , доступная только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2081,7 +2009,7 @@
         <ReturnType>Microsoft.Office.Core.MsoEnvelope</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Представляет заголовок электронной почты для документа.</summary>
+        <summary>Представляет заголовок сообщения электронной почты для документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2112,13 +2040,11 @@
         <Parameter Name="After" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Лист, перед которым будет размещаться перемещаемый лист. Не удается задать <paramref name="Before" /> при указании <paramref name="After" />.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться перемещаемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
-        <summary>Перемещает окно в другое место в книге</summary>
-        <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей перемещаемый лист Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <param name="Before">Необязательный <b>объект</b>. Лист, на котором будет размещаться перемещенный лист. Вы не можете <paramref name="Before" /> указать, если <paramref name="After" />вы указали.</param>
+        <param name="After">Необязательный <b>объект</b>. Лист, после которого будет помещен перемещенный лист. Вы не можете <paramref name="After" /> указать, если <paramref name="Before" />вы указали.</param>
+        <summary>Перемещение листа в другое место в книге</summary>
+        <remarks><para>Если вы не укажете <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создаст новую книгу, содержащую перемещенный лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -2175,7 +2101,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Names</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Names" /> коллекции, представляющей все имена конкретного листа (имена, определенные с помощью «WorksheetName!» префикс). Объект <b>имена</b> только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Names" /> коллекцию, которая представляет все имена, зависящие от листа (имена, определенные с помощью "воркшитнаме!" префикс). Объект <b>имен</b> , предназначенных только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2203,13 +2129,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Chart" />, <see cref="T:Microsoft.Office.Interop.Excel.Range" />, или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объект, представляющий следующий лист или ячейки. Только для чтения.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.Chart" />, <see cref="T:Microsoft.Office.Interop.Excel.Range" />или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объект, представляющий следующий лист или ячейку. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект является диапазон, это свойство моделирует клавишу TAB, хотя свойство возвращает следующую ячейку без ее выделения.</para>
-          <para>На защищенном листе данное свойство возвращает разблокированными переход к следующей ячейке. На листе незащищенного данное свойство всегда возвращает ячейку, сразу справа от указанной ячейке.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект является диапазоном, это свойство эмулирует клавишу TAB, хотя свойство возвращает следующую ячейку, не выбирая ее.</para>
+          <para>На защищенном листе это свойство возвращает следующую незаблокированную ячейку. На незащищенном листе это свойство всегда возвращает ячейку, находящийся непосредственно справа от указанной ячейки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OLEObjects">
@@ -2237,8 +2161,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Имя или номер объекта OLE.</param>
-        <summary>Возвращает объект, который представляет один объект OLE ( <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" />) или коллекцию всех объектов OLE ( <see cref="T:Microsoft.Office.Interop.Excel.OLEObjects" /> коллекции) на диаграммы или таблицы. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Имя или номер объекта OLE.</param>
+        <summary>Возвращает объект, представляющий либо один объект OLE (a <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" />), либо коллекцию всех объектов OLE ( <see cref="T:Microsoft.Office.Interop.Excel.OLEObjects" /> коллекций) на диаграмме или листе. Только для чтения.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2558,7 +2482,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Outline</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Outline" /> объект, представляющий структуры для указанного рабочего листа. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Outline" /> объект, представляющий структуру указанного листа. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2620,7 +2544,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PageSetup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PageSetup" /> объект, содержащий все установки параметров страницы для указанного объекта. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PageSetup" /> объект, который содержит все параметры настройки страницы для указанного объекта. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2679,14 +2603,12 @@
         <Parameter Name="Link" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Destination">Необязательный элемент <b>Object</b>. A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который указывает, где необходимо вставить содержимое буфера обмена. Если этот аргумент задан, используется текущее выделение. Этот аргумент может быть указан только если содержимое буфера обмена может быть вставлено в диапазон. Если этот параметр задан, <paramref name="Link" /> аргумент не может использоваться.</param>
-        <param name="Link">Необязательный элемент <b>Object</b>. <b>Значение true</b> для установления связи источник вставленные данные. Если этот параметр задан, <paramref name="Destination" /> аргумент не может использоваться. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Вставка содержимого буфера обмена в лист.</summary>
-        <remarks>
-          <para>Если не указать <paramref name="Destination" /> аргумент, необходимо выбрать диапазон назначения прежде чем использовать этот метод.</para>
-          <para>Этот метод может изменить выделение таблицы, в зависимости от содержимого буфера обмена.</para>
-          <para></para>
-        </remarks>
+        <param name="Destination">Необязательный <b>объект</b>. <see cref="T:Microsoft.Office.Interop.Excel.Range" /> Объект, указывающий место вставки содержимого буфера обмена. Если этот аргумент не указан, используется текущий выделенный фрагмент. Этот аргумент можно указать только в том случае, если содержимое буфера обмена можно вставить в диапазон. Если этот аргумент указан, то <paramref name="Link" /> аргумент не может быть использован.</param>
+        <param name="Link">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы установить ссылку на источник вставленных данных. Если этот аргумент указан, то <paramref name="Destination" /> аргумент не может быть использован. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Вставит содержимое буфера обмена на лист.</summary>
+        <remarks><para>Если не указать <paramref name="Destination" /> аргумент, перед использованием этого метода необходимо выбрать конечный диапазон.</para>
+          <para>Этот метод может изменить выбор листа в зависимости от содержимого буфера обмена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PasteSpecial">
@@ -2720,21 +2642,19 @@
         <Parameter Name="NoHTMLFormatting" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Format">Необязательный элемент <b>Object</b>. Строка, задающая формат буфера обмена данных.</param>
-        <param name="Link">Необязательный элемент <b>Object</b>. <b>Значение true</b> для установления связи источник вставленные данные. Если источник данных не допускают связывание или исходное приложение не поддерживает создание ссылок, этот параметр игнорируется. Значение по умолчанию — <b>False</b>.</param>
-        <param name="DisplayAsIcon">Необязательный элемент <b>Object</b>. <b>Значение true</b> для отображения вставленные данные в виде значка. Значение по умолчанию — <b>False</b>.</param>
-        <param name="IconFileName">Необязательный элемент <b>Object</b>. Имя файла, содержащего значок, чтобы использовать, если <paramref name="DisplayAsIcon" /> имеет <b>значение True</b>.</param>
-        <param name="IconIndex">Необязательный элемент <b>Object</b>. Номер индекса значка в пределах файла значка.</param>
-        <param name="IconLabel">Необязательный элемент <b>Object</b>. Текстовая подпись значка.</param>
-        <param name="NoHTMLFormatting">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы удалить все форматирование, гиперссылки и рисунки из HTML-код. <b>Значение false,</b> Чтобы вставить HTML-код, как есть. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Вставка содержимого буфера обмена в лист, используя заданный формат. Используйте этот метод для вставки данных из других приложений или вставки данных в определенном формате.</summary>
-        <remarks>
-          <para>
-            <paramref name="NoHTMLFormatting" />будет только данному при <paramref name="Format" /> = «HTML». Во всех остальных случаях <paramref name="NoHTMLFormatting" /> будет игнорироваться.</para>
-          <para>Необходимо выбрать диапазон назначения, прежде чем использовать этот метод.</para>
-          <para>Этот метод может изменить выделение таблицы, в зависимости от содержимого буфера обмена.</para>
-          <para></para>
-        </remarks>
+        <param name="Format">Необязательный <b>объект</b>. Строка, определяющая формат буфера обмена данными.</param>
+        <param name="Link">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы установить ссылку на источник вставленных данных. Если исходные данные не подходят для связывания или если исходное приложение не поддерживает связывание, этот параметр игнорируется. Значение по умолчанию — <b>False</b>.</param>
+        <param name="DisplayAsIcon">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отобразить вставленные данные в виде значка. Значение по умолчанию — <b>False</b>.</param>
+        <param name="IconFileName">Необязательный <b>объект</b>. Имя файла, содержащего значок, который следует использовать, если <paramref name="DisplayAsIcon" /> он имеет <b>значение true</b>.</param>
+        <param name="IconIndex">Необязательный <b>объект</b>. Номер индекса значка в файле значка.</param>
+        <param name="IconLabel">Необязательный <b>объект</b>. Текстовая подпись значка.</param>
+        <param name="NoHTMLFormatting">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы удалить все форматирование, гиперссылки и изображения из HTML-кода. <b>False</b> , чтобы вставить HTML как есть. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Вставит содержимое буфера обмена на лист с использованием указанного формата. Используйте этот метод для вставки данных из других приложений или для вставки данных в определенном формате.</summary>
+        <remarks><para>
+            <paramref name="NoHTMLFormatting" />имеет значения только тогда <paramref name="Format" /> , когда = "HTML". Во всех остальных случаях <paramref name="NoHTMLFormatting" /> будет игнорироваться.</para>
+          <para>Перед использованием этого метода необходимо выбрать конечный диапазон.</para>
+          <para>Этот метод может изменить выбор листа в зависимости от содержимого буфера обмена.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Pictures">
@@ -2796,8 +2716,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Имя или номер отчета.</param>
-        <summary>Возвращает объект, представляющий либо один отчет сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект) или коллекцию всех отчетов сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> объекта) на листе. Только для чтения.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Имя или номер отчета.</param>
+        <summary>Возвращает объект, представляющий либо один отчет сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект), либо коллекцию всех отчетов сводной таблицы ( <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> объект) на листе. Только для чтения.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2842,23 +2762,23 @@
         <Parameter Name="Connection" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SourceType">Необязательный элемент <b>Object</b>. Источник данных отчета. Может иметь одно из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" />.constants.</param>
-        <param name="SourceData">Необязательный элемент <b>Object</b>. Данные для нового отчета. Может быть <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, массив диапазонов или константа текст, представляющий имя другого отчета. Для внешней базы данных <paramref name="SourceData" /> представляет собой массив строк, содержащий строку запроса SQL, где каждый элемент — это длиной до 255 знаков. Следует использовать <paramref name="Connection" /> для указания строка подключения ODBC. Для обеспечения совместимости с предыдущими версиями Excel <paramref name="SourceData" /> может быть двух элементов массива. Первый элемент является строка подключения, определяющее источник данных ODBC. Второй элемент — строка запроса SQL, используемый для получения данных. При указании <paramref name="SourceData" />, необходимо также указать <paramref name="SourceType" />. Если активную ячейку находится внутри <paramref name="SourceData" /> диапазона, необходимо указать <paramref name="TableDestination" /> также.</param>
-        <param name="TableDestination">Необязательный элемент <b>Object</b>. Объект <b>Range</b> , указывающий, куда следует поместить в рабочем листе. Если этот аргумент указан, отчет помещается в активную ячейку.</param>
-        <param name="TableName">Необязательный элемент <b>Object</b>. Строка, которая указывает имя нового отчета.</param>
-        <param name="RowGrand">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы отображать общие итоги для строк в отчете.</param>
-        <param name="ColumnGrand">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы показать общие итоги для столбцов в отчете.</param>
-        <param name="SaveData">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы сохранить данные в отчете. <b>Значение false</b> для сохранения только определение отчета.</param>
-        <param name="HasAutoFormat">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы Microsoft Excel автоматически формат отчета при его обновлении или при перемещении полей.</param>
-        <param name="AutoPage">Необязательный элемент <b>Object</b>. Только если <paramref name="SourceType" /> — это <b>xlConsolidation</b>. <b>Значение true,</b> Чтобы создать поле страницы для консолидации Microsoft Excel. Если <paramref name="AutoPage" /> равно <b>False</b>, необходимо создать или поля страницы.</param>
-        <param name="Reserved">Необязательный элемент <b>Object</b>. Не используется с Microsoft Excel.</param>
-        <param name="BackgroundQuery">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы приложение Excel выполнения запросов для отчета асинхронно (в фоновом режиме). Значение по умолчанию — <b>False</b>.</param>
-        <param name="OptimizeCache">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы оптимизировать кэш сводной таблицы при его создании. Значение по умолчанию — <b>False</b>.</param>
-        <param name="PageFieldOrder">Необязательный элемент <b>Object</b>. Порядок страниц поля добавляются в макет отчета сводной таблицы. Может иметь одно из следующих констант <b>XlOrder</b> : <b>xlDownThenOver</b> или <b>xlOverThenDown</b>. Значение по умолчанию — <b>xlDownThenOver</b>.</param>
-        <param name="PageFieldWrapCount">Необязательный элемент <b>Object</b>. Количество полей страницы в столбцы или строки в отчете сводной таблицы. Значение по умолчанию — нуль (0).</param>
-        <param name="ReadData">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы создать кэш сводной таблицы, содержащий все записи из внешней базы данных; в этом кэше может быть очень большим. Если <paramref name="ReadData" /> равно <b>False</b>, можно задать некоторые поля как на стороне сервера поля страниц перед фактически чтения данных.</param>
-        <param name="Connection">Необязательный элемент <b>Object</b>. Строка, содержащая параметры ODBC, которые позволяют Excel подключаться к источнику данных ODBC. Строка подключения имеет вид «ODBC; &lt;строка подключения&gt;«. Этот аргумент переопределяет все предыдущие параметры для <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объекта <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойство.</param>
-        <summary>Создает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта. Этот метод не отображает мастер сводных таблиц. Этот метод недоступен для источников данных OLE DB. Использование <see cref="M:Microsoft.Office.Interop.Excel.Worksheets.Add(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить в кэш сводной таблицы, а затем создайте отчет сводной таблицы на основе кэша. Объект <b>сводной таблицы</b> .</summary>
+        <param name="SourceType">Необязательный <b>объект</b>. Источник данных отчета. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" />констант.</param>
+        <param name="SourceData">Необязательный <b>объект</b>. Данные для нового отчета. Может быть <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, массив диапазонов или текстовая константа, представляющая имя другого отчета. Для внешней базы данных <paramref name="SourceData" /> — это массив строк, содержащий строку запроса SQL, длина каждого элемента которого составляет до 255 символов. Используйте аргумент, <paramref name="Connection" /> чтобы указать строку подключения ODBC. Для обеспечения совместимости с более ранними версиями <paramref name="SourceData" /> Excel можно использовать массив из двух элементов. Первый элемент — это строка подключения, указывающая источник ODBC для данных. Второй элемент — это строка SQL-запроса, используемая для получения данных. Если указано <paramref name="SourceData" />, необходимо также указать <paramref name="SourceType" />. Если активная ячейка находится внутри <paramref name="SourceData" /> диапазона, необходимо также указать <paramref name="TableDestination" /> значение.</param>
+        <param name="TableDestination">Необязательный <b>объект</b>. Объект <b>Range</b> , указывающий место размещения отчета на листе. Если этот аргумент опущен, отчет помещается в активную ячейку.</param>
+        <param name="TableName">Необязательный <b>объект</b>. Строка, указывающая имя нового отчета.</param>
+        <param name="RowGrand">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы показывать общие итоги для строк в отчете.</param>
+        <param name="ColumnGrand">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы показывать общие итоги для столбцов в отчете.</param>
+        <param name="SaveData">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы сохранить данные с отчетом. <b>Значение false</b> , чтобы сохранить только определение отчета.</param>
+        <param name="HasAutoFormat">Необязательный <b>объект</b>. <b>True</b> , чтобы Microsoft Excel автоматически отформатирует отчет при его обновлении или перемещении полей.</param>
+        <param name="AutoPage">Необязательный <b>объект</b>. Допустимо только в <paramref name="SourceType" /> том случае, если указан <b>кслконсолидатион</b>. <b>Значение true</b> , если Microsoft Excel создает поле страницы для консолидации. Если <paramref name="AutoPage" /> параметр имеет <b>значение false</b>, необходимо создать поле или поля страницы.</param>
+        <param name="Reserved">Необязательный <b>объект</b>. Не используется в Microsoft Excel.</param>
+        <param name="BackgroundQuery">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы Excel выполнял асинхронные запросы к отчету (в фоновом режиме). Значение по умолчанию — <b>False</b>.</param>
+        <param name="OptimizeCache">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы оптимизировать кэш сводной таблицы при его создании. Значение по умолчанию — <b>False</b>.</param>
+        <param name="PageFieldOrder">Необязательный <b>объект</b>. Порядок, в котором поля страницы добавляются в макет отчета сводной таблицы. Может быть одной из следующих констант <b>кслордер</b> : <b>кслдовнсеновер</b> или <b>ксловерсендовн</b>. Значение по умолчанию — <b>кслдовнсеновер</b>.</param>
+        <param name="PageFieldWrapCount">Необязательный <b>объект</b>. Число полей страницы в каждом столбце или строке в отчете сводной таблицы. Значение по умолчанию: 0 (ноль).</param>
+        <param name="ReadData">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы создать кэш сводной таблицы, который содержит все записи из внешней базы данных; Этот кэш может быть очень большим. Если <paramref name="ReadData" /> этот параметр имеет <b>значение false</b>, то перед фактическим чтением данных можно задать некоторые поля в качестве полей страницы на сервере.</param>
+        <param name="Connection">Необязательный <b>объект</b>. Строка, содержащая параметры ODBC, позволяющие Excel подключаться к источнику данных ODBC. Строка подключения имеет форму "ODBC; &lt;строка&gt;подключения ". Этот аргумент переопределяет все предыдущие параметры для <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойства объекта.</param>
+        <summary>Создает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект. В этом методе мастер сводных таблиц не отображается. Этот метод недоступен для источников данных OLE DB. Используйте <see cref="M:Microsoft.Office.Interop.Excel.Worksheets.Add(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить кэш сводной таблицы, а затем создайте отчет сводной таблицы на основе кэша. Объект <b>сводной таблицы</b> .</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2886,13 +2806,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Chart" />, <see cref="T:Microsoft.Office.Interop.Excel.Range" />, или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объект, представляющий предыдущей таблицы или ячейки. Только для чтения.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.Chart" />, <see cref="T:Microsoft.Office.Interop.Excel.Range" />или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объект, представляющий предыдущий лист или ячейку. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект является диапазон, это свойство моделирует нажатие клавиши SHIFT + TAB; в отличие от сочетания клавиш, тем не менее, это свойство возвращает предыдущую ячейку без ее выделения.</para>
-          <para>На защищенном листе данное свойство возвращает предыдущую ячейку разблокированными. На листе незащищенного данное свойство всегда возвращает ячейку, сразу же слева от указанной ячейке.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект является диапазоном, это свойство эмулирует нажатие клавиш SHIFT + TAB; Однако в отличие от сочетания клавиш, свойство возвращает предыдущую ячейку, не выбирая ее.</para>
+          <para>На защищенном листе это свойство возвращает предыдущую незаблокированную ячейку. На незащищенном листе это свойство всегда возвращает ячейку, находящийся непосредственно слева от указанной ячейки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintedCommentPages">
@@ -2918,14 +2836,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает число страниц примечаний, которые печатается для текущего листа.</summary>
-        <value>Число страниц примечаний, которые печатается для текущего листа.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.PrintedCommentPages" /> Свойство будет возвращать только число больше 0, если комментарии на вкладке таблицы параметры страницы диалоговое окно задано значение в конце листа. Это свойство будет возвращать ноль, если лист диаграммы или листом диалога MS Excel 5.0.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает количество страниц примечаний, которые будут распечатаны для текущего листа.</summary>
+        <value>Количество страниц примечаний, которые будут печататься для текущего листа.</value>
+        <remarks><para>Только для чтения.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Excel._Worksheet.PrintedCommentPages" /> Свойство возвращает число больше нуля, если для параметра комментарии на вкладке лист диалогового окна Параметры страницы задано значение в конце листа. Это свойство возвращает ноль, если лист является листом диаграммы или листом диалога MS Excel 5,0.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintOut">
@@ -2963,19 +2878,17 @@
         <Parameter Name="PrToFileName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="From">Необязательный элемент <b>Object</b>. Номер страницы, с которого следует начинать печати. Если этот аргумент задан, печать начинается с самого начала.</param>
-        <param name="To">Необязательный элемент <b>Object</b>. Номер последней страницы для печати. Если этот аргумент задан, печать заканчивается на последней странице.</param>
-        <param name="Copies">Необязательный элемент <b>Object</b>. Число копий для печати. Если этот аргумент задан, печатается одна копия.</param>
-        <param name="Preview">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы вызвать предварительного просмотра перед печатью объекта Microsoft Excel. <b>Значение false</b> (или опущен) для печати на объект немедленно.</param>
-        <param name="ActivePrinter">Необязательный элемент <b>Object</b>. Задает имя активного принтера.</param>
-        <param name="PrintToFile">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> не указан, Microsoft Excel выводит запрос на ввод имени выходного файла.</param>
-        <param name="Collate">Необязательный элемент <b>Object</b>. <b>Значение true</b> для сортировки нескольких копий.</param>
-        <param name="PrToFileName">Необязательный элемент <b>Object</b>. Если <paramref name="PrintToFile" /> имеет значение <b>True</b>, этот аргумент указывает имя файла, который вы хотите напечатать для.</param>
+        <param name="From">Необязательный <b>объект</b>. Номер страницы, с которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
+        <param name="To">Необязательный <b>объект</b>. Номер последней страницы, которую требуется напечатать. Если этот аргумент опущен, печать заканчивается на последней странице.</param>
+        <param name="Copies">Необязательный <b>объект</b>. Число копий для печати. Если этот аргумент не задан, печатается одна копия.</param>
+        <param name="Preview">Необязательный <b>объект</b>. <b>Значение true</b> , если Microsoft Excel вызывает предварительный просмотр перед печатью объекта. <b>Значение false</b> (или опущено) для немедленной печати объекта.</param>
+        <param name="ActivePrinter">Необязательный <b>объект</b>. Задает имя активного принтера.</param>
+        <param name="PrintToFile">Необязательный <b>объект</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> параметр не указан, Microsoft Excel предлагает пользователю ввести имя выходного файла.</param>
+        <param name="Collate">Необязательный <b>объект</b>. <b>Значение true</b> для разбора по копиям нескольких копий.</param>
+        <param name="PrToFileName">Необязательный <b>объект</b>. Если <paramref name="PrintToFile" /> задано <b>значение true</b>, этот аргумент указывает имя файла, в который будет выполняться печать.</param>
         <summary>Печатает объект.</summary>
-        <remarks>
-          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц, не в целом страниц на листе или рабочей книги.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>"Pages" (страницы) <paramref name="From" /> в <paramref name="To" /> описаниях и относится к печатным страницам, а не к общим страницам листа или книги.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintOutEx">
@@ -3049,8 +2962,8 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы включить изменения в указанный лист.</param>
-        <summary>Показывает предварительного просмотра объекта, как будет выглядеть при печати.</summary>
+        <param name="EnableChanges">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы включить изменения на указанном листе.</param>
+        <summary>Показывает предварительный просмотр объекта в том виде, в котором он будет выглядеть при печати.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3091,30 +3004,28 @@
         <Parameter Name="AllowUsingPivotTables" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password">Необязательный элемент <b>Object</b>. Строка, определяющая с учетом регистра пароль для листа или книги. Если этот аргумент задан, можно снять листа или книги без с помощью пароля. В противном случае необходимо указать пароль для снятия защиты с листа или книги. Если вы забыли пароль, не может снять защиту листа или книги. Рекомендуется хранить в надежном месте список паролей и соответствующие имена документов.</param>
-        <param name="DrawingObjects">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы защитить фигур. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Contents">Необязательный элемент <b>Object</b>. <b>Значение true</b> для защиты содержимого. Диаграмма обеспечивает защиту всей диаграммы. Лист обеспечивает защиту заблокированные ячейки. Значение по умолчанию — <b>True</b>.</param>
-        <param name="Scenarios">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы защитить сценариев. Этот параметр используется только для таблиц. Значение по умолчанию — <b>True</b>.</param>
-        <param name="UserInterfaceOnly">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы защитить пользовательского интерфейса, но не макросов. Если этот аргумент указан, защита применяется с макросами и пользовательского интерфейса.</param>
-        <param name="AllowFormattingCells">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может форматирование любой ячейки защищенного рабочего листа. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowFormattingColumns">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может форматирование любого столбца защищенного рабочего листа. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowFormattingRows">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может форматирование любой строки защищенного рабочего листа. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowInsertingColumns">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может вставить столбцы из защищенного рабочего листа. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowInsertingRows">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может вставить строки из защищенного рабочего листа. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowInsertingHyperlinks">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может вставить гиперссылки в рабочем листе. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowDeletingColumns">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может удалять столбцы защищенного рабочего листа, где каждый ячейку в столбце к удалению не заблокирована. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowDeletingRows">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может удалять строки из защищенного рабочего листа если каждой ячейки в строке к удалению не заблокирована. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowSorting">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может сортировать защищенного рабочего листа. Каждой ячейки в диапазоне сортировки необходимо разблокировать или без защиты. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowFiltering">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может задать фильтры из защищенного рабочего листа. Пользователи могут изменить критерии фильтрации, но не можно включить или отключить автоматическое фильтра. Пользователи могут устанавливать фильтры на основе существующего автоматически. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AllowUsingPivotTables">Необязательный элемент <b>Object</b>. <b>Значение true,</b> пользователь может использовать отчеты сводных таблиц защищенного рабочего листа. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Защищает рабочий лист, чтобы его нельзя изменить.</summary>
-        <remarks>
-          <para>Если применить метод <b>защитить</b> с <paramref name="UserInterfaceOnly" /> аргумент значение <b>True</b> для листа и затем сохранить рабочую книгу всю таблицу (не только интерфейс) будет защищен при открытии книги. Чтобы повторно включить защиты пользовательского интерфейса после открытия книги, необходимо еще раз применить метод <b>защитить</b> с <paramref name="UserInterfaceOnly" /> присвоено <b>значение True</b>.</para>
-          <para>Если вы хотите внести изменения в защищенный лист, можно использовать метод <b>защитить</b> защищенного рабочего листа, если предоставлен пароль. Другой метод использовался бы для снятия защиты с листа, внесите необходимые изменения и затем снова защитить лист.</para>
+        <param name="Password">Необязательный <b>объект</b>. Строка, которая указывает пароль, учитывающий регистр, для листа или книги. Если этот аргумент не указан, можно снять защиту листа или книги, не используя пароль. В противном случае необходимо указать пароль для снятия защиты листа или книги. Если вы забыли пароль, вы не сможете снять защиту листа или книги. Рекомендуется хранить список паролей и соответствующих им имен документов в надежном месте.</param>
+        <param name="DrawingObjects">Необязательный <b>объект</b>. <b>Значение true</b> для защиты фигур. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Contents">Необязательный <b>объект</b>. <b>Значение true</b> для защиты содержимого. Для диаграммы это обеспечивает защиту всей диаграммы. Для листа защищает заблокированные ячейки. Значение по умолчанию — <b>True</b>.</param>
+        <param name="Scenarios">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы защитить сценарии. Этот аргумент действителен только для листов. Значение по умолчанию — <b>True</b>.</param>
+        <param name="UserInterfaceOnly">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы защитить пользовательский интерфейс, но не макросы. Если этот аргумент опущен, защита применяется как к макросам, так и к пользовательскому интерфейсу.</param>
+        <param name="AllowFormattingCells">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю форматировать любую ячейку на защищенном листе. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowFormattingColumns">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю форматировать любой столбец на защищенном листе. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowFormattingRows">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю форматировать любую строку на защищенном листе. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowInsertingColumns">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю вставлять столбцы на защищенный лист. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowInsertingRows">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю вставлять строки на защищенный лист. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowInsertingHyperlinks">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю вставлять гиперссылки на листе. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowDeletingColumns">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю удалять столбцы на защищенном листе, где каждая ячейка удаляемого столбца разблокируется. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowDeletingRows">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю удалять строки на защищенном листе, где каждая ячейка удаляемой строки разблокирована. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowSorting">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю сортировать защищенный лист. Каждая ячейка в диапазоне сортировки должна быть разблокирована или незащищена. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowFiltering">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю устанавливать фильтры для защищенного листа. Пользователи могут изменять критерии фильтрации, но не могут включать или отключать автоматический фильтр. Пользователи могут устанавливать фильтры для существующего автоматического фильтра. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AllowUsingPivotTables">Необязательный <b>объект</b>. <b>Значение true</b> позволяет пользователю использовать отчеты сводной таблицы на защищенном листе. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Защищает лист, чтобы его нельзя было изменить.</summary>
+        <remarks><para>Если вы примените метод <b>Protect</b> , для <paramref name="UserInterfaceOnly" /> аргумента которого задано <b>значение true</b> , а затем сохраните книгу, при повторном открытии книги весь лист (а не только интерфейс) будет полностью защищен. Чтобы повторно включить защиту пользовательского интерфейса после открытия книги, необходимо повторно применить метод <b>Protect</b> со <paramref name="UserInterfaceOnly" /> значением <b>true</b>.</para>
+          <para>Если вы хотите внести изменения в защищенный лист, можно использовать метод <b>Protect</b> на защищенном листе, если он указан. Другой способ — снять защиту листа, внести необходимые изменения, а затем снова защитить лист.</para>
           <para>
-            <b>Примечание</b>: «Unprotected» означает, что ячейка может быть заблокирована (диалоговое окно Формат ячеек), но включен в диапазон, определенный в окне Разрешить изменение диапазонов диалоговое окно, и пользователь защиту с диапазона с помощью пароля или проверки разрешений NT.</para>
-          <para></para>
-        </remarks>
+            <b>Note</b>: "unprotectd" означает, что ячейка может быть заблокирована (диалоговое окно Format Cells), но включена в диапазон, определенный в диалоговом окне Разрешить изменение диапазонов, а пользователь не защищает диапазон паролем или проверил с помощью разрешений NT.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ProtectContents">
@@ -3143,8 +3054,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если содержимое листа защищены. Диаграмма обеспечивает защиту всей диаграммы. Лист обеспечивает защиту отдельные ячейки. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если содержимое листа защищено. Для диаграммы это обеспечивает защиту всей диаграммы. Для листа это позволяет защитить отдельные ячейки. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3175,8 +3085,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если фигур защищены. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Значение true</b> , если фигуры защищены. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3204,7 +3113,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Protection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Protection" /> объект, представляющий параметры защиты рабочего листа.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Protection" /> объект, представляющий параметры защиты листа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3235,8 +3144,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если включена защиты только пользовательского интерфейса. Чтобы включить защиты пользовательского интерфейса, используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Protect(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод с <paramref name="UserInterfaceOnly" /> аргумент присвоено <b>значение True</b>. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если включена защита "только пользовательский интерфейс". Чтобы включить защиту пользовательского интерфейса, используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Protect(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод с аргументом, <paramref name="UserInterfaceOnly" /> для которого задано <b>значение true</b>. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3267,8 +3175,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если сценарии рабочего листа защищены. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если сценарии рабочего листа защищены. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3296,7 +3203,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.QueryTables</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.QueryTables" /> коллекции, представляющей все таблицы запросов на указанный лист. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.QueryTables" /> коллекцию, которая представляет все таблицы запросов на указанном листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3328,9 +3235,9 @@
         <Parameter Name="Cell2" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Cell1">Требуется <b>объект</b>. Имя диапазона. Это должно быть ссылка в стиле A1 на языке макрос. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Может также включать знак доллара, но они будет игнорироваться. Можно использовать локально определенное имя в любой части диапазона. Если используется имя, предполагается, что имя является языке макрос.</param>
-        <param name="Cell2">Необязательный элемент <b>Object</b>. Ячейка в левом верхнем и нижнем правом углу диапазона. Может быть объект <b>диапазон</b> , который содержит одну ячейку, целый столбец или всю строку или он может быть строкой, именем ячейки на языке макрос.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет ячейки или диапазона ячеек.</summary>
+        <param name="Cell1">Обязательный <b>объект</b>. Имя диапазона. Это должна быть ссылка в стиле A1 на языке макроса. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Он также может включать знаки доллара, но они игнорируются. Можно использовать локально определенное имя в любой части диапазона. При использовании имени предполагается, что оно записано на языке макроса.</param>
+        <param name="Cell2">Необязательный <b>объект</b>. Ячейка в левом верхнем и правом нижнем углах диапазона. Может быть объектом <b>Range</b>, содержащим одну ячейку, весь столбец или всю строку, или строкой, указывающей одну ячейку на языке макроса.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейку или диапазон ячеек.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3390,7 +3297,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сброс разрывов страниц на указанный лист.</summary>
+        <summary>Сбрасывает все разрывы страниц на указанном листе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3420,7 +3327,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий все строки на указанный лист. Объект <b>Range</b> только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет все строки на указанном листе. Объект <b>Range</b> предназначен только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3456,17 +3363,17 @@
         <Parameter Name="Local" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">Необязательный элемент <b>Object</b>. Строка, указывающая имя сохраняемого файла. Можно включить полный путь; Если вы не произошло, Microsoft Excel сохраняет файл в текущей папке.</param>
-        <param name="FileFormat">Необязательный элемент <b>Object</b>. Формат файла, который будет использоваться при сохранении файла. Список доступных в разделе <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> свойство. Для существующего файла формат по умолчанию — это последний формата файла, указанного; для нового файла по умолчанию используется формат версии Excel используется.</param>
-        <param name="Password">Необязательный элемент <b>Object</b>. С учетом регистра строку (не более 15 символов), которое указывает, защиты паролем для файла.</param>
-        <param name="WriteResPassword">Необязательный элемент <b>Object</b>. Строка, указывающая записи пароль для этого файла. Если файл сохранен в кодировке пароль и пароль не указан при открытии файла, файл открыт только для чтения.</param>
-        <param name="ReadOnlyRecommended">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы отображать сообщение при открытии файла рекомендуя открыть файл только для чтения.</param>
-        <param name="CreateBackup">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы создать файл резервной копии.</param>
-        <param name="AddToMru">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы добавить эту книгу в список недавно использовавшихся файлов. Значение по умолчанию — <b>False</b>.</param>
-        <param name="TextCodepage">Необязательный элемент <b>Object</b>. Не используется в США английская Microsoft Excel.</param>
-        <param name="TextVisualLayout">Необязательный элемент <b>Object</b>. Не используется в США английская Microsoft Excel.</param>
-        <param name="Local">Необязательный элемент <b>Object</b>. <b>Значение true,</b> сохранение файлов с языковыми Microsoft Excel (в том числе настройки панели управления). <b>Значение false</b> (по умолчанию) — сохранение файлов с языка Visual Basic для приложений (VBA) (как правило английский (США) Если проекта VBA, где выполняется Workbooks.Open из старого международные проекта VBA XL5/95).</param>
-        <summary>Сохраняет изменения диаграммы или таблицы в другой файл.</summary>
+        <param name="Filename">Необязательный <b>объект</b>. Строка, указывающая имя сохраняемого файла. Можно включить полный путь; в противном случае Microsoft Excel сохранит файл в текущей папке.</param>
+        <param name="FileFormat">Необязательный <b>объект</b>. Формат файла, используемый при сохранении файла. Список допустимых вариантов можно узнать в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> свойстве. Для существующего файла форматом по умолчанию является последний указанный формат файла; для нового файла значением по умолчанию является формат используемой версии Excel.</param>
+        <param name="Password">Необязательный <b>объект</b>. Строка с учетом регистра (не более 15 символов), которая указывает пароль защиты, присваиваемый файлу.</param>
+        <param name="WriteResPassword">Необязательный <b>объект</b>. Строка, указывающая пароль для резервирования записи для этого файла. Если файл сохраняется с паролем и не предоставляется пароль при открытии файла, файл открывается только для чтения.</param>
+        <param name="ReadOnlyRecommended">Необязательный <b>объект</b>. <b>Значение true</b> для отображения сообщения при открытии файла с рекомендацией открыть файл только для чтения.</param>
+        <param name="CreateBackup">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы создать файл резервной копии.</param>
+        <param name="AddToMru">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы добавить эту книгу в список недавно использовавшихся файлов. Значение по умолчанию — <b>False</b>.</param>
+        <param name="TextCodepage">Необязательный <b>объект</b>. Не используется в Microsoft Excel на английском языке (США).</param>
+        <param name="TextVisualLayout">Необязательный <b>объект</b>. Не используется в Microsoft Excel на английском языке (США).</param>
+        <param name="Local">Необязательный <b>объект</b>. <b>True</b> — сохраняет файлы на языке Microsoft Excel (включая параметры панели управления). <b>False</b> (по умолчанию) — сохранение файлов на языке Visual Basic для приложений (VBA) (обычно это английский (США)), если проект VBA, где запущены книги, не является устаревшим международным проектом Xl5/95 VBA.</param>
+        <summary>Сохраняет изменения диаграммы или листа в другом файле.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3495,8 +3402,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необязательный элемент <b>Object</b>. Имя или номер сценария. Позволяет указать несколько сценариев массив.</param>
-        <summary>Возвращает объект, представляющий либо один сценарий ( <see cref="T:Microsoft.Office.Interop.Excel.Scenario" /> объект) или семейство этих сценариев ( <see cref="T:Microsoft.Office.Interop.Excel.Scenarios" /> объект) в рабочем листе.</summary>
+        <param name="Index">Необязательный <b>объект</b>. Имя или номер сценария. Используйте массив, чтобы указать несколько сценариев.</param>
+        <summary>Возвращает объект, представляющий либо один сценарий ( <see cref="T:Microsoft.Office.Interop.Excel.Scenario" /> объект), либо набор сценариев ( <see cref="T:Microsoft.Office.Interop.Excel.Scenarios" /> объект) на листе.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3527,7 +3434,7 @@
         <ReturnType>Microsoft.Office.Core.Scripts</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.Scripts" /> коллекции, которая содержит <see cref="T:Microsoft.Office.Core.Script" /> объектов, представляющих блоки кода в указанный документ или сценарий при сохранении в качестве веб-страницы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.Scripts" /> коллекцию, которая содержит <see cref="T:Microsoft.Office.Core.Script" /> объекты, представляющие блоки скрипта или кода в указанном документе при его сохранении в виде веб-страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3558,12 +3465,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает диапазон, в котором разрешена прокрутка виде ссылки на диапазон стиля A1. Невозможно выбрать ячейки вне области прокрутки. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает диапазон, в котором разрешена прокрутка в качестве ссылки на диапазон в стиле a1. Ячейки, не входящие в область прокрутки, не могут быть выбраны. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Этому свойству присвоено значение пустая строка ("») для поддержки выбора ячейки для всего листа.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Задайте для этого свойства пустую строку (""), чтобы включить выделение ячеек для всего листа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScrollBars">
@@ -3625,12 +3530,10 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный элемент <b>Object</b>. Объект для замены.</param>
-        <summary>Выбор объекта.</summary>
-        <remarks>
-          <para>Чтобы выбрать ячейки или диапазона ячеек, используйте метод <b>Select</b> . Чтобы сделать одну ячейку активной ячейки, используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Activate" /> метод.</para>
-          <para></para>
-        </remarks>
+        <param name="Replace">Необязательный <b>объект</b>. Заменяемый объект.</param>
+        <summary>Выбирает объект.</summary>
+        <remarks><para>Чтобы выбрать ячейку или диапазон ячеек, используйте метод <b>SELECT</b> . Чтобы сделать одну ячейку активной ячейкой, используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.Activate" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetBackgroundPicture">
@@ -3656,9 +3559,8 @@
         <Parameter Name="Filename" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Имя файла рисунка.</param>
-        <summary>Задание фонового рисунка для листа или диаграммы.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя графического файла.</param>
+        <summary>Задает фоновый рисунок для листа или диаграммы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3685,7 +3587,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shapes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> объект, представляющий все фигуры на лист или лист диаграммы. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> объект, который представляет все фигуры на листе или листе диаграммы. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3714,7 +3616,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Делает видимой все строки в настоящее время фильтрованный список. Если автофильтра, этот метод изменяется с помощью стрелок «Все».</summary>
+        <summary>Делает видимыми все строки в текущий отфильтрованный список. Если используется Автофильтр, этот метод изменяет стрелки на "все".</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3742,12 +3644,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображение формы данных, связанных с рабочего листа.</summary>
-        <remarks>
-          <para>Выполнение приостанавливается при использовании формы данных. При закрытии формы, выполнение возобновляется со строки, следующей метод <b>ShowDataForm</b> .</para>
-          <para>Этот метод запускает пользовательской формы данных, если он существует.</para>
-          <para></para>
-        </remarks>
+        <summary>Отображает форму данных, связанную с листом.</summary>
+        <remarks><para>Выполнение приостанавливается, пока вы используете форму данных. При закрытии формы данных выполнение возобновляется со строки, следующей за методом <b>шовдатаформ</b> .</para>
+          <para>Этот метод выполняет пользовательскую форму данных, если она существует.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SmartTags">
@@ -3776,7 +3676,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SmartTags</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SmartTags" /> объект, представляющий идентификатор для указанной ячейке.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SmartTags" /> объект, представляющий идентификатор для указанной ячейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3804,10 +3704,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sort</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает отсортированные значения в текущем рабочего листа. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Sort" />
-        </value>
+        <summary>Возвращает отсортированные значения на текущем листе. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Sort" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3871,7 +3769,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает высоту по умолчанию все строки в рабочем листе в пунктах. Только для чтения <b>Double</b>.</summary>
+        <summary>Возвращает стандартную высоту всех строк листа в пунктах (по умолчанию). Только для чтения, <b>Double</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3908,12 +3806,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ширину standard (по умолчанию) всех столбцов на листе. Для чтения и записи, <b>Double</b>.</summary>
+        <summary>Возвращает или задает стандартную (по умолчанию) ширину всех столбцов на листе. Для чтения и записи, <b>Double</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Единицы ширины столбца равна ширине одного знака в обычный стиль. Для пропорциональных шрифтов используется ширина символа 0 (ноль).</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Одна единица измерения ширины столбца равна ширине одного символа в стиле Normal. Для пропорциональных шрифтов используется ширина знака 0 (ноль).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Tab">
@@ -3939,7 +3835,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Tab</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Tab" /> объект для диаграммы или листа.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Tab" /> объект диаграммы или листа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4016,8 +3912,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel с помощью правила вычисления выражений Lotus 1-2-3 рабочего листа. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если Microsoft Excel использует правила оценки выражений Lotus 1-2-3 для листа. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4060,8 +3955,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel с помощью правила ввода формул Lotus 1-2-3 рабочего листа. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если Microsoft Excel использует правила ввода формул Lotus 1-2-3 для листа. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4092,7 +3986,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSheetType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип рабочего листа. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlSheetType" />.</summary>
+        <summary>Возвращает или задает тип листа. Только <see cref="T:Microsoft.Office.Interop.Excel.XlSheetType" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4122,12 +4016,10 @@
         <Parameter Name="Password" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password">Необязательный элемент <b>Object</b>. Строка, указывающая с учетом регистра пароль, используемый для снятия защиты с листа или книги. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если опустить аргумент для листа, который был защищен паролем вы будет запрашиваться пароль. Если опустить аргумент для книги, защищенные паролем, происходит сбой метода.</param>
-        <summary>Снятие защиты листа или книги. Этот метод не оказывает влияния Если лист или книга незащищен.</summary>
-        <remarks>
-          <para>Если забыт пароль, не может снять защиту листа или книги. Рекомендуется хранить в надежном месте список паролей и соответствующие имена документов.</para>
-          <para></para>
-        </remarks>
+        <param name="Password">Необязательный <b>объект</b>. Строка, указывающая пароль с учетом регистра, который будет использоваться для снятия защиты листа или книги. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если опустить этот аргумент для листа, защищенного паролем, вам будет запрошен пароль. Если опустить этот аргумент для книги, защищенной паролем, метод завершится ошибкой.</param>
+        <summary>Снимает защиту с листа или книги. Этот метод не работает, если лист или книга не защищены.</summary>
+        <remarks><para>Если вы забыли пароль, вы не сможете снять защиту листа или книги. Рекомендуется хранить список паролей и соответствующих им имен документов в надежном месте.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="UsedRange">
@@ -4156,7 +4048,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий используемого диапазона на указанный лист. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий используемый диапазон на заданном листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4195,11 +4087,9 @@
       <Docs>
         <summary>Определяет, является ли объект видимым. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlSheetVisibility" />.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Visible</b> для элемента сводной таблицы имеет <b>значение True</b> , если элемент в данный момент виден в таблице.</para>
-          <para>Если свойство <b>Visible</b> для имени задано значение <b>False</b>, имя не будет отображаться в диалоговом окне Определение имени.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Visible</b> элемента сводной таблицы имеет <b>значение true</b> , если элемент в данный момент отображается в таблице.</para>
+          <para>Если свойству <b>Visible</b> присвоено значение <b>false</b>, имя не будет отображаться в диалоговом окне Определение имени.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VPageBreaks">
@@ -4225,7 +4115,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.VPageBreaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> разрывов коллекции, представляющей вертикальной страницы на листе. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> коллекцию, представляющую вертикальные разрывы страниц на листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4254,16 +4144,14 @@
         <Parameter Name="Map" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="XPath">Требуется <b>объект</b>. Выражение XPath для запроса.</param>
-        <param name="SelectionNamespaces">Необязательный элемент <b>Object</b>. Разделитель пробел <b>строку</b> , содержащую пространств имен, используемых в параметр XPath. Возникнет ошибка во время выполнения, если один из заданных пространств имен не может быть разрешен.</param>
-        <param name="Map">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" />. Укажите сопоставления XML, чтобы запросить XPath в пределах определенной карты.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет ячейки, сопоставленные с конкретной XPath. Возвращает <b>значение Nothing</b> , если указанный XPath не сопоставлен с рабочим листом, или если сопоставленный диапазон пуст.</summary>
+        <param name="XPath">Обязательный <b>объект</b>. XPath для запроса.</param>
+        <param name="SelectionNamespaces">Необязательный <b>объект</b>. <b>Строка</b> с разделителями-пробелами, содержащая пространства имен, указанные в параметре XPath. Если одно из указанных пространств имен не удается разрешить, будет создана ошибка во время выполнения.</param>
+        <param name="Map">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" />параметр. Укажите карту XML, если вы хотите запросить XPath в определенном сопоставлении.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейки, сопоставленные с определенным XPath. Возвращает <b>значение Nothing</b> , если указанный XPath не сопоставлен с листом, или если сопоставленный диапазон пуст.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Средства XML, за исключением сохранения файлов в формате таблиц XML, доступны только в профессиональном выпуске Microsoft Office 2003 и Microsoft Office Excel 2003.</para>
-          <para>Если выражение XPath в пределах столбца в XML-список, <b>диапазон</b> объект, возвращенный отсутствует строка заголовка или вставить строку.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+          <para>Если XPath существует в столбце в XML-списке, возвращаемый объект <b>Range</b> не включает строку заголовка или строку вставки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="XmlMapQuery">
@@ -4290,16 +4178,14 @@
         <Parameter Name="Map" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="XPath">Требуется <b>объект</b>. Выражение XPath для запроса.</param>
-        <param name="SelectionNamespaces">Необязательный элемент <b>Object</b>. Разделитель пробел <b>строку</b> , содержащую пространств имен, используемых в параметр XPath. Возникнет ошибка во время выполнения, если один из заданных пространств имен не может быть разрешен.</param>
-        <param name="Map">Необязательные <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" />. Укажите сопоставления XML, чтобы запросить XPath в пределах определенной карты.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет ячейки, сопоставленные с конкретной XPath. Возвращает <b>значение Nothing</b> , если указанный XPath не сопоставлен с рабочим листом.</summary>
+        <param name="XPath">Обязательный <b>объект</b>. XPath для запроса.</param>
+        <param name="SelectionNamespaces">Необязательный <b>объект</b>. <b>Строка</b> с разделителями-пробелами, содержащая пространства имен, указанные в параметре XPath. Если одно из указанных пространств имен не удается разрешить, будет создана ошибка во время выполнения.</param>
+        <param name="Map">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" />параметр. Укажите карту XML, если вы хотите запросить XPath в определенном сопоставлении.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейки, сопоставленные с определенным XPath. Возвращает <b>значение Nothing</b> , если указанный XPath не сопоставлен с листом.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Средства XML, за исключением сохранения файлов в формате таблиц XML, доступны только в профессиональном выпуске Microsoft Office 2003 и Microsoft Office Excel 2003.</para>
-          <para>В отличие от <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.XmlDataQuery(System.String,System.Object,System.Object)" /> метод, метод <b>XmlMapQuery</b> возвращает целый столбец списка XML, включая строки заголовка и вставить строку.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+          <para>В отличие от <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.XmlDataQuery(System.String,System.Object,System.Object)" /> метода, метод <b>ксмлмапкуери</b> возвращает весь столбец XML-списка, в том числе строку заголовка и строку вставки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

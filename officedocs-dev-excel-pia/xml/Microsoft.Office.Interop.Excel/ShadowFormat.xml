@@ -1,13 +1,5 @@
 <Type Name="ShadowFormat" FullName="Microsoft.Office.Interop.Excel.ShadowFormat">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5eeac5f0fb754a2bafeb2c032994726f97c18d68" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20584436" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ShadowFormat : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5eeac5f0fb754a2bafeb2c032994726f97c18d68" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20584436" /></Metadata><TypeSignature Language="C#" Value="public interface ShadowFormat : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ShadowFormat implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ShadowFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ShadowFormat&#xA;Implements _IMsoDispObj" />
@@ -30,11 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет теневой форматирования для <see cref="T:Microsoft.Office.Interop.Excel.Shape" />.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Shape.Shadow" /> свойство для возвращения <see cref="T:Microsoft.Office.Interop.Excel.ShadowFormat" /> объекта.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет форматирование тени для <see cref="T:Microsoft.Office.Interop.Excel.Shape" />.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.Shadow" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.ShadowFormat" /> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -94,10 +84,8 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает степень размытости указанной shadow. Для чтения и записи.</summary>
-        <value>
-          <b>Double</b>
-        </value>
+        <summary>Возвращает или задает степень размытия указанного тени. Для чтения и записи.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -129,11 +117,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ForeColor">
@@ -162,7 +148,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ColorFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorFormat" /> объект, который представляет указанный основной заливки или цвета фона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorFormat" /> объект, представляющий заданный цвет переднего плана или сплошной заливки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -190,12 +176,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько смещение тени перемещаемых по горизонтали в точках. Положительное значение перемещает тени вправо; отрицательное значение перемещает его слева.</param>
-        <summary>Меняет горизонтальное смещение тени, указанное число пунктов.</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.ShadowFormat.OffsetX" /> свойство, чтобы задать смещение абсолютный горизонтальной тени.</para>
-          <para></para>
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко смещение тени будет перемещено горизонтально в точках. Положительное значение перемещает тень вправо; отрицательное значение перемещается влево.</param>
+        <summary>Изменяет горизонтальное смещение тени на указанное количество точек.</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ShadowFormat.OffsetX" /> свойство, чтобы задать абсолютное смещение горизонтальной тени.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IncrementOffsetY">
@@ -221,12 +205,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Требуется <b>один</b>. Указывает, насколько смещение тени перемещаемых по вертикали в точках. Положительное значение перемещает тени; отрицательное значение перемещает его вверх.</param>
-        <summary>Вертикальное смещение тени изменяет указанное число точек.</summary>
-        <remarks>
-          <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.ShadowFormat.OffsetY" /> свойство, чтобы задать смещение абсолютный вертикальной тени.</para>
-          <para></para>
-        </remarks>
+        <param name="Increment">Обязательное <b>одно</b>. Указывает, насколько далеко смещение тени перемещается по вертикали в точках. Положительное значение перемещает тень вниз; отрицательное значение перемещается вверх.</param>
+        <summary>Изменяет вертикальное смещение тени на указанное количество точек.</summary>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ShadowFormat.OffsetY" /> свойство, чтобы установить абсолютное смещение тени по вертикали.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Obscured">
@@ -255,8 +237,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если теневая указанного фигуры появится заполнения и замещается фигуры, даже если фигуры без заливки. <b>Значение false,</b> Если теневая есть без заливки и структуры тени виден через фигуры Если фигура имеет без заливки.</summary>
+        <summary><b>Значение true</b> , если тень указанной фигуры отображается в заполненном месте и закрывается фигурой, даже если фигура не имеет заливки. <b>False</b> , если тень не имеет заливки, а контур тени виден через фигуру, если фигура не имеет заливки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -287,13 +268,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает горизонтальное смещение тени заданной фигуры в точках.</summary>
+        <summary>Возвращает или задает горизонтальное смещение тени от указанной фигуры в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Положительное значение смещения тени справа от фигуры; отрицательное значение смещения его слева.</para>
-          <para>Если нужно переместить тень по горизонтали или по вертикали из текущей позиции без указания абсолютного положения, используйте <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetY(System.Single)" /> метод.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Положительное значение смещает тень к правому краю фигуры; отрицательное значение смещается влево.</para>
+          <para>Если требуется Сдвинуть тень горизонтально или вертикально от текущей позиции без указания абсолютной позиции, используйте <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetY(System.Single)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="OffsetY">
@@ -322,13 +301,11 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает вертикальное смещение тени заданной фигуры в точках.</summary>
+        <summary>Возвращает или задает вертикальное смещение тени от указанной фигуры в пунктах.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Положительное значение смещения тени справа от фигуры; отрицательное значение смещения его слева.</para>
-          <para>Если нужно переместить тень по горизонтали или по вертикали из текущей позиции без указания абсолютного положения, используйте <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetY(System.Single)" /> метод.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Положительное значение смещает тень к правому краю фигуры; отрицательное значение смещается влево.</para>
+          <para>Если требуется Сдвинуть тень горизонтально или вертикально от текущей позиции без указания абсолютной позиции, используйте <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetX(System.Single)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.ShadowFormat.IncrementOffsetY(System.Single)" /> метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -385,10 +362,8 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoTriState" /> , представляет ли поворот тени, когда вращающимся <see cref="T:Microsoft.Office.Interop.Excel.Shape" />. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoTriState" />
-        </value>
+        <summary>Возвращает или задает значение <see cref="T:Microsoft.Office.Core.MsoTriState" /> , указывающее, следует ли повернуть тень при вращении <see cref="T:Microsoft.Office.Interop.Excel.Shape" />. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoTriState" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -418,10 +393,8 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер указанного тени. Для чтения и записи.</summary>
-        <value>
-          <b>Single</b>
-        </value>
+        <summary>Возвращает или задает размер указанной теневой копии. Для чтения и записи.</summary>
+        <value><b>Одинарное с плавающей точкой</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -451,12 +424,9 @@
         <ReturnType>Microsoft.Office.Core.MsoShadowStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или использует <see cref="T:Microsoft.Office.Core.MsoShadowStyle" /> объект, который требуется задать стиль указанной shadow. Для чтения и записи.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Core.MsoShadowStyle" />
-        </value>
-        <remarks>
-          <para>В следующей таблице показаны возможные значения для <see cref="P:Microsoft.Office.Interop.Excel.ShadowFormat.Style" />.</para>
+        <summary>Возвращает или использует <see cref="T:Microsoft.Office.Core.MsoShadowStyle" /> объект, чтобы задать стиль указанной тени. Для чтения и записи.</summary>
+        <value><see cref="T:Microsoft.Office.Core.MsoShadowStyle" /></value>
+        <remarks><para>В следующей таблице приведены возможные значения для параметра <see cref="P:Microsoft.Office.Interop.Excel.ShadowFormat.Style" />.</para>
           <list type="table">
             <item>
               <term>
@@ -474,8 +444,7 @@
               </term>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Transparency">
@@ -504,12 +473,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает степень прозрачности указанного заливки как значение от 0,0 (Непрозрачный) до 1.0 (Очистить).</summary>
+        <summary>Возвращает или задает степень прозрачности указанной заливки как значение от 0,0 (непрозрачная) до 1,0 (полностью прозрачная).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Значение этого свойства влияет на внешний вид сплошного заливки и линии. он не влияет на внешний вид Узорные линии или узора, градиента, рисунков или текстуры заливки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Значение этого свойства влияет только на внешний вид сплошных заливок и линий; Он не оказывает никакого действия над видом узорных линий или узором, градиентом, рисунком или текстурным заполнением.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -538,7 +505,7 @@
         <ReturnType>Microsoft.Office.Core.MsoShadowType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип формата теневой.</summary>
+        <summary>Возвращает или задает тип формата тени.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

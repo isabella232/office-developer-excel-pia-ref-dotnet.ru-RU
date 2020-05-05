@@ -1,13 +1,5 @@
 <Type Name="Parameter" FullName="Microsoft.Office.Interop.Excel.Parameter">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="4cb6832911d3c4a327d4bf9eea8ec30d60695a98" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20581706" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Parameter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4cb6832911d3c4a327d4bf9eea8ec30d60695a98" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581706" /></Metadata><TypeSignature Language="C#" Value="public interface Parameter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Parameter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Parameter" />
   <TypeSignature Language="VB.NET" Value="Public Interface Parameter" />
@@ -29,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет один параметр, используемый в запросе с параметрами. Объект <b>параметра</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> семейства сайтов.</summary>
+    <summary>Представляет один параметр, используемый в запросе с параметрами. Объект <b>Parameter</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Parameters" /> коллекции.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -84,12 +76,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DataType">
@@ -118,7 +108,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlParameterDataType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип данных параметра указанному запросу. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlParameterDataType" />.</summary>
+        <summary>Возвращает или задает тип данных указанного параметра запроса. Чтение и запись <see cref="T:Microsoft.Office.Interop.Excel.XlParameterDataType" />.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,7 +195,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получение фразы, в котором пользователь значение параметра в запросе с параметрами. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает фразу, которая запрашивает у пользователя значение параметра в запросе с параметрами. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -236,13 +226,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если в таблице указанному запросу обновляется при каждом изменении значения параметра запроса. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Имеет значение true</b> , если указанная таблица запросов обновляется при изменении значения параметра запроса с параметрами. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство можно задать значение <b>True</b> , только в том случае, если вы используете параметры типа <b>xlRange</b> и если указанный параметр имеет значение в ячейке. Обновление происходит при изменении значения ячейки.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Для этого свойства можно задать <b>значение true</b> только в том случае, если используются параметры типа <b>кслранже</b> , и если значение параметра, на который указывает ссылка, находится в одной ячейке. Обновление происходит при изменении значения ячейки.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetParam">
@@ -269,9 +256,9 @@
         <Parameter Name="Value" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Interop.Excel.XlParameterType" />.</param>
-        <param name="Value">Требуется <b>объект</b>. Значение указанного параметра, как показано в описании <paramref name="Type" /> аргумент.</param>
-        <summary>Определяет параметр для таблицы указанному запросу.</summary>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlParameterType" />.</param>
+        <param name="Value">Обязательный <b>объект</b>. Значение указанного параметра, как показано в описании <paramref name="Type" /> аргумента.</param>
+        <summary>Определяет параметр для указанной таблицы запроса.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -298,7 +285,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейку, содержащую значение параметра указанному запросу. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий ячейку, в которой содержится значение указанного параметра запроса. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -326,7 +313,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlParameterType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип параметра. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlParameterType" />.</summary>
+        <summary>Возвращает или задает тип параметра. Только <see cref="T:Microsoft.Office.Interop.Excel.XlParameterType" />для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -354,7 +341,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Значение параметра. Дополнительные сведения можно <see cref="T:Microsoft.Office.Interop.Excel.Parameter" /> объекта. Только для чтения, <b>объект</b>.</summary>
+        <summary>Значение параметра. Более подробную информацию можно узнать <see cref="T:Microsoft.Office.Interop.Excel.Parameter" /> в разделе Object. <b>Объект</b>только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

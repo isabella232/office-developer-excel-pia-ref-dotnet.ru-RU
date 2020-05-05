@@ -1,13 +1,5 @@
 <Type Name="AllowEditRange" FullName="Microsoft.Office.Interop.Excel.AllowEditRange">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="5ed1c5d1b07edaa52f829f20631c74db61529a28" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20580103" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AllowEditRange" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5ed1c5d1b07edaa52f829f20631c74db61529a28" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580103" /></Metadata><TypeSignature Language="C#" Value="public interface AllowEditRange" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AllowEditRange" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AllowEditRange" />
   <TypeSignature Language="VB.NET" Value="Public Interface AllowEditRange" />
@@ -29,12 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет ячейки, которые можно редактировать в защищенном листе.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.AllowEditRanges.Add(System.String,Microsoft.Office.Interop.Excel.Range,System.Object)" /> метод или <see cref="P:Microsoft.Office.Interop.Excel.AllowEditRanges.Item(System.Object)" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.AllowEditRanges" /> коллекции для возврата объекта <b>AllowEditRange</b> .</para>
-      <para>После возврата объекта <b>AllowEditRange</b> можно использовать <see cref="M:Microsoft.Office.Interop.Excel.AllowEditRange.ChangePassword(System.String)" /> метод, чтобы изменить пароль для доступа к диапазон, можно изменить на защищенном листе.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет ячейки, которые можно редактировать на защищенном листе.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.AllowEditRanges.Add(System.String,Microsoft.Office.Interop.Excel.Range,System.Object)" /> метод или <see cref="P:Microsoft.Office.Interop.Excel.AllowEditRanges.Item(System.Object)" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.AllowEditRanges" /> коллекции, чтобы возвратить объект <b>AllowEditRange</b> .</para>
+      <para>После возврата объекта <b>AllowEditRange</b> можно использовать <see cref="M:Microsoft.Office.Interop.Excel.AllowEditRange.ChangePassword(System.String)" /> метод, чтобы изменить пароль для доступа к диапазону, который можно изменить на защищенном листе.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="ChangePassword">
@@ -60,9 +50,8 @@
         <Parameter Name="Password" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Password">
-          <b>Строковое значение.</b> Новый пароль.</param>
-        <summary>Изменение пароля для диапазона, можно изменить на защищенном листе.</summary>
+        <param name="Password">Обязательный атрибут типа <b>String</b>. Новый пароль.</param>
+        <summary>Изменяет пароль для диапазона, который можно изменить на защищенном листе.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -117,7 +106,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет собой подмножество диапазонов, которые можно редактировать в защищенном листе.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий подмножество диапазонов, которые можно редактировать на защищенном листе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -148,12 +137,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает заголовок веб-страницы при сохранении документа в качестве веб-страницы.</summary>
+        <summary>Возвращает или задает заголовок веб-страницы при сохранении документа в виде веб-страницы.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Заголовок обычно отображается в строке заголовка окна при просмотре документа в веб-браузере.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Заголовок обычно отображается в строке заголовка окна, когда документ просматривается в веб-браузере.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Unprotect">
@@ -178,13 +165,11 @@
         <Parameter Name="Password" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password">Необязательный элемент <b>Object</b>. Строка, указывающая с учетом регистра пароль, используемый для снятия защиты с листа или книги. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если опустить аргумент для листа, который был защищен паролем вы будет запрашиваться пароль. Если опустить аргумент для книги, защищенные паролем, происходит сбой метода.</param>
-        <summary>Снятие защиты листа или книги.</summary>
-        <remarks>
-          <para>Этот метод не оказывает влияния Если лист или книга незащищен.</para>
-          <para>Если забыт пароль, не может снять защиту листа или книги.</para>
-          <para></para>
-        </remarks>
+        <param name="Password">Необязательный <b>объект</b>. Строка, указывающая пароль с учетом регистра, который будет использоваться для снятия защиты листа или книги. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если опустить этот аргумент для листа, защищенного паролем, вам будет запрошен пароль. Если опустить этот аргумент для книги, защищенной паролем, метод завершится ошибкой.</param>
+        <summary>Снимает защиту с листа или книги.</summary>
+        <remarks><para>Этот метод не работает, если лист или книга не защищены.</para>
+          <para>Если вы забыли пароль, вы не сможете снять защиту листа или книги.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Users">
@@ -210,7 +195,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.UserAccessList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.UserAccessList" /> объекта для защищенного диапазона на листе.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.UserAccessList" /> объект для защищенного диапазона на листе.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

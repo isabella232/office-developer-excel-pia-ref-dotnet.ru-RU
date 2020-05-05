@@ -1,13 +1,5 @@
 <Type Name="AddIn" FullName="Microsoft.Office.Interop.Excel.AddIn">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ad740aac6b501b523017ffe9ffd52b91e10dd267" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20584149" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface AddIn" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ad740aac6b501b523017ffe9ffd52b91e10dd267" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20584149" /></Metadata><TypeSignature Language="C#" Value="public interface AddIn" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AddIn" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AddIn" />
   <TypeSignature Language="VB.NET" Value="Public Interface AddIn" />
@@ -29,18 +21,15 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одной надстройки, установлен или не установлен.</summary>
-    <remarks>
-      <para>Объект <b>AddIn</b> входит в состав <see cref="T:Microsoft.Office.Interop.Excel.AddIns" /> семейства сайтов. Коллекция <b>AddIns</b> содержит список всех надстроек, доступные в Microsoft Excel, независимо от того, является ли они установлены. В этом списке соответствует список надстроек, отображаемые в диалоговом окне Add-Ins (меню "Сервис").</para>
-      <para>Используйте <b>AddIns</b>(<paramref name="index" />), где <paramref name="index" /> — это название надстройки или номер индекса, чтобы возвратить объект <b>AddIn</b> .</para>
-      <para>Не следует путать надстройки заголовка, который отображается в диалоговом окне Add-Ins имя надстройки, которое — это имя файла надстройки. Название надстройки необходимо использовать именно так, как указано в диалоговом окне Add-Ins, но заглавные буквы не обязательно должны совпадать.</para>
-      <para>Номер индекса представляет положение надстройки в поле Доступные надстройки в диалоговом окне Add-Ins.</para>
-      <para>
-        <see cref="M:Microsoft.Office.Interop.Excel.AddIns.Add(System.String,System.Object)" /> Метод добавляет добавить в список доступных надстроек, но не установить надстройку. Установка <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Installed" /> свойство добавить в значение <b>True,</b> Чтобы установить надстройку. Для установки надстройки, не отображается в списке доступных надстроек, необходимо сначала использовать метод <b>Add</b> и задайте его свойства <b>Installed</b> . Это можно сделать за один шаг</para>
-      <para>Использование <b>книг</b>(<paramref name="index" />) где <paramref name="index" /> — это имя файла надстройки (не заголовок) возвращает ссылку на книги, соответствующий загрузить надстройку. Необходимо использовать имя файла, так как загруженных надстройках обычно не отображаются в <see cref="T:Microsoft.Office.Interop.Excel.Workbooks" /> семейства сайтов.</para>
-      <para>Если свойство <b>Installed</b> возвращает <b>значение True</b>, но вызовы функций в надстройку по-прежнему ошибкой, надстройки, не фактически будут загружаться. Это из-за наличия которого представляет объект <b>Addin</b> и установлен состояние надстройки, но не представляет фактическое содержимое книги надстройки. Чтобы гарантировать, что установленные надстройки загружается, должны откройте книгу надстройки.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет одну надстройку: установлена или не установлена.</summary>
+    <remarks><para>Объект <b>ADDIN</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.AddIns" /> коллекции. Коллекция <b>AddIns</b> содержит список всех надстроек, доступных в Microsoft Excel, независимо от того, установлены ли они. Этот список соответствует списку надстроек, отображаемых в диалоговом окне "надстройки" (меню "Сервис").</para>
+      <para>Используйте <b>надстройки</b>(<paramref name="index" />), где <paramref name="index" /> — это название надстройки или номер индекса, чтобы вернуть один объект <b>ADDIN</b> .</para>
+      <para>Не путайте название надстройки, которое отображается в диалоговом окне "надстройки", с именем надстройки, которое является именем файла надстройки. Название надстройки должно быть написано точно так же, как и в диалоговом окне надстройки, но регистр символов не обязательно должен совпадать.</para>
+      <para>Номер индекса представляет положение надстройки в поле Доступные надстройки диалогового окна надстройки.</para>
+      <para><see cref="M:Microsoft.Office.Interop.Excel.AddIns.Add(System.String,System.Object)" /> Метод добавляет надстройку в список доступных надстроек, но не устанавливает надстройку. Установите для <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Installed" /> свойства надстройки <b>значение true</b> , чтобы установить надстройку. Чтобы установить надстройку, которая не отображается в списке доступных надстроек, сначала необходимо использовать метод <b>Add</b> , а затем задать свойство <b>Installed</b> . Это можно сделать одним действием</para>
+      <para>USE <b>книгами</b>(<paramref name="index" />), <paramref name="index" /> где — это имя файла надстройки (без названия), которое возвращает ссылку на книгу, соответствующую загруженной надстройке. Необходимо использовать имя файла, так как загружаемые надстройки обычно не отображаются в <see cref="T:Microsoft.Office.Interop.Excel.Workbooks" /> коллекции.</para>
+      <para>Если свойство <b>Installed</b> возвращает <b>значение true</b>, но вызовы функций в надстройке по-прежнему не выполнены, надстройка может быть не загружена. Это связано с тем, что объект <b>ADDIN</b> представляет состояние надстройки и состояние его установки, но не представляет фактическое содержимое книги надстройки. Чтобы гарантировать, что установленная надстройка будет загружена, откройте книгу надстройки.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -125,7 +114,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает уникальный идентификатор только для чтения или CLSID, идентифицирующий объект в <b>строку</b>.</summary>
+        <summary>Возвращает уникальный идентификатор только для чтения или CLSID, идентифицирующий объект в виде <b>строки</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -186,11 +175,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="FullName">
@@ -218,10 +205,8 @@
       <Docs>
         <summary>Возвращает имя объекта, включая его путь на диске в виде строки.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Это свойство эквивалентно <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Path" /> свойства, следуют текущего файла системы разделителя групп разрядов, за которым следует <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Name" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Это свойство эквивалентно <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Path" /> свойству, за которым следует текущий разделитель файловой системы, за которым следует <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Name" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Installed">
@@ -250,13 +235,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если надстройка установлен.</summary>
+        <summary><b>Значение true</b> , если надстройка установлена.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Установка для этого свойства <b>значения True</b> устанавливает надстройки и вызывает его функции Auto_Add. Назначить этому свойству значение <b>False</b> удаляет надстройки и вызывает его функции Auto_Remove.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установка для этого свойства значения <b>true</b> устанавливает надстройку и вызывает ее функции Auto_Add. Если задать для этого свойства <b>значение false</b> , надстройка будет удалена и будет вызываться ее функции Auto_Remove.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsOpen">
@@ -282,14 +264,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли надстройка открытая в настоящий момент.</summary>
-        <value>
-          <b>значение true,</b> Если надстройка открытая в настоящий момент; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>
-            <b>логическое</b> Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает значение, указывающее, открыто ли в данный момент надстройка.</summary>
+        <value><b>имеет значение true</b> , если надстройка открыта в данный момент; в противном случае — <b>false</b>.</value>
+        <remarks><para>
+            <b>логическое значение</b> Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Keywords">
@@ -402,7 +381,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает полный путь к приложению, за исключением заключительного разделителя и имени приложения.</summary>
+        <summary>Возвращает полный путь к приложению, за исключением последнего разделителя и имени приложения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

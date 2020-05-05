@@ -1,13 +1,5 @@
 <Type Name="ValueChange" FullName="Microsoft.Office.Interop.Excel.ValueChange">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="b2dce604b01b455e4f9c71554372a322f7c7c2fe" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20586291" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ValueChange" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b2dce604b01b455e4f9c71554372a322f7c7c2fe" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586291" /></Metadata><TypeSignature Language="C#" Value="public interface ValueChange" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ValueChange" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ValueChange" />
   <TypeSignature Language="VB.NET" Value="Public Interface ValueChange" />
@@ -29,13 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет значение, были ли изменены в отчете сводной таблицы, основанный на источнике данных OLAP.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> Содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекты, которые представляют изменения внесенные пользователем на значение ячейки в отчете сводной таблицы.</para>
-      <para>Свойства <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта укажите сведения об изменениях, которое было выполнено, такие как значение изменения, кортеж, связанные с ячейки, которое было изменено, порядок, в которой был изменен относительно других изменений и ячейке отображается в Сводная таблица. <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> Объект также предоставляет <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство, которое возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект, представляющий ячейку, который был изменен и Дополнительные сведения о измененные ячейки.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет значение, которое было изменено в отчете сводной таблицы, основанном на источнике данных OLAP.</summary>
+    <remarks><para><see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> Коллекция содержит <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекты, представляющие изменения, внесенные пользователем в ячейки значений в отчете сводной таблицы.</para>
+      <para>Свойства <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта задают сведения об изменениях, которые были сделаны, например значение изменения, кортеж, связанный с измененной ячейкой, порядок, в котором было внесено изменение относительно других изменений, а также сведения о том, является ли ячейка видимой в сводной таблице. <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> Объект также предоставляет <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство, которое возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект, представляющий измененную ячейку, и предоставляет дополнительные сведения об измененной ячейке.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AllocationMethod">
@@ -61,14 +50,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlAllocationMethod</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает какой метод следует использовать для выделения это значение при выполнении анализ "что если".</summary>
-        <value>Метод распределения это значение при выполнении анализ "что если".</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationMethod" /> Свойство соответствует параметру метод распределения в диалоговом окне Параметры анализа "что если" для отчета сводной таблицы, основанный на источнике данных OLAP, был выполнен во время применения это изменение. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов и соответствующий <paramref name="AllocationMethod" /> параметр не задан, возвращаются метод распределения по умолчанию сервера OLAP.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает сведения о том, какой метод используется для выделения этого значения при выполнении анализа "что если".</summary>
+        <value>Метод, используемый для выделения этого значения при выполнении анализа "что если".</value>
+        <remarks><para>Только для чтения.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationMethod" /> Свойство соответствует параметру метода распределения в диалоговом окне Параметры анализа "что если" для отчета сводной таблицы, основанного на источнике данных OLAP, который был задан во время первоначального применения этого изменения. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метода <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции, а соответствующий <paramref name="AllocationMethod" /> параметр не был указан, возвращается метод выделения по умолчанию для сервера OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AllocationValue">
@@ -94,14 +80,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlAllocationValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение распределения при выполнении анализ "что если".</summary>
-        <value>Значение распределения при выполнении анализ "что если".</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationValue" /> Свойства соответствует значению параметра распределения в диалоговом окне Параметры анализа "что если" для отчета сводной таблицы, основанный на источнике данных OLAP, был выполнен во время применения это изменение. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов и соответствующий <paramref name="AllocationValue" /> параметр не указан, возвращается значение по умолчанию для распределения OLAP-сервера.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает значение, которое необходимо выделить при выполнении анализа "что если".</summary>
+        <value>Значение, выделенное при выполнении анализа "что если".</value>
+        <remarks><para>Только для чтения.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationValue" /> Свойство соответствует значению, выделенному в диалоговом окне "Параметры анализа" что если "для отчета сводной таблицы, основанного на источнике данных OLAP, который был задан во время первоначального применения этого изменения. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метода <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции, а соответствующий <paramref name="AllocationValue" /> параметр не был указан, возвращается значение выделенного сервера OLAP по умолчанию.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AllocationWeightExpression">
@@ -127,14 +110,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает вес Многомерное выражение будет использоваться для этого значения при анализ "что если" для выполнения.</summary>
-        <value>Вес Многомерное выражение будет использоваться для этого значения при анализ "что если" для выполнения.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationWeightExpression" /> Свойство соответствует параметру вес выражение в диалоговом окне Параметры анализа "что если" для отчета сводной таблицы, основанный на источнике данных OLAP, был выполнен во время применения это изменение. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов и соответствующий <paramref name="AllocationWeightExpression" /> параметр не задан, возвращаются выражение вес по умолчанию сервера OLAP.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает МНОГОМЕРное выражение, которое будет использоваться для этого значения при выполнении анализа "что если".</summary>
+        <value>Выражение веса МНОГОМЕРного выражения, которое используется для этого значения при выполнении анализа "что если".</value>
+        <remarks><para>Только для чтения.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Excel.ValueChange.AllocationWeightExpression" /> Свойство соответствует параметру "выражение веса" в диалоговом окне "Параметры анализа" что если "для отчета сводной таблицы, основанного на источнике данных OLAP, который был задан во время первоначального применения этого изменения. Если указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект был создан с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Add(System.String,System.Double,System.Object,System.Object,System.Object)" /> метода <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции, а соответствующий <paramref name="AllocationWeightExpression" /> параметр не был указан, возвращается стандартное выражение веса сервера OLAP.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -160,13 +140,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -192,13 +169,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
-        <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>.</para>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para><b>Доступно только для</b>чтения.</para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -222,11 +197,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта из <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</summary>
-        <remarks>
-          <para>Также можно удалить <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объектов с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Delete" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</para>
-          <para></para>
-        </remarks>
+        <summary>Удаляет указанный <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект из <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</summary>
+        <remarks><para>Вы также можете удалить <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект, используя <see cref="M:Microsoft.Office.Interop.Excel.PivotTableChangeList.Delete" /> метод <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Order">
@@ -252,13 +225,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее порядок, в котором было выполнено это изменение относительно других изменений в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</summary>
-        <value>Порядок, в котором было выполнено это изменение относительно других изменений в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> семейства сайтов.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>Значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Order" /> автоматически назначаемый Excel на основе порядка, в том, что пользователь применил изменения значения ячеек в отчете сводной таблицы. Если в нескольких изменения применяются за одну операцию, Excel произвольно назначить порядок в этот набор изменений.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает значение, указывающее порядок, в котором это изменение было выполнено относительно других изменений в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</summary>
+        <value>Порядок, в котором это изменение было выполнено относительно других изменений в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</value>
+        <remarks><para>Только для чтения.</para>
+          <para>Значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Order" /> свойства автоматически назначается Excel в зависимости от того, как пользователь применил изменения к ячейкам значений в отчете сводной таблицы. Если в одной операции было применено несколько изменений, Excel будет назначать их в произвольном порядке в пределах этого набора изменений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -286,10 +257,8 @@
       <Docs>
         <summary>Получает родительский объект для указанного объекта.</summary>
         <value>Родительский объект для указанного объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PivotCell">
@@ -315,13 +284,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotCell</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект, представляющий ячейку (кортеж), который был изменен.</summary>
-        <value>Ячейка (кортеж), которая была изменена.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>При значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.VisibleInPivotTable" /> свойства указанного <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект является <b>true</b>, <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> возвращает свойство <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект для ячейки (кортеж), который был изменен. Когда значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.VisibleInPivotTable" /> свойства указанного <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объект является <b>false</b>, <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство возвращается пустая ссылка (Nothing в Visual Basic).</para>
-          <para></para>
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект, представляющий измененную ячейку (кортеж).</summary>
+        <value>Измененная ячейка (кортеж).</value>
+        <remarks><para>Только для чтения.</para>
+          <para>Когда значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.VisibleInPivotTable" /> свойства указанного <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта равно <b>true</b>, <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объект для ячейки (кортежа), которая была изменена. Если значение <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.VisibleInPivotTable" /> свойства указанного <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> объекта равно <b>false</b>, <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.PivotCell" /> свойство возвращает пустую ссылку (Nothing в Visual Basic).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Tuple">
@@ -347,12 +314,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает кортеж многомерных Выражений значения был изменен в источнике данных OLAP.</summary>
-        <value>Кортеж многомерных Выражений значения был изменен в источнике данных OLAP.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает значение, заданное в поле источника данных OLAP.</summary>
+        <value>В источнике данных OLAP было изменено значение кортежа многомерных выражений.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Value">
@@ -378,12 +343,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, введенное пользователем в ячейке или которые проверялись формулы в ячейке при инструкция UPDATE CUBE последнего выполнения в источнике данных OLAP.</summary>
+        <summary>Получает значение, которое пользователь ввел в ячейку или указывает, что формула в ячейке была оценена при последнем запуске инструкции UPDATE CUBE для источника данных OLAP.</summary>
         <value>Значение.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VisibleInPivotTable">
@@ -409,14 +372,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ли ячейки (кортеж) в данный момент виден в отчете сводной таблицы.</summary>
-        <value>
-          <b>значение true,</b> Если ячейки (кортеж) в данный момент виден в отчете сводной таблицы; в противном случае — <b>false</b>.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если ячейки (кортеж) в данный момент виден в отчете сводной таблицы; в противном случае — <b>false</b>.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает значение, указывающее, отображается ли ячейка (кортеж) в отчете сводной таблицы.</summary>
+        <value><b>значение true</b> , если ячейка (кортеж) в данный момент отображается в отчете сводной таблицы; в противном случае — <b>false</b>.</value>
+        <remarks><para>Только для чтения.</para>
+          <para>Возвращает <b>значение true</b> , если ячейка (кортеж) в данный момент отображается в отчете сводной таблицы; в противном случае — <b>false</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

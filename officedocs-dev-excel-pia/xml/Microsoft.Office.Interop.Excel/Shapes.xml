@@ -1,13 +1,5 @@
 <Type Name="Shapes" FullName="Microsoft.Office.Interop.Excel.Shapes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="7d8f4259d10e89624f92628ba847b174395cf289" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20581818" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Shapes : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="7d8f4259d10e89624f92628ba847b174395cf289" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581818" /></Metadata><TypeSignature Language="C#" Value="public interface Shapes : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Shapes implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Shapes" />
   <TypeSignature Language="VB.NET" Value="Public Interface Shapes&#xA;Implements IEnumerable" />
@@ -33,13 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объектов на указанный лист.</summary>
-    <remarks>
-      <para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект представляет объект в графических, такие как автофигуры произвольной формы, объекта OLE или рисунок.</para>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объектов на указанном листе.</summary>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект представляет объект в графическом слое, например автофигуру, полилинию, объект OLE или рисунок.</para>
       <para>
-        <b>Примечание</b>: Если нужно работать с подмножеством фигур в документе — например, чтобы сделать что-то только автофигуры на документ или только выбранные фигуры — необходимо <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> семейства сайтов, содержащего фигур, вы планируете работать с.</para>
-      <para></para>
-    </remarks>
+        <b>Note</b>: Если вы хотите работать с подмножеством фигур в документе, например, чтобы сделать что-либо для автофигур в документе или только для выбранных фигур, необходимо создать <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> коллекцию, содержащую фигуры, с которыми вы хотите работать.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -101,17 +91,15 @@
         <Parameter Name="Height" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Core.MsoCalloutType" />. Тип линии выноски. Может иметь одно из следующих констант <b>MsoCalloutType</b> :<b>msoCalloutOne</b>. Линия выноски одного сегмента, который может быть горизонтальную или вертикальную. <b>msoCalloutTwo</b>. Строки сегмента одним выноски свободно обращения. <b>msoCalloutMixed</b>. <b>msoCalloutThree</b>. Два сегмента строки. <b>msoCalloutFour</b>. Три сегмента строки.</param>
-        <param name="Left">Требуется <b>один</b>. Положение (в пунктах) в верхний левый угол выноски ограничивающего прямоугольника относительно левого верхнего угла документа.</param>
-        <param name="Top">Требуется <b>один</b>. Положение (в пунктах) в верхний левый угол выноски ограничивающего прямоугольника относительно левого верхнего угла документа.</param>
-        <param name="Width">Требуется <b>один</b>. Ширина выноски прямоугольника, в точках.</param>
-        <param name="Height">Требуется <b>один</b>. Высота выноски прямоугольника, в точках.</param>
-        <summary>Создает без границ выноску. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый выноски.</summary>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoCalloutType" />. Тип линии выноски. Может быть одной из следующих констант <b>мсокаллауттипе</b> :<b>мсокаллаутоне</b>. Линия выноски с одним сегментом, которая может быть горизонтальной или вертикальной. <b>мсокаллауттво</b>. Линия выноски с одним сегментом, которая поворачивается свободно. <b>мсокаллаутмиксед</b>. <b>мсокаллаутсри</b>. Строка из двух сегментов. <b>мсокаллаутфаур</b>. Строка из трех сегментов.</param>
+        <param name="Left">Обязательное <b>одно</b>. Позиция (в пунктах) верхнего левого угла ограничительной рамки выноски относительно левого верхнего угла документа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Позиция (в пунктах) верхнего левого угла ограничительной рамки выноски относительно левого верхнего угла документа.</param>
+        <param name="Width">Обязательное <b>одно</b>. Ширина ограничительной рамки выноски в пунктах.</param>
+        <param name="Height">Обязательное <b>одно</b>. Высота ограничительной рамки выноски в пунктах.</param>
+        <summary>Создает выноску линии без рамки. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новое выноски.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Можно вставить разнообразных выноски с помощью <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddShape(Microsoft.Office.Core.MsoAutoShapeType,System.Single,System.Single,System.Single,System.Single)" /> метод.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddShape(Microsoft.Office.Core.MsoAutoShapeType,System.Single,System.Single,System.Single,System.Single)" /> метода можно вставить более разнообразные выноски.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddCanvas">
@@ -219,14 +207,14 @@
         <Parameter Name="NewLayout" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Style">Стиль диаграммы. Используйте значение -1, чтобы получить стиль по умолчанию для типа диаграммы, указанное в <b>XlChartType</b></param>
+        <param name="Style">Стиль диаграммы. Используйте параметр "– 1", чтобы получить стиль по умолчанию для типа диаграммы, указанной в <b>кслчарттипе</b></param>
         <param name="XlChartType">Тип диаграммы.</param>
-        <param name="Left">Положение в пунктах левого края диаграммы, относительно привязки.</param>
-        <param name="Top">Положение в точках верхнего края диаграммы, относительно привязки.</param>
-        <param name="Width">Ширина в точках диаграммы.</param>
-        <param name="Height">Высота в пунктах диаграммы.</param>
-        <param name="NewLayout">Если <paramref name="NewLayout" /> имеет значение true, вставки диаграммы с помощью новых динамических правил форматирования (название — на, а легенда — на только если имеется несколько рядов).</param>
-        <summary>Добавление диаграммы в документ. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, который представляет собой диаграмму и добавляет его к определенной коллекции.</summary>
+        <param name="Left">Положение левого края диаграммы относительно точки привязки (в пунктах).</param>
+        <param name="Top">Положение верхнего края диаграммы относительно точки привязки (в пунктах).</param>
+        <param name="Width">Ширина диаграммы (в пунктах).</param>
+        <param name="Height">Высота диаграммы (в пунктах).</param>
+        <param name="NewLayout">Если <paramref name="NewLayout" /> имеет значение true, диаграмма вставляется с использованием новых правил динамического форматирования (название — включено, а условные обозначения — только при наличии нескольких рядов).</param>
+        <summary>Добавляет диаграмму в документ. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, который представляет диаграмму и добавляет его в указанную коллекцию.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -258,18 +246,16 @@
         <Parameter Name="EndY" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Core.MsoConnectorType" />. Тип соединителя, чтобы добавить. Может иметь одно из следующих констант <b>MsoConnectorType</b> :<b>msoConnectorElbow</b><b>msoConnectorTypeMixed</b><b>msoConnectorCurve</b><b>msoConnectorStraight</b></param>
-        <param name="BeginX">Требуется <b>один</b>. Горизонтальную позицию соединителя начальную точку относительно левого верхнего угла документа (в точках).</param>
-        <param name="BeginY">Требуется <b>один</b>. Вертикальное положение соединителя начальную точку относительно левого верхнего угла документа (в точках).</param>
-        <param name="EndX">Требуется <b>один</b>. Горизонтальную позицию соединителя конечная точка относительно левого верхнего угла документа (в точках).</param>
-        <param name="EndY">Требуется <b>один</b>. Положение veritcal (в пунктах) соединителя конечная точка относительно левого верхнего угла документа.</param>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoConnectorType" />. Добавляемый тип соединителя. Может быть одной из следующих констант <b>мсоконнектортипе</b> :<b>мсоконнекторелбов</b><b>мсоконнектортипемиксед</b><b>мсоконнекторкурве</b><b>мсоконнекторстраигхт</b></param>
+        <param name="BeginX">Обязательное <b>одно</b>. Позиция по горизонтали (в точках) от начальной точки соединителя относительно левого верхнего угла документа.</param>
+        <param name="BeginY">Обязательное <b>одно</b>. Позиция по вертикали (в точках) от начальной точки соединителя относительно левого верхнего угла документа.</param>
+        <param name="EndX">Обязательное <b>одно</b>. Позиция по горизонтали (в пунктах) конечной точки соединителя относительно левого верхнего угла документа.</param>
+        <param name="EndY">Обязательное <b>одно</b>. Положение вериткал (в пунктах) конечной точки соединителя относительно левого верхнего угла документа.</param>
         <summary>Создает соединитель. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый соединитель.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>При добавлении соединитель он не подключен к что-либо. Использование <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> и <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> методы для присоединения начала и окончания соединитель для других фигур в документе.</para>
-          <para>При подключении соединитель фигуры размер и положение соединителя автоматически настраиваются, если это необходимо. Таким образом Если соединитель с подключением к другим фигурам, положение и размеры, указываемые при добавлении соединитель не имеют значения.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Когда соединитель добавляется, он не подключается ни к чему. Используйте методы <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> и <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> для присоединения начала и конца соединителя к другим фигурам в документе.</para>
+          <para>Когда вы присоединяете соединитель к фигуре, размер и положение соединителя автоматически корректируются (при необходимости). Таким образом, если вы собираетесь присоединить соединитель к другим фигурам, положение и размеры, указанные при добавлении соединителя, не имеют значения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddCurve">
@@ -295,8 +281,8 @@
         <Parameter Name="SafeArrayOfPoints" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SafeArrayOfPoints">Требуется <b>объект</b>. Массив координации пары, указывает грани и контроль точек график. Первой точкой указываемые является отправной вершин и следующие две точки являются контрольными для первого сегмента Безье. Для каждого дополнительного сегмента график укажите узел и двух контрольных точек. Конечная точка, указываемые — это последний вершины график. Обратите внимание на то, что всегда следует указывать 3n + 1 точки, где n — число сегментов в поверхности.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий график Безье на листе.</summary>
+        <param name="SafeArrayOfPoints">Обязательный <b>объект</b>. Массив пар координат, указывающий вершины и контрольные точки кривой. Первая указанная точка — начальная вершина, а следующие две точки — контрольные точки для первого сегмента Безье. Затем для каждого дополнительного сегмента кривой указывается вершина и две контрольные точки. Последняя указанная точка — это конечная вершина для кривой. Обратите внимание, что всегда необходимо указать 3n + 1 точки, где n — количество сегментов в кривой.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий кривую Безье в рабочем листе.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,12 +317,12 @@
         <Parameter Name="Height" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Core.MsoDiagramType" />. Тип диаграммы. Может иметь одно из следующих констант <b>MsoDiagramType</b> :<b>msoDiagramCycle</b> A схема процесса с типом схема непрерывный цикл. <b>msoDiagramMixed</b> Смешанная диаграмма. <b>msoDiagramOrgChart</b> Тип диаграммы иерархической связи. <b>msoDiagramPyramid</b> Основы на основе типа схема связи. <b>msoDiagramRadial</b> Тип диаграммы, отображения отношений с корневым элементом. <b>msoDiagramTarget</b> Диаграмма, отражающая действия к достижению цели. <b>msoDiagramVenn</b> Диаграмма, отражающая области перекрытия между элементами.</param>
-        <param name="Left">Требуется <b>один</b>. Позиция (в пунктах) в верхний левый угол схема относительно левого верхнего угла рабочего листа.</param>
-        <param name="Top">Требуется <b>один</b>. Положение (в пунктах) в левом верхнем верхней части схема относительно левого верхнего угла рабочего листа.</param>
-        <param name="Width">Требуется <b>один</b>. Ширина схемы в пунктах.</param>
-        <param name="Height">Требуется <b>один</b>. Высота диаграммы в точках.</param>
-        <summary>Создание диаграммы. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую схему.</summary>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoDiagramType" />. Тип схемы. Может быть одной из следующих констант <b>мсодиаграмтипе</b> :<b>мсодиаграмцикле</b> схема процесса с непрерывным типом схемы циклов. <b>мсодиаграммиксед</b> Тип смешанной диаграммы. <b>мсодиаграморгчарт</b> Тип схемы иерархических отношений. <b>мсодиагрампирамид</b> Тип схемы отношений на основе основания. <b>мсодиаграмрадиал</b> Тип схемы, в котором показаны связи базового элемента. <b>мсодиаграмтаржет</b> Тип схемы, в которой показаны шаги, необходимые для достижения цели. <b>мсодиаграмвенн</b> Тип схемы, в котором показаны области перекрывания элементов.</param>
+        <param name="Left">Обязательное <b>одно</b>. Положение (в точках) верхнего левого угла диаграммы относительно левого верхнего угла листа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Положение (в пунктах) верхнего левого угла диаграммы относительно верхнего левого угла листа.</param>
+        <param name="Width">Обязательное <b>одно</b>. Ширина схемы в пунктах.</param>
+        <param name="Height">Обязательное <b>одно</b>. Высота схемы в пунктах.</param>
+        <summary>Создает схему. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую схему.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -368,17 +354,15 @@
         <Parameter Name="Height" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Interop.Excel.XlFormControl" />. Тип элемента управления Microsoft Excel. Не удается создать поле для редактирования на листе. Может иметь одно из следующих констант <b>XlFormControl</b> :<b>xlButtonControl</b><b>xlCheckBox</b><b>xlDropDown</b><b>xlEditBox</b><b>xlGroupBox</b><b>xlLabel</b><b>xlListBox</b><b>xlOptionButton</b><b>xlScrollBar</b><b>xlSpinner</b></param>
-        <param name="Left">Требуется <b>целое число</b>. Начальное координаты новый объект (в пунктах) относительно верхнего левого угла ячейки A1 на листе или в левый верхний угол диаграммы.</param>
-        <param name="Top">Требуется <b>целое число</b>. Начальное координаты новый объект (в пунктах) относительно верхнего левого угла ячейки A1 на листе или в левый верхний угол диаграммы.</param>
-        <param name="Width">Требуется <b>целое число</b>. Исходный размер нового объекта в пунктах.</param>
-        <param name="Height">Требуется <b>целое число</b>. Исходный размер нового объекта в пунктах.</param>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFormControl" />. Тип элемента управления Microsoft Excel. Вы не можете создать поле редактирования на листе. Может быть одной из следующих констант <b>кслформконтрол</b> :<b>кслбуттонконтрол</b><b>кслчеккбокс</b><b>кслдропдовн</b><b>кследитбокс</b><b>кслграупбокс</b><b>ксллабел</b><b>ксллистбокс</b><b>xlOptionButton</b><b>xlScrollBar</b><b>xlSpinner</b></param>
+        <param name="Left">Обязательный атрибут типа <b>Integer</b>. Начальные координаты нового объекта (в пунктах) относительно левого верхнего угла ячейки a1 на листе или в левом верхнем углу диаграммы.</param>
+        <param name="Top">Обязательный атрибут типа <b>Integer</b>. Начальные координаты нового объекта (в пунктах) относительно левого верхнего угла ячейки a1 на листе или в левом верхнем углу диаграммы.</param>
+        <param name="Width">Обязательный атрибут типа <b>Integer</b>. Исходный размер нового объекта в пунктах.</param>
+        <param name="Height">Обязательный атрибут типа <b>Integer</b>. Исходный размер нового объекта в пунктах.</param>
         <summary>Создает элемент управления Microsoft Excel. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый элемент управления.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddOLEObject(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.OLEObjects.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> методу коллекции OLEObjects для создания элемента управления ActiveX.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Shapes.AddOLEObject(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод или <see cref="M:Microsoft.Office.Interop.Excel.OLEObjects.Add(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод коллекции OLEObjects для создания элемента управления ActiveX.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddLabel">
@@ -408,12 +392,12 @@
         <Parameter Name="Height" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Orientation">Требуется <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />. Ориентация текста в пределах метку. Может иметь одно из следующих констант <b>MsoTextOrientation</b> :<b>msoTextOrientationDownward</b><b>msoTextOrientationHorizontal</b><b>msoTextOrientationHorizontalRotatedFarEast</b><b>msoTextOrientationMixed</b><b> msoTextOrientationUpward</b><b>msoTextOrientationVertical</b><b>msoTextOrientationVerticalFarEast </b>некоторые из этих констант могут быть недоступны, в зависимости от языка Английский (США, например), который был выбран или установить.</param>
-        <param name="Left">Требуется <b>один</b>. Положение верхнего левого угла метки относительно левого верхнего угла документа (в точках).</param>
-        <param name="Top">Требуется <b>один</b>. Положение верхнего левого угла метки относительно верхнего угла документа (в точках).</param>
-        <param name="Width">Требуется <b>один</b>. Ширина метки в пунктах.</param>
-        <param name="Height">Требуется <b>один</b>. Высота метки в пунктах.</param>
-        <summary>Создает метку. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новой метки.</summary>
+        <param name="Orientation">Обязательный <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />. Ориентация текста в метке. Может быть одной из следующих констант <b>мсотексториентатион</b> :<b>мсотексториентатиондовнвард</b><b>мсотексториентатионхоризонтал</b><b>мсотексториентатионхоризонталротатедфареаст</b><b>msoTextOrientationMixed</b><b>msoTextOrientationUpward</b><b>msoTextOrientationVertical</b><b>msoTextOrientationVerticalFarEast </b>некоторые из этих констант могут быть недоступны в зависимости от того, какая языковая поддержка (например, Английский (США)) выбрана или установлена.</param>
+        <param name="Left">Обязательное <b>одно</b>. Положение (в точках) верхнего левого угла метки относительно левого верхнего угла документа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Положение (в пунктах) верхнего левого угла метки относительно верхнего угла документа.</param>
+        <param name="Width">Обязательное <b>одно</b>. Ширина метки в пунктах.</param>
+        <param name="Height">Обязательное <b>одно</b>. Высота метки в пунктах.</param>
+        <summary>Создает метку. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую метку.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -444,10 +428,10 @@
         <Parameter Name="EndY" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="BeginX">Требуется <b>один</b>. Положение строки начинать относительно левого верхнего угла документа (в точках).</param>
-        <param name="BeginY">Требуется <b>один</b>. Положение строки начинать относительно левого верхнего угла документа (в точках).</param>
-        <param name="EndX">Требуется <b>один</b>. Положение строки конечная точка относительно левого верхнего угла документа (в точках).</param>
-        <param name="EndY">Требуется <b>один</b>. Положение строки конечная точка относительно левого верхнего угла документа (в точках).</param>
+        <param name="BeginX">Обязательное <b>одно</b>. Позиция (в пунктах) начальной точки линии относительно левого верхнего угла документа.</param>
+        <param name="BeginY">Обязательное <b>одно</b>. Позиция (в пунктах) начальной точки линии относительно левого верхнего угла документа.</param>
+        <param name="EndX">Обязательное <b>одно</b>. Положение (в точках) конечной точки линии относительно левого верхнего угла документа.</param>
+        <param name="EndY">Обязательное <b>одно</b>. Положение (в точках) конечной точки линии относительно левого верхнего угла документа.</param>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую строку на листе.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -485,17 +469,17 @@
         <Parameter Name="Height" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ClassType">Необязательный элемент <b>Object</b>. (необходимо указать либо <paramref name="ClassType" /> или <paramref name="FileName" />). Строка, содержащая программный идентификатор объекта будет создан. Если <paramref name="ClassType" /> указано, <paramref name="FileName" /> и <paramref name="Link" /> игнорируются.</param>
-        <param name="Filename">Необязательный элемент <b>Object</b>. Файл, из которого должен быть создан объект. Если путь не определен, используется текущей рабочей папки. Необходимо указать либо <paramref name="ClassType" /> или <paramref name="FileName" /> аргумент для объекта, но не оба.</param>
-        <param name="Link">Необязательный элемент <b>Object</b>. <b>Значение true,</b> ссылка на файл, из которого был создан объект OLE. <b>Значение false,</b> чтобы сделать объект независимой копию файла OLE. Если вы указали значение для <paramref name="ClassType" />, этот аргумент должен иметь <b>значение False</b>. Значение по умолчанию — <b>False</b>.</param>
-        <param name="DisplayAsIcon">Необязательный элемент <b>Object</b>. <b>Значение true</b> для отображения объекта OLE в виде значка. Значение по умолчанию — <b>False</b>.</param>
-        <param name="IconFileName">Необязательный элемент <b>Object</b>. Файл, содержащий значок для отображения.</param>
-        <param name="IconIndex">Необязательный элемент <b>Object</b>. Индекс значка в пределах <paramref name="IconFileName" />. Порядок значков в указанном файле соответствует порядке, в котором отображаются значки, в диалоговом окне Изменить значок (доступного из диалогового окна объекта при выборе отображения как значок флажок). Значок первого в файле имеет номер индекса нуль (0). Если значок с заданным индексом не существует в <paramref name="IconFileName" />, используется значок с индекса 1 (второй значок в файле). Значение по умолчанию — нуль (0).</param>
-        <param name="IconLabel">Необязательный элемент <b>Object</b>. Подпись (caption) для отображения под значок.</param>
-        <param name="Left">Необязательный элемент <b>Object</b>. Положение в левом верхнем углу новый объект относительно левого верхнего угла документа (в точках). Значение по умолчанию — нуль (0).</param>
-        <param name="Top">Необязательный элемент <b>Object</b>. Положение в левом верхнем углу новый объект относительно левого верхнего угла документа (в точках). Значение по умолчанию — нуль (0).</param>
-        <param name="Width">Необязательный элемент <b>Object</b>. Начальное размеры объекта OLE в пунктах.</param>
-        <param name="Height">Необязательный элемент <b>Object</b>. Начальное размеры объекта OLE в пунктах.</param>
+        <param name="ClassType">Необязательный <b>объект</b>. (необходимо указать значение <paramref name="ClassType" /> или <paramref name="FileName" />). Строка, содержащая программный идентификатор для создаваемого объекта. Если <paramref name="ClassType" /> указан, <paramref name="FileName" /> <paramref name="Link" /> он игнорируется.</param>
+        <param name="Filename">Необязательный <b>объект</b>. Файл, из которого создается объект. Если путь не указан, используется текущая рабочая папка. Необходимо указать аргумент <paramref name="ClassType" /> или <paramref name="FileName" /> для объекта, но не то и другое одновременно.</param>
+        <param name="Link">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы связать объект OLE с файлом, из которого он был создан. <b>False</b> , чтобы сделать объект OLE независимой копией файла. Если указано значение <paramref name="ClassType" />, этот аргумент должен иметь значение <b>false</b>. Значение по умолчанию — <b>False</b>.</param>
+        <param name="DisplayAsIcon">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы ОТОБРАЗИТЬ объект OLE в виде значка. Значение по умолчанию — <b>False</b>.</param>
+        <param name="IconFileName">Необязательный <b>объект</b>. Файл, содержащий отображаемый значок.</param>
+        <param name="IconIndex">Необязательный <b>объект</b>. Индекс значка в элементе <paramref name="IconFileName" />. Порядок значков в указанном файле соответствует порядку, в котором значки отображаются в диалоговом окне Изменение значка (доступ к диалоговому окну "объект" при установленном флажке "в виде значка"). Первый значок в файле имеет индекс 0 (ноль). Если значок с указанным номером не существует в <paramref name="IconFileName" />, используется значок с номером 1 (второй значок в файле). Значение по умолчанию: 0 (ноль).</param>
+        <param name="IconLabel">Необязательный <b>объект</b>. Метка (Подпись), которая будет отображаться под значком.</param>
+        <param name="Left">Необязательный <b>объект</b>. Положение (в точках) верхнего левого угла нового объекта относительно левого верхнего угла документа. Значение по умолчанию: 0 (ноль).</param>
+        <param name="Top">Необязательный <b>объект</b>. Положение (в точках) верхнего левого угла нового объекта относительно левого верхнего угла документа. Значение по умолчанию: 0 (ноль).</param>
+        <param name="Width">Необязательный <b>объект</b>. Исходные размеры объекта OLE (в пунктах).</param>
+        <param name="Height">Необязательный <b>объект</b>. Исходные размеры объекта OLE (в пунктах).</param>
         <summary>Создает объект OLE. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый объект OLE.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -530,15 +514,14 @@
         <Parameter Name="Height" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Filename">
-          <b>Строковое значение.</b> Файл, из которого должен быть создан объект OLE.</param>
-        <param name="LinkToFile">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. Ссылка на файл. Может иметь одно из следующих констант <b>MsoTriState</b> :<b>msoCTrue</b><b>msoFalse</b> , чтобы сделать изображение независимой копию файла. <b>msoTriStateMixed</b><b>msoTriStateToggle</b><b>msoTrue</b> Чтобы связать изображение в файл, из которого был создан.</param>
-        <param name="SaveWithDocument">Требуется <b>MsoTriState</b>. Чтобы сохранить изображение в документе.</param>
-        <param name="Left">Требуется <b>один</b>. Положение в верхний левый угол изображения относительно левого верхнего угла документа (в точках).</param>
-        <param name="Top">Требуется <b>один</b>. Положение в верхний левый угол изображения относительно в верхней части документа (в точках).</param>
-        <param name="Width">Требуется <b>один</b>. Ширина изображения в точках.</param>
-        <param name="Height">Требуется <b>один</b>. Высота изображения в точках.</param>
-        <summary>Создает изображение из существующего файла. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый рисунок.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Файл, из которого создается объект OLE.</param>
+        <param name="LinkToFile">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. Файл, на который требуется создать ссылку. Может быть одной из следующих констант <b>MsoTriState</b> :<b>мсоктруе</b><b>мсофалсе</b> , чтобы сделать изображение независимой копией файла. <b>мсотристатемиксед</b><b>мсотристатетоггле</b><b>мсотруе</b> , чтобы связать изображение с файлом, из которого она была создана.</param>
+        <param name="SaveWithDocument">Обязательный <b>MsoTriState</b>. , Чтобы сохранить изображение вместе с документом.</param>
+        <param name="Left">Обязательное <b>одно</b>. Положение (в точках) верхнего левого угла рисунка относительно левого верхнего угла документа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Положение (в точках) верхнего левого угла изображения относительно верхнего края документа.</param>
+        <param name="Width">Обязательное <b>одно</b>. Ширина изображения в пунктах.</param>
+        <param name="Height">Обязательное <b>одно</b>. Высота изображения в пунктах.</param>
+        <summary>Создает изображение из существующего файла. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новое изображение.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -573,15 +556,15 @@
         <Parameter Name="Compress" Type="Microsoft.Office.Core.MsoPictureCompress" />
       </Parameters>
       <Docs>
-        <param name="Filename">Файл, из которого должен быть создан объект OLE.</param>
-        <param name="LinkToFile">Определяет, будет ли связана изображение файла, из которого был создан.</param>
-        <param name="SaveWithDocument">Определяет, сохраняется ли связанных рисунков с документа, в который он вставляется. Этот аргумент должен быть msoTrue, если LinkToFile msoFalse.</param>
-        <param name="Left">Позиция, заданная в пунктах левого края изображения относительно левого края рабочего листа.</param>
-        <param name="Top">Позиция, измеряемую в точках верхнего края изображения относительно верхнего края рабочего листа.</param>
-        <param name="Width">Ширина изображения, измеряемую в точках.</param>
-        <param name="Height">Высота изображения, измеряемую в точках.</param>
-        <param name="Compress">Определяет, следует ли сжатие изображения, при вставке.</param>
-        <summary>Создает изображение из существующего файла. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый рисунок.</summary>
+        <param name="Filename">Файл, из которого создается объект OLE.</param>
+        <param name="LinkToFile">Определяет, будет ли рисунок связан с файлом, из которого он был создан.</param>
+        <param name="SaveWithDocument">Определяет, будет ли связанная картинка сохранена вместе с документом, в который она вставляется. Этот аргумент должен иметь значение msoTrue, если LinkToFile имеет значение msoFalse.</param>
+        <param name="Left">Положение левого края изображения относительно левого края листа (измеряется в пунктах).</param>
+        <param name="Top">Положение верхнего края рисунка относительно верхнего края листа (измеряется в пунктах).</param>
+        <param name="Width">Ширина изображения, измеряемая в пунктах.</param>
+        <param name="Height">Высота изображения, измеряемая в пунктах.</param>
+        <param name="Compress">Определяет, следует ли сжимать изображение при вставке.</param>
+        <summary>Создает изображение из существующего файла. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новое изображение.</summary>
         <returns>Shape</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -609,13 +592,11 @@
         <Parameter Name="SafeArrayOfPoints" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SafeArrayOfPoints">Требуется <b>объект</b>. Массив пар координат, который определяет Рисование ломаной 's вершин.</param>
-        <summary>Создает open ломаной или закрытой рисования многоугольников. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый ломаной линии или многоугольника.</summary>
+        <param name="SafeArrayOfPoints">Обязательный <b>объект</b>. Массив пар координат, задающий вершины чертежа ломаной линии.</param>
+        <summary>Создает открытую ломаную линию или замкнутый рисунок многоугольника. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую ломаную линию или многоугольник.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Чтобы закрытой многоугольник, назначьте те же координаты грани имени и фамилии в ломаной документа.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Чтобы создать закрытый многоугольник, назначьте одинаковые координаты первой и последней вершинам в документе ломаной линии.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddShape">
@@ -645,17 +626,15 @@
         <Parameter Name="Height" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Type">Требуется <see cref="T:Microsoft.Office.Core.MsoAutoShapeType" />. Указывает тип автофигуры для создания.</param>
-        <param name="Left">Требуется <b>один</b>. Положение (в пунктах) в левом верхнем углу автофигуры ограничивающего прямоугольника относительно левого верхнего угла документа.</param>
-        <param name="Top">Требуется <b>один</b>. Положение (в пунктах) в левом верхнем углу автофигуры ограничивающего прямоугольника относительно левого верхнего угла документа.</param>
-        <param name="Width">Требуется <b>один</b>. Ширину и высоту автофигуры прямоугольника, в точках.</param>
-        <param name="Height">Требуется <b>один</b>. Ширину и высоту автофигуры прямоугольника, в точках.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый автофигуры на листе.</summary>
+        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Core.MsoAutoShapeType" />. Указывает тип создаваемой автофигуры.</param>
+        <param name="Left">Обязательное <b>одно</b>. Позиция (в пунктах) верхнего левого угла ограничительной рамки автофигуры относительно левого верхнего угла документа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Позиция (в пунктах) верхнего левого угла ограничительной рамки автофигуры относительно левого верхнего угла документа.</param>
+        <param name="Width">Обязательное <b>одно</b>. Ширина и высота ограничительной рамки автофигуры в пунктах.</param>
+        <param name="Height">Обязательное <b>одно</b>. Ширина и высота ограничительной рамки автофигуры в пунктах.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую автофигуру на листе.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Чтобы изменить тип автофигуры, который был добавлен, задайте <see cref="P:Microsoft.Office.Interop.Excel.Shape.AutoShapeType" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Чтобы изменить тип добавленной автофигуры, задайте <see cref="P:Microsoft.Office.Interop.Excel.Shape.AutoShapeType" /> свойство.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AddSmartArt">
@@ -684,13 +663,13 @@
         <Parameter Name="Height" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Layout">Объект, представляющий макет для использования.</param>
-        <param name="Left">Расстояние в пунктах от левого края объекта для левого края столбца А (на рабочем листе) или левого края области диаграммы (на диаграмме).</param>
-        <param name="Top">Расстояние в пунктах от верхнего края объекта по верхнему краю рабочего листа.</param>
-        <param name="Width">Ширина в точках объекта.</param>
-        <param name="Height">Ширина в точках объекта.</param>
-        <summary>Создает новый рисунка SmartArt с указанным макета.</summary>
-        <returns>A <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта.</returns>
+        <param name="Layout">Объект, представляющий макет, который необходимо использовать.</param>
+        <param name="Left">Расстояние в пунктах от левого края объекта до левого края столбца A (на листе) или левого края области диаграммы (на диаграмме).</param>
+        <param name="Top">Расстояние от верхнего края объекта до верхнего края листа (в пунктах).</param>
+        <param name="Width">Ширина объекта (в пунктах).</param>
+        <param name="Height">Ширина объекта (в пунктах).</param>
+        <summary>Создает новый графический элемент SmartArt с указанным макетом.</summary>
+        <returns>Объект <see cref="T:Microsoft.Office.Interop.Excel.Shape" />.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -721,12 +700,12 @@
         <Parameter Name="Height" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Orientation">Требуется <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />. Ориентация текстового поля TextBox.</param>
-        <param name="Left">Требуется <b>один</b>. Положение в верхний левый угол текстовое поле относительно левого верхнего угла документа (в точках).</param>
-        <param name="Top">Требуется <b>один</b>. Положение в верхний левый угол текстовое поле относительно в верхней части документа (в точках).</param>
-        <param name="Width">Требуется <b>один</b>. Ширина текстовое поле в пунктах.</param>
-        <param name="Height">Требуется <b>один</b>. Высота текстовое поле в пунктах.</param>
-        <summary>Создает текстовое поле. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, который представляет новое текстовое поле.</summary>
+        <param name="Orientation">Обязательный <see cref="T:Microsoft.Office.Core.MsoTextOrientation" />. Ориентация текстового поля.</param>
+        <param name="Left">Обязательное <b>одно</b>. Положение (в пунктах) верхнего левого угла текстового поля относительно левого верхнего угла документа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Положение (в пунктах) верхнего левого угла текстового поля относительно верхнего края документа.</param>
+        <param name="Width">Обязательное <b>одно</b>. Ширина текстового поля в пунктах.</param>
+        <param name="Height">Обязательное <b>одно</b>. Высота текстового поля в пунктах.</param>
+        <summary>Создает текстовое поле. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новое текстовое поле.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -761,22 +740,18 @@
         <Parameter Name="Top" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="PresetTextEffect">Требуется <see cref="T:Microsoft.Office.Core.MsoPresetTextEffect" />. Влияние предварительно текста.</param>
-        <param name="Text">
-          <b>Строковое значение.</b> Текст в объект WordArt.</param>
-        <param name="FontName">
-          <b>Строковое значение.</b> Имя шрифта, используемого в объект WordArt.</param>
-        <param name="FontSize">Требуется <b>один</b>. Размер шрифта, используемого в объект WordArt (в точках).</param>
-        <param name="FontBold">Требуется <see cref="T:Microsoft.Office.Core.MsoTriState" />. Шрифт, используемый в объект WordArt выделяется полужирным шрифтом.</param>
-        <param name="FontItalic">Требуется <b>MsoTriState</b>. Шрифт, используемый в WordArt на курсив.</param>
-        <param name="Left">Требуется <b>один</b>. Положение (в пунктах) в левом верхнем углу WordArt ограничивающего прямоугольника относительно левого верхнего угла документа.</param>
-        <param name="Top">Требуется <b>один</b>. Положение (в пунктах) в левом верхнем углу WordArt ограничивающего прямоугольника относительно начало документа.</param>
+        <param name="PresetTextEffect">Обязательный <see cref="T:Microsoft.Office.Core.MsoPresetTextEffect" />. Заданный стиль текста.</param>
+        <param name="Text">Обязательный атрибут типа <b>String</b>. Текст в объекте WordArt.</param>
+        <param name="FontName">Обязательный атрибут типа <b>String</b>. Имя шрифта, используемого в объекте WordArt.</param>
+        <param name="FontSize">Обязательное <b>одно</b>. Размер шрифта, используемого в объекте WordArt (в пунктах).</param>
+        <param name="FontBold">Обязательный <see cref="T:Microsoft.Office.Core.MsoTriState" />. Шрифт, используемый в объекте WordArt для выделения полужирным шрифтом.</param>
+        <param name="FontItalic">Обязательный <b>MsoTriState</b>. Шрифт, используемый в объекте WordArt курсивом.</param>
+        <param name="Left">Обязательное <b>одно</b>. Положение (в пунктах) верхнего левого угла ограничительной рамки WordArt относительно левого верхнего угла документа.</param>
+        <param name="Top">Обязательное <b>одно</b>. Положение (в точках) верхнего левого угла ограничительной рамки WordArt относительно верхнего края документа.</param>
         <summary>Создает объект WordArt. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новый объект WordArt.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>При добавлении WordArt в документ высоту и ширину объекта WordArt автоматически устанавливаются на основе размера и объем заданный текст.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При добавлении объекта WordArt в документ высота и ширина объекта WordArt задаются автоматически в зависимости от размера и объема указанного текста.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -832,15 +807,13 @@
         <Parameter Name="Y1" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="EditingType">Требуется <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство редактирования первого узла.</param>
-        <param name="X1">Требуется <b>один</b>. Положение первого узла в произвольный документа относительно левого верхнего угла документа (в точках).</param>
-        <param name="Y1">Требуется <b>один</b>. Положение первого узла в произвольный документа относительно левого верхнего угла документа (в точках).</param>
-        <summary>Создает объект freeform. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FreeformBuilder" /> объекта, что представляет freeform как он создается.</summary>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Core.MsoEditingType" />. Свойство Edit первого узла.</param>
+        <param name="X1">Обязательное <b>одно</b>. Положение (в точках) первого узла в полилинии относительно левого верхнего угла документа.</param>
+        <param name="Y1">Обязательное <b>одно</b>. Положение (в точках) первого узла в полилинии относительно левого верхнего угла документа.</param>
+        <summary>Создает объект полилинии. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FreeformBuilder" /> объект, представляющий полилинию при ее построении.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить фигуру сегменты. После добавления по крайней мере один сегмент фигуру, можно использовать <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.ConvertToShape" /> метода для преобразования объекта <b>FreeformBuilder</b> в <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, который имеет геометрические описания, определен в объекте <b>FreeformBuilder</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Object,System.Object,System.Object,System.Object)" /> метод для добавления сегментов в полилинию. После добавления по крайней мере одного сегмента в <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.ConvertToShape" /> полилинию можно использовать метод для преобразования объекта <b>FreeformBuilder</b> в <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект с описанием геометрического элемента, которое было определено в объекте <b>FreeformBuilder</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -896,11 +869,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -958,7 +929,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1018,8 +989,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Отдельные фигуры, которые будут включены в диапазон. Может быть целое число, указывающее индекс фигуры, string, указывающее имя фигуры или массив, содержащий целых значений или строк.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, который представляет собой подмножество фигур в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов.</summary>
+        <param name="Index">Обязательный <b>объект</b>. Отдельные фигуры для включения в диапазон. Может быть целым числом, определяющим номер индекса фигуры, строку, которая указывает имя фигуры, или массив, который содержит целые числа или строки.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, представляющий подмножество фигур в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1045,7 +1016,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбирает все фигуры в указанном <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов.</summary>
+        <summary>Выделяет все фигуры в указанной <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

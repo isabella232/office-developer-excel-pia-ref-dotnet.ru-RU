@@ -1,13 +1,5 @@
 <Type Name="Interior" FullName="Microsoft.Office.Interop.Excel.Interior">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="c71701c9d8836ca465988c9e2fec16d9b1bf8ddb" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20582259" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Interior" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c71701c9d8836ca465988c9e2fec16d9b1bf8ddb" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582259" /></Metadata><TypeSignature Language="C#" Value="public interface Interior" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Interior" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Interior" />
   <TypeSignature Language="VB.NET" Value="Public Interface Interior" />
@@ -29,11 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет внутреннюю объекта.</summary>
-    <remarks>
-      <para>Свойство <b>внутренней</b> используется для возврата объекта <b>внутренней</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет внутреннюю часть объекта.</summary>
+    <remarks><para>Используйте свойство <b>внутреннее</b> для возврата <b>внутреннего</b> объекта.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -90,7 +80,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает ячейку в основной цвет заливки или нарисовать цвет заливки объекта.</summary>
+        <summary>Возвращает или задает цвет заливки основной ячейки или цвет заливки графического объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,16 +111,14 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет внутренней.</summary>
+        <summary>Возвращает или задает цвет внутренней области.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Цвет указан как значение индекса в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> константы.</para>
+        <remarks><para>Цвет задается в виде значения индекса в текущей цветовой палитре или в виде одной из <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> следующих констант.</para>
           <para>
-            <b>xlColorIndexAutomatic</b>. Позволяет указать автоматическое заполнение для графические объекты.</para>
+            <b>кслколориндексаутоматик</b>. Используется для указания автоматической заливки графических объектов.</para>
           <para>
-            <b>xlColorIndexNone</b>. Позволяет указать заполнение внутренней.</para>
-          <para></para>
-        </remarks>
+            <b>кслколориндексноне</b>. Используйте, чтобы не указывать внутреннюю заливку.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -158,11 +146,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Gradient">
@@ -188,12 +174,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает свойство <b>градиента</b> объекта <b>внутренней</b> выделения.</summary>
+        <summary>Получает или задает свойство <b>градиента</b> для <b>внутреннего</b> объекта Selection.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использует LinearGradient или RectangularGradient.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Использует либо LinearGradient, либо RectangularGradient.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="InvertIfNegative">
@@ -222,8 +206,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если Microsoft Excel инвертирует шаблон в элементе, если он соответствует отрицательное значение.</summary>
+        <summary><b>Имеет значение true</b> , если Microsoft Excel инвертирует шаблон элемента, если он соответствует отрицательному числу.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -284,19 +267,18 @@
       <Docs>
         <summary>Возвращает или задает внутренний шаблон.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойства <b>шаблон</b> может иметь одно из следующих значений <see cref="T:Microsoft.Office.Interop.Excel.XlPattern" /> константы.</para>
+        <remarks><para>Свойство <b>pattern</b> может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlPattern" /> констант.</para>
           <para>
-            <b>xlPatternAutomatic</b>
+            <b>кслпаттернаутоматик</b>
           </para>
           <para>
-            <b>xlPatternChecker</b>
+            <b>кслпаттернчеккер</b>
           </para>
           <para>
-            <b>xlPatternCrissCross</b>
+            <b>кслпаттернкрисскросс</b>
           </para>
           <para>
-            <b>xlPatternDown</b>
+            <b>кслпаттерндовн</b>
           </para>
           <para>
             <b>xlPatternGray16</b>
@@ -314,40 +296,39 @@
             <b>xlPatternGray8</b>
           </para>
           <para>
-            <b>xlPatternGrid</b>
+            <b>кслпаттернгрид</b>
           </para>
           <para>
-            <b>xlPatternHorizontal</b>
+            <b>кслпаттернхоризонтал</b>
           </para>
           <para>
-            <b>xlPatternLightDown</b>
+            <b>кслпаттернлигхтдовн</b>
           </para>
           <para>
-            <b>xlPatternLightHorizontal</b>
+            <b>кслпаттернлигхсоризонтал</b>
           </para>
           <para>
-            <b>xlPatternLightUp</b>
+            <b>кслпаттернлигхтуп</b>
           </para>
           <para>
-            <b>xlPatternLightVertical</b>
+            <b>кслпаттернлигхтвертикал</b>
           </para>
           <para>
-            <b>xlPatternNone</b>
+            <b>кслпаттернноне</b>
           </para>
           <para>
             <b>xlPatternSemiGray75</b>
           </para>
           <para>
-            <b>xlPatternSolid</b>
+            <b>кслпаттернсолид</b>
           </para>
           <para>
-            <b>xlPatternUp</b>
+            <b>кслпаттернуп</b>
           </para>
           <para>
-            <b>xlPatternVertical</b>
+            <b>кслпаттернвертикал</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PatternColor">
@@ -376,7 +357,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет фона шаблона как значение RGB.</summary>
+        <summary>Возвращает или задает цвет внутреннего узора в виде значения RGB.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -407,12 +388,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет внутренней шаблон как индекс в текущей цветовой палитры или один из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант: <b>xlColorIndexAutomatic</b> или <b>xlColorIndexNone</b>.</summary>
+        <summary>Возвращает или задает цвет внутреннего узора в виде индекса в текущей цветовой палитре или в виде одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант: <b>кслколориндексаутоматик</b> или <b>кслколориндексноне</b>.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Этому свойству присвоено значение <b>xlColorIndexAutomatic</b> для указания автоматического шаблон для ячейки или стиль заливки автоматического графические объекты. Этому свойству присвоено значение <b>xlColorIndexNone</b> , чтобы указать, что требуется шаблон (это то же самое, что и параметр <see cref="P:Microsoft.Office.Interop.Excel.Interior.Pattern" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который требуется <b>xlPatternNone</b>).</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Установите для этого свойства значение <b>кслколориндексаутоматик</b> , чтобы указать автоматический узор для ячеек или автоматический стиль заливки для графических объектов. Установите для этого свойства значение <b>кслколориндексноне</b> , чтобы не использовать шаблон (это то же, что установка для <see cref="P:Microsoft.Office.Interop.Excel.Interior.Pattern" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объекта <b>кслпаттернноне</b>).</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PatternThemeColor">
@@ -441,7 +420,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает шаблон цвет темы для объекта <b>внутренней части</b> .</summary>
+        <summary>Получает или задает шаблон цвета темы для <b>внутреннего</b> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -472,7 +451,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает шаблон tint и тень для объекта <b>внутренней части</b> .</summary>
+        <summary>Получает или задает шаблон оттенка и затенения для <b>внутреннего</b> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -503,12 +482,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает цвет темы в применяемые цветовой схеме, связанного с указанным объектом.</summary>
+        <summary>Получает или задает цвет темы примененной цветовой схемы, связанной с указанным объектом.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Попытки подключения к цвет темы для объекта, цвет которого не является в настоящее время темой приведет к ошибку времени выполнения недопустимый запрос.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>При попытке доступа к цвету темы для объекта, цвет которого в настоящее время не является темой, возникает ошибка времени выполнения запроса.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TintAndShade">
@@ -539,11 +516,9 @@
       <Docs>
         <summary>Получает или задает значение, которое осветляет или затемняет цвет.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>От -1 (самый темный) можно ввести номер 1 (очень светлый) для свойства <b>TintAndShade</b> . Нейтральный нуль (0).</para>
-          <para>Попытки подключения к этому свойству присвоено значение меньше, чем значение -1 или более 1 приводит к ошибке времени выполнения: «указанное значение находится вне диапазона». Это свойство работает для цвета темы и цвета nontheme.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Можно ввести число от-1 (самый темный) до 1 (самое светлое) для свойства <b>тинтандшаде</b> . Ноль (0) не является нейтральным.</para>
+          <para>При попытке присвоить этому свойству значение, меньшее-1 или превышающее 1, возникает ошибка времени выполнения: "указанное значение выходит за пределы допустимого диапазона". Это свойство применимо как к цветам темы, так и к цветам.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

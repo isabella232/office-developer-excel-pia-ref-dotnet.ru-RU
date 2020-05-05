@@ -1,13 +1,5 @@
 <Type Name="SlicerCaches" FullName="Microsoft.Office.Interop.Excel.SlicerCaches">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="d7eb213ba3f374c8e657b8b86922544743741125" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20584079" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface SlicerCaches : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d7eb213ba3f374c8e657b8b86922544743741125" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20584079" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerCaches : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SlicerCaches implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SlicerCaches" />
   <TypeSignature Language="VB.NET" Value="Public Interface SlicerCaches&#xA;Implements IEnumerable" />
@@ -33,11 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию кэши срез, связанные с указанной книге.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.SlicerCaches.Item(System.Object)" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCaches" /> коллекции для возврата <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта, связанного с указанным <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекта. A <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект можно извлечь с помощью любого из значение <see cref="P:Microsoft.Office.Interop.Excel.SlicerCaches.Item(System.Object)" /> свойства или <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.Name" /> свойства указанного объекта.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет коллекцию кэшей срезов, связанных с указанной книгой.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCaches.Item(System.Object)" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCaches" /> коллекции, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект, связанный с указанным <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объектом. <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> Объект можно получить с помощью значения <see cref="P:Microsoft.Office.Interop.Excel.SlicerCaches.Item(System.Object)" /> свойства или <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.Name" /> свойства указанного объекта.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -71,7 +61,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />.</value>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,10 +125,10 @@
         <Parameter Name="SlicerCacheType" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Source">Источник данных, будут на основе нового <b>SlicerCache</b> . Аргумент, переданной в параметре источник может быть <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объекта, <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект или строку. Если <b>Сводная таблица</b> передается, связанный с ним <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объект используется в качестве источника данных. Если строка передается, он интерпретируется как имя объекта <b>WorkbookConnection</b> , а если такой объект <b>WorkbookConnection</b> не существует, возникает ошибка во время выполнения.</param>
-        <param name="SourceField">Имя поля в источнике данных, чтобы отфильтровать сообщения по. Источники данных не OLAP, используйте <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект из объекта <b>сводный кэш</b> на основе срез или уникальное имя этого объекта (значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.Name" /> свойства). Для источников данных OLAP используйте уникальное имя иерархии на основе <b>SlicerCache</b> многомерных Выражений. Также можно указать уровне иерархии OLAP и Excel будет использовать соответствующей иерархии.</param>
-        <param name="Name">Имя Excel использует для обращения в кэш среза (значение свойства SlicerCache.Name). Если этот параметр опущен, Microsoft Excel будет создать имя. По умолчанию Excel объединяет «Slicer_» со значением свойства PivotField.Caption для срезов с источниками данных, не OLAP или со значением свойства CubeField.Caption для срезов с источниками данных OLAP. (Замените все пробелы «_»). При необходимости, чтобы сделать имя уникальным в пространстве имен книги, Excel добавляет целое число в конец созданное имя. Если указать имя, которое уже существует в пространстве имен книги, метод <b>Add</b> завершится с ошибкой.</param>
-        <param name="SlicerCacheType">Определяет тип срез или кэша срез.</param>
+        <param name="Source">Источник данных, на котором будет основан новый <b>SlicerCache</b> . Аргументу, переданному в параметр source, <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> может быть объект <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> , объект или строка. Если передается объект <b>сводной таблицы</b> , связанный <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> с ним объект используется в качестве источника данных. Если передается строка, она интерпретируется как имя объекта <b>WorkbookConnection</b> , и если такого объекта <b>WorkbookConnection</b> не существует, возникает ошибка времени выполнения.</param>
+        <param name="SourceField">Имя поля в источнике данных, по которому выполняется фильтрация. Для источников данных, отличных от OLAP, <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> используйте объект из объекта <b>PivotCache</b> , на котором основан срез, или уникальное имя этого объекта (значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.Name" /> свойства). Для источников данных OLAP используйте уникальное имя многомерного выражения иерархии, на которой базируется <b>SlicerCache</b> . Вы также можете указать уровень иерархии OLAP, и Excel будет использовать соответствующую иерархию.</param>
+        <param name="Name">Имя, используемое в Excel для ссылки на кэш среза (значение свойства SlicerCache.Name). Если этот параметр не задан, Excel создаст имя. По умолчанию Excel объединяет "Slicer_" со значением свойства PivotField. Caption для срезов с источниками данных, отличными от OLAP, или со значением свойства CubeField. Caption для срезов с источниками данных OLAP. (Заменяя все пробелы на "_".) Если требуется, чтобы имя было уникальным в пространстве имен книги, Excel добавляет целое число в конец созданного имени. Если указать имя, которое уже существует в пространстве имен книги, метод <b>Add</b> завершится с ошибками.</param>
+        <param name="SlicerCacheType">Определяет тип среза или кэша среза.</param>
         <summary>Добавляет новый <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект в коллекцию.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -167,13 +157,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -199,7 +186,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Получает число объектов в коллекции.</summary>
         <value>Число объектов в коллекции.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -227,12 +214,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
-        <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerCaches.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerCaches.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -263,7 +248,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -295,7 +280,7 @@
       <Docs>
         <param name="Index">Имя или номер индекса объекта.</param>
         <summary>Получает один <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект из коллекции.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />.</value>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />значение.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -322,12 +307,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект семейства сайтов.</summary>
-        <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект семейства сайтов.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект для коллекции.</summary>
+        <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объект для коллекции.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

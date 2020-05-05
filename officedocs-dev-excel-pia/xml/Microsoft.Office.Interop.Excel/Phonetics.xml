@@ -1,13 +1,5 @@
 <Type Name="Phonetics" FullName="Microsoft.Office.Interop.Excel.Phonetics">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="6c42dca41bf5014c0c820b5e834fbd5c95c1c0b6" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20579417" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Phonetics : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6c42dca41bf5014c0c820b5e834fbd5c95c1c0b6" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20579417" /></Metadata><TypeSignature Language="C#" Value="public interface Phonetics : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Phonetics implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Phonetics" />
   <TypeSignature Language="VB.NET" Value="Public Interface Phonetics&#xA;Implements IEnumerable" />
@@ -33,12 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> объекты в указанном диапазоне. Каждый объект <b>фонетическая запись</b> содержит сведения о конкретных фонетическое текстовой строки.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Range.Phonetics" /> свойство для возврата коллекции <b>Фонетическое имя</b> .</para>
-      <para>Используйте <b>Фонетическое имя</b>(<paramref name="index" />), где <paramref name="index" /> — номер индекса фонетическое текста, чтобы возвратить объект <b>фонетическая запись</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> объектов в указанном диапазоне. Каждый <b>фонетический</b> объект содержит сведения о конкретной строке фонетического текста.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Phonetics" /> свойство, чтобы возвратить коллекцию <b>фонетических</b> свойств.</para>
+      <para>Используйте <b>фонетические</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса фонетического текста, чтобы вернуть один <b>фонетический</b> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -101,11 +91,10 @@
         <Parameter Name="Text" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Start">Требуется <b>целое число</b>. Позиция, представляющий первым символом в указанной ячейке.</param>
-        <param name="Length">Требуется <b>целое число</b>. Число символов из <paramref name="Start" /> позицию в конец текста в ячейке.</param>
-        <param name="Text">
-          <b>Строковое значение.</b> В совокупности знаки, которые представляют фонетическое текст в ячейке.</param>
-        <summary>Добавляет фонетическое текст в указанной ячейке.</summary>
+        <param name="Start">Обязательный атрибут типа <b>Integer</b>. Позиция, представляющая первый символ в указанной ячейке.</param>
+        <param name="Length">Обязательный атрибут типа <b>Integer</b>. Количество символов от <paramref name="Start" /> позиции до конца текста в ячейке.</param>
+        <param name="Text">Обязательный атрибут типа <b>String</b>. Вместе — символы, представляющие фонетический текст в ячейке.</param>
+        <summary>Добавление фонетического текста в указанную ячейку.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,24 +124,22 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ выравнивания текста, указанного в фонетическое.</summary>
+        <summary>Возвращает или задает выравнивание для указанного фонетического текста.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>Alignment</b> может иметь одно из этих <see cref="T:Microsoft.Office.Interop.Excel.XlPhoneticAlignment" /> константы:</para>
+        <remarks><para>Свойство <b>alignment</b> может иметь одну из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlPhoneticAlignment" /> констант:</para>
           <para>
-            <b>XlPhoneticAlignCenter</b>
+            <b>кслфонетикалигнцентер</b>
           </para>
           <para>
-            <b>XlPhoneticAlignDistributed</b>
+            <b>кслфонетикалигндистрибутед</b>
           </para>
           <para>
-            <b>XlPhoneticAlignLeft</b>
+            <b>кслфонетикалигнлефт</b>
           </para>
           <para>
-            <b>XlPhoneticAlignNoControl</b>
+            <b>кслфонетикалигнноконтрол</b>
           </para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -209,7 +196,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип фонетическое текст в указанной ячейке.</summary>
+        <summary>Возвращает или задает тип фонетического текста в указанной ячейке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -267,11 +254,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -322,7 +307,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -385,7 +370,7 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Номер индекса объекта.</param>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -414,12 +399,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число знаков фонетическое текста с позиции, заданной с <see cref="P:Microsoft.Office.Interop.Excel.Phonetics.Start" /> свойство.</summary>
+        <summary>Возвращает число символов фонетического текста из позиции, заданной <see cref="P:Microsoft.Office.Interop.Excel.Phonetics.Start" /> свойством.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы задать значение этого свойства для объекта <b>CalloutFormat</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.CalloutFormat.CustomLength(System.Single)" /> метод, чтобы задать значение этого свойства для объекта <b>CalloutFormat</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -473,7 +456,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение, представляющий первый символ фонетическое текстовую строку в указанной ячейке.</summary>
+        <summary>Возвращает позицию, представляющую первый символ строки фонетического текста в указанной ячейке.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

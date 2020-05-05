@@ -1,13 +1,5 @@
 <Type Name="XmlMaps" FullName="Microsoft.Office.Interop.Excel.XmlMaps">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3ab4ebaec8ea4dc2dcf83b59eb5f055efa1f1359" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20583680" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface XmlMaps : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3ab4ebaec8ea4dc2dcf83b59eb5f055efa1f1359" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20583680" /></Metadata><TypeSignature Language="C#" Value="public interface XmlMaps : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XmlMaps implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.XmlMaps" />
   <TypeSignature Language="VB.NET" Value="Public Interface XmlMaps&#xA;Implements IEnumerable" />
@@ -33,12 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объекты, которые были добавлены в книгу.</summary>
-    <remarks>
-      <para>Средства XML, за исключением сохранения файлов в формате таблиц XML, доступны только в профессиональном выпуске Microsoft Office 2003 и Microsoft Office Excel 2003.</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.XmlMaps.Add(System.String,System.Object)" /> метод для добавления сопоставления XML в книге.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объектов, добавленных в книгу.</summary>
+    <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.XmlMaps.Add(System.String,System.Object)" /> метод, чтобы добавить карту XML в книгу.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -99,15 +89,12 @@
         <Parameter Name="RootElementName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Schema">
-          <b>Строковое значение.</b> Схема, добавляемой в качестве сопоставления XML. Строка может быть путь для файла схемы или для самой схемы. Можно указать путь в формате соглашения об универсальных именах (UNC) или унифицированный указатель ресурсов (URL).</param>
-        <param name="RootElementName">Необязательный атрибут типа <b>String</b>.  Имя корневого элемента. Этот аргумент можно игнорируется, если схема содержит только один корневой элемент.</param>
-        <summary>Добавляет сопоставления XML в указанной книге. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объекта.</summary>
+        <param name="Schema">Обязательный атрибут типа <b>String</b>. Схема, которую необходимо добавить в качестве карты XML. Строка может представлять собой путь к файлу схемы или собственно схеме. Путь может быть указан в формате универсального имени (UNC) или в формате URL-адреса.</param>
+        <param name="RootElementName">Необязательная <b>строка</b>. Имя корневого элемента. Этот аргумент можно игнорировать, если схема содержит только один корневой элемент.</param>
+        <summary>Добавляет карту XML в указанную книгу. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Средства XML, за исключением сохранения файлов в формате таблиц XML, доступны только в профессиональном выпуске Microsoft Office 2003 и Microsoft Office Excel 2003.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -161,7 +148,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -189,12 +176,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -255,7 +240,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

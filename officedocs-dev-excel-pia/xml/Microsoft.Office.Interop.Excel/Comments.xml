@@ -1,13 +1,5 @@
 <Type Name="Comments" FullName="Microsoft.Office.Interop.Excel.Comments">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="53a0a01123cb73fe971527fcb47fe1d9e130a582" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20583414" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Comments : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="53a0a01123cb73fe971527fcb47fe1d9e130a582" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20583414" /></Metadata><TypeSignature Language="C#" Value="public interface Comments : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Comments implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Comments" />
   <TypeSignature Language="VB.NET" Value="Public Interface Comments&#xA;Implements IEnumerable" />
@@ -33,13 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция примечания к ячейкам. Каждый Примечание представлено в <see cref="T:Microsoft.Office.Interop.Excel.Comment" /> объекта.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.Comments" /> свойство для возврата коллекции <b>комментариев</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Range.AddComment(System.Object)" /> метод для добавления комментария в диапазон.</para>
-      <para>Используйте <b>комментарии</b>(<paramref name="index" />), где <paramref name="index" /> является номером комментарий для возврата одного примечания из коллекции <b>комментариев</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция комментариев к ячейкам. Каждый комментарий представлен <see cref="T:Microsoft.Office.Interop.Excel.Comment" /> объектом.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.Comments" /> свойство, чтобы возвратить коллекцию <b>комментариев</b> .</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Range.AddComment(System.Object)" /> метод, чтобы добавить комментарий к диапазону.</para>
+      <para>USE <b>Comments</b>(<paramref name="index" />), <paramref name="index" /> где — это номер комментария, чтобы возвратить один комментарий из коллекции <b>комментариев</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -158,11 +148,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -220,7 +208,7 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>целое число</b>. Номер индекса для объекта.</param>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

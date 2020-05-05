@@ -1,13 +1,5 @@
 <Type Name="ChartArea" FullName="Microsoft.Office.Interop.Excel.ChartArea">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="8707be5e24dec82e4b5526b2fd741c4c8a846d77" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20582378" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ChartArea" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8707be5e24dec82e4b5526b2fd741c4c8a846d77" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582378" /></Metadata><TypeSignature Language="C#" Value="public interface ChartArea" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartArea" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ChartArea" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartArea" />
@@ -29,11 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет область диаграммы. Области диаграммы на диаграмме содержит осей, заголовка диаграммы, оси заголовков и легенды. Области диаграммы на объемной диаграммы содержит заголовок диаграммы и легенды; она не включает область построения (область внутри области диаграммы, где отображаются данные). Сведения о форматировании область построения можно <see cref="T:Microsoft.Office.Interop.Excel.PlotArea" /> объекта.</summary>
-    <remarks>
-      <para>Используйте Скругленный<see cref="P:Microsoft.Office.Interop.Excel._Chart.ChartArea" /> свойство для возврата объекта <b>ChartArea</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет область диаграммы. Область диаграммы на двумерной диаграмме содержит оси, название диаграммы, названия осей и условные обозначения. Область диаграммы на объемной диаграмме содержит заголовок диаграммы и условные обозначения; она не включает область построения (область в области диаграммы, в которой отображаются данные). Сведения о форматировании области построения можно посмотреть в <see cref="T:Microsoft.Office.Interop.Excel.PlotArea" /> объекте.</summary>
+    <remarks><para>Используйте<see cref="P:Microsoft.Office.Interop.Excel._Chart.ChartArea" /> свойство rounded для возврата объекта <b>ChartArea</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -59,7 +49,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект (можно использовать это свойство с помощью объекта OLE-автоматизации для возврата приложения этот объект).</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта (можно использовать это свойство с объектом OLE Automation, чтобы возвратить приложение этого объекта).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -96,8 +86,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если текст в объекте изменяет размер шрифта, когда изменяется размер объекта. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>Значение true</b> , если текст в объекте изменяет размер шрифта при изменении размера объекта. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -128,7 +117,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Border</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границы объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,7 +169,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет данные из диаграммы, но оставляет форматирования.</summary>
+        <summary>Удаляет данные из диаграммы, но оставляет форматирование.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -232,7 +221,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирование объекта в буфер обмена.</summary>
+        <summary>Копирует объект в буфер обмена.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -262,11 +251,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Fill">
@@ -295,7 +282,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект для указанного фигуры или <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> объект для указанной диаграммы, содержащий заливки параметры форматирования для фигуры или диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект указанной фигуры или <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> объект для указанной диаграммы, который содержит свойства форматирования заливки для фигуры или диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -326,7 +313,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -354,15 +341,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> объекта. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" />
-        </value>
-        <remarks>
-          <para>
-            <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> Объект содержит строку, заливки и влияние форматирования для области диаграммы.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> объект. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /></value>
+        <remarks><para><see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> Объект содержит линию, заливку и эффекты форматирования области диаграммы.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -391,7 +373,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота в пунктах объекта.</summary>
+        <summary>Высота объекта (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -422,7 +404,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутренней указанный объект.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -453,12 +435,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от левого края объекта по левому краю области диаграммы.</summary>
+        <summary>Расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если окно развернуто, это свойство возвращает отрицательное значение, которое может значительно изменяться в зависимости от ширины границы окна. Назначить этому свойству значение 0 (ноль) будет убедитесь, что окно немного меньше, чем было бы, если окно приложения было развернуто. Другими словами Если это свойство является нуль (0), левая граница главного окна Microsoft Excel ровно столько будут видны на экране.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если окно развернуто, это свойство возвращает отрицательное число, которое изменяется в зависимости от ширины границы окна. Если установить для этого свойства значение 0 (ноль), окно будет немного меньше, чем было бы в том случае, если окно приложения было развернуто. Другими словами, если это свойство имеет значение 0 (ноль), левая граница основного окна Microsoft Excel практически не будет видна на экране.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -543,9 +523,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Значение true, если внедренную диаграмму скругленные углы. Для чтения и записи, <b>Boolean</b>.</summary>
-        <value>
-          <b>Boolean</b>.</value>
+        <summary>Имеет значение true, если внедренная диаграмма имеет скругленные углы. Для чтения и записи, <b>Boolean</b>.</summary>
+        <value><b>Логическое значение</b>.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -570,7 +549,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выбор объекта.</summary>
+        <summary>Выбирает объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -601,8 +580,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>
-          <b>Значение true,</b> Если шрифт является теневой или объект имеет тень.</summary>
+        <summary><b>Значение true</b> , если шрифт является теневым или объект имеет тень.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -633,7 +611,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от верхнего края к объекту, чтобы в верхней части строки 1 (на рабочем листе) или верхнего края области диаграммы (на диаграмме).</summary>
+        <summary>Расстояние (в пунктах) от верхнего края объекта до верхнего края строки 1 (на листе) или сверху области диаграммы (на диаграмме).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -664,7 +642,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина в точках объекта.</summary>
+        <summary>Ширина объекта (в пунктах).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

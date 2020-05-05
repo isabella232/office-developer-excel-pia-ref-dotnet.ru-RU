@@ -1,13 +1,5 @@
 <Type Name="FreeformBuilder" FullName="Microsoft.Office.Interop.Excel.FreeformBuilder">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="49bbc8d21ea36b32da44ca3a92e3697a77f26497" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20582651" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface FreeformBuilder" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="49bbc8d21ea36b32da44ca3a92e3697a77f26497" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582651" /></Metadata><TypeSignature Language="C#" Value="public interface FreeformBuilder" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FreeformBuilder" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FreeformBuilder" />
   <TypeSignature Language="VB.NET" Value="Public Interface FreeformBuilder" />
@@ -29,11 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет геометрии freeform во время его построения.</summary>
-    <remarks>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> метод возвращает объект <b>FreeformBuilder</b> . Использование <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Object,System.Object,System.Object,System.Object)" /> метод для добавления узлов в freefrom. Использование <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.ConvertToShape" /> метод создания фигуры, определенные в объекте <b>FreeformBuilder</b> и добавляет его к <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет геометрию полилинии во время ее построения.</summary>
+    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Shapes.BuildFreeform(Microsoft.Office.Core.MsoEditingType,System.Single,System.Single)" /> метод для возврата объекта <b>FreeformBuilder</b> . Используйте <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить узлы в фрифром. С помощью <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.ConvertToShape" /> метода Создайте фигуру, определенную в объекте <b>FreeformBuilder</b> , и добавьте ее в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекцию.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="AddNodes">
@@ -65,15 +55,15 @@
         <Parameter Name="Y3" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SegmentType">Требуется <see cref="T:Microsoft.Office.Interop.Office.MsoSegmentType" />. Тип сегмента будет добавлена. <b>MsoSegmentType</b> может иметь одно из следующих констант:<b>msoSegmentLine</b><b>msoSegmentCurve</b></param>
-        <param name="EditingType">Требуется <see cref="T:Microsoft.Office.Interop.Office.MsoEditingType" />. Свойство редактирования вершины. <b>MsoEditingType</b> может иметь одно из следующих констант:<b>msoEditingAuto</b><b>msoEditingCorner</b>не может быть <b>msoEditingSmooth</b> или <b>msoEditingSymmetric</b>. Если <paramref name="SegmentType" /> — это <b>msoSegmentLine</b><paramref name="EditingType" /> должен быть <b>msoEditingAuto</b>.</param>
-        <param name="X1">Требуется <b>один</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingAuto</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> новый узел <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа для первой контрольной точки для нового сегмента.</param>
-        <param name="Y1">Требуется <b>один</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingAuto</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> новый узел <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа для первой контрольной точки для нового сегмента.</param>
-        <param name="X2">Необязательный элемент <b>Object</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа для второй контрольной точки для нового сегмента. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="Y2">Необязательный элемент <b>Object</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа для второй контрольной точки для нового сегмента. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="X3">Необязательный элемент <b>Object</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент указывает расстояние по горизонтали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <param name="Y3">Необязательный элемент <b>Object</b>. Если <paramref name="EditingType" /> новый сегмент <b>msoEditingCorner</b>, этот аргумент определяет расстояние по вертикали (в пунктах) в левом верхнем углу документа в конечную точку новый сегмент. Если <paramref name="EditingType" /> нового сегмента — <b>msoEditingAuto</b>, не задано значение для этого аргумента.</param>
-        <summary>Добавляет узел в произвольной формы.</summary>
+        <param name="SegmentType">Обязательный <see cref="T:Microsoft.Office.Interop.Office.MsoSegmentType" />. Тип добавляемого сегмента. <b>Мсосегменттипе</b> может быть одной из этих констант:<b>мсосегментлине</b><b>мсосегменткурве</b></param>
+        <param name="EditingType">Обязательный <see cref="T:Microsoft.Office.Interop.Office.MsoEditingType" />. Свойство Edit для вершины. <b>Мсоедитингтипе</b> может быть одной из этих констант:<b>мсоедитингауто</b><b>мсоедитингкорнер</b>не может быть <b>мсоедитингсмус</b> или <b>мсоедитингсимметрик</b>. Если <paramref name="SegmentType" /> это <b>мсосегментлине</b>, <paramref name="EditingType" /> должен быть <b>мсоедитингауто</b>.</param>
+        <param name="X1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="Y1">Обязательное <b>одно</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый узел — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до первой контрольной точки нового сегмента.</param>
+        <param name="X2">Необязательный <b>объект</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y2">Необязательный <b>объект</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до второй контрольной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="X3">Необязательный <b>объект</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент определяет расстояние по горизонтали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <param name="Y3">Необязательный <b>объект</b>. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингкорнер</b>, этот аргумент задает расстояние по вертикали (в пунктах) от верхнего левого угла документа до конечной точки нового сегмента. <paramref name="EditingType" /> Если новый сегмент — <b>мсоедитингауто</b>, не указывайте значение этого аргумента.</param>
+        <summary>Добавляет узел в полилинию.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -128,11 +118,9 @@
       <Docs>
         <summary>Создает фигуру, которая имеет геометрические характеристики указанного <see cref="T:Microsoft.Office.Interop.Excel.FreeformBuilder" /> объекта. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий новую фигуру.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>
-            <b>Примечание</b>   Необходимо применить <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Object,System.Object,System.Object,System.Object)" /> метод <b>FreeformBuilder</b> объекта по крайней мере один раз, прежде чем использовать метод <b>ConvertToShape</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>
+            <b>Note (Примечание</b> )   Вы должны применить <see cref="M:Microsoft.Office.Interop.Excel.FreeformBuilder.AddNodes(Microsoft.Office.Core.MsoSegmentType,Microsoft.Office.Core.MsoEditingType,System.Single,System.Single,System.Object,System.Object,System.Object,System.Object)" /> метод к объекту <b>FreeformBuilder</b> по крайней мере один раз, прежде чем использовать метод <b>конверттошапе</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -160,11 +148,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">

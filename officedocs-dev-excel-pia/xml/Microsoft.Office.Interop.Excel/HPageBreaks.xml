@@ -1,13 +1,5 @@
 <Type Name="HPageBreaks" FullName="Microsoft.Office.Interop.Excel.HPageBreaks">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="0624b974810397b893a61eed52c425b38d116dad" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20585731" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface HPageBreaks : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0624b974810397b893a61eed52c425b38d116dad" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20585731" /></Metadata><TypeSignature Language="C#" Value="public interface HPageBreaks : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract HPageBreaks implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.HPageBreaks" />
   <TypeSignature Language="VB.NET" Value="Public Interface HPageBreaks&#xA;Implements IEnumerable" />
@@ -33,23 +25,21 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция горизонтальных разрывов страниц в область печати. Представленный каждого горизонтальной разрыва <see cref="T:Microsoft.Office.Interop.Excel.HPageBreak" /> объекта.</summary>
-    <remarks>
-      <para>Свойство <b>HPageBreaks</b> используется для возврата коллекции <b>HPageBreaks</b> . Использование <see cref="M:Microsoft.Office.Interop.Excel.HPageBreaks.Add(System.Object)" /> метод, чтобы добавить разрыв страницы по горизонтали.</para>
-      <para>Если добавить разрыв страницы, которая не пересекаются область печати объекта <b>HPageBreak</b> недавно добавленных не появится в коллекции <b>HPageBreaks</b> для области печати.</para>
-      <para>При <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Application" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Count" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Creator" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Item(System.Int32)" /> свойства, <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Parent" /> свойства, или <see cref="M:Microsoft.Office.Interop.Excel.HPageBreaks.Add(System.Object)" /> метод используется в сочетании со свойством <b>HPageBreaks</b> :</para>
+    <summary>Коллекция горизонтальных разрывов страниц в области печати. Каждый разрыв страницы по горизонтали представлен <see cref="T:Microsoft.Office.Interop.Excel.HPageBreak" /> объектом.</summary>
+    <remarks><para>Используйте свойство <b>HPageBreaks</b> , чтобы возвратить коллекцию <b>HPageBreaks</b> . Используйте <see cref="M:Microsoft.Office.Interop.Excel.HPageBreaks.Add(System.Object)" /> метод для добавления горизонтального разрыва страницы.</para>
+      <para>Если добавить разрыв страницы, не пересекающийся с областью печати, то недавно добавленный объект <b>HPageBreak</b> не будет отображаться в коллекции <b>HPageBreaks</b> для области печати.</para>
+      <para><see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Application" /> Если свойство, <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Count" /> свойство <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Creator" /> <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Item(System.Int32)" /> <see cref="P:Microsoft.Office.Interop.Excel.HPageBreaks.Parent" /> , свойство, свойство, свойство или <see cref="M:Microsoft.Office.Interop.Excel.HPageBreaks.Add(System.Object)" /> метод используются вместе со свойством <b>HPageBreaks</b> :</para>
       <list type="bullet">
         <item>
-          <description>Для автоматического область печати свойство <b>HPageBreaks</b> применяется только к разрывов страниц в область печати.</description>
+          <description>Для автоматической области печати свойство <b>HPageBreaks</b> применяется только к разрывам страниц в области печати.</description>
         </item>
         <item>
-          <description>Для пользовательских области печати тот же диапазон свойство <b>HPageBreaks</b> применяется ко всем разрывов страниц.</description>
+          <description>Для определенной пользователем области печати того же диапазона свойство <b>HPageBreaks</b> применяется ко всем разрывам страниц.</description>
         </item>
       </list>
       <para>
-        <b>Примечание</b>  Существует ограничение в 1 026 горизонтальных разрывов страниц на листе.</para>
-      <para></para>
-    </remarks>
+        <b>Note (Примечание</b> )  На листе может быть не более 1 026 горизонтальных страниц.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -110,8 +100,8 @@
         <Parameter Name="Before" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Требуется <b>объект</b>. A <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта. Диапазон, над которой будет добавлен новый разрыв страницы.</param>
-        <summary>Добавляет горизонтальный разрыв страницы. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreak" /> объекта.</summary>
+        <param name="Before">Обязательный <b>объект</b>. Объект <see cref="T:Microsoft.Office.Interop.Excel.Range" />. Диапазон, выше которого добавляется новый разрыв страницы.</param>
+        <summary>Добавляет разрыв страницы по горизонтали. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreak" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -197,11 +187,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -262,7 +250,7 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется целое число. Номер индекса объекта.</param>
+        <param name="Index">Обязательный атрибут типа Integer. Номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

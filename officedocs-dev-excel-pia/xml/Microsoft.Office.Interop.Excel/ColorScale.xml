@@ -1,13 +1,5 @@
 <Type Name="ColorScale" FullName="Microsoft.Office.Interop.Excel.ColorScale">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="1f67e87764cc01fd4ea79e3073b361913e5007f2" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20585591" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface ColorScale" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1f67e87764cc01fd4ea79e3073b361913e5007f2" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20585591" /></Metadata><TypeSignature Language="C#" Value="public interface ColorScale" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ColorScale" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ColorScale" />
   <TypeSignature Language="VB.NET" Value="Public Interface ColorScale" />
@@ -29,15 +21,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет цветовые шкалы правила условного форматирования.</summary>
-    <remarks>
-      <para>Все объекты условного форматирования в составе <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекцию, содержащую объект, который является дочерним из <see cref="T:Microsoft.Office.Interop.Excel.Range" /> семейства сайтов. Можно создать цветовой шкалы правило форматирования с помощью любого <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddColorScale(System.Int32)" /> методу коллекции <b>FormatConditions</b> .</para>
-      <para>Цветовые шкалы visual руководства, которые помогут вам понять распределения данных и вариантов. Можно применить двух цветов или трехцветные шкалы к диапазону данных, данные в таблице или данных в отчете сводной таблицы. Для двух цветовой шкалы условное форматирование нужно назначить значение, тип и цвет пороговые значения минимального и максимального диапазона. Трехцветные масштаба также имеет среднее порогового значения.</para>
-      <para>Каждый из этих пороговые значения, определяется путем установки свойства <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> объекта. Объект <b>ColorScaleCriteria</b> , который является дочерним объектом <b>ColorScale</b> , представляет собой коллекцию всех <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объекты для цветовой шкалы.</para>
-      <para></para>
-    </remarks>
-    <example>
-      <para>В следующем примере кода создается диапазона номеров и затем применяется двух цветовой шкалы правила условного форматирования для этого диапазона. Цвет для минимальное пороговое значение присваивается red и максимальное пороговое значение синего.</para>
+    <summary>Представляет правило условного форматирования цветовой шкалы.</summary>
+    <remarks><para>Все объекты условного форматирования находятся в объекте <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> Collection, который является дочерним по отношению <see cref="T:Microsoft.Office.Interop.Excel.Range" /> к коллекции. Вы можете создать правило форматирования цветовой шкалы с помощью метода <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddColorScale(System.Int32)" /> коллекции <b>FormatConditions</b> .</para>
+      <para>Цветовые шкалы — это визуальные направляющие, которые помогут вам разоучиться распространению и вариации данных. Можно применить масштаб из двух или трех цветов к диапазону данных, данным таблицы или данным в отчете сводной таблицы. Для условного форматирования с двумя цветами необходимо назначить значение, тип и цвет для минимального и максимального порогового значения диапазона. Масштаб из трех цветов также имеет пороговое значение средней точки.</para>
+      <para>Каждый из этих порогов определяется путем задания свойств <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> объекта. Объект <b>ColorScaleCriteria</b> , являющийся дочерним по отношению к <b>объекту цветовой шкалы</b> , представляет собой коллекцию всех <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объектов для цветовой шкалы.</para>
+      <para> </para></remarks>
+    <example><para>В следующем примере кода создается диапазон чисел, а затем применяется правило условного форматирования с двумя цветами для этого диапазона. Затем цвет для минимального порога назначается красным, а максимальное пороговое значение — синим.</para>
       <code>&lt;span class="label"&gt;Sub CreateColorScaleCF() 
 
 
@@ -296,8 +285,7 @@
 
     Dim cfColorScale As &lt;/span&gt;
 &lt;i&gt;ColorScale&lt;/i&gt;
-&lt;span class="label"&gt;'Fill cells with sample data from 1 to 10     With ActiveSheet         .Range("C1") = 1         .Range("C2") = 2         .Range("C1:C2").AutoFill Destination:=Range("C1:C10")     End With          Range("C1:C10").Select          'Create a two-color ColorScale object for the created sample data range     Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)          'Set the minimum threshold to red and maximum threshold to blue     cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)     cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)          End Sub&lt;/span&gt;</code>
-    </example>
+&lt;span class="label"&gt;'Fill cells with sample data from 1 to 10     With ActiveSheet         .Range("C1") = 1         .Range("C2") = 2         .Range("C1:C2").AutoFill Destination:=Range("C1:C10")     End With          Range("C1:C10").Select          'Create a two-color ColorScale object for the created sample data range     Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)          'Set the minimum threshold to red and maximum threshold to blue     cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)     cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)          End Sub&lt;/span&gt;</code></example>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -323,13 +311,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатор объекта, данное свойство возвращает объект <b>приложения</b> , представляющего создателя указанный объект. Только для чтения.</summary>
-        <value>
-          <b>Приложения</b> (см. выше)</value>
-        <remarks>
-          <para>Это свойство можно использовать с помощью объекта OLE-автоматизации возвращает приложение этого объекта.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает объект <b>Application</b> , представляющий создателя указанного объекта. Только для чтения.</summary>
+        <value><b>Приложение</b> (см. выше)</value>
+        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="AppliesTo">
@@ -355,10 +340,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, задающий диапазон ячеек, к которым применяется правило форматирования.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Range" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, указывающий диапазон ячеек, к которому применяется правило форматирования.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Range" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -385,10 +368,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ColorScaleCriteria</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> объект, который представляет собой коллекцию отдельных <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объектов. <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> Объекта указывает тип, значения и цвета пороговое значение, используемое в цветовые шкалы условное форматирование в. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" />
-        </value>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> объект, представляющий собой коллекцию отдельных <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объектов. <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> Объект указывает тип, значение и цвет условных критериев, используемых в условном форматировании цветовой шкалы. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -415,14 +396,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> перечисление, указывающее, приложения, в котором был создан этот объект. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.ColorScale.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> перечислении, указывающую приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.ColorScale.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -446,7 +423,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаление указанного условного форматирования правила.</summary>
+        <summary>Удаляет указанный объект правила условного форматирования.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -476,14 +453,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , представляющую формулу, которая определяет значения, к которым будет применяться набора значков.</summary>
-        <value>
-          <b>Строка</b>
-        </value>
-        <remarks>
-          <para>Это свойство можно использовать для ограничения диапазона значения, которые будут отображать условное форматирование. Типичный сценарий — при наличии диапазона номеров, содержащий положительные и отрицательные значения. Может потребоваться создать более одного условного форматирования для этого диапазона номеров — один для положительных значений, а другой — для отрицательных значений.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>строку</b> , представляющую формулу, определяющую значения, к которым будет применен набор значков.</summary>
+        <value><b>Строка</b></value>
+        <remarks><para>Это свойство полезно для ограничения диапазона значений, которые будут отображать условное форматирование. Типичный сценарий состоит в том, что у вас есть диапазон чисел, содержащий положительные и отрицательные значения. Вы можете создать несколько условных форматов для этого диапазона чисел — одно для положительных значений и другое для отрицательных значений.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ModifyAppliesToRange">
@@ -508,13 +481,11 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Excel.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Диапазон, к которому будет применяться это правило форматирования.</param>
-        <summary>Задает диапазон ячеек, к которому применяется этот правила форматирования.</summary>
-        <remarks>
-          <para>Диапазон должен быть в стиль ссылок A1 и полностью содержаться в таблице, являющийся родительским <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> семейства сайтов. Он может включать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Также можно использовать знак доллара, но они игнорируются.</para>
-          <para>Также можно использовать локально определенное имя в любой части диапазона, но имя должно быть языке макрос.</para>
-          <para></para>
-        </remarks>
+        <param name="Range">Диапазон, к которому будет применено это правило форматирования.</param>
+        <summary>Задает диапазон ячеек, к которому применяется это правило форматирования.</summary>
+        <remarks><para>Диапазон должен находиться в стиле a1 Reference и полностью содержаться в пределах листа, который является родительским для <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Знаки доллара также можно использовать, но они игнорируются.</para>
+          <para>Вы также можете использовать локально определенное имя в любой части диапазона, но имя должно быть на языке макроса.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -541,9 +512,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -573,14 +542,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок вычисления, при наличии нескольких правила условного форматирования на листе.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>При задании приоритета, значение должно быть положительное целое число от 1 до общее число правила условного форматирования в рабочем листе. Приоритет должен быть уникальное значение для всех правил в рабочем листе, поэтому изменение приоритета для указанного правила условного форматирования может стать причиной значение приоритета других правил на листе удаляются.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок оценки при наличии нескольких правил условного форматирования на листе.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>При задании приоритета значение должно быть положительным целым числом между 1 и общим числом правил условного форматирования на листе. Приоритет должен быть уникальным значением для всех правил на листе, поэтому изменение приоритета указанного правила условного форматирования может привести к сдвигу значения приоритета других правил на листе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PTCondition">
@@ -606,10 +571,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>логическое</b> значение, указывающее, если условное форматирование применяется к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> диаграммы. Только для чтения.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
+        <summary>Возвращает <b>логическое</b> значение, которое указывает, применяется ли к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> диаграмме условное форматирование. Только для чтения.</summary>
+        <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -639,14 +602,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotConditionScope</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одной из констант из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> перечисления, который определяет область условное форматирование, при применении диаграммы сводной таблицы.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" />
-        </value>
-        <remarks>
-          <para>Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" />, который задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.ColorScale.AppliesTo" />свойство.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> перечисления, которая определяет область действия условного формата при его применении к сводной диаграмме.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /></value>
+        <remarks><para>Значение по умолчанию <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" />, которое задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.ColorScale.AppliesTo" />свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetFirstPriority">
@@ -670,13 +629,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Устанавливает значение приоритета для данного правила условного форматирования значение «1», чтобы вычисляется перед всех правил в рабочем листе.</summary>
-        <remarks>
-          <para>При наличии нескольких правила условного форматирования на листе, если правило не было установлено ранее приоритет «1», этот метод будет отображено приоритет все существующие правила на листе увеличено с помощью одного.</para>
+        <summary>Задает значение приоритета для этого правила условного форматирования равным "1", чтобы оно проверялось перед всеми остальными правилами на листе.</summary>
+        <remarks><para>При наличии нескольких правил условного форматирования на листе, если для правила не было задано значение "1", этот метод приведет к увеличению приоритета всех существующих правил на листе на один.</para>
           <para>
-            <b>Примечание</b>: уровни приоритета для правила условного форматирования, применяются на основе уровне рабочего листа.</para>
-          <para></para>
-        </remarks>
+            <b>Note</b>: уровни приоритетов для правил условного форматирования применяются на уровне листа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SetLastPriority">
@@ -700,13 +657,11 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает порядок вычисления для данного правила условного форматирования, поэтому оценивается после всех правил в рабочем листе.</summary>
-        <remarks>
-          <para>Фактический vaule приоритет будет совпадать с общим количеством правила условного форматирования в рабочем листе. При наличии нескольких правила условного форматирования на листе этот метод будет отображено приоритет правил, которым пришлось больше, чем правило будет увеличено с помощью одного значения приоритета.</para>
+        <summary>Задает порядок оценки для этого правила условного форматирования, чтобы оно проверялось после всех других правил на листе.</summary>
+        <remarks><para>Фактический вауле приоритета будет равен общему числу правил условного форматирования на листе. При наличии нескольких правил условного форматирования на листе этот метод приведет к увеличению приоритета правил, которые имеют значение приоритет, превышающее это правило.</para>
           <para>
-            <b>Примечание</b>: уровни приоритета для правила условного форматирования, применяются на основе уровне рабочего листа.</para>
-          <para></para>
-        </remarks>
+            <b>Note</b>: уровни приоритетов для правил условного форматирования применяются на уровне листа.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="StopIfTrue">
@@ -732,14 +687,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, определяющее, если должно оцениваться дополнительных правил форматирования для ячейки, если текущее правило имеет значение <b>True</b>.</summary>
-        <value>
-          <b>Boolean</b>
-        </value>
-        <remarks>
-          <para>Для поддержки обратной совместимости, значение по умолчанию для этого свойства — <b>True</b>, которое является противоположным образом поведение форматирования правила, созданные в пользовательском интерфейсе.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает или задает <b>логическое</b> значение, определяющее, следует ли оценивать дополнительные правила форматирования ячейки, если текущее правило имеет <b>значение true</b>.</summary>
+        <value><b>Boolean</b></value>
+        <remarks><para>Для поддержки обратной совместимости значение этого свойства по умолчанию равно <b>true</b>, что является противоположным поведением правила форматирования, созданного в пользовательском интерфейсе.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Type">
@@ -765,14 +716,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает один или константы <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> перечисление, который определяет тип условное форматирование. Только для чтения.</summary>
-        <value>
-          <b>Integer</b>
-        </value>
-        <remarks>
-          <para>Это свойство всегда возвращает <b>целое</b> значение «3», который соответствует <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlColorScale" />.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> перечисления, определяющую тип условного форматирования. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Это свойство всегда возвращает <b>целое</b> значение 3, которое эквивалентно <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlColorScale" />.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

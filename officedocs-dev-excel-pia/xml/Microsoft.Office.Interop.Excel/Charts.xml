@@ -1,13 +1,5 @@
 <Type Name="Charts" FullName="Microsoft.Office.Interop.Excel.Charts">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="21bb7adb80852e2d82d5897dcd0ffec87dcefadd" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20581741" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Charts : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="21bb7adb80852e2d82d5897dcd0ffec87dcefadd" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581741" /></Metadata><TypeSignature Language="C#" Value="public interface Charts : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Charts implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Charts" />
   <TypeSignature Language="VB.NET" Value="Public Interface Charts&#xA;Implements IEnumerable" />
@@ -33,15 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех листы диаграмм в указанный или активной книги. Каждый лист диаграммы представлены <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объекта. Это не относится к диаграммы на листах диалогов или таблицы, внедренной. Сведения о встроенные диаграммы можно <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> объекта.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Charts" /> свойство для возврата коллекции <b>диаграмм</b> . Использование <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод, чтобы создать новый лист диаграммы и добавить его в книгу.</para>
-      <para>Вы можете сочетать <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод с <see cref="M:Microsoft.Office.Interop.Excel._Chart.ChartWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить новую диаграмму, содержащую данные из листа.</para>
-      <para>Использование <b>диаграмм</b>(<paramref name="index" />), где <paramref name="index" /> — это имя, чтобы возвратить объект <b>диаграммы</b> или номер индекса лист диаграммы.</para>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> Содержит коллекцию всех листов в книге (листы диаграмм и таблиц). Использование <b>стилей</b>(<paramref name="index" />), где <paramref name="index" /> — это имя листа или номер для возврата одного листа.</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция всех листов диаграммы в указанной или активной книге. Каждый лист диаграммы представлен <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объектом. Это не относится к диаграммам, встроенным на листы или листы диалоговых окон. Сведения о внедренных диаграммах приведены в <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> разделе Object.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Charts" /> свойство, чтобы возвратить коллекцию <b>Charts</b> . Используйте <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод, чтобы создать новый лист диаграммы и добавить его в книгу.</para>
+      <para>Можно объединить <see cref="M:Microsoft.Office.Interop.Excel.Charts.Add(System.Object,System.Object,System.Object)" /> метод с <see cref="M:Microsoft.Office.Interop.Excel._Chart.ChartWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> методом, чтобы добавить новую диаграмму, содержащую данные из листа.</para>
+      <para>Используйте <b>диаграммы</b>(<paramref name="index" />), где <paramref name="index" /> — это номер или имя индекса листа диаграммы, чтобы вернуть один объект <b>диаграммы</b> .</para>
+      <para><see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> Коллекция содержит все листы в книге (листы и листы диаграммы). USE <b>Sheets</b>(<paramref name="index" />), <paramref name="index" /> где — это имя листа или номер, чтобы вернуть один лист.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -209,11 +198,11 @@
         <Parameter Name="NewLayout" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Объект, указывающий лист, перед которым будет добавлен новый лист.</param>
-        <param name="After">Объект, указывающий листа, после которого добавляется новый лист.</param>
-        <param name="Count">Число лист, который требуется добавить. Значение по умолчанию — это один.</param>
-        <param name="NewLayout">Если параметр <b>NewLayout</b> имеет <b>значение True</b>, диаграмма вставляется с помощью новых динамических правил форматирования (название — на, а легенда — на только если имеется несколько рядов).</param>
-        <summary>Вставка диаграммы непосредственно на сетку.</summary>
+        <param name="Before">Объект, указывающий лист, перед которым добавляется новый лист.</param>
+        <param name="After">Объект, указывающий лист, после которого добавляется новый лист.</param>
+        <param name="Count">Количество добавляемых листов. Значение по умолчанию — один.</param>
+        <param name="NewLayout">Если <b>невлайаут</b> имеет <b>значение true</b>, диаграмма вставляется с использованием новых правил динамического форматирования (заголовок имеет значение включено, а условные обозначения — только при наличии нескольких рядов).</param>
+        <summary>Вставляет диаграмму непосредственно на сетку.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -269,13 +258,11 @@
         <Parameter Name="After" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Лист, перед которым будет размещаться копируемый лист. Не удается задать <paramref name="Before" /> при указании <paramref name="After" />.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться копируемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
-        <summary>Копирование таблицы в другое место в книге.</summary>
-        <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей копируемый лист Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <param name="Before">Необязательный <b>объект</b>. Лист, на котором будет размещаться скопированный лист. Вы не можете <paramref name="Before" /> указать, если <paramref name="After" />вы указали.</param>
+        <param name="After">Необязательный <b>объект</b>. Лист, после которого будет размещаться скопированный лист. Вы не можете <paramref name="After" /> указать, если <paramref name="Before" />вы указали.</param>
+        <summary>Копирует лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не укажете <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создаст новую книгу, содержащую скопированный лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Count">
@@ -301,7 +288,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Целое число только для чтения.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, Integer.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -329,12 +316,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Delete">
@@ -417,12 +402,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.HPageBreaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> разрывов коллекции, представляющей горизонтальной страницы на листе. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.HPageBreaks" /> коллекцию, представляющую горизонтальные разрывы страниц на листе. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Существует ограничение в 1026 горизонтальных разрывов страниц на листе.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>На листе может быть не более 1026 горизонтальных страниц.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Item">
@@ -451,7 +434,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -480,13 +463,11 @@
         <Parameter Name="After" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Необязательный элемент <b>Object</b>. Лист, перед которым будет размещаться перемещаемый лист. Не удается задать <paramref name="Before" /> при указании <paramref name="After" />.</param>
-        <param name="After">Необязательный элемент <b>Object</b>. Лист, после которого будет размещаться перемещаемый лист. Не удается задать <paramref name="After" /> при указании <paramref name="Before" />.</param>
-        <summary>Перемещает окно в другое место в книге.</summary>
-        <remarks>
-          <para>Если не указать либо <paramref name="Before" /> или <paramref name="After" />, создает новые книги, содержащей перемещаемый лист Microsoft Excel.</para>
-          <para></para>
-        </remarks>
+        <param name="Before">Необязательный <b>объект</b>. Лист, на котором будет размещаться перемещенный лист. Вы не можете <paramref name="Before" /> указать, если <paramref name="After" />вы указали.</param>
+        <param name="After">Необязательный <b>объект</b>. Лист, после которого будет помещен перемещенный лист. Вы не можете <paramref name="After" /> указать, если <paramref name="Before" />вы указали.</param>
+        <summary>Перемещает лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не укажете <paramref name="Before" /> или <paramref name="After" />, Microsoft Excel создаст новую книгу, содержащую перемещенный лист.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -549,19 +530,17 @@
         <Parameter Name="PrToFileName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="From">Необязательный элемент <b>Object</b>. Номер страницы, с которого следует начинать печати. Если этот аргумент задан, печать начинается с самого начала.</param>
-        <param name="To">Необязательный элемент <b>Object</b>. Номер последней страницы для печати. Если этот аргумент задан, печать заканчивается на последней странице.</param>
-        <param name="Copies">Необязательный элемент <b>Object</b>. Число копий для печати. Если этот аргумент задан, печатается одна копия.</param>
-        <param name="Preview">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы вызвать предварительного просмотра перед печатью объекта Microsoft Excel. <b>Значение false</b> (или опущен) для печати на объект немедленно.</param>
-        <param name="ActivePrinter">Необязательный элемент <b>Object</b>. Задает имя активного принтера.</param>
-        <param name="PrintToFile">Необязательный элемент <b>Object</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> не указан, Microsoft Excel выводит запрос на ввод имени выходного файла.</param>
-        <param name="Collate">Необязательный элемент <b>Object</b>. <b>Значение true</b> для сортировки нескольких копий.</param>
-        <param name="PrToFileName">Необязательный элемент <b>Object</b>. Если <paramref name="PrintToFile" /> имеет значение <b>True</b>, этот аргумент указывает имя файла, который вы хотите напечатать для.</param>
+        <param name="From">Необязательный <b>объект</b>. Номер страницы, с которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
+        <param name="To">Необязательный <b>объект</b>. Номер последней страницы, которую требуется напечатать. Если этот аргумент опущен, печать заканчивается на последней странице.</param>
+        <param name="Copies">Необязательный <b>объект</b>. Число копий для печати. Если этот аргумент не задан, печатается одна копия.</param>
+        <param name="Preview">Необязательный <b>объект</b>. <b>Значение true</b> , если Microsoft Excel вызывает предварительный просмотр перед печатью объекта. <b>Значение false</b> (или опущено) для немедленной печати объекта.</param>
+        <param name="ActivePrinter">Необязательный <b>объект</b>. Задает имя активного принтера.</param>
+        <param name="PrintToFile">Необязательный <b>объект</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> параметр не указан, Microsoft Excel предлагает пользователю ввести имя выходного файла.</param>
+        <param name="Collate">Необязательный <b>объект</b>. <b>Значение true</b> для разбора по копиям нескольких копий.</param>
+        <param name="PrToFileName">Необязательный <b>объект</b>. Если <paramref name="PrintToFile" /> задано <b>значение true</b>, этот аргумент указывает имя файла, в который будет выполняться печать.</param>
         <summary>Печатает объект.</summary>
-        <remarks>
-          <para>«Страницы» в описании <paramref name="From" /> и <paramref name="To" /> ссылается на печатных страниц, не в целом страниц на листе или рабочей книги.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>"Pages" (страницы) <paramref name="From" /> в <paramref name="To" /> описаниях и относится к печатным страницам, а не к общим страницам листа или книги.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="PrintOut_2">
@@ -627,8 +606,8 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">Необязательный элемент <b>Object</b>. <b>Значение true,</b> Чтобы включить изменения в указанной диаграммы.</param>
-        <summary>Показывает предварительного просмотра объекта, как будет выглядеть при печати.</summary>
+        <param name="EnableChanges">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы включить изменения в указанных диаграммах.</param>
+        <summary>Показывает предварительный просмотр объекта в том виде, в котором он будет выглядеть при печати.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -654,8 +633,8 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный элемент <b>Object</b>. Объект для замены.</param>
-        <summary>Выбор объекта.</summary>
+        <param name="Replace">Необязательный <b>объект</b>. Заменяемый объект.</param>
+        <summary>Выбирает объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -685,7 +664,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли объект видимым. Чтение и запись <b>объектов</b>.</summary>
+        <summary>Определяет, является ли объект видимым. <b>Объект</b>для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -713,7 +692,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.VPageBreaks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> разрывов коллекции, представляющей вертикальной страницы на листе. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreaks" /> коллекцию, представляющую вертикальные разрывы страниц на листе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

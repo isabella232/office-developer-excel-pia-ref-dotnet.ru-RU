@@ -1,13 +1,5 @@
 <Type Name="Research" FullName="Microsoft.Office.Interop.Excel.Research">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="9be1c3837417559efad8122d95ed57c6ba7ef60e" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20584751" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Research" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9be1c3837417559efad8122d95ed57c6ba7ef60e" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20584751" /></Metadata><TypeSignature Language="C#" Value="public interface Research" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Research" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Research" />
   <TypeSignature Language="VB.NET" Value="Public Interface Research" />
@@ -29,11 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет элементы управления запроса <b>справочных материалов</b> .</summary>
-    <remarks>
-      <para>При работе с запросами <b>справочных материалов</b> , необходимо иметь существующий <b>идентификатор GUID</b> , соответствующий источнику динамических данных.  Если источник данных недоступна или не существует, возникает ошибка времени выполнения.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет элементы управления запросом <b>справочных материалов</b> .</summary>
+    <remarks><para>При работе с запросами <b>исследований</b> необходимо наличие существующего <b>идентификатора GUID</b> , соответствующего действующему источнику данных.  Если источник данных недоступен или не существует, возникает ошибка времени выполнения.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -59,14 +49,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатор объекта, данное свойство возвращает объект <b>приложения</b> , представляющий создателя указанный объект. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel._Application" />
-        </value>
-        <remarks>
-          <para>Это свойство можно использовать с помощью объекта OLE-автоматизации возвращает приложение этого объекта.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает объект <b>Application</b> , представляющий создателя указанного объекта. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
+        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Creator">
@@ -92,14 +78,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект. Только для чтения.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />
-        </value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.  Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsResearchService">
@@ -125,8 +107,8 @@
         <Parameter Name="ServiceID" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="ServiceID">Требуется <b>строка</b> объект, указывающий <b>идентификатор GUID</b> , определяющий службу поиска.</param>
-        <summary>Указывает, соответствует ли <b>идентификатор GUID</b> , указанный в параметре ServiceID настроенный в данный момент служба.</summary>
+        <param name="ServiceID">Обязательная <b>строка</b> объект, указывающий <b>идентификатор GUID</b> , определяющий службу поиска.</param>
+        <summary>Указывает, соответствует ли <b>GUID</b> , указанный в параметре ServiceID, текущей настроенной службе.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,10 +136,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский для указанного объекта. Только для чтения.</summary>
-        <value>
-          <b>Объект</b>
-        </value>
+        <summary>Возвращает родительский объект для указанного объекта. Только для чтения.</summary>
+        <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -187,15 +167,13 @@
         <Parameter Name="LaunchQuery" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ServiceID">Требуется <b>строка</b> указывает <b>идентификатор GUID</b> , который определяет службу поиска.</param>
+        <param name="ServiceID">Обязательная <b>строка</b> указывает <b>идентификатор GUID</b> , определяющий службу поиска.</param>
         <param name="QueryString">Необязательный <b>объект</b> указывает строку запроса.</param>
-        <param name="QueryLanguage">Необязательный <b>объект</b> указывает язык запросов из строки запроса.</param>
-        <param name="UseSelection">Необязательный <b>логическое</b><b>значение True</b> для использования текущего выделения в качестве строки запроса.  Это переопределяет <paramref name="QueryString" /> параметр Если задать. Значение по умолчанию — <b>False</b>.</param>
-        <param name="LaunchQuery">Необязательный <b>логическое</b><b>значение True,</b> запускает запрос. <b>Значение false,</b> отображается область задач Справочные материалы, областью действия указанного research служба поиска.</param>
-        <summary>Определяет запрос справочных материалов.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <param name="QueryLanguage">Необязательный <b>объект</b> указывает язык запроса строки запроса.</param>
+        <param name="UseSelection">Необязательное <b>логическое</b><b>значение true</b> , чтобы использовать текущий выделенный фрагмент в качестве строки запроса.  Это переопределяет <paramref name="QueryString" /> параметр, если он задан. Значение по умолчанию — <b>false</b>.</param>
+        <param name="LaunchQuery">Необязательное <b>логическое</b><b>значение true</b> запускает запрос. <b>False</b> отображение области задач справочных материалов для поиска в указанной службе справочных материалов.</param>
+        <summary>Указывает запрос справочных материалов.</summary>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -223,12 +201,10 @@
         <Parameter Name="LanguageTo" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="LanguageFrom">Требуется <b>целое число</b> указывает язык для преобразования.</param>
-        <param name="LanguageTo">Требуется <b>целое число</b> указывает язык перевода.</param>
+        <param name="LanguageFrom">Обязательное <b>целое число</b> указывает язык, с которого будет преобразовываться язык.</param>
+        <param name="LanguageTo">Обязательное <b>целое число</b> указывает язык, на который требуется перевести.</param>
         <summary>Задает языки для службы перевода.</summary>
-        <returns>
-          <b>Объект</b>
-        </returns>
+        <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
