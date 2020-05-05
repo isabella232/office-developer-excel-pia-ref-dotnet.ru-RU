@@ -1,13 +1,5 @@
 <Type Name="GroupShapes" FullName="Microsoft.Office.Interop.Excel.GroupShapes">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="ebe63e575d737f035f42220903f1e7f1ac5fd0cc" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20586655" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface GroupShapes : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ebe63e575d737f035f42220903f1e7f1ac5fd0cc" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586655" /></Metadata><TypeSignature Language="C#" Value="public interface GroupShapes : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract GroupShapes implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.GroupShapes" />
   <TypeSignature Language="VB.NET" Value="Public Interface GroupShapes&#xA;Implements IEnumerable" />
@@ -33,12 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет отдельные фигуры в группы фигур.</summary>
-    <remarks>
-      <para>Представленный каждой фигуры <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта. С помощью <see cref="M:Microsoft.Office.Interop.Excel.GroupShapes.Item(System.Object)" /> метод этот объект позволяет работать с одним фигур в группе без необходимости их разгруппировать.</para>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel.Shape.GroupItems" /> свойство для возврата коллекции <b>GroupShapes</b> . Используйте <b>GroupItems</b>(<paramref name="index" />), где <paramref name="index" /> — это число отдельные фигуры в рамках сгруппированные фигуры, чтобы возвратить одну из коллекции <b>GroupShapes</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет отдельные фигуры в сгруппированной фигуре.</summary>
+    <remarks><para>Каждая фигура представлена <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объектом. С помощью <see cref="M:Microsoft.Office.Interop.Excel.GroupShapes.Item(System.Object)" /> метода с этим объектом можно работать с отдельными фигурами в группе без необходимости разгруппировать их.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.GroupItems" /> свойство, чтобы возвратить коллекцию <b>GroupShapes</b> . Используйте <b>граупитемс</b>(<paramref name="index" />), где <paramref name="index" /> — это номер отдельной фигуры в сгруппированной фигуре, чтобы получить отдельную фигуру из коллекции <b>GroupShapes</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -154,11 +144,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -216,7 +204,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -276,14 +264,12 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Отдельные фигуры, которые будут включены в диапазон. Может быть целое число, указывающее индекс фигуры, string, указывающее имя фигуры или массив, содержащий целых значений или строк.</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, который представляет собой подмножество фигур в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> семейства сайтов.</summary>
+        <param name="Index">Обязательный <b>объект</b>. Отдельные фигуры для включения в диапазон. Может быть целым числом, определяющим номер индекса фигуры, строку, которая указывает имя фигуры, или массив, который содержит целые числа или строки.</param>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, представляющий подмножество фигур в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Несмотря на то, что вы можете использовать <see cref="P:Microsoft.Office.Interop.Excel.GroupShapes.Range(System.Object)" /> свойство для возвращения любое число фигур, проще использовать <see cref="M:Microsoft.Office.Interop.Excel.GroupShapes.Item(System.Object)" /> метод, если требуется только один элемент из коллекции.</para>
-          <para>Чтобы указать массив целых значений или строк для <paramref name="Index" />, можно использовать функцию <b>массива</b> .</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Несмотря на то, что <see cref="P:Microsoft.Office.Interop.Excel.GroupShapes.Range(System.Object)" /> вы можете использовать свойство, чтобы возвратить любое количество фигур, проще использовать <see cref="M:Microsoft.Office.Interop.Excel.GroupShapes.Item(System.Object)" /> этот метод, если вы хотите вернуть только один элемент коллекции.</para>
+          <para>Чтобы задать массив целых чисел или строк для <paramref name="Index" />, можно использовать функцию <b>Array</b> .</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

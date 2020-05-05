@@ -1,13 +1,5 @@
 <Type Name="Pane" FullName="Microsoft.Office.Interop.Excel.Pane">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="88411cce6007dd3bdb19bfe1fbfa29a798d89eed" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20586907" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Pane" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="88411cce6007dd3bdb19bfe1fbfa29a798d89eed" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586907" /></Metadata><TypeSignature Language="C#" Value="public interface Pane" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Pane" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Pane" />
   <TypeSignature Language="VB.NET" Value="Public Interface Pane" />
@@ -30,12 +22,10 @@
   </Attributes>
   <Docs>
     <summary>Представляет область окна.</summary>
-    <remarks>
-      <para>
-        <see cref="T:Microsoft.Office.Interop.Excel.Pane" />объекты существуют только листы и листы макросов Microsoft Excel 4.0. <see cref="T:Microsoft.Office.Interop.Excel.Pane" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> семейства сайтов. <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> Семейства сайтов содержит все области, отображаемые в одном окне.</para>
-      <para>Использование <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> (<paramref name="index" />), где <paramref name="index" /> — номер индекса области, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Excel.Pane" /> объекта.</para>
-      <para></para>
-    </remarks>
+    <remarks><para>
+        <see cref="T:Microsoft.Office.Interop.Excel.Pane" />объекты существуют только для листов и листов макросов Microsoft Excel 4,0. <see cref="T:Microsoft.Office.Interop.Excel.Pane" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> коллекции. <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> Коллекция содержит все области, отображаемые в отдельном окне.</para>
+      <para>Используйте <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> (<paramref name="index" />), где <paramref name="index" /> — это номер индекса области, чтобы вернуть один <see cref="T:Microsoft.Office.Interop.Excel.Pane" /> объект.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="Activate">
@@ -59,12 +49,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Активирует области.</summary>
+        <summary>Активирует область.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если области не находится в активном окне, окно, к которой принадлежит области также быть активирован. Не удается активировать закрепление областей.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если область не находится в активном окне, то окно, к которому относится область, также будет активировано. Невозможно активировать замороженную область.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -120,11 +108,9 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C.</para>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Index">
@@ -150,7 +136,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции подобных объектов индекса.</summary>
+        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,18 +166,16 @@
         <Parameter Name="ToLeft" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный элемент <b>Object</b>. Число страниц для прокрутки содержимого вниз.</param>
-        <param name="Up">Необязательный элемент <b>Object</b>. Число страниц для прокрутки содержимого вверх.</param>
-        <param name="ToRight">Необязательный элемент <b>Object</b>. Число страниц для прокрутки содержимого справа.</param>
-        <param name="ToLeft">Необязательный элемент <b>Object</b>. Число страниц для прокрутки содержимого слева.</param>
-        <summary>Прокрутка содержимого окна страниц.</summary>
+        <param name="Down">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого вниз.</param>
+        <param name="Up">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого вверх.</param>
+        <param name="ToRight">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого вправо.</param>
+        <param name="ToLeft">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого влево.</param>
+        <summary>Прокручивает содержимое окна по страницам.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <paramref name="Down" /> и <paramref name="Up" /> указаны, содержимое окна прокрутки различием аргументов. Например если <paramref name="Down" /> — 3 и <paramref name="Up" /> — 6, содержимое прокрутки три страницы.</para>
-          <para>Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> указаны, содержимое окна прокрутки различием аргументов. Например если <paramref name="ToLeft" /> — 3 и <paramref name="ToRight" /> — 6, содержимое прокрутки на прямо три страницы.</para>
-          <para>Один из аргументов может быть отрицательное значение.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если <paramref name="Down" /> и <paramref name="Up" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="Down" /> 3 и <paramref name="Up" /> 6, содержимое прокручивается вверх на три страницы.</para>
+          <para>Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="ToLeft" /> значение равно 3 и <paramref name="ToRight" /> 6, содержимое прокручивается на три страницы вправо.</para>
+          <para>Любой из аргументов может быть отрицательным числом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -245,11 +229,9 @@
         <Parameter Name="Points" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Points">Местоположение пикселя на экране.</param>
+        <param name="Points">Расположение пикселя на экране.</param>
         <summary>Возвращает или задает точку пикселя на экране.</summary>
-        <returns>
-          <b>Integer</b>
-        </returns>
+        <returns><b>Integer</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -278,9 +260,7 @@
       <Docs>
         <param name="Points">Расположение начальной точки.</param>
         <summary>Возвращает или задает расположение пикселя на экране.</summary>
-        <returns>
-          <b>Integer</b>
-        </returns>
+        <returns><b>Integer</b></returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -310,7 +290,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число самого левого столбца в области.</summary>
+        <summary>Возвращает или задает номер крайнего левого столбца в области.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -341,17 +321,14 @@
         <Parameter Name="Start" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Left">Требуется <b>целое число</b>. Горизонтальную позицию прямоугольника (в точках) от левого края области.</param>
-        <param name="Top">Требуется <b>целое число</b>. Вертикальное положение прямоугольника (в пунктах) из верхней области.</param>
-        <param name="Width">Требуется <b>целое число</b>. Ширина прямоугольника в точках.</param>
-        <param name="Height">Требуется <b>целое число</b>. Высота прямоугольника в точках.</param>
-        <param name="Start">Необязательный элемент <b>Object</b>. <b>Значение true,</b> чтобы в верхний левый угол прямоугольника отображаются в левом верхнем углу области. <b>Значение false,</b> чтобы в правом нижнем углу прямоугольника отображаются в правом нижнем углу области. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Прокрутка области таким образом, чтобы содержимое указанного прямоугольной области отображается в левом верхнем или нижнем правом углу области.</summary>
-        <remarks>
-          <para>
-            <paramref name="Start" /> Аргумент полезен для ориентированное на экране при прямоугольник больше, чем области.</para>
-          <para></para>
-        </remarks>
+        <param name="Left">Обязательный атрибут типа <b>Integer</b>. Горизонтальное положение прямоугольника (в пунктах) от левого края области.</param>
+        <param name="Top">Обязательный атрибут типа <b>Integer</b>. Вертикальное положение прямоугольника (в пунктах) от верхнего края области.</param>
+        <param name="Width">Обязательный атрибут типа <b>Integer</b>. Ширина прямоугольника в пунктах.</param>
+        <param name="Height">Обязательный атрибут типа <b>Integer</b>. Высота прямоугольника в пунктах.</param>
+        <param name="Start">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы верхний левый угол прямоугольника отображался в левом верхнем углу области. <b>Значение false</b> , чтобы правый нижний угол прямоугольника отображался в правом нижнем углу области. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Прокручивает область, чтобы содержимое указанной прямоугольной области отображалось в левом верхнем или нижнем углу области.</summary>
+        <remarks><para><paramref name="Start" /> Аргумент полезен для ориентации экрана, когда прямоугольник больше, чем область.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ScrollRow">
@@ -380,7 +357,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число строк, которое отображается в верхней части области.</summary>
+        <summary>Возвращает или задает номер строки, которая отображается в верхней части области.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -410,18 +387,16 @@
         <Parameter Name="ToLeft" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный элемент <b>Object</b>. Количество строк, прокрутите содержимое.</param>
-        <param name="Up">Необязательный элемент <b>Object</b>. Количество строк для прокрутки содержимого вверх.</param>
-        <param name="ToRight">Необязательный элемент <b>Object</b>. Число столбцов для прокрутки содержимого справа.</param>
-        <param name="ToLeft">Необязательный элемент <b>Object</b>. Число столбцов для прокрутки содержимого слева.</param>
-        <summary>Прокрутка содержимого окна с строк или столбцов.</summary>
+        <param name="Down">Необязательный <b>объект</b>. Число строк для прокрутки содержимого вниз.</param>
+        <param name="Up">Необязательный <b>объект</b>. Число строк для прокрутки содержимого.</param>
+        <param name="ToRight">Необязательный <b>объект</b>. Число столбцов для прокрутки содержимого вправо.</param>
+        <param name="ToLeft">Необязательный <b>объект</b>. Число столбцов для прокрутки содержимого влево.</param>
+        <summary>Прокручивает содержимое окна по строкам или столбцам.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Если <paramref name="Down" /> и <paramref name="Up" /> указаны, содержимое окна прокрутки различием аргументов. Например если <paramref name="Down" /> — 3 и <paramref name="Up" /> — 6, содержимое прокрутки до трех строк.</para>
-          <para>Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> указаны, содержимое окна прокрутки различием аргументов. Например если <paramref name="ToLeft" /> — 3 и <paramref name="ToRight" /> — 6, содержимое прокрутки к правому трех столбцов.</para>
-          <para>Любой из этих аргументов может быть отрицательное значение.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Если <paramref name="Down" /> и <paramref name="Up" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="Down" /> значение равно 3 и <paramref name="Up" /> 6, содержимое прокручивается вверх по трем строкам.</para>
+          <para>Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="ToLeft" /> задано значение 3 <paramref name="ToRight" /> и значение 6, содержимое прокручивается до трех правых столбцов.</para>
+          <para>Любой из этих аргументов может быть отрицательным числом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="VisibleRange">
@@ -447,7 +422,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон ячеек, которые отображаются в области. Если строку или столбец, отображается частично, она включается в диапазоне.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон ячеек, которые отображаются в области. Если столбец или строка отображаются частично, они включаются в диапазон.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

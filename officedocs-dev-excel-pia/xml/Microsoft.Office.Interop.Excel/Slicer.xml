@@ -1,13 +1,5 @@
 <Type Name="Slicer" FullName="Microsoft.Office.Interop.Excel.Slicer">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="3a23eef4e7b55760a8f9b05aacbfcb4b526de165" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20587670" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface Slicer" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3a23eef4e7b55760a8f9b05aacbfcb4b526de165" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587670" /></Metadata><TypeSignature Language="C#" Value="public interface Slicer" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Slicer" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Slicer" />
   <TypeSignature Language="VB.NET" Value="Public Interface Slicer" />
@@ -29,12 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет область срезов в книге.</summary>
-    <remarks>
-      <para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объект представляет срез в книге. Срезы используются для фильтрации данных в отчетах сводной таблицы и источники данных OLAP.</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.Slicers.Add" /> метод, чтобы добавить <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объект <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> семейства сайтов. Для доступа к <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объект, представляющий выделенный в текущий момент кнопки в срез, использование <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ActiveItem" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта.</para>
-      <para></para>
-    </remarks>
+    <summary>Представляет срез в книге.</summary>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объект представляет срез в книге. Срезы используются для фильтрации данных в отчетах сводных таблиц или источниках данных OLAP.</para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Slicers.Add" /> метод, чтобы добавить <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объект в <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> коллекцию. Чтобы получить доступ <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> к объекту, представляющему выбранную в данный момент кнопку в срезе <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ActiveItem" /> , используйте свойство <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта.</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="ActiveItem">
@@ -60,24 +50,22 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SlicerItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объект, который представляет кнопку срез, который в данный момент фокус для указанного срез. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объект, который представляет кнопку среза, находящиеся в фокусе для указанного среза. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>ActiveItem</b> возвращает объект <b>SlicerItem</b> при указанного среза имеет фокус и активный элемент управления кнопка в пределах среза (например, пользователь может перейти кнопки в среза с помощью клавиатуры в этом состоянии).</para>
-          <para>Свойство <b>ActiveItem</b> возвращает <b>значение Nothing</b> (пустая ссылка (Nothing в Visual Basic) в C#) в следующих случаях:</para>
+        <remarks><para>Свойство <b>активеитем</b> возвращает объект <b>SlicerItem</b> , когда заданный срез находится в фокусе, а активный элемент управления — кнопку в области среза (например, пользователь может перемещаться по кнопкам в области среза с помощью клавиатуры в этом состоянии).</para>
+          <para>Свойство <b>активеитем</b> возвратит значение <b>Nothing</b> (пустая ссылка (Nothing в Visual Basic) в C#) при следующих обстоятельствах:</para>
           <list type="bullet">
             <item>
-              <description>Указанный срез не имеет фокуса (не выбран или активен).</description>
+              <description>Указанный срез не имеет фокуса (не выбран или не активен).</description>
             </item>
             <item>
-              <description>Указанный среза имеет фокус и выбран срез целиком самого (например, пользователя можно перемещать срез целиком с помощью клавиатуры в этом состоянии).</description>
+              <description>Заданному срезу назначен фокус и весь сам срез выбран (например, пользователь может переместить весь срез, используя клавиатуру в этом состоянии).</description>
             </item>
             <item>
-              <description>Указанный среза имеет фокус и активный элемент управления является кнопку <b>Очистить фильтр</b> в заголовке среза.</description>
+              <description>Заданному срезу назначен фокус, а активным элементом управления является кнопка <b>Очистить фильтр</b> в заголовке среза.</description>
             </item>
           </list>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -103,13 +91,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>При использовании без квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатор объекта, данное свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, представляющего создателя указанный объект.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объекта.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Caption">
@@ -138,13 +123,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает заголовок указанного срез.</summary>
-        <value>Заголовок указанного срез.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>Значение, указанное для <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> свойство отображается в заголовке среза. Если <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> свойство не задано, Microsoft Excel использует значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.Caption" /> свойства базового <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает заголовок указанного среза.</summary>
+        <value>Заголовок указанного среза.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para>Значение, заданное для <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> свойства, отображается в заголовке среза. Если <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> свойство не задано, Excel использует значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.Caption" /> свойства базового <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="ColumnWidth">
@@ -173,14 +156,11 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает ширину в точках каждого столбца в срез.</summary>
-        <value>Ширина в точках каждого столбца в срез.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>
-            <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ColumnWidth" /> Свойства <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта автоматически изменяется в зависимости от значения <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ColumnWidth" /> свойство и <see cref="P:Microsoft.Office.Interop.Excel.Slicer.NumberOfColumns" /> свойство.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает ширину (в пунктах) каждого столбца в срезе.</summary>
+        <value>Ширина каждого столбца в срезе (в пунктах).</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para><see cref="P:Microsoft.Office.Interop.Excel.Slicer.ColumnWidth" /> Свойство <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта автоматически корректируется в зависимости от значения <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ColumnWidth" /> свойства и <see cref="P:Microsoft.Office.Interop.Excel.Slicer.NumberOfColumns" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Copy">
@@ -204,7 +184,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Копирует указанный срез в буфер обмена.</summary>
+        <summary>Копирует заданный срез в буфер обмена.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -231,13 +211,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</summary>
-        <value>32-разрядное <b>целое число</b> , указывающее приложение, в котором был создан этот объект.</value>
-        <remarks>
-          <para>Только для чтения <b>времени</b>.</para>
-          <para>Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para><b>Доступно только для</b>чтения.</para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Cut">
@@ -261,7 +239,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаление указанного среза и копирует его в буфер обмена.</summary>
+        <summary>Вырезает указанный срез и копирует его в буфер обмена.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -286,7 +264,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет срез и удаляет его из связанного <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> семейства сайтов.</summary>
+        <summary>Удаляет срез и удаляет его из связанной <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> коллекции.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -316,15 +294,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает ли указанный среза можно переместить или изменяется с использованием пользовательского интерфейса.</summary>
-        <value>
-          <b>значение true,</b> Если указанный срез, перемещаются или изменяется с использованием пользовательского интерфейса; в противном случае — <b>false</b>. Значение по умолчанию — <b>false</b>.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
+        <summary>Получает или задает значение, указывающее, можно ли переместить или изменить размер указанного среза с помощью пользовательского интерфейса.</summary>
+        <value><b>значение true</b> , если заданный срез можно переместить или изменить с помощью пользовательского интерфейса; в противном случае — <b>false</b>. Значение по умолчанию: <b>false</b>.</value>
+        <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>значение true,</b> Если срез не может быть перемещения или изменения размера, выбрав границы или маркеры в пользовательском интерфейсе; в противном случае — <b>false</b>. Значение по умолчанию — <b>false</b>. Установка <see cref="P:Microsoft.Office.Interop.Excel.Slicer.DisableMoveResizeUI" /> пользовательский интерфейс влияет на значение <b>true</b> . Перемещение или изменение размера срез путем задания свойств, таких как <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Top" />, <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Left" />, <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Width" />, или <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Height" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объект из кода, не отключены.</para>
-          <para></para>
-        </remarks>
+            <b>значение true</b> , если область среза не может быть перемещена или изменена с помощью выбора границ или обработчиков в пользовательском интерфейсе; в противном случае — <b>false</b>. Значение по умолчанию — <b>false</b>. Установка <see cref="P:Microsoft.Office.Interop.Excel.Slicer.DisableMoveResizeUI" /> свойства <b>true</b> влияет только на пользовательский интерфейс. Перемещение или изменение размера среза путем задания свойств <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Top" />, таких как,, <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Left" />или <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Width" /> <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Height" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта из кода, не отключается.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="DisplayHeader">
@@ -353,15 +328,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает заголовок, который отображает срез <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> будет отображаться.</summary>
-        <value>
-          <b>значение true,</b> Если в заголовке, который отображается срез <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> является видимым. в противном случае — <b>false</b>. Значение по умолчанию: <b>true</b>.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
+        <summary>Получает или задает <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> значение, указывающее, отображается ли заголовок, отображающий срез.</summary>
+        <value><b>значение true</b> , если заголовок, отображающий срез <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Caption" /> , виден; в противном случае — <b>false</b>. Значение по умолчанию: <b>true</b>.</value>
+        <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>значение true,</b> Если заголовок видим; в противном случае — <b>false</b>. Значение по умолчанию — <b>true</b>.</para>
-          <para></para>
-        </remarks>
+            <b>значение true</b> , если заголовок является видимым; в противном случае — <b>false</b>. Значение по умолчанию  <b>true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Height">
@@ -390,12 +362,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает высоту указанного срез в пунктах.</summary>
-        <value>Высота указанного срез в пунктах.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает высоту указанного среза в пунктах.</summary>
+        <value>Высота указанного среза в пунктах.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Left">
@@ -424,12 +394,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает горизонтальную позицию указанного срез в точках, относительно верхнего левого угла ячейки A1 на листе.</summary>
-        <value>Горизонтальную позицию указанного срез в точках, относительно верхнего левого угла ячейки A1 на листе.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает горизонтальную позицию указанного среза в пунктах относительно левого верхнего угла ячейки a1 на листе.</summary>
+        <value>Горизонтальная позиция указанного среза в пунктах относительно верхнего левого угла ячейки a1 на листе.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Locked">
@@ -458,15 +426,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает указанного срез можно изменить, когда лист, содержащий он был защищен.</summary>
-        <value>
-          <b>значение true,</b> Если указанный срез могут быть изменены, когда лист, содержащий его защищен; в противном случае — <b>false</b>. Значение по умолчанию — <b>true</b></value>
-        <remarks>
-          <para>Для чтения и записи.</para>
+        <summary>Получает или задает значение, указывающее, можно ли изменить заданный срез при наличии защищенного листа.</summary>
+        <value><b>значение true</b> , если заданный срез можно изменить, когда лист, содержащий его, защищен; в противном случае — <b>false</b>. Значение по умолчанию: <b>true</b></value>
+        <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>значение true,</b> Если срез заблокирован, когда защиты листа. <b>значение false,</b> Если срез могут быть изменены после защиты листа. Значение по умолчанию — <b>true</b>.</para>
-          <para></para>
-        </remarks>
+            <b>значение true</b> , если срез заблокирован, когда лист защищен. <b>false</b> , если срез можно изменить, когда лист защищен. Значение по умолчанию  <b>true</b>.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Name">
@@ -495,13 +460,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает имя указанного срез.</summary>
-        <value>Имя указанного срез.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>Имя должно быть уникальным для всех срезов в книге. Имя по умолчанию использует текст, который имя поля сводных полей, на котором основан срез, и при необходимости добавляет пространство и номер, чтобы сделать уникальное имя.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает имя указанного среза.</summary>
+        <value>Имя указанного среза.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para>Имя должно быть уникальным для всех срезов в книге. Имя по умолчанию использует текст с именем поля PivotField, на котором основан срез, и при необходимости добавляет пробел и число, чтобы имя было уникальным.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="NumberOfColumns">
@@ -530,13 +493,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает число столбцов в указанном срез.</summary>
-        <value>Количество столбцов в указанном срез. Значение по умолчанию — 1.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>Значение по умолчанию — 1.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает количество столбцов в заданном срезе.</summary>
+        <value>Число столбцов в заданном срезе. По умолчанию используется значение 1.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para>Значение по умолчанию равно 1.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
@@ -563,12 +524,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объект, представляющий лист, содержащий срез.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> Объект, представляющий лист, содержащий срез.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> Объект, представляющий лист, содержащий срез.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="RowHeight">
@@ -597,13 +555,11 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает высоту, в пунктах каждой строки в указанном срез.</summary>
-        <value>Высота в пунктах каждой строки в указанном срез.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para>Это свойство не влияет на высоту срез. Использование <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Height" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объект, который требуется вернуть или задать высоту срез.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает высоту каждой строки в заданном срезе в пунктах.</summary>
+        <value>Высота каждой строки в заданном срезе (в пунктах).</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para>Это свойство не влияет на высоту среза. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Slicer.Height" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта, чтобы вернуть или задать высоту среза.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Shape">
@@ -629,14 +585,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта, связанного с указанным срез.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> Объекта, связанного с указанным срез.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para>Некоторые свойства срез, таких как <see cref="P:Microsoft.Office.Interop.Excel.Shape.AlternativeText" /> свойства, осуществляется только из <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта, связанного с срез.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, связанный с заданным срезом.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Shape" /> Объект, связанный с заданным срезом.</value>
+        <remarks><para>Только для чтения.</para>
+          <para>Доступ к некоторым свойствам среза, например к <see cref="P:Microsoft.Office.Interop.Excel.Shape.AlternativeText" /> свойству, возможен только из <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объекта, связанного с срезом.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SlicerCache">
@@ -662,13 +615,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SlicerCache</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта, связанного с срез.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> Объекта, связанного с срез.</value>
-        <remarks>
-          <para>Только для чтения.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект, связанный с срезом.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> Объект, связанный с срезом.</value>
+        <remarks><para>Только для чтения.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SlicerCacheLevel">
@@ -694,14 +644,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SlicerCacheLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта, связанного с срез.</summary>
-        <value>
-          <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> Объекта, связанного с срез.</value>
-        <remarks>
-          <para>Только для чтения.</para>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объект, связанный с срезом.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> Объект, связанный с срезом.</value>
+        <remarks><para>Только для чтения.</para>
           <para>Это свойство применяется только к источникам данных OLAP.</para>
-          <para></para>
-        </remarks>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="SlicerCacheType">
@@ -727,7 +674,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSlicerCacheType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип кэш среза — срез или временной шкалы. <b>XlSlicerCacheType</b> Только для чтения</summary>
+        <summary>Возвращает тип кэша среза — срез или временная шкала. <b>Кслслицеркачетипе</b> Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -758,12 +705,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает стиль в настоящее время для указанного срез.</summary>
-        <value>Стиль в настоящее время для указанного срез.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает стиль, примененный к заданному срезу.</summary>
+        <value>Стиль, который в настоящее время применен к заданному срезу.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="TimelineViewState">
@@ -789,7 +734,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TimelineViewState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Временная шкала конкретных состояние срез. <b>TimelineViewState</b> Только для чтения</summary>
+        <summary>Состояние среза, зависящее от временной шкалы. <b>TimelineViewState</b> Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -820,12 +765,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает вертикальную позицию указанного срез в точках, относительно верхнего левого угла ячейки A1 на листе.</summary>
-        <value>Вертикальное положение указанного срез в точках, относительно верхнего левого угла ячейки A1 на листе.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает вертикальную позицию указанного среза (в пунктах) относительно левого верхнего угла ячейки a1 на листе.</summary>
+        <value>Вертикальная позиция указанного среза в пунктах относительно верхнего левого угла ячейки a1 на листе.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Width">
@@ -854,12 +797,10 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает ширину указанного срез в пунктах.</summary>
-        <value>Ширина указанного срез в пунктах.</value>
-        <remarks>
-          <para>Для чтения и записи.</para>
-          <para></para>
-        </remarks>
+        <summary>Получает или задает ширину указанного среза в пунктах.</summary>
+        <value>Ширина указанного среза в пунктах.</value>
+        <remarks><para>Для чтения и записи.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
   </Members>

@@ -1,13 +1,5 @@
 <Type Name="QueryTables" FullName="Microsoft.Office.Interop.Excel.QueryTables">
-  <Metadata>
-    <Meta Name="ms.openlocfilehash" Value="243a843ba48be5881f9e62bc2223ea6860624c17" />
-    <Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" />
-    <Meta Name="ms.translationtype" Value="MT" />
-    <Meta Name="ms.contentlocale" Value="ru-RU" />
-    <Meta Name="ms.lasthandoff" Value="09/24/2018" />
-    <Meta Name="ms.locfileid" Value="20586942" />
-  </Metadata>
-  <TypeSignature Language="C#" Value="public interface QueryTables : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="243a843ba48be5881f9e62bc2223ea6860624c17" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586942" /></Metadata><TypeSignature Language="C#" Value="public interface QueryTables : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract QueryTables implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.QueryTables" />
   <TypeSignature Language="VB.NET" Value="Public Interface QueryTables&#xA;Implements IEnumerable" />
@@ -33,12 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекцию <see cref="T:Microsoft.Office.Interop.Excel.QueryTable" /> объектов. Каждый объект <b>QueryTable</b> представляет лист таблицу, построенная на основе данных, возвращенных из внешнего источника данных.</summary>
-    <remarks>
-      <para>Использование <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.QueryTables" /> свойство для возврата коллекции <b>QueryTables</b> .</para>
-      <para>Использование <see cref="M:Microsoft.Office.Interop.Excel.QueryTables.Add(System.Object,Microsoft.Office.Interop.Excel.Range,System.Object)" /> метод, чтобы создать новую таблицу запроса и добавить его в коллекцию <b>QueryTables</b> .</para>
-      <para></para>
-    </remarks>
+    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.QueryTable" /> объектов. Каждый объект <b>QueryTable</b> представляет таблицу листа, созданную на основе данных, возвращенных из внешнего источника данных.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.QueryTables" /> свойство, чтобы возвратить коллекцию <b>QueryTables</b> .</para>
+      <para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.QueryTables.Add(System.Object,Microsoft.Office.Interop.Excel.Range,System.Object)" /> метода создайте новую таблицу запроса и добавьте ее в коллекцию <b>QueryTables</b> .</para>
+      <para> </para></remarks>
   </Docs>
   <Members>
     <Member MemberName="_Default">
@@ -100,15 +90,13 @@
         <Parameter Name="Sql" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Connection">Требуется <b>объект</b>. Источник данных для таблицы запросов. Может иметь одно из следующих: A строку, содержащую OLE DB или строка подключения ODBC. Строка подключения ODBC имеет форму «ODBC. &lt;строка подключения&gt;«. Объект <b>QueryTable</b> , из которой данные запроса изначально скопировать, включая строку подключения и текст SQL, но не включая <paramref name="Destination" /> диапазона. При указании объекта <b>QueryTable</b> появляется <paramref name="Sql" /> аргумент будет пропущен. Объект ADO или DAO <b>набора записей</b> . Данные считываются из набора записей ADO или DAO. Microsoft Excel сохраняет набора записей до удаления таблицы запросов или изменить подключение. Конечная таблица запроса, невозможно изменить. Веб-запросов. Строка в форме «URL-адрес; &lt;URL-адрес&gt;«, где «URL-адрес»; требуется, но не локализованы и до конца строки используется для URL-адрес веб-запросов. Служба поиска данных. Строка в форме «служба поиска; &lt;путь к файлу данных finder&gt;"где «Поиск»; требуется, но не локализованы. Остальная часть строки — это путь и имя файла данных Finder (*.dqy или *.iqy). Файл доступен для чтения при выполнении метода <b>Add</b> ; Последующие вызовы <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойства таблицы запрос возвращает строки, начинающиеся с «ODBC;» или «URL-адрес»; соответствующим образом. Текстовый файл. Строка в форме «текст; &lt;текст путь и имя файла&gt;«, где текст является обязательным, однако не локализованы.</param>
-        <param name="Destination">Требуется <b>диапазона</b>. Ячейка в левом верхнем углу конечного диапазона таблицы запросов (диапазона, в котором размещается конечная таблица запроса). Конечный диапазон должен быть в рабочий лист, содержащий <see cref="T:Microsoft.Office.Interop.Excel.QueryTables" /> объекта.</param>
-        <param name="Sql">Необязательный элемент <b>Object</b>. Строка запроса SQL для запуска на источник данных ODBC. Этот аргумент является необязательным, когда вы используете источник данных ODBC, нельзя использовать этот аргумент Если в качестве источника данных указано объекта <b>QueryTable</b> , текстовый файл или объект ADO или DAO <b>набора записей</b> .</param>
+        <param name="Connection">Обязательный <b>объект</b>. Источник данных для таблицы запроса. Может быть одной из следующих: строка, содержащая строку подключения OLE DB или ODBC. Строка подключения ODBC имеет форму "ODBC; &lt;строка&gt;подключения ". Объект <b>QueryTable</b> , из которого первоначально копируются данные запроса, в том числе строку подключения и текст SQL, но не включая <paramref name="Destination" /> диапазон. Указание объекта <b>QueryTable</b> приводит к игнорированию <paramref name="Sql" /> аргумента. Объект <b>RECORDSET</b> ADO или DAO. Данные считываются из набора записей ADO или DAO. Microsoft Excel сохраняет набор записей до тех пор, пока таблица запроса не будет удалена или не будет изменено подключение. Результирующая таблица запросов не может быть изменена. Веб-запрос. Строка в виде URL-адреса; &lt;URL&gt;", где" URL; "является обязательным, но не локализованным, а оставшаяся часть строки используется для URL-адреса веб-запроса. Finder Data Finder. Строка в виде "Finder; &lt;путь к&gt;файлу Finder данных ", где" Finder; "является обязательным, но не локализованным. Остальная часть строки — это путь и имя файла для файла Finder данных (*. dqy или *. IQY). Файл считывается при запуске метода <b>Add</b> ; последующие вызовы <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> свойства таблицы запросов будут возвращать строки, начинающиеся с "ODBC;" или "URL;". Текстовый файл. Строка в виде "текст"; &lt;путь и имя&gt;текстового файла ", где текст является обязательным, но не является локализованным.</param>
+        <param name="Destination">Обязательный <b>диапазон</b>. Ячейка в левом верхнем углу конечного диапазона таблицы запросов (диапазон, в котором будет размещаться результирующая таблица запросов). Конечный диапазон должен находиться на листе, содержащем <see cref="T:Microsoft.Office.Interop.Excel.QueryTables" /> объект.</param>
+        <param name="Sql">Необязательный <b>объект</b>. Строка запроса SQL для выполнения в источнике данных ODBC. Этот аргумент необязателен при использовании источника данных ODBC. Этот аргумент невозможно использовать, если в качестве источника данных указан объект <b>QueryTable</b> , текстовый файл или объект <b>RECORDSET</b> ADO или DAO.</param>
         <summary>Создает новую таблицу запроса. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.QueryTable" /> объект, представляющий новую таблицу запроса.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Запрос, созданный с помощью этого метода не будет запускаться до <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.Refresh(System.Object)" /> вызывается метод.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Запрос, созданный этим методом, не выполняется до тех <see cref="M:Microsoft.Office.Interop.Excel._QueryTable.Refresh(System.Object)" /> пор, пока не будет вызван метод.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Application">
@@ -162,7 +150,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения <b>целое число</b>.</summary>
+        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -190,12 +178,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, данное свойство возвращает строку XCEL, что эквивалентно шестнадцатеричный номер 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
         <value>To be added.</value>
-        <remarks>
-          <para>Свойство <b>создателя</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код создателя четырех символов. Например Microsoft Excel содержит код создателя XCEL.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -253,13 +239,11 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Требуется <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
-        <remarks>
-          <para>Текстовое имя объекта — это значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Name" /> свойства.</para>
-          <para></para>
-        </remarks>
+        <remarks><para>Текстовое имя объекта — это значение <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Name" /> свойства.</para>
+          <para> </para></remarks>
       </Docs>
     </Member>
     <Member MemberName="Parent">
