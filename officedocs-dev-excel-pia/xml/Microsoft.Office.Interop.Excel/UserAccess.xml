@@ -1,5 +1,5 @@
 <Type Name="UserAccess" FullName="Microsoft.Office.Interop.Excel.UserAccess">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="5757d729f5b2ba76353f83174ceb6884fc95261d" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587201" /></Metadata><TypeSignature Language="C#" Value="public interface UserAccess" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5757d729f5b2ba76353f83174ceb6884fc95261d" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009396" /></Metadata><TypeSignature Language="C#" Value="public interface UserAccess" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract UserAccess" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.UserAccess" />
   <TypeSignature Language="VB.NET" Value="Public Interface UserAccess" />
@@ -22,8 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет доступ пользователя для защищенного диапазона.</summary>
-    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.UserAccessList.Add(System.String,System.Boolean)" /> метод или <see cref="P:Microsoft.Office.Interop.Excel.UserAccessList.Item(System.Object)" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.UserAccessList" /> коллекции, чтобы возвратить объект <b>UserAccess</b> .</para>
-      <para>После возврата объекта <b>UserAccess</b> можно определить, разрешен ли доступ к определенному диапазону на листе с помощью <see cref="P:Microsoft.Office.Interop.Excel.UserAccess.AllowEdit" /> свойства.</para>
+    <remarks><para>Используйте метод или свойство коллекции для возврата объекта <see cref="M:Microsoft.Office.Interop.Excel.UserAccessList.Add(System.String,System.Boolean)" /> <see cref="P:Microsoft.Office.Interop.Excel.UserAccessList.Item(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.UserAccessList" /> <b>UserAccess.</b></para>
+      <para>После возврата <b>объекта UserAccess</b> можно определить, разрешен ли доступ к определенному диапазону на отдельном диапазоне на литейном объекте, используя <see cref="P:Microsoft.Office.Interop.Excel.UserAccess.AllowEdit" /> свойство.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -53,7 +53,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет значение true</b> , если пользователю разрешен доступ к указанному диапазону на защищенном листе.</summary>
+        <summary><b>Имеет</b> true, если пользователю разрешен доступ к указанному диапазону на защищенной таблице.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -108,48 +108,48 @@
       <Docs>
         <summary>Возвращает имя объекта.</summary>
         <value>To be added.</value>
-        <remarks><para>В следующей таблице приводятся примеры значений свойства <b>Name</b> и связанных свойств для источника данных с уникальным именем "[Европа]". [Франция]. [Париж] и источник данных, не относящийся к OLAP, с именем элемента "Париж".</para>
+        <remarks><para>В следующей таблице показаны примеры значений свойства <b>Name</b> и связанных свойств, задав источник данных с уникальным именем "[Europe]. [Франция]. [Paris]" и источник данных без OLAP с именем элемента "Paris".</para>
           <list type="table">
             <item>
               <term>
-                <b>Присваивает</b>
+                <b>Заголовок</b>
               </term>
               <description>Париж</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
-                <b>Расширением</b>
+                <b>Имя</b>
               </term>
-              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
-              <description>(То же, что значение свойства SQL, только для чтения)</description>
+              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>(То же, SQL значение свойства, только для чтения)</description>
             </item>
             <item>
               <term>
-                <b>Оно</b>
+                <b>Значение</b>
               </term>
-              <description>[Европа]. [Франция]. Париже (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> коллекции можно использовать синтаксис, приведенный в следующей таблице.</para>
+          <para>При указании индекса в коллекции можно использовать синтаксис, <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> показанный в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>выражение. PivotItems ("[Европа]. [ Франция]. [Париж])</term>
-              <description>выражение. PivotItems ("Париж")</description>
+              <term>выражение. PivotItems("[Europe].[ Франция]. [Paris]")</term>
+              <description>выражение. PivotItems("Paris")</description>
             </item>
           </list>
-          <para>При использовании <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> свойства для ссылки на определенный член коллекции можно использовать имя текстового индекса, как показано в следующей таблице.</para>
+          <para>При использовании свойства для ссылки на определенный член коллекции можно использовать имя текстового индекса, как показано <see cref="M:Microsoft.Office.Interop.Excel.PivotItems.Item(System.Object)" /> в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>[Европа]. [Франция]. Париже</term>
+              <term>[Европа]. [Франция]. [Paris]</term>
               <description>Париж</description>
             </item>
           </list>

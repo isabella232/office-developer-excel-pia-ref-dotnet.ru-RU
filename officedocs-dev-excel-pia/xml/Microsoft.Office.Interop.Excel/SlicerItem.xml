@@ -1,5 +1,5 @@
 <Type Name="SlicerItem" FullName="Microsoft.Office.Interop.Excel.SlicerItem">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3c1b11b181cf76e60a0a1ab7e6eab3bce566f124" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575147" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerItem" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="3c1b11b181cf76e60a0a1ab7e6eab3bce566f124" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010194" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerItem" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SlicerItem" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SlicerItem" />
   <TypeSignature Language="VB.NET" Value="Public Interface SlicerItem" />
@@ -22,7 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Представляет элемент в срезе.</summary>
-    <remarks><para>Чтобы получить доступ <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> к объекту, представляющему выбранную в данный момент кнопку среза, <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ActiveItem" /> используйте свойство <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта. Чтобы получить доступ <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> к коллекции, которая представляет все элементы в фильтровании сводной таблицы в области срезов <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> , используйте свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта, связанного с <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объектом. Чтобы получить доступ <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> к коллекции, представляющей элементы в срезе фильтрация уровня иерархии OLAP, используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SlicerItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта, представляющее этот уровень иерархии.</para>
+    <remarks><para>Чтобы получить доступ к объекту, который представляет выбранную в данный момент кнопку в срезе, используйте <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> <see cref="P:Microsoft.Office.Interop.Excel.Slicer.ActiveItem" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта. Чтобы получить доступ к коллекции, которая представляет все элементы в срезе, фильтрующий срезы, используйте свойство объекта, связанного <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> с <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объектом. Чтобы получить доступ к коллекции, которая представляет элементы в срезе, фильтруя уровень иерархии OLAP, используйте свойство объекта, который представляет этот <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SlicerItems" /> уровень <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> иерархии.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,8 +49,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -107,9 +107,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerItem.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.SlicerItem.Creator" /> символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -136,12 +136,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, содержит ли элемент среза данные, которые соответствуют текущему состоянию ручного фильтра.</summary>
-        <value><b>значение true</b> , если элемент среза содержит данные, которые соответствуют текущему состоянию ручного фильтра; в противном случае — <b>false</b>.</value>
+        <summary>Возвращает, содержит ли элемент среза данные, которые совпадают с текущим состоянием ручного фильтра.</summary>
+        <value><b>имеет</b> true, если элемент среза содержит данные, которые совпадают с текущим состоянием ручного фильтра; в <b>противном</b>случае false .</value>
         <remarks><para>Только для чтения.</para>
           <para>
-            <b>значение true</b> , если элемент среза содержит данные, которые соответствуют текущему состоянию ручного фильтра; в противном случае — <b>false</b>.</para>
-          <para>Это свойство поддерживается, только если включена кросс-фильтрация, и в противном случае создаст ошибку во время выполнения. Чтобы определить, включена ли перекрестная фильтрация для среза, связанного с отчетом сводной таблицы, проверьте значение <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойства родительского <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта указанного объекта. Чтобы определить, включена ли перекрестная фильтрация для среза, связанного с источником данных OLAP, проверьте значение <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта, соответствующего фильтруемой иерархии OLAP.</para>
+            <b>имеет</b> true, если элемент среза содержит данные, которые совпадают с текущим состоянием ручного фильтра; в <b>противном случае false</b>.</para>
+          <para>Это свойство поддерживается, только если включена межфильтровая фильтрация, и в противном случае будет создаваться ошибка времени запуска. Чтобы определить, включена ли межфильтровая фильтрация для среза, связанного с отчетом pivotTable, проверьте значение свойства родительского объекта <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> указанного <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта. Чтобы определить, включена ли межфильтровая фильтрация для среза, связанного с источником данных OLAP, проверьте значение свойства объекта, соответствующего фильтруемой иерархии <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -229,11 +229,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, указывающее, выбран ли элемент среза. Чтение и запись срезов, подключенных к источникам данных, не относящимся к OLAP. Только для чтения для срезов, подключенных к источникам данных OLAP.</summary>
-        <value><b>значение true</b> , если элемент среза выбран; в противном случае — <b>false</b>.</value>
+        <summary>Получает или задает, выбран ли элемент среза. Чтение и записи для срезов, подключенных к источникам данных, не связанным с OLAP. Только для чтения для срезов, подключенных к источникам данных OLAP.</summary>
+        <value><b>имеет</b> true, если выбран элемент среза; в <b>противном</b>случае false .</value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>значение true</b> , если элемент среза выбран; в противном случае — <b>false</b>.</para>
+            <b>имеет</b> true, если выбран элемент среза; в <b>противном случае false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -260,8 +260,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает имя источника для элемента среза.</summary>
-        <value>Имя источника для элемента среза.</value>
+        <summary>Получает имя источника элемента среза.</summary>
+        <value>Имя источника элемента среза.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -289,10 +289,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает имя источника элемента среза в стандартных параметрах формата "Английский (США)".</summary>
-        <value>Имя источника элемента среза в стандартных параметрах форматирования на английском языке (США).</value>
+        <summary>Получает имя источника элемента среза в стандартных параметрах формата английского языка (США).</summary>
+        <value>Имя источника элемента среза в стандартных параметрах формата английского языка (США).</value>
         <remarks><para>Только для чтения.</para>
-          <para>Это свойство используется, если у элемента среза есть локализованная версия, а <see cref="P:Microsoft.Office.Interop.Excel.SlicerItem.SourceNameStandard" /> значение свойства отличается от значения <see cref="P:Microsoft.Office.Interop.Excel.SlicerItem.SourceName" /> свойства, например с форматированием даты.</para>
+          <para>Это свойство используется, когда элемент среза имеет локализованную версию, а его значение свойства отличается от значения свойства, например при форматировании <see cref="P:Microsoft.Office.Interop.Excel.SlicerItem.SourceNameStandard" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerItem.SourceName" /> даты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

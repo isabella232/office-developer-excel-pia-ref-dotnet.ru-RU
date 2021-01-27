@@ -1,5 +1,5 @@
 <Type Name="PivotItemList" FullName="Microsoft.Office.Interop.Excel.PivotItemList">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="262aa442811c81a69cf1d71e4b2a4d52c05f86c0" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20585164" /></Metadata><TypeSignature Language="C#" Value="public interface PivotItemList : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="262aa442811c81a69cf1d71e4b2a4d52c05f86c0" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010803" /></Metadata><TypeSignature Language="C#" Value="public interface PivotItemList : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotItemList implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotItemList" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotItemList&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объектов в указанной сводной таблице. Каждый <b>PivotItem</b> представляет элемент в поле сводной таблицы.</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" /> или <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объекта, чтобы вернуть коллекцию <b>PivotItemList</b> .</para>
-      <para>После возвращения коллекции <b>PivotItemList</b> можно использовать <see cref="M:Microsoft.Office.Interop.Excel.PivotItemList.Item(System.Object)" /> метод для определения определенного списка <b>PivotItem</b> .</para>
+    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> указанной pivotTable. Каждый <b>элемент PivotItem</b> представляет элемент в поле "PivotTable".</summary>
+    <remarks><para>Используйте свойство или свойство объекта для возврата <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" /> коллекции <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> <b>PivotItemList.</b></para>
+      <para>После возврата <b>коллекции PivotItemList</b> можно использовать этот метод для определения определенного списка <see cref="M:Microsoft.Office.Interop.Excel.PivotItemList.Item(System.Object)" /> <b>PivotItem.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -89,7 +89,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,7 +117,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает количество объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,9 +145,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -206,10 +206,10 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Текстовое имя объекта является значением свойства <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Name" /> и. <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Value" /> Для источника данных Online аналитической обработки (OLAP) значение равно значению <see cref="P:Microsoft.Office.Interop.Excel._OLEObject.SourceName" /> свойства. Для других источников данных значение равно значению <see cref="P:Microsoft.Office.Interop.Excel._Application.Caption" /> свойства.</para>
+        <remarks><para>Текстовое имя объекта является значением свойств <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Name" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.Value" /> и свойств. Для источника данных OLAP значение равно значению <see cref="P:Microsoft.Office.Interop.Excel._OLEObject.SourceName" /> свойства. Для других источников данных значение равно значению <see cref="P:Microsoft.Office.Interop.Excel._Application.Caption" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

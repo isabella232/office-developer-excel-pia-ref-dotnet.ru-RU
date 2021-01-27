@@ -1,5 +1,5 @@
 <Type Name="SlicerItems" FullName="Microsoft.Office.Interop.Excel.SlicerItems">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="774e30c34e5d1fc1bfc66a2f61fafb0bf20e4cfb" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20585990" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerItems : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="774e30c34e5d1fc1bfc66a2f61fafb0bf20e4cfb" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010180" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerItems : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SlicerItems implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SlicerItems" />
   <TypeSignature Language="VB.NET" Value="Public Interface SlicerItems&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объектов, <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> содержащуюся в объекте или <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> .</summary>
-    <remarks><para>Чтобы получить доступ <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> к коллекции, представляющей элементы в срезе на основе данных в книге или внешних данных, не являющихся OLAP, используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта, связанного с срезом.</para>
-      <para>Чтобы получить доступ <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> к коллекции, представляющей элементы в срезе на основе подключения к данным OLAP, используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SlicerItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта, представляющее уровень иерархии.</para>
+    <summary>Представляет коллекцию <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объектов, содержащихся в <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекте или <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекте.</summary>
+    <remarks><para>Чтобы получить доступ к коллекции, которая представляет элементы в срезе на основе данных в книге или внешних данных, не связанных с OLAP, используйте свойство объекта, связанного с <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> срезом.</para>
+      <para>Чтобы получить доступ к коллекции, которая представляет элементы в срезе на основе подключения к данным OLAP, используйте свойство объекта, который представляет уровень <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SlicerItems" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> иерархии.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -62,7 +62,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" />значение.</value>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -89,8 +89,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -118,7 +118,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает число объектов в коллекции.</summary>
+        <summary>Получает количество объектов в коллекции.</summary>
         <value>Число объектов в коллекции.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -147,10 +147,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
+        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerItems.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.SlicerItems.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -182,7 +182,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" /> .</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -213,8 +213,8 @@
       </Parameters>
       <Docs>
         <param name="Index">Имя или номер индекса <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объекта.</param>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> объект из коллекции.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" />значение.</value>
+        <summary>Получает объект <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> из коллекции.</summary>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItem" /> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="PivotCaches" FullName="Microsoft.Office.Interop.Excel.PivotCaches">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a96fa5538045c8441266412dcd431b316fe7edd6" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586879" /></Metadata><TypeSignature Language="C#" Value="public interface PivotCaches : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a96fa5538045c8441266412dcd431b316fe7edd6" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010929" /></Metadata><TypeSignature Language="C#" Value="public interface PivotCaches : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotCaches implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotCaches" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotCaches&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию кэшей памяти из отчетов сводной таблицы в книге.</summary>
+    <summary>Представляет коллекцию кэшей памяти из отчетов pivotTable в книге.</summary>
     <remarks><para>Каждый кэш памяти представлен <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объектом.</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.PivotCaches" /> метод, чтобы возвратить коллекцию <b>PivotCaches</b> .</para>
+      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.PivotCaches" /> метод для возврата коллекции <b>PivotCaches.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -92,11 +92,11 @@
         <Parameter Name="SourceData" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SourceType">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" />. Источник данных кэша сводной таблицы. Может быть одной из следующих констант <b>кслпивоттаблесаурцетипе</b> :<b>кслконсолидатион</b><b>кслдатабасе</b><b>кслекстернал</b><b>кслпивоттабле</b><b>кслсценарио</b></param>
-        <param name="SourceData">Необязательный <b>объект</b>. Данные для нового кэша сводной таблицы. Этот аргумент является обязательным, <paramref name="SourceType" /> если не <b>кслекстернал</b>. Может быть <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, массив диапазонов или текстовая константа, представляющая имя существующего отчета сводной таблицы. Для внешней базы данных это массив из двух элементов. Первый элемент — это строка подключения, указывающая поставщик данных. Второй элемент — это строка SQL-запроса, используемая для получения данных. При указании этого аргумента также необходимо указать <paramref name="SourceType" />.</param>
-        <summary>Добавляет новый кэш сводной таблицы в <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> коллекцию.</summary>
+        <param name="SourceType">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" /> . Источник данных кэша pivotTable. Может быть одной из следующих констант <b>XlPivotTableSourceType:</b> <b>xlConsolidation</b><b>xlDatabase</b><b>xlExternal</b><b>xlPivotTable</b><b>xlScenario</b></param>
+        <param name="SourceData"><b>Необязательный объект</b>. Данные для нового кэша pivotTable. Этот аргумент обязален, <paramref name="SourceType" /> если он не является <b>xlExternal.</b> Может быть объектом, массивом диапазонов или текстовой константой, которая представляет имя существующего отчета <see cref="T:Microsoft.Office.Interop.Excel.Range" /> совмест. Для внешней базы данных это массив из двух элементов. Первый элемент — это строка подключения, указывав поставщика данных. Второй элемент — это строка SQL запроса, используемая для получения данных. Если указан этот аргумент, необходимо также указать <paramref name="SourceType" /> .</param>
+        <summary>Добавляет новый кэш pivotTable в <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> коллекцию.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Если <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект, на который ссылается кэш сводной таблицы, не указан, то кэш сводной таблицы автоматически удаляется перед сохранением книги.</para>
+        <remarks><para>Если объект не ссылается на кэш pivotTable, он автоматически удаляется перед тем, как книга будет <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> сохранена.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -123,7 +123,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -151,7 +151,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,14 +180,14 @@
         <Parameter Name="Version" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SourceType">Обязательный <paramref name="SourceType" /> параметр может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" /> следующих констант: <b>кслконсолидатион</b>, <b>кслдатабасе</b>или <b>кслекстернал</b>.</param>
-        <param name="SourceData">Необязательный <b>объект</b> данные для нового <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> кэша.</param>
-        <param name="Version">Необязательный вариант <b>объекта</b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />.  Версия может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableVersionList" /> констант.</param>
-        <summary>Создает новый <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" />объект.</summary>
+        <param name="SourceType">Обязательной может быть одна из следующих констант: <paramref name="SourceType" /> <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" /> <b>xlConsolidation,</b> <b>xlDatabase</b>или <b>xlExternal.</b></param>
+        <param name="SourceData"><b>Необязательный</b> объект — данные для нового <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> кэша.</param>
+        <param name="Version"><b>Необязательная</b> версия объекта <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .  Версия может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableVersionList" /> констант.</param>
+        <summary>Создает новый <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> .</summary>
         <returns><see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /></returns>
-        <remarks><para>Следующие две <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" /> константы не поддерживаются при использовании этого метода: <b>кслпивоттабле</b> и <b>кслсценарио</b>. Если указана одна из этих двух констант, возвращается ошибка времени выполнения.</para>
-          <para><paramref name="SourceData" /> Аргумент является обязательным, если <paramref name="SourceType" /> не кслекстернал. Это может <see cref="T:Microsoft.Office.Interop.Excel.Range" /> быть объект ( <paramref name="SourceType" /> если он имеет значение кслконсолидатион или Кслдатабасе) или объект Excel <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> (когда <paramref name="SourceType" /> — кслекстернал).</para>
-          <para>Если этот параметр <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> не указан, будет использоваться версия xlPivotTableVersion12.  Использование константы <b>кслпивоттаблеверсионкуррент</b> не допускается и возвращает ошибку времени выполнения, если она указана.</para>
+        <remarks><para>При использовании этого метода не поддерживаются следующие две <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" /> константы: <b>xlPivotTable</b> и <b>xlScenario.</b> Если предоставлена одна из этих двух констант, возвращается ошибка во время работы.</para>
+          <para>Аргумент <paramref name="SourceData" /> обязален, если <paramref name="SourceType" /> не является xlExternal. Это может быть объект (когда это <see cref="T:Microsoft.Office.Interop.Excel.Range" /> <paramref name="SourceType" /> xlConsolidation или xlDatabase) или объект Excel <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> <paramref name="SourceType" /> (когда это xlExternal).</para>
+          <para>Если этот вариант не задается, версия <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> будет иметь версию xlPivotTableVersion12.  Использование <b>константы xlPivotTableVersionCurrent</b> запрещено, и при ее использовании возвращается ошибка времени работы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -216,8 +216,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -276,7 +276,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

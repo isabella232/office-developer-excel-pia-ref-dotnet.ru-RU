@@ -1,5 +1,5 @@
 <Type Name="Phonetic" FullName="Microsoft.Office.Interop.Excel.Phonetic">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="968b33512b8ee5525d7c2fa249064b898613c020" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587649" /></Metadata><TypeSignature Language="C#" Value="public interface Phonetic" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="968b33512b8ee5525d7c2fa249064b898613c020" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50011020" /></Metadata><TypeSignature Language="C#" Value="public interface Phonetic" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Phonetic" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Phonetic" />
   <TypeSignature Language="VB.NET" Value="Public Interface Phonetic" />
@@ -21,10 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит сведения о конкретной строке фонетического текста в ячейке.</summary>
+    <summary>Содержит сведения об определенной фонетической текстовой строке в ячейке.</summary>
     <remarks><para>В Microsoft Excel 97 этот объект содержал атрибуты форматирования для любого фонетического текста в указанном диапазоне.</para>
-      <para>Используйте <b>фонетические</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса фонетического текста, чтобы вернуть один <b>фонетический</b> объект.</para>
-      <para>Это <see cref="P:Microsoft.Office.Interop.Excel.Range.Phonetic" /> свойство обеспечивает совместимость с более ранними версиями Microsoft Excel. Следует использовать <b>фонетическое</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса фонетического текста, чтобы вернуть один <b>фонетический</b> объект.</para>
+      <para>Используйте <b>фонетику</b>( ), где находится номер индекса фонетического текста, чтобы <paramref name="index" /> вернуть один <paramref name="index" /> <b>фонетический</b> объект.</para>
+      <para>Это <see cref="P:Microsoft.Office.Interop.Excel.Range.Phonetic" /> свойство обеспечивает совместимость с более ранними версиями Microsoft Excel. Для возврата <b>одного фонетического</b>объекта следует использовать фонетические (), где находится номер индекса фонетического <paramref name="index" /> <paramref name="index" /> текста. <b></b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -56,18 +56,18 @@
       <Docs>
         <summary>Возвращает или задает выравнивание для указанного фонетического текста.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>alignment</b> может иметь одну из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlPhoneticAlignment" /> констант:</para>
+        <remarks><para>Свойство <b>Alignment</b> может быть одной из этих <see cref="T:Microsoft.Office.Interop.Excel.XlPhoneticAlignment" /> констант:</para>
           <para>
-            <b>кслфонетикалигнцентер</b>
+            <b>XlPhoneticAlignCenter</b>
           </para>
           <para>
-            <b>кслфонетикалигндистрибутед</b>
+            <b>XlPhoneticAlignDistributed</b>
           </para>
           <para>
-            <b>кслфонетикалигнлефт</b>
+            <b>XlPhoneticAlignLeft</b>
           </para>
           <para>
-            <b>кслфонетикалигнноконтрол</b>
+            <b>XlPhoneticAlignNoControl</b>
           </para>
           <para> </para></remarks>
       </Docs>
@@ -95,7 +95,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -156,8 +156,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -184,7 +184,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, который представляет шрифт указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -245,7 +245,7 @@
       <Docs>
         <summary>Возвращает или задает текст для указанного объекта.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство возвращает или задает фонетическое текстовое поле для <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> объекта. Этому свойству невозможно присвоить <b>значение NULL</b>.</para>
+        <remarks><para>Это свойство возвращает или задает фонетический текст для <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> объекта. Для этого свойства нельзя установить <b>null.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>

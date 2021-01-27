@@ -1,5 +1,5 @@
 <Type Name="Trendlines" FullName="Microsoft.Office.Interop.Excel.Trendlines">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="16729ecd05466f30367a2ad9f0440647d5e8ade1" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581734" /></Metadata><TypeSignature Language="C#" Value="public interface Trendlines : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="16729ecd05466f30367a2ad9f0440647d5e8ade1" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009473" /></Metadata><TypeSignature Language="C#" Value="public interface Trendlines : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Trendlines implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Trendlines" />
   <TypeSignature Language="VB.NET" Value="Public Interface Trendlines&#xA;Implements IEnumerable" />
@@ -25,11 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Trendline" /> объектов для указанного ряда. Каждый объект <b>линии тренда</b> представляет линию тренда на диаграмме. Линия тренда отображает тенденцию или направление данных в ряде.</summary>
-    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Series.Trendlines(System.Object)" /> метод, чтобы возвратить коллекцию <b>аппроксимации</b> .</para>
-      <para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.Trendlines.Add(Microsoft.Office.Interop.Excel.XlTrendlineType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метода создайте новую линию тренда и добавьте ее в ряд.</para>
-      <para>Используйте <b>линии тренда</b>(<paramref name="index" />) <paramref name="index" /> , где — это номер индекса линии тренда, чтобы вернуть один объект <b>линии тренда</b> .</para>
-      <para>Номер индекса указывает порядок, в котором линии тренда были добавлены в ряд. Линии тренда (1) — это первая линия тренда, добавленная к ряду, а линии тренда (аппроксимация. число) — последний добавленный элемент.</para>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.Trendline" /> для указанного ряда. Каждый <b>объект Trendline</b> представляет линию тренда на диаграмме. Линия тренда отображает тенденцию или направление данных в ряде.</summary>
+    <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Series.Trendlines(System.Object)" /> метод для возврата коллекции <b>Trendlines.</b></para>
+      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Trendlines.Add(Microsoft.Office.Interop.Excel.XlTrendlineType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы создать новую линию тренда и добавить ее в серию.</para>
+      <para>Используйте <b>линии тренда</b>( ), где находится номер индекса линии <paramref name="index" /> тренда, чтобы вернуть один объект <paramref name="index" /> <b>TrendLine.</b></para>
+      <para>Номер индекса обозначает порядок, в котором линии тренда были добавлены в ряд. Trendlines(1) — это первая линия тренда, добавленная в ряд, а Trendlines(Trendlines.Count) — последняя добавленная линия тренда.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -94,15 +94,15 @@
         <Parameter Name="Name" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlTrendlineType" />параметр. Тип линии тренда.</param>
-        <param name="Order">Необязательный <b>объект</b>. Обязательный <paramref name="Type" /> аргумент if — <b>кслполиномиал</b>. Порядок линии тренда. Должно быть целым числом от 2 до 6 включительно.</param>
-        <param name="Period">Необязательный <b>объект</b>. Обязательный <paramref name="Type" /> аргумент if — <b>кслмовингавг</b>. Период линии тренда линии тренда. Должно быть целым числом больше 1 и меньшим, чем число точек данных в ряду, к которым добавляется линия тренда.</param>
-        <param name="Forward">Необязательный <b>объект</b>. Количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется вперед.</param>
-        <param name="Backward">Необязательный <b>объект</b>. Количество периодов (или единиц измерения на точечной диаграмме), на которые линия тренда расширяется обратно.</param>
-        <param name="Intercept">Необязательный <b>объект</b>. Пересечение с линией тренда. Если этот аргумент опущен, то Конст автоматически задается регрессией.</param>
-        <param name="DisplayEquation">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы отобразить формулу линии тренда на диаграмме (в той же метке данных, что и значение R-квадрат). Значение по умолчанию — <b>False</b>.</param>
-        <param name="DisplayRSquared">Необязательный <b>объект</b>. Значение <b>true</b> для отображения значения аппроксимации линии тренда на диаграмме (в той же метке данных, что и формула). Значение по умолчанию — <b>False</b>.</param>
-        <param name="Name">Необязательный <b>объект</b>. Название линии тренда в виде текста. Если этот аргумент опущен, Microsoft Excel создает имя.</param>
+        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlTrendlineType" /> . Тип линии тренда.</param>
+        <param name="Order"><b>Необязательный объект</b>. Обязательно, если <paramref name="Type" /> <b>xlPolynomial</b>. Порядок линии тренда. Должно быть integer от 2 до 6 включительно.</param>
+        <param name="Period"><b>Необязательный объект</b>. Обязательно, если <paramref name="Type" /> это <b>xlMovingAvg.</b> Период линии тренда. Должно быть числом больше 1 и меньше числа точек данных в ряду, в который добавляется линия тренда.</param>
+        <param name="Forward"><b>Необязательный объект</b>. Число периодов (или единиц на точечная диаграмма), которые линия тренда расширяет вперед.</param>
+        <param name="Backward"><b>Необязательный объект</b>. Количество периодов (или единиц на точечная диаграмма), которые линия тренда расширяет в обратном направлении.</param>
+        <param name="Intercept"><b>Необязательный объект</b>. Перехват линии тренда. Если этот аргумент опущен, перехват автоматически устанавливается регрессией.</param>
+        <param name="DisplayEquation"><b>Необязательный объект</b>. <b>Значение true,</b> чтобы отобразить уравнение линии тренда на диаграмме (в той же метки данных, что и значение R-squared). Значение по умолчанию — <b>False</b>.</param>
+        <param name="DisplayRSquared"><b>Необязательный объект</b>. <b>Значение</b> true для отображения значения В квадрате линии тренда на диаграмме (в той же метки данных, что и уравнение). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Name"><b>Необязательный объект</b>. Имя линии тренда в виде текста. Если этот аргумент опущен, Microsoft Excel создает имя.</param>
         <summary>Создает новую линию тренда. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Trendline" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -131,7 +131,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -159,7 +159,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -189,8 +189,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -248,7 +248,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

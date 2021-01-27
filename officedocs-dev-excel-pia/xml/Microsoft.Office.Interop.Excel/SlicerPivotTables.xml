@@ -1,5 +1,5 @@
 <Type Name="SlicerPivotTables" FullName="Microsoft.Office.Interop.Excel.SlicerPivotTables">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e7cf06ad9737671167d43d23e4d02fbaa27f0834" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580985" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerPivotTables : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e7cf06ad9737671167d43d23e4d02fbaa27f0834" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010159" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerPivotTables : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SlicerPivotTables implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" />
   <TypeSignature Language="VB.NET" Value="Public Interface SlicerPivotTables&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет сведения о коллекции сводных таблиц, связанных с указанным <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объектом.</summary>
-    <remarks><para><see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> Коллекция содержит сведения о сводных таблицах, которые в настоящее время фильтруются кэшем среза. Он предоставляет свойства для определения количества сводных таблиц, с которыми связан срез, а также для извлечения <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объектов, представляющих фильтруемые сводные таблицы. Он также предоставляет методы для добавления и удаления сводных таблиц из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции. Если <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> срез, связанный с указанным <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> , не подключен ни к одной из сводных таблиц, коллекция будет пустой.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.PivotTables" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекцию, связанную с объектом <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" />, который, в свою очередь, может быть связан с одним или несколькими срезами.</para>
+    <summary>Представляет сведения о коллекции список, связанных с указанным <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объектом.</summary>
+    <remarks><para>Коллекция содержит сведения о срезах, фильтруемых в кэше <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> срезов. Он предоставляет свойства для определения количества срезов, с которые связан срез, и для иска объектов, которые представляют фильтруемые <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> срезы. Он также предоставляет методы для добавления и удаления список из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции. Коллекция будет пустой, если связанный с указанным срез не подключен ни к одной из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> срезов.</para>
+      <para>Используйте свойство объекта, чтобы вернуть коллекцию, связанную с срезом, который, в свою очередь, может быть связан с <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> одним или более <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> срезами.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -62,7 +62,7 @@
       <Docs>
         <param name="Index">To be added.</param>
         <summary>Зарезервировано для внутреннего использования.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />значение.</value>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -88,9 +88,9 @@
         <Parameter Name="PivotTable" Type="Microsoft.Office.Interop.Excel.PivotTable" />
       </Parameters>
       <Docs>
-        <param name="PivotTable"><see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> Объект, представляющий сводную таблицу, которую необходимо добавить.</param>
-        <summary>Добавляет ссылку на сводную таблицу в <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекцию.</summary>
-        <remarks><para>При добавлении сводной таблицы в <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекцию ее можно фильтровать по родительскому элементу <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> и связанным с ним срезам.</para>
+        <param name="PivotTable">Объект, <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> который представляет добавляемую списоную.</param>
+        <summary>Добавляет ссылку на pivotTable в <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекцию.</summary>
+        <remarks><para>При добавлении в коллекцию срезов и родительских срезов можно <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> отфильтровать.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -117,8 +117,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -146,7 +146,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает число объектов в коллекции.</summary>
+        <summary>Получает количество объектов в коллекции.</summary>
         <value>Число объектов в коллекции.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -174,9 +174,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.SlicerPivotTables.Creator" />Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.SlicerPivotTables.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -208,7 +208,7 @@
       <Parameters />
       <Docs>
         <summary>To be added.</summary>
-        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" />значение.</returns>
+        <returns>Возвращает <see cref="T:System.Collections.IEnumerator" /> .</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -240,7 +240,7 @@
       <Docs>
         <param name="Index">Имя или номер индекса объекта.</param>
         <summary>Получает один <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект из коллекции.</summary>
-        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />значение.</value>
+        <value>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -267,8 +267,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект, который является родительским по отношению к <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> заданной коллекции.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> Объект, являющийся родителем указанной <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции.</value>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объект, который является родительским объектом указанной <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции.</summary>
+        <value>Объект, <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> который является родительским объектом указанной <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -296,9 +296,9 @@
         <Parameter Name="PivotTable" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PivotTable"><see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> Объект, представляющий сводную таблицу, которую необходимо удалить, или имя или индекс сводной таблицы в коллекции.</param>
-        <summary>Удаляет ссылку на сводную таблицу из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции.</summary>
-        <remarks><para>Если сводная таблица удалена из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции, она больше не фильтруется по родительскому <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> и связанному с ней срезам.</para>
+        <param name="PivotTable">Объект, который представляет удаляемую списоную, или имя или индекс <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> pivotTable в коллекции.</param>
+        <summary>Удаляет ссылку на pivotTable из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> коллекции.</summary>
+        <remarks><para>При удалении из коллекции срезов и связанных с ней срезов больше не фильтруется <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> по родительской.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="VPageBreaks" FullName="Microsoft.Office.Interop.Excel.VPageBreaks">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9f1ccf11f0bbaf483e28c650605da8bce1726a26" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581958" /></Metadata><TypeSignature Language="C#" Value="public interface VPageBreaks : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9f1ccf11f0bbaf483e28c650605da8bce1726a26" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009368" /></Metadata><TypeSignature Language="C#" Value="public interface VPageBreaks : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract VPageBreaks implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.VPageBreaks" />
   <TypeSignature Language="VB.NET" Value="Public Interface VPageBreaks&#xA;Implements IEnumerable" />
@@ -25,12 +25,12 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция вертикальных разрывов страниц в области печати. Каждый вертикальный разрыв страницы представлен <see cref="T:Microsoft.Office.Interop.Excel.VPageBreak" /> объектом.</summary>
-    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.VPageBreaks" /> свойство, чтобы возвратить коллекцию <b>VPageBreaks</b> . Используйте <see cref="M:Microsoft.Office.Interop.Excel.VPageBreaks.Add(System.Object)" /> метод для добавления вертикального разрыва страницы.</para>
-      <para>Если добавить разрыв страницы, не пересекающийся с областью печати, то недавно добавленный объект <b>VPageBreak</b> не будет отображаться в коллекции <b>VPageBreaks</b> для области печати. Содержимое коллекции может измениться, если размер области печати изменяется или переопределяется.</para>
-      <para><see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Application" /> Если свойство, <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Count" /> свойство <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Creator" /> <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Item(System.Int32)" /> <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Parent" /> , свойство, свойство или <see cref="M:Microsoft.Office.Interop.Excel.VPageBreaks.Add(System.Object)" /> метод используются вместе со свойством <b>VPageBreaks</b> :</para>
-      <para>Для автоматической области печати свойство <b>VPageBreaks</b> применяется только к разрывам страниц в области печати.</para>
-      <para>Для определенной пользователем области печати того же диапазона свойство <b>VPageBreaks</b> применяется ко всем разрывам страниц.</para>
+    <summary>Коллекция вертикальных разрывов страниц в области печати. Каждая вертикальная разрыв страницы представлена <see cref="T:Microsoft.Office.Interop.Excel.VPageBreak" /> объектом.</summary>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.VPageBreaks" /> для возврата <b>коллекции VPageBreaks.</b> Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.VPageBreaks.Add(System.Object)" /> метод для добавления вертикального разрыва страницы.</para>
+      <para>Если добавить разрыв страницы, который не пересекает область печати, новый объект <b>VPageBreak</b> не будет отображаться в коллекции <b>VPageBreaks</b> для области печати. Содержимое коллекции может изменяться, если размер области печати меняется или переопределяется.</para>
+      <para>При использовании свойства, свойства или метода в сочетании со свойством <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Application" /> <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Count" /> <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Creator" /> <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Item(System.Int32)" /> <see cref="P:Microsoft.Office.Interop.Excel.VPageBreaks.Parent" /> <see cref="M:Microsoft.Office.Interop.Excel.VPageBreaks.Add(System.Object)" /> <b>VPageBreaks:</b></para>
+      <para>Для области автоматической печати свойство <b>VPageBreaks</b> применяется только к разрывам страниц в области печати.</para>
+      <para>Для определяемой пользователем области печати того же диапазона свойство <b>VPageBreaks</b> применяется ко всем разрывам страниц.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -92,8 +92,8 @@
         <Parameter Name="Before" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Before">Обязательный <b>объект</b>. Объект <see cref="T:Microsoft.Office.Interop.Excel.Range" />. Диапазон, слева от которого будет добавлен новый разрыв страницы.</param>
-        <summary>Добавление вертикального разрыва страницы. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreak" /> объект.</summary>
+        <param name="Before">Необходимый <b>объект</b>. Объект <see cref="T:Microsoft.Office.Interop.Excel.Range" />. Диапазон слева от которого будет добавлен новый разрыв страницы.</param>
+        <summary>Добавляет вертикальную разрыв страницы. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.VPageBreak" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,7 +121,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,7 +149,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -179,8 +179,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -242,7 +242,7 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

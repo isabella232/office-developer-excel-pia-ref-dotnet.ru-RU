@@ -1,5 +1,5 @@
 <Type Name="Sparkline" FullName="Microsoft.Office.Interop.Excel.Sparkline">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="c3b25443564b1ba5ad0aba47d0107551ef56fce0" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581881" /></Metadata><TypeSignature Language="C#" Value="public interface Sparkline" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c3b25443564b1ba5ad0aba47d0107551ef56fce0" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009907" /></Metadata><TypeSignature Language="C#" Value="public interface Sparkline" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Sparkline" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Sparkline" />
   <TypeSignature Language="VB.NET" Value="Public Interface Sparkline" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет отдельный объект спарклайна.</summary>
-    <remarks><para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.Sparkline.ModifyLocation(Microsoft.Office.Interop.Excel.Range)" /> метода измените расположение одного спарклайна и используйте <see cref="M:Microsoft.Office.Interop.Excel.Sparkline.ModifySourceData(System.String)" /> метод для изменения диапазона исходных данных. Чтобы работать с группой спарклайнов одновременно, используйте членов <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объекта.</para>
+    <summary>Представляет одну спарклайн.</summary>
+    <remarks><para>Используйте этот метод для изменения расположения одной спарклайновой линии и для изменения диапазона <see cref="M:Microsoft.Office.Interop.Excel.Sparkline.ModifyLocation(Microsoft.Office.Interop.Excel.Range)" /> <see cref="M:Microsoft.Office.Interop.Excel.Sparkline.ModifySourceData(System.String)" /> исходных данных. Для одновременной работы с группой спарклинов используйте члены <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объекта.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,8 +49,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -78,10 +78,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para><b>Доступно только для</b>чтения.</para>
-          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.Sparkline.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Длинное только <b>для чтения.</b></para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.Sparkline.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -111,8 +111,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает расположение одного спарклайна.</summary>
-        <value>Расположение одного спарклайна.</value>
+        <summary>Возвращает или задает расположение одной спарклайна.</summary>
+        <value>Расположение одной спарклайна.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -139,8 +139,8 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Excel.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Ячейка, содержащая спарклайн.</param>
-        <summary>Изменяет расположение одного спарклайна.</summary>
+        <param name="Range">Ячейка, содержаная спарклайн.</param>
+        <summary>Изменяет расположение одной спарклайна.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -167,9 +167,9 @@
         <Parameter Name="Formula" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Formula">Диапазон содержит исходные данные.</param>
-        <summary>Изменяет исходные данные для одного спарклайна.</summary>
-        <remarks><para>Диапазон источника данных для одного спарклайна должен быть непрерывным.</para>
+        <param name="Formula">Диапазон, содержащий исходные данные.</param>
+        <summary>Изменяет исходные данные для одной спарклайновой линии.</summary>
+        <remarks><para>Диапазон источников данных для одной спарклайна должен быть непрерывным.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -196,7 +196,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объект для указанного объекта.</summary>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> родительский объект для указанного объекта.</summary>
         <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объект для указанного объекта.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -228,10 +228,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает диапазон, содержащий исходные данные для одного спарклайна.</summary>
-        <value>Диапазон, содержащий исходные данные для одного спарклайна.</value>
+        <summary>Получает или задает диапазон, содержащий исходные данные для одной спарклайновой линии.</summary>
+        <value>Диапазон, содержащий исходные данные для одной спарклайновой линии.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Диапазон источника данных для одного спарклайна должен быть непрерывным.</para>
+          <para>Диапазон источников данных для одной спарклайна должен быть непрерывным.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

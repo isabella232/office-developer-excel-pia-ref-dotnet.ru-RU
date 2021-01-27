@@ -1,5 +1,5 @@
 <Type Name="Tab" FullName="Microsoft.Office.Interop.Excel.Tab">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="71eb536a457812dc4d61b8e60fbc32743a3a5406" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20585822" /></Metadata><TypeSignature Language="C#" Value="public interface Tab" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="71eb536a457812dc4d61b8e60fbc32743a3a5406" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009781" /></Metadata><TypeSignature Language="C#" Value="public interface Tab" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Tab" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Tab" />
   <TypeSignature Language="VB.NET" Value="Public Interface Tab" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет вкладку на диаграмме или листе.</summary>
-    <remarks><para>Используйте свойство <b>Tab</b> <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объекта или <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объекта, чтобы вернуть объект <b>Tab</b> .</para>
-      <para>После возвращения объекта <b>Tab</b> можно использовать <see cref="P:Microsoft.Office.Interop.Excel.Tab.ColorIndex" /> свойство, чтобы определить параметры вкладки для диаграммы или листа.</para>
+    <summary>Представляет вкладку в диаграмме или на таблице.</summary>
+    <remarks><para>Используйте свойство <b>Tab</b> объекта или <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объекта для возврата объекта <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> <b>Tab.</b></para>
+      <para>После возврата <b>объекта Tab</b> можно использовать свойство для определения параметров вкладки для диаграммы <see cref="P:Microsoft.Office.Interop.Excel.Tab.ColorIndex" /> или таблицы.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,7 +114,7 @@
       <Docs>
         <summary>Возвращает или задает цвет указанной вкладки диаграммы.</summary>
         <value>To be added.</value>
-        <remarks><para>Цвет задается в виде одной из <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант.</para>
+        <remarks><para>Цвет указывается как одна из <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -143,8 +143,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -202,9 +202,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlThemeColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет темы примененной цветовой схемы, связанной с указанным объектом. Для чтения и записи.</summary>
+        <summary>Возвращает или задает цвет темы в примененной цветовой схеме, связанной с указанным объектом. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlThemeColor" /></value>
-        <remarks><para>При попытке доступа к цвету темы для объекта, цвет которого в настоящее время не является темой, возникает ошибка времени выполнения запроса.</para>
+        <remarks><para>Попытка получить доступ к цвету темы для объекта, цвет которого в настоящее время не имеет темы, приведет к недопустимой ошибке времени запуска запроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -234,10 +234,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>одно</b> значение, которое осветляет или затемняет цвет.</summary>
-        <value><b>Одинарное с плавающей точкой</b></value>
-        <remarks><para>Можно ввести число от-1 (самый темный) до 1 (самое светлое) для <see cref="P:Microsoft.Office.Interop.Excel.Tab.TintAndShade" /> свойства. Ноль (0) не является нейтральным.</para>
-          <para>При попытке присвоить этому свойству значение, меньшее-1 или превышающее 1, возникает ошибка времени выполнения: "указанное значение выходит за пределы допустимого диапазона".  Это свойство применимо как к цветам темы, так и к цветам.</para>
+        <summary>Возвращает или задает <b>single, который</b> осветляет или затемнеет цвет.</summary>
+        <value><b>Single</b></value>
+        <remarks><para>Для свойства можно ввести число от -1 (самый темный) до 1 (самый <see cref="P:Microsoft.Office.Interop.Excel.Tab.TintAndShade" /> светлый). Ноль (0) нейтральный.</para>
+          <para>Попытка установить для этого свойства значение меньше -1 или более 1 приводит к ошибке во время работы: "Указанное значение находится вне диапазона".  Это свойство работает как для цветов темы, так и для нетемных цветов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
