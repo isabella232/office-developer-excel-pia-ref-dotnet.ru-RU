@@ -1,5 +1,5 @@
 <Type Name="Window" FullName="Microsoft.Office.Interop.Excel.Window">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="628d319ce41e267cd4a082a94f976467ed8bebe1" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20577772" /></Metadata><TypeSignature Language="C#" Value="public interface Window" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="628d319ce41e267cd4a082a94f976467ed8bebe1" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009263" /></Metadata><TypeSignature Language="C#" Value="public interface Window" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Window" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Window" />
   <TypeSignature Language="VB.NET" Value="Public Interface Window" />
@@ -21,11 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет окно. Многие характеристики листа, такие как полосы прокрутки и линии сетки, фактически являются свойствами окна.</summary>
-    <remarks><para>Объект <b>Window</b> является элементом <see cref="T:Microsoft.Office.Interop.Excel.Windows" /> коллекции. Семейство <b>Windows</b> , возвращенное <see cref="P:Microsoft.Office.Interop.Excel._Application.Windows" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта, содержит все окна в приложении, в то время как семейство <b>Windows</b> , возвращенное <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Windows" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объекта, содержит только окна в указанной книге.</para>
-      <para>Используйте <b>Windows</b>(<paramref name="index" />), где <paramref name="index" /> — это имя окна или номер индекса, чтобы вернуть один объект <b>Window</b> .</para>
-      <para>Обратите внимание, что активное окно всегда является Windows (1).</para>
-      <para>Заголовок окна — это текст, который отображается в строке заголовка в верхней части окна, когда окно не развернуто. Кроме того, подпись отображается в списке открытых файлов в нижней части меню Windows. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.Caption" /> свойство, чтобы задать или вернуть заголовок окна. Изменение заголовка окна не приводит к изменению имени книги.</para>
+    <summary>Представляет окно. Многие характеристики таблицы, такие как полосы прокрутки и линии сетки, фактически являются свойствами окна.</summary>
+    <remarks><para>Объект <b>Window</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Windows" /> коллекции. Коллекция <b>Windows,</b> возвращаемая свойством объекта, содержит все окна в приложении, а коллекция Windows, возвращенная свойством объекта, содержит только окна в указанной <see cref="P:Microsoft.Office.Interop.Excel._Application.Windows" /> <see cref="T:Microsoft.Office.Interop.Excel.Application" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Windows" /> <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> книге.</para>
+      <para>Используйте <b>Windows</b>( ), где находится имя окна или номер <paramref name="index" /> индекса, чтобы вернуть один объект <paramref name="index" /> <b>Window.</b></para>
+      <para>Обратите внимание, что активным окном всегда является Windows(1).</para>
+      <para>Заголовок окна — это текст, который отображается в заголовке окна в верхней части окна, когда окно не увеличивается. Заголовок также отображается в списке открытых файлов в нижней части меню Windows. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.Caption" /> свойство, чтобы установить или вернуть заголовок окна. Изменение названия окна не меняет имя книги.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -132,9 +132,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Переводит окно в начало z порядка.</summary>
+        <summary>Выводит окно перед z-порядком.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Метод <b>Activate</b> не выполняет никаких Auto_Activate или Auto_Deactivate макросов, которые могут быть присоединены к книге. Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска этих макросов.</para>
+        <remarks><para>Метод <b>Activate</b> не будет запускать макрос Auto_Activate или Auto_Deactivate, которые могут быть прикреплены к книге. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска этих макроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -159,7 +159,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Активирует заданное окно, а затем отправляет его обратно в обратном порядке в окне z.</summary>
+        <summary>Активирует указанное окно, а затем отправляет его в заданный z-порядок окна.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -185,7 +185,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Активирует заданное окно, а затем активирует окно в обратном порядке по z для окна.</summary>
+        <summary>Активирует указанное окно, а затем активирует окно в задней части окна z-порядка.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -213,7 +213,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий активную ячейку в активном окне (окно сверху) или в указанном окне. Если окно не отображает лист, это свойство приводит к ошибке.</summary>
+        <summary>Возвращает объект, который представляет активную ячейку в активном окне (окне сверху) или <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в указанном окне. Если окно не отображает лист, это свойство приводит к ошибке.</summary>
         <value>To be added.</value>
         <remarks><para>Если не указать квалификатор объекта, это свойство возвращает активную ячейку в активном окне.</para>
           <para>Не путайте активную ячейку и выделенный фрагмент. Активная ячейка — это одна ячейка в текущем выделенном фрагменте. В выделенном фрагменте может быть несколько ячеек, но только одна ячейка является активной.</para>
@@ -243,7 +243,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Chart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объект, представляющий активную диаграмму (как внедренную диаграмму, так и лист диаграммы). Внедренная диаграмма считается активной, если она выбрана или активирована. Если диаграмма не активна, это свойство не возвращает <b>значение Nothing</b>.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объект, который представляет активную диаграмму (внедренную диаграмму или лист диаграммы). Внедренная диаграмма считается активной при ее выборе или активации. Если диаграмма не активна, это свойство возвращает <b>nothing</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Если не указать квалификатор объекта, это свойство возвращает активную диаграмму в активной книге.</para>
           <para> </para></remarks>
@@ -272,10 +272,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Pane</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Pane" /> объект, представляющий активную область в окне.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Pane" /> объект, который представляет активную области в окне.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство можно использовать только на листах и листах макросов.</para>
-          <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.Index" /> свойство, чтобы получить индекс активной области.</para>
+        <remarks><para>Это свойство можно использовать только на листах и листах макроса.</para>
+          <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Window.Index" /> для получения индекса активной области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -304,7 +304,7 @@
       <Docs>
         <summary>Возвращает объект, представляющий активный лист (лист сверху) в активной книге или в указанном окне или книге. Возвращает значение <b>Nothing</b>, если отсутствует активный лист.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Если не указать квалификатор объекта, это свойство возвращает активный лист в активной книге.</para>
+        <remarks><para>Если квалификатор объекта не указан, это свойство возвращает активный лист в активной книге.</para>
           <para>Если книга отображается в нескольких окнах, свойство <b>ActiveSheet</b> может различаться в разных окнах.</para>
           <para> </para></remarks>
       </Docs>
@@ -332,7 +332,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий представление активного листа в указанном окне. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет представление активного листа в указанном окне. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -360,7 +360,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -391,7 +391,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет значение true</b> , если в указанном окне отображается автоматический фильтр для группировки дат. Для чтения и записи.</summary>
+        <summary><b>Имеет</b> true, если автоматический фильтр для группировки дат в данный момент отображается в указанном окне. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -422,7 +422,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имя, отображаемое в заголовке окна документа.</summary>
+        <summary>Имя, которое отображается в заголовке окна документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -451,12 +451,12 @@
         <Parameter Name="RouteWorkbook" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges">Необязательный <b>объект</b>. Если в книгу нет изменений, этот аргумент игнорируется. Если книга содержит изменения, а книга отображается в других открытых окнах, этот аргумент игнорируется. Если книга содержит изменения, но она не отображается в других открытых окнах, этот аргумент указывает, следует ли сохранять изменения, как показано в следующей таблице. Валуеактион<b>true</b>сохраняет изменения в книге. Если имя файла, связанное с книгой, еще не задано <paramref name="FileName" /> , используется. Если <paramref name="FileName" /> параметр опущен, пользователю предлагается указать имя файла. <b>False (ложь</b> ) Не сохраняет изменения в этом файле. Омиттеддисплайс — диалоговое окно, в котором пользователь должен указать, следует ли сохранить изменения.</param>
-        <param name="Filename">Необязательный <b>объект</b>. Сохраните изменения под этим именем файла.</param>
-        <param name="RouteWorkbook">Необязательный <b>объект</b>. Если книга не должна маршрутизироваться следующему получателю (если она не имеет маршрута или уже была перенаправлена), этот аргумент игнорируется. В противном случае Microsoft Excel перенаправляет книгу, как показано в следующей таблице. Валуемеанинг<b>true</b>отправляет книгу следующему получателю. <b>False (ложь</b> ) Книга не отправляется. Омиттеддисплайс — диалоговое окно, предлагающее пользователю указать, следует ли отправить книгу.</param>
+        <param name="SaveChanges"><b>Необязательный объект</b>. Если в книге нет изменений, этот аргумент игнорируется. Если в книге есть изменения и она отображается в других открытых окнах, этот аргумент игнорируется. Если в книге есть изменения, но она не отображается в других открытых окнах, этот аргумент указывает, следует ли сохранить изменения, как показано в следующей таблице. ValueAction<b>True</b>сохраняет изменения в книге. Если имя файла, связанного с книгой, еще не существует, <paramref name="FileName" /> используется. Если <paramref name="FileName" /> этот запрос опущен, пользователю будет предложено вставлять имя файла.<b> False</b>не сохраняет изменения в этом файле. OmittedDisplays a dialog box asking the user whether or not to save changes.</param>
+        <param name="Filename"><b>Необязательный объект</b>. Сохраните изменения под этим именем файла.</param>
+        <param name="RouteWorkbook"><b>Необязательный объект</b>. Если книга не требуется маршрутить следующему получателю (если у нее нет пути к маршруту или она уже была маршрутизна), этот аргумент игнорируется. В противном случае Microsoft Excel маршрутит книгу, как показано в следующей таблице. Значение ValueMeaning<b>True</b>отправляет книгу следующему получателю. <b>False</b> Не отправляет книгу. OmittedDisplays a dialog box asking the user whether the workbook should be sent.</param>
         <summary>Закрывает объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Метод <b>Close</b> не выполняет никаких AUTO_CLOSE макросов в книге. Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска макросов автоматического закрытия.</para>
+        <remarks><para>Метод <b>Close</b> не Auto_Close макрос в книге. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска макроса автоматического закрытия.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -485,8 +485,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -516,9 +516,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если в окне отображаются формулы; <b>Значение false</b> , если окно отображает значения.</summary>
+        <summary><b>Имеет</b> true, если в окне отображаются формулы; <b>False,</b> если в окне отображаются значения.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применимо только к листам и листам макросов.</para>
+        <remarks><para>Это свойство применяется только к листам и листам макроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -548,10 +548,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если линии сетки отображаются.</summary>
+        <summary><b>True,</b> если отображаются линии сетки.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применимо только к листам и листам макросов.</para>
-          <para>Это свойство влияет только на отображаемые линии сетки. Используйте <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.PrintGridlines" /> свойство, чтобы управлять печатью линий сетки.</para>
+        <remarks><para>Это свойство применяется только к листам и листам макроса.</para>
+          <para>Это свойство влияет только на отображаемую сетку. Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.PrintGridlines" /> для управления печатью линий сетки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -581,10 +581,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если заголовки строк и столбцов отображаются; <b>Значение false</b> , если заголовки не отображаются.</summary>
+        <summary><b>True,</b> если отображаются заголовки строк и столбцов; <b>False,</b> если заголовки не отображаются.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применимо только к листам и листам макросов.</para>
-          <para>Это свойство влияет только на отображение заголовков. Используйте <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.PrintHeadings" /> свойство, чтобы управлять печатью заголовков.</para>
+        <remarks><para>Это свойство применяется только к листам и листам макроса.</para>
+          <para>Это свойство влияет только на отображаемую заголовок. Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.PrintHeadings" /> для управления печатью заголовков.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -614,7 +614,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если отображается горизонтальная полоса прокрутки.</summary>
+        <summary><b>Имеет</b> true, если отображается горизонтальная полоса прокрутки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -645,9 +645,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если символы структуры отображаются.</summary>
+        <summary><b>True,</b> если отображаются символы контура.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применимо только к листам и листам макросов.</para>
+        <remarks><para>Это свойство применяется только к листам и листам макроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -677,7 +677,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если указанное окно отображается справа налево, а не слева направо. <b>False</b> , если объект отображается слева направо.</summary>
+        <summary><b>Имеет</b> true, если указанное окно отображается справа налево, а не слева направо. <b>False,</b> если объект отображается слева направо.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -708,7 +708,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если линейка отображается для указанного окна. Для чтения и записи.</summary>
+        <summary><b>Имеет</b> true, если линейка отображается для указанного окна. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -739,7 +739,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если отображается вертикальная полоса прокрутки.</summary>
+        <summary><b>Имеет</b> true, если отображается вертикальная лямка прокрутки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -770,7 +770,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если отображается пробел. Для чтения и записи.</summary>
+        <summary><b>True,</b> если отображается "whitespace". Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -801,7 +801,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если вкладки книги отображаются.</summary>
+        <summary><b>True,</b> если отображаются вкладки книги.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -832,9 +832,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если отображаются нулевые значения.</summary>
+        <summary><b>Значение true,</b> если отображаются нулевые значения.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применимо только к листам и листам макросов.</para>
+        <remarks><para>Это свойство применяется только к листам и листам макроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -864,7 +864,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если размер окна можно изменить.</summary>
+        <summary><b>True,</b> если размер окна можно реализовать.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -895,10 +895,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True</b> , если разделенные области заморожены.</summary>
+        <summary><b>True,</b> если разделенные области застыли.</summary>
         <value>To be added.</value>
-        <remarks><para><b>FreezePanes </b>может иметь <b>значение true</b> и <see cref="P:Microsoft.Office.Interop.Excel.Window.Split" /> иметь <b>значение false</b>или наоборот.</para>
-          <para>Это свойство применимо только к листам и листам макросов.</para>
+        <remarks><para><b>FreezePanes </b>может иметь true <b></b> и false <see cref="P:Microsoft.Office.Interop.Excel.Window.Split" /> или наоборот. <b></b></para>
+          <para>Это свойство применяется только к листам и листам макроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -928,7 +928,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет линии сетки в виде значения RGB.</summary>
+        <summary>Возвращает или задает цвет линии сетки в качестве значения RGB.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -959,9 +959,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет линии сетки в виде индекса в текущей цветовой палитре или в <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> виде константы.</summary>
+        <summary>Возвращает или задает цвет линии сетки в качестве индекса в текущей цветовой палитре или в качестве <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> константы.</summary>
         <value>To be added.</value>
-        <remarks><para>Установите для этого свойства значение <b>кслколориндексаутоматик</b> , чтобы указать автоматический цвет.</para>
+        <remarks><para>Установите для этого свойства <b>свойство xlColorIndexAutomatic,</b> чтобы указать автоматический цвет.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -993,7 +993,7 @@
       <Docs>
         <summary>Высота окна в пунктах.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.UsableHeight" /> свойство для определения максимального размера окна. Невозможно задать это свойство, если окно развернуто или свернуто. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.WindowState" /> свойство, чтобы определить состояние окна.</para>
+        <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Window.UsableHeight" /> для определения максимального размера окна. Это свойство невозможно установить, если окно максимально или свернуто. Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Window.WindowState" /> для определения состояния окна.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1020,8 +1020,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает дескриптор окна указанного окна.</summary>
-        <value>Integer (int в C#)</value>
+        <summary>Возвращает окне окне указанного окна.</summary>
+        <value>Integer (int in C#)</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1048,7 +1048,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
+        <summary>Возвращает номер индекса объекта в коллекции похожих объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1078,14 +1078,14 @@
         <Parameter Name="ToLeft" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого вниз.</param>
-        <param name="Up">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого вверх.</param>
-        <param name="ToRight">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого вправо.</param>
-        <param name="ToLeft">Необязательный <b>объект</b>. Количество страниц для прокрутки содержимого влево.</param>
+        <param name="Down"><b>Необязательный объект</b>. Количество страниц для прокрутки содержимого вниз.</param>
+        <param name="Up"><b>Необязательный объект</b>. Количество страниц для прокрутки содержимого вверх.</param>
+        <param name="ToRight"><b>Необязательный объект</b>. Количество страниц для прокрутки содержимого вправо.</param>
+        <param name="ToLeft"><b>Необязательный объект</b>. Количество страниц для прокрутки содержимого слева.</param>
         <summary>Прокручивает содержимое окна по страницам.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Если <paramref name="Down" /> и <paramref name="Up" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="Down" /> 3 и <paramref name="Up" /> 6, содержимое прокручивается вверх на три страницы.</para>
-          <para>Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="ToLeft" /> значение равно 3 и <paramref name="ToRight" /> 6, содержимое прокручивается на три страницы вправо.</para>
+        <remarks><para>Если указаны оба этих значения, содержимое окна прокручивается по <paramref name="Down" /> <paramref name="Up" /> различиям аргументов. Например, если за 3 и 6, содержимое прокручивается <paramref name="Down" /> вверх на три <paramref name="Up" /> страницы.</para>
+          <para>Если указаны оба этих значения, содержимое окна прокручивается по разнице <paramref name="ToLeft" /> <paramref name="ToRight" /> аргументов. Например, если за 3 и 6, содержимое прокручивается до <paramref name="ToLeft" /> <paramref name="ToRight" /> трех правых страниц.</para>
           <para>Любой из аргументов может быть отрицательным числом.</para>
           <para> </para></remarks>
       </Docs>
@@ -1173,10 +1173,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя процедуры, которая выполняется при активации окна.</summary>
+        <summary>Возвращает или задает имя процедуры, которая будет запускаться при активации окна.</summary>
         <value>To be added.</value>
-        <remarks><para>Процедура, указанная в этом свойстве, не выполняется, когда другие процедуры переключаются в окно или когда команда переключается на окно с помощью канала DDE. Вместо этого процедура реагирует на действия пользователя, такие как щелчок по окну с кнопкой мыши, переход в меню Правка и т. д.</para>
-          <para>Если для листа или листа макроса определен макрос Auto_Activate или Auto_Deactivate, эти макросы будут выполняться после процедуры, указанной свойством <b>onwindow</b> .</para>
+        <remarks><para>Процедура, указанная этим свойством, не будет запускаться, когда другие процедуры переключаются на окно или когда команда переключения на окно получается через канал DDE. Вместо этого процедура реагирует на действия пользователя, такие как щелчок мыши по окну, нажатие кнопки "Перейти к" в меню "Правка" и так далее.</para>
+          <para>Если лист листа или макроса имеет определенный макрос Auto_Activate или Auto_Deactivate, эти макрос будет запускаться после процедуры, указанной в свойстве <b>OnWindow.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1203,9 +1203,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Panes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> коллекцию, которая представляет все области в указанном окне.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Panes" /> коллекцию, представляюную все области в указанном окне.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство доступно для окна, только если <see cref="P:Microsoft.Office.Interop.Excel.Window.Split" /> свойству окна можно присвоить <b>значение true</b>.</para>
+        <remarks><para>Это свойство доступно для окна, только если для свойства окна можно установить <see cref="P:Microsoft.Office.Interop.Excel.Window.Split" /> true. <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1260,8 +1260,8 @@
         <Parameter Name="Points" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Points">Обязательный атрибут типа <b>Integer</b>. Количество точек по горизонтали вдоль верхней границы окна документа, начиная с левого края.</param>
-        <summary>Преобразует горизонтальное измерение из точек (координат документа) на экранные пиксели (экранные координаты).</summary>
+        <param name="Points">Обязательный атрибут типа <b>Integer</b>. Число точек горизонтально вдоль верхней части окна документа, начиная с левого.</param>
+        <summary>Преобразует горизонтальное измерение из точек (координат документа) в пиксели экрана (координаты экрана).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1289,8 +1289,8 @@
         <Parameter Name="Points" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Points">Обязательный атрибут типа <b>Integer</b>. Число точек вертикально вдоль левого края окна документа, начиная с верхнего.</param>
-        <summary>Преобразует вертикальное измерение из точек (координат документа) на экранные пиксели (экранные координаты).</summary>
+        <param name="Points">Обязательный атрибут типа <b>Integer</b>. Число точек вертикально вдоль левого края окна документа, начиная с верхнего края.</param>
+        <summary>Преобразует вертикальные измерения из точек (координат документа) в пиксели экрана (координаты экрана).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1324,17 +1324,17 @@
         <Parameter Name="PrToFileName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="From">Необязательный <b>объект</b>. Номер страницы, с которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
-        <param name="To">Необязательный <b>объект</b>. Номер последней страницы, которую требуется напечатать. Если этот аргумент опущен, печать заканчивается на последней странице.</param>
-        <param name="Copies">Необязательный <b>объект</b>. Число копий для печати. Если этот аргумент не задан, печатается одна копия.</param>
-        <param name="Preview">Необязательный <b>объект</b>. <b>Значение true</b> , если Microsoft Excel вызывает предварительный просмотр перед печатью объекта. <b>Значение false</b> (или опущено) для немедленной печати объекта.</param>
-        <param name="ActivePrinter">Необязательный <b>объект</b>. Задает имя активного принтера.</param>
-        <param name="PrintToFile">Необязательный <b>объект</b>. <b>Значение true</b> для печати в файл. Если <paramref name="PrToFileName" /> параметр не указан, Microsoft Excel предлагает пользователю ввести имя выходного файла.</param>
-        <param name="Collate">Необязательный <b>объект</b>. <b>Значение true</b> для разбора по копиям нескольких копий.</param>
-        <param name="PrToFileName">Необязательный <b>объект</b>. Если <paramref name="PrintToFile" /> задано <b>значение true</b>, этот аргумент указывает имя файла, в который будет выполняться печать.</param>
+        <param name="From"><b>Необязательный объект</b>. Номер страницы, на которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
+        <param name="To"><b>Необязательный объект</b>. Номер последней страницы для печати. Если этот аргумент опущен, печать заканчивается последней страницей.</param>
+        <param name="Copies"><b>Необязательный объект</b>. Количество копий для печати. Если этот аргумент опущен, печатается одна копия.</param>
+        <param name="Preview"><b>Необязательный объект</b>. <b>True,</b> чтобы Microsoft Excel вызывал предварительный просмотр печати перед печатью объекта. <b>False</b> (или пропущен) для немедленной печати объекта.</param>
+        <param name="ActivePrinter"><b>Необязательный объект</b>. Задает имя активного принтера.</param>
+        <param name="PrintToFile"><b>Необязательный объект</b>. <b>True</b> для печати в файл. Если он не указан, Microsoft Excel запросит у пользователя ввести <paramref name="PrToFileName" /> имя выходного файла.</param>
+        <param name="Collate"><b>Необязательный объект</b>. <b>True</b> для совме-ации нескольких копий.</param>
+        <param name="PrToFileName"><b>Необязательный объект</b>. Если <paramref name="PrintToFile" /> задано <b>true,</b>этот аргумент указывает имя файла, в который нужно напечатать.</param>
         <summary>Печатает объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>"Pages" (страницы) <paramref name="From" /> в <paramref name="To" /> описаниях и относится к печатным страницам, а не к общим страницам листа или книги.</para>
+        <remarks><para>"Страницы" в описаниях и ссылается на печатные страницы, а не на общие страницы <paramref name="From" /> <paramref name="To" /> на листе или в книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1360,8 +1360,8 @@
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges">Включает изменения во время предварительной версии.</param>
-        <summary>Показывает предварительный просмотр объекта в том виде, в котором он будет выглядеть при печати.</summary>
+        <param name="EnableChanges">Включает изменения во время предварительного просмотра.</param>
+        <summary>Отображает предварительный просмотр объекта, как бы он выглядел при печати.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1390,9 +1390,9 @@
         <Parameter Name="y" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="x">Обязательный атрибут типа <b>Integer</b>. Значение (в пикселях), представляющее расстояние по горизонтали от левого края экрана, начиная с самого верхнего.</param>
-        <param name="y">Обязательный атрибут типа <b>Integer</b>. Значение (в пикселях), представляющее вертикальное расстояние от верхнего края экрана, начиная с левого края.</param>
-        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> или <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, размещенный на указанной точке экранных координат. Если фигура не расположена по указанным координатам, этот метод возвращает <b>значение Nothing</b>.</summary>
+        <param name="x">Обязательный атрибут типа <b>Integer</b>. Значение (в пикселях), которое представляет горизонтальное расстояние от левого края экрана, начиная с верхней.</param>
+        <param name="y">Обязательный атрибут типа <b>Integer</b>. Значение (в пикселях), которое представляет вертикальное расстояние от верхней части экрана, начиная с левого.</param>
+        <summary>Возвращает объект или объект, который находится в указанной <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> паре координат экрана. Если фигура, расположенная в указанных координатах, не существует, этот метод возвращает <b>nothing.</b></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1420,11 +1420,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий выбранные ячейки на листе в указанном окне, даже если графический объект активен или выбран на листе.</summary>
+        <summary>Возвращает объект, который представляет выбранные ячейки на компьютере в указанном окне, даже если графический объект активен или выбран на <see cref="T:Microsoft.Office.Interop.Excel.Range" /> этом компьютере.</summary>
         <value>To be added.</value>
-        <remarks><para>Когда на листе выделяется графический объект, <see cref="P:Microsoft.Office.Interop.Excel.Window.Selection" /> свойство возвращает графический объект, а не объект <b>Range</b> . Свойство <b>ранжеселектион</b> возвращает диапазон ячеек, выбранных до выбора графического объекта.</para>
-          <para>Это свойство и свойство <b>Selection</b> возвращают идентичные значения, если на листе выбран диапазон (не графический объект).</para>
-          <para>Если активный лист в указанном окне не является листом, это свойство завершается с ошибкой.</para>
+        <remarks><para>Если графический объект выбран на графике, свойство возвращает графический объект вместо объекта <see cref="P:Microsoft.Office.Interop.Excel.Window.Selection" /> <b>Range;</b> свойство <b>RangeSelection</b> возвращает диапазон ячеек, выбранный до выбора графического объекта.</para>
+          <para>Это свойство и свойство <b>Selection</b> возвращают одинаковые значения при выборе диапазона (а не графического объекта) на этом компьютере.</para>
+          <para>Если активный лист в указанном окне не является листом, это свойство не работает.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1454,9 +1454,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер крайнего левого столбца в области или окне.</summary>
+        <summary>Возвращает или задает число левого столбца в области или окне.</summary>
         <value>To be added.</value>
-        <remarks><para>Если окно разделено, свойство <b>скроллколумн</b> <see cref="T:Microsoft.Office.Interop.Excel.Window" /> объекта ссылается на верхнюю левую область. Если области заморожены, свойство <b>скроллколумн</b> объекта <b>Window</b> исключает замороженные области.</para>
+        <remarks><para>Если окно разделено, свойство <b>ScrollColumn</b> объекта ссылается на <see cref="T:Microsoft.Office.Interop.Excel.Window" /> левую верхнюю часть области. Если области застыли, свойство <b>ScrollColumn</b> объекта <b>Window</b> исключает застывшие области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1487,12 +1487,12 @@
       </Parameters>
       <Docs>
         <param name="Left">Обязательный атрибут типа <b>Integer</b>. Горизонтальное положение прямоугольника (в пунктах) от левого края окна документа или области.</param>
-        <param name="Top">Обязательный атрибут типа <b>Integer</b>. Вертикальное положение прямоугольника (в пунктах) от верхнего края окна документа или области.</param>
-        <param name="Width">Обязательный атрибут типа <b>Integer</b>. Ширина прямоугольника (в пунктах).</param>
+        <param name="Top">Обязательный атрибут типа <b>Integer</b>. Вертикальное положение прямоугольника (в пунктах) сверху окна документа или области.</param>
+        <param name="Width">Обязательный атрибут типа <b>Integer</b>. Ширина прямоугольника в пунктах.</param>
         <param name="Height">Обязательный атрибут типа <b>Integer</b>. Высота прямоугольника в пунктах.</param>
-        <param name="Start">Необязательное <b>целое число</b>. <b>Значение true</b> , чтобы верхний левый угол прямоугольника отображался в левом верхнем углу окна документа или области. <b>Значение false</b> , чтобы правый нижний угол прямоугольника отображался в правом нижнем углу окна документа или области. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Прокручивает окно документа таким образом, чтобы содержимое указанной прямоугольной области отображалось в левом верхнем или нижнем углу окна документа или области.</summary>
-        <remarks><para><paramref name="Start" /> Аргумент полезен для ориентации экрана, когда прямоугольник больше окна документа или области.</para>
+        <param name="Start">Необязательное <b>integer</b>. <b>Имеет</b> true, чтобы верхний левый угол прямоугольника появлялось в левом верхнем углу окна документа или области. <b>False,</b> чтобы нижний правый угол прямоугольника появлялись в правом нижнем углу окна или области документа. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Прокручивает окно документа, чтобы содержимое указанной прямоугольной области отображалось в верхнем левом или правом нижнем углу окна документа или области.</summary>
+        <remarks><para>Этот <paramref name="Start" /> аргумент полезен для сориентации экрана, когда прямоугольник больше окна документа или области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1524,7 +1524,7 @@
       <Docs>
         <summary>Возвращает или задает номер строки, которая отображается в верхней части области или окна.</summary>
         <value>To be added.</value>
-        <remarks><para>Если окно разделено, свойство <b>скроллров</b> <see cref="T:Microsoft.Office.Interop.Excel.Window" /> объекта ссылается на верхнюю левую область. Если области заморожены, свойство <b>скроллров</b> объекта <b>Window</b> исключает замороженные области.</para>
+        <remarks><para>Если окно разделено, свойство <b>ScrollRow</b> объекта ссылается на <see cref="T:Microsoft.Office.Interop.Excel.Window" /> левую верхнюю часть области. Если области застыли, свойство <b>ScrollRow</b> объекта <b>Window</b> исключает застывшие области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1551,11 +1551,11 @@
         <Parameter Name="Position" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Sheets">Необязательный <b>объект</b>. Количество листов для прокрутки. Используйте положительное число для прокрутки вперед, отрицательного числа для прокрутки назад, или 0 (ноль), чтобы не выполнять прокрутку. Необходимо указать <paramref name="Sheets" /> , если вы не указали <paramref name="Position" />.</param>
-        <param name="Position">Необязательный <b>объект</b>. Используйте <b>кслфирст</b> для прокрутки на первый лист или используйте <b>кслласт</b> для прокрутки к последнему листу. Необходимо указать <paramref name="Position" /> , если вы не указали <paramref name="Sheets" />.</param>
+        <param name="Sheets"><b>Необязательный объект</b>. Количество прокручиваемого листа. Используйте положительное число для прокрутки вперед, отрицательное — для прокрутки назад или 0 (ноль), чтобы вообще не прокручиваться. Необходимо <paramref name="Sheets" /> указать, если не <paramref name="Position" /> указать.</param>
+        <param name="Position"><b>Необязательный объект</b>. Используйте <b>xlFirst для</b> прокрутки до первого листа или <b>xlLast</b> для прокрутки до последнего листа. Необходимо <paramref name="Position" /> указать, если не <paramref name="Sheets" /> указать.</param>
         <summary>Прокручивает вкладки книги в нижней части окна.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Метод <b>скроллворкбуктабс</b> не влияет на активный лист в книге.</para>
+        <remarks><para>Метод <b>ScrollWorkbookTabs</b> не влияет на активный лист в книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1582,7 +1582,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sheets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекцию, которая представляет все выбранные листы в указанном окне.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекцию, представляюную все выбранные листы в указанном окне.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1610,9 +1610,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает выделенный объект в указанном окне.</summary>
+        <summary>Возвращает выбранный объект в указанном окне.</summary>
         <value>To be added.</value>
-        <remarks><para>Возвращаемый тип объекта зависит от текущего выделенного фрагмента (например, если выбрана ячейка, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект). Свойство <b>Selection</b> возвращает <b>значение Nothing</b> , если ничего не выбрано.</para>
+        <remarks><para>Тип возвращаемого объекта зависит от текущего выделения (например, если выбрана ячейка, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект). Свойство <b>Selection</b> возвращает <b>nothing,</b> если ничего не выбрано.</para>
           <para>Использование этого свойства без квалификатора объекта эквивалентно использованию <see cref="P:Microsoft.Office.Interop.Excel._Application.Selection" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объекта.</para>
           <para> </para></remarks>
       </Docs>
@@ -1640,7 +1640,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SheetViews</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.SheetViews" /> объект для указанного окна. Только для чтения.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.SheetViews" /> для указанного окна. Только для чтения.</summary>
         <value><b>SheetViews</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1670,14 +1670,14 @@
         <Parameter Name="ToLeft" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Down">Необязательный <b>объект</b>. Число строк для прокрутки содержимого вниз.</param>
-        <param name="Up">Необязательный <b>объект</b>. Число строк для прокрутки содержимого.</param>
-        <param name="ToRight">Необязательный <b>объект</b>. Число столбцов для прокрутки содержимого вправо.</param>
-        <param name="ToLeft">Необязательный <b>объект</b>. Число столбцов для прокрутки содержимого влево.</param>
+        <param name="Down"><b>Необязательный объект</b>. Количество строк для прокрутки содержимого вниз.</param>
+        <param name="Up"><b>Необязательный объект</b>. Количество строк для прокрутки содержимого вверх.</param>
+        <param name="ToRight"><b>Необязательный объект</b>. Количество столбцов для прокрутки содержимого вправо.</param>
+        <param name="ToLeft"><b>Необязательный объект</b>. Количество столбцов для прокрутки содержимого влево.</param>
         <summary>Прокручивает содержимое окна по строкам или столбцам.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Если <paramref name="Down" /> и <paramref name="Up" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="Down" /> значение равно 3 и <paramref name="Up" /> 6, содержимое прокручивается вверх по трем строкам.</para>
-          <para>Если <paramref name="ToLeft" /> и <paramref name="ToRight" /> то и другое, содержимое окна прокручивается через разность аргументов. Например, если <paramref name="ToLeft" /> задано значение 3 <paramref name="ToRight" /> и значение 6, содержимое прокручивается до трех правых столбцов.</para>
+        <remarks><para>Если указаны оба этих значения, содержимое окна прокручивается по <paramref name="Down" /> <paramref name="Up" /> различиям аргументов. Например, если за 3 и 6, содержимое прокручивается <paramref name="Down" /> вверх на три <paramref name="Up" /> строки.</para>
+          <para>Если указаны оба этих значения, содержимое окна прокручивается по <paramref name="ToLeft" /> <paramref name="ToRight" /> различиям аргументов. Например, если имеется 3 и 6, содержимое прокручивается до <paramref name="ToLeft" /> <paramref name="ToRight" /> трех правых столбцов.</para>
           <para>Любой из этих аргументов может быть отрицательным числом.</para>
           <para> </para></remarks>
       </Docs>
@@ -1708,10 +1708,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если окно разделено.</summary>
+        <summary><b>Имеет</b> true, если окно разделено.</summary>
         <value>To be added.</value>
-        <remarks><para><see cref="P:Microsoft.Office.Interop.Excel.Window.FreezePanes" /> Может быть <b>true</b> и <b>разделенный</b> на <b>false</b>или наоборот.</para>
-          <para>Это свойство применимо только к листам и листам макросов.</para>
+        <remarks><para>В качестве true и Split можно использовать <see cref="P:Microsoft.Office.Interop.Excel.Window.FreezePanes" /> <b>"False"</b>или наоборот. <b></b> <b></b></para>
+          <para>Это свойство применяется только к листам и листам макроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1741,7 +1741,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер столбца, в котором окно разбивается на области (число столбцов слева от разделенной линии).</summary>
+        <summary>Возвращает или задает номер столбца, в котором окно разделено на области (количество столбцов слева от линии разделения).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1772,7 +1772,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расположение горизонтального окна, разделенного в точках.</summary>
+        <summary>Возвращает или задает расположение горизонтального окна, разделенного точками.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1803,7 +1803,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер строки, в которой окно разделяется на области (число строк над разделом).</summary>
+        <summary>Возвращает или задает номер строки, в которой окно разделено на области (количество строк над разделимой).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1834,7 +1834,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расположение вертикально разделенного окна в пунктах.</summary>
+        <summary>Возвращает или задает расположение вертикального окна, разделенного точками.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1865,9 +1865,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отношение ширины области вкладки книги к ширине горизонтальной полосы прокрутки окна (число от 0 (ноль) до 1; значение по умолчанию — 0,6).</summary>
+        <summary>Возвращает или задает отношение ширины области вкладок книги к ширине горизонтальной полосы прокрутки окна (в количестве от 0 (ноль) до 1; значение по умолчанию — 0,6).</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство не оказывает никакого действия <see cref="P:Microsoft.Office.Interop.Excel.Window.DisplayWorkbookTabs" /> , если задано значение <b>false</b> (его значение сохраняется, но не оказывает никакого действия для отображения).</para>
+        <remarks><para>Это свойство не влияет, если установлено значение False (его значение сохраняется, но не <see cref="P:Microsoft.Office.Interop.Excel.Window.DisplayWorkbookTabs" /> влияет на дисплей). <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1897,9 +1897,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от верхнего края окна до верхнего края области использования (под меню, на всех панелях инструментов, расположенных вверху и в строке формул).</summary>
+        <summary>Расстояние в пунктах от верхнего края окна до верхнего края области, влияемой на область (под меню, все панели инструментов, закрепленные вверху, и панель формул).</summary>
         <value>To be added.</value>
-        <remarks><para>Невозможно задать это свойство для развернутого окна. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.WindowState" /> свойство, чтобы вернуть или задать состояние окна.</para>
+        <remarks><para>Это свойство нельзя настроить для максимального окна. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.WindowState" /> свойство, чтобы вернуть или установить состояние окна.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1954,7 +1954,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает максимальную высоту в точках места, которое может занимать окно в области окна приложения.</summary>
+        <summary>Возвращает максимальную высоту в точках пространства, которое может занимать окно в области окна приложения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1982,7 +1982,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает максимальную ширину в точках места, которое может занимать окно в области окна приложения.</summary>
+        <summary>Возвращает максимальную ширину в точках пространства, которое может занимать окно в области окна приложения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2013,7 +2013,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlWindowView</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает представление, отображаемое в окне.</summary>
+        <summary>Возвращает или задает представление, показываемое в окне.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2072,7 +2072,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон ячеек, которые отображаются в окне или области. Если столбец или строка отображаются частично, они включаются в диапазон.</summary>
+        <summary>Возвращает объект, который представляет диапазон ячеек, видимых <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в окне или области. Если столбец или строка частично видимы, он включается в диапазон.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2105,7 +2105,7 @@
       <Docs>
         <summary>Ширина в точках окна.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.UsableWidth" /> свойство для определения максимального размера окна. Невозможно задать это свойство, если окно развернуто или свернуто. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Window.WindowState" /> свойство, чтобы определить состояние окна.</para>
+        <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Window.UsableWidth" /> для определения максимального размера окна. Это свойство невозможно установить, если окно максимально или свернуто. Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Window.WindowState" /> для определения состояния окна.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2132,9 +2132,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер окна. Например, в окне под названием "book1. xls: 2" в качестве номера окна используется 2. Большинство окон имеют окно с номером 1.</summary>
+        <summary>Возвращает номер окна. Например, окно с именем Book1.xls:2 имеет 2 в качестве номера окна. В большинстве окон есть окно 1.</summary>
         <value>To be added.</value>
-        <remarks><para>Номер окна не совпадает с индексом окна (возвращаемым значением <see cref="P:Microsoft.Office.Interop.Excel.Window.Index" /> свойства), который является позицией окна в <see cref="T:Microsoft.Office.Interop.Excel.Windows" /> коллекции.</para>
+        <remarks><para>Номер окна не такой, как индекс окна (возвращаемое значение свойства), который является положением окна <see cref="P:Microsoft.Office.Interop.Excel.Window.Index" /> в <see cref="T:Microsoft.Office.Interop.Excel.Windows" /> коллекции.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2195,10 +2195,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер отображения окна в процентах (100 = обычный размер, 200 — двойной размер и т. д.).</summary>
+        <summary>Возвращает или задает размер окна в процентах (100 равно обычному размеру, 200 — двойному размеру и так далее).</summary>
         <value>To be added.</value>
-        <remarks><para>Кроме того, для этого свойства можно задать <b>значение true</b> , чтобы размер окна соответствовал текущему выделенному фрагменту.</para>
-          <para>Эта функция влияет только на лист, который в данный момент активен в окне. Чтобы использовать это свойство на других листах, необходимо сначала активировать их.</para>
+        <remarks><para>Вы также можете установить <b></b> для этого свойства true, чтобы размер окна подбирал текущий выбор.</para>
+          <para>Эта функция влияет только на лист, который в настоящее время активен в окне. Чтобы использовать это свойство на других листах, необходимо сначала активировать их.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

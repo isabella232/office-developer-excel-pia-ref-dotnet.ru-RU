@@ -1,5 +1,5 @@
 <Type Name="WorkbookEvents_Event" FullName="Microsoft.Office.Interop.Excel.WorkbookEvents_Event">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2c6690aaaabf5f77b79d72b8fb4094774b86969d" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586263" /></Metadata><TypeSignature Language="C#" Value="public interface WorkbookEvents_Event" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2c6690aaaabf5f77b79d72b8fb4094774b86969d" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009018" /></Metadata><TypeSignature Language="C#" Value="public interface WorkbookEvents_Event" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WorkbookEvents_Event" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.WorkbookEvents_Event" />
   <TypeSignature Language="VB.NET" Value="Public Interface WorkbookEvents_Event" />
@@ -21,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Интерфейс событий для событий<see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объектов Excel.</summary>
+    <summary>Интерфейс событий для событий <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> объектов Excel.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -41,7 +41,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возникает при активации книги.</summary>
-        <remarks><para>При переключении между двумя окнами, которые показывают одну книгу, возникает событие <b>WindowActivate</b> , но событие <b>Activate</b> для книги не происходит.</para>
+        <remarks><para>При переключении между двумя окнами с одной книгой происходит событие <b>WindowActivate,</b> но событие <b>Activate</b> для книги не возникает.</para>
           <para>Это событие не возникает при создании нового окна.</para>
           <para> </para></remarks>
       </Docs>
@@ -80,8 +80,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_AddinUninstallEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при удалении книги в качестве надстройки.</summary>
-        <remarks><para>Надстройка не закрывается автоматически при удалении.</para>
+        <summary>Возникает, когда книга будет выгрузлена в качестве надстройки.</summary>
+        <remarks><para>Надстройка не закрывается автоматически при ее закрытии.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -119,8 +119,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_AfterXmlExportEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после того, как Excel сохраняет данные из указанной книги и экспортирует их в файл данных XML.</summary>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+        <summary>Происходит после того, как Excel сохраняет или экспортирует данные из указанной книги в XML-файл данных.</summary>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -139,8 +139,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_AfterXmlImportEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после обновления существующего подключения XML-данных или после импорта новых XML-данных в указанную книгу Excel.</summary>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+        <summary>Происходит после обновления существующего подключения к данным XML или после импорта новых XML-данных в указанную книгу Excel.</summary>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -159,7 +159,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeCloseEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает перед закрытием книги. Если книга была изменена, это событие происходит до того, как пользователю будет предложено сохранить изменения.</summary>
+        <summary>Происходит до закрытия книги. Если книга была изменена, это событие происходит до того, как пользователю будет предложено сохранить изменения.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -178,7 +178,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_BeforePrintEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит перед печатью книги (или ее какого-либо).</summary>
+        <summary>Возникает перед печатью книги (или чего-либо в ней).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -197,7 +197,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeSaveEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит перед сохранением книги.</summary>
+        <summary>Возникает перед тем, как книга будет сохранена.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -216,8 +216,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeXmlExportEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит перед сохранением или экспортом данных из указанной книги в XML-файл данных.</summary>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+        <summary>Происходит до того, как Excel сохранит или экспортирует данные из указанной книги в XML-файл данных.</summary>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -236,8 +236,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_BeforeXmlImportEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит перед обновлением существующего подключения XML-данных или перед импортом новых XML-данных в книгу Excel.</summary>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+        <summary>Происходит до обновления существующего подключения к данным XML или перед импортом новых данных XML в книгу Excel.</summary>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -256,7 +256,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_DeactivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при отключении книги.</summary>
+        <summary>Возникает, когда книга деактивирована.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -275,7 +275,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_ModelChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после изменения модели данных Excel.</summary>
+        <summary>Происходит после изменения модели данных Excel.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -294,9 +294,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_NewChartEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит при создании новой диаграммы в книге.</summary>
-        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.NewChart" /> Событие происходит при каждом вставке или вставке новой диаграммы на листе, на листе диаграммы или на другие типы листов. При вставке или вставке нескольких диаграмм возникает событие для каждой диаграммы в том порядке, в котором они вставляются или вставляются. Если объект диаграммы или лист диаграммы перемещаются из одного расположения в другое, событие не происходит. Тем не менее, если диаграмма перемещается между объектом Chart и листом диаграммы, событие будет вызвано, так как должна быть создана новая диаграмма.</para>
-          <para><see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.NewChart" /> Событие не будет выполняться в следующих сценариях: копирование или Вставка листа диаграммы, изменение типа диаграммы, изменение источника данных диаграммы, невыполнение или повторный ввод или Вставка диаграммы, а также загрузка книги, содержащей диаграмму.</para>
+        <summary>Возникает, когда в книге создается новая диаграмма.</summary>
+        <remarks><para>Это событие возникает всякий раз, когда новая диаграмма вставляется или вставляется на лист, лист диаграммы или другие <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.NewChart" /> типы листов. Если вставить или вставить несколько диаграмм, событие будет происходить для каждой диаграммы в том порядке, в который они вставляются или вставляются. Если объект диаграммы или лист диаграммы перемещается из одного расположения в другое, событие не произойдет. Однако если диаграмма перемещается между объектом диаграммы и листом диаграммы, событие возникает, так как необходимо создать новую диаграмму.</para>
+          <para>Событие не будет происходить в следующих сценариях: копирование или вставка листа диаграммы, изменение типа диаграммы, изменение источника данных диаграммы, отмена или отмена вставки или вставки диаграммы и загрузка книги, содержающей <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.NewChart" /> диаграмму.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -315,7 +315,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_NewSheetEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при создании нового листа в книге.</summary>
+        <summary>Возникает, когда в книге создается новый лист.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -334,7 +334,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_OpenEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при открытии книги.</summary>
+        <summary>Возникает, когда книга открыта.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -353,7 +353,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_PivotTableCloseConnectionEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после того, как отчет сводной таблицы закрывает подключение к источнику данных.</summary>
+        <summary>Возникает после того, как отчет pivotTable закрывает подключение к источнику данных.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -372,7 +372,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_PivotTableOpenConnectionEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после открытия отчета сводной таблицы для подключения к источнику данных.</summary>
+        <summary>Возникает после того, как отчет pivotTable открывает подключение к источнику данных.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -391,8 +391,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_RowsetCompleteEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Событие инициируется, когда пользователь выполняет детализацию по набору записей или вызывает действие набора строк в сводной таблице OLAP.</summary>
-        <remarks><para>Так как набор записей создается асинхронно, событие позволяет автоматизации определить момент выполнения действия. Кроме того, так как набор записей создается на отдельном листе, событие должно находиться на уровне книги.</para>
+        <summary>Событие вызывается, когда пользователь либо проходит через набор записей, либо вызывает действие rowset в pivotTable OLAP.</summary>
+        <remarks><para>Поскольку набор записей создается асинхронно, это событие позволяет автоматизации определить, когда действие завершено. Кроме того, поскольку набор записей создается на отдельном листе, событие должно быть на уровне книги.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -430,7 +430,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeDeleteEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает перед удалением листа.</summary>
+        <summary>Возникает перед удалением таблицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -449,7 +449,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeDoubleClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при двойном щелчке любого листа перед двойным щелчком по умолчанию.</summary>
+        <summary>Возникает, когда любой из таблиц дважды щелкает, перед действием двойного щелчка по умолчанию.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -468,8 +468,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetBeforeRightClickEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при щелчке правой кнопкой мыши любого листа до действия, выполняемого по умолчанию при щелчке правой кнопкой мыши.</summary>
-        <remarks><para>Это событие не возникает на листах диаграмм.</para>
+        <summary>Возникает, если щелкнуть правой кнопкой мыши любой из таблиц перед действием правой кнопкой мыши по умолчанию.</summary>
+        <remarks><para>Это событие не происходит на листах диаграмм.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -488,7 +488,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetCalculateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после пересчета любого листа или после того, как все измененные данные отображаются на диаграмме.</summary>
+        <summary>Происходит после пересчета любого таблицы или после того, как измененные данные будут вычислены на диаграмме.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -507,8 +507,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении ячеек листа пользователем или внешней ссылкой.</summary>
-        <remarks><para>Это событие не возникает на листах диаграмм.</para>
+        <summary>Возникает, когда ячейки на любом из таблиц меняются пользователем или по внешней ссылке.</summary>
+        <remarks><para>Это событие не происходит на листах диаграмм.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -527,7 +527,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetDeactivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при отключении любого листа.</summary>
+        <summary>Возникает, когда какой-либо лист деактивирован.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -565,8 +565,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetLensGalleryRenderCompleteEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда значки (динамические и статические) галереи выноски завершают отрисовку листа.</summary>
-        <remarks><para>Это событие можно использовать, чтобы показать, когда повторно включить обновление экрана или отобразить дополнительные диалоговые окна, например.</para>
+        <summary>Возникает, когда значки коллекции выносок (динамические и статические) завершат отрисовку для рабочего таблицы.</summary>
+        <remarks><para>Это событие можно использовать, чтобы указать, когда повторно включить обновление экрана или отобразить дополнительные диалоги, например.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -585,8 +585,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableAfterValueChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после изменения или пересчета ячейки или диапазона ячеек в сводной таблице (для ячеек, содержащих формулы).</summary>
-        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableAfterValueChange" /> Событие не происходит при любых условиях, кроме изменения или пересчета ячеек. Например, она не будет выполняться при обновлении, сортировке, фильтрации или детализации сводной таблицы, даже если эти операции перемещают ячейки и потенциально получают новые значения из источника данных OLAP.</para>
+        <summary>Происходит после изменения или пересчета ячейки или диапазона ячеек в списочнойтах (для ячеек, содержащих формулы).</summary>
+        <remarks><para>Это событие происходит только при редактировании или пересчете <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableAfterValueChange" /> ячеек. Например, при обновлении, сортировке, фильтрации или выверлении в нее она не будет происходить, даже если эти операции перемещают ячейки и могут извлекать новые значения из источника данных OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -605,8 +605,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableBeforeAllocateChangesEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит перед применением изменений к сводной таблице.</summary>
-        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableBeforeAllocateChanges" /> Событие возникает сразу же после того, как Excel выполняет инструкцию UPDATE CUBE, чтобы применить все изменения к источнику данных OLAP сводной таблицы, а сразу же после того, как пользователь выбрал применение изменений в пользовательском интерфейсе.</para>
+        <summary>Происходит до того, как изменения будут применены к pivotTable.</summary>
+        <remarks><para>Это событие происходит непосредственно перед выполнением в Excel заявления UPDATE CUBE для применения всех изменений к источнику данных OLAP в pivotTable, а также сразу после того, как пользователь решил применить изменения в пользовательском <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableBeforeAllocateChanges" /> интерфейсе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -625,8 +625,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит перед фиксацией изменений в источнике данных OLAP для сводной таблицы.</summary>
-        <remarks><para><see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableBeforeCommitChanges" /> Событие возникает сразу же после того, как Excel выполняет ТРАНЗАКЦИю Commit для источника данных OLAP сводной таблицы и сразу же после того, как пользователь выбрал сохранение изменений для всей сводной таблицы.</para>
+        <summary>Происходит перед внесением изменений в источник данных OLAP для совпайки.</summary>
+        <remarks><para>Это событие происходит непосредственно перед выполнением Excel транзакции COMMIT в источнике данных OLAP в pivotTable, а также сразу после того, как пользователь решил сохранить изменения для всей совещаемой <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableBeforeCommitChanges" /> таблицы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -645,8 +645,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableBeforeDiscardChangesEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает перед отменой изменений в сводной таблице.</summary>
-        <remarks><para>Возникает непосредственно перед тем, как Excel выполняет инструкцию ROLLBACK TRANSACTION для источника данных OLAP, если транзакция все еще активна, а затем удаляет все измененные значения в сводной таблице после того, как пользователь решил отменить изменения.</para>
+        <summary>Происходит до того, как изменения в совмеести будут отменены.</summary>
+        <remarks><para>Происходит непосредственно перед выполнением в Excel заявления ROLLBACK TRANSACTION для источника данных OLAP, если транзакция по-прежнему активна, а затем удаляет все измененные значения в pivotTable, после того как пользователь решил отменить изменения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -665,8 +665,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableChangeSyncEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после внесения изменений в сводную таблицу.</summary>
-        <remarks><para>Это <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableChangeSync" />происходит во время большинства изменений в сводной таблице, поэтому вы можете написать код для реагирования на действия пользователя, такие как очистка, группировка или обновление элементов в сводной таблице.</para>
+        <summary>Возникает после изменений в совме-табл.</summary>
+        <remarks><para>Эти изменения происходят во время большинства изменений в pivotTable, чтобы вы могли написать код для реагирования на действия пользователя, такие как очистка, группировка или обновление элементов в <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableChangeSync" /> список.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -685,7 +685,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableUpdateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после обновления листа отчета сводной таблицы.</summary>
+        <summary>Возникает после обновления таблицы отчета.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -704,7 +704,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetSelectionChangeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении выделения на любом листе (не происходит, если выделенный фрагмент находится на листе диаграммы).</summary>
+        <summary>Возникает, когда выбор изменяется на любом листе (не происходит, если выделение находится на листе диаграммы).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -723,7 +723,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SheetTableUpdateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает после обновления таблицы листа.</summary>
+        <summary>Происходит после обновления таблицы таблицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -742,7 +742,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_SyncEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Происходит, когда локальная копия листа, который является частью рабочей области для документов, синхронизируется с копией на сервере.</summary>
+        <summary>Возникает, когда локализованная копия рабочего пространства документа синхронизируется с копией на сервере.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -780,7 +780,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_WindowDeactivateEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при отключении любого окна книги.</summary>
+        <summary>Возникает, когда любое окно книги деактивируется.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -799,7 +799,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookEvents_WindowResizeEventHandler</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возникает при изменении размера любого окна книги.</summary>
+        <summary>Возникает при изменениях размера любого окна книги.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
