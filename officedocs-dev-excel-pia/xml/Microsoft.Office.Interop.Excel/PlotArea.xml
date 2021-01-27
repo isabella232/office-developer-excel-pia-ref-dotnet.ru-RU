@@ -1,5 +1,5 @@
 <Type Name="PlotArea" FullName="Microsoft.Office.Interop.Excel.PlotArea">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="5a540fca333680ff420954f4c897f1253f3abc3a" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20574734" /></Metadata><TypeSignature Language="C#" Value="public interface PlotArea" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5a540fca333680ff420954f4c897f1253f3abc3a" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49997246" /></Metadata><TypeSignature Language="C#" Value="public interface PlotArea" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PlotArea" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PlotArea" />
   <TypeSignature Language="VB.NET" Value="Public Interface PlotArea" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет область построения диаграммы. Это область, где наносятся данные диаграммы.</summary>
-    <remarks><para>Область построения на двумерной диаграмме содержит маркеры данных, линии сетки, подписи данных, линии тренда и необязательные элементы диаграммы, размещенные в области диаграммы. Область построения на объемной диаграмме содержит все вышеуказанные элементы, а также стены, пол, оси, названия осей и подписи делений на диаграмме. Область построения окружена областью диаграммы. Область диаграммы на двумерной диаграмме содержит оси, название диаграммы, названия осей и условные обозначения. Область диаграммы на объемной диаграмме содержит заголовок диаграммы и условные обозначения. Сведения о форматировании области диаграммы можно посмотреть в <see cref="T:Microsoft.Office.Interop.Excel.ChartArea" /> объекте.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Chart.PlotArea" /> свойство, чтобы возвратить объект <b>PlotArea</b> .</para>
+    <summary>Представляет область диаграммы. Это область, где наносятся данные диаграммы.</summary>
+    <remarks><para>Область диаграммы на объемной диаграмме содержит маркеры данных, линии сетки, метки данных, линии тренда и необязательные элементы диаграммы, размещенные в области диаграммы. Область диаграммы на 3-D диаграмме содержит все вышеперечисленные элементы, а также стены, пол, оси, заголовки осей и подписи деленных меток на диаграмме. Область построения окружена областью диаграммы. Область диаграммы на двух d диаграмме содержит оси, заголовок диаграммы, заголовки осей и легенду. Область диаграммы на трехглавой диаграмме содержит название диаграммы и легенду. Сведения о форматирование области диаграммы см. в <see cref="T:Microsoft.Office.Interop.Excel.ChartArea" /> объекте.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.PlotArea" /> для возврата <b>объекта PlotArea.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -174,7 +174,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,7 +205,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Border</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, который представляет границу объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -261,8 +261,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -292,7 +292,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> объект указанной диаграммы, содержащей свойства форматирования заливки для диаграммы.</summary>
+        <summary>Возвращает объект для указанной диаграммы, которая содержит свойства форматирования <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> заливки для диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -382,9 +382,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает внутреннюю высоту области построения в пунктах.</summary>
+        <summary>Возвращает внутреннюю высоту области плота в точках.</summary>
         <value>To be added.</value>
-        <remarks><para>Область построения, используемая для этого измерения, не включает метки осей. <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Height" /> Свойство области построения использует ограничивающий прямоугольник, который включает метки осей.</para>
+        <remarks><para>Область плота, используемая для этого измерения, не включает метки осей. Свойство <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Height" /> для области плота использует ограниченный прямоугольник, включающий метки оси.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -414,9 +414,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает расстояние от края диаграммы до внутреннего левого края области построения в пунктах.</summary>
+        <summary>Возвращает расстояние от края диаграммы до левого края области диаграммы в пунктах.</summary>
         <value>To be added.</value>
-        <remarks><para>Область построения, используемая для этого измерения, не включает метки осей. <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Left" /> Свойство области построения использует ограничивающий прямоугольник, который включает метки осей.</para>
+        <remarks><para>Область плота, используемая для этого измерения, не включает метки осей. Свойство для области плота использует <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Left" /> ограниченный прямоугольник, включающий метки оси.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -446,9 +446,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает расстояние от края диаграммы до внутренней верхней границы области построения.</summary>
+        <summary>Возвращает расстояние в пунктах от края диаграммы до внутренней верхней границы области диаграммы.</summary>
         <value>To be added.</value>
-        <remarks><para>Область построения, используемая для этого измерения, не включает метки осей. <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Top" /> Свойство области построения использует ограничивающий прямоугольник, который включает метки осей.</para>
+        <remarks><para>Область плота, используемая для этого измерения, не включает метки осей. Свойство для области плота использует <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Top" /> ограниченный прямоугольник, включающий метки оси.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -478,9 +478,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает внутреннюю ширину области построения в пунктах.</summary>
+        <summary>Возвращает внутреннюю ширину области плота в точках.</summary>
         <value>To be added.</value>
-        <remarks><para>Область построения, используемая для этого измерения, не включает метки осей. <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Width" /> Свойство области построения использует ограничивающий прямоугольник, который включает метки осей.</para>
+        <remarks><para>Область плота, используемая для этого измерения, не включает метки оси. Свойство <see cref="P:Microsoft.Office.Interop.Excel.PlotArea.Width" /> для области плота использует ограниченный прямоугольник, включающий метки оси.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -510,7 +510,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -541,7 +541,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от левого края объекта до левого края области диаграммы (в пунктах).</summary>
+        <summary>Расстояние (в пунктах) от левого края объекта до левого края области диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -628,7 +628,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlChartElementPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает положение области построения на диаграмме. Для чтения и записи.</summary>
+        <summary>Возвращает или задает положение области диаграммы на диаграмме. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlChartElementPosition" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -685,7 +685,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от верхнего края объекта до верха области диаграммы (в пунктах).</summary>
+        <summary>Расстояние (в пунктах) от верхнего края объекта до верхней части области диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

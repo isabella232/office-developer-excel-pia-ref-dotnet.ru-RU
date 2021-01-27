@@ -1,5 +1,5 @@
 <Type Name="PivotLines" FullName="Microsoft.Office.Interop.Excel.PivotLines">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="fe030d399629299a7607fd95da3bcda6d01761c7" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20578059" /></Metadata><TypeSignature Language="C#" Value="public interface PivotLines : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="fe030d399629299a7607fd95da3bcda6d01761c7" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49997322" /></Metadata><TypeSignature Language="C#" Value="public interface PivotLines : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotLines implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotLines" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotLines&#xA;Implements IEnumerable" />
@@ -25,7 +25,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Объект <see cref="T:Microsoft.Office.Interop.Excel.PivotLines" /> представляет собой коллекцию строк в элементе <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />",", содержащую все строки в строках или столбцах сводной таблицы. Каждая строка представляет собой набор из <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" />s.</summary>
+    <summary>Объект — это коллекция строк в объекте, содержащая все строки в строках или столбцах <see cref="T:Microsoft.Office.Interop.Excel.PivotLines" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> pivot. Каждая строка является набором <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> s.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -87,9 +87,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает объект <b>Application</b> , представляющий создателя указанного объекта. Только для чтения.</summary>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
-        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -117,7 +117,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает количество элементов в <see cref="T:Microsoft.Office.Interop.Excel.PivotLines" /> коллекции. Только для чтения.</summary>
-        <value><b>Integer</b></value>
+        <value>64-разрядное целое число.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -144,9 +144,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.PivotLines.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.PivotLines.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -208,8 +208,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b> указывает положение элемента коллекции.</param>
-        <summary>Возвращает определенный элемент объекта <see cref="T:Microsoft.Office.Interop.Excel.PivotLines" /> Collection по его позиции в коллекции. Только для чтения.</summary>
+        <param name="Index">Required <b>Object</b> Specifies the position of an element of the collection.</param>
+        <summary>Возвращает определенный элемент объекта <see cref="T:Microsoft.Office.Interop.Excel.PivotLines" /> коллекции по его позиции в коллекции. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /></value>
         <remarks>To be added.</remarks>
       </Docs>
