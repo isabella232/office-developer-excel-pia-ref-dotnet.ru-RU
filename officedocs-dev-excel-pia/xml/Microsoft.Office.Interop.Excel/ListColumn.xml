@@ -1,5 +1,5 @@
 <Type Name="ListColumn" FullName="Microsoft.Office.Interop.Excel.ListColumn">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="08d4b05d05d4520afef5aa08e764c83df4bcd655" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575574" /></Metadata><TypeSignature Language="C#" Value="public interface ListColumn" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="08d4b05d05d4520afef5aa08e764c83df4bcd655" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49999961" /></Metadata><TypeSignature Language="C#" Value="public interface ListColumn" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListColumn" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ListColumn" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListColumn" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет столбец в списке. <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> Объект является членом <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> коллекции. <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> Коллекция содержит все столбцы в списке (<see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объект).</summary>
-    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ListObject.ListColumns" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объекта, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> коллекцию.</para>
+    <summary>Представляет столбец в списке. Объект <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> является членом <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> коллекции. Коллекция <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> содержит все столбцы в списке <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> (объект).</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ListObject.ListColumns" /> свойство объекта <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> для возврата <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> коллекции.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -80,7 +80,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -108,9 +108,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -137,9 +137,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет собой размер части данных столбца. Только для чтения.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.Range" /> размером части данных столбца. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Range" /></value>
-        <remarks><para>Возвращаемый объект исключает ячейку заголовков и итогов.</para>
+        <remarks><para>Возвращенный объект исключает ячейки Header и Totals.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -164,7 +164,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет столбец данных в списке. Не удаляет столбец из листа. Если список связан с сайтом Microsoft Windows SharePoint Services, столбец невозможно удалить с сервера, после чего создается ошибка.</summary>
+        <summary>Удаляет столбец данных в списке. Столбец не удаляется с листа. Если список связан с сайтом Microsoft Windows SharePoint Services, столбец не может быть удален с сервера и создается ошибка.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -191,7 +191,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объекта в <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> коллекции. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает номер индекса объекта <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> в <see cref="T:Microsoft.Office.Interop.Excel.ListColumns" /> коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -222,7 +222,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ListDataFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ListDataFormat" /> объект для <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объекта. Только для чтения.</summary>
+        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.ListDataFormat" /> для <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объекта. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -253,7 +253,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя столбца списка. Он также используется в качестве отображаемого имени столбца списка. Это имя должно быть уникальным в списке. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает имя столбца списка. Это также используется в качестве отображаемого имени столбца списка. Это имя должно быть уникальным в списке. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -309,7 +309,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон, к которому применяется указанный объект List в приведенном выше списке. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет диапазон, к которому применяется указанный объект списка в <see cref="T:Microsoft.Office.Interop.Excel.Range" /> списке выше. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -340,9 +340,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку</b> , представляющую формулу в вычисляемом столбце. Формула выражается в синтаксисе Excel (английский язык (США), нотация a1). Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает <b>строку,</b> представляющую формулу в вычисляемом столбце. Формула выражена в синтаксис Excel (английский (США), нотация A1. Только для чтения, <b>String</b>.</summary>
         <value><b>Строка</b></value>
-        <remarks><para>Если <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объект не принадлежит к списку, связанному с сайтом SharePoint, или если он не является столбцом, назначенным в качестве вычисляемого столбца на сайте SharePoint, возникнет ошибка во время выполнения.</para>
+        <remarks><para>Если объект не принадлежит к списку, связанному с сайтом SharePoint, или если он не является столбцом, назначенным в качестве вычисляемого столбца на сайте SharePoint, вы получите ошибку во время <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> работы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -369,7 +369,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку итогов для <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объекта. Только для чтения.</summary>
+        <summary>Возвращает строку Total для <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объекта. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Range" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -400,9 +400,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTotalsCalculation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет тип вычисления в строке итогов столбца списка на основе значения <see cref="T:Microsoft.Office.Interop.Excel.XlTotalsCalculation" /> перечисления. Для чтения и записи.</summary>
+        <summary>Определяет тип вычисления в строке итогов столбца списка на основе значения <see cref="T:Microsoft.Office.Interop.Excel.XlTotalsCalculation" /> перечислимого. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks><para>Для задания этого свойства не требуется показывать строку итогов. Для этого свойства нет фиксированного значения по умолчанию. Excel может изменить состояние этого свойства при добавлении или удалении других столбцов.</para>
+        <remarks><para>Строка "Итоги" не должна быть показана для того, чтобы установить это свойство. Для этого свойства не существует фиксированного значения по умолчанию. Excel может изменить состояние этого свойства при добавлении или удалении других столбцов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -429,9 +429,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XPath</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> объект, представляющий XPath элемента, сопоставленного с указанным <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объектом. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> объект, который представляет Xpath элемента, сопереживаемого указанному <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекту. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office профессиональный выпуск 2003 и Microsoft Office Excel 2003.</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
