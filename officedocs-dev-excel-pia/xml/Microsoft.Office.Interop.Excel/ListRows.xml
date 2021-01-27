@@ -1,5 +1,5 @@
 <Type Name="ListRows" FullName="Microsoft.Office.Interop.Excel.ListRows">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="bcb7462c451d383da63cf1f64ce9cc9fb82f3c41" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575518" /></Metadata><TypeSignature Language="C#" Value="public interface ListRows : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bcb7462c451d383da63cf1f64ce9cc9fb82f3c41" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49999905" /></Metadata><TypeSignature Language="C#" Value="public interface ListRows : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListRows implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ListRows" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListRows&#xA;Implements IEnumerable" />
@@ -25,7 +25,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.ListRow" /> объектов в указанном <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объекте. Каждый объект <b>ListRow</b> представляет строку в списке.</summary>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.ListRow" /> в указанном <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объекте. Каждый <b>объект ListRow</b> представляет строку в списке.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -89,10 +89,10 @@
         <Parameter Name="Position" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Position">Необязательное <b>целое число</b>. Определяет относительную позицию новой строки.</param>
-        <summary>Добавляет новую строку в объект List. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ListRow" /> объект.</summary>
+        <param name="Position">Необязательное <b>integer</b>. Определяет относительную позицию новой строки.</param>
+        <summary>Добавляет новую строку в объект списка. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ListRow" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Если <paramref name="Position" /> этот элемент не указан, добавляется новая строка внизу.</para>
+        <remarks><para>Если <paramref name="Position" /> он не указан, добавляется новая нижняя строка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -149,7 +149,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -177,7 +177,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает количество объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -205,9 +205,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -269,7 +269,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
