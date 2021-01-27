@@ -1,5 +1,5 @@
 <Type Name="Borders" FullName="Microsoft.Office.Interop.Excel.Borders">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ac67cbe49f4367fa1e2be6aa391091c3d7ab6ce3" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580663" /></Metadata><TypeSignature Language="C#" Value="public interface Borders : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ac67cbe49f4367fa1e2be6aa391091c3d7ab6ce3" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006134" /></Metadata><TypeSignature Language="C#" Value="public interface Borders : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Borders implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Borders" />
   <TypeSignature Language="VB.NET" Value="Public Interface Borders&#xA;Implements IEnumerable" />
@@ -25,10 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция из четырех <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объектов, представляющих четыре границы объекта <see cref="T:Microsoft.Office.Interop.Excel.Range" /> или <see cref="T:Microsoft.Office.Interop.Excel.Style" /> объекта.</summary>
-    <remarks><para>Используйте свойство <b>Borders</b> объекта <b>Range</b> или <b>Style</b> , чтобы возвратить коллекцию <b>Borders</b> , содержащую все четыре границы.</para>
-      <para>Используйте <b>Borders</b>(<paramref name="index" />), <paramref name="index" /> где определяет границу, чтобы получить одиночный объект <b>border</b> .</para>
-      <para><see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> Индекс может быть одной из следующих констант: <b>кслдиагоналдовн</b>, <b>кслдиагоналуп</b>, <b>кследжеботтом</b>, <b>кследжелефт</b>, <b>кследжеригхт</b>, <b>кследжетоп</b>, <b>кслинсидехоризонтал</b>или <b>xlInsideVertical</b>.</para>
+    <summary>Коллекция из четырех <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объектов, которые представляют четыре границы объекта <see cref="T:Microsoft.Office.Interop.Excel.Range" /> или <see cref="T:Microsoft.Office.Interop.Excel.Style" /> объекта.</summary>
+    <remarks><para>Используйте свойство <b>Borders</b> объекта <b>Range</b> или <b>Style</b> для возврата коллекции <b>Borders,</b> которая содержит все четыре границы.</para>
+      <para>Используйте <b>границы</b>( <paramref name="index" /> ), где определяет <paramref name="index" /> границу, чтобы вернуть один <b>объект Border.</b></para>
+      <para>Индекс может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> <b>xlDiagonalDown,</b> <b>xlDiagonalUp,</b> <b>xlEdgeBottom,</b> <b>xlEdgeLeft,</b> <b>xlEdgeRight,</b> <b>xlEdgeTop,</b> <b>xlInsideHorizontal</b>или <b>xlInsideVertical</b>.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -90,7 +90,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,7 +121,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает основной цвет всех четырех границ диапазона. Если они не имеют одинаковый цвет, возвращается значение 0 (ноль).</summary>
+        <summary>Возвращает или задает основной цвет всех четырех границ диапазона. Если они не одного цвета, возвращается значение 0 (ноль).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -152,14 +152,14 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет всех четырех границ. Возвращает <b>значение NULL</b> , если все четыре обрамления имеют одинаковый цвет.</summary>
+        <summary>Возвращает или задает цвет всех четырех границ. Возвращает <b>NULL,</b> если все четыре границы не одного цвета.</summary>
         <value>To be added.</value>
-        <remarks><para>Цвет задается в виде значения индекса в текущей цветовой палитре или в виде одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант:</para>
+        <remarks><para>Цвет указывается как значение индекса в текущей цветовой палитре или как одна из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант:</para>
           <para>
-            <b>кслколориндексаутоматик</b>
+            <b>xlColorIndexAutomatic</b>
           </para>
           <para>
-            <b>кслколориндексноне</b>
+            <b>xlColorIndexNone</b>
           </para>
           <para> </para></remarks>
       </Docs>
@@ -187,7 +187,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -217,8 +217,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -280,8 +280,8 @@
         <Parameter Name="Index" Type="Microsoft.Office.Interop.Excel.XlBordersIndex" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" />. Может быть одной из следующих констант <b>кслбордерсиндекс</b> :<b>кслдиагоналдовн</b><b>кслдиагоналуп</b><b>кследжеботтом</b><b>кследжелефт</b><b>кследжеригхт</b><b>кследжетоп</b><b>xlInsideHorizontal</b><b>xlInsideVertical</b></param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий одну из границ диапазона ячеек или стиля.</summary>
+        <param name="Index">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlBordersIndex" /> . Может быть одной из этих констант <b>XlBordersIndex:</b> <b>xlDiagonalDown</b><b>xlDiagonalUp</b><b>xlEdgeBottom</b><b>xlEdgeLeft</b><b>xlEdgeRight</b><b>xlEdgeTop</b><b>xlInsideHorizontal</b><b>xlInsideVertical</b></param>
+        <summary>Возвращает объект, который представляет одну из границ диапазона <see cref="T:Microsoft.Office.Interop.Excel.Border" /> ячеек или стиля.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -315,30 +315,30 @@
         <summary>Возвращает или задает стиль линии для границы.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" />может быть одной из следующих констант <b>ксллинестиле</b> :</para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlLineStyle" />может быть одной из этих <b>констант XlLineStyle:</b></para>
           <para>
-            <b>кслконтинуаус</b>
+            <b>xlContinuous</b>
           </para>
           <para>
-            <b>кслдаш</b>
+            <b>xlDash</b>
           </para>
           <para>
-            <b>кслдашдот</b>
+            <b>xlDashDot</b>
           </para>
           <para>
-            <b>кслдашдотдот</b>
+            <b>xlDashDotDot</b>
           </para>
           <para>
-            <b>кслдот</b>
+            <b>xlDot</b>
           </para>
           <para>
-            <b>кслдаубле</b>
+            <b>xlDouble</b>
           </para>
           <para>
-            <b>кслслантдашдот</b>
+            <b>xlSlantDashDot</b>
           </para>
           <para>
-            <b>ксллинестиленоне</b>
+            <b>xlLineStyleNone</b>
           </para>
           <para> </para></remarks>
       </Docs>
@@ -397,9 +397,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет темы примененной цветовой схемы, связанной с указанным объектом.  <b>Объект</b>для чтения и записи.</summary>
+        <summary>Возвращает или задает цвет темы в примененной цветовой схеме, связанной с указанным объектом.  Объект <b>read/write</b>.</summary>
         <value><b>Object</b></value>
-        <remarks><para>При попытке доступа к цвету темы для объекта, цвет которого в настоящее время не является темой, возникает ошибка времени выполнения запроса.</para>
+        <remarks><para>Попытка получить доступ к цвету темы для объекта, цвет которого в настоящее время не имеет темы, приведет к недопустимой ошибке времени запуска запроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -429,10 +429,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>одно</b> значение, которое осветляет или затемняет цвет.</summary>
-        <value><b>Одинарное с плавающей точкой</b></value>
-        <remarks><para>Можно ввести число от-1 (самый темный) до 1 (самое светлое) для <see cref="P:Microsoft.Office.Interop.Excel.Borders.TintAndShade" /> свойства. Ноль (0) не является нейтральным.</para>
-          <para>При попытке присвоить этому свойству значение, меньшее-1 или превышающее 1, возникает ошибка времени выполнения: "указанное значение выходит за пределы допустимого диапазона".  Это свойство применимо как к цветам темы, так и к цветам.</para>
+        <summary>Возвращает или задает <b>single, который</b> осветляет или затемнеет цвет.</summary>
+        <value><b>Single</b></value>
+        <remarks><para>Для свойства можно ввести число от -1 (самый темный) до 1 (самый <see cref="P:Microsoft.Office.Interop.Excel.Borders.TintAndShade" /> светлый). Ноль (0) нейтральный.</para>
+          <para>Попытка установить для этого свойства значение меньше -1 или более 1 приводит к ошибке во время работы: "Указанное значение находится вне диапазона".  Это свойство работает как для цветов темы, так и для нетемных цветов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -496,18 +496,18 @@
         <summary>Возвращает или задает вес границы.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" />может быть одной из следующих констант <b>кслбордервеигхт</b> :</para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlBorderWeight" />может быть одной из этих <b>констант XlBorderWeight:</b></para>
           <para>
-            <b>кслхаирлине</b>
+            <b>xlHairline</b>
           </para>
           <para>
-            <b>кслсин</b>
+            <b>xlThin</b>
           </para>
           <para>
-            <b>кслмедиум</b>
+            <b>xlMedium</b>
           </para>
           <para>
-            <b>кслсикк</b>
+            <b>xlThick</b>
           </para>
           <para> </para></remarks>
       </Docs>

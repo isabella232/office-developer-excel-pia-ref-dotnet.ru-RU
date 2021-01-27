@@ -1,5 +1,5 @@
 <Type Name="Axes" FullName="Microsoft.Office.Interop.Excel.Axes">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="16133b78fe6ef635f84e7e24582e31b62c79a469" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572781" /></Metadata><TypeSignature Language="C#" Value="public interface Axes : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="16133b78fe6ef635f84e7e24582e31b62c79a469" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006190" /></Metadata><TypeSignature Language="C#" Value="public interface Axes : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Axes implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Axes" />
   <TypeSignature Language="VB.NET" Value="Public Interface Axes&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.Axis" /> объектов в указанной диаграмме.</summary>
-    <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Axes(System.Object,Microsoft.Office.Interop.Excel.XlAxisGroup)" /> метод для возврата коллекции <b>осей</b> .</para>
-      <para>Используйте <b>оси</b>(<paramref name="type" />, <paramref name="group" />), где <paramref name="type" /> — это тип оси и <paramref name="group" /> группа осей, чтобы вернуть один объект <b>Axis</b> . <paramref name="Type" />может быть <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> одной из следующих констант: <b>xlCategory</b>, <b>кслсериес</b>или <b>xlValue</b>. <paramref name="Group" />может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>кслсекондари</b>. Более подробную информацию можно узнать в разделе метод <b>осей</b> .</para>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.Axis" /> на указанной диаграмме.</summary>
+    <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Chart.Axes(System.Object,Microsoft.Office.Interop.Excel.XlAxisGroup)" /> метод для возврата коллекции <b>Axes.</b></para>
+      <para>Используйте <b>оси</b>( , ), где находится тип оси и является группой осей, чтобы <paramref name="type" /> вернуть один объект <paramref name="group" /> <paramref name="type" /> <paramref name="group" /> <b>Axis.</b> <paramref name="Type" />может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> <b>xlCategory,</b> <b>xlSeries</b>или <b>xlValue.</b> <paramref name="Group" />может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>xlSecondary.</b> Дополнительные сведения см. в <b>методе Axes.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -87,7 +87,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +115,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,8 +145,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -205,9 +205,9 @@
         <Parameter Name="AxisGroup" Type="Microsoft.Office.Interop.Excel.XlAxisGroup" />
       </Parameters>
       <Docs>
-        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" />. Тип оси. <b>XlAxisType</b> может быть одной из следующих констант:<b>xlCategory</b>. <b>кслсериесаксис</b> Допускается только для объемных диаграмм. <b>xlValue</b>.</param>
-        <param name="AxisGroup">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" />параметр. Ось. <b>XlAxisGroup</b> может быть одной из этих констант:<b>xlPrimary</b> по умолчанию<b>кслсекондари</b></param>
-        <summary>Возвращает один <see cref="T:Microsoft.Office.Interop.Excel.Axis" /> объект из <see cref="T:Microsoft.Office.Interop.Excel.Axes" /> коллекции.</summary>
+        <param name="Type">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> . Тип оси. <b>XlAxisType может</b> быть одной из этих констант:<b>xlCategory</b>. <b>xlSeriesAxis</b> Допустимо только для трехстолбных диаграмм. <b>xlValue</b>.</param>
+        <param name="AxisGroup">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> . Ось. <b>XlAxisGroup</b> может быть одной из этих констант:<b>xlPrimary</b> Default<b>xlSecondary</b></param>
+        <summary>Возвращает один объект <see cref="T:Microsoft.Office.Interop.Excel.Axis" /> из <see cref="T:Microsoft.Office.Interop.Excel.Axes" /> коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

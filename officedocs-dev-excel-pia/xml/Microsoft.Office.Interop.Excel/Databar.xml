@@ -1,5 +1,5 @@
 <Type Name="Databar" FullName="Microsoft.Office.Interop.Excel.Databar">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="5af0ef6023d3a14611c655e4cb96ffc4b3bf17c5" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587418" /></Metadata><TypeSignature Language="C#" Value="public interface Databar" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5af0ef6023d3a14611c655e4cb96ffc4b3bf17c5" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50005651" /></Metadata><TypeSignature Language="C#" Value="public interface Databar" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Databar" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Databar" />
   <TypeSignature Language="VB.NET" Value="Public Interface Databar" />
@@ -21,11 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет правило условного форматирования панели данных. Применение гистограммы к диапазону помогает увидеть значение ячейки относительно других ячеек.</summary>
-    <remarks><para>Все объекты условного форматирования находятся в объекте <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> Collection, который является дочерним по отношению <see cref="T:Microsoft.Office.Interop.Excel.Range" /> к коллекции. Вы можете создать правило форматирования гистограммы, используя метод или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddDatabar" /> в <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции.</para>
-      <para>Используйте свойства <see cref="P:Microsoft.Office.Interop.Excel.Databar.MinPoint" /> и <see cref="P:Microsoft.Office.Interop.Excel.Databar.MaxPoint" /> <see cref="T:Microsoft.Office.Interop.Excel.Databar" /> объекта, чтобы задать значения для кратчайшей и самой длинной гистограммы диапазона данных. Эти проперитес возвращают <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> объект, в котором можно указать способ оценки пороговых значений.</para>
+    <summary>Представляет правило условного формата панели данных. Применение панели данных к диапазону помогает увидеть значение ячейки относительно других ячеек.</summary>
+    <remarks><para>Все объекты условного форматирования содержатся в объекте коллекции, который является <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> его <see cref="T:Microsoft.Office.Interop.Excel.Range" /> частью. Правило форматирования панели данных можно создать с помощью коллекции или <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.AddDatabar" /> <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> метода.</para>
+      <para>С помощью свойств объекта можно установить значения самой короткой и самой длинной панели <see cref="P:Microsoft.Office.Interop.Excel.Databar.MinPoint" /> <see cref="P:Microsoft.Office.Interop.Excel.Databar.MaxPoint" /> диапазона <see cref="T:Microsoft.Office.Interop.Excel.Databar" /> данных. Эти объекты возвращают объект, в котором можно указать, как оцениваются <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> пороговые значения.</para>
       <para> </para></remarks>
-    <example><para>В приведенном ниже примере создается диапазон данных, а затем применяется гистограмма к диапазону. Обратите внимание, что из-за того, что в диапазоне слишком низкие и высокие значения, значения в средних столбцах имеют одинаковую длину. Чтобы устранить неоднозначность средних значений, пример кода использует <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> объект, чтобы изменить способ оценки порогов до процентили.</para></example>
+    <example><para>В следующем примере создается диапазон данных, а затем к диапазону применяется гряду. Вы заметите, что поскольку диапазон имеет очень низкое и высокое значение, средние значения имеют полосу данных аналогичной длины. Чтобы уличная неоднозначность средних значений, пример кода использует объект для изменения оценки пороговых значений до <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> процентили.</para></example>
   </Docs>
   <Members>
     <Member MemberName="Application">
@@ -51,9 +51,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает объект <b>Application</b> , представляющий создателя указанного объекта. Только для чтения.</summary>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office  <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
         <value><b>Приложение</b> (см. выше)</value>
-        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -80,7 +80,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, указывающий диапазон ячеек, к которому применяется правило форматирования.</summary>
+        <summary>Возвращает объект, определяющий диапазон ячеей, к которому применяется <see cref="T:Microsoft.Office.Interop.Excel.Range" /> правило форматирования.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Range" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -108,8 +108,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает цвет оси для ячеек с условным форматированием в виде столбцов данных.</summary>
-        <value>Цвет оси для ячеек с условным форматированием в виде столбцов данных.</value>
+        <summary>Получает цвет оси для ячеек с условным форматированием в виде полос данных.</summary>
+        <value>Цвет оси для ячеек с условным форматированием в виде полос данных.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -140,10 +140,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlDataBarAxisPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает положение оси на панелях данных, заданных правилом условного форматирования.</summary>
-        <value>Положение оси на гистограммах, заданных правилом условного форматирования.</value>
+        <summary>Возвращает или задает положение оси полос данных, заданных правилом условного форматирования.</summary>
+        <value>Положение оси полос данных, заданных правилом условного форматирования.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Ось для гистограмм отображается, только если <see cref="P:Microsoft.Office.Interop.Excel.Databar.AxisPosition" /> свойство имеет значение <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarAxisPosition.xlDataBarAxisAutomatic" /> или <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarAxisPosition.xlDataBarAxisMidpoint" />, а также когда в диапазоне значений, указанных с помощью правила условного форматирования панели данных, имеются отрицательные значения. По умолчанию для <see cref="P:Microsoft.Office.Interop.Excel.Databar.AxisPosition" /> свойства задано <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarAxisPosition.xlDataBarAxisAutomatic" />значение.</para>
+          <para>Ось для полос данных отображается только в том случае, если свойство имеет значение либо имеет отрицательное значение в диапазоне значений, указанных с помощью правила условного форматирования панели <see cref="P:Microsoft.Office.Interop.Excel.Databar.AxisPosition" /> <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarAxisPosition.xlDataBarAxisAutomatic" /> <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarAxisPosition.xlDataBarAxisMidpoint" /> данных. Значение по умолчанию для <see cref="P:Microsoft.Office.Interop.Excel.Databar.AxisPosition" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarAxisPosition.xlDataBarAxisAutomatic" /> : .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -170,8 +170,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DataBarBorder</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, задающий границу столбца данных.</summary>
-        <value>Объект, задающий границу панели данных.</value>
+        <summary>Получает объект, который указывает границу панели данных.</summary>
+        <value>Объект, который указывает границу панели данных.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -199,7 +199,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FormatColor" /> объект, который можно использовать для изменения цвета отрезков в условном формате панели данных.</summary>
+        <summary>Возвращает объект, который можно использовать для изменения цвета полос в условном формате <see cref="T:Microsoft.Office.Interop.Excel.FormatColor" /> панели данных.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,10 +230,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlDataBarFillType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, указывающее, как заполняется область данных цветом.</summary>
-        <value>Указывает, как заполняется область данных цветом.</value>
+        <summary>Получает или задает заполнение панели данных цветом.</summary>
+        <value>Указывает, как заливка панели данных цветом.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>По умолчанию <see cref="P:Microsoft.Office.Interop.Excel.Databar.BarFillType" /> свойству присвоено <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarFillType.xlDataBarFillGradient" />значение.</para>
+          <para>Значение свойства по <see cref="P:Microsoft.Office.Interop.Excel.Databar.BarFillType" /> умолчанию: <see cref="F:Microsoft.Office.Interop.Excel.XlDataBarFillType.xlDataBarFillGradient" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -260,9 +260,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> перечислении, указывающую приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> enumeration, которая указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.Databar.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.Databar.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -317,10 +317,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает направление отображения гистограмма.</summary>
-        <value>Направление, в котором отображается гистограмма.</value>
+        <summary>Получает или задает направление отображения панели данных.</summary>
+        <value>Направление отображения панели данных.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Может быть <see cref="T:Microsoft.Office.Interop.Excel.Constants" />одним из следующих вариантов: <see cref="F:Microsoft.Office.Interop.Excel.Constants.xlContext" />, <see cref="F:Microsoft.Office.Interop.Excel.Constants.xlLTR" /> (слева направо) или <see cref="F:Microsoft.Office.Interop.Excel.Constants.xlRTL" /> (справа налево).</para>
+          <para>Может иметь одно из следующих <see cref="T:Microsoft.Office.Interop.Excel.Constants" /> справа: <see cref="F:Microsoft.Office.Interop.Excel.Constants.xlContext" /> , <see cref="F:Microsoft.Office.Interop.Excel.Constants.xlLTR" /> (слева направо) или <see cref="F:Microsoft.Office.Interop.Excel.Constants.xlRTL" /> (справа налево).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -350,9 +350,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку</b> , представляющую формулу, которая определяет значения, к которым будет применен набор значков.</summary>
+        <summary>Возвращает или задает <b>строку,</b> представляющую формулу, которая определяет значения, к которым будет применяться набор значков.</summary>
         <value><b>Строка</b></value>
-        <remarks><para>Это свойство полезно для ограничения диапазона значений, которые будут отображать условное форматирование. Типичный сценарий состоит в том, что у вас есть диапазон чисел, содержащий положительные и отрицательные значения. Вы можете создать несколько условных форматов для этого диапазона чисел — одно для положительных значений и другое для отрицательных значений.</para>
+        <remarks><para>Это свойство полезно для ограничения диапазона значений, отображаемого в условном формате. Типичным сценарием является ситуация, когда у вас есть диапазон чисел, содержащих как положительные, так и отрицательные значения. Может потребоваться создать более одного условного формата для этого диапазона чисел— один для положительных значений, а другой для отрицательных значений.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -379,9 +379,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ConditionValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> объект, указывающий, как вычисляется длинная гистограмма для условного форматирования панели данных.</summary>
+        <summary>Возвращает объект, который указывает, как вычисляется самая длинная галька для условного формата <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> панели данных.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /></value>
-        <remarks><para>Вы можете указать тип и значение оценки с помощью свойств <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Type" /> и. <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Value" /></para>
+        <remarks><para>С помощью свойств и свойств можно указать тип и <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Type" /> <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Value" /> значение оценки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -408,9 +408,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ConditionValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> объект, задающий способ оценки кратчайшего столбца для условного формата панели данных.</summary>
+        <summary>Возвращает объект, который определяет, как будет оцениваться самая короткая галька для условного формата <see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /> панели данных.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.ConditionValue" /></value>
-        <remarks><para>Вы можете указать тип и значение оценки с помощью свойств <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Type" /> и. <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Value" /></para>
+        <remarks><para>С помощью свойств и свойств можно указать тип и <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Type" /> <see cref="P:Microsoft.Office.Interop.Excel.ConditionValue.Value" /> значение оценки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -436,9 +436,9 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Excel.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Диапазон, к которому будет применено это правило форматирования.</param>
-        <summary>Задает диапазон ячеек, к которому применяется это правило форматирования.</summary>
-        <remarks><para>Диапазон должен находиться в стиле a1 Reference и полностью содержаться в пределах листа, который является родительским для <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Знаки доллара также можно использовать, но они игнорируются.</para>
+        <param name="Range">Диапазон, к которому будет применяться это правило форматирования.</param>
+        <summary>Задает диапазон ячеей, к которому применяется это правило форматирования.</summary>
+        <remarks><para>Диапазон должен быть в стиле ссылки A1 и полностью содержаться в листе, который является родительским для <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Знаки доллара также можно использовать, но они игнорируются.</para>
           <para>Вы также можете использовать локально определенное имя в любой части диапазона, но имя должно быть на языке макроса.</para>
           <para> </para></remarks>
       </Docs>
@@ -467,7 +467,7 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.NegativeBarFormat" /> объект, связанный с правилом условного форматирования панели данных.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.NegativeBarFormat" /> Объект, связанный с правилом условного форматирования панели данных.</value>
+        <value>Объект, <see cref="T:Microsoft.Office.Interop.Excel.NegativeBarFormat" /> связанный с правилом условного форматирования панели данных.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -526,8 +526,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое</b> значение, задающее длину самой длинной полосы данных в процентах от ширины ячейки.</summary>
-        <value><b>Integer</b></value>
+        <summary>Возвращает или задает <b>целомерное значение,</b> которое указывает длину самой длинной панели данных в процентах от ширины ячейки.</summary>
+        <value>64-разрядное целое число.</value>
         <remarks><para>Значение должно быть целым числом от 0 до 100.</para>
           <para> </para></remarks>
       </Docs>
@@ -558,8 +558,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>целое</b> значение, задающее длину самой короткой полосы данных в процентах от ширины ячейки.</summary>
-        <value><b>Integer</b></value>
+        <summary>Возвращает или задает <b>целомерное</b> значение, которое указывает длину самой короткой панели данных в процентах от ширины ячейки.</summary>
+        <value>64-разрядное целое число.</value>
         <remarks><para>Значение должно быть целым числом от 0 до 100.</para>
           <para> </para></remarks>
       </Docs>
@@ -590,9 +590,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок оценки при наличии нескольких правил условного форматирования на листе.</summary>
-        <value><b>Integer</b></value>
-        <remarks><para>При задании приоритета значение должно быть положительным целым числом между 1 и общим числом правил условного форматирования на листе. Приоритет должен быть уникальным значением для всех правил на листе, поэтому изменение приоритета указанного правила условного форматирования может привести к сдвигу значения приоритета других правил на листе.</para>
+        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок оценки при существовании на таблице нескольких правил условного форматирования.</summary>
+        <value>64-разрядное целое число.</value>
+        <remarks><para>При установке приоритета значение должно быть положительным числом от 1 до общего количества правил условного форматирования на этом сайте. Приоритетом должно быть уникальное значение для всех правил на этом документе, поэтому изменение приоритета для указанного правила условного форматирования может привести к смещению значения приоритета других правил на этом документе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -619,7 +619,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>логическое</b> значение, которое указывает, применяется ли условное форматирование к сводной диаграмме. Только для чтения.</summary>
+        <summary>Возвращает <b>boolean значение,</b> указывающее, применяется ли условный формат к диаграмме pivotTable. Только для чтения.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -650,9 +650,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotConditionScope</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> перечисления, которая определяет область действия условного формата при его применении к сводной диаграмме.</summary>
+        <summary>Возвращает или задает одну из констант в этом виде, которая определяет область условного форматирования при применении к диаграмме <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> pivotTable.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /></value>
-        <remarks><para>Значение по умолчанию <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" />, которое задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.Databar.AppliesTo" />свойства.</para>
+        <remarks><para>Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" /> задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.Databar.AppliesTo" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -677,10 +677,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает значение приоритета для этого правила условного форматирования равным "1", чтобы оно проверялось перед всеми остальными правилами на листе.</summary>
-        <remarks><para>При наличии нескольких правил условного форматирования на листе, если для правила не было задано значение "1", этот метод приведет к увеличению приоритета всех существующих правил на листе на один.</para>
+        <summary>Задает для этого правила условного форматирования значение "1", чтобы оно оценивалось перед всеми другими правилами на этом сайте.</summary>
+        <remarks><para>Если на этом сайте имеется несколько правил условного форматирования, если ранее правило не было установлено с приоритетом "1", то при этом приоритет всех остальных существующих правил на этом сайте будет увеличен на один.</para>
           <para>
-            <b>Note</b>: уровни приоритетов для правил условного форматирования применяются на уровне листа.</para>
+            <b>Примечание.</b>Уровни приоритета для правил условного форматирования применяются на уровне таблицы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -705,10 +705,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает порядок оценки для этого правила условного форматирования, чтобы оно проверялось после всех других правил на листе.</summary>
-        <remarks><para>Фактическое значение приоритета будет равно общему числу правил условного форматирования на листе. При наличии нескольких правил условного форматирования на листе этот метод приведет к увеличению приоритета правил, которые имеют значение приоритет, превышающее это правило.</para>
+        <summary>Задает порядок оценки для этого правила условного форматирования, чтобы оно оценивалось после всех остальных правил на этом документе.</summary>
+        <remarks><para>Фактическое значение приоритета будет равно общему числу правил условного форматирования на этом сайте. При работе с несколькими правилами условного форматирования на одном из таблиц этот метод приведет к увеличению приоритета правил, значение приоритета для них больше, чем это правило.</para>
           <para>
-            <b>Note</b>: уровни приоритетов для правил условного форматирования применяются на уровне листа.</para>
+            <b>Примечание.</b>Уровни приоритета для правил условного форматирования применяются на уровне таблицы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -738,7 +738,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, которое указывает, отображается ли значение в ячейке, если условное форматирование панели данных применяется к диапазону.</summary>
+        <summary>Возвращает или задает <b>boolean значение,</b> которое указывает, отображается ли значение в ячейке, если к диапазону применяется условное форматирование панели данных.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -766,9 +766,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, определяющее, следует ли оценивать дополнительные правила форматирования ячейки, если текущее правило имеет <b>значение true</b>.</summary>
+        <summary>Возвращает или задает <b>boolean значение,</b> которое определяет, следует ли оценивать дополнительные правила форматирования в ячейке, если текущее правило имеет <b>значение True.</b></summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Для поддержки обратной совместимости для этого свойства по умолчанию задано значение <b>false</b>, которое является противоположным поведением правила форматирования, созданного в пользовательском интерфейсе.</para>
+        <remarks><para>Для поддержки обратной совместимости значение по умолчанию для этого свойства <b>— False,</b>что является обратным поведением правила форматирования, созданного в пользовательском интерфейсе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -795,9 +795,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> перечисления, определяющую тип условного форматирования. Только для чтения.</summary>
-        <value><b>Integer</b></value>
-        <remarks><para>Это свойство всегда возвращает <b>целое</b> значение "4", которое эквивалентно <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlDatabar" />.</para>
+        <summary>Возвращает одну из констант в этом виде, которая указывает <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> тип условного форматирования. Только для чтения.</summary>
+        <value>64-разрядное целое число.</value>
+        <remarks><para>Это свойство всегда возвращает значение <b>4,</b> эквивалентное <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlDatabar" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>

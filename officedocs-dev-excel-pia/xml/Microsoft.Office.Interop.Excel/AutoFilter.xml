@@ -1,5 +1,5 @@
 <Type Name="AutoFilter" FullName="Microsoft.Office.Interop.Excel.AutoFilter">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="085dbe03cc8ab153375e03745f01e25010542104" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580530" /></Metadata><TypeSignature Language="C#" Value="public interface AutoFilter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="085dbe03cc8ab153375e03745f01e25010542104" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006204" /></Metadata><TypeSignature Language="C#" Value="public interface AutoFilter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoFilter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AutoFilter" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoFilter" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет собой автофильтрацию для указанного листа.</summary>
-    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.AutoFilter" /> свойство, чтобы возвратить объект <b>автофильтра</b> . Используйте <see cref="P:Microsoft.Office.Interop.Excel.AutoFilter.Filters" /> свойство, чтобы возвратить коллекцию фильтров отдельных столбцов. Используйте <see cref="P:Microsoft.Office.Interop.Excel.AutoFilter.Range" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий весь отфильтрованный диапазон.</para>
-      <para>Чтобы создать объект <b>автофильтра</b> для листа, необходимо включить функцию автофильтрации для диапазона на листе вручную либо с помощью <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> метода объекта <b>Range</b> .</para>
+    <summary>Представляет автоотрисовку для указанного таблицы.</summary>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.AutoFilter" /> для возврата объекта <b>AutoFilter.</b> Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.AutoFilter.Filters" /> для возврата коллекции отдельных фильтров столбцов. Используйте <see cref="P:Microsoft.Office.Interop.Excel.AutoFilter.Range" /> свойство, чтобы вернуть <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет весь отфильтрованный диапазон.</para>
+      <para>Чтобы создать объект <b>AutoFilter</b> для таблицы, необходимо включить автозаповключение для диапазона на этом сайте вручную или с помощью метода объекта <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> <b>Range.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта (можно использовать это свойство с объектом OLE Automation, чтобы возвратить приложение этого объекта). Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет создателя указанного объекта (это свойство можно использовать с объектом автоматизации OLE для возврата приложения <see cref="T:Microsoft.Office.Interop.Excel.Application" /> этого объекта). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -76,7 +76,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Применяет <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" />указанный объект.</summary>
+        <summary>Применяет указанный <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" /> объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -103,9 +103,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. Только <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />для чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -132,7 +132,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>значение true</b> , если лист находится в режиме фильтра автофильтрации. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>true,</b> если таблица находится в режиме фильтра автофильтра. Только для чтения, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -160,7 +160,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Filters</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Filters" /> коллекцию, которая представляет все фильтры в диапазоне с автофильтром. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, представляюную все фильтры в диапазоне <see cref="T:Microsoft.Office.Interop.Excel.Filters" /> автофильтров. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -216,7 +216,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, представляющий диапазон, к которому применяется указанный Автофильтр.</summary>
+        <summary>Возвращает объект, который представляет диапазон, к которому применяется указанный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> автофайл.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -242,7 +242,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображает все данные, возвращенные <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" />объектом.</summary>
+        <summary>Отображает все данные, возвращенные <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" /> объектом.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -269,7 +269,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sort</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает столбец сортировки или столбцы, а также <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" /> порядок сортировки для коллекции.</summary>
+        <summary>Получает столбец сортировки или столбцы и порядок сортировки для <see cref="T:Microsoft.Office.Interop.Excel.AutoFilter" /> коллекции.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Sort" /></value>
         <remarks>To be added.</remarks>
       </Docs>

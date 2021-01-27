@@ -1,5 +1,5 @@
 <Type Name="AutoRecover" FullName="Microsoft.Office.Interop.Excel.AutoRecover">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="cd09f7ea28f0544739412fc8f1a64ac1370cadc1" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20576750" /></Metadata><TypeSignature Language="C#" Value="public interface AutoRecover" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cd09f7ea28f0544739412fc8f1a64ac1370cadc1" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006197" /></Metadata><TypeSignature Language="C#" Value="public interface AutoRecover" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AutoRecover" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AutoRecover" />
   <TypeSignature Language="VB.NET" Value="Public Interface AutoRecover" />
@@ -22,11 +22,11 @@
   </Attributes>
   <Docs>
     <summary>Представляет функции автоматического восстановления книги.</summary>
-    <remarks><para>Свойства объекта автосохранения определяют путь и интервал времени для резервного копирования всех файлов.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.AutoRecover" /> свойство <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объекта, чтобы возвратить объект <b>автосохранения</b> .</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.AutoRecover.Path" /> свойство объекта <b>автосохранения</b> , чтобы задать путь, по которому будет сохранен файл автосохранения.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.AutoRecover.Time" /> свойство объекта <b>автосохранения</b> , чтобы задать интервал времени для резервного копирования всех файлов.</para>
-      <para>Единицы заметок для свойства <b>time</b> задаются в минутах.</para>
+    <remarks><para>Свойства объекта AutoRecover определяют путь и интервал времени для архива всех файлов.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Application.AutoRecover" /> объекта для возврата объекта <see cref="T:Microsoft.Office.Interop.Excel._Application" /> <b>AutoRecover.</b></para>
+      <para>Используйте свойство объекта AutoRecover, чтобы установить путь для с сохраненного файла <see cref="P:Microsoft.Office.Interop.Excel.AutoRecover.Path" /> автообнаружия. <b></b></para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.AutoRecover.Time" /> объекта <b>AutoRecover,</b> чтобы установить интервал времени для архива всех файлов.</para>
+      <para>Единицы заметок для <b>свойства Time</b> находятся в минутах.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -53,7 +53,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -83,8 +83,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -114,7 +114,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если объект включен.</summary>
+        <summary><b>Имеет</b> true, если объект включен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -173,7 +173,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает полный путь, по которому Microsoft Excel будет хранить временные файлы автовосстановления.</summary>
+        <summary>Задает или возвращает полный путь к месту хранения временных файлов автооткрытия в Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -206,9 +206,9 @@
       <Docs>
         <summary>Задает или возвращает интервал времени для <see cref="T:Microsoft.Office.Interop.Excel.AutoRecover" /> объекта.</summary>
         <value>To be added.</value>
-        <remarks><para>Допустимые значения — целые числа от 1 до 120 минут. Значение по умолчанию  10 минут.</para>
-          <para>При вводе десятичного значения выполняется округление до ближайшего целого числа. Например, если ввести значение 5,5, то оно эквивалентно 6.</para>
-          <para>Если введены значения времени за пределами допустимого диапазона, Microsoft Excel вернется к предыдущему использованному значению времени.</para>
+        <remarks><para>Допустимые значения — это integers от 1 до 120 минут. Значение по умолчанию  10 минут.</para>
+          <para>Ввод десятичных значений будет округляться до ближайшего целого числа. Например, ввод значения 5,5 эквивалентен 6.</para>
+          <para>Если ввели значения времени за пределами допустимого диапазона, Microsoft Excel вернется к значению предыдущего времени.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="CalculatedFields" FullName="Microsoft.Office.Interop.Excel.CalculatedFields">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="551200c74cbef27982489b80758fa22c187b61fe" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572676" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedFields : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="551200c74cbef27982489b80758fa22c187b61fe" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006085" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedFields : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CalculatedFields implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CalculatedFields" />
   <TypeSignature Language="VB.NET" Value="Public Interface CalculatedFields&#xA;Implements IEnumerable" />
@@ -25,11 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объектов, представляющих все Вычисляемые поля в указанном отчете сводной таблицы.</summary>
-    <remarks><para>Например, отчет, содержащий поля доходов и расходов, может иметь вычисляемое поле "прибыль" и значение, заданное как сумма в поле "доход" минус сумма в поле "расходы".</para>
-      <para>Для источников данных OLAP невозможно задать эту коллекцию, и она всегда возвращает <b>значение Nothing</b>.</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.CalculatedFields" /> метод, чтобы возвратить коллекцию <b>CalculatedFields</b> .</para>
-      <para>Используйте <b>CalculatedFields</b>(<paramref name="index" />), где <paramref name="index" /> — это имя или номер индекса указанного поля, чтобы вернуть один объект <b>PivotField</b> из коллекции <b>CalculatedFields</b> .</para>
+    <summary>Коллекция объектов, которая представляет все вычисляемые поля в указанном отчете <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> pivotTable.</summary>
+    <remarks><para>Например, отчет, содержащий поля "Доход" и "Расходы", может иметь вычисляемую поля с именем "Прибыль" и определяться в качестве суммы в поле "Доход" за вычетом суммы в поле "Расходы".</para>
+      <para>Для источников данных OLAP нельзя установить эту коллекцию, и она всегда возвращает <b>nothing.</b></para>
+      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.CalculatedFields" /> метод для возврата коллекции <b>CalculatedFields.</b></para>
+      <para>Используйте <b>CalculatedFields</b>( ), где это имя или номер индекса указанного поля, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>PivotField</b> из коллекции <b>CalculatedFields.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -128,8 +128,8 @@
       <Docs>
         <param name="Name">Обязательный атрибут типа <b>String</b>. Имя поля.</param>
         <param name="Formula">Обязательный атрибут типа <b>String</b>. Формула для поля.</param>
-        <param name="UseStandardFormula">Необязательный <b>объект</b>. <b>False</b> (по умолчанию) для обеспечения совместимости с вверх. <b>Значение true</b> для строк, хранящихся в аргументах, которые являются именами полей (будут интерпретироваться как отформатированные в стандартном английском языке), а не в локальных параметрах.</param>
-        <summary>Создает новое вычисляемое поле. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект.</summary>
+        <param name="UseStandardFormula"><b>Необязательный объект</b>. <b>False</b> (по умолчанию) для обеспечения совместимости вверх. <b>Имеет</b> true для строк, содержащихся в любых аргументах, которые являются именами полей (интерпретируются как отформатированные на стандартном английском (США) английском языке, а не локальные параметры).</param>
+        <summary>Создает новое вычисляемом поле. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -157,7 +157,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -185,7 +185,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -215,8 +215,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -275,7 +275,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

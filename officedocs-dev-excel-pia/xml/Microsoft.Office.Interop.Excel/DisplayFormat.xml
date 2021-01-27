@@ -1,5 +1,5 @@
 <Type Name="DisplayFormat" FullName="Microsoft.Office.Interop.Excel.DisplayFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="4ddcd9f96de4128a0ca313e475935d98703af7f3" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20573530" /></Metadata><TypeSignature Language="C#" Value="public interface DisplayFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4ddcd9f96de4128a0ca313e475935d98703af7f3" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50005595" /></Metadata><TypeSignature Language="C#" Value="public interface DisplayFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DisplayFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.DisplayFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface DisplayFormat" />
@@ -23,7 +23,7 @@
   <Docs>
     <summary>Представляет параметры отображения для связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</summary>
     <remarks><para>Только для чтения.</para>
-      <para>Действия, такие как изменение условного форматирования или стиля таблицы для диапазона, могут привести к тому, что отображаются в текущем пользовательском интерфейсе в соответствии со значениями в соответствующих свойствах <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта. Используйте свойства <see cref="T:Microsoft.Office.Interop.Excel.DisplayFormat" /> объекта, чтобы возвратить значения, отображаемые в текущем пользовательском интерфейсе.</para>
+      <para>Такие действия, как изменение условного форматирования или стиля таблицы диапазона, могут привести к несогласованству отображаемого в текущем пользовательском интерфейсе значений в соответствующих свойствах <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта. Используйте свойства объекта для возврата значений, как они <see cref="T:Microsoft.Office.Interop.Excel.DisplayFormat" /> отображаются в текущем пользовательском интерфейсе.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,10 +50,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, будет ли Microsoft Excel автоматически делать отступы для текста <see cref="T:Microsoft.Office.Interop.Excel.Range" /> связанного объекта, если для выравнивания текста в ячейке задано равное равномерное распределение (по горизонтали или по вертикали), как оно отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Указывает, будет ли Microsoft Excel автоматически делать отступы для <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текста связанного объекта, если для выравнивания текста в ячейке задано равное равномерное распределение (по горизонтали или по вертикали), как оно отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Возвращает значение, которое указывает, автоматически ли Microsoft Excel отступит от текста связанного объекта, если выравнивание текста в ячейке равно распределено (горизонтально или вертикально), как оно отображается в текущем пользовательском <see cref="T:Microsoft.Office.Interop.Excel.Range" /> интерфейсе.</summary>
+        <value>Указывает, будет ли Microsoft Excel автоматически отступить от текста связанного объекта, если выравнивание текста в ячейке имеет одинаковое распределение (горизонтально или вертикально), как оно отображается в текущем пользовательском <see cref="T:Microsoft.Office.Interop.Excel.Range" /> интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если при установке выравнивания текста в ячейке автоматически добавляется отступ, как по горизонтали, так и по вертикали, равным распределению.</para>
+          <para>Возвращает <b>true,</b> если текст автоматически отступ, когда выравнивание текста в ячейке установлено по горизонтали или по вертикали для равного распределения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -80,8 +80,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий создателя указанного объекта.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /> Объект.</value>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -109,8 +109,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Borders" /> объект, представляющий границы связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Borders" /> Объект, представляющий границы связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает объект, который представляет границы связанного объекта, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Borders" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Объект, который представляет границы связанного объекта, отображаемого в <see cref="T:Microsoft.Office.Interop.Excel.Borders" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -142,10 +142,10 @@
         <Parameter Name="Length" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Start">Первый возвращаемый символ. Если этот аргумент равен 1 или опущен, это свойство возвращает диапазон символов, начиная с первого символа.</param>
-        <param name="Length">Число возвращаемых символов. Если этот аргумент опущен, это свойство возвращает оставшуюся часть строки (все после <paramref name="Start" /> знака).</param>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> объект, представляющий диапазон символов в тексте связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, который отображается в текущем пользовательском интерфейсе.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Characters" /> Объект, представляющий диапазон символов в тексте связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, так как он отображается в текущем пользовательском интерфейсе.</value>
+        <param name="Start">Первый возвращаемый символ. Если этот аргумент имеет либо 1, либо опущен, это свойство возвращает диапазон символов, начиная с первого символа.</param>
+        <param name="Length">Количество возвращаемого символа. Если этот аргумент опущен, это свойство возвращает оставшуюся часть строки (все после <paramref name="Start" /> символа).</param>
+        <summary>Получает объект, который представляет диапазон символов в тексте связанного объекта, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Объект, который представляет диапазон символов в тексте связанного объекта, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -172,10 +172,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32 — разрядное <b>целое число</b> , которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para><b>Доступно только для</b>чтения.</para>
-          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C. <see cref="P:Microsoft.Office.Interop.Excel.DisplayFormat.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Длинное только <b>для чтения.</b></para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.DisplayFormat.Creator" /> символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -202,8 +202,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> элемента, который отображается в текущем пользовательском интерфейсе.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Font" /> Объект, представляющий шрифт связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> элемента, который отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает объект, который представляет шрифт связанного, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Font" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Объект, который представляет шрифт связанного, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Font" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -231,10 +231,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, является ли формула связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта скрытой, когда лист защищен, как он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Указывает, является ли формула связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта скрытой, когда лист защищен, как он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое указывает, скрыта ли формула связанного объекта при защите таблицы в текущем пользовательском <see cref="T:Microsoft.Office.Interop.Excel.Range" /> интерфейсе.</summary>
+        <value>Указывает, скрыта ли формула связанного объекта, если таблица защищена в текущем <see cref="T:Microsoft.Office.Interop.Excel.Range" /> пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если формула скрыта, когда лист защищен, ссылка NULL (Nothing в Visual Basic), если диапазон содержит ячейки <see cref="P:Microsoft.Office.Interop.Excel.DisplayFormat.FormulaHidden" /> со значением <b>true</b> , а некоторые ячейки со <see cref="P:Microsoft.Office.Interop.Excel.DisplayFormat.FormulaHidden" /> значением <b>false</b>.</para>
+          <para>Возвращает <b></b> true, если формула скрыта, когда таблица защищена, нулевые ссылки (Nothing in Visual Basic), если диапазон содержит несколько ячеек со равным true, а некоторые ячейки со равным <see cref="P:Microsoft.Office.Interop.Excel.DisplayFormat.FormulaHidden" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.DisplayFormat.FormulaHidden" /> <b>false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -261,8 +261,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее горизонтальное выравнивание связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором оно отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Горизонтальное выравнивание связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором оно отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое представляет горизонтальное выравнивание связанного объекта, отображаемого в <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</summary>
+        <value>Горизонтальное выравнивание связанного объекта, отображаемого <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -290,8 +290,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее уровень отступа связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Уровень отступа связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое представляет уровень отступа связанного объекта, отображаемого в <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</summary>
+        <value>Уровень отступа связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, отображаемого в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -319,8 +319,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором она отображается в текущем пользовательском интерфейсе.</summary>
-        <value><see cref="T:Microsoft.Office.Interop.Excel.Interior" /> Объект, представляющий внутреннюю часть связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором она отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает объект, который представляет внутреннюю часть связанного объекта, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Объект, который представляет внутреннюю часть связанного объекта, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -348,10 +348,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, которое указывает, заблокирован ли <see cref="T:Microsoft.Office.Interop.Excel.Range" /> связанный объект, так как он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Указывает, заблокирован ли <see cref="T:Microsoft.Office.Interop.Excel.Range" /> связанный объект, так как он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое указывает, заблокирован ли связанный объект в текущем пользовательском <see cref="T:Microsoft.Office.Interop.Excel.Range" /> интерфейсе.</summary>
+        <value>Указывает, заблокирован ли связанный объект в текущем <see cref="T:Microsoft.Office.Interop.Excel.Range" /> пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если диапазон заблокирован, <b>значение false</b> , если диапазон можно изменить при использовании защищенного листа, или ссылку null (Nothing в Visual Basic), если диапазон содержит как заблокированные, так и незаблокированные ячейки.</para>
+          <para>Возвращает <b></b> true, если диапазон заблокирован, <b>false,</b> если диапазон можно изменить при защите листа, или нулевую ссылку (Nothing in Visual Basic), если диапазон содержит как заблокированные, так и разблокированную ячейки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -378,10 +378,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, содержит ли связанный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект Объединенные ячейки, отображаемые в текущем пользовательском интерфейсе.</summary>
-        <value>Указывает, содержит ли <see cref="T:Microsoft.Office.Interop.Excel.Range" /> связанный объект Объединенные ячейки, отображаемые в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое указывает, содержит ли связанный объект объединенные ячейки в текущем пользовательском <see cref="T:Microsoft.Office.Interop.Excel.Range" /> интерфейсе.</summary>
+        <value>Указывает, содержит ли связанный объект объединенные ячейки, как он отображается <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если диапазон содержит объединенные ячейки.</para>
+          <para>Возвращает <b>true,</b> если диапазон содержит объединенные ячейки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -408,10 +408,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее код формата связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Код формата связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое представляет код формата связанного объекта, отображаемого в <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</summary>
+        <value>Код формата связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, отображаемого в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Это свойство возвращает пустую ссылку (Nothing в Visual Basic), если все ячейки в указанном диапазоне имеют одинаковый числовой формат.</para>
+          <para>Это свойство возвращает нулевую ссылку (Nothing in Visual Basic), если все ячейки в указанном диапазоне не имеют одинакового числовых форматов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -438,8 +438,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее код формата, связанный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> как строка, на языке пользователя в том виде, в котором она отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Код формата, связанный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> как строка на языке пользователя в том виде, в котором она отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое представляет код формата связанного в виде строки на языке пользователя, отображаемом в текущем <see cref="T:Microsoft.Office.Interop.Excel.Range" /> пользовательском интерфейсе.</summary>
+        <value>Код формата связанного в виде строки на языке пользователя, отображаемом в <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -467,8 +467,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее ориентацию текста связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Ориентация текста связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое представляет ориентацию текста связанного объекта, отображаемого <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Ориентация текста связанного объекта в том виде, в который он <see cref="T:Microsoft.Office.Interop.Excel.Range" /> отображается в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -525,8 +525,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает порядок чтения связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, так как он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Порядок чтения связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает порядок чтения связанного объекта, отображаемого <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Порядок чтения связанного объекта, отображаемого <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -554,10 +554,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, будет ли Microsoft Excel автоматически сжимать текст в соответствии с шириной доступной колонки связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, как она отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Указывает, что Microsoft Excel автоматически сжимает текст в соответствии с шириной имеющегося столбца связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта, так как он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое указывает, сжимается ли Microsoft Excel автоматически в доступной ширине столбца связанного объекта, как оно отображается в текущем пользовательском <see cref="T:Microsoft.Office.Interop.Excel.Range" /> интерфейсе.</summary>
+        <value>Указывает, сжимает ли Microsoft Excel текст автоматически в доступной ширине столбца связанного объекта, отображаемого в текущем <see cref="T:Microsoft.Office.Interop.Excel.Range" /> пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если текст автоматически сжимается в соответствии с шириной доступной ширины столбца.</para>
+          <para>Возвращает <b>true,</b> если текст автоматически сжимается в доступной ширине столбца.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -584,8 +584,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, содержащее <see cref="T:Microsoft.Office.Interop.Excel.Style" /> объект, представляющий стиль связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Значение, содержащее <see cref="T:Microsoft.Office.Interop.Excel.Style" /> объект, который представляет стиль связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, содержащее объект, представляющее стиль связанного объекта, отображаемого в <see cref="T:Microsoft.Office.Interop.Excel.Style" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</summary>
+        <value>Значение, содержащее объект, представляющее стиль связанного объекта, отображаемого в <see cref="T:Microsoft.Office.Interop.Excel.Style" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> текущем пользовательском интерфейсе.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -612,8 +612,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, представляющее вертикальное выравнивание связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором оно отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Вертикальное выравнивание связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта в том виде, в котором оно отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое представляет вертикальное выравнивание связанного объекта, отображаемого <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</summary>
+        <value>Вертикальное выравнивание связанного объекта, отображаемого <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -641,10 +641,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, указывающее, переносит ли Microsoft Excel текст связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта так, как он отображается в текущем пользовательском интерфейсе.</summary>
-        <value>Указывает, переносит ли Microsoft Excel текст связанного <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта так, как он отображается в текущем пользовательском интерфейсе.</value>
+        <summary>Получает значение, которое указывает, является ли Microsoft Excel переносом текста связанного объекта, отображаемого в текущем <see cref="T:Microsoft.Office.Interop.Excel.Range" /> пользовательском интерфейсе.</summary>
+        <value>Указывает, является ли Microsoft Excel переносом текста связанного объекта в том виде, в который он отображается <see cref="T:Microsoft.Office.Interop.Excel.Range" /> в текущем пользовательском интерфейсе.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Возвращает <b>значение true</b> , если текст упакован во все ячейки в диапазоне.</para>
+          <para>Возвращает <b>true,</b> если текст упакован во все ячейки в диапазоне.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
