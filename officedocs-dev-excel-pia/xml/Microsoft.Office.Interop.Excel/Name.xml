@@ -1,5 +1,5 @@
 <Type Name="Name" FullName="Microsoft.Office.Interop.Excel.Name">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="03c7a9b67e0c5237abc6e68749010ea9f9840fdb" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20575896" /></Metadata><TypeSignature Language="C#" Value="public interface Name" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="03c7a9b67e0c5237abc6e68749010ea9f9840fdb" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50011440" /></Metadata><TypeSignature Language="C#" Value="public interface Name" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Name" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Name" />
   <TypeSignature Language="VB.NET" Value="Public Interface Name" />
@@ -22,13 +22,13 @@
   </Attributes>
   <Docs>
     <summary>Представляет определенное имя для диапазона ячеек.</summary>
-    <remarks><para>Имена могут быть встроенными именами, такими как Database, Print_Area и Auto_Open, или настраиваемыми именами.</para>
-      <para>Объекты "приложение", "книга" и "лист"</para>
-      <para>Объект <b>Name</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Names" /> коллекции для объектов <see cref="T:Microsoft.Office.Interop.Excel.Application" />, <see cref="T:Microsoft.Office.Interop.Excel.Workbook" />и <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> объектов. Используйте <b>Names</b>Names<paramref name="index" />(), <paramref name="index" /> где — это имя индекса или определенное имя, чтобы вернуть один объект <b>имени</b> .</para>
-      <para>Номер индекса указывает положение имени в коллекции. Имена располагаются в алфавитном порядке (от a до z) и не учитывают регистр (этот порядок отображается в диалоговых окнах определить имя и применить имена), возвращаемым щелчком команды имя в меню Вставка.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Name.Name" /> свойство, чтобы вернуть или задать текст самого имени.</para>
+    <remarks><para>Имена могут быть либо встроенными именами, такими как Database, Print_Area и Auto_Open, либо настраиваемые имена.</para>
+      <para>Объекты приложений, книг и таблиц</para>
+      <para>Объект <b>Name</b> является членом коллекции объектов <see cref="T:Microsoft.Office.Interop.Excel.Names" /> , <see cref="T:Microsoft.Office.Interop.Excel.Application" /> <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> и. Используйте <b>names</b>(), где находится номер индекса имени или определенное имя, чтобы <paramref name="index" /> вернуть один объект <paramref name="index" /> <b>Name.</b></para>
+      <para>Номер индекса указывает положение имени в коллекции. Имена размещаются в алфавитном порядке от a до Z и не чувствительны к диагонали (это тот же порядок, который отображается в диалоговом окнах "Определение имени" и "Применение имен", возвращаемого щелчком команды "Имя" в меню "Вставка").</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Name.Name" /> свойство, чтобы вернуть или установить текст самого имени.</para>
       <para>Объекты Range</para>
-      <para>Хотя <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект может иметь несколько имен, для объекта <b>Range</b> не существует коллекции <b>names</b> . Используйте <b>Name</b> с объектом <b>Range</b> , чтобы возвратить имя из списка имен (отсортированного по алфавиту), назначенного диапазону.</para>
+      <para>Хотя у объекта может быть несколько имен, коллекция Names для объекта <see cref="T:Microsoft.Office.Interop.Excel.Range" /> <b>Range не</b> существует. <b></b> Используйте <b>name</b> с <b>объектом Range,</b> чтобы вернуть имя из списка имен (отсортировать в алфавитном порядке), присвоенных диапазону.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -86,7 +86,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,7 +182,7 @@
       <Docs>
         <summary>Возвращает или задает комментарий, связанный с именем. Для чтения и записи, <b>String</b>.</summary>
         <value><b>Строка</b></value>
-        <remarks><para>Длина текста комментария не может превышать 255 символов. </para>
+        <remarks><para>Текст комментария не может превышать 255 символов. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -211,8 +211,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если указанный объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если указанный объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -264,7 +264,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции схожих объектов.</summary>
+        <summary>Возвращает номер индекса объекта в коллекции похожих объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -295,7 +295,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlXLMMacroType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, на которое ссылается имя.</summary>
+        <summary>Возвращает или задает то, на что ссылается имя.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -358,7 +358,7 @@
       <Docs>
         <summary>Возвращает или задает имя объекта на языке пользователя.</summary>
         <value>To be added.</value>
-        <remarks><para>Если Style является встроенным стилем, это свойство возвращает имя стиля на языке текущего языкового стандарта.</para>
+        <remarks><para>Если стиль является встроенным, это свойство возвращает имя стиля на языке текущего языка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -416,7 +416,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает формулу, на которую задается имя, на языке макроса и в нотации в стиле a1, начиная со знака равенства.</summary>
+        <summary>Возвращает или задает формулу, на которую ссылается имя, на языке макроса и в нотации в стиле A1, начиная с знака равного.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -449,7 +449,7 @@
       <Docs>
         <summary>Возвращает или задает формулу, на которую ссылается имя.</summary>
         <value>To be added.</value>
-        <remarks><para>Формула относится к языку пользователя и относится к нотации в стиле a1, начиная со знака равенства.</para>
+        <remarks><para>Формула находится на языке пользователя и в нотации в стиле A1, начиная с знака равного.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -481,7 +481,7 @@
       <Docs>
         <summary>Возвращает или задает формулу, на которую ссылается имя.</summary>
         <value>To be added.</value>
-        <remarks><para>Формула относится к языку макроса и находится в нотации стиля R1C1, начиная со знака равенства.</para>
+        <remarks><para>Формула находится на языке макроса и в нотации в стиле R1C1, начиная с знака равного.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -513,7 +513,7 @@
       <Docs>
         <summary>Возвращает или задает формулу, на которую ссылается имя.</summary>
         <value>To be added.</value>
-        <remarks><para>Эта формула относится к языку пользователя и относится к нотации в стиле R1C1, начиная со знака равенства.</para>
+        <remarks><para>Эта формула находится на языке пользователя и в нотации в стиле R1C1, начиная с знака равного.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -542,7 +542,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, на который ссылается <see cref="T:Microsoft.Office.Interop.Excel.Name" /> объект.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект <b>Name</b> не ссылается на диапазон (например, если он ссылается на константу или формулу), это свойство завершается с ошибкой.</para>
+        <remarks><para>Если объект <b>Name</b> не ссылается на диапазон (например, если он ссылается на константы или формулы), это свойство не удается.</para>
           <para>Чтобы изменить диапазон, на который ссылается имя, используйте <see cref="P:Microsoft.Office.Interop.Excel.Name.RefersTo" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
@@ -573,7 +573,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает сочетание клавиш для имени, определенного как пользовательская команда макроса Microsoft Excel 4,0.</summary>
+        <summary>Возвращает или задает сочетания клавиш для имени, определенного как настраиваемая команда макроса Microsoft Excel 4.0.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -601,8 +601,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>значение true</b> , если указанный объект <b>Name</b> является допустимым параметром книги. Только для чтения, <b>Булен</b>.</summary>
-        <value><b>булен</b></value>
+        <summary>Возвращает <b>true,</b> если указанный <b>объект Name</b> является допустимым параметром книги. Boolen только <b>для чтения.</b></summary>
+        <value><b>Boolen</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -632,9 +632,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает строку, содержащую формулу, для которой задается имя.</summary>
+        <summary>Возвращает строку, содержащую формулу, на которую ссылается имя.</summary>
         <value>To be added.</value>
-        <remarks><para>Строка размещается в нотации в стиле a1 на языке макроса, а начинается со знака равенства.</para>
+        <remarks><para>Строка находится в нотации в стиле A1 на языке макроса и начинается с знака равного.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -666,8 +666,8 @@
       <Docs>
         <summary>Определяет, является ли объект видимым.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Visible</b> элемента сводной таблицы имеет <b>значение true</b> , если элемент в данный момент отображается в таблице.</para>
-          <para>Если свойству <b>Visible</b> присвоено значение <b>false</b>, имя не будет отображаться в диалоговом окне <b>Определение имени</b> .</para>
+        <remarks><para>Свойство <b>Visible</b> элемента pivotTable имеет свойство <b>True,</b> если элемент в настоящее время виден в таблице.</para>
+          <para>Если для свойства <b>Visible</b> для имени установлено имя <b>False,</b>имя не будет отображаться в диалоговом окне <b>"Определение</b> имени".</para>
           <para> </para></remarks>
       </Docs>
     </Member>

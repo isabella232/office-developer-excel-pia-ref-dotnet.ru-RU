@@ -1,5 +1,5 @@
 <Type Name="OLEDBError" FullName="Microsoft.Office.Interop.Excel.OLEDBError">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a18ac30019f24f95aff6f5894f53852a7d6cfb61" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20581510" /></Metadata><TypeSignature Language="C#" Value="public interface OLEDBError" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a18ac30019f24f95aff6f5894f53852a7d6cfb61" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50011356" /></Metadata><TypeSignature Language="C#" Value="public interface OLEDBError" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OLEDBError" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.OLEDBError" />
   <TypeSignature Language="VB.NET" Value="Public Interface OLEDBError" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет ошибку OLE DB, возвращенную самым последним запросом OLE DB.</summary>
-    <remarks><para>Объект <b>OLEDBError</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.OLEDBErrors" /> коллекции. Если указанный запрос OLE DB выполняется без ошибок, коллекция <b>OLEDBErrors</b> будет пустой. Ошибки в коллекции индексируются в том порядке, в котором они создаются поставщиком OLE DB.</para>
-      <para>Используйте <b>OLEDBErrors</b>(<paramref name="index" />), где <paramref name="index" /> — это номер индекса ошибки OLE DB, чтобы вернуть один объект <b>OLEDBError</b> .</para>
+    <summary>Представляет ошибку OLE DB, возвращенную последним запросом OLE DB.</summary>
+    <remarks><para>Объект <b>OLEDBError</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.OLEDBErrors" /> коллекции. Если указанный запрос OLE DB выполняется без ошибок, <b>коллекция OLEDBErrors</b> пуста. Ошибки в коллекции индексются в том порядке, в котором они создаются поставщиком OLE DB.</para>
+      <para>Используйте <b>OLEDBErrors</b>( ), где находится номер индекса ошибки OLE DB, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>OLEDBError.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,8 +80,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -136,7 +136,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает числовое значение, задающее конкретное поставщик, которое определяет ошибку. Номер ошибки соответствует условию ошибки, которое было получено после последнего запроса OLE DB.</summary>
+        <summary>Возвращает числовую ошибку для конкретного поставщика. Номер ошибки соответствует условию ошибки, которая произошла после последнего запроса OLE DB.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -164,7 +164,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает числовое значение, задающее ошибку. Номер ошибки соответствует уникальному номеру ловушки, соответствующему ошибочному состоянию, который привел к последнему запросу OLE DB.</summary>
+        <summary>Возвращает числическое значение, заданное для ошибки. Номер ошибки соответствует уникальному номеру ловушек, соответствующему условию ошибки, которая произошла после последнего запроса OLE DB.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -220,9 +220,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает ошибку состояния SQL.</summary>
+        <summary>Возвращает ошибку SQL состояния.</summary>
         <value>To be added.</value>
-        <remarks><para>Описание конкретной ошибки приведено в документации по SQL.</para>
+        <remarks><para>Описание конкретной ошибки см. в документации по SQL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -249,7 +249,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает числовое значение, определяющее стадию ошибки, которая была вызвана последним запросом OLE DB.</summary>
+        <summary>Возвращает числовую величину, определяя стадию ошибки, которая произошла после последнего запроса OLE DB.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

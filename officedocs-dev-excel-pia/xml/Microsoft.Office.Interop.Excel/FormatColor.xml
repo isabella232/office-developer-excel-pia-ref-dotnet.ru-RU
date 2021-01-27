@@ -1,5 +1,5 @@
 <Type Name="FormatColor" FullName="Microsoft.Office.Interop.Excel.FormatColor">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f57d49748d62286fafce20d40a1880d5eeb2e6ca" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20580831" /></Metadata><TypeSignature Language="C#" Value="public interface FormatColor" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f57d49748d62286fafce20d40a1880d5eeb2e6ca" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012210" /></Metadata><TypeSignature Language="C#" Value="public interface FormatColor" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormatColor" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FormatColor" />
   <TypeSignature Language="VB.NET" Value="Public Interface FormatColor" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет цвет заливки, заданный для порога в условном формате цветовой шкалы или цвет полосы в условном формате панели данных.</summary>
-    <remarks><para>Вы можете выбрать цвет, передав значение RGB в <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.Color" /> свойстве или назначить цвет с помощью индексирования цветовой палитры темы с помощью <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.ThemeColor" /> свойства.</para>
+    <summary>Представляет цвет заливки, указанный для порогового значения условного формата цветовой шкалы или цвета панели в условном формате панели данных.</summary>
+    <remarks><para>Вы можете выбрать цвет, передав значение RGB в свойстве или указав цвет путем индексации в цветовой палитре <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.Color" /> темы с помощью <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.ThemeColor" /> свойства.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,9 +49,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект, представляющий приложение Microsoft Office Excel. При использовании с квалификатором объекта это свойство возвращает объект <b>Application</b> , представляющий создателя указанного объекта. Только для чтения.</summary>
+        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office  <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
         <value><b>Приложение</b> (см. выше)</value>
-        <remarks><para>Это свойство можно использовать с объектом OLE Automation, чтобы возвратить приложение этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -81,9 +81,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет заливки, связанный с пороговое значение для правила условного форматирования гистограммы или цветовой шкалы.</summary>
+        <summary>Возвращает или задает цвет заливки, связанный с порогом для панели данных или правила условного форматирования цветовой шкалы.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Цвет формата выражается в виде <see cref="P:Microsoft.Office.Core.ColorFormat.RGB" />функции. Например, чтобы задать красный цвет, используйте RGB (255, 0, 0).</para>
+        <remarks><para>Цвет формата выражается как <see cref="P:Microsoft.Office.Core.ColorFormat.RGB" /> функция. Например, чтобы установить красный цвет, используйте RGB(255,0,0).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -113,9 +113,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> перечисления, указывая, отображается ли цвет заливки в виде значения индекса в текущей цветовой палитре.</summary>
+        <summary>Возвращает или задает одну из констант в этом значении, указав, выражается ли цвет заливки в качестве значения индекса в <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> текущей цветовой палитре.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /></value>
-        <remarks><para>Это свойство используется для каждого порога в правиле цветовой шкалы или условное форматирование панели данных.</para>
+        <remarks><para>Это свойство используется для каждого порогового значения правила условного форматирования цветовой шкалы или панели данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -144,7 +144,7 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Только для чтения, <b>Integer</b>.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.  <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.Creator" /> Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -202,7 +202,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlThemeColor" /> перечисления, задавая цвет темы, используемый в пороговом значении для условного форматирования гистограммы или цветовой шкалы.</summary>
+        <summary>Возвращает или задает одну из констант в этом значении, указав цвет темы, используемый в пороговом значении панели данных или условном <see cref="T:Microsoft.Office.Interop.Excel.XlThemeColor" /> формате цветовой шкалы.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -233,9 +233,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>один</b> экземпляр, который осветляет или затемняет цвет заливки ячейки для порогового значения правила условного форматирования "Гистограмма" или "Цветовая шкала".</summary>
+        <summary>Возвращает или задает значение <b>Single,</b> осветляющий или затемниющий цвет заливки ячейки для порогового значения панели данных или правила условного форматирования цветовой шкалы.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Можно ввести число от-1 (самый темный) до 1 (самое светлое) для <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.TintAndShade" /> свойства. Ноль (0) не является нейтральным.</para>
+        <remarks><para>Для свойства можно ввести число от -1 (самый темный) до 1 (самый <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.TintAndShade" /> светлый). Ноль (0) нейтральный.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

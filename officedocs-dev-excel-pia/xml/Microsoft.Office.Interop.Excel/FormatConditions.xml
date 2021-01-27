@@ -1,5 +1,5 @@
 <Type Name="FormatConditions" FullName="Microsoft.Office.Interop.Excel.FormatConditions">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ba5c29fb9f36cf63da85041a757db4dd4b830ce1" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587516" /></Metadata><TypeSignature Language="C#" Value="public interface FormatConditions : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ba5c29fb9f36cf63da85041a757db4dd4b830ce1" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012175" /></Metadata><TypeSignature Language="C#" Value="public interface FormatConditions : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormatConditions implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FormatConditions" />
   <TypeSignature Language="VB.NET" Value="Public Interface FormatConditions&#xA;Implements IEnumerable" />
@@ -27,9 +27,9 @@
   <Docs>
     <summary>Представляет коллекцию условных форматов для одного диапазона.</summary>
     <remarks><para>Коллекция <b>FormatConditions</b> может содержать до трех условных форматов. Каждый формат представлен <see cref="T:Microsoft.Office.Interop.Excel.FormatCondition" /> объектом.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.FormatConditions" /> свойство, чтобы возвратить объект <b>FormatConditions</b> . Используйте <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для создания нового условного форматирования и используйте <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для изменения существующего условного форматирования.</para>
-      <para>Если вы попытаетесь создать более трех условных форматов для одного диапазона, метод <b>Add</b> завершается с ошибкой. Если диапазон имеет три формата, можно использовать метод <b>Modify</b> , чтобы изменить один из форматов, или можно использовать <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> метод для удаления формата, а затем использовать метод <b>Add</b> для создания нового формата.</para>
-      <para>Для получения дополнительных сведений о условных форматах <see cref="T:Microsoft.Office.Interop.Excel.FormatCondition" /> просмотрите объект.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Range.FormatConditions" /> для возврата <b>объекта FormatConditions.</b> Используйте этот метод для создания условного формата и используйте его для <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> изменения существующего условного формата.</para>
+      <para>Если попытаться создать более трех условных форматов для одного диапазона, метод <b>Add</b> не удастся. Если диапазон имеет три формата, вы можете использовать метод <b>Modify,</b> чтобы изменить один из форматов, или с помощью этого метода удалить формат, а затем использовать метод Add для создания нового <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> формата. <b></b></para>
+      <para>Дополнительные сведения об условных форматах см. в <see cref="T:Microsoft.Office.Interop.Excel.FormatCondition" /> объекте.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -97,17 +97,17 @@
         <Parameter Name="ScopeType" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">. (<see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" />. Указывает, основывается ли условное форматирование на значении ячейки или выражении.</param>
-        <param name="Operator">Оператор условного форматирования. Может быть одной <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> из следующих констант: <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlBetween" />, <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlEqual" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlGreater" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlGreaterEqual" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlLess" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlLessEqual" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlNotBetween" />,,,,, или. <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlNotEqual" /> Если <paramref name="Type" /> параметр <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlExpression" />имеет значение <paramref name="Operator" /> , аргумент игнорируется.</param>
-        <param name="Formula1">Значение или выражение, связанное с условным форматированием. Возможные значения: константа, <b>строковое</b> значение, ссылка на ячейку или формула.</param>
-        <param name="Formula2">Значение или выражение, связанное с второй частью условного формата, когда <paramref name="Operator" /> имеет <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlBetween" /> значение <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlNotBetween" /> или (в противном случае этот аргумент игнорируется). Возможные значения: константа, строковое значение, ссылка на ячейку или формула.</param>
+        <param name="Type">. (<see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" />. Указывает, основан ли условный формат на значении ячейки или выражении.</param>
+        <param name="Operator">Оператор условного формата. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> констант: <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlBetween" /> , <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlEqual" /> или <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlGreater" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlGreaterEqual" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlLess" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlLessEqual" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlNotBetween" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlNotEqual" /> . Если <paramref name="Type" /> это <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlExpression" /> так, аргумент <paramref name="Operator" /> игнорируется.</param>
+        <param name="Formula1">Значение или выражение, связанное с условным форматом. Может быть постоянным значением, <b>строкой,</b> ссылкой на ячейку или формулой.</param>
+        <param name="Formula2">Значение или выражение, связанное со второй частью условного формата, когда это так или иначе (в противном случае этот <paramref name="Operator" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlBetween" /> аргумент <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionOperator.xlNotBetween" /> игнорируется). Может быть постоянным значением, строкой, ссылкой на ячейку или формулой.</param>
         <param name="String">To be added.</param>
         <param name="TextOperator">To be added.</param>
         <param name="DateOperator">To be added.</param>
         <param name="ScopeType">To be added.</param>
         <summary>Добавляет новый условный формат.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.FormatCondition" /> Объект, представляющий новое условное форматирование.</returns>
-        <remarks><para>Вы не можете определить более трех условных форматов для диапазона. Используйте <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод, чтобы изменить существующее условное форматирование, или используйте <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> метод, чтобы удалить существующий формат перед добавлением нового.</para>
+        <returns>Объект, <see cref="T:Microsoft.Office.Interop.Excel.FormatCondition" /> который представляет новый условный формат.</returns>
+        <remarks><para>Для диапазона нельзя определить более трех условных форматов. Используйте этот метод для изменения существующего условного формата или для удаления существующего формата перед <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> добавлением нового.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -133,8 +133,8 @@
       <Parameters />
       <Docs>
         <summary>Возвращает новый <see cref="T:Microsoft.Office.Interop.Excel.AboveAverage" /> объект, представляющий правило условного форматирования для указанного диапазона.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.AboveAverage" />объектам</returns>
-        <remarks><para><see cref="T:Microsoft.Office.Interop.Excel.AboveAverage" /> Объект используется для поиска значений выше или ниже среднего или стандартного отклонения в диапазоне ячеек. Например, вы можете найти приведенных выше средних почтовых работ в годовом обзоре производительности или найти производимые материалы, которые попадают под два стандартных отклонения в рейтинге качества.</para>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.AboveAverage" /> object</returns>
+        <remarks><para>Объект используется для поиска значений выше или ниже среднего или стандартного отклонения <see cref="T:Microsoft.Office.Interop.Excel.AboveAverage" /> в диапазоне ячеек. Например, вы можете найти вышеперечисленные средние показатели в ежегодной проверке производительности или найти в оценке качества материалы, которые опускается ниже двух стандартных отклонений.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -162,9 +162,9 @@
       </Parameters>
       <Docs>
         <param name="ColorScaleType">Тип цветовой шкалы.</param>
-        <summary>Возвращает новый <see cref="T:Microsoft.Office.Interop.Excel.ColorScale" /> объект, представляющий правило условного форматирования, которое использует градации в цветах ячеек для обозначения относительных различий в значениях ячеек, включенных в выбранный диапазон.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.ColorScale" />объектам</returns>
-        <remarks><para>Цветовые шкалы — это визуальные направляющие, которые помогут вам разоучиться распространению и вариации данных. Цветовая шкала помогает определить относительные различия значений ячеек в заданном диапазоне с помощью варианта Color. Различные цвета и градации цветов представляют различия значений ячеек. Например, в масштабе из трех цветов можно указать, что ячейки с самыми высокими относительными значениями данных — зелеными, ячейки с промежуточными значениями — желтые, а ячейки с наименьшими значениями красного цвета.</para>
+        <summary>Возвращает новый объект, представляющий правило условного форматирования, которое использует градации в цветах ячеек, чтобы показать относительные различия в значениях ячеек, включенных в <see cref="T:Microsoft.Office.Interop.Excel.ColorScale" /> выбранный диапазон.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.ColorScale" /> object</returns>
+        <remarks><para>Цветовые шкалы — это визуальные руководства, которые помогают понять распределение и вариант данных. Цветовая шкала помогает определить относительные различия в значениях ячеек в заданном диапазоне с помощью цветового варианта. Различные цвета и градации между цветами представляют различия в значениях ячеей. Например, в трехцветной шкале можно указать, что ячейки с самыми высокими относительным значениями данных являются зелеными, ячейки с промежуточными значениями желтыми, а ячейки с наименьшими значениями — красными.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -189,9 +189,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Databar" /> объект, представляющий правило условного форматирования панели данных для указанного диапазона.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.Databar" />объектам</returns>
-        <remarks><para>Гистограммы помогают увидеть значение ячейки относительно других ячеек. Длина столбца данных представляет значение в ячейке. Более длинная полоса представляет более высокое значение, а более короткие — меньшее значение. Гистограммы удобно использовать при обнаружении более высоких и нижних чисел, особенно в случае с большими объемами данных, например с помощью верхнего и нижнего продаж Toys в отчете о продажах в праздничные дни.</para>
+        <summary>Возвращает объект, представляющий правило условного форматирования панели данных <see cref="T:Microsoft.Office.Interop.Excel.Databar" /> для указанного диапазона.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.Databar" /> object</returns>
+        <remarks><para>Полосы данных помогают увидеть значение ячейки относительно других ячеек. Длина панели данных представляет значение в ячейке. Более длинная гистометра представляет более высокое значение, а более короткая — более низкое значение. Полосы данных полезны при обнаружении больших и низких чисел, особенно при больших объемах данных, таких как верхней и нижней продажи игрушек в отчете о продажах праздников.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -216,9 +216,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает новый <see cref="T:Microsoft.Office.Interop.Excel.IconSetCondition" /> объект, представляющий правило условного форматирования набора значков для указанного диапазона.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.IconSetCondition" />объектам</returns>
-        <remarks><para>Используйте набор значков для аннотирования и классификации данных в трех и пяти категориях, разделенных на пороговое значение. Каждый значок соответствует диапазону значений. Например, в наборе значков с тремя стрелками вверх стрелка вверх представляет более высокие значения, желтая стрелка в сторону представляет средние значения, а зеленая стрелка вниз — более низкие значения.</para>
+        <summary>Возвращает новый объект, который представляет правило условного форматирования набора значков <see cref="T:Microsoft.Office.Interop.Excel.IconSetCondition" /> для указанного диапазона.</summary>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.IconSetCondition" /> object</returns>
+        <remarks><para>Используйте набор значков, чтобы примечать и классифицировать данные на три-пять категорий, разделенных порогом. Каждый значок представляет диапазон значений. Например, в наборе со значком "3 стрелки" красная стрелка вверх представляет более высокие значения, желтая стрелка бокового цвета — средние значения, а зеленая стрелка вниз — более низкие значения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -244,8 +244,8 @@
       <Parameters />
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Top10" /> объект, представляющий правило условного форматирования для указанного диапазона.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.Top10" />объектам</returns>
-        <remarks><para>С помощью <see cref="T:Microsoft.Office.Interop.Excel.Top10" /> объекта можно найти максимальные и минимальные значения в диапазоне ячеек на основе указанного значения отсечки. Например, вы можете найти пять продажных продуктов в региональном отчете, последние 15 процентов продуктов в опросе клиентов или 25 самых популярных в анализе персонала Отдела.</para>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.Top10" /> object</returns>
+        <remarks><para>С помощью объекта вы можете найти самые высокие и минимальные значения в диапазоне ячеек на основе закаленного вами <see cref="T:Microsoft.Office.Interop.Excel.Top10" /> конечного значения. Например, пять самых продаваемых продуктов можно найти в региональном отчете, 15 процентов продуктов в опросе клиентов или 25 лучших сотрудников отдела.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -271,8 +271,8 @@
       <Parameters />
       <Docs>
         <summary>Возвращает новый <see cref="T:Microsoft.Office.Interop.Excel.UniqueValues" /> объект, представляющий правило условного форматирования для указанного диапазона.</summary>
-        <returns><see cref="T:Microsoft.Office.Interop.Excel.UniqueValues" />объектам</returns>
-        <remarks><para>Этот <see cref="T:Microsoft.Office.Interop.Excel.UniqueValues" /> объект можно использовать для быстрого отображения ячеек, содержащих как уникальные, так и повторяющиеся значения.</para>
+        <returns><see cref="T:Microsoft.Office.Interop.Excel.UniqueValues" /> object</returns>
+        <remarks><para>Объект можно использовать <see cref="T:Microsoft.Office.Interop.Excel.UniqueValues" /> для быстрой визуализации ячеек, содержащих уникальные или повторяющиеся значения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -299,7 +299,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -327,7 +327,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -357,8 +357,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -442,7 +442,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>

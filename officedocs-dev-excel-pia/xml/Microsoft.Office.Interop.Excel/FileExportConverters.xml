@@ -1,5 +1,5 @@
 <Type Name="FileExportConverters" FullName="Microsoft.Office.Interop.Excel.FileExportConverters">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d9d15ade86de30f26a8ffa76c4393a2b02abadaa" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20572459" /></Metadata><TypeSignature Language="C#" Value="public interface FileExportConverters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d9d15ade86de30f26a8ffa76c4393a2b02abadaa" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012266" /></Metadata><TypeSignature Language="C#" Value="public interface FileExportConverters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FileExportConverters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FileExportConverters" />
   <TypeSignature Language="VB.NET" Value="Public Interface FileExportConverters&#xA;Implements IEnumerable" />
@@ -25,10 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> объектов, представляющих все конвертеры файлов, доступные для сохранения файлов.</summary>
-    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.FileExportConverters" /> свойство, чтобы возвратить <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекцию.</para>
-      <para>Метод <b>Add</b> недоступен для <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекции. <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" />объекты добавляются во время установки Microsoft Office или путем установки дополнительных конвертеров.</para>
-      <para>Используйте <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> (index), где index — целое число, чтобы возвратить отдельный объект FileExportConverter. Номер индекса представляет положение конвертера файлов в коллекции FileExportConverters.</para>
+    <summary>Коллекция объектов, которые представляют все конвертеры файлов, <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> доступные для сохранения файлов.</summary>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Application.FileExportConverters" /> для возврата <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекции.</para>
+      <para>Метод <b>Add</b> не доступен для <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекции. <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> объекты добавляются во время установки Microsoft Office путем установки дополнительных преобразователей.</para>
+      <para>Используйте <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> (индекс), где индекс является integer, для возврата одного объекта FileExportConverter. Номер индекса представляет положение конвертера файлов в коллекции FileExportConverters.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -90,7 +90,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Application" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -118,8 +118,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое</b> число, представляющее число конвертеров файлов в коллекции. Только для чтения.</summary>
-        <value><b>Integer</b></value>
+        <summary>Возвращает <b>integer,</b> которое представляет количество преобразователей файлов в коллекции. Только для чтения.</summary>
+        <value>64-разрядное целое число.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -146,9 +146,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> константу, указывающую приложение, в котором был создан указанный объект. Только для чтения, Long.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> константу, которая указывает приложение, в котором был создан указанный объект. Только для чтения, Long.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает шестнадцатеричное значение 5843454C, которое представляет строку "КСЦЕЛ". Свойство Creator предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает значение 5843454C, которое представляет строку "XCEL". Свойство Creator предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -239,7 +239,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>объект</b> , представляющий родительский объект указанной <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекции. Только для чтения.</summary>
+        <summary>Возвращает <b>объект,</b> который представляет родительский объект указанной <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекции. Только для чтения.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>

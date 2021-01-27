@@ -1,5 +1,5 @@
 <Type Name="Filter" FullName="Microsoft.Office.Interop.Excel.Filter">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="0a55068feedec78d62f267ca39e674ead9d7d9f3" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20576330" /></Metadata><TypeSignature Language="C#" Value="public interface Filter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0a55068feedec78d62f267ca39e674ead9d7d9f3" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012245" /></Metadata><TypeSignature Language="C#" Value="public interface Filter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Filter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Filter" />
   <TypeSignature Language="VB.NET" Value="Public Interface Filter" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет фильтр для одного столбца. Объект <b>Filter</b> является элементом <see cref="T:Microsoft.Office.Interop.Excel.Filters" /> коллекции. Коллекция <b>Filters</b> содержит все фильтры в диапазоне с автофильтром.</summary>
-    <remarks><para>Используйте <b>Filters</b>(<paramref name="index" />), <paramref name="index" /> где — это название фильтра или номер индекса, чтобы вернуть один объект <b>Filter</b> .</para>
-      <para>Обратите внимание, что все свойства объекта <b>Filter</b> доступны только для чтения. Чтобы задать эти свойства, примените автофильтрацию вручную или с <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> помощью метода <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</para>
+    <summary>Представляет фильтр для одного столбца. Объект <b>Filter</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Filters" /> коллекции. Коллекция <b>Filters</b> содержит все фильтры в диапазоне автофильтров.</summary>
+    <remarks><para>Используйте <b>фильтры</b>(), где находится заголовок фильтра или номер <paramref name="index" /> индекса, чтобы вернуть один объект <paramref name="index" /> <b>Filter.</b></para>
+      <para>Обратите внимание, что все свойства объекта <b>Filter</b> являются только для чтения. Чтобы настроить эти свойства, применим автозапок вручную или с помощью <see cref="M:Microsoft.Office.Interop.Excel.Range.AutoFilter(System.Object,System.Object,Microsoft.Office.Interop.Excel.XlAutoFilterOperator,System.Object,System.Object)" /> метода <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекта.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -81,7 +81,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -109,8 +109,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
-        <value><b>Integer</b></value>
+        <summary>Возвращает количество объектов в коллекции. Только для чтения, <b>Integer</b>.</summary>
+        <value>64-разрядное целое число.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -137,9 +137,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator </b>предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Свойство <b>Creator </b>предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -166,7 +166,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает первое отфильтрованное значение указанного столбца в отфильтрованном диапазоне.</summary>
+        <summary>Возвращает первое отфильтрованные значения для указанного столбца в отфильтрованный диапазон.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -194,9 +194,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает второе отфильтрованное значение указанного столбца в отфильтрованном диапазоне.</summary>
+        <summary>Возвращает второе отфильтрованные значения для указанного столбца в отфильтрованный диапазон.</summary>
         <value>To be added.</value>
-        <remarks><para>Если вы попытаетесь получить доступ к свойству <b>Criteria2</b> для фильтра, в котором не используются два условия, возникнет ошибка. Убедитесь, что <see cref="P:Microsoft.Office.Interop.Excel.Filter.Operator" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Filter" /> объекта не равно нулю (0), прежде чем пытаться получить доступ к свойству <b>Criteria2</b> .</para>
+        <remarks><para>Если попытаться получить доступ к свойству <b>Criteria2</b> для фильтра, который не использует два условия, произойдет ошибка. Перед попыткой доступа к свойству Criteria2 убедитесь, что свойство объекта не равно нулю <see cref="P:Microsoft.Office.Interop.Excel.Filter.Operator" /> <see cref="T:Microsoft.Office.Interop.Excel.Filter" /> (0). <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -223,7 +223,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если указанный фильтр включен.</summary>
+        <summary><b>Имеет</b> true, если указанный фильтр установлен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

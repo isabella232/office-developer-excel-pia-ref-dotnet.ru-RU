@@ -1,5 +1,5 @@
 <Type Name="DownBars" FullName="Microsoft.Office.Interop.Excel.DownBars">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8a11ccac0189762102efaa1f69baea1cafc3ed8e" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587537" /></Metadata><TypeSignature Language="C#" Value="public interface DownBars" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8a11ccac0189762102efaa1f69baea1cafc3ed8e" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012350" /></Metadata><TypeSignature Language="C#" Value="public interface DownBars" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract DownBars" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.DownBars" />
   <TypeSignature Language="VB.NET" Value="Public Interface DownBars" />
@@ -21,10 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет полосы понижения в группе диаграммы.</summary>
-    <remarks><para>Полосы понижения соединяют точки в первом ряду в группе диаграммы с нижними значениями последнего ряда (строки переходят из первого ряда). Только двумерные группы линий, которые содержат, содержащие не менее двух рядов, могут иметь полосы понижения. Этот объект не является семейством. Отсутствует объект, представляющий одну полосу понижения; для всех точек в группе диаграмм включены полосы и полосы понижения, либо они отключены.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.DownBars" /> свойство, чтобы возвратить объект <b>DownBars</b> .</para>
-      <para>Если <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.HasUpDownBars" /> свойство имеет <b>значение false</b>, большинство свойств объекта <b>DownBars</b> отключаются.</para>
+    <summary>Представляет полосы вниз в группе диаграммы.</summary>
+    <remarks><para>Полосы понижения соединяют точки первого ряда в группе диаграммы с более низкими значениями в последнем ряду (линии понижаются от первого ряда). Только двумерные группы линий, которые содержат, содержащие не менее двух рядов, могут иметь полосы понижения. Этот объект не является коллекцией. Нет объекта, который представляет одну нижа; Вы либо включили полосы вверх и вниз для всех точек в группе диаграммы, либо вы отключили их.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.DownBars" /> для возврата <b>объекта DownBars.</b></para>
+      <para>Если свойство имеет свойство False, большинство свойств объекта <see cref="P:Microsoft.Office.Interop.Excel.ChartGroup.HasUpDownBars" /> <b>DownBars</b> отключаются. <b></b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -51,7 +51,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -82,7 +82,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Border</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, который представляет границу объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -112,8 +112,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -169,7 +169,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект указанной фигуры или <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> объект для указанной диаграммы, который содержит свойства форматирования заливки для фигуры или диаграммы.</summary>
+        <summary>Возвращает объект для указанной фигуры или объекта для указанной диаграммы, которая содержит свойства форматирования заливки <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> для фигуры или диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -228,7 +228,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -312,7 +312,7 @@
       <Docs>
         <summary>Выбирает объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Чтобы выбрать ячейку или диапазон ячеек, используйте метод <b>SELECT</b> . Чтобы сделать одну ячейку активной ячейкой, используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Activate" /> метод.</para>
+        <remarks><para>Чтобы выбрать ячейку или диапазон ячеек, используйте метод <b>Select.</b> Чтобы сделать одну ячейку активной, используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Activate" /> метод.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

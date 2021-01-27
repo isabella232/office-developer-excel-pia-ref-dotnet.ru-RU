@@ -1,5 +1,5 @@
 <Type Name="Errors" FullName="Microsoft.Office.Interop.Excel.Errors">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="73bd6a9f765a75f5056ac06000a5ad65696c4627" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20576400" /></Metadata><TypeSignature Language="C#" Value="public interface Errors" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="73bd6a9f765a75f5056ac06000a5ad65696c4627" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012259" /></Metadata><TypeSignature Language="C#" Value="public interface Errors" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Errors" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Errors" />
   <TypeSignature Language="VB.NET" Value="Public Interface Errors" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет различные ошибки электронной таблицы для диапазона.</summary>
-    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Errors" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Range" /> коллекции, чтобы возвратить объект <b>Errors</b> .</para>
-      <para>После возвращения объекта <b>Errors</b> можно использовать <see cref="P:Microsoft.Office.Interop.Excel.Error.Value" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Error" /> объекта для проверки определенных условий проверки ошибок.</para>
+    <summary>Представляет различные ошибки электронных таблиц для диапазона.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Errors" /> свойство коллекции <see cref="T:Microsoft.Office.Interop.Excel.Range" /> для возврата объекта <b>Errors.</b></para>
+      <para>После возврата <b>объекта Errors</b> можно использовать его свойство для проверки определенных <see cref="P:Microsoft.Office.Interop.Excel.Error.Value" /> <see cref="T:Microsoft.Office.Interop.Excel.Error" /> условий проверки ошибок.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -57,11 +57,11 @@
       </Parameters>
       <Docs>
         <param name="Index">To be added.</param>
-        <summary>Позволяет пользователю получать доступ к параметрам проверки ошибок.</summary>
+        <summary>Позволяет пользователю получать доступ к вариантам проверки ошибок.</summary>
         <value>To be added.</value>
-        <remarks><para>Ссылка на <see cref="T:Microsoft.Office.Interop.Excel.Errors" /> объект для просмотра списка значений индекса, связанных с параметрами проверки ошибок.</para>
+        <remarks><para>Ссылка на <see cref="T:Microsoft.Office.Interop.Excel.Errors" /> объект для просмотра списка значений индекса, связанных с вариантами проверки ошибок.</para>
           <para> </para></remarks>
-        <example><para>В этом примере число, записанное в виде текста, помещается в ячейку a1.  Затем Microsoft Excel определяет, будет ли число записано в виде текста в ячейке a1, и соответствующим образом уведомить пользователя.</para>
+        <example><para>В этом примере число, написанное как текст, помещается в ячейку A1.  Затем Microsoft Excel определяет, записано ли число в виде текста в ячейке A1, и сообщает пользователю соответствующим образом.</para>
           <code>&lt;span class="label"&gt;Sub CheckForErrors()
 
 
@@ -1114,7 +1114,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1144,8 +1144,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1175,8 +1175,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Кроме <paramref name="Index" /> того, может быть одна из этих констант:<b>кслевалуатетоеррор</b> ячейка возвращает значение ошибки. <b>кслтекстдате</b> Ячейка содержит текстовую дату с 2 цифрами года. <b>кслнумберастекст</b> Ячейка содержит число, хранящееся в виде текста. <b>кслинконсистентформула</b> Ячейка содержит несогласованную формулу для области. <b>ксломиттедцеллс</b> Ячейка содержит формулу, в которой отсутствует ячейка для области. <b>кслунлоккедформулацеллс</b> Ячейка, которая разблокирована, содержит формулу. <b>кслемптицеллреференцес</b> Ячейка содержит формулу, ссылающуюся на пустые ячейки.</param>
-        <summary>Возвращает один элемент <see cref="T:Microsoft.Office.Interop.Excel.Error" /> объекта.</summary>
+        <param name="Index">Необходимый <b>объект</b>. Также может быть одной из этих констант: <paramref name="Index" /> <b>xlEvaluateToError</b> Ячейка оценивается как значение ошибки.<b> xlTextDate</b> Ячейка содержит текстовую дату с 2 цифрами лет. <b>xlNumberAsText</b> Ячейка содержит число, сохраненное в виде текста. <b>xlInconsistentFormula</b> Ячейка содержит несогласованную формулу для региона. <b>xlOmittedCells</b> Ячейка содержит формулу, опущенную в ячейке для области. <b>xlUnlockedFormulaCells</b> Разблокированая ячейка содержит формулу. <b>xlEmptyCellReferences</b> Ячейка содержит формулу, ссылаясь на пустые ячейки.</param>
+        <summary>Возвращает один член <see cref="T:Microsoft.Office.Interop.Excel.Error" /> объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
