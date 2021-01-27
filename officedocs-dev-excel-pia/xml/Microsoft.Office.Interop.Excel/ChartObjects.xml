@@ -1,5 +1,5 @@
 <Type Name="ChartObjects" FullName="Microsoft.Office.Interop.Excel.ChartObjects">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2c2b455b605d204bbd8ef7f4faf0116be7341efd" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586095" /></Metadata><TypeSignature Language="C#" Value="public interface ChartObjects : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2c2b455b605d204bbd8ef7f4faf0116be7341efd" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50004020" /></Metadata><TypeSignature Language="C#" Value="public interface ChartObjects : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartObjects implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ChartObjects" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartObjects&#xA;Implements IEnumerable" />
@@ -25,10 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> объектов на указанном листе диаграммы, диалоговом окне или листе.</summary>
-    <remarks><para>Каждый объект <b>ChartObject</b> представляет внедренную диаграмму. Объект <b>ChartObject</b> выступает в роли контейнера для <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объекта. Свойства и методы для объекта <b>ChartObject</b> управляют внешним видом и размером внедренной диаграммы на листе.</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.ChartObjects(System.Object)" /> метод, чтобы возвратить коллекцию <b>ChartObjects</b> . С помощью <see cref="M:Microsoft.Office.Interop.Excel.ChartObjects.Add(System.Double,System.Double,System.Double,System.Double)" /> метода создайте новую пустую внедренную диаграмму и добавьте ее в коллекцию. Используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.ChartWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для добавления данных и форматирования новой диаграммы.</para>
-      <para>Используйте <b>ChartObjects</b>(<paramref name="index" />), где <paramref name="index" /> — это номер или имя индекса встроенной диаграммы, чтобы вернуть один объект <b>ChartObject</b> .</para>
+    <summary>Коллекция всех объектов на указанном листе <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> диаграммы, диалоговом листе или листе.</summary>
+    <remarks><para>Каждый <b>объект ChartObject</b> представляет внедренную диаграмму. Объект <b>ChartObject</b> выступает в качестве контейнера для <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объекта. Свойства и методы объекта <b>ChartObject</b> контролируют внешний вид и размер внедренной диаграммы на листе.</para>
+      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Worksheet.ChartObjects(System.Object)" /> метод для возврата коллекции <b>ChartObjects.</b> Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.ChartObjects.Add(System.Double,System.Double,System.Double,System.Double)" /> метод, чтобы создать новую пустую внедренную диаграмму и добавить ее в коллекцию. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Chart.ChartWizard(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для добавления данных и формата новой диаграммы.</para>
+      <para>Используйте <b>ChartObjects</b>( ), где находится внедренный номер индекса диаграммы или имя, для возврата одного объекта <paramref name="index" /> <paramref name="index" /> <b>ChartObject.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -315,10 +315,10 @@
         <Parameter Name="Height" Type="System.Double" />
       </Parameters>
       <Docs>
-        <param name="Left">Обязательное <b>Двойное</b>. Исходные координаты нового объекта (в пунктах) относительно левого верхнего угла ячейки a1 на листе или в левом верхнем углу диаграммы.</param>
-        <param name="Top">Обязательное <b>Двойное</b>. Исходные координаты нового объекта (в пунктах) относительно левого верхнего угла ячейки a1 на листе или в левом верхнем углу диаграммы.</param>
-        <param name="Width">Обязательное <b>Двойное</b>. Исходный размер нового объекта в пунктах.</param>
-        <param name="Height">Обязательное <b>Двойное</b>. Исходный размер нового объекта в пунктах.</param>
+        <param name="Left">Required <b>Double</b>. Начальные координаты нового объекта (в пунктах) относительно левого верхнего угла ячейки A1 на таблице или левого верхнего угла диаграммы.</param>
+        <param name="Top">Required <b>Double</b>. Начальные координаты нового объекта (в пунктах) относительно левого верхнего угла ячейки A1 на графике или левого верхнего угла диаграммы.</param>
+        <param name="Width">Required <b>Double</b>. Начальный размер нового объекта в пунктах.</param>
+        <param name="Height">Required <b>Double</b>. Начальный размер нового объекта в пунктах.</param>
         <summary>Создает новую внедренную диаграмму. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -347,7 +347,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -378,7 +378,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Border</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, представляющий границу объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Border" /> объект, который представляет границу объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -407,7 +407,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Переводит объект на передний план по оси z.</summary>
+        <summary>Выводит объект перед z-порядком.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -461,9 +461,9 @@
         <Parameter Name="Format" Type="Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />
       </Parameters>
       <Docs>
-        <param name="Appearance">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" />параметр. Задает способ копирования изображения.</param>
-        <param name="Format">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />параметр. Формат рисунка.</param>
-        <summary>Копирует выбранный объект в буфер обмена как рисунок.</summary>
+        <param name="Appearance">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> . Указывает, как следует скопировать рисунок.</param>
+        <param name="Format">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> . Формат изображения.</param>
+        <summary>Копирует выбранный объект в буфер обмена в качестве изображения.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -491,7 +491,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -521,7 +521,7 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -546,9 +546,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вырезает объект в буфер обмена или вставляет его в указанное место.</summary>
+        <summary>Прикрепить объект к буферу обмена или в pastes it into a specified destination.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Только внедренные диаграммы можно вырезать.</para>
+        <remarks><para>Вырезать можно только внедренные диаграммы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -636,7 +636,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если объект включен.</summary>
+        <summary><b>Имеет</b> true, если объект включен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -759,7 +759,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -787,7 +787,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -819,9 +819,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от левого края объекта до левого края столбца A (на листе) или левого края области диаграммы (на диаграмме).</summary>
+        <summary>Расстояние от левого края объекта до левого края столбца A (на таблице) или левого края области диаграммы (на диаграмме).</summary>
         <value>To be added.</value>
-        <remarks><para>Если окно развернуто, это свойство возвращает отрицательное число, которое изменяется в зависимости от ширины границы окна. Если установить для этого свойства значение 0 (ноль), окно будет немного меньше, чем было бы в том случае, если окно приложения было развернуто. Другими словами, если это свойство имеет значение 0 (ноль), левая граница основного окна Microsoft Excel практически не будет видна на экране.</para>
+        <remarks><para>Если окно максимальное, это свойство возвращает отрицательное число, которое зависит от ширины границы окна. Если установить для этого свойства значение 0 (ноль), окно будет немного меньше, чем если бы окно приложения было максимальное. Другими словами, если это свойство имеет значение 0 (ноль), левая граница главного окна Microsoft Excel будет просто еле видна на экране.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -851,7 +851,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если объект заблокирован; <b>False</b> , если объект можно изменить, когда лист защищен.</summary>
+        <summary><b>Имеет</b> true, если объект заблокирован; <b>False,</b> если объект можно изменить при защите листа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -947,7 +947,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ присоединения объекта к ячейкам, расположенным под ним.</summary>
+        <summary>Возвращает или задает способ прикрепления объекта к ячейкам под ней.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -978,7 +978,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если объект будет распечатан при печати документа.</summary>
+        <summary><b>Имеет</b> true, если объект будет печататься при печати документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1009,9 +1009,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если встроенный фрейм диаграммы невозможно переместить, изменить его размер или удалить с помощью пользовательского интерфейса. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Имеет</b> true, если внедренный кадр диаграммы не может быть перемещен, размер или удален через пользовательский интерфейс. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Установка для этого свойства значения <b>true</b> не позволит защитить внедренный фрейм диаграммы от изменения с помощью объектной модели.</para>
+        <remarks><para>Установка для этого свойства <b>true</b> не защищает внедренный кадр диаграммы от изменения с помощью объектной модели.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1047,7 +1047,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имеет <b>значение true</b> , если внедренная диаграмма имеет скругленные углы.</summary>
+        <summary><b>Имеет true,</b> если внедренная диаграмма имеет скругленные углы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1074,7 +1074,7 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы заменить текущий выделенный фрагмент на указанный объект. <b>Значение false</b> , чтобы расширить текущий выделенный фрагмент для включения всех ранее выбранных объектов и указанного объекта.</param>
+        <param name="Replace"><b>Необязательный объект</b>. <b>True,</b> чтобы заменить текущий выбор указанным объектом. <b>False,</b> чтобы расширить текущий выбор, чтобы включить все ранее выбранные объекты и указанный объект.</param>
         <summary>Выбирает объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1104,7 +1104,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отправляет объект на задний план z.</summary>
+        <summary>Отправляет объект на задний ядр z-порядка.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1141,7 +1141,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если объект имеет тень</summary>
+        <summary><b>Имеет</b> true, если у объекта есть тень</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1169,7 +1169,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ShapeRange</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, представляющий заданный объект или объекты.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, который представляет указанный объект или объекты.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1200,7 +1200,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние от верхнего края объекта до верхнего края строки 1 (на рабочем листе) или в верхней части области диаграммы (на диаграмме).</summary>
+        <summary>Расстояние от верхнего края объекта до верхней строки 1 (на таблице) или верхней части области диаграммы (на диаграмме).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1233,8 +1233,8 @@
       <Docs>
         <summary>Определяет, является ли объект видимым.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Visible</b> элемента сводной таблицы имеет <b>значение true</b> , если элемент в данный момент отображается в таблице.</para>
-          <para>Если свойству <b>Visible</b> присвоено значение <b>false</b>, имя не будет отображаться в диалоговом окне Определение имени.</para>
+        <remarks><para>Свойство <b>Visible</b> элемента pivotTable имеет свойство <b>True,</b> если элемент в настоящее время виден в таблице.</para>
+          <para>Если для свойства <b>Visible</b> для имени установлено имя <b>False,</b>имя не будет отображаться в диалоговом окне "Определение имени".</para>
           <para> </para></remarks>
       </Docs>
     </Member>

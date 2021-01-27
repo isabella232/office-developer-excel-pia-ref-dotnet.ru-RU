@@ -1,5 +1,5 @@
 <Type Name="Comment" FullName="Microsoft.Office.Interop.Excel.Comment">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="aee055e9a2656dedc02e66bab44aba17d315d4f9" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20585850" /></Metadata><TypeSignature Language="C#" Value="public interface Comment" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="aee055e9a2656dedc02e66bab44aba17d315d4f9" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003985" /></Metadata><TypeSignature Language="C#" Value="public interface Comment" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Comment" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Comment" />
   <TypeSignature Language="VB.NET" Value="Public Interface Comment" />
@@ -21,11 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет Примечание ячейки.</summary>
-    <remarks><para>Объект <b>comment</b> является элементом <see cref="T:Microsoft.Office.Interop.Excel.Comments" /> коллекции.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Comment" /> свойство, чтобы возвратить объект <b>comment</b> .</para>
-      <para>USE <b>Comments</b>(<paramref name="index" />), <paramref name="index" /> где — это номер комментария, чтобы возвратить один комментарий из коллекции <b>комментариев</b> .</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Range.AddComment(System.Object)" /> метод, чтобы добавить комментарий к диапазону.</para>
+    <summary>Представляет комментарий ячейки.</summary>
+    <remarks><para>Объект <b>Comment</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Comments" /> коллекции.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Range.Comment" /> для возврата объекта <b>Comment.</b></para>
+      <para>Используйте <b>comments</b>( ), где находится номер комментария, чтобы вернуть один комментарий из коллекции <paramref name="index" /> <paramref name="index" /> <b>Comments.</b></para>
+      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Range.AddComment(System.Object)" /> метод, чтобы добавить комментарий в диапазон.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -52,7 +52,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -110,8 +110,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -161,9 +161,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comment" /> объект, представляющий следующий комментарий.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comment" /> объект, который представляет следующий комментарий.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Этот метод работает только на одном листе. При использовании этого метода для последнего комментария на листе возвращается <b>значение NULL</b> (не следующий комментарий на следующем листе).</para>
+        <remarks><para>Этот метод работает только на одном листе. При использовании этого метода в последнем комментарии на листе возвращается <b>NULL</b> (а не следующий комментарий на следующем листе).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -216,9 +216,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comment" /> объект, представляющий предыдущий комментарий.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comment" /> объект, который представляет предыдущий комментарий.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Этот метод работает только на одном листе. При использовании этого метода для первого комментария на листе возвращается <b>значение NULL</b> (не является последним комментарием на предыдущем листе).</para>
+        <remarks><para>Этот метод работает только на одном листе. При использовании этого метода в первом комментарии на листе возвращается <b>NULL</b> (не последний комментарий на предыдущем листе).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -245,7 +245,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру, присоединенную к указанному комментарию.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, который представляет фигуру, прикрепленную к указанному комментарию.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -274,10 +274,10 @@
         <Parameter Name="Overwrite" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Text">Необязательный <b>объект</b>. Текст, который требуется добавить.</param>
-        <param name="Start">Необязательный <b>объект</b>. Номер знака, в который будет вставлен текст. Если этот аргумент не указан, то любой существующий текст в комментарии удаляется.</param>
-        <param name="Overwrite">Необязательный <b>объект</b>. <b>Значение true</b> , чтобы перезаписать существующий текст. Значение по умолчанию — <b>false</b> (текст вставляется).</param>
-        <summary>Задает текст комментария.</summary>
+        <param name="Text"><b>Необязательный объект</b>. Текст, который необходимо добавить.</param>
+        <param name="Start"><b>Необязательный объект</b>. Номер символа, в который будет помещен добавленный текст. Если этот аргумент опущен, любой существующий текст в комментарии удаляется.</param>
+        <param name="Overwrite"><b>Необязательный объект</b>. <b>True</b> для переоценки существующего текста. Значение по умолчанию — <b>False</b> (текст вставляется).</param>
+        <summary>Задает текст прикоммента.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

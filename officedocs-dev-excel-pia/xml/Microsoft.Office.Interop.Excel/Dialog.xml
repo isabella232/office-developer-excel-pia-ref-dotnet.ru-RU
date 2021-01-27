@@ -1,5 +1,5 @@
 <Type Name="Dialog" FullName="Microsoft.Office.Interop.Excel.Dialog">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="274e93847efbe2121de825e75c0a66505c3899d3" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582868" /></Metadata><TypeSignature Language="C#" Value="public interface Dialog" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="274e93847efbe2121de825e75c0a66505c3899d3" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003859" /></Metadata><TypeSignature Language="C#" Value="public interface Dialog" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Dialog" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Dialog" />
   <TypeSignature Language="VB.NET" Value="Public Interface Dialog" />
@@ -22,9 +22,9 @@
   </Attributes>
   <Docs>
     <summary>Представляет встроенное диалоговое окно Microsoft Excel.</summary>
-    <remarks><para>Объект <b>DIALOG</b> является элементом <see cref="T:Microsoft.Office.Interop.Excel.Dialogs" /> коллекции. Коллекция <b>Dialogs</b> содержит все встроенные диалоговые окна в Microsoft Excel. Невозможно создать новое встроенное диалоговое окно или добавить его в коллекцию. Единственная полезная вещь, которую можно сделать с помощью объекта <b>DIALOG</b> , это использовать в <see cref="M:Microsoft.Office.Interop.Excel.Dialog.Show(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> методе, чтобы отобразить соответствующее диалоговое окно.</para>
-      <para>Используйте <b>диалоговые окна</b>(<paramref name="index" />), <paramref name="index" /> где — это встроенная константа, идентифицирующая диалоговое окно, чтобы вернуть один объект <b>диалогового окна</b> .</para>
-      <para>Microsoft Excel включает встроенные константы для многих встроенных диалоговых окон. Каждая константа образуется на основе префикса "Кслдиалог", за которым следует имя диалогового окна. Например, константа диалогового окна применение имен — <b>кслдиалогапплинамес</b>, а константа диалогового окна найти файл — <b>кслдиалогфиндфиле</b>. Эти константы являются членами <see cref="T:Microsoft.Office.Interop.Excel.XlBuiltInDialog" /> перечисляемого типа.</para>
+    <remarks><para>Объект <b>Dialog</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Dialogs" /> коллекции. Коллекция <b>Dialogs</b> содержит все встроенные диалоги в Microsoft Excel. Невозможно создать новое встроенное диалоговое окно или добавить его в коллекцию. Единственное полезное, что можно сделать с объектом <b>Dialog,</b> — использовать его с методом для отображения <see cref="M:Microsoft.Office.Interop.Excel.Dialog.Show(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> соответствующего диалоговое окно.</para>
+      <para>Используйте <b>диалоговые окна</b>( ), где находится встроенная константа, идентифицирующие диалоговое окно, для <paramref name="index" /> возврата одного объекта <paramref name="index" /> <b>Dialog.</b></para>
+      <para>Microsoft Excel включает встроенные константы для многих встроенных диалогов. Каждая константа формируется из префикса "xlDialog", за которым следует имя диалоговое окно. Например, константа диалоговых окна "Применить имена" — <b>xlDialogApplyNames,</b>а константа диалоговых окне "Найти файл" — <b>xlDialogFindFile.</b> Эти константы являются членами <see cref="T:Microsoft.Office.Interop.Excel.XlBuiltInDialog" /> типа enumerated.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -51,7 +51,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -81,8 +81,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -165,41 +165,41 @@
         <Parameter Name="Arg30" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Arg1">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg2">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg3">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg4">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg5">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg6">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg7">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg8">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg9">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg10">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg11">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg12">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg13">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg14">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg15">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg16">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg17">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg18">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg19">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg20">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg21">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg22">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg23">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg24">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg25">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg26">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg27">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg28">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg29">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <param name="Arg30">Необязательный <b>объект</b>. Начальные аргументы для команды.</param>
-        <summary>Отображает встроенное диалоговое окно и ожидает ввода данных пользователем.</summary>
+        <param name="Arg1"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg2"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg3"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg4"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg5"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg6"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg7"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg8"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg9"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg10"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg11"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg12"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg13"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg14"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg15"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg16"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg17"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg18"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg19"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg20"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg21"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg22"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg23"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg24"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg25"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg26"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg27"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg28"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg29"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <param name="Arg30"><b>Необязательный объект</b>. Начальные аргументы для команды.</param>
+        <summary>Отображает встроенное диалоговое окно и ждет ввода данных пользователем.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Для встроенных диалоговых окон этот метод возвращает <b>значение true</b> , если пользователь нажимает кнопку ОК, или возвращает <b>значение false</b> , если пользователь нажимает кнопку Cancel (Отмена).</para>
-          <para>Вы можете одновременно изменить множество свойств с помощью одного диалогового окна. Например, с помощью диалогового окна Формат ячеек можно изменить все свойства <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объекта.</para>
-          <para>Для некоторых встроенных диалоговых окон (например, диалоговое окно "Открыть") можно задать начальные значения с помощью arg1, arg2,..., arg30. Дополнительные сведения о встроенных диалоговых окнах можно найти в <see cref="T:Microsoft.Office.Interop.Excel.Dialogs" /> коллекции.</para>
+        <remarks><para>Для встроенных диалогов этот метод <b></b> возвращает true, если пользователь нажимает кнопку "ОК", или <b>false,</b> если пользователь нажимает кнопку "Отмена".</para>
+          <para>Можно использовать одно диалоговое окно для одновременного изменения многих свойств. Например, можно использовать диалоговое окно "Формат ячеек", чтобы изменить все свойства <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объекта.</para>
+          <para>В некоторых встроенных диалоговых окнах (например, в диалоговом окне "Открыть") можно установить начальные значения с помощью arg1, arg2, ..., arg30. Дополнительные сведения о встроенных диалогах см. в <see cref="T:Microsoft.Office.Interop.Excel.Dialogs" /> коллекции.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

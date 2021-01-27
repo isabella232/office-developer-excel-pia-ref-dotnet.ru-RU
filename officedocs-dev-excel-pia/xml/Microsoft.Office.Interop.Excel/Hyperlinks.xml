@@ -1,5 +1,5 @@
 <Type Name="Hyperlinks" FullName="Microsoft.Office.Interop.Excel.Hyperlinks">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="384731b744bc8d5ac5fc450f7f7db1aaeb7f87e6" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20582707" /></Metadata><TypeSignature Language="C#" Value="public interface Hyperlinks : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="384731b744bc8d5ac5fc450f7f7db1aaeb7f87e6" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003432" /></Metadata><TypeSignature Language="C#" Value="public interface Hyperlinks : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Hyperlinks implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Hyperlinks" />
   <TypeSignature Language="VB.NET" Value="Public Interface Hyperlinks&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет коллекцию гиперссылок для листа или диапазона. Каждая гиперссылка представлена <see cref="T:Microsoft.Office.Interop.Excel.Hyperlink" /> объектом.</summary>
-    <remarks><para>Используйте свойство <b>гиперссылки</b> для возврата коллекции <b>гиперссылок</b> .</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.Hyperlinks.Add(System.Object,System.String,System.Object,System.Object,System.Object)" /> метод, чтобы создать гиперссылку и добавить ее в коллекцию <b>гиперссылок</b> .</para>
+    <summary>Представляет коллекцию гиперссылки для таблицы или диапазона. Каждая гиперссылка представлена <see cref="T:Microsoft.Office.Interop.Excel.Hyperlink" /> объектом.</summary>
+    <remarks><para>Используйте свойство <b>Hyperlinks</b> для возврата коллекции <b>Гиперссылки.</b></para>
+      <para>Используйте этот метод для создания гиперссылки и добавления ее в коллекцию <see cref="M:Microsoft.Office.Interop.Excel.Hyperlinks.Add(System.Object,System.String,System.Object,System.Object,System.Object)" /> <b>Hyperlinks.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -92,11 +92,11 @@
         <Parameter Name="TextToDisplay" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Anchor">Обязательный <b>объект</b>. Привязка для гиперссылки. Может быть либо объектом <see cref="T:Microsoft.Office.Interop.Excel.Range" /> , <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> либо объектом.</param>
+        <param name="Anchor">Необходимый <b>объект</b>. Привязка для гиперссылки. Может быть <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объектом или <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объектом.</param>
         <param name="Address">Обязательный атрибут типа <b>String</b>. Адрес гиперссылки.</param>
-        <param name="SubAddress">Необязательный <b>объект</b>. Субадрес гиперссылки.</param>
-        <param name="ScreenTip">Необязательный <b>объект</b>. Всплывающая подсказка, отображаемая при наведении указателя мыши на гиперссылку.</param>
-        <param name="TextToDisplay">Необязательный <b>объект</b>. Текст, отображаемый для гиперссылки.</param>
+        <param name="SubAddress"><b>Необязательный объект</b>. Субадрес гиперссылки.</param>
+        <param name="ScreenTip"><b>Необязательный объект</b>. Всплывающая подсказка, отображаемая при наведении указателя мыши на гиперссылку.</param>
+        <param name="TextToDisplay"><b>Необязательный объект</b>. Текст, отображаемый для гиперссылки.</param>
         <summary>Добавляет гиперссылку к указанному диапазону или фигуре. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Hyperlink" /> объект.</summary>
         <returns>To be added.</returns>
         <remarks><para>При указании <paramref name="TextToDisplay" /> аргумента текст должен быть строкой.</para>
@@ -126,7 +126,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -154,7 +154,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число объектов в коллекции.</summary>
+        <summary>Возвращает количество объектов в коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -184,8 +184,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -272,7 +272,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный <b>объект</b>. Имя или номер индекса объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

@@ -1,5 +1,5 @@
 <Type Name="ColorScaleCriteria" FullName="Microsoft.Office.Interop.Excel.ColorScaleCriteria">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="589e9e7df115b961e73fd7901c8f7f0502669047" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20587439" /></Metadata><TypeSignature Language="C#" Value="public interface ColorScaleCriteria : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="589e9e7df115b961e73fd7901c8f7f0502669047" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50004006" /></Metadata><TypeSignature Language="C#" Value="public interface ColorScaleCriteria : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ColorScaleCriteria implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" />
   <TypeSignature Language="VB.NET" Value="Public Interface ColorScaleCriteria&#xA;Implements IEnumerable" />
@@ -25,10 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объектов, представляющая все условия для условного форматирования цветовой шкалы. Каждый критерий определяет минимальное, среднее или максимальное пороговое значение для цветовой шкалы.</summary>
-    <remarks><para>Чтобы возвратить коллекцию <b>ColorScaleCriteria</b> , используйте <see cref="P:Microsoft.Office.Interop.Excel.ColorScale.ColorScaleCriteria" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.ColorScale" /> объекта.</para>
+    <summary>Коллекция объектов, которая представляет все критерии <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> условного форматирования цветовой шкалы. Каждый критерий определяет минимальный, средний или максимальный порог для цветовой шкалы.</summary>
+    <remarks><para>Чтобы вернуть <b>коллекцию ColorScaleCriteria,</b> используйте <see cref="P:Microsoft.Office.Interop.Excel.ColorScale.ColorScaleCriteria" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.ColorScale" /> объекта.</para>
       <para> </para></remarks>
-    <example><para>В следующем примере кода создается диапазон чисел, а затем применяется правило условного форматирования с двумя цветами для этого диапазона. Затем цвет для минимального порога назначается красным и максимальное пороговое значение синим путем индексирования в коллекции <b>ColorScaleCriteria</b> для задания отдельных критериев.</para>
+    <example><para>В следующем примере кода создается диапазон чисел, а затем к этому диапазону применяется правило условного форматирования двух цветов. Затем цвет минимального порогового значения устанавливается красным, а максимальное — синим путем индексации в коллекцию <b>ColorScaleCriteria</b> для определения отдельных критериев.</para>
       <code>&lt;span class="label"&gt;Sub CreateColorScaleCF()  
 
 
@@ -4446,9 +4446,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>целое</b> значение, задающее количество критериев для правила условного форматирования цветовой шкалы. Только для чтения.</summary>
-        <value><b>Integer</b></value>
-        <remarks><para>Число критериев эквивалентно количеству пороговых значений, назначенных для цветовой шкалы. В зависимости от того, используется ли для правила условного форматирования две или три цветовые шкалы, это может быть две или три.</para>
+        <summary>Возвращает значение <b>в виде</b> числа, заданное для правила условного форматирования цветовой шкалы. Только для чтения.</summary>
+        <value>64-разрядное целое число.</value>
+        <remarks><para>Число критериев эквивалентно числу пороговых значений, присвоенных цветовой шкале. Это может быть либо два, либо три, в зависимости от того, используется ли двухцветная или трехцветная шкала для правила условного форматирования.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4511,9 +4511,9 @@
       </Parameters>
       <Docs>
         <param name="Index">Номер индекса <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объекта.</param>
-        <summary>Возвращает один <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объект из <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" />коллекции. Только для чтения.</summary>
+        <summary>Возвращает один <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /> объект из <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> коллекции. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" /></value>
-        <remarks><para>Значение <paramref name="Index" /> параметра не может быть больше, чем число критериев, заданное для условного форматирования цветовой шкалы. Критерии эквивалентны пороговому значению, назначенному для цветовой шкалы. Чтобы узнать количество значений пороговых значений, используйте <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriteria.Count" /> свойство.</para>
+        <remarks><para>Значение параметра не может быть больше числа критериев, <paramref name="Index" /> заданных для условного форматирования цветовой шкалы. Критерии эквивалентны пороговые значения, присвоенные цветовой шкале. Чтобы найти число пороговых значений, используйте <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriteria.Count" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="ConnectorFormat" FullName="Microsoft.Office.Interop.Excel.ConnectorFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6e2dfed647b41c630904642100343ae25d044efb" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20586116" /></Metadata><TypeSignature Language="C#" Value="public interface ConnectorFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6e2dfed647b41c630904642100343ae25d044efb" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003943" /></Metadata><TypeSignature Language="C#" Value="public interface ConnectorFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ConnectorFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ConnectorFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ConnectorFormat" />
@@ -21,19 +21,19 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства и методы, применяемые к соединителям.</summary>
-    <remarks><para>Соединитель — это линия, соединяющая две другие фигуры в точках, называемых узлами подключения. Если вы Переупорядочивайте подключенные фигуры, то геометрическая геометрия соединителя будет автоматически скорректирована, чтобы фигуры оставались подключенными.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.ConnectorFormat" /> свойство, чтобы возвратить объект <b>ConnectorFormat</b> . Используйте методы <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> и <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> для присоединения концов соединителя к другим фигурам в документе. Используйте <see cref="M:Microsoft.Office.Interop.Excel.Shape.RerouteConnections" /> метод, чтобы автоматически найти кратчайший путь между двумя фигурами, Соединенными соединителем. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.Connector" /> свойство, чтобы определить, является ли фигура соединителем.</para>
-      <para>Обратите внимание, что вы назначаете размер и положение при добавлении соединителя в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекцию, но размер и положение автоматически корректируются при присоединении начала и конца соединителя к другим фигурам в коллекции. Таким образом, если вы планируете присоединить соединитель к другим фигурам, заданные исходный размер и положение не изменяются. Аналогичным образом вы указываете, какие сайты подключения на фигуре необходимо присоединить к соединителю при подключении соединительной линии, но с помощью метода <b>рераутеконнектионс</b> после подключения соединительной линии может измениться, к каким сайтам подключения соединитель будет подключаться соединитель, что делает первоначальный выбор сайтов подключения несущественным.</para>
-      <para>Как правило, сайты подключения пронумерованы в соответствии с правилами, представленными в следующей таблице.</para>
+    <summary>Содержит свойства и методы, которые применяются к соединитетелям.</summary>
+    <remarks><para>Соединителя — это линия, которая подключает две другие фигуры в точках, называемых сайтами подключения. При переустановке соединенных фигур геометрия соединителю будет автоматически настроена, чтобы фигуры оставались соединенными.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Shape.ConnectorFormat" /> для возврата объекта <b>ConnectorFormat.</b> Используйте эти методы и методы для прикрепления конца соединителя к другим <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> фигурам в документе. Используйте этот метод, чтобы автоматически найти самый короткий путь между двумя фигурами, соединенными <see cref="M:Microsoft.Office.Interop.Excel.Shape.RerouteConnections" /> соединитетелем. Используйте <see cref="P:Microsoft.Office.Interop.Excel.Shape.Connector" /> свойство, чтобы узнать, является ли фигура соединитетелем.</para>
+      <para>Обратите внимание, что размер и положение назначаются при добавлении соединителя в коллекцию, но размер и положение автоматически настраиваются при подключении начала и конца соединителя к другим фигурам в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции. Таким образом, если вы собираетесь прикрепить соединители к другим фигурам, начальный размер и положение не имеют значения. Аналогичным образом, вы указываете, к каков сайты подключений фигуры для подключения соединителя при подключении соединителя, но использование метода <b>RerouteConnections</b> после подключения соединителя может изменить сайты подключений, к которым подключается соединителя, что делает ваш исходный выбор сайтов подключений нерелевантным.</para>
+      <para>Сайты подключений обычно числуются в соответствии с правилами, представленными в следующей таблице.</para>
       <list type="table">
         <item>
-          <term>Автофигуры, объекты WordArt, рисунки и OLE</term>
-          <description>Сайты подключения пронумерованы, начиная с верхнего края и продолжая переходить против часовой стрелки.</description>
+          <term>Объекты AutoShapes, WordArt, изображений и OLE</term>
+          <description>Сайты подключений нумеруются, начиная с верхнего и запускаются против часовой стрелки.</description>
         </item>
         <item>
-          <term>Полилинии</term>
-          <description>Сайты подключения являются вершинами и соответствуют номерам вершин.</description>
+          <term>Freeforms</term>
+          <description>Сайты подключений являются вершинами и соответствуют номерам вершин.</description>
         </item>
       </list>
       <para> </para></remarks>
@@ -62,7 +62,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -91,11 +91,11 @@
         <Parameter Name="ConnectionSite" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="ConnectedShape">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект. Фигура, к которой присоединяется начало соединителя. Указанный объект <b>Shape</b> должен находиться в той же <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции, что и соединитель.</param>
-        <param name="ConnectionSite">Обязательный атрибут типа <b>Integer</b>. Сайт подключения к фигуре, указанной в <paramref name="ConnectedShape" />параметре. Должно быть целым числом между 1 и целым числом, <see cref="P:Microsoft.Office.Interop.Excel.Shape.ConnectionSiteCount" /> возвращаемым свойством указанной фигуры. Если вы хотите, чтобы соединитель автоматически нашел кратчайший путь между двумя соединяемыми фигурами, укажите любое допустимое целое число для этого аргумента, <see cref="M:Microsoft.Office.Interop.Excel.Shape.RerouteConnections" /> а затем используйте метод после подключения соединителя к фигурам на обоих концах.</param>
+        <param name="ConnectedShape">Необходимый <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект. Фигура для крепится к началу соединителя. Указанный объект <b>Shape</b> должен быть в той же коллекции, что <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> и соединители.</param>
+        <param name="ConnectionSite">Обязательный атрибут типа <b>Integer</b>. Сайт подключения в фигуре, указанной с помощью <paramref name="ConnectedShape" /> . Должно быть integer between 1 and the integer returned by the <see cref="P:Microsoft.Office.Interop.Excel.Shape.ConnectionSiteCount" /> property of the specified shape. Если вы хотите, чтобы соединитель автоматически находит самый короткий путь между двумя фигурами, которые он подключает, укажите допустимое значение для этого аргумента, а затем используйте метод после подключения соединителя к фигурам на обоих <see cref="M:Microsoft.Office.Interop.Excel.Shape.RerouteConnections" /> концах.</param>
         <summary>Привязывает начало указанного соединителя к указанной фигуре.</summary>
-        <remarks><para>Если между началом соединителя и другой фигурой уже есть соединение, это соединение разорвано. Если начало соединителя еще не размещается на указанном сайте подключения, этот метод перемещает начало соединителя на соединительный сайт и настраивает размер и положение соединителя. Используйте <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> метод, чтобы присоединить конец соединителя к фигуре.</para>
-          <para>Когда вы присоединяете соединитель к объекту, размер и положение соединителя автоматически корректируются при необходимости.</para>
+        <remarks><para>Если между началом соединители и другой фигурой уже есть подключение, это подключение будет нарушено. Если начало соединители еще не установлено на указанном сайте подключения, этот метод перемещает начало соединители на сайт подключения и настраивает размер и положение соединители. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> метод для прикрепления конца соединителя к фигуре.</para>
+          <para>При подключении соединителя к объекту размер и положение соединителя при необходимости автоматически настраиваются.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -122,24 +122,24 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> , если начало указанного соединителя подключено к фигуре.</summary>
+        <summary><b>Имеет</b> true, если начало указанного соединитела подключено к фигуре.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> :</para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих <b>констант MsoTriState:</b></para>
           <para>
-            <b>мсоктруе</b>
+            <b>msoCTrue</b>
           </para>
           <para>
-            <b>мсофалсе</b>
+            <b>msoFalse</b>
           </para>
           <para>
-            <b>мсотристатемиксед</b>
+            <b>msoTriStateMixed</b>
           </para>
           <para>
-            <b>мсотристатетоггле</b>
+            <b>msoTriStateToggle</b>
           </para>
           <para>
-            <b>мсотруе</b> Начало указанного соединителя подключено к фигуре.</para>
+            <b>msoTrue</b> Начало указанного соединитела соединено с фигурой.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -166,9 +166,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру, к которой прикрепляется начало указанного соединителя.</summary>
+        <summary>Возвращает объект, который представляет фигуру, к которую прикреплено начало указанного <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> соединителя.</summary>
         <value>To be added.</value>
-        <remarks><para>Если начало указанного соединителя не присоединено к фигуре, это свойство приводит к ошибке.</para>
+        <remarks><para>Если начало указанного соединителя не прикреплено к фигуре, это свойство создает ошибку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -195,9 +195,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает целое число, которое указывает сайт подключения, к которому подключен конец соединителя.</summary>
+        <summary>Возвращает integer, которое указывает сайт подключения, к который подключен конец соединители.</summary>
         <value>To be added.</value>
-        <remarks><para>Если конец указанного соединителя не присоединен к фигуре, это свойство приводит к ошибке.</para>
+        <remarks><para>Если конец указанного соединителя не присоединен к фигуре, это свойство создает ошибку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -222,8 +222,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отсоединяет начало указанного соединителя от фигуры, к которой она подключена.</summary>
-        <remarks><para>Метод <b>бегиндисконнект</b> не изменяет размер или положение соединителя. Начало соединителя находится на сайте подключения, но больше не подключено. Используйте <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndDisconnect" /> метод, чтобы отсоединить конец соединителя от фигуры.</para>
+        <summary>Отсоединяет начало указанного соединителя от фигуры, к которая присоединена.</summary>
+        <remarks><para>Метод <b>BeginDisconnect</b> не изменяет размер или положение соединители. Начало соединители остается на сайте подключения, но больше не подключено. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.EndDisconnect" /> метод, чтобы отсоединять конец соединители от фигуры.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -252,8 +252,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -281,11 +281,11 @@
         <Parameter Name="ConnectionSite" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="ConnectedShape">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект. Фигура, к которой присоединяется конец соединителя. Указанный объект <b>Shape</b> должен находиться в той же <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции, что и соединитель.</param>
-        <param name="ConnectionSite">Обязательный атрибут типа <b>Integer</b>. Сайт подключения к фигуре, указанной в <paramref name="ConnectedShape" />параметре. Должно быть целым числом между 1 и целым числом, <see cref="P:Microsoft.Office.Interop.Excel.Shape.ConnectionSiteCount" /> возвращаемым свойством указанной фигуры. Если вы хотите, чтобы соединитель автоматически нашел кратчайший путь между двумя соединяемыми фигурами, укажите любое допустимое целое число для этого аргумента, <see cref="M:Microsoft.Office.Interop.Excel.Shape.RerouteConnections" /> а затем используйте метод после подключения соединителя к фигурам на обоих концах.</param>
+        <param name="ConnectedShape">Необходимый <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект. Фигура для крепится к концу соединителя. Указанный объект <b>Shape</b> должен быть в той же коллекции, что <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> и соединители.</param>
+        <param name="ConnectionSite">Обязательный атрибут типа <b>Integer</b>. Сайт подключения в фигуре, указанной с помощью <paramref name="ConnectedShape" /> . Должно быть integer между 1 и integer, возвращаемого <see cref="P:Microsoft.Office.Interop.Excel.Shape.ConnectionSiteCount" /> свойством указанной фигуры. Если вы хотите, чтобы соединитель автоматически находит самый короткий путь между двумя фигурами, которые он подключает, укажите допустимое значение для этого аргумента, а затем используйте метод после подключения соединителя к фигурам на обоих <see cref="M:Microsoft.Office.Interop.Excel.Shape.RerouteConnections" /> концах.</param>
         <summary>Привязывает конец указанного соединителя к указанной фигуре.</summary>
-        <remarks><para>Если между концом соединителя и другой фигурой уже есть соединение, это соединение разорвано. Если конец соединителя еще не установлен на указанном сайте подключения, этот метод переместит конец соединителя на соединительный сайт и настраивает размер и положение соединителя. Используйте <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> метод, чтобы присоединить начало соединителя к фигуре.</para>
-          <para>Когда вы присоединяете соединитель к объекту, размер и положение соединителя автоматически корректируются при необходимости.</para>
+        <remarks><para>Если между концем соединители и другой фигурой уже есть подключение, это подключение будет разорвано. Если конец соединители еще не установлен на указанном сайте подключения, этот метод перемещает конец соединители на подключающийся сайт и настраивает размер и положение соединители. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginConnect(Microsoft.Office.Interop.Excel.Shape,System.Int32)" /> метод для прикрепления начала соединителя к фигуре.</para>
+          <para>При подключении соединителя к объекту размер и положение соединителя при необходимости автоматически настраиваются.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -312,14 +312,14 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>мсотруе</b> , если конец указанного соединителя подключен к фигуре.</summary>
+        <summary><b>msoTrue,</b> если конец указанного соединитела подключен к фигуре.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих констант <b>MsoTriState</b> :</para>
+            <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих <b>констант MsoTriState:</b></para>
           <para>
-            <b>мсофалсе</b> Конец указанного соединителя не подключен к фигуре.</para>
+            <b>msoFalse</b> Конец указанного соединитела не подключен к фигуре.</para>
           <para>
-            <b>мсотруе</b> Конец указанного соединителя подключен к фигуре.</para>
+            <b>msoTrue</b> Конец указанного соединитела подключен к фигуре.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -346,9 +346,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект, представляющий фигуру, к которой присоединен конец указанного соединителя.</summary>
+        <summary>Возвращает объект, который представляет фигуру, к которую прикреплен конец указанного <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> соединителя.</summary>
         <value>To be added.</value>
-        <remarks><para>Если конец указанного соединителя не присоединен к фигуре, это свойство приводит к ошибке.</para>
+        <remarks><para>Если конец указанного соединителя не присоединен к фигуре, это свойство создает ошибку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -375,9 +375,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает целое число, которое указывает сайт подключения, к которому подключен конец соединителя.</summary>
+        <summary>Возвращает конечное количество, заданное на сайте подключения, к который подключен конец соединители.</summary>
         <value>To be added.</value>
-        <remarks><para>Если конец указанного соединителя не присоединен к фигуре, это свойство приводит к ошибке.</para>
+        <remarks><para>Если конец указанного соединителя не присоединен к фигуре, это свойство создает ошибку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -402,8 +402,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отсоединяет конец указанного соединителя от фигуры, к которой он подключен.</summary>
-        <remarks><para>Этот метод не изменяет размер или положение соединителя; конец соединителя остается на месте подключения, но больше не подключен. Используйте <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginDisconnect" /> метод, чтобы отсоединить начало соединителя от фигуры.</para>
+        <summary>Отсоединяет конец указанного соединителя от фигуры, к которая присоединена.</summary>
+        <remarks><para>Этот метод не изменяет размер или положение соединители; Конец соединители остается на сайте подключения, но больше не подключен. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.ConnectorFormat.BeginDisconnect" /> метод, чтобы отсоединять начало соединители от фигуры.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -461,21 +461,21 @@
         <ReturnType>Microsoft.Office.Core.MsoConnectorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип формата соединителя.</summary>
+        <summary>Возвращает или задает тип формата соединители.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Core.MsoConnectorType" />может быть одной из следующих констант <b>мсоконнектортипе</b> :</para>
+            <see cref="T:Microsoft.Office.Core.MsoConnectorType" />может быть одной из следующих <b>констант MsoConnectorType:</b></para>
           <para>
-            <b>мсоконнекторкурве</b>
+            <b>msoConnectorCurve</b>
           </para>
           <para>
-            <b>мсоконнекторелбов</b>
+            <b>msoConnectorElbow</b>
           </para>
           <para>
-            <b>мсоконнекторстраигхт</b>
+            <b>msoConnectorStraight</b>
           </para>
           <para>
-            <b>мсоконнектортипемиксед</b>
+            <b>msoConnectorTypeMixed</b>
           </para>
           <para> </para></remarks>
       </Docs>

@@ -1,5 +1,5 @@
 <Type Name="FormatCondition" FullName="Microsoft.Office.Interop.Excel.FormatCondition">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="06db90663108615d83dc620b65e7671be2f3d791" /><Meta Name="ms.sourcegitcommit" Value="e7d3480b6ad64431c29c74a1b422c662de0b511d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="09/24/2018" /><Meta Name="ms.locfileid" Value="20584415" /></Metadata><TypeSignature Language="C#" Value="public interface FormatCondition" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="06db90663108615d83dc620b65e7671be2f3d791" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003565" /></Metadata><TypeSignature Language="C#" Value="public interface FormatCondition" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FormatCondition" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FormatCondition" />
   <TypeSignature Language="VB.NET" Value="Public Interface FormatCondition" />
@@ -21,44 +21,44 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет условное форматирование.</summary>
+    <summary>Представляет условный формат.</summary>
     <remarks><para>Объект <b>FormatCondition</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Коллекция <b>FormatConditions</b> может содержать до трех условных форматов для заданного диапазона.</para>
-      <para>Используйте <b>FormatConditions</b>(<paramref name="index" />), где index — это номер индекса условного формата, чтобы возвратить объект <b>FormatCondition</b> .</para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для создания нового условного форматирования. Если вы попытаетесь создать более трех условных форматов для одного диапазона, метод <b>Add</b> завершается с ошибкой. Если диапазон имеет три формата, можно использовать <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для изменения одного из форматов или использовать <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> метод для удаления формата, а затем использовать метод <b>Add</b> для создания нового формата.</para>
-      <para>Используйте свойства <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Font" />, <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Borders" />и <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Interior" /> свойства объекта <b>FormatCondition</b> для управления внешним видом форматированных ячеек. Некоторые свойства этих объектов не поддерживаются объектной моделью условного форматирования. В приведенной ниже таблице перечислены свойства, которые можно использовать с условным форматированием.</para>
+      <para>Используйте <b>FormatConditions</b>( ), где индекс — это номер индекса условного формата, чтобы вернуть <paramref name="index" /> объект <b>FormatCondition.</b></para>
+      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.FormatConditions.Add(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> метод для создания условного формата. Если попытаться создать более трех условных форматов для одного диапазона, метод <b>Add</b> не удастся. Если диапазон имеет три формата, можно использовать метод для изменения одного из форматов или с помощью этого метода удалить формат, а затем использовать метод Add для создания <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Modify(Microsoft.Office.Interop.Excel.XlFormatConditionType,System.Object,System.Object,System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel.FormatCondition.Delete" /> нового формата. <b></b></para>
+      <para>Используйте свойства и свойства объекта FormatCondition для управления внешним видом <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Font" /> <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Borders" /> <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Interior" /> отформатированные ячейки. <b></b> Некоторые свойства этих объектов не поддерживаются объектной моделью условного формата. Свойства, которые можно использовать с условным форматированием, перечислены в следующей таблице.</para>
       <list type="table">
         <item>
           <term>
-            <b>Текста</b>
+            <b>Font</b>
           </term>
           <description>
-            <b>Полужирный</b>
-            <b>Цвет</b>
+            <b>Bold</b>
             <b>ColorIndex</b>
             <b>FontStyle</b>
-            <b>курсив</b>
-            <b>Зачеркнутый</b>
-            <b>Подчеркнутый</b>стили подчеркивания не могут использоваться.</description>
+            <b>Italic</b>
+            <b>Strikethrough</b>
+            <b>Underline</b>The accounting underline styles cannot be used.
+            <b></b></description>
         </item>
         <item>
           <term>
-            <b>Вокруг</b>
+            <b>Border</b>
           </term>
           <description>
-            <b>Нижний</b>
-            <b>Цвет</b>
-            <b>слева</b>
-            <b>от</b>левого
-            <b>стиля</b>следующие стили границ могут использоваться (другие не поддерживаются): <b>кслноне</b>, <b>кслсолид</b>, <b>кслдаш</b>, <b>кслдот</b>, <b>кслдашдот</b>, <b>кслдашдотдот</b>, <b>xlGray50</b>, <b>xlGray75</b>и <b>xlGray25</b>. <b>Верхний</b><b>вес</b>можно использовать следующие веса границы (другие не поддерживаются): <b>кслвеигхсаирлине</b> и <b>кслвеигхтсин</b>.</description>
+            <b>В</b>
+            <b></b>
+            <b></b>
+            <b></b>
+            <b></b>нижнем цвете вправо можно использовать следующие стили границы (не поддерживаются): <b>xlNone,</b> <b>xlSolid,</b> <b>xlDash,</b> <b>xlDot,</b> <b>xlDashDot,</b> <b>xlDashDotDot,</b> <b>xlGray50,</b> <b>xlGray75</b>и <b>xlGray25</b>. <b>Top</b><b>Weight</b>The following border weights can be used (all others aren't supported): <b>xlWeightHairline</b> and <b>xlWeightThin</b>.</description>
         </item>
         <item>
           <term>
-            <b>Interior</b>
+            <b>Внутренняя</b>
           </term>
           <description>
-            <b>Цвет</b>
+            <b>Color</b>
             <b>ColorIndex</b>
-            <b>узор</b>
+            <b>Pattern</b>
             <b>PatternColorIndex</b>
           </description>
         </item>
@@ -89,7 +89,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, представляющий приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,7 +117,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, указывающий диапазон ячеек, к которому применяется правило форматирования.</summary>
+        <summary>Возвращает объект, определяющий диапазон ячеей, к которому применяется <see cref="T:Microsoft.Office.Interop.Excel.Range" /> правило форматирования.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Range" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,7 +145,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Borders</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Borders" /> коллекцию, представляющую границы стиля или диапазона ячеек (в том числе диапазон, определенный как часть условного формата).</summary>
+        <summary>Возвращает коллекцию, представляюную границы стиля или диапазона ячеек (включая диапазон, определенный как часть <see cref="T:Microsoft.Office.Interop.Excel.Borders" /> условного формата).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -175,8 +175,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку КСЦЕЛ, которая эквивалентна шестнадцатеричному числу 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение содержит код создателя из четырех символов. Например, в Microsoft Excel есть код создателя КСЦЕЛ.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -206,7 +206,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTimePeriods</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает оператор <see cref="T:Microsoft.Office.Interop.Excel.XlTimePeriods" /> даты, используемый в условии форматирования. Для чтения и записи.</summary>
+        <summary>Указывает оператор <see cref="T:Microsoft.Office.Interop.Excel.XlTimePeriods" /> Date, используемый в условии формата. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlTimePeriods" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -259,7 +259,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Font</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, представляющий шрифт указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Font" /> объект, который представляет шрифт указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -287,9 +287,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение или выражение, связанное с условным форматированием или проверкой данных.</summary>
+        <summary>Возвращает значение или выражение, связанное с условным форматом или проверкой данных.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Formula1</b> может быть константой, строковым значением, ссылкой на ячейку или формулой.</para>
+        <remarks><para>Свойство <b>Formula1</b> может быть постоянным значением, строковой строкой, ссылкой на ячейку или формулой.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -316,9 +316,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение или выражение, связанное с второй частью условного форматирования или проверки данных.</summary>
+        <summary>Возвращает значение или выражение, связанное со второй частью условного формата или проверки данных.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Formula2</b> используется только в том случае, если свойство условного <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Operator" /> форматирования данных проверки данных имеет значение <b>кслбетвин</b> или <b>кслнотбетвин</b>. Возможные значения: константа, строковое значение, ссылка на ячейку или формула.</para>
+        <remarks><para>Свойство <b>Formula2 используется,</b> только если свойство условного форматирования проверки данных <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Operator" /> — <b>xlBetween</b> или <b>xlNotBetween.</b> Может быть постоянным значением, строкой, ссылкой на ячейку или формулой.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -345,7 +345,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, представляющий внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -378,11 +378,11 @@
         <Parameter Name="Formula2" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Обязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" />. Указывает, основывается ли условное форматирование на значении ячейки или выражении. Может быть одной из следующих констант <b>кслформаткондитион</b> :<b>кслцеллвалуе</b><b>кслекспрессион</b></param>
-        <param name="Operator">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" />параметр. Оператор условного форматирования. Может быть одной из следующих констант <b>кслформаткондитионоператор</b> :<b>кслбетвин</b><b>кслекуал</b><b>кслгреатер</b><b>кслгреатерекуал</b><b>ксллесс</b><b>ксллессекуа</b>l<b>xlNotBetween</b><b>xlNotEqual</b> <paramref name="Type" />if, — это <b>xlExpression</b>, <paramref name="Operator" /> аргумент игнорируется.</param>
-        <param name="Formula1">Необязательный <b>объект</b>. Значение или выражение, связанное с условным форматированием. Возможные значения: константа, строковое значение, ссылка на ячейку или формула.</param>
-        <param name="Formula2">Необязательный <b>объект</b>. Значение или выражение, связанное с условным форматированием. Возможные значения: константа, строковое значение, ссылка на ячейку или формула.</param>
-        <summary>Изменяет существующее условное форматирование.</summary>
+        <param name="Type">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> . Указывает, основан ли условный формат на значении ячейки или выражении. Может быть одной из следующих <b>констант XlFormatCondition:</b> <b>xlCellValue</b><b>xlExpression</b></param>
+        <param name="Operator">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> . Оператор условного формата. Может быть одной из следующих констант <b>XlFormatConditionOperator:</b> <b>xlBetween</b><b>xlEqual</b><b>xlGreater xlGreaterEqual</b><b>xlLess</b><b>xlLessEqua</b>l<b>xlNotBetween</b><b>xlNotEqual</b>If , is<b></b> <paramref name="Type" /> <b>xlExpression,</b>аргумент <paramref name="Operator" /> игнорируется.</param>
+        <param name="Formula1"><b>Необязательный объект</b>. Значение или выражение, связанное с условным форматом. Может быть постоянным значением, строкой, ссылкой на ячейку или формулой.</param>
+        <param name="Formula2"><b>Необязательный объект</b>. Значение или выражение, связанное с условным форматом. Может быть постоянным значением, строкой, ссылкой на ячейку или формулой.</param>
+        <summary>Изменяет существующий условный формат.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -408,9 +408,9 @@
         <Parameter Name="Range" Type="Microsoft.Office.Interop.Excel.Range" />
       </Parameters>
       <Docs>
-        <param name="Range">Диапазон, к которому будет применено это правило форматирования.</param>
-        <summary>Задает диапазон ячеек, к которому применяется это правило форматирования.</summary>
-        <remarks><para>Диапазон должен находиться в стиле a1 Reference и полностью содержаться в пределах листа, который является родительским для <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Знаки доллара также можно использовать, но они игнорируются.</para>
+        <param name="Range">Диапазон, к которому будет применяться это правило форматирования.</param>
+        <summary>Задает диапазон ячеей, к которому применяется это правило форматирования.</summary>
+        <remarks><para>Диапазон должен быть в стиле ссылки A1 и полностью содержаться в листе, который является родительским для <see cref="T:Microsoft.Office.Interop.Excel.FormatConditions" /> коллекции. Он может содержать оператор диапазона (двоеточие), оператор пересечения (пробел) или оператор объединения (запятая). Знаки доллара также можно использовать, но они игнорируются.</para>
           <para>Вы также можете использовать локально определенное имя в любой части диапазона, но имя должно быть на языке макроса.</para>
           <para> </para></remarks>
       </Docs>
@@ -478,9 +478,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает формат чисел, примененный к ячейке, если правило условного форматирования имеет <b>значение true</b>. <b>Объект</b>для чтения и записи.</summary>
+        <summary>Возвращает или задает числовую формат, применяемую к ячейке, если правило условного форматирования имеет <b>true.</b> Объект <b>read/write</b>.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Числовой формат указывается с использованием одинаковых кодов форматов, отображаемых на вкладке Число диалогового окна Формат ячеек. Можно использовать встроенный числовой формат, например "General", или создать настраиваемый числовой формат.</para>
+        <remarks><para>Формат номера указывается с помощью тех же кодов формата, которые отображаются на вкладке "Число" диалоговых окна "Формат ячеек". Можно использовать встроенный формат номеров, например "Общие", или создать настраиваемый формат номеров.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -507,7 +507,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает оператор для условного форматирования.</summary>
+        <summary>Возвращает оператор условного формата.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -566,9 +566,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок оценки при наличии нескольких правил условного форматирования на листе.</summary>
-        <value><b>Integer</b></value>
-        <remarks><para>При задании приоритета значение должно быть положительным целым числом между 1 и общим числом правил условного форматирования на листе. Приоритет должен быть уникальным значением для всех правил на листе, поэтому изменение приоритета указанного правила условного форматирования может привести к сдвигу значения приоритета других правил на листе.</para>
+        <summary>Возвращает или задает значение приоритета правила условного форматирования. Приоритет определяет порядок оценки при налияниях на таблицу нескольких правил условного форматирования.</summary>
+        <value>64-разрядное целое число.</value>
+        <remarks><para>При установке приоритета значение должно быть положительным числом от 1 до общего количества правил условного форматирования на этом сайте. Приоритетом должно быть уникальное значение для всех правил на этом документе, поэтому изменение приоритета для указанного правила условного форматирования может привести к смещению значения приоритета других правил на этом документе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -595,7 +595,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>логическое</b> значение, которое указывает, применяется ли условное форматирование к сводной диаграмме. Только для чтения.</summary>
+        <summary>Возвращает <b>boolean значение,</b> указывающее, применяется ли условный формат к диаграмме pivotTable. Только для чтения.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -626,9 +626,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotConditionScope</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> перечисления, которая определяет область действия условного формата при его применении к сводной диаграмме.</summary>
+        <summary>Возвращает или задает одну из констант в этом виде, которая определяет область условного форматирования при применении к диаграмме <see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /> pivotTable.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlPivotConditionScope" /></value>
-        <remarks><para>Значение по умолчанию <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" />, которое задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.AppliesTo" />свойства.</para>
+        <remarks><para>Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlPivotConditionScope.xlSelectionScope" /> задает область с помощью <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.AppliesTo" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -653,10 +653,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает значение приоритета для этого правила условного форматирования равным "1", чтобы оно проверялось перед всеми остальными правилами на листе.</summary>
-        <remarks><para>При наличии нескольких правил условного форматирования на листе, если для правила не было задано значение "1", этот метод приведет к увеличению приоритета всех существующих правил на листе на один.</para>
+        <summary>Задает для этого правила условного форматирования значение "1", чтобы оно оценивалось перед всеми другими правилами на этом сайте.</summary>
+        <remarks><para>Если на этом сайте имеется несколько правил условного форматирования, если ранее правило не было установлено с приоритетом "1", то при этом приоритет всех остальных существующих правил на этом сайте будет увеличен на один.</para>
           <para>
-            <b>Note</b>: уровни приоритетов для правил условного форматирования применяются на уровне листа.</para>
+            <b>Примечание.</b>Уровни приоритета для правил условного форматирования применяются на уровне таблицы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -681,10 +681,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Задает порядок оценки для этого правила условного форматирования, чтобы оно проверялось после всех других правил на листе.</summary>
-        <remarks><para>Фактический вауле приоритета будет равен общему числу правил условного форматирования на листе. При наличии нескольких правил условного форматирования на листе этот метод приведет к увеличению приоритета правил, которые имеют значение приоритет, превышающее это правило.</para>
+        <summary>Задает порядок оценки для этого правила условного форматирования, чтобы оно оценивалось после всех остальных правил на этом документе.</summary>
+        <remarks><para>Фактический vaule приоритета будет равен общему числу правил условного форматирования на этом сайте. При работе с несколькими правилами условного форматирования на одном из таблиц этот метод приведет к увеличению приоритета правил, значение приоритета для них больше, чем это правило.</para>
           <para>
-            <b>Note</b>: уровни приоритетов для правил условного форматирования применяются на уровне листа.</para>
+            <b>Примечание.</b>Уровни приоритета для правил условного форматирования применяются на уровне таблицы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -714,9 +714,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>логическое</b> значение, определяющее, следует ли оценивать дополнительные правила форматирования ячейки, если текущее правило имеет <b>значение true</b>.</summary>
+        <summary>Возвращает или задает значение <b>boolean,</b> которое определяет, следует ли оценивать дополнительные правила форматирования в ячейке, если текущее правило имеет <b>значение True.</b></summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Для поддержки обратной совместимости значение этого свойства по умолчанию равно <b>true</b>, что является противоположным поведением правила форматирования, созданного в пользовательском интерфейсе.</para>
+        <remarks><para>Для поддержки обратной совместимости значение по умолчанию для этого свойства — <b>True,</b>что является обратным поведением правила форматирования, созданного в пользовательском интерфейсе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -746,9 +746,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строковое</b> значение, задающее текст, используемый правилом условного форматирования.</summary>
+        <summary>Возвращает или задает <b>строковое значение,</b> указывав текст, используемый правилом условного форматирования.</summary>
         <value><b>Строка</b></value>
-        <remarks><para>Это свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Type" /> для <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlTextString" />свойства не задано значение.</para>
+        <remarks><para>Это свойство игнорируется, если для свойства <see cref="P:Microsoft.Office.Interop.Excel.FormatCondition.Type" /> не за установлено свойство <see cref="F:Microsoft.Office.Interop.Excel.XlFormatConditionType.xlTextString" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -778,7 +778,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlContainsOperator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одну из констант <see cref="T:Microsoft.Office.Interop.Excel.XlContainsOperator" /> перечисления, задавая текст поиска, выполняемый правилом условного форматирования.</summary>
+        <summary>Возвращает или задает одну из констант этого перенамерения, указав поиск текста, выполняемый правилом <see cref="T:Microsoft.Office.Interop.Excel.XlContainsOperator" /> условного форматирования.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlContainsOperator" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -808,12 +808,12 @@
       <Docs>
         <summary>Возвращает тип объекта.</summary>
         <value>To be added.</value>
-        <remarks><para>Типом объекта может быть одна из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> констант:</para>
+        <remarks><para>Тип объекта может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionType" /> констант:</para>
           <para>
-            <b>кслцеллвалуе</b>
+            <b>xlCellValue</b>
           </para>
           <para>
-            <b>кслекспрессион</b>
+            <b>xlExpression</b>
           </para>
           <para> </para></remarks>
       </Docs>
