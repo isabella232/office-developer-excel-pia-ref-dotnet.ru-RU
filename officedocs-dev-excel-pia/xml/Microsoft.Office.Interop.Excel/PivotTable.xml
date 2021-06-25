@@ -1,5 +1,5 @@
 <Type Name="PivotTable" FullName="Microsoft.Office.Interop.Excel.PivotTable">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="364b8d02df1ff32fe7432d4ed2dd804098003fda" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49997315" /></Metadata><TypeSignature Language="C#" Value="public interface PivotTable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="16c5d5ee17ecfd05c6488cea8090233dcfb2c5a3" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="06/25/2021" /><Meta Name="ms.locfileid" Value="53140693" /></Metadata><TypeSignature Language="C#" Value="public interface PivotTable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotTable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotTable" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotTable" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет отчет pivotTable на этом сайте. Объект <b>PivotTable</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> коллекции. Коллекция <b>pivotTables</b> содержит все объекты <b>pivotTable</b> на одном документе.</summary>
-    <remarks><para>Используйте <b>pivotTables</b>( ), где находится номер индекса или имя pivotTable, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>pivotTable.</b></para>
-      <para>Поскольку программирование отчетов pivotTable может быть сложным, обычно проще записывать действия отчетов pivotTable, а затем пересматривать записанный код. Чтобы записать макрос, найдите макрос в меню "Инструменты" и нажмите кнопку "Запись нового макроса".</para>
+    <summary>Представляет отчет PivotTable на таблице. Объект <b>PivotTable</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> коллекции. Коллекция <b>PivotTables</b> содержит все <b>объекты PivotTable</b> на единой таблице.</summary>
+    <remarks><para>Используйте <b>pivotTables</b>(), где находится номер индекса PivotTable или имя, чтобы вернуть один <paramref name="index" /> объект <paramref name="index" /> <b>PivotTable.</b></para>
+      <para>Поскольку программирование отчетов pivotTable может быть сложным, обычно проще всего записывать действия отчетов pivotTable, а затем пересматривать записанный код. Чтобы записать макрос, указать макрос в меню Tools и нажмите кнопку Запись нового макроса.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -148,10 +148,10 @@
         <Parameter Name="Function" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Field">Необходимый <b>объект</b>. Уникальное поле на сервере. Если источником данных является OLAP, уникальным полем является поле куба. Если исходные данные не являются OLAP (не OLAP-исходными данными), уникальным полем является поле "Совпабля".</param>
-        <param name="Caption"><b>Необязательный объект</b>. Метка, используемая в отчете pivotTable для идентификации этого поля данных.</param>
-        <param name="Function"><b>Необязательный объект</b>. Функция, выполняемая в добавленное поле данных.</param>
-        <summary>Добавляет поле данных в отчет pivotTable. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, который представляет новое поле данных.</summary>
+        <param name="Field">Необходимый <b>объект</b>. Уникальное поле на сервере. Если исходными данными является Online Analytical Processing (OLAP), уникальным полем является куб. Если исходные данные не являются OLAP (не OLAP исходными данными), уникальным полем является поле PivotTable.</param>
+        <param name="Caption"><b>Необязательный объект</b>. Метка, используемая в отчете PivotTable для идентификации этого поля данных.</param>
+        <param name="Function"><b>Необязательный объект</b>. Функция, выполняемая в добавленной области данных.</param>
+        <summary>Добавляет поле данных в отчет PivotTable. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, который представляет новое поле данных.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -181,14 +181,14 @@
         <Parameter Name="AddToTable" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="RowFields"><b>Необязательный объект</b>. Указывает имя поля (или массив имен полей), добавляемого в качестве строк или добавляемого на ось категории.</param>
-        <param name="ColumnFields"><b>Необязательный объект</b>. Указывает имя поля (или массив имен полей), добавляемого в качестве столбцов или добавляемого на ось рядов.</param>
-        <param name="PageFields"><b>Необязательный объект</b>. Указывает имя поля (или массив имен полей), добавляемого в качестве страниц или добавляемого в область страницы.</param>
-        <param name="AddToTable"><b>Необязательный объект</b>. Применяется только к отчетам pivotTable. <b>True,</b> чтобы добавить указанные поля в отчет (ни одно из существующих полей не заменено). <b>False</b> для замены существующих полей новыми полями. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Добавляет поля строк, столбцов и страниц в отчет pivotTable или сводная диаграмма отчета.</summary>
+        <param name="RowFields"><b>Необязательный объект</b>. Указывает имя поля (или массив имен полей), добавляемого в строки или добавляемого в ось категории.</param>
+        <param name="ColumnFields"><b>Необязательный объект</b>. Указывает имя поля (или массив имен полей), которое должно быть добавлено в качестве столбцов или добавлено в ось серии.</param>
+        <param name="PageFields"><b>Необязательный объект</b>. Указывает имя поля (или массив имен полей), которое должно быть добавлено в качестве страниц или добавлено в область страницы.</param>
+        <param name="AddToTable"><b>Необязательный объект</b>. Применяется только к отчетам PivotTable. <b>Правда,</b> чтобы добавить указанные поля в отчет (ни одно из существующих полей не заменено). <b>False</b> для замены существующих полей новыми полями. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Добавляет строки, столбцы и поля страниц в отчет PivotTable или сводная диаграмма отчет.</summary>
         <returns>To be added.</returns>
         <remarks><para>Необходимо указать один из аргументов поля.</para>
-          <para>Имена полей указывают уникальное имя, возвращаемое <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
+          <para>Имена полей указывают уникальное имя, возвращенное <see cref="P:Microsoft.Office.Interop.Excel.PivotField.SourceName" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
           <para>Этот метод не доступен для источников данных OLAP.</para>
           <para> </para></remarks>
       </Docs>
@@ -214,8 +214,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выполняет операцию записи для всех измененных ячеек в отчете pivotTable на основе источника данных OLAP.</summary>
-        <remarks><para>Метод будет выполнять выписку UPDATE CUBE для всех изменений, внесенных в область значений с момента последней операции применения изменений, или с момента создания этой списки, если применение изменений никогда не <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.AllocateChanges" /> выполнялось. Этот метод создает ошибку во время выполнения, если он выполняется в отчете pivotTable на основе источника данных, не относящаться к OLAP.</para>
+        <summary>Выполняет операцию списания для всех отредактируемых ячеек в отчете PivotTable на основе источника данных OLAP.</summary>
+        <remarks><para>Метод выполнит заявление UPDATE CUBE для всех изменений, внесенных в области значений PivotTable с момента совершения последней операции изменений применения, или после создания PivotTable, если совершение изменений не <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.AllocateChanges" /> выполнено. Этот метод создает временную ошибку, если она выполняется в отчете PivotTable на основе источника данных, не относящеся к OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -245,10 +245,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlAllocation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, следует ли выполнять для каждой ячейки выписку <b>UPDATE CUBE</b> или только в том случае, если пользователь выбирает расчет изменений при выполнении анализа "что-если" в с помощью источника данных OLAP.</summary>
+        <summary>Получает или задает, следует ли выполнять заявление <b>UPDATE CUBE</b> для каждой ячейки, или только тогда, когда пользователь выбирает для вычисления изменений при выполнении анализа what-if на pivotTable на основе источника данных OLAP.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlAllocation" />Объект.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Свойство соответствует параметру "Расчет с изменениями" в диалоговом окне <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Allocation" /> What-If "Параметры анализа". Значение по умолчанию соответствует параметру "Вручную" (при выборе вычисляемой с помощью с помощью <see cref="F:Microsoft.Office.Interop.Excel.XlAllocation.xlManualAllocation" /> изменений).</para>
+          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Allocation" /> соответствует параметру Calculate с изменением в диалоговом окне What-If analysis Параметры. Параметр по умолчанию соответствует параметру <see cref="F:Microsoft.Office.Interop.Excel.XlAllocation.xlManualAllocation" /> "Вручную" (при выборе параметра calculate PivotTable с изменениями).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -278,10 +278,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlAllocationMethod</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает метод, который будет применяться для выделения значений при выполнении анализа "что-если" в отчете pivotTable на основе источника данных OLAP.</summary>
+        <summary>Получает или задает метод, который используется для выделения значений при выполнении анализа what-if в отчете PivotTable на основе источника данных OLAP.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlAllocationMethod" />Объект.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Свойство соответствует параметру метода выделения в диалоговом <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> окне What-If "Параметры анализа". Значение по умолчанию— соответствует параметру <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlEqualAllocation" /> "Равное выделение". Если для свойства установлено соответствующее параметру взвешенного выделения, можно при желании указать выражение веса, которое будет использовать <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> свойство. Если выражение веса не указано, используется выражение веса, эквивалентное значению листовой &lt; &gt;  /  &lt; ячейки, &gt; существующее значение.</para>
+          <para>Свойство соответствует параметру Метод выделения в <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> диалоговом окне What-If analysis Параметры диалоговом окне. Параметр по умолчанию соответствует параметру <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlEqualAllocation" /> Равное распределение. Если для свойства установлено , соответствующее параметру Взвешенного распределения, можно дополнительно указать выражение веса, которое необходимо использовать, установив <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> свойство. Если вы не указываете выражение веса, используется выражение веса, эквивалентное значению листочная ячейка &lt; &gt;  /  &lt; &gt; существующее значение.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -311,10 +311,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlAllocationValue</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, выделяемое при выполнении анализа "что-если" в отчете pivotTable на основе источника данных OLAP.</summary>
+        <summary>Получает или задает значение, выделяемое при выполнении анализа what-if в отчете PivotTable на основе источника данных OLAP.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlAllocationValue" />Объект.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Свойство соответствует параметру "Значение для выделения" в диалоговом <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationValue" /> окне What-If "Параметры анализа". Значение по умолчанию — это значение, соответствующее введенной сумме, разделенной на количество <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationValue.xlAllocateValue" /> параметров выделения.</para>
+          <para>Свойство соответствует параметру Value to Allocate в <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationValue" /> диалоговом окне What-If analysis Параметры. Параметр по умолчанию соответствует введенной значению, разделенной на <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationValue.xlAllocateValue" /> количество параметров выделения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -344,10 +344,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает выражение веса MDX, используемое при выполнении анализа "что-если" в отчете pivotTable на основе источника данных OLAP.</summary>
-        <value>Выражение веса MDX, используемое при выполнении анализа "что-если" в отчете pivotTable на основе источника данных OLAP.</value>
+        <summary>Получает или задает выражение веса MDX для использования при выполнении анализа what-if в отчете PivotTable на основе источника данных OLAP.</summary>
+        <value>Выражение веса MDX, используемое при выполнении анализа what-if в отчете PivotTable на основе источника данных OLAP.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Свойство соответствует параметру weight Expression в диалоговом окне What-If <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> "Параметры анализа". Перед тем как можно будет установить свойство, необходимо установить для <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> свойства его в <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> . <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" /></para>
+          <para>Свойство соответствует параметру Weight Expression в диалоговом <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> окне What-If analysis Параметры. Перед <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationWeightExpression" /> тем, как можно установить свойство, необходимо настроить <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AllocationMethod" /> свойство <see cref="F:Microsoft.Office.Interop.Excel.XlAllocationMethod.xlWeightedAllocation" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -377,13 +377,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или извлекает значение, которое указывает, может ли к a может применяться несколько фильтров <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> одновременно.
+        <summary>Задает или извлекает значение, которое указывает, может ли к ней одновременно применяться несколько <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтров.
 Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Значение по умолчанию — <b>False.</b></para>
-          <para>Если для этого свойства <b>установлено true,</b>к одному может применяться несколько фильтров. <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> Если установлено <b>false,</b>применение фильтра к уже отфильтрованным фильтрам удалит существующий фильтр и <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> примелит новый.
+        <remarks><para>Значение по умолчанию <b>false</b>.</para>
+          <para>Если это свойство заданной <b>для True,</b>к одному можно применить несколько фильтров. <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> Если установлено <b>false,</b>применение фильтра к уже отфильтрованным фильтрам удаляет существующий фильтр и <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> применяет новый фильтр.
 
-Если у <b></b> этого свойства есть поля с более чем одним фильтром, это свойство автоматически удаляет все фильтры в объекте без отображения <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> оповещений. Тем не менее, когда это делается через пользовательский интерфейс, существует оповещение.</para>
+Настройка этого свойства <b>false,</b> когда применены поля с более чем одним фильтром, будет молча удалять все фильтры в поле без <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />  отображения <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />  оповещения. Однако существует оповещение, когда это делается с помощью пользовательского интерфейса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -413,10 +413,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текстовую строку с описательным (альтернативным) текстом для указанной совательной группы.</summary>
-        <value>Текстовая строка с описательным (альтернативным) текстом для указанной pivotTable.</value>
+        <summary>Получает или задает текстовую строку описательный (альтернативный) для указанного PivotTable.</summary>
+        <value>Текстовая строка описательный (альтернативный) для указанного PivotTable.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Значение свойства соответствует значению в поле "Заголовок" на вкладке "Заметельный текст" диалогового окна "Параметры <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AlternativeText" /> таблицы".</para>
+          <para>Значение свойства соответствует значению в поле Title на вкладке Alt Text диалогового окна <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.AlternativeText" /> PivotTable Options.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -443,7 +443,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -474,9 +474,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер индекса кэша pivotTable. Для чтения и записи, <b>Integer</b>.</summary>
+        <summary>Возвращает или задает номер индекса кэша PivotTable. Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если вы настроили свойство <b>CacheIndex</b> таким образом, чтобы один отчет pivotTable использовал кэш для второго отчета pivotTable, поля первого отчета должны быть допустимым подмножество полей во втором отчете.</para>
+        <remarks><para>Если задать свойство <b>CacheIndex</b> таким образом, чтобы один отчет PivotTable использовал кэш для второго отчета PivotTable, поля первого отчета должны быть допустимым подмножество полей во втором отчете.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -501,7 +501,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает коллекцию, представляюную все вычисляемые поля в указанном отчете <see cref="T:Microsoft.Office.Interop.Excel.CalculatedFields" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.CalculatedFields" /> коллекцию, которая представляет все вычисляемые поля в указанном отчете PivotTable. Только для чтения.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -529,9 +529,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.CalculatedMembers</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, представляющую все вычисляемые члены и вычисляемые показатели <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> для pivotTable OLAP.</summary>
+        <summary>Возвращает коллекцию, представляющую все вычисляемые участники, и вычисляемые меры <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> для pivotTable OLAP.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство используется для источников OLAP; Источник, не относящаться к OLAP, возвращает ошибку времени запуска.</para>
+        <remarks><para>Это свойство используется для источников интерактивной аналитической обработки (OLAP). источник без OLAP возвращает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -561,12 +561,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, следует ли оценивать вычисляемую оценку членов с серверов OLAP в фильтрах.</summary>
-        <value><b>true,</b> если вычисляемая оценка членов с серверов OLAP должна оцениваться в фильтрах; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, следует ли оценивать вычислимые участники с серверов OLAP в фильтрах.</summary>
+        <value><b>верно,</b> если вычисляемая оценка участников с серверов OLAP должна быть оценена в фильтрах; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>true,</b> если вычисляемая оценка членов оценивается в фильтрах; в <b>противном случае false</b>.</para>
-          <para>Значение этого свойства соответствует параметру вычисляемых членов оценки с серверов OLAP в поле фильтров на вкладке "Итоги фильтров" диалогового окна "Параметры таблицы" для отчета "Списочная таблица" на основе источника данных &amp; OLAP.</para>
+            <b>true,</b> если рассчитанные участники оцениваются в фильтрах; в <b>противном случае false</b>.</para>
+          <para>Значение этого свойства соответствует параметру вычисляемых участников Оценки с серверов OLAP в поле фильтров на вкладке Totals Filters диалогового окна PivotTable Options для отчета PivotTable на основе источника данных &amp; OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -595,7 +595,7 @@
       <Docs>
         <param name="conn">Необходимый <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объект, который представляет новое подключение для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</param>
         <summary>Изменяет подключение указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</summary>
-        <remarks><para>Этот метод можно использовать только с подключенным к <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangeConnection(Microsoft.Office.Interop.Excel.WorkbookConnection)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />  внешнему источнику данных. Ошибка во время работы возникает, если метод используется с данными, хранимыми на этом сайте в <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangeConnection(Microsoft.Office.Interop.Excel.WorkbookConnection)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> качестве источника данных.</para>
+        <remarks><para>Метод можно использовать только с подключенным к <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangeConnection(Microsoft.Office.Interop.Excel.WorkbookConnection)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />  внешнему источнику данных. Ошибка во время работы будет возникать, если метод используется с данными, хранимыми на таблице <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangeConnection(Microsoft.Office.Interop.Excel.WorkbookConnection)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> в качестве источника данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -622,8 +622,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotTableChangeList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает коллекцию, представляюную список изменений, внесенных в указанную списоную, на основе источника <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> данных OLAP.</summary>
-        <value>Коллекция, представляюща собой список изменений, внесенных в указанную списоную, на основе источника данных <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> OLAP.</value>
+        <summary>Получает коллекцию, представляюную список изменений, внесенных в указанный <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> PivotTable на основе источника данных OLAP.</summary>
+        <value>Коллекция, представляюща список изменений, внесенных в указанный <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> pivotTable на основе источника данных OLAP.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -651,9 +651,9 @@
         <Parameter Name="PivotCache" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PivotCache"><b>Требуемая строка</b> A или объект, который представляет новый для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</param>
+        <param name="PivotCache">Обязательно <b>строка</b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> или <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" />  объект, который представляет новое <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" />  для указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</param>
         <summary>Изменяет <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> указанный <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</summary>
-        <remarks><para>Этот метод можно использовать только с данными, которые хранятся на этом сайте в <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangePivotCache(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />  качестве источника данных. Ошибка во время работы возникает, если метод используется с подключенным к <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangePivotCache(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> внешнему источнику данных.</para>
+        <remarks><para>Метод можно использовать только с помощью данных, хранимого на <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangePivotCache(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" />  таблице в качестве источника данных. Ошибка во время работы будет возникать, если метод используется с подключенным к <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ChangePivotCache(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> внешнему источнику данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -678,7 +678,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Этот <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearAllFilters" /> метод удаляет все фильтры, примененные к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .. Это включает удаление всех фильтров в коллекции объекта, удаление примененной ручной фильтрации и установку элемента по умолчанию для всех объектов в области фильтра <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> отчетов.</summary>
+        <summary>Метод <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearAllFilters" /> удаляет все фильтры, применяемые в настоящее время к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Это включает удаление всех фильтров в коллекции объекта, удаление ручного фильтрации и установку всех s в области фильтра отчетов на элемент по <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> умолчанию.</summary>
         <remarks><para>После вызова <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearAllFilters" /> метода коллекция будет <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> пустой.</para>
           <para> </para></remarks>
       </Docs>
@@ -704,8 +704,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Этот <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> метод используется для очистки <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Очистка включает удаление всех полей и удаление всех фильтров и сортировки, применяемых <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> к <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> . Этот метод сбрасывает состояние сразу после создания до того, как к ней были добавлены <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> какие-либо поля.</summary>
-        <remarks><para>Функция не принимает аргументы и доступна как для <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> реляционных, так и для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> OLAP-s. </para>
+        <summary>Метод <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> используется для очистки <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Очистка s включает удаление всех полей и удаление всех фильтров и сортировки, применяемых <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> к <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> . Этот метод сбрасывает состояние, в который он был сразу после создания, до того, как к ней были <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> добавлены какие-либо поля.</summary>
+        <remarks><para>Функция не имеет аргументов и доступна как для <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ClearTable" /> реляционных, так и для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> OLAP.s. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -736,7 +736,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер поля (может быть массивом для указания нескольких полей).</param>
-        <summary>Возвращает объект, который представляет либо одно поле pivotTable (объект), либо коллекцию всех полей (объекта), которые в настоящее время показаны как поля <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> столбцов. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет одно поле PivotTable (объект) или коллекцию всех полей (объекта), которые в настоящее время показаны в качестве <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> полей столбцов. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -767,7 +767,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если отчет pivotTable отображает общие итоги для столбцов. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если отчет PivotTable показывает общие итоги для столбцов. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -795,7 +795,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, содержащий область столбца в отчете <see cref="T:Microsoft.Office.Interop.Excel.Range" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет диапазон, содержащий область <see cref="T:Microsoft.Office.Interop.Excel.Range" /> столбца в отчете PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -821,8 +821,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выполняет операцию фиксации для источника данных отчета pivotTable на основе источника данных OLAP.</summary>
-        <remarks><para>Метод отправляет на сервер OLAP заявление COMMIT TRANSACTION и очищает все ячейки, измененные путем ввода значения, но не очищает формулы в ячейках <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.CommitChanges" /> значений. Этот метод создает ошибку во время выполнения, если он выполняется в отчете pivotTable на основе источника данных, не относящаться к OLAP.</para>
+        <summary>Выполняет операцию фиксации в источнике данных отчета PivotTable на основе источника данных OLAP.</summary>
+        <remarks><para>Метод отправляет заявление COMMIT TRANSACTION на сервер OLAP и очищает все ячейки, которые были отредактированы путем ввода значения, но не очищают формулы в ячейках <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.CommitChanges" /> значений. Этот метод создает временную ошибку, если она выполняется в отчете PivotTable на основе источника данных, не относящеся к OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -852,7 +852,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает заголовок, который отображается в заголовок столбца в компактной форме <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> макета строки. Для чтения и записи.</summary>
+        <summary>Указывает подпись, отображаемую в заголовок столбца в форме макета <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> компактных строк. Для чтения и записи.</summary>
         <value>String</value>
         <remarks><para>Когда пользователь настраивает эти подписи в сетке, они также отражаются в этих свойствах.</para>
           <para> </para></remarks>
@@ -884,8 +884,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает заголовок, который отображается в заголовок строки в компактной форме <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> макета строки. Для чтения и записи.</summary>
-        <value><b>Строка</b></value>
+        <summary>Указывает подпись, отображаемую в заголовок строки в форме макета <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> компактной строки. Для чтения и записи.</summary>
+        <value><b>String</b></value>
         <remarks><para>Когда пользователь настраивает эти подписи в сетке, они также отражаются в этих свойствах.</para>
           <para> </para></remarks>
       </Docs>
@@ -916,9 +916,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отступ при включенной форме макета <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> компактной строки. Для чтения и записи.</summary>
-        <value>64-разрядное целое число.</value>
-        <remarks><para>Значение по умолчанию равно 1. Допустимые значения этого параметра — от 0 до максимального отступа, указанного в Microsoft Excel.</para>
+        <summary>Возвращает или задает отступные при вращении формы макета <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> компактной строки. Для чтения и записи.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Значение по умолчанию равно 1. Допустимые значения для этого параметра — от 0 до максимального отступа, указанного в Microsoft Excel.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -945,9 +945,9 @@
         <Parameter Name="ConvertFilters" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="ConvertFilters">Обязательное <b>boolean</b> содержит <b>true</b> или <b>False,</b> чтобы указать состояние области ReportFilter.</param>
-        <summary>Этот метод является новым в 1st_Excel12 и используется для <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ConvertToFormulas(System.Boolean)" /> преобразования формул <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> куба.</summary>
-        <remarks><para>Аргумент управляет преобразованием области ReportFilter в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . </para>
+        <param name="ConvertFilters">Необходимый <b>boolean содержит</b> <b>true</b> или <b>false,</b> чтобы указать состояние области ReportFilter.</param>
+        <summary>Метод <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.ConvertToFormulas(System.Boolean)" /> является новым в 1st_Excel12 и используется для преобразования формул <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> куба.</summary>
+        <remarks><para>Аргумент контролирует, следует ли преобразовать область ReportFilter <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> области . </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -977,12 +977,12 @@
         <Parameter Name="Properties" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="File">Обязательный атрибут типа <b>String</b>. Имя созда создаемого файла куба. Файл будет переописываться, если он уже существует.</param>
+        <param name="File">Обязательный атрибут типа <b>String</b>. Имя создаемого файла куба. Если файл уже существует, он перепишет файл.</param>
         <param name="Measures"><b>Необязательный объект</b>. Массив уникальных имен мер, которые должны быть частью среза.</param>
-        <param name="Levels"><b>Необязательный объект</b>. Массив строк. Каждый элемент массива является уникальным именем уровня. Он представляет самый низкий уровень иерархии, который находится в срезе.</param>
-        <param name="Members"><b>Необязательный объект</b>. Массив массивов строк. Элементы по порядку соответствуют иерархиям, представленным в <paramref name="Levels" /> массиве. Каждый элемент представляет собой массив строковых массивов, состоящий из уникальных имен элементов верхнего уровня в измерении, которые необходимо включить в срез.</param>
-        <param name="Properties"><b>Необязательный boolean</b>. <b>False</b> приводит к включению свойств членов в срез. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Создает файл куба из отчета pivotTable, подключенного к источнику данных OLAP.</summary>
+        <param name="Levels"><b>Необязательный объект</b>. Массив строк. Каждый элемент массива — это уникальное имя уровня. Он представляет самый низкий уровень иерархии, который находится в срезе.</param>
+        <param name="Members"><b>Необязательный объект</b>. Массив строковых массивов. Элементы соответствуют иерархиям, представленным в <paramref name="Levels" /> массиве. Каждый элемент представляет собой массив строковых массивов, состоящий из уникальных имен участников верхнего уровня в том измерении, которое должно быть включено в срез.</param>
+        <param name="Properties"><b>Необязательный boolean</b>. <b>Ложные</b> результаты в том, что свойства членов не включаются в срез. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Создает куб-файл из отчета PivotTable, подключенного к источнику данных online analytical Processing (OLAP).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1010,9 +1010,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1067,7 +1067,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, содержащий область данных в списке между строкой и строкой <see cref="T:Microsoft.Office.Interop.Excel.Range" /> вставки. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет диапазон, содержащий область данных в списке между строкой <see cref="T:Microsoft.Office.Interop.Excel.Range" /> загона и строкой вставки. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1099,7 +1099,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер поля (может быть массивом для указания нескольких полей).</param>
-        <summary>Возвращает объект, который представляет либо одно поле совместимой (объект), либо коллекцию всех полей (объекта), которые в настоящее время показаны как <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> поля данных. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет одно поле PivotTable (объект) или коллекцию всех полей (объекта), которые в настоящее время показаны в качестве <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> полей данных. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1127,7 +1127,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, содержащий метки для полей данных в отчете <see cref="T:Microsoft.Office.Interop.Excel.Range" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет диапазон, содержащий метки для полей данных в <see cref="T:Microsoft.Office.Interop.Excel.Range" /> отчете PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1155,7 +1155,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, который представляет все поля данных в pivotTable. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет все поля данных в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1181,9 +1181,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет все изменения в измененных ячейках отчета pivotTable на основе источника данных OLAP.</summary>
-        <remarks><para>Для отчета pivotTable на основе источника данных OLAP метод удаляет все значения и формулы, введенные в ячейках значений, а затем запускает операцию обновления pivotTable для получения последних значений из источника данных. Он устанавливает для источника данных значение null (Nothing in Visual Basic) для всех изредактируемых ячеек значений, а также выполняет на сервере OLAP операцию ROLLBACK TRANSACTION.</para>
-          <para>Если попытаться выполнить этот метод для отчета pivotTable, основанного на источнике данных, не относячеству к OLAP, этот метод создает ошибку во время выполнения.</para>
+        <summary>Удаляет все изменения в отредактируемых ячейках отчета PivotTable на основе источника данных OLAP.</summary>
+        <remarks><para>Для отчета PivotTable, основанного на источнике данных OLAP, метод удаляет все значения и формулы, вписаемые в ячейки значений, а затем выполняет операцию обновления PivotTable для получения последних значений из источника данных. Он задает значение источника данных в ссылку null (Ничего в Visual Basic) для всех отредактированых ячеек значения, а также выполняет заявление ROLLBACK TRANSACTION на сервере OLAP.</para>
+          <para>Если вы попробуете выполнить этот метод для отчета PivotTable на основе источника данных, не основанного на OLAP, этот метод создает временную ошибку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1213,9 +1213,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Управляет отображением для ячеек наборов <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> инструментов. Для чтения и записи.</summary>
+        <summary>Контролирует, отображаются ли панели инструментов для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> ячеек. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayContextTooltips" /> за установлено <b>false,</b>контекстные инструменты для ячеек <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> не отображаются. Если за установлено <b>true,</b>отображаются панели инструментов для ячеек в строке, столбце и областях <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> данных.</para>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayContextTooltips" /> установлено <b>false,</b>контекстные инструменты для ячеек <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> не отображаются. Если установлено <b>true,</b>будут отображаться наборы инструментов для ячеек в строке, столбце и областях <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1245,9 +1245,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>True,</b> если непустые ключевые слова MDX включены в запрос к поставщику OLAP для оси значений. Поставщик OLAP не возвращает пустые столбцы в наборе результатов. Возвращает <b>false,</b> если непустые ключевые слова опущены. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>значение True,</b> когда ключевое слово MDX включено в запрос поставщику OLAP для оси значения. Поставщик OLAP не возвращает пустые столбцы в наборе результатов. Возвращает <b>false,</b> когда непустые ключевые слова опущены. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы избежать ошибки во время запуска, совпав совмещать ее, необходимо подключать к источнику данных OLAP.</para>
+        <remarks><para>Чтобы избежать ошибки во время запуска, необходимо подключать pivotTable к источнику данных online analytical Processing (OLAP).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1277,9 +1277,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если непустые ключевые слова MDX включены в запрос к поставщику OLAP для оси категории. Поставщик OLAP не возвращает пустые строки в наборе результатов. Возвращает <b>false,</b> если непустые ключевые слова опущены. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> когда ключевое слово MDX включено в запрос поставщику OLAP для оси категории. Поставщик OLAP не возвращает пустые строки в наборе результатов. Возвращает <b>false,</b> когда непустые ключевые слова опущены. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы избежать ошибки во время запуска, совпав совмещать ее, необходимо подключать к источнику данных OLAP.</para>
+        <remarks><para>Чтобы избежать ошибки во время запуска, необходимо подключать pivotTable к источнику данных online analytical Processing (OLAP).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1309,10 +1309,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если отчет pivotTable отображает настраиваемую строку ошибки в ячейках, содержащих ошибки. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если отчет PivotTable отображает настраиваемую строку ошибок в ячейках, содержащих ошибки. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ErrorString" /> для настройки настраиваемой строки ошибки.</para>
-          <para>Это свойство особенно полезно для подавления ошибок деления на ноль при севописи вычисляемого поля.</para>
+        <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ErrorString" /> для настройки настраиваемой строки ошибок.</para>
+          <para>Это свойство особенно полезно для подавления ошибок "разделяй на ноль" при повороте вычисляемого поля.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1342,7 +1342,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Управляет отображением кнопок и подписей фильтра для строк и столбцов <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> в сетке. Для чтения и записи.</summary>
+        <summary>Управление отображением кнопок и подписей фильтра для строк и столбцов в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> сетке. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
         <remarks><para>Значение по умолчанию — <b>True</b>.</para>
           <para> </para></remarks>
@@ -1374,7 +1374,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>boolean,</b> который указывает, видны ли элементы в областях строк и столбцов, когда область данных совмещаемой строки пуста. Установите для <b>этого</b> свойства false, чтобы скрыть элементы в областях строки и столбца, если область данных совмещаемой строки пуста. Значение по умолчанию — <b>True</b>.</summary>
+        <summary>Возвращает или задает <b>boolean,</b> который указывает, видны ли элементы в строке и областях столбцов, когда область данных pivotTable пуста. Установите это свойство <b>False,</b> чтобы скрыть элементы в строке и столбцах, когда область данных pivotTable пуста. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1405,9 +1405,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Управляет отображением свойств элементов во ветвях инструментов. Для чтения и записи.</summary>
+        <summary>Управление отображением свойств членов в панели инструментов. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если за установлено false, никакие свойства членов не будут отображаться <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayMemberPropertyTooltips" /> во вехах. <b></b> Если за установлено <b>true,</b>свойства членов будут отображаться во вехах.</para>
+        <remarks><para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayMemberPropertyTooltips" /> установлено <b>false,</b>никакие свойства членов не будут отображаться в панели инструментов. Если оно за установлено <b>true,</b>свойства членов будут отображаться в панели инструментов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1437,7 +1437,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если отчет pivotTable отображает настраиваемую строку в ячейках, содержащих значения null. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если отчет PivotTable отображает настраиваемую строку в ячейках, содержащих значения null. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.NullString" /> для настройки настраиваемой строки null.</para>
           <para> </para></remarks>
@@ -1465,9 +1465,9 @@
         <Parameter Name="PivotLine" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PivotItem">Член, из которого выполняется разверка.</param>
-        <param name="PivotLine">Указывает строку в pivotTable, где находится начальный член операции. Если pivotLine не указан, по умолчанию задана верхняя pivotLine, в которой отображается участник.</param>
-        <summary>Позволяет вам получить сведения о данных в иерархии кубов на PowerPivot OLAP или PowerPivot данных.</summary>
+        <param name="PivotItem">Участник, из которого выполняется сверло.</param>
+        <param name="PivotLine">Указывает строку в PivotTable, где находится начальный участник операции. В случаях, когда PivotLine не указан, по умолчанию по умолчанию отображается верхняя часть PivotLine, в которой отображается член.</param>
+        <summary>Позволяет сверлить данные в иерархии кубов PowerPivot OLAP или PowerPivot.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1494,10 +1494,10 @@
         <Parameter Name="PivotLine" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PivotItem">Член, из которого выполняется операция drill.</param>
-        <param name="CubeField">Целевая иерархия, до которая будет сверлена.</param>
-        <param name="PivotLine">Указывает строку в pivotTable, где находится начальный член операции. Если pivotLine не указан, по умолчанию задана верхняя pivotLine, в которой отображается участник.</param>
-        <summary>Позволяет сверяться до расположения в иерархии olAP или PowerPivot куба.</summary>
+        <param name="PivotItem">Участник, из которого выполняется операция сверла.</param>
+        <param name="CubeField">Целевая иерархия, в которая ведется бурение.</param>
+        <param name="PivotLine">Указывает строку в PivotTable, где находится начальный участник операции. В случаях, когда PivotLine не указан, по умолчанию по умолчанию отображается верхняя часть PivotLine, в которой отображается член.</param>
+        <summary>Позволяет сверлить до расположения в иерархии кубов PowerPivot olap или PowerPivot.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1524,10 +1524,10 @@
         <Parameter Name="LevelUniqueName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PivotItem">Член, из которого выполняется разверка.</param>
-        <param name="PivotLine">Указывает строку в pivotTable, где находится начальный член операции. Если pivotLine не указан, по умолчанию задана верхняя pivotLine, в которой отображается участник.</param>
-        <param name="LevelUniqueName">Целевой объект для многоуровневой разверки. Если действие по умолчанию не указано, это одноуровневая разверка.</param>
-        <summary>Позволяет вам получить данные в иерархии olAP или PowerPivot куба.</summary>
+        <param name="PivotItem">Участник, из которого выполняется упражнение.</param>
+        <param name="PivotLine">Указывает строку в PivotTable, где находится начальный участник операции. В случаях, когда PivotLine не указан, по умолчанию по умолчанию отображается верхняя часть PivotLine, в которой отображается член.</param>
+        <param name="LevelUniqueName">Цель для многоуровневого сверла. Если не указано действие по умолчанию, это одноуровневая сверка.</param>
+        <summary>Позволяет сверлить данные в иерархии кубов PowerPivot OLAP или PowerPivot.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1683,9 +1683,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> чтобы отключить оповещение о переоценке пользователем значений в области данных совмещаемой системы. <b>Значение True</b> также позволяет пользователю изменять значения данных, которые ранее не могли быть изменены. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> чтобы отключить оповещение о переоценке значений пользователя в области данных PivotTable. <b>True</b> также позволяет пользователю изменять значения данных, которые ранее не могли быть изменены. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Все изменения, выполняемые для значений данных, теряются при обновлении.</para>
+        <remarks><para>Любое редактирование значений данных теряется при обновлении.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1715,10 +1715,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если включено разбор. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если включена сверла. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка этого свойства для отчета pivotTable задает его для всех полей в этом отчете.</para>
-          <para>Для источников данных OLAP значение всегда имеет <b>значение True.</b></para>
+        <remarks><para>Настройка этого свойства для отчета PivotTable задает его для всех полей в этом отчете.</para>
+          <para>Для источников данных OLAP значение всегда <b>верно.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1748,9 +1748,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, <b>если</b> диалоговое окно "Поле совместимой" доступно, когда пользователь дважды щелкает поле "PivotTable". Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> <b>если диалоговое окно PivotTable Field</b> доступно, когда пользователь дважды щелкает поле PivotTable. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка этого свойства для отчета pivotTable задает его для всех полей в этом отчете.</para>
+        <remarks><para>Настройка этого свойства для отчета PivotTable задает его для всех полей в этом отчете.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1780,7 +1780,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>False,</b> чтобы отключить возможность отображения списка полей для pivotTable. Если список полей уже отображался, он исчезает. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>False</b> для отключения возможности отображения списка полей для PivotTable. Если список полей уже отображается, он исчезает. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1811,9 +1811,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если доступен мастер список. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если мастер pivotTable доступен. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если за установлено это свойство, то на этом сайте не отображаются поля.</para>
+        <remarks><para>Когда это свойство заданной, скважины полей не отображаются на таблице.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1843,14 +1843,14 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, включена ли запись обратно в источник данных для указанной список.</summary>
-        <value><b>имеет</b> true, если для указанной список включена запись обратно в источник данных; в <b>противном</b>случае false . Значение по умолчанию — <b>false</b>.</value>
+        <summary>Получает или задает, включена ли запись обратно в источник данных для указанного PivotTable.</summary>
+        <value><b>верно,</b> если запись обратно в источник данных включена для указанного PivotTable; в противном <b>случае, false</b>. Значение по умолчанию — <b>false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Для источников данных OLAP при установке для свойства значения true включается воспроизведение записи и отключается оповещение о переописи пользователем значений в области данных с помощью <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> pivotTable. <b></b> Для источников данных, не входящего в OLAP, установка для свойства значения true обеспечивает возможность обратной записи в коде, а также позволяет пользователю изменять значения данных, которые ранее не могли <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> быть изменены. <b></b></para>
-          <para>Свойствам объекта нельзя одновременно установить <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> true. <b></b></para>
-          <para>Если для свойства установлено значение true, а затем — значение true, свойство автоматически получает значение false, севостойка обновляется, а любые изменения значений данных <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> теряются. <b></b></para>
-          <para>Если для свойства установлено значение true, а затем — значение true, свойство автоматически получает значение <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <b>false,</b> pivotTable не обновляется, а значения источника данных восстанавливаются.</para>
-          <para>Для источников данных, не входящего в OLAP, установка этого свойства создает ошибку времени запуска.</para>
+          <para>Для источников данных OLAP настройка свойства true позволяет записывать и отключает оповещение о переоценке значений пользователя в области данных <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> PivotTable. <b></b> Для источников данных, не входящего в OLAP, настройка свойства для true позволяет записывать обратно в код, а также позволяет пользователю изменять значения данных, которые ранее не <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> могли быть <b></b> изменены.</para>
+          <para>Свойства и свойства объекта не могут быть одновременно настроены <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> на <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> верность. <b></b></para>
+          <para>Если свойство настроено на значение true, а затем свойство настроено на значение true, свойство автоматически настроено на <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> ложное, <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> pivotTable обновляется, <b></b> а любое редактирование значений данных теряется.</para>
+          <para>Если свойство настроено на значение true, а затем свойство настроено на значение true, свойство автоматически настроено на <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> ложное, <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <b></b> pivotTable не обновляется, а исходные значения данных восстанавливаются.</para>
+          <para>Для источников данных, не входящего в OLAP, настройка этого свойства создает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1880,7 +1880,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку, отображаемую в ячейках, содержащих ошибки, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayErrorString" /> если свойство имеет свойство <b>True.</b> Значение по умолчанию — пустая строка (""). Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает строку, отображаемую в ячейках, которые содержат ошибки при <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayErrorString" /> свойстве <b>True.</b> Значение по умолчанию — это пустая строка (""). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1911,10 +1911,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Управляет порядком сортировки полей в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> списке полей. Для чтения и записи.</summary>
+        <summary>Контролирует порядок сортировки полей в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> списке полей. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если для этого свойства <b>установлено true,</b>поля сортироваться в порядке возрастания. Если за установлено <b>false,</b>поля сортироваться в порядке источника данных. </para>
-          <para>Не применяется к источникам данных <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> OLAP.</para>
+        <remarks><para>Когда это свойство заданной <b>для True,</b>поля сортироваться в порядке восходящей. Когда установлено <b>false,</b>поля сортироваться в порядке источника данных. </para>
+          <para>Не применяется к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> подключенным к источникам данных OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1944,8 +1944,8 @@
         <Parameter Name="Format" Type="Microsoft.Office.Interop.Excel.XlPivotFormatType" />
       </Parameters>
       <Docs>
-        <param name="Format">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFormatType" /> . Указывает тип форматирования отчета, применяемого к указанному отчету совмессы.</param>
-        <summary>Задает для отчета pivotTable один из предварительно заранее задаваемых форматов с отступами, не отступами или форматами с перекрестными вкладками.</summary>
+        <param name="Format">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFormatType" /> . Указывает тип форматирования отчетов, который будет применяться к указанному отчету PivotTable.</param>
+        <summary>Задает отчет PivotTable одному из заранее задаваемых, ненаблюдаемых или перекрестных табуляции форматов.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1972,8 +1972,8 @@
         <Parameter Name="Name" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Name">Обязательный атрибут типа <b>String</b>. Описывает одну ячейку в отчете своднойtt, используя синтаксис, аналогичный методу, или ссылки на отчеты своднойtt в вычисляемых формулах <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotSelect(System.String,Microsoft.Office.Interop.Excel.XlPTSelectionMode,System.Object)" /> элементов.</param>
-        <summary>Возвращает данные из указанной ячейки pivotTable.</summary>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Описывает одну ячейку в отчете PivotTable, используя синтаксис, аналогичный методу, или ссылки на отчет PivotTable в вычисляемых формулах <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotSelect(System.String,Microsoft.Office.Interop.Excel.XlPTSelectionMode,System.Object)" /> элементов.</param>
+        <summary>Возвращает данные из указанной ячейки PivotTable.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2028,36 +2028,36 @@
         <Parameter Name="Item14" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="DataField"><b>Необязательный объект</b>. Имя поля, содержащего данные для pivotTable.</param>
-        <param name="Field1"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="DataField"><b>Необязательный объект</b>. Имя поля, содержащего данные для PivotTable.</param>
+        <param name="Field1"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item1"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field1" /> .</param>
-        <param name="Field2"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field2"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item2"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field2" /> .</param>
-        <param name="Field3"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field3"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item3"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field3" /> .</param>
-        <param name="Field4"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field4"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item4"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field4" /> .</param>
-        <param name="Field5"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field5"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item5"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field5" /> .</param>
-        <param name="Field6"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field6"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item6"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field6" /> .</param>
-        <param name="Field7"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field7"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item7"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field7" /> .</param>
-        <param name="Field8"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field8"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item8"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field8" /> .</param>
-        <param name="Field9"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field9"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item9"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field9" /> .</param>
-        <param name="Field10"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field10"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item10"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field10" /> .</param>
-        <param name="Field11"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field11"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item11"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field11" /> .</param>
-        <param name="Field12"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field12"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item12"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field12" /> .</param>
-        <param name="Field13"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field13"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item13"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field13" /> .</param>
-        <param name="Field14"><b>Необязательный объект</b>. Имя столбца или поля строки в отчете pivotTable.</param>
+        <param name="Field14"><b>Необязательный объект</b>. Имя поля столбца или строки в отчете PivotTable.</param>
         <param name="Item14"><b>Необязательный объект</b>. Имя элемента в <paramref name="Field14" /> .</param>
-        <summary>Возвращает объект <b>Range</b> с информацией об элементе данных в отчете pivotTable.</summary>
+        <summary>Возвращает объект <b>Range</b> с сведениями о элементе данных в отчете PivotTable.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2088,7 +2088,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает текстовую строковую метку, отображаемую в общем столбце или заголовке строки в указанном отчете pivotTable. Значение по умолчанию — строка "Общая сумма". Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает метку строки текста, отображаемую в общем столбце или строке заголовок в указанном отчете PivotTable. Значение по умолчанию — строка "Grand Total". Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2119,7 +2119,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если отчет pivotTable автоматически форматируется при его обновлении или при перемещении полей. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если отчет PivotTable автоматически форматируется при обновлении или при перемещении полей. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2147,9 +2147,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Проверяет, существует ли pivotTable на уровне таблицы. <b>Boolean</b> (<b>bool</b> in C#). Только для чтения</summary>
+        <summary>Проверяет, существует ли pivotTable на уровне таблицы. <b>Boolean</b> <b>(bool</b> in C#). Только для чтения</summary>
         <value>To be added.</value>
-        <remarks><para>Если свойство <b>Hidden</b> имеет свойство <b>True,</b>объект <b>pivotTable</b> скрывается на уровне таблицы. Если для свойства установлено <b>false,</b>на этом сайте существует списоная таблица.</para>
+        <remarks><para>Если <b>скрытое</b> свойство забито <b>на true,</b>объект <b>PivotTable</b> скрыт от уровня таблицы. Если свойство настроено на <b>False,</b>на таблице существует pivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2180,7 +2180,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер возвращаемого поля (может быть массивом для указания нескольких полей).</param>
-        <summary>Возвращает объект, который представляет либо одно поле совместимой (объект), либо коллекцию всех полей (объекта), которые в настоящее время не показаны как <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> поля строки, столбца, страницы или <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> данных. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет одно поле PivotTable (объект) или коллекцию всех полей (объекта), которые в настоящее время не показаны в качестве строки, столбца, страницы или <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> полей данных. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks><para>Для источников данных OLAP это свойство всегда возвращает пустую коллекцию.</para>
           <para> </para></remarks>
@@ -2212,9 +2212,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство используется для перегона зон в сетке для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.  В некоторых случаях это также влияет на макет <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
+        <summary>Это свойство используется для переналадки зон падения в сетке для <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.  В некоторых случаях это также влияет на расположение <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если для свойства установлено true, представление в сетке будет таким же, как в <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.InGridDropZones" /> Excel <b></b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> 2003. Если для свойства установлено <b>false,</b>в сетке нет зон перепада. Макет <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> также изменяется с помощью этого свойства.</para>
+        <remarks><para>Если свойство настроено на True, представление в сетке будет таким же, как и в <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.InGridDropZones" /> Excel <b></b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> 2003 г. Если свойство настроено на <b>False,</b>в сетке нет зон сброса. Макет <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> также изменяется с этим свойством.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2244,7 +2244,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя поля, которое будет показано как подробное, если свойство имеет true для самой внутренней строки <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.ShowDetail" /> или поля <b></b> столбца. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает имя поля, которое будет показано в качестве подробного, когда свойство True для внутреннего поля <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.ShowDetail" /> строки или <b></b> столбца. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство не доступно для источников данных OLAP.</para>
           <para> </para></remarks>
@@ -2276,7 +2276,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlLayoutRowType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство указывает параметры макета, для которые они добавляются в <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> первый <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> раз. Для чтения и записи.</summary>
+        <summary>В этом свойстве заданы параметры макета, которые будут добавлены в первый <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> раз. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlLayoutRowType" /></value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutRowType" /> может быть xlCompactRow, xlTabularRow или xlOutlineRow.</para>
@@ -2335,8 +2335,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает <b>строку,</b> представляюную верхнюю левую ячейку в теле указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> элемента. Для чтения и записи.</summary>
-        <value><b>Строка</b></value>
+        <summary>Получает или задает <b>строку,</b> представляюную левое верхнее в теле указанного <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> элемента. Для чтения и записи.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2366,9 +2366,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если отчет pivotTable пересчитываются только по запросу пользователя. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если отчет PivotTable пересчитываются только по запросу пользователя. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство имеет свойство <b>False</b> сразу после окончания программы.</para>
+        <remarks><para>Это свойство заданной для <b>False</b> сразу после окончания программы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2395,9 +2395,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку,</b> указывающее MDX (многомерное выражение), которое будет отправлено поставщику для заполнения текущего представления pivotTable. Только для чтения.</summary>
+        <summary>Возвращает <b>строку</b> с указанием MDX (Multidimensional Expression), которая будет отправлена поставщику для заполнения текущего представления PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>При запросе этого значения для список OLAP или при отсутствие представления "Севотабль" (без элементов данных) будет возвращена ошибка времени выполнения.</para>
+        <remarks><para>Запрос этого значения для неалинейной аналитической обработки (OLAP) pivotTable или при отсутствие представления PivotTable (без элементов данных) возвращает ошибку времени выполнения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2427,7 +2427,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если метки заданного отчета о внешней строке, элементе столбца, итоговом и общем итоговом отчетах с заданным отчетом о суммах используют объединенные ячейки. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если указанный элемент внешнего ряда отчета PivotTable, столбец, субтотальные и общие метки используют объединенные ячейки. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2489,7 +2489,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку, отображаемую в ячейках, содержащих значения null, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayNullString" /> если свойство имеет значение <b>True.</b> Значение по умолчанию — пустая строка (""). Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает строку, отображаемую в ячейках, содержащих значения null при <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.DisplayNullString" /> значении <b>True.</b> Значение по умолчанию — это пустая строка (""). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2520,7 +2520,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок, в котором поля страницы добавляются в макет отчета pivotTable. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlOrder" /> констант: <b>xlDownThenOver</b> или <b>xlOverThenDown.</b> Константа по умолчанию <b>— xlDownThenOver.</b> Для чтения и записи, <b>Integer</b>.</summary>
+        <summary>Возвращает или задает порядок, в котором поля страниц добавляются в макет отчета PivotTable. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlOrder" /> констант: <b>xlDownThenOver</b> или <b>xlOverThenDown</b>. Константа по умолчанию <b>— xlDownThenOver.</b> Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2552,10 +2552,10 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер возвращаемого поля (может быть массивом для указания нескольких полей).</param>
-        <summary>Возвращает объект, который представляет либо одно поле совместимой (объект), либо коллекцию всех полей (объекта), которые в настоящее время отображаются в качестве <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> полей страницы. Только для чтения.</summary>
+        <summary>Возвращает объект, представляющая одно поле PivotTable (объект) или коллекцию всех полей (объекта), которые в настоящее время отображаются в качестве <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> полей страниц. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks><para>Иерархия может содержать только одно поле страницы.</para>
-          <para>Для отчета pivotTable, основанного на кэше pivotTable, возвращаемая коллекция полей pivotTable отражает то, что в настоящее время находится в кэше.</para>
+          <para>Для отчета PivotTable на основе кэша PivotTable коллекция возвращенных полей PivotTable отражает то, что в настоящее время находится в кэше.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2585,9 +2585,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль, используемый в области поля привязанной страницы. Значение по умолчанию — строка null (стиль по умолчанию не применяется). Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает стиль, используемый в области поля связанной страницы. По умолчанию значение null string (по умолчанию стиль не применяется). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Этот стиль используется в качестве стиля по умолчанию для фоновой области и применяется перед любым пользовательским форматированием. Ячейки, освобожденные при сбое поля из области поля страницы в другое расположение, сохраняют этот стиль.</para>
+        <remarks><para>Этот стиль используется в качестве стиля по умолчанию для фоновой области и применяется перед любым форматированием пользователей. Ячейки, освобождавшиеся при повороте поля из области поля страницы в другое расположение, сохраняют этот стиль.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2617,7 +2617,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество полей страницы в каждом столбце или строке в отчете pivotTable. Для чтения и записи, <b>Integer</b>.</summary>
+        <summary>Возвращает или задает количество полей страниц в каждом столбце или строке в отчете PivotTable. Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2645,7 +2645,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, содержащий область страницы в отчете <see cref="T:Microsoft.Office.Interop.Excel.Range" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет диапазон, содержащий область страницы в отчете PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2673,7 +2673,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет только ячейки в указанном отчете pivotTable, которые содержат поля страницы и выпадаемые <see cref="T:Microsoft.Office.Interop.Excel.Range" /> списки элементов.</summary>
+        <summary>Возвращает объект, который представляет только ячейки в указанном отчете PivotTable, содержащие поля страниц и выпадаемые <see cref="T:Microsoft.Office.Interop.Excel.Range" /> списки элементов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2727,7 +2727,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объект, который представляет кэш для указанного отчета pivotTable. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объект, который представляет кэш для указанного отчета PivotTable. Только для чтения.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2755,7 +2755,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Shape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет автономный сводная диаграмма для указанного скрытого отчета <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет автономный сводная диаграмма для указанного скрытого <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> отчета PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2811,9 +2811,9 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер возвращаемого поля.</param>
-        <summary>Возвращает объект, который представляет одно поле (объект) или коллекцию видимых и скрытых полей (объекта) в отчете <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет одно поле PivotTable (объект) или коллекцию видимых и скрытых полей <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> (объекта) в <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> отчете PivotTable. Только для чтения.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Для источников данных OLAP скрытые поля не существуют, а возвращаемый объект или коллекция отражает то, что в настоящее время отображается.</para>
+        <remarks><para>Для источников данных OLAP нет скрытых полей, а возвращаемый объект или коллекция отражают то, что в настоящее время видно.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2898,11 +2898,11 @@
         <Parameter Name="UseStandardName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">Обязательный атрибут типа <b>String</b>. Выбор в стандартном формате выбора отчета pivotTable.</param>
-        <param name="Mode">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPTSelectionMode" /> . Указывает режим структурированного выбора.</param>
-        <param name="UseStandardName"><b>Необязательный объект</b>. <b>True</b> для записанных макросов, которые будут возвращаться в других региональных окнах.</param>
-        <summary>Выбирает часть отчета pivotTable.</summary>
-        <remarks><para>Указанный режим можно использовать только для выбора соответствующего элемента в отчете pivotTable. Например, нельзя выбрать данные и метки в режиме <b>xlButton;</b> Аналогичным образом, нельзя выбрать кнопки в режиме <b>xlDataOnly.</b></para>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Выбор в стандартном формате выбора отчетов pivotTable.</param>
+        <param name="Mode"><see cref="T:Microsoft.Office.Interop.Excel.XlPTSelectionMode" />Необязательный . Указывает структурированный режим выбора.</param>
+        <param name="UseStandardName"><b>Необязательный объект</b>. <b>True</b> для записанных макрос, которые будут отыграться в других локальных местах.</param>
+        <summary>Выбирает часть отчета PivotTable.</summary>
+        <remarks><para>Указанный режим можно использовать только для выбора соответствующего элемента в отчете PivotTable. Например, нельзя выбрать данные и метки с помощью <b>режима xlButton;</b> Кроме того, вы не можете выбрать кнопки с помощью <b>режима xlDataOnly.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2932,9 +2932,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает выбор pivotTable в стандартном формате выбора отчета pivotTable. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает выбор PivotTable в стандартном формате выбора отчетов pivotTable. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка этого свойства эквивалентна вызову метода с аргументом <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotSelect(System.String,Microsoft.Office.Interop.Excel.XlPTSelectionMode,System.Object)" /> <paramref name="Mode" /> <b>xlDataAndLabel.</b></para>
+        <remarks><para>Настройка этого свойства эквивалентна вызову метода <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotSelect(System.String,Microsoft.Office.Interop.Excel.XlPTSelectionMode,System.Object)" /> с <paramref name="Mode" /> аргументом <b>xlDataAndLabel.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2964,7 +2964,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b></b> строку, указывающее выбор с помощью с помощью параметров английского языка (США) в стандартном формате отчета pivotTable. Для чтения и записи.</summary>
+        <summary>Возвращает или задает <b>строку</b> с указанием выбора PivotTable в стандартном формате отчетов PivotTable с использованием параметров английского языка (США). Для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>PivotSelectionStandard</b> является "международным", а свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.PivotSelection" /> — нет.</para>
           <para> </para></remarks>
@@ -3007,23 +3007,23 @@
         <Parameter Name="Connection" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SourceType">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" /> . Источник данных отчета.</param>
-        <param name="SourceData"><b>Необязательный объект</b>. Данные для нового отчета. Может быть объектом, массивом диапазонов или текстовой константой, которая представляет имя <see cref="T:Microsoft.Office.Interop.Excel.Range" /> другого отчета. Для внешней базы данных это массив строк, содержащий строку SQL запроса, где каждый элемент длиной до <paramref name="SourceData" /> 255 символов. Этот аргумент следует <paramref name="Connection" /> использовать для указания строки подключения ODBC. Для совместимости с более ранними версиями Excel может <paramref name="SourceData" /> быть массив из двух элементов. Первый элемент — это строка подключения, указывав источник ODBC для данных. Второй элемент — это строка SQL запроса, используемая для получения данных. Если вы <paramref name="SourceData" /> указываете, необходимо также указать <paramref name="SourceType" /> . Если активная ячейка находится внутри диапазона, необходимо также <paramref name="SourceData" /> <paramref name="TableDestination" /> указать.</param>
-        <param name="TableDestination"><b>Необязательный объект</b>. Объект <b>Range,</b> определяющий место, в котором должен размещаться отчет на этом сайте. Если этот аргумент опущен, отчет помещается в активную ячейку.</param>
+        <param name="SourceType"><see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" />Необязательный . Источник данных отчета.</param>
+        <param name="SourceData"><b>Необязательный объект</b>. Данные для нового отчета. Может быть объект, массив диапазонов или текстовая константа, которая представляет имя <see cref="T:Microsoft.Office.Interop.Excel.Range" /> другого отчета. Для внешней базы данных имеется массив строк, содержащих строку SQL запроса, в которой каждый элемент имеет длину до <paramref name="SourceData" /> 255 символов. Этот аргумент следует использовать для указания строки подключения <paramref name="Connection" /> ODBC. Для совместимости с более ранними версиями Excel может <paramref name="SourceData" /> быть двухэлементный массив. Первым элементом является строка подключения, указывав источник ODBC для данных. Второй элемент — строка SQL, используемая для получения данных. Если <paramref name="SourceData" /> указать, необходимо также указать <paramref name="SourceType" /> . Если активная ячейка находится внутри <paramref name="SourceData" /> диапазона, необходимо также указать. <paramref name="TableDestination" /></param>
+        <param name="TableDestination"><b>Необязательный объект</b>. Объект <b>Range,</b> указывающий, где отчет должен быть помещен на таблицу. Если этот аргумент опущен, отчет помещается в активную ячейку.</param>
         <param name="TableName"><b>Необязательный объект</b>. Строка, которая указывает имя нового отчета.</param>
         <param name="RowGrand"><b>Необязательный объект</b>. <b>True,</b> чтобы показать общие итоги для строк в отчете.</param>
         <param name="ColumnGrand"><b>Необязательный объект</b>. <b>True,</b> чтобы показать общие итоги для столбцов в отчете.</param>
-        <param name="SaveData"><b>Необязательный объект</b>. <b>True,</b> чтобы сохранить данные в отчете. <b>False</b> для сохранения только определения отчета.</param>
-        <param name="HasAutoFormat"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы Microsoft Excel автоматически форматировали отчет при его обновлении или при перемещении полей.</param>
-        <param name="AutoPage"><b>Необязательный объект</b>. Допустимо, <paramref name="SourceType" /> только <b>если xlConsolidation.</b> <b>Действительно,</b> чтобы Microsoft Excel создал поле страницы для консолидации. Если <paramref name="AutoPage" /> <b>имеется false,</b>необходимо создать поле страницы или поля.</param>
-        <param name="Reserved"><b>Необязательный объект</b>. Не используется в Microsoft Excel.</param>
-        <param name="BackgroundQuery"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы Excel выполнял запросы отчета асинхронно (в фоновом режиме). Значение по умолчанию — <b>False</b>.</param>
-        <param name="OptimizeCache"><b>Необязательный объект</b>. <b>True,</b> чтобы оптимизировать кэш pivotTable при его построении. Значение по умолчанию — <b>False</b>.</param>
-        <param name="PageFieldOrder"><b>Необязательный объект</b>. Порядок, в котором поля страницы добавляются в макет отчета pivotTable. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlOrder" /> констант: <b>xlDownThenOver</b> или <b>xlOverThenDown.</b> Значение по умолчанию — <b>xlDownThenOver.</b></param>
-        <param name="PageFieldWrapCount"><b>Необязательный объект</b>. Количество полей страницы в каждом столбце или строке в отчете pivotTable. Значение по умолчанию: 0 (ноль).</param>
-        <param name="ReadData"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы создать кэш pivotTable, содержащий все записи из внешней базы данных; Этот кэш может быть очень большим. Если имеется false, некоторые поля можно установить в качестве серверных полей страницы перед <paramref name="ReadData" /> фактическим чтением <b></b>данных.</param>
-        <param name="Connection"><b>Необязательный объект</b>. Строка, содержаная параметры ODBC, позволяющие Excel подключаться к источнику данных ODBC. Строка подключения имеет вид "ODBC; &lt; строка &gt; подключения ". Этот аргумент переопределяет все предыдущие параметры <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> свойства <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> объекта.</param>
-        <summary>Создает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект. Этот метод не отображает мастер список. Этот метод не доступен для источников данных OLE DB. Используйте этот метод для добавления кэша pivotTable, а затем создайте отчет <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> pivotTable на основе кэша.</summary>
+        <param name="SaveData"><b>Необязательный объект</b>. <b>True</b> для сохранения данных в отчете. <b>False,</b> чтобы сохранить только определение отчета.</param>
+        <param name="HasAutoFormat"><b>Необязательный объект</b>. <b>Правда,</b> Microsoft Excel автоматически форматирование отчета при его обновлении или при перемещении полей.</param>
+        <param name="AutoPage"><b>Необязательный объект</b>. Допустимо <paramref name="SourceType" /> только в <b>том случае, если xlConsolidation</b>. <b>Правда,</b> Microsoft Excel создать поле страницы для консолидации. Если <paramref name="AutoPage" /> <b></b>false, необходимо создать поле страницы или поля.</param>
+        <param name="Reserved"><b>Необязательный объект</b>. Не используется Microsoft Excel.</param>
+        <param name="BackgroundQuery"><b>Необязательный объект</b>. <b>Правда,</b> Excel выполнять запросы для отчета асинхронно (в фоновом режиме). Значение по умолчанию — <b>False</b>.</param>
+        <param name="OptimizeCache"><b>Необязательный объект</b>. <b>True</b> для оптимизации кэша PivotTable при его построении. Значение по умолчанию — <b>False</b>.</param>
+        <param name="PageFieldOrder"><b>Необязательный объект</b>. Порядок, в котором поля страниц добавляются в макет отчета PivotTable. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlOrder" /> констант: <b>xlDownThenOver</b> или <b>xlOverThenDown</b>. По умолчанию значение <b>xlDownThenOver</b>.</param>
+        <param name="PageFieldWrapCount"><b>Необязательный объект</b>. Количество полей страниц в каждом столбце или строке в отчете PivotTable. Значение по умолчанию: 0 (ноль).</param>
+        <param name="ReadData"><b>Необязательный объект</b>. <b>True</b> для создания кэша PivotTable, который содержит все записи из внешней базы данных; этот кэш может быть очень большим. Если false, вы можете установить некоторые поля в качестве серверных полей страниц перед <paramref name="ReadData" /> фактическим чтением <b></b>данных.</param>
+        <param name="Connection"><b>Необязательный объект</b>. Строка, содержаная параметры ODBC, Excel подключиться к источнику данных ODBC. Строка подключения имеет форму "ODBC; &lt; строка &gt; подключения ". Этот аргумент переопределяет все предыдущие параметры <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойства объекта.</param>
+        <summary>Создает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объект. Этот метод не отображает мастер pivotTable. Этот метод не доступен для источников данных OLE DB. Используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы добавить кэш PivotTable, а затем создать отчет PivotTable на основе кэша.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3050,9 +3050,9 @@
         <Parameter Name="columnline" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="rowline">Если тип <b>PivotLine,</b>указывает <b>pivotLine</b> в области строки, с помощью которую <b>выровнен pivotValueCell.</b> Если тип <b>Int,</b>то указывает положение <b>PivotLine</b> в области строки, с помощью которую <b>выровнен pivotValueCell.</b> Если отсутствует, Empty, Null или 0 указывает общую строку.</param>
-        <param name="columnline">Если тип <b>PivotLine,</b>указывает <b>pivotLine</b> в области столбца, с помощью которую <b>выровнен pivotValueCell.</b> Если тип <b>Int,</b>то указывает положение <b>pivotLine</b> в области столбца, с которую <b>выровнен pivotValueCell.</b> Если отсутствует ( Empty, Null или 0), указывается общий столбец.</param>
-        <summary><see cref="T:Microsoft.Office.Interop.Excel.PivotValueCell" />Извлечение объекта для заданной pivotTable предоставлены определенные индексы строк и столбцов.</summary>
+        <param name="rowline">Если тип <b>PivotLine</b>, указывает <b>PivotLine</b> в области строки, с которую <b>выравнивается PivotValueCell.</b> Если тип <b>Int,</b>затем указывает положение <b>PivotLine</b> в области строки, с которую <b>выравнивается PivotValueCell.</b> Если отсутствует, empty, Null или 0 указывает общий общий ряд.</param>
+        <param name="columnline">Если тип <b>PivotLine</b>, указывает <b>PivotLine</b> в области столбцов, с которую <b>выравнивается PivotValueCell.</b> Если тип <b>Int,</b>затем указывает положение <b>PivotLine</b> в области столбцов, с которую <b>выравнивается PivotValueCell.</b> Если отсутствует пустой, null или 0, указывается общий общий столбец.</param>
+        <summary><see cref="T:Microsoft.Office.Interop.Excel.PivotValueCell" />Извлечение объекта для данного pivotTable при условии определенных индексов строки и столбцов.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3083,7 +3083,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство имеет свойство <b>True,</b> если форматирование сохраняется при обновлении или пересчете отчета с помощью таких операций, как списание, сортировка или изменение элементов поля страницы. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Это свойство <b>True,</b> если форматирование сохраняется, когда отчет обновляется или пересчитываются такими операциями, как поворот, сортировка или изменение элементов поля страниц. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3114,10 +3114,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, печатаются ли индикаторы сверли с помощью печатаемого <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> индикатора. Для чтения и записи.</summary>
+        <summary>Указывает, печатаются ли индикаторы сверла с помощью <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Возвращает <b>true,</b> если индикаторы сверли печатаются с помощью индикатора False, если индикаторы не печатаются вместе с <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <b></b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> индикаторами.</para>
-          <para>Если для <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowDrillIndicators" /> свойства установлено <b>false,</b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowDrillIndicators" /> это свойство не имеет эффекта. Индикаторы drill не печатаются, когда они не отображаются в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</para>
+        <remarks><para>Возвращает <b>True,</b> если индикаторы сверла печатаются с помощью false и <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <b>возвращаются False,</b> если индикаторы сверла не печатаются с <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> помощью .</para>
+          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowDrillIndicators" /> свойство настроено на <b>False,</b> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowDrillIndicators" /> свойство не влияет. Индикаторы сверла не печатаются, если они не отображаются в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3147,10 +3147,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если заголовки печати для таблицы за установлены на основе отчета pivotTable. <b>False,</b> если используются заголовки печати для таблицы. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если заголовки печати для таблицы настроены на основе отчета PivotTable. <b>False,</b> если используются заголовки печати для таблицы. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Заголовки печати строк имеют строки, содержащие элементы поля столбца отчета pivotTable. Заголовки печати столбцов имеют столбцы, содержащие элементы строки.</para>
-          <para>Отчет pivotTable должен быть единственным в области печати. Чтобы установить формат отступа для отчета pivotTable, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.Format(Microsoft.Office.Interop.Excel.XlPivotFormatType)" /> этот метод.</para>
+        <remarks><para>Заголовки печатных строк замещеются к строкам, которые содержат элементы поля столбцов отчета pivotTable. Заголовки печати столбцов за набором столбцов, содержащих элементы строки.</para>
+          <para>Отчет PivotTable должен быть единственным в области печати. Чтобы установить отступной формат отчета PivotTable, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.Format(Microsoft.Office.Interop.Excel.XlPivotFormatType)" /> метод.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3175,10 +3175,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Извлекает текущие значения из источника данных для всех измененных ячеек в отчете pivotTable, который находится в режиме записи.</summary>
-        <remarks><para>Чтобы определить, находится ли отчет pivotTable в режиме записи, проверьте свойства объекта, которые возвращают <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> true. При выполнении этого метода для отчетов, не в режиме записи, создается ошибка времени выполнения.</para>
-          <para>Для отчетов pivotTable с источниками данных OLAP при выполнении метода создается отдельное подключение к серверу OLAP и выполняется полный <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RefreshDataSourceValues" /> запрос MDX (значение . <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /><see cref="P:Microsoft.Office.Interop.Excel.PivotTable.MDX" /> свойство), которое используется для выполнения операции обновления для заполнения отчета pivotTable. Excel извлекает значения, возвращенные для всех ячеек, которые были изменены в представлении pivotTable, а затем сохраняет их в свойстве этих <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> ячеек.</para>
-          <para>Этот метод применяется только к отчетам pivotTable с источниками данных OLAP. При попытке выполнить этот метод или отчеты pivotTable с источниками данных, не относяжимыми к OLAP, создается ошибка времени выполнения.</para>
+        <summary>Извлекает текущие значения из источника данных для всех отредактируемых ячеек в отчете PivotTable, который находится в режиме writeback.</summary>
+        <remarks><para>Чтобы определить, находится ли отчет PivotTable в режиме writeback, проверьте свойства или свойства объекта, любой из которых <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableWriteback" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.EnableDataValueEditing" /> возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> True. Для отчетов PivotTable, которые не находятся в режиме writeback, при выполнении этого метода создается ошибка выполнения.</para>
+          <para>Для отчетов pivotTable с источниками данных OLAP метод создает отдельное подключение к серверу OLAP и выполняет полный <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RefreshDataSourceValues" /> запрос MDX (значение <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .<see cref="P:Microsoft.Office.Interop.Excel.PivotTable.MDX" /> свойство), которое используется для выполнения операции обновления для заполнения отчета PivotTable. Excel извлекает значения, возвращенные для всех ячеек, которые были отредактированы в представлении PivotTable, а затем сохраняет их в свойстве для <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> этих ячеек.</para>
+          <para>Этот метод применяется только к отчетам PivotTable с источниками данных OLAP. Попытка выполнить этот метод или отчеты PivotTable с источниками данных, не относящаться к OLAP, создает ошибку во время выполнения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3205,7 +3205,7 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает дату последнего обновления отчета pivotTable. Дата и время только <b>для чтения.</b></summary>
+        <summary>Возвращает дату последнего обновления отчета PivotTable. Только для чтения <b>DateTime</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para> </para></remarks>
@@ -3234,7 +3234,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя человека, который последним обновил данные отчета pivotTable или кэш севоводной. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает имя человека, который в последний раз обновил данные отчета PivotTable или кэш PivotTable. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para> </para></remarks>
@@ -3261,7 +3261,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет отчет pivotTable из исходных данных. Возвращает <b>true,</b> если он успешно.</summary>
+        <summary>Обновляет отчет PivotTable из исходных данных. Возвращает <b>True,</b> если это успешно.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3289,10 +3289,10 @@
         <Parameter Name="Repeat" Type="Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels" />
       </Parameters>
       <Docs>
-        <param name="Repeat">Указывает, следует ли повторять метки элементов для всех pivotFields в указанной pivotTable.</param>
-        <summary>Указывает, следует ли повторять метки элементов для всех pivotFields в указанной pivotTable.</summary>
-        <remarks><para>Использование метода соответствует командам "Повторяйте все метки элементов" и "Не повторять метки элементов" в выпадаемом списке макета отчета на вкладке "Проектирование инструментов с помощью с помощью <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RepeatAllLabels(Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels)" /> таблицы".</para>
-          <para>Чтобы указать, следует ли повторять метки элементов для одного pivotField, используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotField.RepeatLabels" /> свойство.</para>
+        <param name="Repeat">Указывает, следует ли повторять метки элементов для всех PivotFields в указанном PivotTable.</param>
+        <summary>Задает, следует ли повторять метки элементов для всех PivotFields в указанном PivotTable.</summary>
+        <remarks><para>Использование метода соответствует командам Repeat All Item Labels и Do Not Repeat Item Labels на выпадаемом списке макета отчетов вкладки <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.RepeatAllLabels(Microsoft.Office.Interop.Excel.XlPivotFieldRepeatLabels)" /> PivotTable Tools Design.</para>
+          <para>Чтобы указать, следует ли повторять метки элементов для одного PivotField, используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotField.RepeatLabels" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3322,10 +3322,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если метки строк, столбцов и элементов отображаются в первой строке каждой страницы при печати указанного отчета pivotTable. <b>False,</b> если метки печатаются только на первой странице. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если метки строк, столбцов и элементов отображаются в первом ряду каждой страницы при печати указанного отчета PivotTable. <b>False,</b> если метки печатаются только на первой странице. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Отчет pivotTable должен быть единственным в области печати. Чтобы установить формат отступа для отчета pivotTable, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.Format(Microsoft.Office.Interop.Excel.XlPivotFormatType)" /> этот метод.</para>
-          <para>Microsoft Excel печатает метки строк и столбцов, а не заголовки, установленные для листа. Используйте это свойство, чтобы определить, настроены ли заголовки печати для <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.PrintTitles" /> отчета pivotTable.</para>
+        <remarks><para>Отчет PivotTable должен быть единственным в области печати. Чтобы установить отступной формат отчета PivotTable, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.Format(Microsoft.Office.Interop.Excel.XlPivotFormatType)" /> метод.</para>
+          <para>Microsoft Excel печатает метки строк и столбцов на месте любых заголовков для таблицы. Используйте свойство, чтобы определить, настроены ли заголовки печати <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.PrintTitles" /> для отчета PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3352,9 +3352,9 @@
         <Parameter Name="RowLayout" Type="Microsoft.Office.Interop.Excel.XlLayoutRowType" />
       </Parameters>
       <Docs>
-        <param name="RowLayout">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutRowType" /> может быть <b>xlCompactRow,</b> <b>xlTabularRow</b>или <b>xlOutlineRow.</b></param>
-        <summary>Этот метод используется для одновременной настройки параметров макета для всех <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> существующих.</summary>
-        <remarks><para>Этот метод является атомарным, поэтому он позволяет убедиться, что если параметры макета невозможно установить для каких-либо параметров, параметры макета ни в одном из полей не изменятся, а в параметры макета не будут внося <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> изменений.</para>
+        <param name="RowLayout">Обязательно может <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutRowType" /> быть <b>xlCompactRow,</b> <b>xlTabularRow</b>или <b>xlOutlineRow.</b></param>
+        <summary>Этот метод используется для одновременного настройки параметров макета для всех существующих <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> s.</summary>
+        <remarks><para>Этот метод является атомным, поэтому он позволяет убедиться, что если параметры макета не могут быть установлены на любом, параметры макета ни одного из полей не изменятся и не будут <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> изменяться <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> в .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3385,7 +3385,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер возвращаемого поля (может быть массивом для указания нескольких полей).</param>
-        <summary>Возвращает объект, который представляет одно поле в отчете pivotTable (объект) или коллекцию всех полей (объекта), которые в настоящее время отображаются в качестве полей <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> строки. Только для чтения.</summary>
+        <summary>Возвращает объект, представляющая одно поле в отчете PivotTable (объект) или коллекцию всех полей (объекта), которые в настоящее время отображаются в качестве <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> строковых полей. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3416,7 +3416,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если отчет pivotTable отображает общие итоги для строк. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если в отчете PivotTable показаны общие итоги для строк. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3444,7 +3444,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, включая область строки в отчете <see cref="T:Microsoft.Office.Interop.Excel.Range" /> pivotTable. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет диапазон, включая область строки в отчете PivotTable. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3475,9 +3475,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если данные отчета pivotTable сохраняются в книге. <b>False,</b> если сохранено только определение отчета. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если данные для отчета PivotTable сохраняются в книге. <b>False,</b> если сохранено только определение отчета. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Для источников данных OLAP для этого свойства всегда установлено свойство <b>False.</b></para>
+        <remarks><para>Для источников данных OLAP это свойство всегда настроено как <b>False</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3507,9 +3507,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPTSelectionMode</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает режим структурированного выбора отчета pivotTable. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlPTSelectionMode" /> .</summary>
+        <summary>Возвращает или задает структурированный режим выбора отчета PivotTable. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlPTSelectionMode" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Если поле pivotTable находится не в форме структур, указание суммы любой из констант и <b>xlFirstRow</b> эквивалентно указанию только константы.</para>
+        <remarks><para>Если поле PivotTable не находится в форме контура, указать сумму какой-либо из констант и <b>xlFirstRow</b> эквивалентно только указать константу.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3545,9 +3545,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имеет свойство <b>True,</b> если MDX (многомерное выражение), которое Microsoft Excel отправляет на сервер, содержит свойство для каждой ячейки в области данных, которая соответствует ячейке в наборе <see cref="P:Microsoft.Office.Interop.Excel.ChartFillFormat.BackColor" /> данных OLAP. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> если MDX (Multidimensional Expression), который Microsoft Excel отправляется на сервер, включает свойство для каждой ячейки в области данных, соответствующей ячейке в наборе данных online <see cref="P:Microsoft.Office.Interop.Excel.ChartFillFormat.BackColor" /> analytical Processing (OLAP). Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если набор данных OLAP возвращает значение свойства <b>BackColor,</b> цвет заливки ячейки устанавливается на ближайший цвет в палитре Microsoft Excel для этого листа. Если пользователь вручную применяет форматирование шаблона ячейки к ячейке, это переопределит форматирование из набора данных OLAP.</para>
+        <remarks><para>Если набор данных OLAP возвращает значение <b>свойства BackColor,</b> то цвет заполнения ячейки устанавливается к ближайшему цвету в палитре Microsoft Excel для этого таблицы. Если пользователь применяет форматирование шаблона ячейки к ячейке вручную, это переопределит любое форматирование из набора данных OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3577,9 +3577,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство используется для переналадки отображения индикаторов дрели <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowDrillIndicators" /> в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
+        <summary>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowDrillIndicators" /> используется для переналадки отображения индикаторов сверла в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Возвращает <b>true,</b> если индикаторы drill отображаются в и возвращает False, если индикаторы не <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> отображаются в <b></b> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . </para>
+        <remarks><para>Возвращает <b>True,</b> если индикаторы сверла отображаются в false и <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <b>возвращаются False,</b> если индикаторы сверла не отображаются в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3609,7 +3609,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если установлено значение <b>True</b> (по умолчанию), "(Multiple Items)" будет отображаться в ячейке сводной таблицы на сайте всякий раз, когда элементы скрыты, и в представлении сводной таблицы отображается совокупность элементов, не скрытых. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Если заказано <b>значение True</b> (по умолчанию), в ячейке PivotTable на таблице отображается значение True (по умолчанию), а в представлении PivotTable отображается совокупность ненапряжемых элементов. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3636,8 +3636,8 @@
         <Parameter Name="PageField" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PageField"><b>Необязательный объект</b>. Строка, которая именует одно поле страницы в отчете.</param>
-        <summary>Создает новый отчет pivotTable для каждого элемента в поле страницы. Каждый новый отчет создается на новом сайте.</summary>
+        <param name="PageField"><b>Необязательный объект</b>. Строка, которая называет одно поле страницы в отчете.</param>
+        <summary>Создает новый отчет PivotTable для каждого элемента в поле страницы. Каждый новый отчет создается на новом таблице.</summary>
         <returns>To be added.</returns>
         <remarks><para>Этот метод не доступен для источников данных OLAP.</para>
           <para> </para></remarks>
@@ -3669,8 +3669,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если в нем должны отображаться заголовки пульмы, свойству задается <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowTableStyleColumnHeaders" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> true. Для чтения и записи.</summary>
-        <value>Boolean</value>
+        <summary>Свойство настроено на True, если в столбце должны отображаться заглавные <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowTableStyleColumnHeaders" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> столбцы. Для чтения и записи.</summary>
+        <value>Логический</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3700,8 +3700,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>В свойстве Boolean отображаются полосы столбцов, в которых формат даже столбцов отличается от формата нечетных столбцов. Это <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> упрощает чтение. Для чтения и записи.</summary>
-        <value>Boolean</value>
+        <summary>Свойство Boolean отображает полосатую колонну, в которой даже столбцы отформатированы иначе, чем нечетные столбцы. Это <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> упрощает чтение. Для чтения и записи.</summary>
+        <value>Логический</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3762,8 +3762,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если в строке должны отображаться заглавные строки, свойство имеет свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowTableStyleRowHeaders" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> True. Для чтения и записи.</summary>
-        <value>Boolean</value>
+        <summary>Свойство настроено на True, если в строке должны отображаться заглавные <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowTableStyleRowHeaders" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> строки. Для чтения и записи.</summary>
+        <value>Логический</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3793,8 +3793,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство отображает диапазонные строки, в которых форматирование даже строк отличается от формата <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowTableStyleRowStripes" /> нечетных строк. Это <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> упрощает чтение. Для чтения и записи.</summary>
-        <value>Boolean</value>
+        <summary>Свойство отображает полосатую строку, в которой даже строки форматированы иначе, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.ShowTableStyleRowStripes" /> чем нечетные строки. Это <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> упрощает чтение. Для чтения и записи.</summary>
+        <value>Логический</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3824,10 +3824,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, отображается ли строка значений.</summary>
-        <value><b>true,</b> если отображается строка значений; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, отображается ли строка значений.</summary>
+        <value><b>значение true,</b> если строка значений отображается; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Это свойство соответствует параметру, заданной для параметра "Показать строку значений" на вкладке "Отображение" диалоговых окна "Параметры таблицы".</para>
+          <para>Это свойство соответствует параметру строки Показать значения строки на вкладке Отображение диалогового окна PivotTable Options.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3854,10 +3854,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Slicers</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> коллекцию для указанной pivotTable.</summary>
-        <value>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> для указанной pivotTable.</value>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> коллекцию для указанного PivotTable.</summary>
+        <value>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> для указанного PivotTable.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Срезы можно использовать для фильтрации данных в отчетах pivotTable. Коллекция <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> содержит <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекты, которые представляют срезы, связанные с указанной pivotTable.</para>
+          <para>Срезы можно использовать для фильтрации данных в отчетах PivotTable. Коллекция <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> содержит <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекты, которые представляют срезы, связанные с указанным PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3887,9 +3887,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если Microsoft Excel использует сетку шириной две ячейки и две ячейки в глубину для созданного отчета pivotTable. <b>False,</b> если Excel использует пустую структуру трафарета. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> Microsoft Excel использует сетку шириной две ячейки и две ячейки глубиной для недавно созданного отчета PivotTable. <b>False,</b> Excel использует пустой контур трафарета. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Следует использовать структуру трафарета. Сетка предоставляется только потому, что она обеспечивает совместимость с более ранними версиями Excel.</para>
+        <remarks><para>Необходимо использовать схему трафарета. Сетка предоставляется только потому, что она включает совместимость с более ранними версиями Excel.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3919,9 +3919,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство управляет тем, используются ли настраиваемые списки для сортировки элементов полей, как при инициализации, так и при упорядочении по их подписям, а затем, когда пользователь применяет <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.SortUsingCustomLists" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> сортировку. Для чтения и записи.</summary>
+        <summary>Свойство контролирует, используются ли настраиваемые списки для сортировки элементов полей, как в начале инициализации, так и при заказе подписей; а затем, когда пользователь применяет <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.SortUsingCustomLists" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> сорт. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Установка для этого свойства свойства <b>False</b> позволяет оптимизировать производительность полей с большим количеством элементов, а также позволяет пользователям, не желающим настраиваемой сортировки на основе списков, избежать этого.</para>
+        <remarks><para>Настройка этого свойства <b>False</b> позволяет оптимизировать производительность полей с большим количеством элементов, а также позволяет пользователям, не желающим настраивать сортировку на основе списка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3951,25 +3951,25 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает источник данных для отчета pivotTable. Объект <b>Read-write</b>.</summary>
+        <summary>Возвращает источник данных для отчета PivotTable. Объект <b>read-write</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Возвращаемая величина зависит от источника данных следующим образом:</para>
+        <remarks><para>Возвращаемая величина зависит от источника данных:</para>
           <list type="table">
             <item>
-              <term>Список или база данных Microsoft Excel</term>
-              <description>Ссылка на ячейку в виде текста.</description>
+              <term>Microsoft Excel списка или базы данных</term>
+              <description>Ссылка ячейки в виде текста.</description>
             </item>
             <item>
               <term>Внешний источник данных</term>
-              <description>Массив. Каждая строка состоит из SQL подключения с оставшимися элементами в качестве строки запроса, разбитой на 255-символьные сегменты.</description>
+              <description>Массив. Каждая строка состоит из строки SQL с остальными элементами в качестве строки запроса, разбитой на 255-символьные сегменты.</description>
             </item>
             <item>
               <term>Несколько диапазонов консолидации</term>
-              <description>Двумерный массив. Каждая строка состоит из ссылки и связанных с ней элементов поля страницы.</description>
+              <description>Двумерный массив. Каждая строка состоит из ссылки и связанных с ней элементов поля страниц.</description>
             </item>
             <item>
-              <term>Другой отчет pivotTable</term>
-              <description>Один из трех вышеперечисленной информации.</description>
+              <term>Другой отчет PivotTable</term>
+              <description>Один из трех вышеуказанных видов информации.</description>
             </item>
           </list>
           <para>Это свойство не доступно для источников данных OLE DB.</para>
@@ -4002,9 +4002,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если скрытые элементы поля страницы в отчете pivotTable включаются в подстановки строк и столбцов, итоги блоков и общие итоги. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если скрытые элементы поля страниц в отчете PivotTable включены в строки и столбцы, итоги блокировки и итоги. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Для источников данных OLAP значение всегда имеет <b>значение True.</b></para>
+        <remarks><para>Для источников данных OLAP значение всегда <b>верно.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4031,9 +4031,9 @@
         <Parameter Name="Location" Type="Microsoft.Office.Interop.Excel.XlSubtototalLocationType" />
       </Parameters>
       <Docs>
-        <param name="Location">Обязательно может <see cref="T:Microsoft.Office.Interop.Excel.XlSubtototalLocationType" /> быть <b>xlAtTop</b> или <b>xlAtBottom</b>.</param>
-        <summary>Этот метод изменяет расположение подстановки для всех <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> существующих. Изменение расположения в подстановке имеет непосредственный визуальный эффект только для полей в форме контура, но оно также будет установлено для полей в табулярной форме.</summary>
-        <remarks><para>Метод <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.SubtotalLocation(Microsoft.Office.Interop.Excel.XlSubtototalLocationType)" /> автоматически задает свойство для всех существующих <see cref="P:Microsoft.Office.Interop.Excel.PivotField.LayoutSubtotalLocation" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> s.</para>
+        <param name="Location">Требуется либо <see cref="T:Microsoft.Office.Interop.Excel.XlSubtototalLocationType" /> <b>xlAtTop,</b> либо <b>xlAtBottom.</b></param>
+        <summary>Этот метод изменяет расположение subtotal для всех существующих <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> . Изменение подсказок имеет непосредственный визуальный эффект только для полей в форме контура, но оно будет установлено и для полей в табулярной форме.</summary>
+        <remarks><para>Метод <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.SubtotalLocation(Microsoft.Office.Interop.Excel.XlSubtototalLocationType)" /> задает свойство для всех существующих s <see cref="P:Microsoft.Office.Interop.Excel.PivotField.LayoutSubtotalLocation" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> автоматически.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4063,10 +4063,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает описание, связанное с альтернативной текстовой строкой для указанной с помощью севоводки.</summary>
-        <value>Описание, связанное с альтернативной текстовой строкой для указанной pivotTable.</value>
+        <summary>Получает или задает описание, связанное с альтернативной строкой текста для указанного PivotTable.</summary>
+        <value>Описание, связанное с альтернативной строкой текста для указанного PivotTable.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Значение свойства соответствует значению в поле "Описание" на вкладке "Заметельный текст" диалогового окна "Параметры <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Summary" /> таблицы".</para>
+          <para>Значение свойства соответствует значению в поле Описание на вкладке Alt Text диалогового окна <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Summary" /> PivotTable Options.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4093,9 +4093,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, содержащий весь отчет pivotTable, но не содержит <see cref="T:Microsoft.Office.Interop.Excel.Range" /> поля страницы. Только для чтения.</summary>
+        <summary>Возвращает объект, представляющего диапазон, содержащий весь отчет PivotTable, но не содержащий <see cref="T:Microsoft.Office.Interop.Excel.Range" /> поля страниц. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableRange2" /> включает поля страницы.</para>
+        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableRange2" /> включает поля страниц.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4122,9 +4122,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющего диапазон, содержащий весь отчет <see cref="T:Microsoft.Office.Interop.Excel.Range" /> совмещаяся, включая поля страницы. Только для чтения.</summary>
+        <summary>Возвращает объект, представляющего диапазон, содержащий весь отчет <see cref="T:Microsoft.Office.Interop.Excel.Range" /> PivotTable, включая поля страниц. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableRange1" /> не включает поля страницы.</para>
+        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableRange1" /> не включает поля страниц.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4160,9 +4160,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль, используемый в теле отчета pivotTable. Значение по умолчанию — строка null (стиль по умолчанию не применяется). Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает стиль, используемый в теле отчета PivotTable. По умолчанию значение null string (по умолчанию стиль не применяется). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Этот стиль используется в качестве стиля по умолчанию для фоновой области и применяется перед любым пользовательским форматированием.</para>
+        <remarks><para>Этот стиль используется в качестве стиля по умолчанию для фоновой области и применяется перед любым форматированием пользователей.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4192,9 +4192,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle2" /> указывает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> стиль, применяемый к объекту <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
+        <summary>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle2" /> указывает <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> стиль, применяемый в настоящее время к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Для чтения и записи.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Свойство вызвано <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle2" /> тем, что существует существующее свойство с именем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle" /> .</para>
+        <remarks><para>Свойство называется, <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle2" /> так как имеется существующее свойство с именем <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.TableStyle" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4224,7 +4224,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку, сохраненную в отчете pivotTable. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает строку, сохраненную в отчете PivotTable. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4255,10 +4255,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если звездочка (*) отображается рядом с каждой подстановкой и общее общее значение в указанном отчете pivotTable, если отчет основан на источнике данных OLAP. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если звездочка (*) отображается рядом с каждым subtotal и общее значение в указанном отчете PivotTable, если отчет основан на источнике данных OLAP. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если для этого свойства <b>установлено true,</b>звездочка указывает, что скрытые элементы включены в общее число. Звездочка отображается независимо от того, были ли какие-либо элементы отчета скрыты.</para>
-          <para>Для источников данных, не относясь к OLAP, значение этого свойства всегда имеет <b>значение False.</b></para>
+        <remarks><para>Если это свойство настроено на <b>True,</b>звездочка указывает, что скрытые элементы включены в общую сумму. Звездочка отображается независимо от того, были ли скрыты какие-либо элементы в отчете.</para>
+          <para>Для источников данных, не относящаых к OLAP, значение этого свойства всегда <b>является false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4283,7 +4283,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет ссылку или отчет pivotTable.</summary>
+        <summary>Обновляет ссылку или отчет PivotTable.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4313,7 +4313,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль, применяемый к ячейкам, освобожденным при обновлении отчета pivotTable. Значение по умолчанию — строка null (стиль по умолчанию не применяется). Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает стиль, применяемый к ячейкам, освобождаемым при обновлении отчета PivotTable. По умолчанию значение null string (по умолчанию стиль не применяется). Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4344,7 +4344,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имя отчета pivotTable. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Имя отчета PivotTable. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4372,7 +4372,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotTableVersionList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер версии Microsoft Excel. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableVersionList" /> чтения.</summary>
+        <summary>Возвращает номер Microsoft Excel версии. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableVersionList" /> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4403,7 +4403,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если <b>установлено значение True</b> (по умолчанию), можно просматривать вычисляемые члены для список OLAP. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>При <b>задании значения True</b> (по умолчанию) можно просмотреть вычисляемые участники для сетевой аналитической обработки (OLAP) pivotTables. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4435,9 +4435,9 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер возвращаемого поля (может быть массивом для указания нескольких полей).</param>
-        <summary>Возвращает объект, который представляет одно поле в отчете pivotTable (объект) или коллекцию всех видимых полей <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> (объекта). Видимые поля показаны как поля строки, столбца, страницы или данных. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет одно поле в отчете PivotTable (объект) или коллекцию всех видимых <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> полей <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> (объекта). Видимые поля показаны в строке, столбце, странице или полях данных. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Для источников данных OLAP скрытые поля не существуют, и это свойство возвращает все поля в кэше pivotTable.</para>
+        <remarks><para>Для источников данных OLAP нет скрытых полей, и это свойство возвращает все поля в кэше PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4467,11 +4467,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение True</b> (по умолчанию), чтобы позволить с помощью список OLAP пересчитывать общее значение после скрытия элемента из представления. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True</b> (по умолчанию) для обеспечения того, чтобы pivotTables online analytical Processing (OLAP) пересчитал общую сумму после того, как элемент был скрыт от просмотра. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если вы скрываете элемент в список, не относящуюся к OLAP, итоговая сумма будет отражаться только для элементов, которые остаются видимыми в pivotTable. В pivotTable OLAP общая сумма вычисляется на сервере и, следовательно, не зависит от того, скрыты ли какие-либо элементы в представлении pivotTable. Однако если для свойства <b>VisualTotals</b> для pivotTable OLAP за установлено свойство <b>False,</b> то результаты pivotTable OLAP будут совпадать с результатами, полученными из севостойки, которая не является OLAP.</para>
-          <para>Для pivotTables OLAP свойство <b>VisualTotals</b> со значением <b>True</b> (по умолчанию) работает так же, как описано для не OLAP pivotTables.</para>
-          <para>Свойство <b>VisualTotals</b> возвращает <b>true</b> для всех новых список. Однако если вы откроете книгу в текущей версии Microsoft Excel и созданная в предыдущей версии Excel совая таблица, свойство <b>VisualTotals</b> возвратит <b>false.</b></para>
+        <remarks><para>В pivotTables, не относящуюся к OLAP, если вы скрываете элемент, итог будет повторно отражать только элементы, которые остаются видимыми в PivotTable. В pivotTable OLAP общая сумма вычисляется на сервере и поэтому не зависит от того, скрыты ли какие-либо элементы в представлении PivotTable. Однако если свойство <b>VisualTotals</b> настроено как <b>False</b> для pivotTable OLAP, результаты pivotTable OLAP будут совпадать с результатами pivotTable, не относящаться к OLAP.</para>
+          <para>Для pivotTables OLAP параметр <b>Свойства VisualTotals</b> <b>True</b> (по умолчанию) работает так же, как описано для pivotTables без OLAP.</para>
+          <para>Свойство <b>VisualTotals</b> возвращает <b>True</b> для всех новых pivotTables. Однако если вы откроете книгу в текущей версии Microsoft Excel и pivotTable были созданы в предыдущей версии Excel, свойство <b>VisualTotals</b> возвращает <b>false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4501,12 +4501,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, следует ли включать отфильтрованные элементы в итоги именованных наборов для указанной совмести.</summary>
-        <value><b>true,</b> если включены отфильтрованные элементы в итоги именованных наборов для указанной pivotTable; в <b>противном</b>случае false . Значение по умолчанию — <b>false</b></value>
+        <summary>Получает или задает, включать ли фильтруемые элементы в итоги именованных наборов для указанного PivotTable.</summary>
+        <value><b>true,</b> если в итоги именованных наборов для указанного PivotTable включены фильтруемые элементы; в противном <b>случае, false</b>. Значение по умолчанию является <b>ложным</b></value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>true,</b> если отфильтрованные элементы включены в итоги для именованных наборов; в <b>противном случае false</b>. Значение по умолчанию для этого свойства — <b>false.</b></para>
-          <para>В pivotTable на основе источника данных OLAP можно настроить, будут ли итоги для именованных наборов в pivotTable включать элементы, которые были отфильтрованной. Параметр свойства соответствует установленного фильтруемых элементов в наборе итогов на вкладке "Фильтры итогов" в диалоговом окне "Параметры <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.VisualTotalsForSets" /> &amp; таблицы".</para>
+            <b>верно,</b> если фильтруются элементы, включенные в итоги для именованных наборов; в <b>противном случае false</b>. Значение этого свойства по умолчанию является <b>ложным.</b></para>
+          <para>В pivotTable, основанном на источнике данных OLAP, можно настроить, будут ли суммы для именованных наборов в PivotTable включать элементы, которые были фильтруются. Параметр свойства соответствует элементу Include filtered в поле "Набор итогов" на вкладке Фильтры Totals в диалоговом окне <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.VisualTotalsForSets" /> &amp; PivotTable Options.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
