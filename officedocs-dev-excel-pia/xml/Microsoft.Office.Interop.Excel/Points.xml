@@ -1,5 +1,5 @@
 <Type Name="Points" FullName="Microsoft.Office.Interop.Excel.Points">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ae80f91ccd2e0535f72e2ae08eab742230abf0bd" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49997203" /></Metadata><TypeSignature Language="C#" Value="public interface Points : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1d5c8dd605a8ba47830c3cd9b125cabdd4050fb44deca353578a485c75b38c08" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517273" /></Metadata><TypeSignature Language="C#" Value="public interface Points : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Points implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Points" />
   <TypeSignature Language="VB.NET" Value="Public Interface Points&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.Point" /> указанном ряду диаграммы.</summary>
-    <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Series.Points(System.Object)" /> метод для возврата коллекции <b>Points.</b></para>
-      <para>Используйте <b>точки</b>( <paramref name="index" /> ), где находится номер <paramref name="index" /> индекса точки, чтобы вернуть один <b>объект Point.</b> Точки набраются слева направо в ряду. Points(1) — это самая левая точка, а Points(Points.Count) — самая правая точка.</para>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.Point" /> в указанной серии на диаграмме.</summary>
+    <remarks><para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.Series.Points(System.Object)" /> для возврата коллекции <b>Points.</b></para>
+      <para>Используйте <b>пункты</b> <paramref name="index" /> (), где находится номер индекса точек, чтобы вернуть один объект <paramref name="index" /> <b>Point.</b> В серии точки про номера слева направо. Точки (1) — это левая точка, а пункты (Points.Count) — самая правая точка.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -86,7 +86,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -144,8 +144,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -204,7 +204,7 @@
         <Parameter Name="Index" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

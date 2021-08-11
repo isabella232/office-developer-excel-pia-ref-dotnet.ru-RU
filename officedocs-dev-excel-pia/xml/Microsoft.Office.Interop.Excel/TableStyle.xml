@@ -1,5 +1,5 @@
 <Type Name="TableStyle" FullName="Microsoft.Office.Interop.Excel.TableStyle">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="4195e3f6ef14d553a26ff7dba570149f82c6b4a9" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009767" /></Metadata><TypeSignature Language="C#" Value="public interface TableStyle" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bd4eefe401f1eec485a0f029791e2808b924c4f624b74bddbcaae48ea7178a30" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517154" /></Metadata><TypeSignature Language="C#" Value="public interface TableStyle" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TableStyle" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.TableStyle" />
   <TypeSignature Language="VB.NET" Value="Public Interface TableStyle" />
@@ -22,7 +22,7 @@
   </Attributes>
   <Docs>
     <summary>Представляет один стиль, который можно применить к таблице.</summary>
-    <remarks><para>Стиль таблицы определяет форматирование для одного или всех элементов таблицы или таблицы. Например, столбец является элементом таблицы. Стиль таблицы может определять форматирование столбцов в таблице чередующимся форматированием (также известным как чередование или полосы).  </para>
+    <remarks><para>Стиль таблицы определяет форматирование для одного или всех элементов таблицы или pivotTable. Например, столбец — это элемент таблицы. В стиле таблицы можно определить, что столбцы в таблице отформатированы с переменным форматированием (также известным как бинтирование или полоски).  </para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -80,9 +80,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office  <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel._Application" /> создателя указанного объекта. Только для чтения.</summary>
+        <summary>При применении без квалификатора объекта это свойство возвращает объект, представляю Microsoft Office Excel <see cref="T:Microsoft.Office.Interop.Excel._Application" /> приложение. При этом с помощью квалификатора объектов это свойство возвращает объект, представляю который представляет создателя <see cref="T:Microsoft.Office.Interop.Excel._Application" /> указанного объекта. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
-        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с помощью объекта автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -109,7 +109,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если стиль является встроенным. Только для чтения.</summary>
+        <summary><b>True,</b> если стиль является встроенным стилем. Только для чтения.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,7 +139,7 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.TableStyle.Creator" /> символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.  Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.TableStyle.Creator" /> символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -193,7 +193,7 @@
         <param name="NewTableStyleName">Имя нового стиля таблицы.</param>
         <summary>Дублирует <see cref="T:Microsoft.Office.Interop.Excel.TableStyle" /> объект и возвращает ссылку на новую копию.</summary>
         <returns><see cref="T:Microsoft.Office.Interop.Excel.TableStyle" /></returns>
-        <remarks><para>Если имя не указано, метод использует то же имя по умолчанию, что <see cref="M:Microsoft.Office.Interop.Excel.TableStyle.Duplicate(System.Object)" /> и пользовательский интерфейс.</para>
+        <remarks><para>Если не указано имя, метод использует то же имя по умолчанию, <see cref="M:Microsoft.Office.Interop.Excel.TableStyle.Duplicate(System.Object)" /> что и пользовательский интерфейс.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -221,7 +221,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает имя объекта. Только для чтения.</summary>
-        <value><b>Строка</b></value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -249,8 +249,8 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает имя объекта на языке пользователя. Только для чтения.</summary>
-        <value><b>Строка</b></value>
-        <remarks><para>Если стиль является встроенным, это свойство возвращает имя стиля на языке текущего языка.</para>
+        <value><b>String</b></value>
+        <remarks><para>Если стиль является встроенным стилем, это свойство возвращает имя стиля на языке текущего языка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -308,11 +308,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или возвращает, если стиль отображается в коллекции для стилей список или нет. Для чтения и записи.</summary>
+        <summary>Задает или возвращает, если стиль отображается в галерее для стилей PivotTable или нет. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Свойство возвращает true, если стиль отображается в коллекции для стилей pivotTable.</para>
+        <remarks><para>Свойство возвращает True, если стиль отображается в галерее для стилей PivotTable.</para>
           <para>
-            <b>Примечание.</b>Пользователи могут установить для свойств или их свойств false, даже если стиль уже применен к таблице <see cref="P:Microsoft.Office.Interop.Excel.TableStyle.ShowAsAvailableTableStyle" /> <see cref="P:Microsoft.Office.Interop.Excel.TableStyle.ShowAsAvailablePivotTableStyle" /> или совместу.  В этом случае в коллекции стиль не будет отобратен, и стиль не будет выбран, если активная ячейка находится в таблице или в советной таблице.</para>
+            <b>Примечание.</b>Пользователи могут установить свойства false, даже если стиль уже применен к таблице или <see cref="P:Microsoft.Office.Interop.Excel.TableStyle.ShowAsAvailableTableStyle" /> <see cref="P:Microsoft.Office.Interop.Excel.TableStyle.ShowAsAvailablePivotTableStyle" /> pivotTable.  В этом случае в галерее не будет показан стиль, и при активной ячейке в таблице или pivotTable стиль не отображается как выбранный.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -342,8 +342,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, отображается ли указанный стиль таблицы как доступный в коллекции стилей срезов.</summary>
-        <value><b>true,</b> если указанный стиль таблицы отображается как доступный в коллекции стилей срезов; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, отображается ли указанный стиль таблицы как доступный в галерее стилей среза.</summary>
+        <value><b>верно,</b> если указанный стиль таблицы отображается как доступный в галерее стилей среза; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -374,10 +374,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль таблицы, показанный в коллекции стилей таблиц. Для чтения и записи.</summary>
+        <summary>Возвращает или задает стиль таблицы, показанный как доступный в галерее стилей таблицы. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если <b>имеется true,</b>этот стиль отображается в коллекции для стилей таблиц.</para>
-          <para>Вы можете установить для этого свойства <b>false,</b> даже если стиль уже применен к таблице.  В этом случае в коллекции не будет показан стиль, и если активная ячейка находится в этой таблице, стиль не будет показан как выбранный.</para>
+        <remarks><para>Если <b>true,</b>этот стиль отображается в галерее для стилей таблиц.</para>
+          <para>Это свойство можно установить <b>false,</b> даже если стиль уже применен к таблице.  В этом случае в галерее не отображается стиль, и если активная ячейка находится в этой таблице, стиль не отображается в выбранном качестве.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -407,7 +407,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, отображается ли указанный стиль таблицы как доступный в коллекции стилей временной шкалы. <b>Boolean</b> (<b>bool</b> in C#). Чтение и запись</summary>
+        <summary>Возвращает или задает, отображается ли указанный стиль таблицы как доступный в галерее стилей временной шкалы. <b>Boolean</b> <b>(bool</b> in C#). Чтение и запись</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

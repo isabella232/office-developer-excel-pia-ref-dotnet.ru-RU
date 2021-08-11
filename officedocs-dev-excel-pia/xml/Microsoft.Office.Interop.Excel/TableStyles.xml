@@ -1,5 +1,5 @@
 <Type Name="TableStyles" FullName="Microsoft.Office.Interop.Excel.TableStyles">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="70d5a69d0e4e826dda6e82f38beab66614060a9a" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009718" /></Metadata><TypeSignature Language="C#" Value="public interface TableStyles : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="00f75dd108da7908ce3f09745a2981098ff92f1e74b9ce9e85f757d3769d676d" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508955" /></Metadata><TypeSignature Language="C#" Value="public interface TableStyles : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TableStyles implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.TableStyles" />
   <TypeSignature Language="VB.NET" Value="Public Interface TableStyles&#xA;Implements IEnumerable" />
@@ -26,8 +26,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет стили, которые можно применить к таблице.</summary>
-    <remarks><para>Стили таблиц предоставляют способ формата всей таблицы или таблицы pivot. Стили таблиц заменяют существующую функцию автоматического форматирования для форматирования всей таблицы.</para>
-      <para>Стили таблиц отличаются от автоматического формата следующими способами:</para>
+    <remarks><para>Стили таблиц предоставляют способ формата всей таблицы или таблицы pivot. Стили таблиц заменяют существующую функцию автоформатирования для форматирования всей таблицы.</para>
+      <para>Стили таблиц отличаются от автоформатов следующими способами:</para>
       <para> </para>
       <list type="bullet">
         <item>
@@ -41,10 +41,10 @@
           <description>Изменение цветовой схемы и/или схемы шрифтов темы документа изменит внешний вид встроенных стилей таблиц. </description>
         </item>
         <item>
-          <description>Стили таблиц могут повторно использовать стили для таких объектов, как сvotTables и таблицы, по мере изменения объекта.  Таблицы будут запоминать примененный к ним стиль и будут отображаться соответствующим образом при добавлении, удалении, скрытии и отобраии ячеек.</description>
+          <description>Стили таблиц могут повторно использовать стили для объектов, таких как PivotTables и таблицы по мере изменения объекта.  Таблицы будут помнить стиль, применяемый к ним, и будут отображаться соответствующим образом при добавлении, удалении, скрытии и показе ячеек.</description>
         </item>
         <item>
-          <description>Стили таблиц имеют визуальный пользовательский интерфейс на ленте.
+          <description>Стили таблиц имеют визуальный пользовательский интерфейс в ленте.
 </description>
         </item>
       </list>
@@ -111,7 +111,7 @@
       </Parameters>
       <Docs>
         <param name="TableStyleName">Имя стиля таблицы.</param>
-        <summary>Создает новый объект <see cref="T:Microsoft.Office.Interop.Excel.TableStyle" /> и добавляет его в коллекцию.</summary>
+        <summary>Создает новый <see cref="T:Microsoft.Office.Interop.Excel.TableStyle" /> объект и добавляет его в коллекцию.</summary>
         <returns>TableStyle</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,9 +139,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office  <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel._Application" /> создателя указанного объекта. Только для чтения.</summary>
+        <summary>При применении без квалификатора объекта это свойство возвращает объект, представляю Microsoft Office Excel <see cref="T:Microsoft.Office.Interop.Excel._Application" /> приложение. При этом с помощью квалификатора объектов это свойство возвращает объект, представляю который представляет создателя <see cref="T:Microsoft.Office.Interop.Excel._Application" /> указанного объекта. Только для чтения.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с помощью объекта автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -169,7 +169,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает количество объектов в коллекции. Только для чтения.</summary>
-        <value>64-разрядное целое число.</value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -198,7 +198,7 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -257,7 +257,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Имя или номер индекса для объекта.</param>
+        <param name="Index">Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns><see cref="T:Microsoft.Office.Interop.Excel.TableStyle" /></returns>
         <remarks>To be added.</remarks>

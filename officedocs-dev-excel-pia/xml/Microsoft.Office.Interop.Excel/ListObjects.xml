@@ -1,5 +1,5 @@
 <Type Name="ListObjects" FullName="Microsoft.Office.Interop.Excel.ListObjects">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="297eaae8b8252f38795243645194d97dbacd5ca5" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49999926" /></Metadata><TypeSignature Language="C#" Value="public interface ListObjects : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="9cc07e93edc8ddc2aad7de45e3e329198adf19a1c5e94b1eb33d26d76ac13424" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517063" /></Metadata><TypeSignature Language="C#" Value="public interface ListObjects : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ListObjects implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ListObjects" />
   <TypeSignature Language="VB.NET" Value="Public Interface ListObjects&#xA;Implements IEnumerable" />
@@ -25,7 +25,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> на этом сайте. Каждый <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объект представляет список на листе.</summary>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> на таблице. Каждый <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объект представляет список в листе.</summary>
     <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Worksheet.ListObjects" /> свойство объекта <see cref="T:Microsoft.Office.Interop.Excel.Worksheet" /> для возврата коллекции <b>ListObjects.</b></para>
       <para> </para></remarks>
   </Docs>
@@ -94,14 +94,14 @@
         <Parameter Name="Destination" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SourceType"><b>Необязательный XlListObjectSourceType.</b> Указывает тип источника запроса. Может быть одной из следующих констант <b>XlListObjectSourceType:</b> <b>xlSrcExternal</b> или <b>xlSrcRange.</b> Если этот опущен, значение по умолчанию <paramref name="SourceType" /> <b>будет xlSrcRange.</b></param>
-        <param name="Source"><paramref name="SourceType" />Необязательный, <b>если это xlSrcRange.</b> Объект, <see cref="T:Microsoft.Office.Interop.Excel.Range" /> представляющий источник данных. Если этот код опущен, по умолчанию будет возвращен диапазон, <paramref name="Source" /> возвращенный кодом обнаружения диапазона списков. Обязательно, если <paramref name="SourceType" /> <b>xlSrcExternal</b>. Массив <b>строковых</b> значений, определяющих подключение к источнику. Element#Contents0URL to SharePoint site 1ListName 2ViewGUID</param>
-        <param name="LinkSource"><b>Необязательный boolean</b>. Указывает, должен ли внешний источник данных быть связан с <b>объектом ListObject.</b> Если <paramref name="SourceType" /> имеет <b>значение xlSrcExternal,</b>значение по умолчанию <b>— True.</b> Invalid if <paramref name="SourceType" /> is <b>xlSrcRange</b>, and will return an error if not omitted.</param>
-        <param name="XlListObjectHasHeaders"><b>Необязательный объект</b>. Константа, которая указывает, есть ли импортируемые данные <see cref="T:Microsoft.Office.Interop.Excel.XlYesNoGuess" /> метки столбцов. Если исходный код не содержит headers, Excel автоматически создает их.</param>
-        <param name="Destination"><b>Необязательный объект</b>. Объект <b>Range,</b> определяющий ссылку на одну ячейку в качестве назначения для левого верхнего угла нового объекта списка. Если объект <b>Range</b> относится к более чем одной ячейке, создается ошибка. Аргумент <paramref name="Destination" /> должен быть указан, если <paramref name="SourceType" /> задан <b>xlSrcExternal.</b> Аргумент <paramref name="Destination" /> игнорируется, если за <paramref name="SourceType" /> установлено для <b>xlSrcRange</b>. Диапазон назначения должен быть на таблице, содержаной указанную <see cref="T:Microsoft.Office.Interop.Excel.ListObjects" /> коллекцию. Новые столбцы будут вставлены в новом <paramref name="Destination" /> списке. Поэтому существующие данные не будут перезаписаны.</param>
+        <param name="SourceType"><b>Необязательный XlListObjectSourceType</b>. Указывает тип источника запроса. Может быть одним из следующих <b>констант XlListObjectSourceType:</b> <b>xlSrcExternal</b> или <b>xlSrcRange.</b> Если опущено, по умолчанию будет <paramref name="SourceType" /> <b>xlSrcRange</b>.</param>
+        <param name="Source"><paramref name="SourceType" />Необязательный, <b>когда xlSrcRange</b>. Объект, <see cref="T:Microsoft.Office.Interop.Excel.Range" /> представляющий источник данных. Если опущен, по умолчанию будет возвращен диапазон, <paramref name="Source" /> возвращаемого кодом обнаружения диапазона списков. Обязательно, <paramref name="SourceType" /> когда <b>xlSrcExternal</b>. Массив <b>значений String,</b> определяющих подключение к источнику. Element#Contents0URL для SharePoint сайта 1ListName 2ViewGUID</param>
+        <param name="LinkSource"><b>Необязательный boolean</b>. Указывает, связан ли внешний источник данных с объектом <b>ListObject.</b> Если <paramref name="SourceType" /> <b>xlSrcExternal</b>, по умолчанию <b>true</b>. <paramref name="SourceType" />Недействительным, <b>если xlSrcRange</b>, и возвращает ошибку, если не опущен.</param>
+        <param name="XlListObjectHasHeaders"><b>Необязательный объект</b>. Константа, которая указывает, есть ли импортируемые <see cref="T:Microsoft.Office.Interop.Excel.XlYesNoGuess" /> данные, имеет метки столбцов. Если источник не содержит заглавных Excel автоматически генерирует заглавные.</param>
+        <param name="Destination"><b>Необязательный объект</b>. Объект <b>Range,</b> указывающий одноклеточную ссылку в качестве назначения для верхнего левого угла нового объекта списка. Если объект <b>Range</b> ссылается на несколько клеток, создается ошибка. Аргумент <paramref name="Destination" /> должен быть указан, когда <paramref name="SourceType" /> задан <b>xlSrcExternal.</b> Аргумент <paramref name="Destination" /> игнорируется, если <paramref name="SourceType" /> установлен <b>xlSrcRange.</b> Диапазон назначения должен быть на таблице, которая содержит указанную <see cref="T:Microsoft.Office.Interop.Excel.ListObjects" /> коллекцию. Новые столбцы будут вставлены в списке, <paramref name="Destination" /> чтобы соответствовать новому списку. Поэтому существующие данные не будут перезаписаны.</param>
         <summary>Создает новый объект списка. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ListObject" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Если список имеет заглавные строки, первая строка ячеек будет преобразована в <b>текст</b>, если еще не настроена на текст. Преобразование будет основано на видимом тексте для ячейки. Это означает, что при значении даты с форматом <b>даты,</b> который изменяется с помощью региональных данной области, преобразование в список может привести к разным результатам в зависимости от текущего системного региональных данной области. Кроме того, если в строке колонок есть две ячейки с одинаковым видимым текстом, добавочные <b>integer</b> будут приращены, чтобы сделать каждый заголовок столбца уникальным.</para>
+        <remarks><para>Если в списке есть заглавные листы, первая строка ячеек будет преобразована в <b>Текст,</b>если она еще не настроена на текст. Преобразование будет основано на видимом тексте ячейки. Это означает, что при значении даты с форматом <b>Date,</b> который изменяется с локализом, преобразование в список может привести к различным результатам в зависимости от текущего локального значения системы. Кроме того, если в строке заглавной строки есть две ячейки с одинаковым видимым текстом, будет придан дополнительный <b>integer,</b> чтобы сделать каждый заголовок столбцов уникальным.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -166,7 +166,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -222,9 +222,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="Areas" FullName="Microsoft.Office.Interop.Excel.Areas">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3d66092e7ce8a02412645f2fcf1c40d1d7d63d9e" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006260" /></Metadata><TypeSignature Language="C#" Value="public interface Areas : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c5ab8827592d9d74239b97b8ff0a6caefd9705fb1a777535ffeab95e7803a519" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54506731" /></Metadata><TypeSignature Language="C#" Value="public interface Areas : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Areas implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Areas" />
   <TypeSignature Language="VB.NET" Value="Public Interface Areas&#xA;Implements IEnumerable" />
@@ -25,11 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция областей или рядовых блоков ячеек в пределах выделения.</summary>
-    <remarks><para>Нет объекта singular <b>Area;</b> отдельные члены коллекции <b>Areas</b> являются <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объектами. Коллекция <b>Areas</b> содержит по одному <b>объекту Range</b> для каждого дискретного, неразмерного диапазона ячеек в выделение. Если выделение содержит только одну область, коллекция <b>Areas</b> содержит один объект <b>Range,</b> соответствующий этому выбору.</para>
-      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Range.Areas" /> для возврата коллекции <b>Areas.</b></para>
-      <para>Используйте <b>области</b>( ), где находится номер индекса области, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>Range</b> из коллекции. Номера индексов соответствуют порядку выбора областей.</para>
-      <para>Некоторые операции не могут выполняться одновременно с более чем одной областью выделения; Необходимо выполнить цикл по отдельным областям в выборе и выполнять операции с каждой областью отдельно.</para>
+    <summary>Коллекция областей или соотественных блоков ячеек в рамках выбора.</summary>
+    <remarks><para>Нет единого объекта <b>Area;</b> отдельные члены коллекции <b>Областей</b> — <see cref="T:Microsoft.Office.Interop.Excel.Range" /> это объекты. Коллекция <b>Областей</b> содержит один <b>объект Range</b> для каждого отдельного, соразмерного диапазона ячеек в рамках выбора. Если выбор содержит только одну область, коллекция <b>Областей</b> содержит один объект <b>Range,</b> соответствующий этому выбору.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.Areas" /> свойство, чтобы вернуть коллекцию <b>Областей.</b></para>
+      <para>Используйте <b>Области</b>(), где находится номер индекса области, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>Range</b> из коллекции. Номера индексов соответствуют порядку, в котором были выбраны области.</para>
+      <para>Некоторые операции не могут выполняться одновременно на нескольких участках в выборе; необходимо выполнить цикл через отдельные области в выборе и выполнять операции по каждой области отдельно.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -91,7 +91,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -149,8 +149,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

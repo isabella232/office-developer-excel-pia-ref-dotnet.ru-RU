@@ -1,5 +1,5 @@
 <Type Name="TextEffectFormat" FullName="Microsoft.Office.Interop.Excel.TextEffectFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="fbb84779b82f0d04327c445fb2dede8ff19b5468" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009655" /></Metadata><TypeSignature Language="C#" Value="public interface TextEffectFormat : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e8f3ae739158fd1702c8341c6ed61e782925c4b99779e9b46e91a0ada3d11532" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517581" /></Metadata><TypeSignature Language="C#" Value="public interface TextEffectFormat : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextEffectFormat implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.TextEffectFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextEffectFormat&#xA;Implements _IMsoDispObj" />
@@ -22,7 +22,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства и методы, которые применяются к объектам WordArt.</summary>
+    <summary>Содержит свойства и методы, применимые к объектам WordArt.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -83,7 +83,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -116,8 +116,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -147,7 +147,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт в указанном WordArt полужирным шрифтом.</summary>
+        <summary><b>True,</b> если шрифт в указанном WordArt имеет жирный шрифт.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -240,7 +240,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает размер шрифта для указанного WordArt в пунктах.</summary>
+        <summary>Возвращает или задает размер шрифта для указанного WordArt в точках.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -302,7 +302,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если все символы (как прописные, так и нижние) в указанном WordArt имеют одинаковые высоты.</summary>
+        <summary><b>True,</b> если все символы (как верхний, так и нижний шкафы) в указанном WordArt имеют ту же высоту.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -363,7 +363,7 @@
       <Docs>
         <summary>Возвращает или задает форму указанного WordArt.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка свойства <see cref="P:Microsoft.Office.Interop.Excel.TextEffectFormat.PresetTextEffect" /> автоматически задает свойство <b>PresetShape.</b></para>
+        <remarks><para>Настройка свойства <see cref="P:Microsoft.Office.Interop.Excel.TextEffectFormat.PresetTextEffect" /> автоматически задает свойство <b>PresetShape.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -395,8 +395,8 @@
       <Docs>
         <summary>Возвращает или задает стиль указанного WordArt.</summary>
         <value>To be added.</value>
-        <remarks><para>Значения для этого свойства соответствуют форматам в диалоговом окне "Галерея WordArt" (с номерами слева направо, сверху вниз).</para>
-          <para>Установка свойства <b>PresetTextEffect</b> автоматически задает множество других свойств форматирования указанной фигуры.</para>
+        <remarks><para>Значения этого свойства соответствуют форматам в диалоговом окне Галерея WordArt (пронумировали слева направо, сверху вниз).</para>
+          <para>Настройка свойства <b>PresetTextEffect</b> автоматически задает множество других свойств форматирования указанной формы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -426,10 +426,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если символы в указанном WordArt повернуты на 90 градусов относительно привязанной фигуры WordArt. <b>False,</b> если символы в указанном WordArt сохраняют исходную ориентацию относительно привязанной фигуры.</summary>
+        <summary><b>Верно,</b> если символы в указанном WordArt вращаются на 90 градусов относительно связанной формы WordArt. <b>False,</b> если символы в указанном WordArt сохраняют свою исходную ориентацию относительно связанной формы.</summary>
         <value>To be added.</value>
-        <remarks><para>Если WordArt имеет горизонтальный текст, при установке свойству <b>RotatedChars</b> свойства <b>msoTrue</b> знаки вращаются на 90 градусов против часовой стрелки. Если WordArt имеет вертикальный текст, установка <b>свойству RotatedChars</b> параметров <b>msoFalse</b> поворачивать символы по часовой стрелке на 90 градусов. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> метод для переключения между горизонтальным и вертикальным потоком текста.</para>
-          <para>Метод и свойство объекта, а также свойство <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> <b>RotatedChars</b> и метод объекта влияют на ориентацию символов и направление потока текста в <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> <b>объекте Shape,</b> который представляет WordArt. Возможно, вам придется поэкспериментировать, чтобы узнать, как объединить эффекты этих свойств и методов, чтобы получить нужный результат.</para>
+        <remarks><para>Если WordArt имеет горизонтальный текст, за установку свойства <b>RotatedChars</b> <b>на msoTrue</b> вращаются символы на 90 градусов против часовой стрелки. Если WordArt имеет вертикальный текст, за установку свойства <b>RotatedChars</b> на <b>msoFalse</b> по часовой стрелке вращаются символы на 90 градусов. Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> для переключения между горизонтальным и вертикальным текстовым потоком.</para>
+          <para>Метод и свойство объекта и свойство <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> <b>RotatedChars</b> и метод объекта влияют на ориентацию символов и направление потока текста в <see cref="M:Microsoft.Office.Interop.Excel.TextEffectFormat.ToggleVerticalText" /> <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> <b>объекте Shape,</b> который представляет WordArt. Возможно, вам придется поэкспериментировать, чтобы узнать, как объединить эффекты этих свойств и методов, чтобы получить нужный результат.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -486,8 +486,8 @@
       <Parameters />
       <Docs>
         <summary>Переключает поток текста в указанном WordArt с горизонтального на вертикальный или наоборот.</summary>
-        <remarks><para>Использование метода <b>ToggleVerticalText</b> меняет значения и свойства объекта Shape, который представляет Объект WordArt, и оставляет свойства и свойства <see cref="P:Microsoft.Office.Interop.Excel.Shape.Width" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Height" /> без <b></b> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Left" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Top" /> изменений.</para>
-          <para>Метод и свойство объекта, а также свойства и метода <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> <see cref="P:Microsoft.Office.Interop.Excel.TextEffectFormat.RotatedChars" /> <b>ToggleVerticalText</b> объекта влияют на ориентацию символов и направление потока текста в <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> <b>объекте Shape,</b> который представляет WordArt. Возможно, вам придется поэкспериментировать, чтобы узнать, как объединить эффекты этих свойств и методов, чтобы получить нужный результат.</para>
+        <remarks><para>Метод <b>ToggleVerticalText</b> меняет значения и свойства объекта Shape, который представляет WordArt, и оставляет свойства <see cref="P:Microsoft.Office.Interop.Excel.Shape.Width" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Height" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Left" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Top" /> неизменными.</para>
+          <para>Метод и свойство объекта, свойства и метод <see cref="M:Microsoft.Office.Interop.Excel.Shape.Flip(Microsoft.Office.Core.MsoFlipCmd)" /> <see cref="P:Microsoft.Office.Interop.Excel.Shape.Rotation" /> <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> <see cref="P:Microsoft.Office.Interop.Excel.TextEffectFormat.RotatedChars" /> <b>ToggleVerticalText</b> объекта влияют на ориентацию символов и направление потока текста в <see cref="T:Microsoft.Office.Interop.Excel.TextEffectFormat" /> <b>объекте Shape,</b> который представляет WordArt. Возможно, вам придется поэкспериментировать, чтобы узнать, как объединить эффекты этих свойств и методов, чтобы получить нужный результат.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -517,13 +517,13 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отношение горизонтального пространства, выделенного каждому символу в указанном WordArt, к ширине символа. Может быть значением от 0 (ноль) до 5.</summary>
+        <summary>Возвращает или задает отношение горизонтального пространства, выделенного каждому символу в указанном WordArt, к ширине символа. Может быть значение от 0 (ноль) до 5.</summary>
         <value>To be added.</value>
-        <remarks><para>Большие значения для этого свойства указывают достаточное пространство между символами; значения меньше 1 могут привести к перекрытию символов.</para>
-          <para>В следующей таблице параметров свойства <b>Tracking,</b> которые соответствуют параметрам, доступным в пользовательском интерфейсе.</para>
+        <remarks><para>Большие значения для этого свойства указывают достаточное пространство между символами; значения менее 1 могут привести к перекрытию символов.</para>
+          <para>В следующей таблице приводится значение свойства <b>Tracking,</b> соответствующее настройкам, доступным в пользовательском интерфейсе.</para>
           <list type="table">
             <item>
-              <term>Очень тесная</term>
+              <term>Очень туго</term>
               <description>0.8</description>
             </item>
             <item>
@@ -535,11 +535,11 @@
               <description>1.0</description>
             </item>
             <item>
-              <term>Свободный</term>
+              <term>Loose</term>
               <description>1.2</description>
             </item>
             <item>
-              <term>Очень свободно</term>
+              <term>Very Loose</term>
               <description>1.5</description>
             </item>
           </list>

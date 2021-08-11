@@ -1,5 +1,5 @@
 <Type Name="CustomView" FullName="Microsoft.Office.Interop.Excel.CustomView">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="182293052e1d394361c3727427d11e41a3a372bd" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003880" /></Metadata><TypeSignature Language="C#" Value="public interface CustomView" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="b39c7782840a37daa7683c52e9189333c58b2e44f6b61b5417bd0aafa5deb7ab" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508670" /></Metadata><TypeSignature Language="C#" Value="public interface CustomView" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CustomView" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CustomView" />
   <TypeSignature Language="VB.NET" Value="Public Interface CustomView" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет настраиваемую книгу.</summary>
+    <summary>Представляет настраиваемый вид книги.</summary>
     <remarks><para>Объект <b>CustomView</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.CustomViews" /> коллекции.</para>
-      <para>Используйте <b>CustomViews</b>( ), где находится имя или номер индекса настраиваемого <paramref name="index" /> <paramref name="index" /> представления, чтобы вернуть <b>объект CustomView.</b></para>
+      <para>Используйте <b>CustomViews</b>(), где находится имя или номер индекса пользовательского представления, чтобы <paramref name="index" /> вернуть объект <paramref name="index" /> <b>CustomView.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,8 +80,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -139,7 +139,7 @@
           <list type="table">
             <item>
               <term>
-                <b>Заголовок</b>
+                <b>Caption</b>
               </term>
               <description>Париж</description>
               <description>Париж</description>
@@ -148,29 +148,29 @@
               <term>
                 <b>Имя</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
-              <description>(То же, SQL значение свойства, только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
+              <description>(То же, SQL свойства, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в коллекции можно использовать синтаксис, <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> показанный в следующей таблице.</para>
+          <para>При указании индекса в коллекцию можно использовать <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> синтаксис, показанный в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>выражение. PivotItems("[Europe].[ Франция]. [Paris]")</term>
-              <description>выражение. PivotItems("Paris")</description>
+              <term>выражения. PivotItems("[Europe].[ Франция]. [Париж]")</term>
+              <description>выражения. PivotItems ("Париж")</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -255,7 +255,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если настраиваемый вид содержит параметры для скрытых строк и столбцов (включая сведения о фильтре).</summary>
+        <summary><b>True,</b> если пользовательское представление включает параметры скрытых строк и столбцов (включая сведения о фильтре).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -281,7 +281,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображает настраиваемые представления.</summary>
+        <summary>Отображает настраиваемый вид.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

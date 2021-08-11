@@ -1,5 +1,5 @@
 <Type Name="CubeField" FullName="Microsoft.Office.Interop.Excel.CubeField">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="bf16f6175f71fd20e3da730314c01f3723f6ca55" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003901" /></Metadata><TypeSignature Language="C#" Value="public interface CubeField" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e6db336b2bfb6c999928afc7ca5465376a6a92d6d06e97dacc894bec0c58268d" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508698" /></Metadata><TypeSignature Language="C#" Value="public interface CubeField" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CubeField" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CubeField" />
   <TypeSignature Language="VB.NET" Value="Public Interface CubeField" />
@@ -19,9 +19,9 @@
   </Attributes>
   <Docs>
     <summary>Представляет иерархию или поле измерения из куба OLAP.</summary>
-    <remarks><para>В отчете pivotTable объект <b>CubeField</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.CubeFields" /> коллекции.</para>
-      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotField.CubeField" /> для возврата <b>объекта CubeField.</b></para>
-      <para>Используйте <b>CubeFields</b>( ), где находится номер индекса поля куба, чтобы <paramref name="index" /> вернуть один объект <paramref name="index" /> <b>CubeField.</b></para>
+    <remarks><para>В отчете PivotTable объект <b>CubeField</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.CubeFields" /> коллекции.</para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotField.CubeField" /> свойство, чтобы вернуть <b>объект CubeField.</b></para>
+      <para>Используйте <b>CubeFields</b>(), где находится номер индекса поля куба, чтобы вернуть один <paramref name="index" /> объект <paramref name="index" /> <b>CubeField.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -51,8 +51,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строковое значение,</b> которое представляет текст метки для поля куба.</summary>
-        <value><b>Строка</b></value>
+        <summary>Возвращает значение <b>String,</b> представляюще текст метки для кубового поля.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -82,10 +82,10 @@
         <Parameter Name="PropertyOrder" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Property">Обязательный атрибут типа <b>String</b>. Уникальное имя свойства-члена. Для сбалансированных иерархий уникальное имя можно создать, привнося имя свойства "quoted" к уникальному имени уровня, с которого связано свойство-член. Для несбалансированной иерархии уникальное имя можно создать, примесив имя свойства "quoted" к уникальному имени иерархии.</param>
-        <param name="PropertyOrder"><b>Необязательный объект</b>. Задает значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.PropertyOrder" /> свойства <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> для объекта. Фактическое положение в коллекции будет непосредственно перед полем "PivotTable", которое в настоящее время имеет то же значение, что и в <paramref name="PropertyOrder" /> аргументе. Если ни одно поле не имеет заданного значения порядка свойств, диапазон допустимых значений находится в диапазоне от 1 до числа свойств членов, уже показанных для иерархии, и одного. Этот аргумент основан на одном. Если этот объект опущен, свойство переходит в конец списка.</param>
-        <summary>Добавляет поле свойства-члена на экран для поля куба.</summary>
-        <remarks><para>Указанное поле свойства не будет просматриваться, если в представлении pivotTable нет полей.</para>
+        <param name="Property">Обязательный атрибут типа <b>String</b>. Уникальное имя свойства участника. Для сбалансированных иерархий уникальное имя может быть создано путем придания имени свойства "кавычка" имени участника к уникальному имени уровня, с чем связано свойство участника. Для несбалансированной иерархии уникальное имя можно создать, примесив имя свойства "кавычка" к уникальному имени иерархии.</param>
+        <param name="PropertyOrder"><b>Необязательный объект</b>. Задает значение <see cref="P:Microsoft.Office.Interop.Excel.PivotField.PropertyOrder" /> свойства для <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта. Фактическое положение в коллекции будет непосредственно перед полем PivotTable, которое в настоящее время имеет то же значение, что <paramref name="PropertyOrder" /> и в аргументе. Если ни одно поле не имеет заданного значения порядка свойства, диапазон допустимых значений составляет от 1 до количества свойств участников, уже отказывая для иерархии плюс одно. Этот аргумент является однона основе. Если это свойство не будет пропущено, свойство переходит в конец списка.</param>
+        <summary>Добавляет поле свойства участника в дисплей для поля куба.</summary>
+        <remarks><para>Указанное поле свойства не будет просматриваться, если представление PivotTable не имеет полей.</para>
           <para>Чтобы удалить свойства членов, используйте <see cref="M:Microsoft.Office.Interop.Excel.PivotField.Delete" /> метод для удаления объекта из <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> коллекции.</para>
           <para> </para></remarks>
       </Docs>
@@ -144,12 +144,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство <see cref="P:Microsoft.Office.Interop.Excel.CubeField.AllItemsVisible" /> проверяет, применяется ли ручная фильтрация к pivotField или CubeField. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Свойство проверяет, применяется ли ручная фильтрация к <see cref="P:Microsoft.Office.Interop.Excel.CubeField.AllItemsVisible" /> PivotField или CubeField. Только для чтения, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Значение по умолчанию <b>— True,</b> доступно для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объектов и <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объектов.</para>
-          <para>Для список OLAP это свойство доступно только для <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта. При попытке получить или установить его для объекта в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> pivotTables OLAP возвращается ошибка времени запуска.</para>
-          <para>Для список это свойство доступно для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
-          <para>Это свойство автоматически устанавливается <b></b> в true, если не применяется ручная фильтрация (независимо от того, является ли свойство <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> true или false). При применении ручной <b></b> фильтрации (независимо от того, является ли свойство истинным или ложным) автоматически устанавливается <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> false.</para>
+        <remarks><para>Значение по умолчанию <b>является True</b> и доступно для объектов <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> и <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объектов.</para>
+          <para>Для pivotTables OLAP это свойство доступно только для <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объекта. Попытка получить или установить его на объекте в pivotTables OLAP возвращает ошибку времени <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> запуска.</para>
+          <para>Для pivotTables это свойство доступно для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекта.</para>
+          <para>Это свойство автоматически заданной для <b>True,</b> если ручная фильтрация не применяется (независимо от того, является ли свойство верным <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> или ложным). При применении любого <b></b> ручного фильтрации (независимо от того, является ли свойство истинным или ложным) оно автоматически за набором <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> false.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -176,7 +176,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <summary>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Microsoft Excel приложение. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
         <value><b>Приложение</b> (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -208,7 +208,7 @@
       </ReturnValue>
       <Docs>
         <summary>Текст метки для поля куба.</summary>
-        <value><b>Строка</b></value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -233,9 +233,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Этот метод позволяет легко установить для свойства Visible true все элементы <see cref="M:Microsoft.Office.Interop.Excel.CubeField.ClearManualFilter" /> pivotField в pivotTables и очистить коллекции <b>HiddenItemsInList</b> <b></b> <b></b> / <b>VisibleItemsList</b> в pivotTables OLAP.</summary>
-        <remarks><para>Этот метод доступен для объекта <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> в и для объекта в <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> pivotTable OLAP. Вызов pivotField в pivotTable OLAP возвратит ошибку времени запуска.</para>
-          <para>После вызова этого метода коллекции <b>HiddenItemsList</b> / <b>HiddenItems</b> и <b>VisibleItemsList</b> / <b>VisibleItems пусты.</b></para>
+        <summary>Метод предоставляет простой способ установить свойство Visible True для всех элементов <see cref="M:Microsoft.Office.Interop.Excel.CubeField.ClearManualFilter" /> PivotField в PivotTables и очистить <b>коллекции HiddenItemsInList</b> <b></b> <b></b> / <b>VisibleItemsList</b> в pivotTables OLAP.</summary>
+        <remarks><para>Этот метод доступен для объекта в и для объекта в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> pivotTable OLAP. Вызов его для pivotField в pivotTable OLAP возвращает ошибку времени запуска.</para>
+          <para>После вызова этого метода коллекции <b>HiddenItemsList</b> / <b>HiddenItems и</b> <b>VisibleItemsList</b> / <b>VisibleItemsms</b> пусты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -260,8 +260,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Этот  <see cref="M:Microsoft.Office.Interop.Excel.CubeField.CreatePivotFields" /> метод является новым в Microsoft Office Excel 2007. С его помощью пользователи могут применять фильтр к полям pivotFields, еще не добавленным в севоводку, создав соответствующий <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект.</summary>
-        <remarks><para>В pivotTables OLAP не существует, пока соответствующий документ не будет <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> добавлен в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Этот <see cref="M:Microsoft.Office.Interop.Excel.CubeField.CreatePivotFields" /> метод позволяет пользователям создавать все <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> . <see cref="T:Microsoft.Office.Interop.Excel.CubeField" />  Пользователи также могут добавлять фильтры в pivotFields и устанавливать для них свойства перед добавлением cubeField в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</para>
+        <summary>Метод <see cref="M:Microsoft.Office.Interop.Excel.CubeField.CreatePivotFields" /> является новым в Microsoft Office Excel 2007. Это позволяет пользователям применять фильтр к PivotFields, еще не добавленным в PivotTable, создав соответствующий <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект.</summary>
+        <remarks><para>В pivotTables OLAP не существует, пока соответствующий не будет <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> добавлен в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Метод <see cref="M:Microsoft.Office.Interop.Excel.CubeField.CreatePivotFields" /> позволяет пользователям создавать все <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> .  Пользователи также могут добавлять фильтры в PivotFields и устанавливать на них свойства перед добавлением CubeField в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -290,8 +290,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -320,7 +320,7 @@
       <Docs>
         <summary>Указывает тип <see cref="P:Microsoft.Office.Interop.Excel.CubeField" /> . Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCubeFieldSubType" /></value>
-        <remarks><para>Значение <see cref="P:Microsoft.Office.Interop.Excel.CubeField.CubeFieldSubType" /> может быть любым из значений в следующем примере. </para>
+        <remarks><para>Это <see cref="P:Microsoft.Office.Interop.Excel.CubeField.CubeFieldSubType" /> может быть любое из значений в следующем переуме- </para>
           <list type="bullet">
             <item>
               <description>
@@ -399,7 +399,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCubeFieldType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, является ли поле куба OLAP полем иерархии или полем меры.</summary>
+        <summary>Указывает, является ли поле куба OLAP полем иерархии или полем измерения.</summary>
         <value>To be added.</value>
         <remarks><para>Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlCubeFieldType" /> констант: <b>xlHierarchy</b> или <b>xlMeasure.</b></para>
           <para> </para></remarks>
@@ -432,7 +432,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает имя страницы для CubeField. Для чтения и записи, <b>String</b>.</summary>
-        <value><b>Строка</b></value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -458,7 +458,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <remarks><para>Поля куба можно удалить только в том случае, если поля куба созданы самостоятельно с помощью метода <see cref="M:Microsoft.Office.Interop.Excel.CalculatedMembers.Add(System.String,System.String,System.Object,System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> объекта с <paramref name="xlCalculatedSet" /> аргументом.</para>
+        <remarks><para>Удалить кубовые поля можно только в том случае, если вы сами создали кубовые поля с помощью метода <see cref="M:Microsoft.Office.Interop.Excel.CalculatedMembers.Add(System.String,System.String,System.Object,System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> объекта с <paramref name="xlCalculatedSet" /> аргументом.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -488,10 +488,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если указанное поле можно перетащить в позицию столбца.</summary>
+        <summary><b>True,</b> если указанное поле можно перетаскить в положение столбца.</summary>
         <value>To be added.</value>
         <remarks><para>Значение по умолчанию — <b>True</b>.</para>
-          <para>Для источников данных OLAP значение <b>false</b> для полей измерения.</para>
+          <para>Для источников данных OLAP значение <b>False</b> для полей измерения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -521,10 +521,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если указанное поле можно перетащить в положение данных.</summary>
+        <summary><b>True,</b> если указанное поле можно перетаскить в положение данных.</summary>
         <value>To be added.</value>
         <remarks><para>Значение по умолчанию — <b>True</b>.</para>
-          <para>Для источников данных OLAP значение <b>false</b> для полей измерения.</para>
+          <para>Для источников данных OLAP значение <b>False</b> для полей измерения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -554,7 +554,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если поле может быть скрыто путем перетаскивание отчета pivotTable.</summary>
+        <summary><b>True,</b> если поле можно скрыть, оттащив отчет PivotTable.</summary>
         <value>To be added.</value>
         <remarks><para>Значение по умолчанию — <b>True</b>.</para>
           <para> </para></remarks>
@@ -586,10 +586,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если поле можно перетащить в положение страницы.</summary>
+        <summary><b>True,</b> если поле можно перетаскить в положение страницы.</summary>
         <value>To be added.</value>
         <remarks><para>Значение по умолчанию — <b>True</b>.</para>
-          <para>Для источников данных OLAP значение <b>false</b> для полей измерения.</para>
+          <para>Для источников данных OLAP значение <b>False</b> для полей измерения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -619,10 +619,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если поле можно перетащить в позицию строки.</summary>
+        <summary><b>True,</b> если поле можно перетаскить в позицию строки.</summary>
         <value>To be added.</value>
-        <remarks><para>Значение по умолчанию — <b>True</b>. </para>
-          <para>Для источников данных OLAP значение <b>false</b> для полей измерения.</para>
+        <remarks><para>Значение по умолчанию — <b>True</b>.</para>
+          <para>Для источников данных OLAP значение <b>False</b> для полей измерения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -652,10 +652,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, чтобы разрешить выбор нескольких элементов в области поля страницы для список OLAP.</summary>
+        <summary><b>True</b> позволяет выбирать несколько элементов в области поля страниц для pivotTables OLAP.</summary>
         <value>To be added.</value>
-        <remarks><para>Значение по умолчанию — <b>False</b>.</para>
-          <para>Это свойство применимо только к сvotTables OLAP. Запрос или настройка совмещаемой области, не относяской к OLAP, приведет к ошибке во время выполнения.</para>
+        <remarks><para>Значение по умолчанию — <b>False</b>.</para>
+          <para>Это свойство применяется только к сетевым аналитическим центрам обработки (OLAP) pivotTables. При запросе или настройке pivotTable, не относящающийся к OLAP, будет допущена ошибка во время выполнения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -685,12 +685,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, отображаются ли элементы из всех уровней иерархии в именоваемом поле куба в одном поле отчета pivotTable на основе куба OLAP.</summary>
-        <value><b>имеет</b> true, если элементы из всех уровней иерархии в именоваемом поле куба набора отображаются в одном поле отчета pivotTable на основе куба OLAP; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, отображаются ли элементы всех уровней иерархий в именоваемом поле set cube в одном поле отчета PivotTable на основе куба OLAP.</summary>
+        <value><b>верно,</b> если элементы всех уровней иерархий в именоваемом поле set cube отображаются в том же поле отчета PivotTable на основе куба OLAP; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>имеет</b> true, если все иерархии указанного именоваемого набора отображаются в одном поле; в <b>противном случае false</b>.</para>
-          <para>Значение этого свойства соответствует установке элементов отображения с разных уровней в отдельных полях на вкладке "Печать макета" диалоговых окна "Параметры поля" для именоваемого набора в отчете pivotTable, основанном на кубе &amp; OLAP.</para>
+            <b>верно,</b> если все иерархии указанного набора с именем отображаются в одном поле; в <b>противном случае false</b>.</para>
+          <para>Значение этого свойства соответствует параметру элементов Display с разных уровней в отдельном поле на вкладке Макет печать диалогового окна Field Параметры для имени набора в отчете PivotTable, основанном на кубе &amp; OLAP.</para>
           <para>Это свойство возвращает ошибку, если свойство указанного объекта <see cref="P:Microsoft.Office.Interop.Excel.CubeField.CubeFieldType" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> не <b>xlSet.</b></para>
           <para> </para></remarks>
       </Docs>
@@ -718,7 +718,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если для поля куба указаны свойства-члены.</summary>
+        <summary>Возвращает <b>True</b> при указании свойств членов, которые будут отображаться для поля куба.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -755,10 +755,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает скрытые верхние уровни указанной иерархии.</summary>
+        <summary>Возвращает или задает верхние уровни скрытой иерархии.</summary>
         <value>To be added.</value>
-        <remarks><para>Значение по умолчанию — 0 (ноль), указывающее, что уровни не скрыты.</para>
-          <para>Чтобы установить для этого свойства значение, большее 0, необходимо сначала установить значение 0.</para>
+        <remarks><para>Значение по умолчанию — 0 (ноль), что указывает на отсутствие скрытых уровней.</para>
+          <para>Чтобы значение этого свойства было больше 0, сначала необходимо установить значение 0.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -788,12 +788,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок и удаление дубликатов при отобралении указанного именоваемого набора в отчете pivotTable на основе куба OLAP.</summary>
-        <value><b>имеет</b> true, если дубликаты должны быть упорядочены и удалены при отобралении указанного именоваемого набора в отчете pivotTable на основе куба OLAP; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, следует ли заказать и удалить дубликаты при отобралении указанного набора имен в отчете PivotTable на основе куба OLAP.</summary>
+        <value><b>верно,</b> если дубликаты следует заказать и удалить при отобралении указанного набора имен в отчете PivotTable на основе куба OLAP; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>имеет</b> true, если именовавая настройка отображается в порядке упорядочения с удалением дубликатов; в <b>противном случае false</b>.</para>
-          <para>Значение этого свойства соответствует параметру автоматического заказа и удаляет дубликаты из установленного на вкладке "Печать макета" диалогового окна "Параметры поля" именоваемого набора в отчете pivotTable на основе куба &amp; OLAP.</para>
+            <b>верно,</b> если названный набор отображается по заказу с удалением дубликатов; в <b>противном случае false</b>.</para>
+          <para>Значение этого свойства соответствует параметру автоматического заказа и удалите дубликаты из заданной области на вкладке Макет печать диалогового окна Field Параметры для имени набора в отчете PivotTable на основе куба &amp; OLAP.</para>
           <para>Это свойство возвращает ошибку, если свойство указанного объекта <see cref="P:Microsoft.Office.Interop.Excel.CubeField.CubeFieldType" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> не <b>xlSet.</b></para>
           <para> </para></remarks>
       </Docs>
@@ -824,12 +824,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> используется для отслеживания включенных и исключенных элементов в список OLAP. Для чтения и записи.</summary>
+        <summary>Свойство <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> используется для отслеживания включенных и исключенных элементов в pivotTables OLAP. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Значение по умолчанию — <b>False.</b></para>
-          <para>Если для этого параметра <b>установлено true,</b>исключенные элементы отслеживаются при применении ручной фильтрации. Если для этого параметра <b>установлено false,</b>включенные элементы отслеживаются при применении ручной фильтрации.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> за установлено <b>false,</b>коллекции <b>HiddenItemsList</b> и <b>HiddenItems</b> пусты, и к ним нельзя добавлять элементы.</para>
-          <para>Если <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> за установлено <b>true,</b>коллекции <b>VisibleItemsList</b> и <b>VisibleItems</b> пусты, и в них нельзя добавлять элементы.</para>
+        <remarks><para>Значение по умолчанию <b>false</b>.</para>
+          <para>Если этот параметр заданной <b>для True,</b>исключенные элементы отслеживаются при применении ручного фильтрации. Если этот параметр заданной для <b>False,</b>включенные элементы отслеживаются при применении ручного фильтрации.</para>
+          <para>Когда <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> установлено <b>false,</b> <b>коллекции HiddenItemsList</b> и <b>HiddenItems</b> пусты, и элементы не могут быть добавлены в них.</para>
+          <para>Когда <see cref="P:Microsoft.Office.Interop.Excel.CubeField.IncludeNewItemsInFilter" /> установлено <b>true,</b>коллекции <b>VisibleItemsList</b> и <b>VisibleItems</b> пусты и элементы не могут быть добавлены в них.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -856,7 +856,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если CubeField является датой. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если CubeField является датой. Только для чтения, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -887,15 +887,15 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlLayoutFormType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ появления указанных элементов pivotTable в формате таблицы или в формате структур.</summary>
+        <summary>Возвращает или задает способ появления указанных элементов pivotTable — в формате таблицы или в формате схемы.</summary>
         <value>To be added.</value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlLayoutFormType" />может быть одной из этих <b>констант XlLayoutFormType:</b></para>
           <para>
-            <b>xlTabular</b> Значение по умолчанию.</para>
+            <b>xlTabular</b> По умолчанию.</para>
           <para>
-            <b>xlOutline</b> Свойство указывает место, в котором подстановка <see cref="P:Microsoft.Office.Interop.Excel.CubeField.LayoutSubtotalLocation" /> отображается в отчете pivotTable.</para>
-          <para>Это свойство можно настроить для любого поля pivotTable; однако форматирование отображается только в том случае, если указанное поле является полем строки, не самым внутренним (нижним) полем строки. Для источников данных, не влияемых на OLAP, значение этого свойства не меняется при переустановлении поля или при добавлении или удалении из отчета pivotTable.</para>
+            <b>xlOutline</b> Свойство указывает, где в отчете <see cref="P:Microsoft.Office.Interop.Excel.CubeField.LayoutSubtotalLocation" /> PivotTable отображается подстановка.</para>
+          <para>Это свойство можно установить для любого поля PivotTable; однако форматирование отображается только в том случае, если указанное поле является полем строки, не самым внутренним (нижним уровнем) строки. Для источников данных без OLAP значение этого свойства не меняется при изменении поля или при добавлении или удалении из отчета PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -925,17 +925,17 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSubtototalLocationType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает положение подстановок поля "PivotTable" относительно указанного поля (выше или ниже).</summary>
+        <summary>Возвращает или задает положение subtotals поля PivotTable в отношении указанного поля (выше или ниже).</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlSubtototalLocationType" />может быть одной из этих <b>констант XlSubtototalLocationType:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlSubtototalLocationType" />может быть одной из этих констант <b>XlSubtototalLocationType:</b></para>
           <para>
             <b>xlAtTop</b>
           </para>
           <para>
             <b>xlAtBottom</b> По умолчанию</para>
-          <para>Вы можете настроить это свойство для любого поля pivotTable в формате структур; Однако форматирование отображается, только если указанное поле является полем строки, не самым внутренним (нижним) полем строки. Для источников данных, не относяхся к OLAP, значение этого свойства не меняется при изменении рангов поля или при добавлении или удалении из отчета.</para>
-          <para>Свойство определяет, отображается ли отчет в формате <see cref="P:Microsoft.Office.Interop.Excel.CubeField.LayoutForm" /> таблицы или в формате структур.</para>
+          <para>Это свойство можно установить для любого поля PivotTable в формате outline; однако форматирование отображается только в том случае, если указанное поле является полем строки, не самым внутренним (нижним уровнем) строки. Для источников данных без OLAP значение этого свойства не меняется при изменении поля или при добавлении или удалении из отчета.</para>
+          <para>Свойство определяет, отображается ли отчет в <see cref="P:Microsoft.Office.Interop.Excel.CubeField.LayoutForm" /> формате таблицы или в формате схемы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -993,7 +993,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotFieldOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расположение поля в указанном отчете pivotTable.</summary>
+        <summary>Расположение поля в указанном отчете PivotTable.</summary>
         <value>To be added.</value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" />может быть одной из этих <b>констант XlPivotFieldOrientation:</b></para>
@@ -1012,7 +1012,7 @@
           <para>
             <b>xlRowField</b>
           </para>
-          <para>Для источников данных OLAP установка этого свойства для одного поля в иерархии задает ориентацию для других полей в той же иерархии. Поля измерения могут быть ориентированы только в областях строки, столбца и поля страницы отчета pivotTable. Поля мер могут быть ориентированы только в области данных. Установка иерархии или поля данных <b>для xlHidden</b> удаляет иерархию или поле из отчета pivotTable.</para>
+          <para>Для источников данных OLAP это свойство для одного поля в иерархии задает ориентацию для других полей в той же иерархии. Поля измерения могут быть ориентированы только в строках, столбцах и областях полей страниц отчета PivotTable. Поля измерения могут быть ориентированы только в области данных. Настройка иерархии или поля данных <b>для xlHidden</b> удаляет иерархию или поле из отчета PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1067,9 +1067,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotFields</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> коллекцию. Эта коллекция содержит все поля pivotTable, включая поля, которые в настоящее время не видны на экране.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> коллекцию. Эта коллекция содержит все поля PivotTable, в том числе те, которые в настоящее время не видны на экране.</summary>
         <value>To be added.</value>
-        <remarks><para>Для источников данных OLAP скрытые поля не существуют, а возвращаемый объект или коллекция отражает то, что в настоящее время отображается.</para>
+        <remarks><para>Для источников данных online Analytical Processing (OLAP) скрытых полей нет, а возвращенный объект или коллекция отражают то, что в настоящее время видно.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1099,7 +1099,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Положение элемента в его поле, если элемент отображается в данный момент.</summary>
+        <summary>Расположение элемента в поле, если элемент в настоящее время отображается.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1130,7 +1130,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если <b>установлено значение True</b> (по умолчанию), <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объект будет показан в списке полей.</summary>
+        <summary>Если заказано <b>значение True</b> (по умолчанию), <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> объект будет показан в списке полей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1158,9 +1158,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TreeviewControl</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющий управление манипуляциями кубами в <see cref="T:Microsoft.Office.Interop.Excel.TreeviewControl" /> отчете pivotTable на основе OLAP.</summary>
+        <summary>Возвращает объект, представляющий управление манипуляцией кубом в <see cref="T:Microsoft.Office.Interop.Excel.TreeviewControl" /> отчете PivotTable на основе OLAP.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство доступно только в том случае, если он виден.</para>
+        <remarks><para>Это свойство доступно только в том случае, если отображается управление.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

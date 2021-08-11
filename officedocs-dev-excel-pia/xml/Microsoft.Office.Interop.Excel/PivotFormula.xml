@@ -1,5 +1,5 @@
 <Type Name="PivotFormula" FullName="Microsoft.Office.Interop.Excel.PivotFormula">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ce492b9d9661d497cae1980426cde80b49102656" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010859" /></Metadata><TypeSignature Language="C#" Value="public interface PivotFormula" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f6679aa5b5c3f27e5e9d76b81703a52f24417b449b5fc6d293914b5b2a5d7c9c" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517287" /></Metadata><TypeSignature Language="C#" Value="public interface PivotFormula" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotFormula" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotFormula" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotFormula" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет формулу, используемую для вычисления результатов в отчете pivotTable.</summary>
-    <remarks><para>Используйте <b>PivotFormulas</b>( ), где находится номер формулы или строка в левой части формулы, чтобы вернуть объект <paramref name="index" /> <paramref name="index" /> <b>PivotFormula.</b></para>
+    <summary>Представляет формулу, используемую для вычисления результатов в отчете PivotTable.</summary>
+    <remarks><para>Используйте <b>PivotFormulas</b>(), где находится номер формулы или строка в левой части формулы, чтобы вернуть объект <paramref name="index" /> <paramref name="index" /> <b>PivotFormula.</b></para>
       <para>Этот объект и связанные с ним свойства и методы недоступны для источников данных OLAP, так как вычисляемая поля и элементы не поддерживаются.</para>
       <para> </para></remarks>
   </Docs>
@@ -87,7 +87,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -117,8 +117,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -176,10 +176,10 @@
         <summary>Возвращает или задает формулу объекта в нотации в стиле A1.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство не доступно для источников данных OLAP.</para>
-          <para>Если ячейка содержит константу, это свойство возвращает константу. Если ячейка пуста, это свойство <b>Formula</b> возвращает пустую строку. Если ячейка содержит формулу, свойство <b>Formula</b> возвращает формулу в виде строки в том же формате, который будет отображаться в строке формул (включая знак "равно").</para>
-          <para>Если присвоить значение или формулу ячейки для даты, Microsoft Excel проверяет, отформатирована ли эта ячейка с помощью одного из форматов даты или времени. Если нет, Microsoft Excel изменяет формат номера на короткий формат номера даты по умолчанию.</para>
-          <para>Если диапазон является одномерным или двумерным, формулу можно установить на массив тех же измерений. Аналогичным образом можно поместить формулу в массив.</para>
-          <para>При настройке формулы для диапазона из нескольких ячеек все ячейки в диапазоне заполняются формулой.</para>
+          <para>Если ячейка содержит константу, это свойство возвращает константу. Если ячейка пуста, это <b>свойство Formula</b> возвращает пустую строку. Если ячейка содержит формулу, свойство <b>Formula</b> возвращает формулу в виде строки в том же формате, который будет отображаться в панели формул (включая знак равного знака).</para>
+          <para>Если присвоить значение или формулу ячейки для даты, Microsoft Excel проверяет, отформатирована ли эта ячейка с помощью одного из форматов даты или времени. Если нет, Microsoft Excel изменяет формат номеров в формат коротких номеров по умолчанию.</para>
+          <para>Если диапазон одно- или двухмерный, можно настроить формулу на массив тех же размеров. Аналогичным образом можно поместить формулу в массив.</para>
+          <para>Настройка формулы для диапазона нескольких клеток заполняет все ячейки в диапазоне формулой.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -268,10 +268,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку,</b> указывав формулы со стандартным английским форматированием (США).</summary>
+        <summary>Возвращает или задает <b>формулы строки</b> с форматированием стандартного английского языка (США).</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>StandardFormula в</b> основном влияет на имена элементов с форматированием даты или числа. Он позволяет указать или запросить формулу для заданного вычисляемой позиции.</para>
-          <para>Свойство <b>StandardFormula</b> является "международным", а свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotFormula.Formula" /> — нет.</para>
+        <remarks><para>Свойство <b>StandardFormula в</b> первую очередь влияет на имена элементов с датой или форматированием номеров. Он предоставляет способ указать или запросить формулу для заданного вычисляемой номенклатуры.</para>
+          <para>Свойство <b>StandardFormula</b> является "международным", а <see cref="P:Microsoft.Office.Interop.Excel.PivotFormula.Formula" /> свойство — нет.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -301,7 +301,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имя указанной формулы в формуле pivotTable.</summary>
+        <summary>Имя указанной формулы в формуле PivotTable.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

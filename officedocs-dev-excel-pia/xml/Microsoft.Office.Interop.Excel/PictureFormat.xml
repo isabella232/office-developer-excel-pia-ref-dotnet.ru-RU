@@ -1,5 +1,5 @@
 <Type Name="PictureFormat" FullName="Microsoft.Office.Interop.Excel.PictureFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="87aeae7792de72516fdcdfd36f8f7269365bfbb4" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010999" /></Metadata><TypeSignature Language="C#" Value="public interface PictureFormat : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="77f6670f65522279d8d2d711461d587df25708170a00292948f8455b97c7819e" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517315" /></Metadata><TypeSignature Language="C#" Value="public interface PictureFormat : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PictureFormat implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PictureFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface PictureFormat&#xA;Implements _IMsoDispObj" />
@@ -22,9 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства и методы, которые применяются к изображениям и объектам OLE.</summary>
-    <remarks><para>Объект <see cref="T:Microsoft.Office.Interop.Excel.LinkFormat" /> содержит свойства и методы, которые применяются только к связанным объектам OLE. Объект содержит свойства и методы, которые применяются к объектам OLE независимо от того, связаны ли <see cref="T:Microsoft.Office.Interop.Excel.OLEFormat" /> они.</para>
-      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Shape.PictureFormat" /> для возврата объекта <b>PictureFormat.</b></para>
+    <summary>Содержит свойства и методы, применимые к изображениям и объектам OLE.</summary>
+    <remarks><para>Объект <see cref="T:Microsoft.Office.Interop.Excel.LinkFormat" /> содержит свойства и методы, применимые только к связанным объектам OLE. Объект <see cref="T:Microsoft.Office.Interop.Excel.OLEFormat" /> содержит свойства и методы, применимые к объектам OLE независимо от того, связаны они или нет.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Shape.PictureFormat" /> для возврата <b>объекта PictureFormat.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -54,7 +54,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -85,7 +85,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает яркость указанного рисунка или объекта OLE. Значение этого свойства должно быть числом от 0,0 (dimmest) до 1,0 (самый светлый).</summary>
+        <summary>Возвращает или задает яркость указанного изображения или объекта OLE. Значение для этого свойства должно быть числом от 0.0 (dimmest) до 1.0 (самое яркое).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -116,7 +116,7 @@
         <ReturnType>Microsoft.Office.Core.MsoPictureColorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип преобразования цвета, примененного к указанному рисунку или объекту OLE.</summary>
+        <summary>Возвращает или задает тип преобразования цвета, примененного к указанному изображению или объекту OLE.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,7 +147,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает контраст для указанного рисунка или объекта OLE. Значение этого свойства должно быть числом от 0,0 (наименьшая контрастность) до 1,0 (наибольшая контрастность).</summary>
+        <summary>Возвращает или задает контраст для указанного изображения или объекта OLE. Значение для этого свойства должно быть числом от 0.0 (наименьший контраст) до 1.0 (наибольший контраст).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,8 +180,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -208,8 +208,8 @@
         <ReturnType>Microsoft.Office.Core.Crop</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Core.Crop" /> объект, который представляет параметры обрезки для указанного <see cref="T:Microsoft.Office.Interop.Excel.PictureFormat" /> объекта.</summary>
-        <value>Объект, <see cref="T:Microsoft.Office.Core.Crop" /> который представляет параметры обрезки для указанного <see cref="T:Microsoft.Office.Interop.Excel.PictureFormat" /> объекта.</value>
+        <summary>Получает <see cref="T:Microsoft.Office.Core.Crop" /> объект, представляюющий параметры обрезки указанного <see cref="T:Microsoft.Office.Interop.Excel.PictureFormat" /> объекта.</summary>
+        <value>Объект, <see cref="T:Microsoft.Office.Core.Crop" /> представляюющий параметры обрезки указанного <see cref="T:Microsoft.Office.Interop.Excel.PictureFormat" /> объекта.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -240,9 +240,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных в нижней части указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных в нижней части указанного объекта или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение высотой 100 пунктов, перемасштабирование его так, чтобы оно было на 200 точек выше, а затем установить для свойства <b>CropBottom</b> 50, 100 точек (а не 50) будут обрезаны по нижней части изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение с высотой в 100 баллов, перенастройте ее так, чтобы она была 200 точек, а затем установите свойство <b>CropBottom</b> до 50, 100 точек (а не 50) будут обрезаны в нижней части изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -272,9 +272,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных с левой стороны указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных с левой стороны указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение шириной 100 точек, перемасштабирование его на 200 точек в ширину, а затем установить для свойства <b>CropLeft</b> 50, 100 точек (а не 50) будут обрезаны с левой стороны изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение шириной в 100 точек, перенастройте его так, чтобы она была шириной 200 точек, а затем установите свойство <b>CropLeft</b> до 50, 100 точек (а не 50) будут обрезаны с левой стороны изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -304,9 +304,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных с правой стороны указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных с правой стороны указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить рисунок шириной 100 точек, перемасштабирование его так, чтобы ширина была 200 точек, а затем установить для свойства <b>CropRight</b> 50, 100 точек (а не 50) будут обрезаны с правой стороны изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение шириной в 100 точек, перенастройте ее так, чтобы она была шириной 200 точек, а затем установите свойство <b>CropRight</b> до 50, 100 точек (а не 50) будут обрезаны с правой стороны изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -336,9 +336,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных поверх указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных в верхней части указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение высотой 100 пунктов, перемасштабирование его так, чтобы оно было на 200 точек выше, а затем установить для свойства <b>CropTop</b> 50, 100 точек (а не 50) будут обрезаны в верхней части изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение с высотой в 100 баллов, перенастройте ее так, чтобы она была 200 точек, а затем установите свойство <b>CropTop</b> до 50, 100 точек (а не 50) будут обрезаны в верхней части изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -365,10 +365,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Обязательное <b>одиночное</b>. Указывает, сколько нужно изменить значение <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.Brightness" /> свойства для рисунка. Положительное значение делает изображение более светлым; отрицательное значение делает изображение темнее.</param>
+        <param name="Increment">Необходимый <b>единый</b>. Указывает, сколько нужно изменить значение <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.Brightness" /> свойства для изображения. Положительное значение делает изображение ярче; отрицательное значение делает изображение темнее.</param>
         <summary>Изменяет яркость изображения на указанное количество.</summary>
-        <remarks><para>Используйте свойство <b>Brightness,</b> чтобы установить абсолютную яркость изображения.</para>
-          <para>Для свойства <b>Brightness</b> невозможно изменить яркость изображения за пределами верхнего или нижнего предела. Например, если для свойства <b>Brightness</b> изначально установлено 0,9, а для аргумента указано 0,3, итоговая степень яркости будет 1,0, что является верхним пределом для свойства <paramref name="Increment" /> <b>Brightness,</b> а не 1,2.</para>
+        <remarks><para>Используйте <b>свойство Brightness,</b> чтобы установить абсолютную яркость изображения.</para>
+          <para>Невозможно настроить яркость изображения за верхним или нижним пределом для свойства <b>Brightness.</b> Например, если свойство <b>Brightness</b> изначально настроено на 0,9, а для аргумента указывается 0,3, то в результате уровень яркости будет 1.0, что является верхним ограничением для свойства <paramref name="Increment" /> <b>Brightness</b> вместо 1.2.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -395,10 +395,10 @@
         <Parameter Name="Increment" Type="System.Single" />
       </Parameters>
       <Docs>
-        <param name="Increment">Обязательное <b>одиночное</b>. Указывает, сколько нужно изменить значение <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.Contrast" /> свойства для рисунка. Положительное значение повышает контрастность; отрицательное значение уменьшает контрастность.</param>
-        <summary>Изменяет контрастность изображения на указанную сумму.</summary>
-        <remarks><para>Используйте свойство <b>Contrast,</b> чтобы установить абсолютную контрастность для изображения.</para>
-          <para>Вы не можете настроить контрастность изображения за пределами верхнего или нижнего предела для <b>свойства Contrast.</b> Например, если для свойства <b>Contrast</b> изначально установлено 0,9, а для аргумента указано 0,3, итоговая степень контрастности будет иметь 1,0, что является верхним пределом для свойства Contrast, а не <paramref name="Increment" /> 1,2. <b></b></para>
+        <param name="Increment">Необходимый <b>единый</b>. Указывает, сколько нужно изменить значение <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.Contrast" /> свойства для изображения. Положительное значение увеличивает контраст; отрицательное значение уменьшает контраст.</param>
+        <summary>Изменяет контраст изображения на указанное количество.</summary>
+        <remarks><para>Используйте свойство <b>Contrast,</b> чтобы установить абсолютный контраст для изображения.</para>
+          <para>Вы не можете настроить контраст изображения за верхним или нижним пределом для свойства <b>Contrast.</b> Например, если изначально для свойства <b>Contrast</b> установлено 0,9, а для аргумента указывается 0,3, то в результате уровень контраста будет 1.0, что является верхним пределом для свойства <paramref name="Increment" /> <b>Contrast</b> вместо 1.2.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -459,10 +459,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает прозрачный цвет для указанного изображения в качестве значения RGB. Применяется только к то же самое.</summary>
+        <summary>Возвращает или задает прозрачный цвет для указанного изображения как красно-зелено-синее (RGB) значение. Применяется только к bitmaps.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы это свойство вступает в силу, его <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.TransparentBackground" /> необходимо установить в true. <b></b></para>
-          <para>Если вы хотите, чтобы прозрачные части изображения полностью видели объекты, которые находятся за рисунком, необходимо установить для свойства объекта изображения <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.Visible" /> <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> false. <b></b> Если изображение имеет прозрачный цвет, а свойство <b>Visible</b> объекта <b>FillFormat</b> изображения имеет свойство <b>True,</b>заливка изображения будет видна прозрачным цветом, но объекты за изображением будут скрыты.</para>
+        <remarks><para>Чтобы это свойство вступает в силу, <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.TransparentBackground" /> свойство должно быть настроено на <b>True</b>.</para>
+          <para>Если вы хотите видеть через прозрачные части изображения все пути к объектам за изображением, необходимо установить свойство объекта изображения <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.Visible" /> <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> false . <b></b> Если изображение имеет прозрачный <b></b> цвет, а видимое свойство объекта <b>FillFormat</b> имеет свойство <b>True,</b>заполняемая картинка будет видна через прозрачный цвет, но объекты за изображением будут скрыты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -492,10 +492,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, использует ли указанный формат рисунка прозрачный фон.</summary>
+        <summary>Возвращает или задает, использует ли указанный формат изображения прозрачный фон.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.TransparencyColor" /> свойство, чтобы установить прозрачный цвет. Применяется только к то же самое.</para>
-          <para>Если вы хотите, чтобы прозрачные части изображения полностью видели объекты, которые находятся за рисунком, необходимо установить для свойства объекта изображения <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.Visible" /> <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> false. <b></b> Если изображение имеет прозрачный цвет, а свойство <b>Visible</b> объекта <b>FillFormat</b> изображения имеет свойство <b>True,</b>заливка изображения будет видна прозрачным цветом, но объекты за изображением будут скрыты.</para>
+        <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.PictureFormat.TransparencyColor" /> свойство, чтобы установить прозрачный цвет. Применяется только к bitmaps.</para>
+          <para>Если вы хотите видеть через прозрачные части изображения все пути к объектам за изображением, необходимо установить свойство объекта изображения <see cref="P:Microsoft.Office.Interop.Excel.FillFormat.Visible" /> <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> false . <b></b> Если изображение имеет прозрачный <b></b> цвет, а видимое свойство объекта <b>FillFormat</b> имеет свойство <b>True,</b>заполняемая картинка будет видна через прозрачный цвет, но объекты за изображением будут скрыты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

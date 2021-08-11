@@ -1,5 +1,5 @@
 <Type Name="ErrorBars" FullName="Microsoft.Office.Interop.Excel.ErrorBars">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="60889c6b8ce84452540bb212c8f4d70d23f454da" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012280" /></Metadata><TypeSignature Language="C#" Value="public interface ErrorBars" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e613dde4b3043abbcbf026648972adcc34503ee5360def103b43a24a3b9bef9e" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54509244" /></Metadata><TypeSignature Language="C#" Value="public interface ErrorBars" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ErrorBars" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ErrorBars" />
   <TypeSignature Language="VB.NET" Value="Public Interface ErrorBars" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет полосы ошибок в ряде диаграммы.</summary>
-    <remarks><para>Планки погрешностей указывают степень неуверенности для данных диаграммы. Панели ошибок могут иметь только ряды в группах области, панели, столбца, строки и точечная диаграмма на двухстройной диаграмме. Только ряды в рассеянных группах могут иметь планки погрешностей x и y. Этот объект не является коллекцией. Нет объекта, который представляет одну планку ошибок; Для всех точек в ряду либо включены полосы ошибок x, либо Y, либо они отключены.</para>
-      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Series.ErrorBars" /> для возврата объекта <b>ErrorBars.</b></para>
+    <summary>Представляет бары ошибок в серии диаграмм.</summary>
+    <remarks><para>Планки погрешностей указывают степень неуверенности для данных диаграммы. Только ряды в группах области, панели, столбца, строки и разброса на 2-D диаграмме могут иметь столбцы ошибок. Только ряды в рассеянных группах могут иметь планки погрешностей x и y. Этот объект не является коллекцией. Нет объекта, который представляет одну планку ошибок; вы либо имеете x error bars или y error bars turned on for all points in a series or you have them turned off.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Series.ErrorBars" /> для возврата <b>объекта ErrorBars.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -134,8 +134,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -191,7 +191,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlEndStyleCap</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает конечный стиль для полос ошибок.</summary>
+        <summary>Возвращает или задает конечный стиль для баров ошибок.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>EndStyle может</b> быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlEndStyleCap" /> <b>xlCap</b> или <b>xlNoCap.</b></para>
           <para> </para></remarks>

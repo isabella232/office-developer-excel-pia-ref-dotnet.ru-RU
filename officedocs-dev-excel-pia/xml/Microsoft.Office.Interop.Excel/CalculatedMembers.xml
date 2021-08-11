@@ -1,5 +1,5 @@
 <Type Name="CalculatedMembers" FullName="Microsoft.Office.Interop.Excel.CalculatedMembers">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2ef237f29eff8550f0d57ac22a72517d08855192" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006050" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedMembers : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="8fc245e92c85150517fd12e026c41809f81cc10e575c90e1dd6b0210fb3fef8b" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54506633" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedMembers : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CalculatedMembers implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CalculatedMembers" />
   <TypeSignature Language="VB.NET" Value="Public Interface CalculatedMembers&#xA;Implements IEnumerable" />
@@ -25,9 +25,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> указанной pivotTable.</summary>
-    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> объект представляет собой вычисляемую или вычисляемую меру.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.CalculatedMembers" /> свойство объекта <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> для возврата <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> коллекции.</para>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> на указанном PivotTable.</summary>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> объект представляет собой вычисляемую или рассчитанную меру.</para>
+      <para>Чтобы вернуть <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.CalculatedMembers" /> коллекцию, используйте <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> объекта.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -96,12 +96,12 @@
       <Docs>
         <param name="Name">Обязательный атрибут типа <b>String</b>. Имя вычисляемого члена.</param>
         <param name="Formula">Обязательный атрибут типа <b>String</b>. Формула вычисляемого члена.</param>
-        <param name="SolveOrder"><b>Необязательный объект</b>. Порядок решения для вычисляемой члена.</param>
+        <param name="SolveOrder"><b>Необязательный объект</b>. Порядок решения для расчетного участника.</param>
         <param name="Type"><b>Необязательный объект</b>. Тип вычисляемого члена.</param>
-        <summary>Добавляет вычисляемое поле или вычисляемый элемент в списоную.</summary>
+        <summary>Добавляет вычисляемое поле или вычисляемый элемент в PivotTable.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Аргумент <paramref name="Formula" /> должен иметь допустимый синтаксис MDX (многомерное выражение). Аргумент должен быть приемлем для поставщика OLAP, а аргумент <paramref name="Name" /> <paramref name="Type" /> должен быть определен.</para>
-          <para>Если для аргумента этого метода заданной является , необходимо вызвать метод, чтобы новый набор полей был виден в <paramref name="Type" /> <paramref name="xlCalculatedSet" /> <see cref="M:Microsoft.Office.Interop.Excel.CubeFields.AddSet(System.String,System.String)" /> pivotTable.</para>
+        <remarks><para>Аргумент <paramref name="Formula" /> должен иметь допустимый синтаксис MDX (многомерное выражение). Аргумент должен быть приемлемым для поставщика online analytical Processing (OLAP), и аргумент <paramref name="Name" /> должен быть <paramref name="Type" /> определен.</para>
+          <para>Если вы установите аргумент этого метода, необходимо вызвать метод, чтобы новый набор полей был виден в <paramref name="Type" /> <paramref name="xlCalculatedSet" /> <see cref="M:Microsoft.Office.Interop.Excel.CubeFields.AddSet(System.String,System.String)" /> PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -177,28 +177,28 @@
       <Docs>
         <param name="Name">Имя вычисляемого члена.</param>
         <param name="Formula">Формула вычисляемого члена.</param>
-        <param name="SolveOrder">Порядок решения для вычисляемой члена.</param>
+        <param name="SolveOrder">Порядок решения для расчетного участника.</param>
         <param name="Type">Тип вычисляемого члена.</param>
-        <param name="DisplayFolder">Папка, которая существует для отображения вычисляемой меры.</param>
-        <param name="MeasureGroup">Группа, к которой относится вычисляемая группа.</param>
-        <param name="ParentHierarchy">Родительский путь <b>ParentMember.</b></param>
-        <param name="ParentMember">Родительский член вычисляемого члена.</param>
-        <param name="NumberFormat">Формат чисел, используемых для вычисляемого числа членов.</param>
-        <summary>Добавляет вычисляемое поле или вычисляемый элемент в списоную.</summary>
+        <param name="DisplayFolder">Папка, которая существует для отображения рассчитанных мер.</param>
+        <param name="MeasureGroup">Группа, к которой относится вычисляемая.</param>
+        <param name="ParentHierarchy">Родительский путь <b>ParentMember</b>.</param>
+        <param name="ParentMember">Родитель вычисляемого члена.</param>
+        <param name="NumberFormat">Формат чисел, используемых для расчетных участников.</param>
+        <summary>Добавляет вычисляемое поле или вычисляемый элемент в PivotTable.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Аргумент <b>Formula</b> должен иметь допустимый синтаксис MDX (многомерное выражение). Аргумент <b>Name</b> должен быть приемлем для поставщика OLAP.</para>
+        <remarks><para>Аргумент <b>Formula</b> должен иметь допустимый синтаксис MDX (многомерное выражение). Аргумент <b>Name</b> должен быть приемлемым для поставщика online analytical Processing (OLAP).</para>
           <list type="bullet">
             <item>
               <description>
-                <b>DisplayFolder</b>: папки отображения допустимы только для вычисляемой меры. Они не являются допустимыми для вычисляемой группы. Строка может иметь точки с заточки; в нем. Четные кладки обозначают несколько папок отображения. Например, если вы используете строку my folder1;myfolder2, вычисляемая мера будет отображаться в двух папках отображения с именем myfolder1, а другая с именем myfolder2. Строка может иметь backslashes \. Это обозначает иерархический путь для папки отображения. Например, если вы используете строку welcome\to\seattle, будет отображаться папка приветствия, которая содержит папку отображения, которая содержит папку отображения seattle. Папки отображения — это виртуальные папки.Они не существуют в том же смысле, что и системные папки. Они существуют только для отображения вычисляемой меры.</description>
+                <b>DisplayFolder.</b>Отображаемая папка действительна только для расчетных мер. Они не допустимы для рассчитанных участников. Строка может иметь зайколоны; в нем. Semicolons обозначают несколько папок отображения. Например, если вы используете строку моя папка1;myfolder2, то вычисляемая мера будет отображаться в двух папках отображения, одна из них называется myfolder1, другая — "myfolder2". Строка может иметь backslashes \. Это обозначает иерархический путь для папки отображения. Например, если вы используете строку welcome\to\seattle, будет отображаться папка welcome, которая содержит вызванную папку отображения, в которую входит папка с дисплеем под названием Seattle. Папки отображения — это виртуальные папки.Они на самом деле не существуют в том же смысле, что мы думаем о системных папок. Они существуют только для отображения рассчитанных мер.</description>
             </item>
             <item>
               <description>
-                <b>NumberFormat</b>: числовые форматы можно устанавливать только с помощью макроса. Пользовательский интерфейс для их настройки не существует. Это единственное свойство, которое нельзя установить с помощью пользовательского интерфейса. Типом всегда является <b>xlNumberFormatTypeDefault,</b> когда вычисляемого члена создается через пользовательский интерфейс. Форматы номеров допустимы только для вычисляемого члена. Они не являются допустимыми для вычисляемой меры.</description>
+                <b>NumberFormat.</b>Форматы номеров могут быть установлены только макросами. Пользовательский интерфейс для их настройки не существует. Это единственное свойство, которое невозможно установить с помощью пользовательского интерфейса. Тип всегда <b>xlNumberFormatTypeDefault,</b> когда вычисляется член создается с помощью пользовательского интерфейса. Форматы номеров допустимы только для вычисляемого члена. Они не допустимы для рассчитанных мер.</description>
             </item>
             <item>
               <description>
-                <b>ParentHierarchy</b>: родительская иерархия может быть любой допустимой иерархией MDX. Родительские иерархии допустимы только для вычисляемого члена. Они не являются допустимыми для вычисляемой меры. Если выбран родительский член, который находится в другой родительской иерархии, родительская иерархия будет автоматически изменена в соответствие с родительской иерархией родительского члена.</description>
+                <b>ParentHierarchy.</b>Родительская иерархия может быть любой допустимой иерархией MDX. Родительские иерархии допустимы только для вычисляемого члена. Они не допустимы для рассчитанных мер. Если выбран родительский член, который находится в другой родительской иерархии, родительская иерархия будет автоматически изменена, чтобы соответствовать родительской иерархии родительского члена.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -227,7 +227,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -285,8 +285,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

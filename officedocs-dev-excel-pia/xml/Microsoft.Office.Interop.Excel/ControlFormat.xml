@@ -1,5 +1,5 @@
 <Type Name="ControlFormat" FullName="Microsoft.Office.Interop.Excel.ControlFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d88e80486b6e3c8db83afbc148105146372d3b01" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003922" /></Metadata><TypeSignature Language="C#" Value="public interface ControlFormat" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5354d519a8c84db7f31557e715c7aca0e92b3d07d5a7f742ac1ebeb87ad7ea2a" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508712" /></Metadata><TypeSignature Language="C#" Value="public interface ControlFormat" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ControlFormat" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ControlFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ControlFormat" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства управления Microsoft Excel.</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Shape.ControlFormat" /> для возврата объекта <b>ControlFormat.</b></para>
-      <para>Если фигура не является объектом управления, свойство <b>ControlFormat</b> не удается, а если он не является списком, <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойство не получается.</para>
+    <summary>Содержит Microsoft Excel свойства управления.</summary>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Shape.ControlFormat" /> для возврата <b>объекта ControlFormat.</b></para>
+      <para>Если фигура не является управлением, свойство <b>ControlFormat</b> сбой, и если управление не является полем списка, свойство <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> сбой.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -87,10 +87,10 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Text">Обязательный атрибут типа <b>String</b>. Добавляемый текст</param>
-        <param name="Index"><b>Необязательный объект</b>. Положение новой записи. Если в списке меньше записей, чем в указанном индексе, в указанную позицию добавляются пустые элементы из конца списка. Если этот аргумент опущен, элемент будет примещен к существующему списку.</param>
-        <summary>Добавляет элемент в список или поле со списком.</summary>
-        <remarks><para>С помощью этого метода очищается любой диапазон, указанный <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойством.</para>
+        <param name="Text">Обязательный атрибут типа <b>String</b>. Добавленный текст</param>
+        <param name="Index"><b>Необязательный объект</b>. Положение новой записи. Если в списке меньше записей, чем указанного индекса, в указанную позицию добавляются пустые элементы из конца списка. Если этот аргумент опущен, элемент примыкает к существующему списку.</param>
+        <summary>Добавляет элемент в поле списка или в поле комбо.</summary>
+        <remarks><para>С помощью этого метода очищается любой диапазон, заданный <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойством.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -117,7 +117,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,8 +147,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -178,7 +178,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество строк списка, отображаемого в выпадаемом поле со списком.</summary>
+        <summary>Возвращает или задает количество строк списка, отображаемого в выпадаемой части комбо-окна.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -209,7 +209,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект включен.</summary>
+        <summary><b>True,</b> если объект включен.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -240,7 +240,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает сумму, которую поле прокрутки добавит или ухметит для прокрутки страницы (когда пользователь щелкает область тела панели прокрутки).</summary>
+        <summary>Возвращает или задает сумму, которую поле прокрутки приращено или приумножается для прокрутки страницы (когда пользователь щелкает в области тела панели прокрутки).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -271,10 +271,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает диапазон таблиц, связанный со значением этого управления.</summary>
+        <summary>Возвращает или задает диапазон таблиц, связанный со значением управления.</summary>
         <value>To be added.</value>
-        <remarks><para>Если вы поместите значение в ячейку, элемент управления принимает это значение. Аналогично, если изменить значение элемента управления, это значение также помещается в ячейку.</para>
-          <para>Это свойство нельзя использовать с списками с несколькими списками.</para>
+        <remarks><para>Если вы поместите значение в ячейку, элемент управления принимает это значение. Кроме того, если изменить значение элемента управления, это значение также помещается в ячейку.</para>
+          <para>Это свойство нельзя использовать в многоцелевом списке.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -304,10 +304,10 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index"><b>Необязательный объект</b>. Номер индекса отдельной текстовой записи, которая должна быть установлена или возвращена. Если этот аргумент опущен, возвращается весь список или устанавливается в качестве массива строк.</param>
-        <summary>Возвращает или задает текстовые записи в указанном поле списка или поле со списком в виде массива строк или возвращает или задает одну текстовую запись. Если в списке нет записей, возникает ошибка.</summary>
+        <param name="Index"><b>Необязательный объект</b>. Номер индекса одной текстовой записи, которая должна быть установлена или возвращена. Если этот аргумент опущен, весь список возвращается или устанавливается в качестве массива строк.</param>
+        <summary>Возвращает или задает текстовые записи в указанном поле списка или в поле комбо в виде массива строк или возвращает или задает одну текстовую запись. Ошибка возникает, если в списке нет записей.</summary>
         <value>To be added.</value>
-        <remarks><para>При установке этого свойства очищается любой диапазон, указанный <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойством.</para>
+        <remarks><para>Настройка этого свойства очищает любой диапазон, заданный <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойством.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -337,7 +337,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает количество записей в списке или поле со списком. Возвращает 0 (ноль), если в списке нет записей.</summary>
+        <summary>Возвращает количество записей в поле списка или в поле комбо. Возвращает 0 (ноль), если в списке нет записей.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -368,11 +368,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает диапазон листов, используемый для заполнения указанного списка.</summary>
+        <summary>Возвращает или задает диапазон листов, используемый для заполнения указанного окна списка.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка этого свойства уничтожает все существующие списки в списке.</para>
-          <para>Microsoft Excel читает содержимое каждой ячейки в диапазоне и вставляет их значения в список. Список отслеживает изменения в ячейках диапазона.</para>
-          <para>Если список в списке был создан с помощью метода, это свойство возвращает <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.AddItem(System.String,System.Object)" /> пустую строку ("").</para>
+        <remarks><para>Настройка этого свойства уничтожает любой существующий список в поле списка.</para>
+          <para>Microsoft Excel читает содержимое каждой ячейки в диапазоне и вставляет значения ячейки в поле списка. Список отслеживает изменения в ячейках диапазона.</para>
+          <para>Если список в поле списка был создан с помощью метода, это свойство возвращает пустую строку <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.AddItem(System.String,System.Object)" /> ("").</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -402,7 +402,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает номер индекса выбранного элемента в списке или поле со списком.</summary>
+        <summary>Возвращает или задает номер индекса выбранного в настоящее время элемента в поле списка или в поле комбо.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -433,7 +433,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если текст в указанном объекте будет заблокирован, чтобы предотвратить изменения при защите книги.</summary>
+        <summary><b>True,</b> если текст в указанном объекте будет заблокирован, чтобы предотвратить изменения при защите книги.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -464,7 +464,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает максимальное значение вращаемой рывки или диапазона вертух. Вращатель или вращатель не будут принимать значения больше этого максимального значения.</summary>
+        <summary>Возвращает или задает максимальное значение диапазона прокрутки или спиннера. Планка прокрутки или спиннер не будут принимать значения больше этого максимального значения.</summary>
         <value>To be added.</value>
         <remarks><para>Значение свойства <b>Max</b> должно быть больше значения <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.Min" /> свойства.</para>
           <para> </para></remarks>
@@ -496,7 +496,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает минимальное значение scroll bar или диапазона счетчиков. Прокрутка или счетчик не будут принимать значения меньше этого минимального значения.</summary>
+        <summary>Возвращает или задает минимальное значение диапазона прокрутки или спиннера. Планка прокрутки или спиннер не будут принимать значения меньше этого минимального значения.</summary>
         <value>To be added.</value>
         <remarks><para>Значение свойства <b>Min</b> должно быть меньше значения <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.Max" /> свойства.</para>
           <para> </para></remarks>
@@ -528,13 +528,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает режим выбора указанного списка. Может быть одной из следующих констант: <b>xlNone,</b> <b>xlSimple</b>или <b>xlExtended.</b></summary>
+        <summary>Возвращает или задает режим выбора указанного окна списка. Может быть одной из следующих констант: <b>xlNone,</b> <b>xlSimple</b>или <b>xlExtended</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Один выбор<b>(xlNone)</b>позволяет выбирать только один элемент за раз. Нажатие мыши или нажатие кнопки ПРОБЕЛ отменяет выбор и выбирает щелчок элемент.</para>
-          <para>Простой многофакторный выбор<b>(xlSimple)</b>перегновит выделение элемента в списке, щелкнув его мышью или нажав пробел, когда фокус находится на элементе. Этот режим подходит для списков выбора, в которых часто выбирается несколько элементов.</para>
-          <para>Расширенный многофакторный выбор<b>(xlExtended)</b>обычно действует как поле списка с одним выбором. При нажатии элемента отменяется выбор всех остальных элементов. При удержании клавиши SHIFT при нажатии мыши или нажатии клавиши со стрелкой элементы выбираются последовательно из текущего элемента. При удержании CTRL при нажатии мыши в список добавляются отдельные элементы. Этот режим подходит, когда несколько элементов разрешены, но не часто используются.</para>
-          <para>Вы можете использовать свойство или для возврата и выбора выбранного элемента в списке с <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.Value" /> <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListIndex" /> одним выбором.</para>
-          <para>С помощью свойства невозможно связать списки с несколькими <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.LinkedCell" /> списками.</para>
+        <remarks><para>Одноместный выбор<b>(xlNone)</b>позволяет одновременно выбирать только один элемент. Щелкнув мышью или нажав кнопку SPACEBAR, отменяет выбор и выбирает щелкнув элемент.</para>
+          <para>Простой мультиселект<b>(xlSimple)</b>перегнаширует выбор элемента в списке, который вы щелкните мышью или нажмите кнопку SPACEBAR, когда основное внимание уделяется элементу. Этот режим подходит для списков выбора, в которых часто выбираются несколько элементов.</para>
+          <para>Расширенный мультиселект<b>(xlExtended)</b>обычно действует как поле списка с одним выбором. При нажатии элемента отменяется все остальные выборы. При удержании SHIFT при нажатии мыши или нажатии клавиши стрелки выберите элементы последовательно из текущего элемента. При удержании CTRL при нажатии мыши в список добавляются отдельные элементы. Этот режим подходит, когда разрешено несколько элементов, но не часто используется.</para>
+          <para>Вы можете использовать свойство или свойство для возврата и установить выбранный элемент в поле списка с <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.Value" /> <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListIndex" /> одним выбранным элементом.</para>
+          <para>Вы не можете связать многоцеленые списки с помощью <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.LinkedCell" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -592,7 +592,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект будет печататься при печати документа.</summary>
+        <summary><b>True,</b> если объект будет напечатан при печати документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -618,7 +618,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет все записи из списка Или списка Microsoft Excel.</summary>
+        <summary>Удаляет все записи из Microsoft Excel или комбо-окна.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -645,11 +645,11 @@
         <Parameter Name="Count" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Номер первого удаляемого элемента. Допустимые значения: от 1 до количества элементов в списке (возвращаемого <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListCount" /> свойством).</param>
-        <param name="Count"><b>Необязательный объект</b>. Количество удаляемого элемента, начиная с <paramref name="Index" /> элемента. Если этот аргумент опущен, удаляется один элемент. Если число элементов в списке превышает допустимый, все элементы в конце списка удаляются без <paramref name="Index" />  +  <paramref name="Count" /> <paramref name="Index" /> ошибок.</param>
-        <summary>Удаляет один или несколько элементов из списка или списка со списком.</summary>
-        <remarks><para>Если для указанного объекта определен диапазон заливки, этот метод не удастся.</para>
-          <para>Используйте этот метод для удаления всех записей из списка Microsoft Excel или <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.RemoveAllItems" /> поле со списком.</para>
+        <param name="Index">Обязательный атрибут типа <b>Integer</b>. Число первого элемента, который будет удален. Допустимые значения : от 1 до числа элементов в списке (возвращенных <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListCount" /> свойством).</param>
+        <param name="Count"><b>Необязательный объект</b>. Количество элементов, которые необходимо удалить, начиная с элемента <paramref name="Index" /> . Если этот аргумент опущен, один элемент удаляется. Если количество элементов в списке превышает количество, все элементы из конца списка удаляются <paramref name="Index" />  +  <paramref name="Count" /> <paramref name="Index" /> без ошибки.</param>
+        <summary>Удаляет один или несколько элементов из списка или комбо-окна.</summary>
+        <remarks><para>Если указанный объект имеет определенный для него диапазон заполнения, этот метод не удается.</para>
+          <para>Используйте метод, чтобы удалить все записи из Microsoft Excel <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.RemoveAllItems" /> или комбо-окна.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -679,7 +679,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает сумму, на которую вращается или вращается рывок для прокрутки строки (когда пользователь щелкает стрелку).</summary>
+        <summary>Возвращает или задает сумму, которая приращена или отжата для прокрутки строки (когда пользователь щелкает стрелку).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

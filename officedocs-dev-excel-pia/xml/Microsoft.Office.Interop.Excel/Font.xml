@@ -1,5 +1,5 @@
 <Type Name="Font" FullName="Microsoft.Office.Interop.Excel.Font">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a8ba6992514b1438faa9fc74351cb46d6d8e0551" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003579" /></Metadata><TypeSignature Language="C#" Value="public interface Font" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bd9703b4c85658ae1b598d8e2b2a098a2abf747c3f0d71c6cd32c8ddadaee41e" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54509188" /></Metadata><TypeSignature Language="C#" Value="public interface Font" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Font" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Font" />
   <TypeSignature Language="VB.NET" Value="Public Interface Font" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит атрибуты шрифта (имя шрифта, размер, цвет и так далее) для объекта.</summary>
-    <remarks><para>Используйте свойство <b>Font</b> для возврата объекта <b>Font.</b></para>
-      <para>Если вы не хотите форматирование всего текста в ячейке или графике одинаковым образом, используйте свойство для возврата подмножество <see cref="P:Microsoft.Office.Interop.Excel.Range.Characters(System.Object,System.Object)" /> текста.</para>
+    <summary>Содержит атрибуты шрифта (имя шрифта, размер шрифта, цвет и так далее) для объекта.</summary>
+    <remarks><para>Чтобы вернуть <b>объект Font,</b> используйте <b>свойство Font.</b></para>
+      <para>Если вы не хотите форматирование всего текста в ячейке или графику таким же образом, используйте свойство, чтобы вернуть <see cref="P:Microsoft.Office.Interop.Excel.Range.Characters(System.Object,System.Object)" /> подмножество текста.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -88,19 +88,19 @@
               <term>
                 <b>xlBackgroundAutomatic</b>
               </term>
-              <description>Фон шрифта автоматически изменит фоновую область вокруг текста на цвет, который лучше всего отображает текст диаграммы в цвете, примененном к элементам под текстом</description>
+              <description>Фон шрифта автоматически изменит фоновую область вокруг текста на цвет, который лучше всего отображает текст диаграммы на цвете, примененном к элементам под текстом.</description>
             </item>
             <item>
               <term>
                 <b>xlBackgroundOpaque</b>
               </term>
-              <description>Фон шрифта будет затенять фон шрифта, если цвет текста и цвет заливки под текстом очень близко или тот же цвет, чтобы текст не появлялись</description>
+              <description>Фон шрифта будет заорен на черный фон шрифта, если цвет текста и цвет заполнения под текстом очень близки или один и тот же цвет, так что текст не появится</description>
             </item>
             <item>
               <term>
                 <b>xlBackgroundTransparent</b>
               </term>
-              <description>Фон шрифта имеет прозрачный характер, чтобы фон текста не менялся, если цвет текста близко к цвету под текстом</description>
+              <description>Фон шрифта за установлен прозрачным, чтобы текстовый фон не изменился, если цвет текста близок к цвету под текстом.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -132,7 +132,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если шрифт полужирным шрифтом.</summary>
+        <summary><b>True,</b> если шрифт является смелым.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -196,9 +196,9 @@
       <Docs>
         <summary>Возвращает или задает цвет шрифта.</summary>
         <value>To be added.</value>
-        <remarks><para>Цвет указывается как значение индекса в текущей цветовой палитре или как одна из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> констант:</para>
+        <remarks><para>Цвет указывается как значение индекса в текущей цветовой палитре или как одна из <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> следующих констант:</para>
           <para>
-            <b>xlColorIndexAutomatic</b>. Используется для указания автоматического цвета.</para>
+            <b>xlColorIndexAutomatic</b>. Используйте для указания автоматического цвета.</para>
           <para>
             <b>xlColorIndexNone</b>.</para>
           <para> </para></remarks>
@@ -229,8 +229,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -262,7 +262,7 @@
       <Docs>
         <summary>Возвращает или задает стиль шрифта.</summary>
         <value>To be added.</value>
-        <remarks><para>Изменение этого свойства может повлиять на <see cref="T:Microsoft.Office.Interop.Excel.Font" /> другие свойства объекта (например, <see cref="P:Microsoft.Office.Interop.Excel.Font.Bold" /> <see cref="P:Microsoft.Office.Interop.Excel.Font.Italic" /> и).</para>
+        <remarks><para>Изменение этого свойства может повлиять на другие свойства объектов <see cref="T:Microsoft.Office.Interop.Excel.Font" /> (например, <see cref="P:Microsoft.Office.Interop.Excel.Font.Bold" /> и <see cref="P:Microsoft.Office.Interop.Excel.Font.Italic" /> ).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -292,7 +292,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если стиль шрифта — это наивный.</summary>
+        <summary><b>True,</b> если стиль шрифта является italic.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -329,7 +329,7 @@
           <list type="table">
             <item>
               <term>
-                <b>Заголовок</b>
+                <b>Caption</b>
               </term>
               <description>Париж</description>
               <description>Париж</description>
@@ -338,29 +338,29 @@
               <term>
                 <b>Имя</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
-              <description>(То же, SQL значение свойства, только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
+              <description>(То же, SQL свойства, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в коллекции можно использовать синтаксис, <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> показанный в следующей таблице.</para>
+          <para>При указании индекса в коллекцию можно использовать <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> синтаксис, показанный в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>выражение. PivotItems("[Europe].[ Франция]. [Paris]")</term>
-              <description>выражение. PivotItems("Paris")</description>
+              <term>выражения. PivotItems("[Europe].[ Франция]. [Париж]")</term>
+              <description>выражения. PivotItems ("Париж")</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -398,7 +398,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имеет true, если шрифт является шрифтом контура.</summary>
+        <summary>True, если шрифт является шрифтом контура.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство не влияет на Windows, но его значение сохраняется (его можно установить и вернуть).</para>
           <para> </para></remarks>
@@ -464,9 +464,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт является теневым шрифтом или объект имеет тень.</summary>
+        <summary><b>True,</b> если шрифт — это шрифт теней или если объект имеет тень.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство не влияет на Microsoft Windows, но его значение сохраняется (его можно установить и вернуть).</para>
+        <remarks><para>Это свойство не влияет на microsoft Windows, но его значение сохраняется (его можно установить и вернуть).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -527,7 +527,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если шрифт прорезается горизонтальной линией.</summary>
+        <summary><b>True,</b> если шрифт пробили горизонтальной линией.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -558,7 +558,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт отформатирован в виде подзаписи. <b>False</b> по умолчанию.</summary>
+        <summary><b>True,</b> если шрифт отформатирован в качестве подзаписи. <b>False</b> по умолчанию.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -589,7 +589,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт отформатирован как superscript. <b>False</b> по умолчанию.</summary>
+        <summary><b>True,</b> если шрифт отформатирован в виде суперскриптума. <b>False</b> по умолчанию.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -620,9 +620,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет темы в примененной цветовой схеме, связанной с указанным объектом.  Объект <b>read/write</b>.</summary>
-        <value>64-разрядное целое число.</value>
-        <remarks><para>Попытка получить доступ к цвету темы для объекта, цвет которого в настоящее время не имеет темы, приведет к недопустимой ошибке времени запуска запроса.</para>
+        <summary>Возвращает или задает цвет темы в примененной цветовой схеме, связанной с указанным объектом.  Объект <b>Read/write</b>.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Попытка получить доступ к цвету темы для объекта, цвет которого в настоящее время не является тематическим, приведет к ошибке во время запуска запроса.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -652,7 +652,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlThemeFont</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает шрифт темы в примененной схеме шрифтов, связанной с указанным объектом.  Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlThemeFont" /> .</summary>
+        <summary>Возвращает или задает шрифт темы в примененной схеме шрифта, связанной с указанным объектом.  Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlThemeFont" /> .</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlThemeFont" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -683,10 +683,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>single, который</b> осветляет или затемнеет цвет.</summary>
+        <summary>Возвращает или задает <b>один,</b> который осветляет или темнеет цвет.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Для свойства можно ввести число от -1 (самый темный) до 1 (самый <see cref="P:Microsoft.Office.Interop.Excel.Font.TintAndShade" /> светлый). Ноль (0) нейтральный.</para>
-          <para>Попытка установить для этого свойства значение меньше -1 или более 1 приводит к ошибке во время работы: "Указанное значение находится вне диапазона".  Это свойство работает как для цветов темы, так и для нетемных цветов.</para>
+        <remarks><para>Вы можете ввести номер от -1 (самый темный) до 1 (самый легкий) для <see cref="P:Microsoft.Office.Interop.Excel.Font.TintAndShade" /> свойства. Zero (0) является нейтральным.</para>
+          <para>Попытка установить это свойство значением меньше -1 или более 1 приводит к ошибке времени работы: "Указанное значение не в диапазоне".  Это свойство работает как для цветов темы, так и для нетемных цветов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -718,7 +718,7 @@
       <Docs>
         <summary>Возвращает или задает тип подчеркнутого, примененного к шрифту.</summary>
         <value>To be added.</value>
-        <remarks><para>Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlUnderlineStyle" /> констант.</para>
+        <remarks><para>Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlUnderlineStyle" /> следующих констант.</para>
           <para>
             <b>xlUnderlineStyleNone</b>
           </para>

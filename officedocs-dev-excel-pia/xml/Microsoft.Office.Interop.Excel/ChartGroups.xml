@@ -1,5 +1,5 @@
 <Type Name="ChartGroups" FullName="Microsoft.Office.Interop.Excel.ChartGroups">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d05b335ff2ac16ca069b154e14a4f4ac9e9eb27d" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50004041" /></Metadata><TypeSignature Language="C#" Value="public interface ChartGroups : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d21f9bed6dddf3b0a00e4c9190b5465cecbfb56ce3916447680f00e14b452bf8" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508886" /></Metadata><TypeSignature Language="C#" Value="public interface ChartGroups : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ChartGroups implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ChartGroups" />
   <TypeSignature Language="VB.NET" Value="Public Interface ChartGroups&#xA;Implements IEnumerable" />
@@ -26,33 +26,33 @@
   </Attributes>
   <Docs>
     <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> на указанной диаграмме.</summary>
-    <remarks><para>Каждый объект представляет один или несколько рядов, отформатированный на <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграмме в одном формате. Диаграмма содержит одну или несколько групп диаграмм, каждая группа диаграммы содержит один или несколько рядов, а каждый ряд содержит одну или несколько точек. Например, одна диаграмма может содержать как группу графиков, содержащую все ряды, отформатированные с помощью формата графики, так и группу лиеровой диаграммы, содержащую все ряды, составленные с помощью формата грядущей диаграммы.</para>
-      <para>Используйте этот <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> метод для возврата коллекции <b>ChartGroups.</b> Используйте <b>ChartGroups</b>( ), где находится номер индекса группы <paramref name="index" /> диаграммы, чтобы вернуть один объект <paramref name="index" /> <b>ChartGroup.</b> Если диаграмма активирована, ее можно <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> использовать.</para>
-      <para>Так как номер индекса для определенной группы диаграмм может измениться при изменении формата диаграммы, используемого для этой группы, может быть проще использовать один из именуемого метода ярлыка группы диаграмм для возврата определенной группы диаграммы. Метод возвращает коллекцию групп круговой диаграммы на диаграмме, метод возвращает коллекцию групп графики и так <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> далее. Каждый из этих методов можно использовать с номером индекса для возврата одного объекта <b>ChartGroup</b> или без номера индекса для возврата коллекции <b>ChartGroups.</b> Доступны следующие методы группы диаграмм:</para>
+    <remarks><para>Каждый <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект представляет одну или несколько серий, замещенных в диаграмме с одним и тем же форматом. Диаграмма содержит одну или несколько групп диаграмм, каждая группа диаграммы содержит одну или несколько серий, а каждая серия содержит один или несколько точек. Например, одна диаграмма может содержать как группу диаграммы строки, содержащую все серии, составленные с помощью формата диаграммы строки, так и группу диаграммы панели, содержащую все серии, составленные с помощью формата диаграммы панели.</para>
+      <para>Используйте метод <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> для возврата <b>коллекции ChartGroups.</b> Используйте <b>ChartGroups</b>(), где находится номер индекса группы <paramref name="index" /> диаграммы, чтобы вернуть один объект <paramref name="index" /> <b>ChartGroup.</b> Если диаграмма активирована, можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveChart" /> .</para>
+      <para>Так как номер индекса для определенной группы диаграмм может измениться при изменении формата диаграммы, используемого для этой группы, может быть проще использовать один из названных методов ярлыка группы диаграмм, чтобы вернуть определенную группу диаграмм. Метод возвращает коллекцию групп диаграммы пирога в диаграмме, метод возвращает коллекцию групп диаграммы строки <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> и так далее. Каждый из этих методов можно использовать с индексным номером для возврата одного объекта <b>ChartGroup</b> или без номера индекса для возврата коллекции <b>ChartGroups.</b> Доступны следующие методы групповой диаграммы:</para>
       <list type="bullet">
         <item>
           <description>
-            <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> method</description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.AreaGroups(System.Object)" /> метод</description>
         </item>
         <item>
           <description>
-            <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> method</description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.BarGroups(System.Object)" /> метод</description>
         </item>
         <item>
           <description>
-            <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> method</description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.ColumnGroups(System.Object)" /> метод</description>
         </item>
         <item>
           <description>
-            <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> method</description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.DoughnutGroups(System.Object)" /> метод</description>
         </item>
         <item>
           <description>
-            <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> method</description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.LineGroups(System.Object)" /> метод</description>
         </item>
         <item>
           <description>
-            <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> method</description>
+            <see cref="M:Microsoft.Office.Interop.Excel._Chart.PieGroups(System.Object)" /> метод</description>
         </item>
       </list>
       <para> </para></remarks>
@@ -81,7 +81,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет создателя указанного объекта (это свойство можно использовать с объектом автоматизации OLE для возврата приложения <see cref="T:Microsoft.Office.Interop.Excel.Application" /> этого объекта). Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет создателя указанного объекта (вы можете использовать это свойство с объектом автоматизации OLE для возврата приложения <see cref="T:Microsoft.Office.Interop.Excel.Application" /> этого объекта). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -137,9 +137,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -198,7 +198,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>

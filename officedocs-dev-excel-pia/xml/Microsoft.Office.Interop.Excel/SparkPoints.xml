@@ -1,5 +1,5 @@
 <Type Name="SparkPoints" FullName="Microsoft.Office.Interop.Excel.SparkPoints">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="e5a9199cd752c599cbd9222cae79f2248af65580" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009942" /></Metadata><TypeSignature Language="C#" Value="public interface SparkPoints" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="603170c2f7acb3a89f7e9efefeab5fc1da020af5317cd260f6dd4356b765c0bc" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517147" /></Metadata><TypeSignature Language="C#" Value="public interface SparkPoints" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SparkPoints" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SparkPoints" />
   <TypeSignature Language="VB.NET" Value="Public Interface SparkPoints" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет параметры маркеров для точек данных в спарклайне.</summary>
-    <remarks><para>Используйте объект, чтобы установить цвет и видимость маркеров для точек <see cref="T:Microsoft.Office.Interop.Excel.SparkPoints" /> данных в спарклайне. Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.SparklineGroup.Points" /> объекта <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> для возврата <see cref="T:Microsoft.Office.Interop.Excel.SparkPoints" /> объекта. Свойства объекта соответствуют настройкам флажков "Высокая точка", "Низкая точка", "Отрицательная точка", "Первая точка", "Последняя точка" и "Маркеры" в разделе "Показать", а также для элементов в выпадаемом списке "Цвет маркера" в разделе "Стиль" вкладки "Конструктор средств спарклайна" <see cref="T:Microsoft.Office.Interop.Excel.SparkPoints" /> ленты.</para>
+    <summary>Представляет параметры маркеров для точек данных на линии sparkline.</summary>
+    <remarks><para>Используйте объект, чтобы установить цвет и видимость маркеров для <see cref="T:Microsoft.Office.Interop.Excel.SparkPoints" /> точек данных на sparkline. Чтобы вернуть объект, используйте <see cref="P:Microsoft.Office.Interop.Excel.SparklineGroup.Points" /> <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SparkPoints" /> объекта. Свойства объекта соответствуют параметрам флажков High Point, Low Point, Negative Point, First Point, Last Point и Markers в разделе Show, а также элементов в списке "Цвет маркера" в разделе Стиль вкладки <see cref="T:Microsoft.Office.Interop.Excel.SparkPoints" /> Sparkline Tools Design ленты.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,7 +49,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <summary>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Microsoft Excel приложение. При этом с помощью квалификатора объектов это свойство возвращает объект, представляю который представляет создателя <see cref="T:Microsoft.Office.Interop.Excel.Application" /> указанного объекта.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -78,10 +78,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para>Длинное только <b>для чтения.</b></para>
-          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <summary>Получает 32-битный <b>ряд,</b> который указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-bit <b>integer,</b> который указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Только для <b>чтения .</b></para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Creator" /> символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -108,10 +108,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет цвет и видимость маркера для первой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</summary>
-        <value>Объект, который представляет цвет и видимость маркера для первой <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> точки данных в спарклайне.</value>
+        <summary>Получает объект, который представляет цвет и видимость маркера для первой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных на sparkline.</summary>
+        <value>Объект, который представляет цвет и видимость маркера для первой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных на линии sparkline.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство соответствует параметру первого пункта в разделе "Показать" и элемента "Первая точка" в выпадаемом списке "Цвет маркера" в разделе "Стиль" на вкладке "Конструктор средств спарклайна" <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Firstpoint" /> ленты.</para>
+          <para>Свойство соответствует параметру контрольного окна "Первая точка" в разделе Show и элемента "Первая точка" в списке "Цвет маркера" в разделе Стиль вкладки <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Firstpoint" /> Sparkline Tools Design ленты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -138,10 +138,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет цвет и видимость маркера для самой высокой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</summary>
-        <value>Объект, который представляет цвет и видимость маркера для самой высокой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</value>
+        <summary>Получает объект, который представляет цвет и видимость маркера для самой высокой точки данных <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> на sparkline.</summary>
+        <value>Объект, который представляет цвет и видимость маркера для самой высокой точки данных <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> на sparkline.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Это свойство соответствует параметру в разделе "Показать" и элементу high Point в выпадаемом списке "Цвет маркера" в разделе "Стиль" вкладки "Конструктор средств спарклайна" <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Highpoint" /> ленты.</para>
+          <para>Свойство соответствует параметру контрольного окна High Point в разделе Show и элемента High Point в списке "Цвет маркера" в разделе Стиль вкладки <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Highpoint" /> Sparkline Tools Design ленты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -168,10 +168,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет цвет и видимость маркера для последней точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</summary>
-        <value>Объект, который представляет цвет и видимость маркера для последней точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</value>
+        <summary>Получает объект, который представляет цвет и видимость маркера для последней точки данных <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> на sparkline.</summary>
+        <value>Объект, который представляет цвет и видимость маркера для последней точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных на sparkline.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство соответствует параметру "Последняя точка", "Последний пункт" в разделе "Показать" и элементу "Последняя точка" в выпадаемом списке "Цвет маркера" в разделе "Стиль" на вкладке "Конструктор средств спарклайна" <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Lastpoint" /> ленты.</para>
+          <para>Свойство соответствует параметру Последней точки, чек-окну в разделе Показать и элементу "Последняя точка" в списке "Цвет маркера" в разделе Стиль вкладки <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Lastpoint" /> Sparkline Tools Design ленты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -198,10 +198,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет цвет и видимость маркера для самой низкой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</summary>
-        <value>Объект, который представляет цвет и видимость маркера для самой низкой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</value>
+        <summary>Получает объект, представляюший цвет и видимость маркера для самой низкой точки данных <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> на sparkline.</summary>
+        <value>Объект, представляюший цвет и видимость маркера для самой низкой точки <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных на линии sparkline.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Это свойство соответствует установке в разделе "Показать" пункта "Низкая точка" в выпадаемом списке "Цвет маркера" в разделе "Стиль" на вкладке "Конструктор средств спарклайна" <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Lowpoint" /> ленты.</para>
+          <para>Свойство соответствует параметру контрольного окна с низкой точкой в разделе Показать, а также элемента Low Point в выпадаемом списке Цвет маркера в разделе Стиль вкладки <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Lowpoint" /> Sparkline Tools Design ленты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -228,10 +228,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет цвет и видимость маркеров для положительных точек <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</summary>
-        <value>Объект, который представляет цвет и видимость маркеров для <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> положительных точек данных в спарклайне.</value>
+        <summary>Получает объект, который представляет цвет и видимость маркеров для положительных <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> точек данных на sparkline.</summary>
+        <value>Объект, который представляет цвет и видимость маркеров <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> для положительных точек данных на sparkline.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство соответствует установке в разделе "Показать" пункта "Маркеры" и элемента "Маркеры" в выпадаемом списке "Цвет маркера" в разделе "Стиль" на вкладке "Конструктор средств спарклайна" <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Markers" /> ленты.</para>
+          <para>Свойство соответствует параметру контрольного окна Маркеры в разделе Show и элемента Маркеры в списке "Цвет маркера" в разделе Стиль вкладки <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Markers" /> Sparkline Tools Design ленты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -258,10 +258,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет цвет и видимость маркеров для отрицательных точек <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> данных в спарклайне.</summary>
-        <value>Объект, который представляет цвет и видимость маркеров для <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> отрицательных точек данных в спарклайне.</value>
+        <summary>Получает объект, который представляет цвет и видимость маркеров для <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> отрицательных точек данных на sparkline.</summary>
+        <value>Объект, который представляет цвет и видимость маркеров для <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> отрицательных точек данных на sparkline.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство соответствует установке в разделе "Показать" пункта "Отрицательные точки" и элемента "Отрицательные точки" в выпадаемом списке "Цвет маркера" в разделе "Стиль" на вкладке "Конструктор средств спарклайна" <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Negative" /> ленты.</para>
+          <para>Свойство соответствует параметру контрольного окна "Отрицательные точки" в разделе Показать, а также элементу "Отрицательные точки" в списке "Цвет маркера" в разделе Стиль вкладки <see cref="P:Microsoft.Office.Interop.Excel.SparkPoints.Negative" /> Sparkline Tools Design ленты.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -288,7 +288,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> родительский объект для указанного объекта.</summary>
+        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объект для указанного объекта.</summary>
         <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объект для указанного объекта.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>

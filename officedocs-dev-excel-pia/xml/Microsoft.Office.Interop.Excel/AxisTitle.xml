@@ -1,5 +1,5 @@
 <Type Name="AxisTitle" FullName="Microsoft.Office.Interop.Excel.AxisTitle">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a15f79446668c559f53e688a0b4742e909d6504f" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006155" /></Metadata><TypeSignature Language="C#" Value="public interface AxisTitle" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="11da0f101ff191bf2040477176a11b0b335a72fc253333fcabcfe78e723f5818" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54506703" /></Metadata><TypeSignature Language="C#" Value="public interface AxisTitle" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AxisTitle" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AxisTitle" />
   <TypeSignature Language="VB.NET" Value="Public Interface AxisTitle" />
@@ -22,8 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет заголовок оси диаграммы.</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Axis.AxisTitle" /> для возврата объекта <b>AxisTitle.</b></para>
-      <para>Объект <b>AxisTitle</b> не существует и не может использоваться, если свойство <see cref="P:Microsoft.Office.Interop.Excel.Axis.HasTitle" /> для оси не имеет <b>true.</b></para>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Axis.AxisTitle" /> для возврата <b>объекта AxisTitle.</b></para>
+      <para>Объект <b>AxisTitle</b> не существует и не может использоваться, если свойство для оси <see cref="P:Microsoft.Office.Interop.Excel.Axis.HasTitle" /> не является <b>True</b>.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -87,7 +87,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если текст в объекте изменяет размер шрифта при смене размера объекта. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если текст в объекте изменяет размер шрифта при изменениях размера объекта. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -181,12 +181,12 @@
         <Parameter Name="Length" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Start"><b>Необязательный объект</b>. Первый возвращаемый символ. Если этот аргумент имеет либо 1, либо опущен, это свойство возвращает диапазон символов, начиная с первого символа.</param>
-        <param name="Length"><b>Необязательный объект</b>. Количество возвращаемого символа. Если этот аргумент опущен, это свойство возвращает оставшуюся часть строки (все после <paramref name="Start" /> символа).</param>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> объект, который представляет диапазон символов в тексте объекта. Объект Characters <b>можно</b> использовать для формата символов в текстовой строке.</summary>
+        <param name="Start"><b>Необязательный объект</b>. Первый символ, который будет возвращен. Если этот аргумент является либо 1, либо опущен, это свойство возвращает диапазон символов, начиная с первого символа.</param>
+        <param name="Length"><b>Необязательный объект</b>. Количество возвращаемого символа. Если этот аргумент опущен, это свойство возвращает остаток строки (все после <paramref name="Start" /> символа).</param>
+        <summary>Возвращает объект, который представляет диапазон символов <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> в тексте объекта. Объект Characters можно использовать <b>для</b> формата символов в текстовой строке.</summary>
         <value>To be added.</value>
-        <remarks><para>Объект <b>Characters</b> не является коллекцией.</para>
-          <para>Для объекта <see cref="T:Microsoft.Office.Interop.Excel.TextFrame" /> это <see cref="M:Microsoft.Office.Interop.Excel.TextFrame.Characters(System.Object,System.Object)" /> метод.</para>
+        <remarks><para>Объект <b>Characters</b> — это не коллекция.</para>
+          <para>Для <see cref="T:Microsoft.Office.Interop.Excel.TextFrame" /> объекта используется <see cref="M:Microsoft.Office.Interop.Excel.TextFrame.Characters(System.Object,System.Object)" /> метод.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -215,8 +215,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -272,7 +272,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект, содержащий свойства форматирования заливки для указанной диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> объект, содержащий свойства форматирования заполнения для указанной диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -362,8 +362,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, которое представляет формулу объекта с использованием нотации в стиле A1 на английском языке.</summary>
-        <value>Формула объекта с использованием нотации в стиле A1 на английском языке.</value>
+        <summary>Получает или задает значение, которое представляет формулу объекта с помощью нотации в стиле A1 на английском языке.</summary>
+        <value>Формула объекта с помощью нотации в стиле A1 на английском языке.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -394,8 +394,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, которое представляет формулу объекта с помощью нотации в стиле A1, на языке пользователя.</summary>
-        <value>Формула объекта с использованием нотации в стиле A1 на языке пользователя.</value>
+        <summary>Получает или задает значение, которое представляет формулу объекта с помощью нотации В1-стиле, на языке пользователя.</summary>
+        <value>Формула объекта с помощью нотации в стиле A1 на языке пользователя.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -426,8 +426,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, которое представляет формулу объекта с использованием нотации в стиле R1C1 на английском языке.</summary>
-        <value>Формула объекта с использованием нотации в стиле R1C1 на английском языке.</value>
+        <summary>Получает или задает значение, которое представляет формулу объекта с помощью нотации в стиле R1C1 на английском языке.</summary>
+        <value>Формула объекта с помощью нотации в стиле R1C1 на английском языке.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -458,8 +458,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает значение, которое представляет формулу объекта с использованием нотации в стиле R1C1 на языке пользователя.</summary>
-        <value>Формула объекта с использованием нотации в стиле R1C1 на языке пользователя.</value>
+        <summary>Получает или задает значение, которое представляет формулу объекта с помощью нотации в стиле R1C1 на языке пользователя.</summary>
+        <value>Формула объекта с помощью нотации в стиле R1C1 на языке пользователя.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -487,8 +487,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает высоту объекта (в пунктах).</summary>
-        <value>Высота объекта (в пунктах).</value>
+        <summary>Получает высоту в точках объекта.</summary>
+        <value>Высота объекта в точках.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -537,7 +537,7 @@
           <para>
             <b>xlRight</b>
           </para>
-          <para>Некоторые из этих констант могут быть недоступны вам, в зависимости от выбранной или установленной языковой поддержки (например, для английского (США).</para>
+          <para>Некоторые из этих констант могут быть недоступны в зависимости от выбранной или установленной языковой поддержки (например, английского языка США).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -567,9 +567,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если заголовок оси будет занимать пространство макета диаграммы при его определении. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если заголовок оси будет занимать пространство макета диаграммы, когда определяется макет диаграммы. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Это свойство не влияет на то, находится ли диаграмма в режиме автоматического наложения или нет.  Если пользователь добавляет заголовок с помощью команды "Выше диаграммы", размер диаграммы будет меньше, как в Microsoft Office Excel 2003.  Если пользователь удаляет заголовок или выбирает один из параметров заголовка наложения, размер диаграммы будет больше, как если бы название не было на диаграмме.</para>
+        <remarks><para>Это свойство не влияет на то, находится диаграмма в режиме автозакладки или нет.  Если пользователь добавляет название с помощью команды Above Chart, размер диаграммы будет меньше, как Microsoft Office Excel 2003 г.  Если пользователь удаляет заголовок или выбирает один из вариантов заголовка наложения, диаграмма будет больше размеров, как если бы заголовок не был на диаграмме.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -599,7 +599,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет интерьер указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -630,7 +630,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние (в пунктах) от левого края объекта до левого края области диаграммы.</summary>
+        <summary>Расстояние в точках от левого края объекта до левого края области диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -689,7 +689,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ориентация текста. Может быть значением от –90 до 90 градусов.</summary>
+        <summary>Текстовая ориентация. Может быть значением от -90 до 90 градусов.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>Orientation</b> может быть одной из следующих констант:</para>
           <para>
@@ -704,7 +704,7 @@
           <para>
             <b>xlVertical</b>
           </para>
-          <para>Для источников данных OLAP установка этого свойства для одного поля в иерархии задает ориентацию для других полей в той же иерархии. Поля измерения могут быть ориентированы только в областях строки, столбца и поля страницы отчета pivotTable. Поля мер могут быть ориентированы только в области данных. Установка иерархии или поля данных <b>для xlHidden</b> удаляет иерархию или поле из отчета pivotTable.</para>
+          <para>Для источников данных OLAP это свойство для одного поля в иерархии задает ориентацию для других полей в той же иерархии. Поля измерения могут быть ориентированы только в строках, столбцах и областях полей страниц отчета PivotTable. Поля измерения могут быть ориентированы только в области данных. Настройка иерархии или поля данных <b>для xlHidden</b> удаляет иерархию или поле из отчета PivotTable.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -762,7 +762,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlChartElementPosition</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает положение заголовка оси на диаграмме. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlChartElementPosition" /> .</summary>
+        <summary>Возвращает или задает положение заголовок оси на диаграмме. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlChartElementPosition" /> .</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlChartElementPosition" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -793,10 +793,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок чтения для указанного объекта.</summary>
+        <summary>Возвращает или задает порядок чтения указанного объекта.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>ReadingOrder</b> может быть одной из следующих констант: <b>xlRTL</b> (справа налево), <b>xlLTR</b> (слева направо) или <b>xlContext</b>.</para>
-          <para>Некоторые из этих констант могут быть недоступны вам, в зависимости от выбранной или установленной языковой поддержки (например, для английского (США).</para>
+          <para>Некоторые из этих констант могут быть недоступны в зависимости от выбранной или установленной языковой поддержки (например, английского языка США).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -852,7 +852,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт является теневым шрифтом или объект имеет тень.</summary>
+        <summary><b>True,</b> если шрифт — это шрифт теней или если объект имеет тень.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -914,7 +914,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от верхней части области диаграммы.</summary>
+        <summary>Расстояние в точках в верхней части области диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -989,8 +989,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает ширину объекта (в пунктах).</summary>
-        <value>Ширина объекта (в пунктах).</value>
+        <summary>Получает ширину объекта в точках.</summary>
+        <value>Ширина объекта в точках.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
