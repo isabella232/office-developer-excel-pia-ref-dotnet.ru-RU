@@ -1,5 +1,5 @@
 <Type Name="XPath" FullName="Microsoft.Office.Interop.Excel.XPath">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d73d2c6682dfafc4ccfddfe3f9001a4e4768bd0e" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50008500" /></Metadata><TypeSignature Language="C#" Value="public interface XPath" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="66e884c7bb0832220f3dd03291781b350178fc82f18b65f0b71189ba466cc067" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54506010" /></Metadata><TypeSignature Language="C#" Value="public interface XPath" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract XPath" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.XPath" />
   <TypeSignature Language="VB.NET" Value="Public Interface XPath" />
@@ -21,10 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет XPath, который был соесан с <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объектом или <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объектом.</summary>
-    <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
-      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.XPath.SetValue(Microsoft.Office.Interop.Excel.XmlMap,System.String,System.Object,System.Object)" /> метод для карты XPath с диапазоном или столбцом списка. Метод <b>SetValue</b> также используется для изменения свойств существующего XPath.</para>
-      <para>Используйте этот метод для удаления XPath, который был со списком <see cref="M:Microsoft.Office.Interop.Excel.XPath.Clear" /> или диапазоном.</para>
+    <summary>Представляет XPath, который был относя к <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объекту или <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объекту.</summary>
+    <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+      <para>С помощью <see cref="M:Microsoft.Office.Interop.Excel.XPath.SetValue(Microsoft.Office.Interop.Excel.XmlMap,System.String,System.Object,System.Object)" /> метода можно нацедить XPath на столбец диапазона или списка. Метод <b>SetValue</b> также используется для изменения свойств существующего XPath.</para>
+      <para>Используйте метод, чтобы удалить XPath, который был соедино в <see cref="M:Microsoft.Office.Interop.Excel.XPath.Clear" /> столбец диапазона или списка.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -82,7 +82,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -109,8 +109,8 @@
       <Parameters />
       <Docs>
         <summary>Очищает сопоставление схемы из ячеек, сопоставленных с указанным XPath.</summary>
-        <remarks><para>Этот метод не очищает данные из ячеек, сопереживуемого указанному XPath. Используйте метод объекта для очистки <see cref="M:Microsoft.Office.Interop.Excel.Range.Clear" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> данных из ячеек.</para>
-          <para>Если указанный XPath сопоставлен в списке XML, сопоставление схемы удаляется, но список не удаляется с таблицы.</para>
+        <remarks><para>Этот метод не очищает данные из ячеек, относясь к указанному XPath. Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.Range.Clear" /> объекта <see cref="T:Microsoft.Office.Interop.Excel.Range" /> для очистки данных из ячеек.</para>
+          <para>Если указанный XPath сопоставлен в списке XML, сопоставление схем удаляется, но список не удаляется из таблицы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -137,9 +137,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -166,9 +166,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XmlMap</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объект, который представляет карту схемы, которая содержит указанный <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> объект. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объект, который представляет карту схемы, содержаную указанный <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> объект. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -223,9 +223,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если указанный объект со списком XML, возвращает false, если объект <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> <b>XPath</b> со списком одной ячейки. <b></b> Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если указанный объект соедан в XML-список; возвращает False, если объект XPath соедан в одну <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> ячейку. <b></b> <b></b> Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -254,12 +254,12 @@
         <Parameter Name="Repeating" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Map">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> . Карта схемы, которая содержит сведения об <b>объекте XPath.</b></param>
-        <param name="XPath">Обязательный атрибут типа <b>String</b>. Допустимый выписка XPath.</param>
-        <param name="SelectionNamespace"><b>Необязательный объект</b>. Указывает все префиксы пространства имен, используемые в <paramref name="XPath" /> аргументе. Этот аргумент может быть опущен, если объект <b>XPath</b> не содержит префиксов или если объект <b>XPath</b> использует префиксы Microsoft Excel.</param>
-        <param name="Repeating"><b>Необязательный boolean</b>. Указывает, должен ли <b>объект XPath</b> быть привязан к столбце в списке XML или с одной ячейкой. Установите <b>true,</b> чтобы привязать <b>объект XPath</b> к столбце в списке XML.</param>
-        <summary>Сопока указанного <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> объекта с <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> объектом или <see cref="T:Microsoft.Office.Interop.Excel.Range" /> коллекцией. Если объект <b>XPath</b> ранее был назначен объекту <b>ListColumn</b> или коллекции <b>Range,</b> метод <b>SetValue</b> задает свойства <b>объекта XPath.</b></summary>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+        <param name="Map">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> . Схема карты, которая содержит сведения об <b>объекте XPath.</b></param>
+        <param name="XPath">Обязательный атрибут типа <b>String</b>. Допустимая выписка XPath.</param>
+        <param name="SelectionNamespace"><b>Необязательный объект</b>. Указывает все префиксы пространства имен, используемые в <paramref name="XPath" /> аргументе. Этот аргумент может быть опущен, если объект <b>XPath</b> не содержит префиксов, или если объект <b>XPath</b> использует Microsoft Excel префиксы.</param>
+        <param name="Repeating"><b>Необязательный boolean</b>. Указывает, должен ли <b>объект XPath</b> быть привязан к столбцу в списке XML или примыкать к одной ячейке. Установите для <b>True</b> привязку <b>объекта XPath</b> к столбцу в списке XML.</param>
+        <summary>Карты указанному <see cref="T:Microsoft.Office.Interop.Excel.XPath" /> объекту объект <see cref="T:Microsoft.Office.Interop.Excel.ListColumn" /> или <see cref="T:Microsoft.Office.Interop.Excel.Range" /> коллекцию. Если объект <b>XPath</b> ранее был соединен объекту <b></b> <b>ListColumn</b> или коллекции Range, метод <b>SetValue</b> задает свойства <b>объекта XPath.</b></summary>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="LegendEntry" FullName="Microsoft.Office.Interop.Excel.LegendEntry">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="983427dff3c6cf28781fdc671025f8966ca21207" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50000094" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntry" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5bcee26bebe102f713b6f53f663e94e0998d21faf42b0b37b12ad60a1b21627e" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54515110" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntry" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract LegendEntry" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.LegendEntry" />
   <TypeSignature Language="VB.NET" Value="Public Interface LegendEntry" />
@@ -23,12 +23,12 @@
   <Docs>
     <summary>Представляет запись легенды в легенде диаграммы.</summary>
     <remarks><para>Объект <b>LegendEntry</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.LegendEntries" /> коллекции. Коллекция <b>LegendEntries</b> содержит все объекты <b>LegendEntry</b> в легенде.</para>
-      <para>Каждая запись легенды состоит из двух частей: текста записи, который является именем ряда, связанного с записью легенды, и маркера записи, который визуально связывает запись легенды со связанными с ней рядами или линией тренда в диаграмме. Свойства форматирования для маркера записи и связанных с ним рядов или линии тренда содержатся в <see cref="T:Microsoft.Office.Interop.Excel.LegendKey" /> объекте.</para>
-      <para>Текст записи легенды нельзя изменить. Объекты <b>LegendEntry</b> поддерживают форматирование шрифта, и их можно удалять. Для записей условных обозначений не поддерживается форматирование шаблона. Положение и размер записей зафиксированы.</para>
-      <para>Используйте <b>LegendEntries</b>( ), где находится номер индекса записи легенды, чтобы <paramref name="index" /> вернуть один объект <paramref name="index" /> <b>LegendEntry.</b> Вы не можете возвращать записи условных обозначений по имени.</para>
-      <para>Номер индекса представляет положение записи в условных обозначениях. LegendEntries(1) находится в верхней части легенды, а LegendEntries(LegendEntries.Count) — внизу.</para>
-      <para>Нет прямого способа вернуть ряд или линию тренда, соответствующую записи легенды.</para>
-      <para>После удаления записей легенд единственным способом их восстановления является удаление и повторное создание содержащихся в них легенд, установив для свойства диаграммы "False", а затем вернув их в <see cref="P:Microsoft.Office.Interop.Excel._Chart.HasLegend" /> <b>"True".</b> <b></b></para>
+      <para>Каждая запись легенды состоит из двух частей: текста записи, которая является именем серии, связанной с записью легенды, и маркером входа, который визуально связывает запись легенды с связанной с ней серией или трендовой линией в диаграмме. В объекте содержатся свойства форматирования маркера входа и связанных с ним серий или <see cref="T:Microsoft.Office.Interop.Excel.LegendKey" /> трендовой линии.</para>
+      <para>Текст записи легенды не может быть изменен. Объекты <b>LegendEntry</b> поддерживают форматирование шрифта, и их можно удалять. Для записей условных обозначений не поддерживается форматирование шаблона. Положение и размер записей зафиксированы.</para>
+      <para>Используйте <b>LegendEntries</b>(), где находится номер индекса записи легенды, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>LegendEntry.</b> Вы не можете возвращать записи условных обозначений по имени.</para>
+      <para>Номер индекса представляет положение записи в условных обозначениях. LegendEntries (1) находится в верхней части легенды, а LegendEntries (LegendEntries.Count) — внизу.</para>
+      <para>Нет прямого способа вернуть серию или линию тренда, соответствующую записи легенды.</para>
+      <para>После удаления записей легенд единственный способ их восстановления — удалить и воссоздать легенду, содержаную их, установив свойство для диаграммы False, а затем обратно в <see cref="P:Microsoft.Office.Interop.Excel._Chart.HasLegend" /> <b>True.</b> <b></b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -55,7 +55,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -92,7 +92,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если текст в объекте изменяет размер шрифта при смене размера объекта. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если текст в объекте изменяет размер шрифта при изменениях размера объекта. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -122,8 +122,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -232,7 +232,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота объекта (в пунктах).</summary>
+        <summary>Высота объекта в точках.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -260,7 +260,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции похожих объектов.</summary>
+        <summary>Возвращает индексный номер объекта в коллекции аналогичных объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -288,7 +288,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние (в пунктах) от левого края объекта до левого края области диаграммы.</summary>
+        <summary>Расстояние в точках от левого края объекта до левого края области диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -398,7 +398,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние (в пунктах) от верхнего края объекта до верхней части области диаграммы.</summary>
+        <summary>Расстояние в точках от верхнего края объекта до верхней части области диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -426,7 +426,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина объекта (в пунктах).</summary>
+        <summary>Ширина объекта в точках.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

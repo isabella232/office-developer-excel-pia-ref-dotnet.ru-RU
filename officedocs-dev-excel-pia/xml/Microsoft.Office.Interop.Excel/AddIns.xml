@@ -1,5 +1,5 @@
 <Type Name="AddIns" FullName="Microsoft.Office.Interop.Excel.AddIns">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="08779fe0f93d595b31e4991956a1b4a5705a2268" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49999758" /></Metadata><TypeSignature Language="C#" Value="public interface AddIns : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1224292c59888d95620f8f578cdf0fe379643b51bbee35bef7456d223b753c48" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54505961" /></Metadata><TypeSignature Language="C#" Value="public interface AddIns : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract AddIns implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.AddIns" />
   <TypeSignature Language="VB.NET" Value="Public Interface AddIns&#xA;Implements IEnumerable" />
@@ -25,11 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция объектов, которая представляет все надстройки, доступные в Microsoft Excel, независимо от того, установлены <see cref="T:Microsoft.Office.Interop.Excel.AddIn" /> ли они. Этот список соответствует списку надстройки, отображаемого в диалоговом окне Add-Ins (меню "Инструменты").</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Application.AddIns" /> для возврата коллекции <b>AddIns.</b></para>
-      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.AddIns.Add(System.String,System.Object)" /> этот метод для добавления надстройки в список доступных надстройки. Метод <b>Add</b> добавляет надстройки в список, но не устанавливает ее. Установите <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Installed" /> для свойства надстройки true, чтобы установить надстройки. <b></b> Чтобы установить надстройки, которые не отображаются в списке доступных надстройок, необходимо сначала использовать метод <b>Add,</b> а затем установить свойство <b>Installed.</b> Это можно сделать за один шаг.</para>
-      <para>Используйте <b>AddIns</b>(), где находится заголовок или номер индекса надстройки, чтобы <paramref name="index" /> вернуть один объект <paramref name="index" /> <b>AddIn.</b></para>
-      <para>Не путайте название надстройки, которое отображается в диалоговом окне Add-Ins, с именем надстройки, которое является именем файла надстройки. Название надстройки должно быть написано точно так же, как в диалоговом окне Add-Ins, но заглавная буква не обязательно должна совпадать.</para>
+    <summary>Коллекция объектов, которая представляет все надстройки, доступные Microsoft Excel независимо от того, установлены <see cref="T:Microsoft.Office.Interop.Excel.AddIn" /> ли они. Этот список соответствует списку надстройок, отображаемого в диалоговом окне Add-Ins (меню Tools).</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.AddIns" /> свойство, чтобы вернуть <b>коллекцию AddIns.</b></para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.AddIns.Add(System.String,System.Object)" /> для добавления надстройки в список доступных надстройок. Метод <b>Add</b> добавляет надстройки в список, но не устанавливает надстройки. Установите <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Installed" /> свойство надстройки <b>true</b> для установки надстройки. Чтобы установить надстройки, которые не отображаются в списке доступных надстройок, необходимо сначала использовать метод <b>Add,</b> а затем установить свойство <b>Installed.</b> Это можно сделать за один шаг.</para>
+      <para>Используйте <b>AddIns</b>(), где находится название надстройки или номер индекса, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>AddIn.</b></para>
+      <para>Не путайте название надстройки, которая отображается в диалоговом окне Add-Ins, с именем надстройки, которое является именем файла надстройки. Название надстройки должно означаться так же, как и в диалоговом окне Add-Ins, но капитализация не должна соответствовать.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -91,11 +91,11 @@
         <Parameter Name="CopyFile" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя файла, который содержит надстройки, которую вы хотите добавить в список в диспетчере надстройки.</param>
-        <param name="CopyFile"><b>Необязательный объект</b>. Игнорируется, если файл надстройки находится на жестком диске. <b>Имеет</b> true, чтобы скопировать надстройку на жесткий диск, если надстройка находится на съемном носителе (дискета или компактном диске). <b>False,</b> чтобы надстройка осталась на съемной носитель. Если этот аргумент опущен, в Microsoft Excel отображается диалоговое окно с запросом на выбор.</param>
-        <summary>Добавляет новый файл надстройки в список надстройки. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AddIn" /> объект.</summary>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя файла, который содержит надстройки, которые необходимо добавить в список в диспетчере надстройки.</param>
+        <param name="CopyFile"><b>Необязательный объект</b>. Игнорируется, если файл надстройки находится на жестком диске. <b>Верно</b> скопировать надстройку на жесткий диск, если надстройка находится на съемной среде (дискетный диск или компактный диск). <b>False,</b> чтобы надстройка оставалась на съемной среде. Если этот аргумент опущен, Microsoft Excel отображает диалоговое окно и просит вас выбрать.</param>
+        <summary>Добавляет новый файл надстройки в список надстройок. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.AddIn" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Этот метод не устанавливает новую надстройки. Для установки <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Installed" /> надстройки необходимо настроить свойство.</para>
+        <remarks><para>Этот метод не устанавливает новую надстройка. Для установки надстройки необходимо установить <see cref="P:Microsoft.Office.Interop.Excel.AddIn.Installed" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -122,7 +122,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,8 +180,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

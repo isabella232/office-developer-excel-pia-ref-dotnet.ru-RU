@@ -1,5 +1,5 @@
 <Type Name="_Workbook" FullName="Microsoft.Office.Interop.Excel._Workbook">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="0dc241801e29cd7a9aa2098f883cf029f3c40f54" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012679" /></Metadata><TypeSignature Language="C#" Value="public interface _Workbook" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="525b0c0643ce97e370c33ada053f45415ea85b7d79474f154008ca03e7904ba1" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54515607" /></Metadata><TypeSignature Language="C#" Value="public interface _Workbook" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _Workbook" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel._Workbook" />
   <TypeSignature Language="VB.NET" Value="Public Interface _Workbook" />
@@ -249,7 +249,7 @@
         <Parameter Name="Where" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="When"><b>Необязательный объект</b>. Указывает, когда принимаются все изменения.</param>
+        <param name="When"><b>Необязательный объект</b>. Указывает, когда все изменения будут приняты.</param>
         <param name="Who"><b>Необязательный объект</b>. Указывает, кем принимаются все изменения.</param>
         <param name="Where"><b>Необязательный объект</b>. Указывает, где принимаются все изменения.</param>
         <summary>Принимает все изменения в указанной общей книге.</summary>
@@ -288,7 +288,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если метки можно использовать в формулах таблиц. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> если метки можно использовать в формулах таблицы. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -319,27 +319,27 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, используют ли некоторые функции таблиц последние алгоритмы точности для вычисления результатов.</summary>
+        <summary>Получает или задает, используют ли некоторые функции таблицы последние алгоритмы точности для вычисления результатов.</summary>
         <value>Указывает, какую версию алгоритмов использовать для определенных функций таблицы.</value>
         <remarks><para>Чтение и запись</para>
-          <para>По умолчанию некоторые функции листа из Microsoft Office Excel 2007 и более ранних версий Microsoft Excel используют новые алгоритмы, которые увеличивают их точность. Однако в некоторых случаях новые алгоритмы снижают производительность этих функций относительно их производительности в Microsoft Office Excel 2007 и более ранних версий Excel. Чтобы указать, что эти функции таблиц используют более старые алгоритмы для повышения их производительности, установите для <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> свойства 1. В следующей таблице описываются возможные параметры <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> свойства.</para>
+          <para>По умолчанию некоторые функции таблицы из Microsoft Office Excel 2007 г. и более ранних версий Microsoft Excel с использованием новых алгоритмов, которые увеличивают их точность. Однако в некоторых случаях новые алгоритмы снижают производительность этих функций по сравнению с их производительностью в Microsoft Office Excel 2007 г. и более ранних версиях Excel. Чтобы указать, что эти функции таблицы используют более старые алгоритмы для повышения производительности, установите <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> свойство 1. В следующей таблице описываются возможные параметры <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> свойства.</para>
           <list type="table">
             <item>
               <term>0</term>
-              <description>Использование последних и наиболее точных алгоритмов (по умолчанию)</description>
+              <description>Используйте самые последние, наиболее точные алгоритмы (по умолчанию)</description>
             </item>
             <item>
-              <term>1 </term>
-              <description>Использование Microsoft Office Excel 2007 или более ранних версий</description>
+              <term>1</term>
+              <description>Использование Microsoft Office Excel 2007 или более ранней версии</description>
             </item>
             <item>
-              <term>2 </term>
+              <term>2</term>
               <description>Использование Microsoft Excel 2010, русская версия алгоритмов</description>
             </item>
           </list>
           <para>
-            <b>Внимание!</b>Установка для свойства значения, кроме 0, 1 или 2, приведет к <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> неопределению поведения.</para>
-          <para>В следующей таблице приводится сет несколько функций, на которые влияет установка для свойства <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> 1. Функции, перечисленные в столбце "Функции, не затронутые", всегда будут использовать последние алгоритмы точности или не были изменены в Excel 2010. Для имен функций, в именах которых содержится точка (.), чтобы определить имя соответствующей функции, реализованной в VBA в качестве метода объекта, замените знак подчеркиваия (_) на этот <see cref="T:Microsoft.Office.Interop.Excel.WorksheetFunction" /> период. Например, метод VBA, соответствующий бета-версии. Методом является функция <see cref="M:Microsoft.Office.Interop.Excel.WorksheetFunction.Beta_Dist(System.Double,System.Double,System.Double,System.Boolean,System.Object,System.Object)" /> DIST.</para>
+            <b></b>Предостережение. Если значение свойства не превышает 0, 1 или 2, это приведет к <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> неопределяемой модели поведения.</para>
+          <para>В следующей таблице подводятся итоги, на которые влияют функции, установив <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AccuracyVersion" /> свойство 1. Функции, перечисленные в столбце "Функции, не затронутые", всегда будут использовать новейшие алгоритмы точности или не были изменены Excel 2010 г. Для имен функций, которые включают период (.) в их имена, чтобы определить имя соответствующей функции, реализованной в VBA в качестве метода объекта, замените символ подчеркивать (_ ) для этого <see cref="T:Microsoft.Office.Interop.Excel.WorksheetFunction" /> периода. Например, метод VBA, соответствующий бета-версии. Функция DIST — <see cref="M:Microsoft.Office.Interop.Excel.WorksheetFunction.Beta_Dist(System.Double,System.Double,System.Double,System.Boolean,System.Object,System.Object)" /> это метод.</para>
           <list type="table">
             <item>
               <term>BETADIST</term>
@@ -358,16 +358,16 @@
               <description>BINOM. DIST</description>
             </item>
             <item>
-              <term>ХИИНВ</term>
+              <term>CHIINV</term>
               <description>BINOM. INV</description>
             </item>
             <item>
               <term>CHITEST</term>
-              <description>CEILING</description>
+              <description>ПОТОЛОК</description>
             </item>
             <item>
               <term>CONFIDENCE</term>
-              <description>CEILING. PRECISE</description>
+              <description>ПОТОЛОК. PRECISE</description>
             </item>
             <item>
               <term>CRITBINOM</term>
@@ -391,11 +391,11 @@
             </item>
             <item>
               <term>EXPONDIST</term>
-              <description>ДОСТОВЕРНОСТЬ. NORM</description>
+              <description>ДОВЕРИЕ. NORM</description>
             </item>
             <item>
               <term>FDIST</term>
-              <description>ДОСТОВЕРНОСТЬ. T</description>
+              <description>ДОВЕРИЕ. T</description>
             </item>
             <item>
               <term>FINV</term>
@@ -467,7 +467,7 @@
             </item>
             <item>
               <term>PPMT</term>
-              <description>ISO. CEILING</description>
+              <description>ISO. ПОТОЛОК</description>
             </item>
             <item>
               <term>STDEV</term>
@@ -503,19 +503,19 @@
             </item>
             <item>
               <term>VARPA</term>
-              <description>НОРМ. DIST</description>
+              <description>NORM. DIST</description>
             </item>
             <item>
               <term>WEIBULL</term>
-              <description>НОРМ. INV</description>
+              <description>NORM. INV</description>
             </item>
             <item>
               <term>XIRR</term>
-              <description>НОРМ. S.DIST</description>
+              <description>NORM. S.DIST</description>
             </item>
             <item>
               <term>ZTEST</term>
-              <description>НОРМ. S.INV</description>
+              <description>NORM. S.INV</description>
             </item>
             <item>
               <term />
@@ -551,11 +551,11 @@
             </item>
             <item>
               <term />
-              <description>КВАРТИЛЬ. EXC</description>
+              <description>QUARTILE. EXC</description>
             </item>
             <item>
               <term />
-              <description>КВАРТИЛЬ. INC</description>
+              <description>QUARTILE. INC</description>
             </item>
             <item>
               <term />
@@ -665,7 +665,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Активирует первое окно, связанное с книгой. При этом не будут запускаться макрос Auto_Activate или Auto_Deactivate, которые могут быть присоединены к книге (используйте метод для запуска <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> этих макроса).</summary>
+        <summary>Активирует первое окно, связанное с книгой. При этом не будут запускаться макрос Auto_Activate или Auto_Deactivate, которые могут быть присоединены к книге (используйте метод для запуска <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> этих макрос).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -692,7 +692,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Chart</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объект, который представляет активную диаграмму (внедренную диаграмму или лист диаграммы). Внедренная диаграмма считается активной при ее выборе или активации. Если диаграмма не активна, это свойство возвращает <b>nothing</b>. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объект, который представляет активную диаграмму (встраиваемую диаграмму или лист диаграммы). Встроенная диаграмма считается активной при выборе или активации. Если диаграмма не активна, это свойство ничего не <b>возвращает.</b> Только для чтения.</summary>
         <value>To be added.</value>
         <remarks><para>Если не указать квалификатор объекта, это свойство возвращает активную диаграмму в активной книге.</para>
           <para> </para></remarks>
@@ -723,8 +723,8 @@
       <Docs>
         <summary>Возвращает объект, представляющий активный лист (лист сверху) в активной книге или в указанном окне или книге. Возвращает значение <b>Nothing</b>, если отсутствует активный лист. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Если квалификатор объекта не указан, это свойство возвращает активный лист в активной книге.</para>
-          <para>Если книга отображается в более чем одном окне, свойство может быть разным <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveSheet" /> в разных окнах.</para>
+        <remarks><para>Если не указать квалификатор объекта, это свойство возвращает активный лист в активной книге.</para>
+          <para>Если книга отображается в более чем одном окне, свойство может быть <see cref="P:Microsoft.Office.Interop.Excel._Workbook.ActiveSheet" /> разным в разных окнах.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -751,11 +751,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Slicer</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который представляет активный срез в активной книге или указанной книге.</summary>
-        <value>Объект, который представляет активный срез в активной книге или указанной книге.</value>
-        <remarks><para>Возвращает нулевую ссылку (nothing in Visual Basic), если срез не активен.</para>
+        <summary>Получает объект, который представляет активный срез в активной книге или в указанной книге.</summary>
+        <value>Объект, который представляет активный срез в активной книге или в указанной книге.</value>
+        <remarks><para>Возвращает ссылку null (Ничего в Visual Basic), если срез не активен.</para>
           <para>Только для чтения.</para>
-          <para>Если объект не указан, это свойство возвращает активный срез <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> в активной книге.</para>
+          <para>Если объект не указан, это свойство возвращает активный <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> срез в активной книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -780,7 +780,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Добавляет ярлык в книгу или гиперссылки в папку "Избранное".</summary>
+        <summary>Добавляет ярлык в книгу или гиперссылку в папку Избранное.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -807,7 +807,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <summary>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Microsoft Excel приложение. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -878,18 +878,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает автора комментария. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает или задает автор комментария. Только для чтения, <b>String</b>.</summary>
         <value>Возвращает <see cref="T:System.String" /> .</value>
         <remarks>To be added.</remarks>
-        <example><para>В этом примере удаляются все комментарии, добавленные к активному листу Сехиной.</para>
+        <example><para>В этом примере удаляются все комментарии, добавленные Жаном Сельвой на активном листе.</para>
           <code>&lt;span class="label"&gt;For Each c in ActiveSheet.Comments     If c.&lt;/span&gt;
 &lt;i&gt;Author&lt;/i&gt;
 &lt;span class="label"&gt;= "Jean Selva" Then c.Delete Next&lt;/span&gt;</code></example>
-        <example><para>В этом примере удаляются все комментарии, добавленные к активному листу Сехиной.</para>
+        <example><para>В этом примере удаляются все комментарии, добавленные Жаном Сельвой на активном листе.</para>
           <code>&lt;span class="label"&gt;For Each c in ActiveSheet.Comments     If c.&lt;/span&gt;
 &lt;i&gt;Author&lt;/i&gt;
 &lt;span class="label"&gt;= "Jean Selva" Then c.Delete Next&lt;/span&gt;</code></example>
-        <example><para>В этом примере удаляются все комментарии, добавленные к активному листу Сехиной.</para>
+        <example><para>В этом примере удаляются все комментарии, добавленные Жаном Сельвой на активном листе.</para>
           <code>&lt;span class="label"&gt;For Each c in ActiveSheet.Comments     If c.&lt;/span&gt;
 &lt;i&gt;Author&lt;/i&gt;
 &lt;span class="label"&gt;= "Jean Selva" Then c.Delete Next&lt;/span&gt;</code></example>
@@ -921,9 +921,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает время в минутах между автоматическими обновлениями общей книги. Для чтения и записи, <b>Integer</b>.</summary>
+        <summary>Возвращает или задает количество минут между автоматическими обновлениями в общую книгу. Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы это свойство вступает в силу, свойству <b>AutoUpdateFrequency</b> необходимо установить значение от 5 до 1440.</para>
+        <remarks><para>Свойство <b>AutoUpdateFrequency</b> должно быть задано значению от 5 до 1440 для того, чтобы это свойство вступает в силу.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -953,7 +953,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если текущие изменения в общей книге будут опубликованы для других пользователей при автоматическом обновлении книги. <b>False,</b> если изменения не опубликованы (эта книга по-прежнему синхронизируется с изменениями, внесенными другими пользователями). Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если текущие изменения в общей книге будут размещены для других пользователей при автоматическом обновлении книги. <b>False,</b> если изменения не опубликованы (эта книга по-прежнему синхронизирована с изменениями, внесенными другими пользователями). Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Чтобы это свойство вступает в силу, необходимо установить значение от 5 до <see cref="P:Microsoft.Office.Interop.Excel._Workbook.AutoUpdateFrequency" /> 1440.</para>
           <para> </para></remarks>
@@ -984,8 +984,8 @@
       </Parameters>
       <Docs>
         <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки.</param>
-        <param name="Type">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlLinkType" /> . Тип ссылки.</param>
-        <summary>Преобразует формулы, связанные с другими источниками Microsoft Excel или источниками OLE, в значения.</summary>
+        <param name="Type">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlLinkType" /> . Тип ссылки.</param>
+        <summary>Преобразует формулы, связанные с другими Microsoft Excel или источниками OLE, в значения.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1012,10 +1012,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, представляюную все встроенные свойства документа для <see cref="T:Microsoft.Office.Core.DocumentProperties" /> указанной книги. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, представляюную все встроенные свойства документов <see cref="T:Microsoft.Office.Core.DocumentProperties" /> для указанной книги. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство возвращает всю коллекцию встроенных свойств документа. Используйте этот метод для возврата одного члена коллекции (объекта), указав либо имя свойства, либо индекс коллекции <see cref="P:Microsoft.Office.Core.DocumentProperties.Item(System.Object)" /> <see cref="T:Microsoft.Office.Core.DocumentProperty" /> (в качестве числа).</para>
-          <para>Вы можете ссылаться на свойства документа по значению индекса или по имени. В следующем списке показаны доступные встроенные имена свойств документа:</para>
+        <remarks><para>Это свойство возвращает всю коллекцию встроенных свойств документов. Используйте метод для возвращения одного члена коллекции (объекта), указав либо имя свойства, либо индекс коллекции <see cref="P:Microsoft.Office.Core.DocumentProperties.Item(System.Object)" /> <see cref="T:Microsoft.Office.Core.DocumentProperty" /> (в качестве номера).</para>
+          <para>Вы можете ссылаться на свойства документа либо по значению индекса, либо по имени. В следующем списке показаны доступные встроенные имена свойств документов:</para>
           <para>Название </para>
           <para>Subject</para>
           <para>Автор</para>
@@ -1023,32 +1023,32 @@
           <para>Комментарии</para>
           <para>Шаблон</para>
           <para>Последний автор</para>
-          <para>Номер редакции</para>
+          <para>Номер ревизии</para>
           <para>Имя приложения</para>
           <para>Дата последней печати</para>
           <para>Дата создания </para>
           <para>Время последнего сохранения</para>
           <para>Общее время редактирования</para>
           <para>Number of Pages</para>
-          <para>Число слов</para>
+          <para>Количество слов</para>
           <para>Число знаков</para>
           <para>Безопасность</para>
-          <para>Category</para>
-          <para>Format</para>
+          <para>Категория</para>
+          <para>Формат</para>
           <para>Manager</para>
-          <para>Company</para>
+          <para>Организация</para>
           <para>Количество байтов</para>
-          <para>Число строк</para>
-          <para>Число абзацев</para>
-          <para>Число слайдов</para>
-          <para>Число заметок</para>
-          <para>Число скрытых слайдов</para>
+          <para>Количество строк</para>
+          <para>Количество абзацев</para>
+          <para>Количество слайдов</para>
+          <para>Количество примечаний</para>
+          <para>Количество скрытых слайдов</para>
           <para>Количество мультимедийных клипов</para>
           <para>База гиперссылки</para>
           <para>Количество символов (с пробелами)</para>
-          <para>Контейнерные приложения не требуются для определения значений для каждого встроенного свойства документа. Если Microsoft Excel не определяет значение для одного из встроенных свойств документа, чтение свойства для этого свойства документа приводит к <see cref="P:Microsoft.Office.Core.DocumentProperty.Value" /> ошибке.</para>
-          <para>Метод <b>Item</b> является методом по умолчанию для <b>коллекции DocumentProperties.</b></para>
-          <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Workbook.CustomDocumentProperties" /> для возврата коллекции настраиваемого свойства документа.</para>
+          <para>Контейнерные приложения не обязаны определять значения для каждого встроенного свойства документа. Если Microsoft Excel не определяет значение для одного из встроенных свойств документа, чтение свойства для этого свойства документа вызывает <see cref="P:Microsoft.Office.Core.DocumentProperty.Value" /> ошибку.</para>
+          <para>Метод <b>Item</b> — это метод по умолчанию для коллекции <b>DocumentProperties.</b></para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.CustomDocumentProperties" /> свойство, чтобы вернуть коллекцию пользовательских свойств документов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1075,9 +1075,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает число, в правой части которого четыре цифры являются номером версии вычисления, а другие цифры (слева) — основной версией Microsoft Excel. Для объекта это свойство возвращает сведения о версии Excel, в которую книга была в последний раз полностью <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> пересчитана. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает номер, в правой части которого четыре цифры являются незначительным номером версии двигателя вычислений, а другие цифры (слева) являются основной версией Microsoft Excel. Для объекта это свойство возвращает сведения о версии Excel, по Excel последняя полностью <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> пересчитана книга. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если книга была сохранена в более ранней версии Excel и книга не была полностью пересчитана, это свойство возвращает 0.</para>
+        <remarks><para>Если книга была сохранена в более ранней версии Excel и если книга не была полностью пересчитана, это свойство возвращает 0.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1102,7 +1102,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary><b>Имеет</b> true, если Microsoft Excel может получить указанную книгу на сервере.</summary>
+        <summary><b>Верно,</b> Microsoft Excel можно проверить указанную книгу на сервер.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1130,7 +1130,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если книга различает верхний и нижний дела при сравнении содержимого. <b>Boolean только для чтения</b> (<b>bool</b> в C#).</summary>
+        <summary><b>Верно,</b> если книга различает верхний и нижний случай при сравнении контента. Только для чтения <b>Boolean</b> <b>(bool</b> в C#).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1162,11 +1162,11 @@
         <Parameter Name="Notify" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Mode">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlFileAccess" /> . Указывает новый режим доступа.</param>
-        <param name="WritePassword"><b>Необязательный объект</b>. Указывает зарезервированный для записи пароль, если файл зарезервирован и является <paramref name="Mode" /> <b>xlReadWrite.</b> Игнорируется, если нет пароля для файла или если <paramref name="Mode" /> <b>это xlReadOnly.</b></param>
-        <param name="Notify"><b>Необязательный объект</b>. <b>Имеет</b> true (или опущен), чтобы уведомить пользователя, если не удается получить доступ к файлу немедленно.</param>
-        <summary>Изменяет разрешения доступа для книги. Для этого может потребоваться загрузка обновленной версии с диска.</summary>
-        <remarks><para>Если файл открыт в режиме только для чтения, у вас нет монопольного доступа к файлу. Если вы измените файл с "только чтение" на "только чтение/запись", Microsoft Excel должен загрузить новую копию файла, чтобы убедиться, что во время открытия файла не было внося изменений как "только для чтения".</para>
+        <param name="Mode">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlFileAccess" /> . Указывает новый режим доступа.</param>
+        <param name="WritePassword"><b>Необязательный объект</b>. Указывает пароль, зарезервированный для записи, если файл зарезервирован и <paramref name="Mode" /> <b>является xlReadWrite.</b> Игнорируется, если нет пароля для файла или <paramref name="Mode" /> <b>xlReadOnly</b>.</param>
+        <param name="Notify"><b>Необязательный объект</b>. <b>True</b> (или пропущено), чтобы уведомить пользователя о невозможном немедленном доступе к файлу.</param>
+        <summary>Изменение разрешений доступа для книги. Для этого может потребоваться загрузить обновленную версию с диска.</summary>
+        <remarks><para>Если файл открыт только для чтения, у вас нет эксклюзивного доступа к файлу. Если вы измените файл только для чтения и записи, Microsoft Excel загрузить новую копию файла, чтобы убедиться, что изменения не были внесены, пока файл открыт только для чтения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1196,9 +1196,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество дней, показанных в журнале изменений общей книги. Для чтения и записи, <b>Integer</b>.</summary>
+        <summary>Возвращает или задает количество дней, показанных в истории изменений общей книги. Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Все изменения в журнале изменений, которые старше параметра этого свойства, удаляются при закрытии книги.</para>
+        <remarks><para>Любые изменения в истории изменений, более старые, чем параметр для этого свойства, удаляются при закрытии книги.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1229,10 +1229,10 @@
         <Parameter Name="Type" Type="Microsoft.Office.Interop.Excel.XlLinkType" />
       </Parameters>
       <Docs>
-        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки Microsoft Excel или DDE/OLE, которая должна быть изменена, так как она была возвращена <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> методом.</param>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки Microsoft Excel DDE/OLE, которая будет изменена, так как она была возвращена из <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> метода.</param>
         <param name="NewName">Обязательный атрибут типа <b>String</b>. Новое имя ссылки.</param>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlLinkType" /> . Тип ссылки.</param>
-        <summary>Изменяет ссылку с одного документа на другой.</summary>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlLinkType" />Необязательный . Тип ссылки.</param>
+        <summary>Изменяет ссылку из одного документа в другой.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1262,7 +1262,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение True</b> приведет к тому, что все диаграммы в текущем документе будут отслеживать фактическую точку данных, к которой она прикреплена. <b>False</b> возвращается к отслеживанию индекса точки данных. <b>Boolean</b> (<b>bool</b> in C#) Read/Write.</summary>
+        <summary><b>True</b> приведет к тому, что все диаграммы текущего документа будут отслеживать фактическую точку данных, к которой он присоединен. <b>False</b> возвращается к отслеживанию индекса точки данных. <b>Boolean</b> <b>(bool</b> in C#) Read/Write.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1290,9 +1290,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sheets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекцию, представляюную все листы диаграммы в указанной книге. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, которая представляет все таблицы в <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> указанной книге. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>При использовании этого свойства без квалификатора объекта возвращаются все листы диаграммы в активной книге.</para>
+        <remarks><para>Использование этого свойства без квалификатора объекта возвращает все листы диаграммы в активной книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1322,7 +1322,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Управляет автоматическим запуском средства проверки совместимости при экономии книги. Для чтения и записи.</summary>
+        <summary>Управление автоматическим запуском проверки совместимости при сэкономлении книги. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1351,10 +1351,10 @@
         <Parameter Name="MakePublic" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges"><b>Необязательный объект</b>. <b>True</b> сохраняет изменения и проверки в документе. <b>False</b> возвращает документ в состояние возврата без сохранения редакции.</param>
-        <param name="Comments"><b>Необязательный объект</b>. Позволяет пользователю вводить комментарии для регистрации для редакции книги, внося в нее данные (применяется только в том случае, <paramref name="SaveChanges" /> если имеется <b>true).</b></param>
-        <param name="MakePublic"><b>Необязательный объект</b>. <b>True</b> позволяет пользователю опубликовать книгу после ее регистрации. Это приведет к отправке книги для процесса утверждения, что в конечном итоге может привести к публикации версии книги пользователям с правами только на чтение для книги (применяется, только если равно <paramref name="SaveChanges" /> <b>True).</b></param>
-        <summary>Возвращает книгу с локального компьютера на сервер и устанавливает для нее режим "только чтение", чтобы ее нельзя было редактировать локально. Вызов этого метода также закроет книгу.</summary>
+        <param name="SaveChanges"><b>Необязательный объект</b>. <b>True</b> сохраняет изменения и проверки в документе. <b>False</b> возвращает документ в состояние регистрации без сохранения изменения.</param>
+        <param name="Comments"><b>Необязательный объект</b>. Позволяет пользователю вводить комментарии для проверки проверяемой книги (применяется только в том случае, если <paramref name="SaveChanges" /> она равна <b>True).</b></param>
+        <param name="MakePublic"><b>Необязательный объект</b>. <b>True</b> позволяет пользователю опубликовать книгу после ее регистрации. Это представляет книгу для процесса утверждения, что в конечном итоге может привести к публикации версии книги для пользователей с правами только на чтение к книге (применяется только в том случае, если равно <paramref name="SaveChanges" /> <b>True</b>).</param>
+        <summary>Возвращает книгу с локального компьютера на сервер и задает локализованную книгу только для чтения, чтобы она не редактироваться локально. Вызов этого метода также закроет книгу.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1383,13 +1383,13 @@
         <Parameter Name="VersionType" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges"><b>true,</b> чтобы сохранить книгу на сервере. Значение по умолчанию: <b>true</b>.</param>
-        <param name="Comments">Комментарии к редакции книги, внося в нее (применяется только в том случае, если <paramref name="SaveChanges" /> установлено <b>true).</b></param>
-        <param name="MakePublic"><b>true,</b> чтобы разрешить пользователю публиковать книгу после ее регистрации.</param>
-        <param name="VersionType">Указывает сведения о версии для книги.</param>
-        <summary>Сохраняет книгу на сервере с локального компьютера и устанавливает для локальной книги режим "только чтение", чтобы ее нельзя было редактировать локально.</summary>
-        <remarks><para>Если для параметра установлено true, книга будет отправляться на утверждение, что в конечном итоге может привести к публикации версии книги пользователям с правами только на чтение для книги (применяется только в том случае, если задано <paramref name="MakePublic" /> <b></b> <paramref name="SaveChanges" /> true). <b></b> </para>
-          <para>Чтобы воспользоваться преимуществами функций совместной работы, встроенных в Microsoft Excel, документы должны храниться в Microsoft SharePoint Server. </para>
+        <param name="SaveChanges"><b>верно,</b> чтобы сохранить книгу в расположение сервера. Значение по умолчанию: <b>true</b>.</param>
+        <param name="Comments">Комментарии к пересмотру проверяемой книги (применяется только в том случае, если <paramref name="SaveChanges" /> установлено true). <b></b></param>
+        <param name="MakePublic"><b>верно,</b> чтобы позволить пользователю опубликовать книгу после ее регистрации.</param>
+        <param name="VersionType">Указывает сведения о версии книги.</param>
+        <summary>Сохраняет книгу на сервере с локального компьютера и задает локализованную книгу только для чтения, чтобы она не редактироваться локально.</summary>
+        <remarks><para>Настройка параметра true представляет книгу для процесса утверждения, что в конечном итоге может привести к публикации версии книги для пользователей с правами только на чтение в книгу (применяется только в том случае, если установлено, чтобы <paramref name="MakePublic" /> <b></b> <paramref name="SaveChanges" /> <b>true).</b> </para>
+          <para>Чтобы воспользоваться возможностями совместной работы, встроенными в Microsoft Excel, документы должны храниться в Microsoft SharePoint Server. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1420,11 +1420,11 @@
         <Parameter Name="RouteWorkbook" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="SaveChanges"><b>Необязательный объект</b>. Если в книге нет изменений, этот аргумент игнорируется. Если в книге есть изменения и она отображается в других открытых окнах, этот аргумент игнорируется. Если в книге есть изменения, но она не отображается в других открытых окнах, этот аргумент указывает, следует ли сохранить изменения, как показано в следующей таблице. ValueAction<b>True</b>сохраняет изменения в книге. Если имя файла, связанного с книгой, еще не существует, <paramref name="FileName" /> используется. Если <paramref name="FileName" /> этот запрос опущен, пользователю будет предложено вставлять имя файла.<b> False</b>не сохраняет изменения в этом файле. OmittedDisplays a dialog box asking the user whether or not to save changes.</param>
-        <param name="Filename"><b>Необязательный объект</b>. Сохраните изменения под этим именем файла.</param>
-        <param name="RouteWorkbook"><b>Необязательный объект</b>. Если книга не требуется маршрутить следующему получателю (если у нее нет пути маршрутации или она уже была маршрутизна), этот аргумент игнорируется. В противном случае Microsoft Excel маршрутит книгу, как показано в следующей таблице. Значение ValueMeaning<b>True</b>отправляет книгу следующему получателю. <b>False</b> Не отправляет книгу. OmittedDisplays a dialog box asking the user whether the workbook should be sent.</param>
+        <param name="SaveChanges"><b>Необязательный объект</b>. Если в книге нет изменений, этот аргумент игнорируется. Если в книге есть изменения и книга отображается в других открытых окнах, этот аргумент игнорируется. Если в книге есть изменения, но она не отображается в других открытых окнах, в этом аргументе указывается, следует ли сохранить изменения, как показано в следующей таблице. ValueAction<b>True</b>сохраняет изменения в книге. Если еще нет имени файла, связанного с книгой, то <paramref name="FileName" /> используется. Если <paramref name="FileName" /> не будет пропущено, пользователю будет предложено предоставить имя файла.<b> False</b>не сохраняет изменения в этом файле. OmittedDisplays диалоговое окно с вопросом о том, следует ли сохранять изменения.</param>
+        <param name="Filename"><b>Необязательный объект</b>. Сохранение изменений под этим именем файла.</param>
+        <param name="RouteWorkbook"><b>Необязательный объект</b>. Если книге не требуется маршрутироваться к следующему получателю (если она не имеет скольжения маршрутики или уже была маршрутивна), этот аргумент игнорируется. В противном Microsoft Excel маршруты книги, как показано в следующей таблице. ValueMeaning<b>True</b>отправляет книгу следующему получателю. <b>False</b> Не отправляет книгу. OmittedDisplays диалоговое окно с вопросом о том, следует ли отправить книгу.</param>
         <summary>Закрывает объект.</summary>
-        <remarks><para>Закрытие книги с помощью метода <b>Close</b> не Auto_Close макроса в книге. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> метод для запуска Auto_Close макроса.</para>
+        <remarks><para>Закрытие книги с помощью метода <b>Close</b> не позволяет выполнить Auto_Close макрос в книге. Используйте метод <see cref="M:Microsoft.Office.Interop.Excel._Workbook.RunAutoMacros(Microsoft.Office.Interop.Excel.XlRunAutoMacro)" /> для запуска Auto_Close макрос.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1451,10 +1451,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя кода для объекта. Только для чтения, <b>String</b>. Значение, которое вы видите в ячейке справа <b>от (Имя)</b> в окне свойств, — это имя кода выбранного объекта. Во время разработки можно изменить имя кода объекта, изменив это значение. Это свойство нельзя изменить программным путем во время запуска.</summary>
+        <summary>Возвращает кодовое имя объекта. Только для чтения, <b>String</b>. Значение, которое вы видите в ячейке справа <b>от (Имя)</b> в окне Свойства— кодовое имя выбранного объекта. Во время разработки можно изменить кодовое имя объекта, изменив это значение. Невозможно программным образом изменить это свойство во время запуска.</summary>
         <value>To be added.</value>
-        <remarks><para>Имя кода для объекта можно использовать в качестве имени выражения, возвращаемого объектом.</para>
-          <para>Возможно, имя листа отличается от имени кода. При создании листа имя листа и имя кода одинаковы, но изменение имени листа не изменяет имя кода, а изменение имени кода (с помощью окна свойств в редакторе Visual Basic) не изменяет имя листа.</para>
+        <remarks><para>Кодовое имя объекта можно использовать на месте выражения, возвращаемого объекту.</para>
+          <para>Возможно, имя листа отличается от имени кода. При создании листа имя листа и имя кода одинаковы, но изменение имени листа не меняет имя кода, а изменение имени кода (с помощью окна свойства в редакторе Visual Basic) не меняет имя листа.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1494,7 +1494,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Номер цвета (от 1 до 56). Если этот аргумент не указан, этот метод возвращает массив, содержащий все 56 цветов в палитре.</param>
-        <summary>Возвращает или задает цвета в палитре для книги. Палитра включает 56 записей, каждая из которых представлена значением RGB. Объект <b>read/write</b>.</summary>
+        <summary>Возвращает или задает цвета в палитре для книги. Палитра имеет 56 записей, каждая из которых представлена значением RGB. Объект <b>Read/write</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1522,10 +1522,10 @@
         <ReturnType>Microsoft.Office.Core.CommandBars</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет командные полосы <see cref="P:Microsoft.Office.Interop.Excel._Workbook.CommandBars" /> Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="P:Microsoft.Office.Interop.Excel._Workbook.CommandBars" /> объект, который представляет Microsoft Excel командные полосы. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Если книга внедрена в другое приложение и активирована пользователем, дважды щелкнув книгу, при использовании этого свойства с объектом <b>Workbook</b> возвращается набор полос команд Microsoft Excel, доступных в другом приложении. В остальных случаях использование этого свойства с <b>объектом Workbook</b> не возвращает <b>ничего.</b></para>
-          <para>Программный способ возврата набора полос команд, подключенных к книге, не существует.</para>
+        <remarks><para>Если книга встроена в другое приложение и активирована пользователем, дважды щелкнув <b></b> книгу, с помощью этого свойства с объектом Книги возвращается набор командных полос Microsoft Excel, доступных в другом приложении. Во всех остальных случаях использование этого свойства с объектом <b>Workbook</b> не возвращает <b>ничего</b>.</para>
+          <para>Не существует программного способа возврата набора командных полос, присоединенных к книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1567,18 +1567,18 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comments" /> коллекцию, представляюную все комментарии для указанного таблицы. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Comments" /> коллекцию, которая представляет все комментарии для указанного таблицы. Только для чтения.</summary>
         <value>Возвращает <see cref="T:System.String" /> .</value>
         <remarks>To be added.</remarks>
-        <example><para>В этом примере удаляются все комментарии, добавленные к активному листу Сехиной.</para>
+        <example><para>В этом примере удаляются все комментарии, добавленные Жаном Сельвой на активном листе.</para>
           <code>&lt;span class="label"&gt;For Each c in ActiveSheet.Comments     If c.&lt;/span&gt;
 &lt;i&gt;Author&lt;/i&gt;
 &lt;span class="label"&gt;= "Jean Selva" Then c.Delete Next&lt;/span&gt;</code></example>
-        <example><para>В этом примере удаляются все комментарии, добавленные к активному листу Сехиной.</para>
+        <example><para>В этом примере удаляются все комментарии, добавленные Жаном Сельвой на активном листе.</para>
           <code>&lt;span class="label"&gt;For Each c in ActiveSheet.Comments     If c.&lt;/span&gt;
 &lt;i&gt;Author&lt;/i&gt;
 &lt;span class="label"&gt;= "Jean Selva" Then c.Delete Next&lt;/span&gt;</code></example>
-        <example><para>В этом примере удаляются все комментарии, добавленные к активному листу Сехиной.</para>
+        <example><para>В этом примере удаляются все комментарии, добавленные Жаном Сельвой на активном листе.</para>
           <code>&lt;span class="label"&gt;For Each c in ActiveSheet.Comments     If c.&lt;/span&gt;
 &lt;i&gt;Author&lt;/i&gt;
 &lt;span class="label"&gt;= "Jean Selva" Then c.Delete Next&lt;/span&gt;</code></example>
@@ -1638,7 +1638,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Connections</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Свойство устанавливает связь между книгой и ODBC или источником данных OLEDB и обновляет данные без запроса <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Connections" /> пользователя. Только для чтения.</summary>
+        <summary>Свойство устанавливает связь между книгой и ODBC или источником данных OLEDB и обновляет данные без <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Connections" /> запроса пользователя. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Connections" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1694,9 +1694,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет приложение-контейнер для указанного объекта OLE. Объект только для <b>чтения.</b></summary>
+        <summary>Возвращает объект, который представляет приложение контейнера для указанного объекта OLE. Объект только для <b>чтения.</b></summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство позволяет получить доступ к объектной модели приложения-контейнера, если книга Excel открыта в хост-приложении, например Microsoft Internet Explorer.</para>
+        <remarks><para>Это свойство позволяет получить доступ к объектной модели контейнерного приложения, если Excel книга открыта в хост-приложении, например Microsoft Internet Explorer.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1754,7 +1754,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если файл резервной копии создается при его экономии. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если файл резервного копирования создается при его сэкономлении. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1782,9 +1782,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> enumeration, которая указывает приложение, в котором был создан этот объект. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> переумериях, которая указывает приложение, в котором был создан этот объект. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1811,11 +1811,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает коллекцию, представляюную все настраиваемые свойства документа для <see cref="T:Microsoft.Office.Core.DocumentProperties" /> указанной книги.</summary>
+        <summary>Возвращает или задает коллекцию, которая представляет все настраиваемые свойства документа <see cref="T:Microsoft.Office.Core.DocumentProperties" /> для указанной книги.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство возвращает всю коллекцию настраиваемого свойства документа. Используйте этот метод для возврата одного члена коллекции (объекта), указав либо имя свойства, либо индекс коллекции <see cref="P:Microsoft.Office.Core.DocumentProperties.Item(System.Object)" /> <see cref="T:Microsoft.Office.Core.DocumentProperty" /> (в качестве числа).</para>
-          <para>Метод <b>Item</b> является методом по умолчанию для <b>коллекции DocumentProperties.</b></para>
-          <para>Используйте свойство для возврата коллекции встроенных <see cref="P:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties" /> свойств документа.</para>
+        <remarks><para>Это свойство возвращает всю коллекцию пользовательских свойств документов. Используйте метод для возвращения одного члена коллекции (объекта), указав либо имя свойства, либо индекс коллекции <see cref="P:Microsoft.Office.Core.DocumentProperties.Item(System.Object)" /> <see cref="T:Microsoft.Office.Core.DocumentProperty" /> (в качестве номера).</para>
+          <para>Метод <b>Item</b> — это метод по умолчанию для коллекции <b>DocumentProperties.</b></para>
+          <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties" /> свойство, чтобы вернуть коллекцию встроенных свойств документов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1870,7 +1870,7 @@
         <ReturnType>Microsoft.Office.Core.CustomXMLParts</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает A. <see cref="T:Microsoft.Office.Core.CustomXMLParts" /> коллекция, представляюная пользовательский XML-xml в хранилище данных XML. Только для чтения.</summary>
+        <summary>Возвращает a. <see cref="T:Microsoft.Office.Core.CustomXMLParts" /> коллекция, представляюная настраиваемый XML в хранилище данных XML. Только для чтения.</summary>
         <value><b>CustomXMLParts</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1907,7 +1907,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если книга использует систему дат 1904. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если в книге используется система дат 1904 года. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1944,7 +1944,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает стиль таблицы из коллекции, используемой в качестве стиля по умолчанию для <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> список. Для чтения и записи.</summary>
+        <summary>Указывает стиль таблицы из коллекции, используемой в качестве стиля по умолчанию <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> для PivotTables. Для чтения и записи.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1981,8 +1981,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает стиль из объекта, который используется в качестве стиля <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> по умолчанию для срезов.</summary>
-        <value>Стиль <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> объекта, который используется в качестве стиля по умолчанию для срезов.</value>
+        <summary>Получает или задает стиль из <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> объекта, который используется в качестве стиля по умолчанию для срезов.</summary>
+        <value>Стиль объекта, который <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> используется в качестве стиля по умолчанию для срезов.</value>
         <remarks><para>Для чтения и записи.</para>
           <para> </para></remarks>
       </Docs>
@@ -2056,7 +2056,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Имя стиля среза книги по умолчанию. <b>Object</b> (<b>object</b> in C#). Чтение и запись</summary>
+        <summary>Имя стиля среза по умолчанию книги. <b>Объект</b> <b>(объект</b> в C#). Чтение и запись</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2088,7 +2088,7 @@
       </Parameters>
       <Docs>
         <param name="NumberFormat">Обязательный атрибут типа <b>String</b>. Имена удаляемого формата номеров.</param>
-        <summary>Удаляет пользовательский формат номеров из книги.</summary>
+        <summary>Удаляет настраиваемый формат номеров из книги.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2157,7 +2157,7 @@
       <Docs>
         <summary>Возвращает или задает отображение фигур. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlDisplayDrawingObjects" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Может быть одной из следующих констант XlDisplayDrawingObjects.</para>
+        <remarks><para>Может быть одним из следующих констант XlDisplayDrawingObjects.</para>
           <list type="table">
             <item>
               <term>
@@ -2169,7 +2169,7 @@
               <term>
                 <paramref name="xlPlaceholders" />
               </term>
-              <description>Показывать только замещего.</description>
+              <description>Показывать только держатели.</description>
             </item>
             <item>
               <term>
@@ -2207,7 +2207,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Boolean</b> value that determines whether ink comments are displayed in the workbook. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Значение <b>Boolean,</b> определя которое определяет, отображаются ли в книге комментарии с окантовкой. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2265,7 +2265,7 @@
       <Docs>
         <summary>Возвращает коллекцию, представляющую коллекцию версий общей книги с включенной версией и хранящуюся в библиотеке документов <see cref="P:Microsoft.Office.Interop.Excel._Workbook.DocumentLibraryVersions" /> на сервере.</summary>
         <value>To be added.</value>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2295,7 +2295,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, должен ли пользователь получить запрос на преобразование книги, если книга содержит функции, которые не поддерживаются версиями Excel более ранних short_Excel2007. Чтение и запись</summary>
+        <summary>Возвращает или задает, если пользователю следует получить запрос на преобразование книги, если книга содержит функции, не поддерживаемые версиями Excel раньше short_Excel2007. Чтение и запись</summary>
         <value>Boolean</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2443,7 +2443,7 @@
       <Docs>
         <summary>Сохраняет измененные файлы всех форматов с интервалом времени. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>В случае сбой Microsoft Excel, сбой системы или неправильное завершение работы системы (не позволяя Excel сохранять измененные файлы) открываются файлы, и у пользователя есть возможность сохранить изменения, которые в противном случае были бы потеряны. Когда пользователь перезапускает Excel, откроется окно восстановления документа, в результате этого пользователь сможет восстановить файлы, над которые он работал. Установка для этого <b>свойства значения True</b> (по умолчанию) включает эту функцию.</para>
+        <remarks><para>Если Microsoft Excel сбой, система сбой, или если система неправильно закрыта (не позволяя Excel сохранить измененные файлы), архивные файлы открываются, и у пользователя есть возможность сохранить изменения, которые в противном случае были бы потеряны. Когда пользователь перезапустит Excel, откроется окно восстановления документов, что дает пользователю возможность восстановить файлы, над которые он работал. Настройка этого свойства <b>true (по</b> умолчанию) позволяет использовать эту функцию.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2468,7 +2468,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Этот метод позволяет разработчикам программно включить подключения к данным в книге <see cref="M:Microsoft.Office.Interop.Excel._Workbook.EnableConnections" /> для пользователя.</summary>
+        <summary>Этот метод позволяет разработчикам программировать подключение к данным <see cref="M:Microsoft.Office.Interop.Excel._Workbook.EnableConnections" /> в книге для пользователя.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2498,7 +2498,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку,</b> указывав имя поставщика шифрования алгоритма, 1st_Excel12 при шифровании документов. Для чтения и записи.</summary>
+        <summary>Возвращает <b>строку с</b> указанием имени поставщика шифрования алгоритма, который 1st_Excel12 при шифровании документов. Для чтения и записи.</summary>
         <value><b>s</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2524,7 +2524,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Завершает проверку файла, отправленного для проверки с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SendForReview(System.Object,System.Object,System.Object,System.Object)" /> этого метода.</summary>
+        <summary>Завершается проверка файла, отправленного для проверки с помощью <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SendForReview(System.Object,System.Object,System.Object,System.Object)" /> метода.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2554,7 +2554,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если заглавная панель композиции электронной почты и панель инструментов конверта видимы. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если заглавная панель композиции электронной почты и панель инструментов конверта видны. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2582,7 +2582,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sheets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, представляюную все международные листы макроса <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> Microsoft Excel 4.0 в указанной книге. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, которая представляет все Microsoft Excel 4.0 международных макрос в <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> указанной книге. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2610,7 +2610,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sheets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, представляюную все листы макроса <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> Microsoft Excel 4.0 в указанной книге. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, которая представляет все Microsoft Excel 4.0 макрос в <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> указанной книге. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2638,9 +2638,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство позволяет разработчикам проверить, находится ли книга в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Excel8CompatibilityMode" /> режиме совместимости. Только для чтения</summary>
+        <summary>Свойство предоставляет разработчикам возможность проверить, находится ли книга <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Excel8CompatibilityMode" /> в режиме совместимости. Только для чтения</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>В режиме совместимости некоторые функции отключены или выполняются по-разному.  Например, в short_Excel2007 больше строк и столбцов, чем в предыдущих версиях Excel. Кроме того, структурированные ссылки доступны в short_Excel2007.</para>
+        <remarks><para>В режиме совместимости определенные функции отключены или выполняются по-разному.  Например, в short_Excel2007 больше строк и столбцов по сравнению с более ранними версиями Excel. Кроме того, структурированные ссылки доступны в short_Excel2007.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2668,9 +2668,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Назначает текущему пользователю монопольный доступ к книге, открытой как общий список.</summary>
+        <summary>Назначает текущему пользователю эксклюзивный доступ к книге, открытой в общем списке.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Метод <b>ExclusiveAccess</b> сохраняет все изменения, внесенные в книгу, и требует, чтобы другие пользователи, у которых открыта книга, могли сохранить изменения в другом файле.</para>
+        <remarks><para>Метод <b>ExclusiveAccess</b> сохраняет все изменения, внесенные в книгу, и требует от других пользователей, у которых открыта книга, чтобы сохранить изменения в другом файле.</para>
           <para>Если указанная книга не открыта как общий список, этот метод не работает. Чтобы определить, открыта ли книга как общий список, используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.MultiUserEditing" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
@@ -2705,20 +2705,20 @@
         <Parameter Name="FixedFormatExtClassPtr" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Может иметь любой <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypePDF" /> или <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypeXPS" /> .</param>
-        <param name="Filename"><b>Строка,</b> которая указывает имя файла, который необходимо сохранить. Вы можете включить полный или короткий путь.  Excel2007 сохраняет файл в текущей папке.</param>
-        <param name="Quality">Может быть установлено как в том, <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatQuality.xlQualityStandard" /> так и <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatQuality.xlQualityMinimum" /> в .</param>
-        <param name="IncludeDocProperties">Установите <b>true,</b> чтобы указать, что свойства документа <b></b> должны быть включены или иметь false, чтобы указать, что они опущены.</param>
-        <param name="IgnorePrintAreas">Если <b>задано true,</b>игнорируются все области печати, заданные при публикации. Если <b>задано false,</b>будут использовать области печати, заданные при публикации.</param>
-        <param name="From">Номер страницы, на которой нужно начать публикацию. Если этот аргумент опущен, публикация начинается с начала.</param>
+        <param name="Type">Может быть или <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypePDF" /> <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypeXPS" /> .</param>
+        <param name="Filename"><b>Строка,</b> которая указывает имя сохраненного файла. Вы можете включить полный или короткий путь.  Excel2007 сохраняет файл в текущей папке.</param>
+        <param name="Quality">Можно установить либо <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatQuality.xlQualityStandard" /> или <see cref="F:Microsoft.Office.Interop.Excel.XlFixedFormatQuality.xlQualityMinimum" /> .</param>
+        <param name="IncludeDocProperties">Установите для <b>True,</b> чтобы указать, что свойства документа должны быть включены или задатки <b>false,</b> чтобы указать, что они опущены.</param>
+        <param name="IgnorePrintAreas">Если <b>установлено true,</b>игнорируется все области печати, заданные при публикации. Если <b>установлено false,</b>будут использовать области печати, заданные при публикации.</param>
+        <param name="From">Номер страницы, на которой необходимо начать публикацию. Если этот аргумент опущен, публикация начинается с самого начала.</param>
         <param name="To">Номер последней страницы для публикации. Если этот аргумент опущен, публикация заканчивается последней страницей</param>
-        <param name="OpenAfterPublish">Если <b>задано true,</b> файл отображается в представлении после его публикации. Если <b>задано false,</b> файл публикуется, но не отображается.</param>
-        <param name="FixedFormatExtClassPtr">Указатель на класс <b>FixedFormatExt.</b></param>
-        <summary>Этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(Microsoft.Office.Interop.Excel.XlFixedFormatType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод используется для публикации книги в формате PDF или XPS.</summary>
+        <param name="OpenAfterPublish">Если задан <b>файл True,</b> отображает файл в зрительном окантовке после его публикации. Если <b>установлено false,</b> файл публикуется, но не отображается.</param>
+        <param name="FixedFormatExtClassPtr">Указатель на <b>класс FixedFormatExt.</b></param>
+        <summary>Метод <see cref="M:Microsoft.Office.Interop.Excel._Workbook.ExportAsFixedFormat(Microsoft.Office.Interop.Excel.XlFixedFormatType,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> используется для публикации книги в формате PDF или XPS.</summary>
         <remarks>To be added.</remarks>
-        <example><para>В следующем примере создается PDF-файл со стандартным качеством в каталоге текущего файла и после публикации файла отображается в просматриваемом файле.</para>
+        <example><para>В следующем примере pdf создается при стандартном качестве в каталоге текущего файла и отображает файл в зрительном окантовке после его публикации.</para>
           <para>
-            <b>Примечание.</b>Если надстройка PDF в настоящее время не установлена, произойдет ошибка.</para></example>
+            <b>Примечание.</b>Ошибка произойдет, если надстройка PDF в настоящее время не установлена.</para></example>
       </Docs>
     </Member>
     <Member MemberName="FileFormat">
@@ -2747,9 +2747,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlFileFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает формат файла и/или тип книги. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlFileFormat" /> чтения.</summary>
+        <summary>Возвращает формат файла и/или тип книги. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlFileFormat" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Некоторые из этих констант могут быть недоступны вам, в зависимости от выбранной или установленной языковой поддержки (например, для английского (США).</para>
+        <remarks><para>Некоторые из этих констант могут быть недоступны в зависимости от выбранной или установленной языковой поддержки (например, английского языка США).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2779,9 +2779,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>boolean,</b> который указывает, является ли книга последней. Чтение и запись</summary>
+        <summary>Возвращает или задает <b>boolean,</b> который указывает, является ли книга окончательной. Чтение и запись</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Установка значения <b>True</b> пометит книгу как окончательную, сообщает получателям (если таковой имеется) о том, что книга является последней, и устанавливает для нее значение "только для чтения".</para>
+        <remarks><para>Настройка значения <b>True</b> означает, что книга является окончательной, сообщает получателям (если таковое имеется) о том, что книга является окончательной, и задает книгу только для чтения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2814,13 +2814,13 @@
       </Parameters>
       <Docs>
         <param name="Address">Обязательный атрибут типа <b>String</b>. Адрес целевого документа.</param>
-        <param name="SubAddress"><b>Необязательный объект</b>. Расположение в целевом документе. Значение по умолчанию — пустая строка.</param>
-        <param name="NewWindow"><b>Необязательный объект</b>. <b>True,</b> чтобы отобразить конечное приложение в новом окне. Значение по умолчанию — <b>False</b>.</param>
+        <param name="SubAddress"><b>Необязательный объект</b>. Расположение в целевом документе. Значение по умолчанию — это пустая строка.</param>
+        <param name="NewWindow"><b>Необязательный объект</b>. <b>True</b> для отображения целевого приложения в новом окне. Значение по умолчанию — <b>False</b>.</param>
         <param name="AddHistory"><b>Необязательный объект</b>. Не используется. Зарезервировано для последующего использования.</param>
-        <param name="ExtraInfo"><b>Необязательный объект</b>. Строка или массив byte, который указывает дополнительные сведения для HTTP, которые будут использовать для разрешения гиперссылки. Например, можно указать координаты карты изображения, содержимое формы или имя <paramref name="ExtraInfo" /> файла FAT.</param>
-        <param name="Method"><b>Необязательный объект</b>. Указывает способ <paramref name="ExtraInfo" /> крепится. Может быть одной из <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" /> констант.</param>
-        <param name="HeaderInfo"><b>Необязательный объект</b>. Строка, которая указывает сведения о загонах для HTTP-запроса. Значение по умолчанию: пустая строка.</param>
-        <summary>Отображает кэшный документ, если он уже загружен. В противном случае этот метод разрешит гиперссылки, загрузит целевой документ и отобразит документ в соответствующем приложении.</summary>
+        <param name="ExtraInfo"><b>Необязательный объект</b>. Массив строки или byte, который указывает дополнительные сведения для HTTP для решения гиперссылки. Например, можно указать координаты карты изображений, содержимое формы или имя <paramref name="ExtraInfo" /> файла FAT.</param>
+        <param name="Method"><b>Необязательный объект</b>. Указывает способ <paramref name="ExtraInfo" /> прикрепления. Может быть одной из <see cref="T:Microsoft.Office.Core.MsoExtraInfoMethod" /> констант.</param>
+        <param name="HeaderInfo"><b>Необязательный объект</b>. Строка, которая указывает сведения о загонах для http-запроса. Значение по умолчанию: пустая строка.</param>
+        <summary>Отображает кэшировать документ, если он уже загружен. В противном случае этот метод устраняет гиперссылку, скачивает целевой документ и отображает документ в соответствующем приложении.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2850,7 +2850,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Привнося полное вычисление книги. Для чтения и записи.</summary>
+        <summary>Привнося полный расчет книги. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2879,7 +2879,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно найти в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
+        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно получить в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -2909,9 +2909,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя объекта, включая его путь на диске, в качестве строки. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает имя объекта, в том числе путь на диске, в качестве строки. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство эквивалентно свойству, за которым следует текущий сепаратор файловой системы, за которым <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Path" /> следует <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Name" /> свойство.</para>
+        <remarks><para>Это свойство эквивалентно свойству, за которым следует текущий сепаратор файловой системы, а затем <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Path" /> <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Name" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2941,7 +2941,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку,</b> указывающее имя объекта, включая его путь на диске, в качестве строки. Только для чтения.</summary>
+        <summary>Возвращает <b>строку,</b> указывающее имя объекта, в том числе путь на диске, в качестве строки. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2967,7 +2967,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает коллекцию объектов <see cref="T:Microsoft.Office.Core.WorkflowTask" /> для указанной книги.</summary>
+        <summary>Возвращает коллекцию <see cref="T:Microsoft.Office.Core.WorkflowTask" /> объектов для указанной книги.</summary>
         <returns><see cref="T:Microsoft.Office.Core.WorkflowTasks" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2993,7 +2993,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает коллекцию объектов <see cref="T:Microsoft.Office.Core.WorkflowTemplate" /> для указанной книги.</summary>
+        <summary>Возвращает коллекцию <see cref="T:Microsoft.Office.Core.WorkflowTemplate" /> объектов для указанной книги.</summary>
         <returns><see cref="T:Microsoft.Office.Core.WorkflowTemplates" /></returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3067,9 +3067,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если в книге есть пароль защиты. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если в книге есть пароль защиты. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>С помощью этого метода можно назначить книге пароль <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> защиты.</para>
+        <remarks><para>С помощью метода можно назначить пароль защиты <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3111,9 +3111,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если книга имеет маршрутику. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если в книге есть скольжение маршрутивки. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>При установке для этого <b>свойства значения True</b> создается скольжение маршрутки со значениями по умолчанию. При установке для свойства <b>свойства False</b> удаляется потайка маршрутки.</para>
+        <remarks><para>Настройка этого свойства <b>true</b> создает скольжение маршрутов со значениями по умолчанию. Настройка свойства <b>False</b> удаляет скольжение маршрутивки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3140,9 +3140,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение <b>boolean,</b> которое представляет, есть ли в книге присоединенный проект Microsoft Visual Basic для приложений. Только для чтения.</summary>
+        <summary>Возвращает <b>boolean,</b> который представляет, есть ли в книге присоединенный проект Microsoft Visual Basic для приложений. Только для чтения.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Это свойство наиболее полезно при определении того, требуется ли сохранить книгу в формате файлов с поддержкой макроса. Если сохранить их в другом формате, макрос и проекты кода, содержащиеся в документе, могут быть потеряны.</para>
+        <remarks><para>Это свойство наиболее полезно для программного определения того, нужно ли сохранить книгу в формате файлов с поддержкой макроса. Если сохранить в другом формате, макрос и проекты кода, содержащиеся в документе, могут быть потеряны.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3201,10 +3201,10 @@
         <Parameter Name="Where" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="When"><b>Необязательный объект</b>. Изменения, которые показываются. Может быть одной из следующих констант <b>XlHighlightChangesTime:</b> <b>xlSinceMyLastSave,</b> <b>xlAllChanges</b>или <b>xlNotYetReviewed.</b></param>
-        <param name="Who"><b>Необязательный объект</b>. Пользователь или пользователи, изменения которых показаны. Может быть "Все", "Все, кроме меня" или имя одного из пользователей общей книги.</param>
-        <param name="Where"><b>Необязательный объект</b>. Ссылка на диапазон в стиле A1, в которую указывается область для проверки на внесение изменений.</param>
-        <summary>Управляет тем, как изменения показываются в общей книге.</summary>
+        <param name="When"><b>Необязательный объект</b>. Изменения, которые показаны. Может быть одним из следующих констант <b>XlHighlightChangesTime:</b> <b>xlSinceMyLastSave</b>, <b>xlAllChanges</b>или <b>xlNotYetReviewed</b>.</param>
+        <param name="Who"><b>Необязательный объект</b>. Пользователь или пользователи, изменения которых показаны. Может быть "Все", "Все, кроме меня", или имя одного из пользователей общей книги.</param>
+        <param name="Where"><b>Необязательный объект</b>. Ссылка на диапазон A1 в стиле A1, которая указывает область для проверки изменений.</param>
+        <summary>Управление тем, как изменения показаны в общей книге.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3234,7 +3234,7 @@
         <ReturnType>Microsoft.Office.Core.HTMLProject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект в указанной книге, который представляет ветвь проекта верхнего уровня, как в обозревателе <see cref="P:Microsoft.Office.Interop.Excel._Workbook.HTMLProject" /> проектов в редакторе скриптов Майкрософт. Только для чтения.</summary>
+        <summary>Возвращает объект в указанной книге, которая представляет филиал проекта верхнего уровня, как в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.HTMLProject" /> Project Explorer в редактор скриптов (Майкрософт). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3293,9 +3293,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Boolean</b> value that specifies whether list borders are visible when a list is not active. Возвращает <b>true,</b> если граница видна. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Значение <b>Boolean,</b> которое указывает, видны ли границы списка, если список не активен. Возвращает <b>True,</b> если граница видна. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка этого свойства повлияет на все списки, которые находятся на листе.</para>
+        <remarks><para>Настройка этого свойства повлияет на все списки, которые находятся на листе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3325,24 +3325,24 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если книга работает как надстройка. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если книга работает в качестве надстройки. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если для этого свойства <b>установлено true,</b>книга имеет следующие характеристики:</para>
+        <remarks><para>При заданной свойстве <b>True</b>книга имеет следующие характеристики:</para>
           <list type="bullet">
             <item>
-              <description>Вам не будет предложено сохранить книгу, если во время ее открытия были внесены изменения.</description>
+              <description>Вам не будет предложено сохранить книгу, если во время открытия книги будут внесены изменения.</description>
             </item>
             <item>
-              <description>Окно книги не будет видно.</description>
+              <description>Окно книги не будет видимым.</description>
             </item>
             <item>
-              <description>Макрос в книге не будет отображаться в диалоговом окне макроса (отображается путем нажатия указателя на макрос в меню "Инструменты" и щелчка по макросам).</description>
+              <description>Все макрос в книге не будут видны в диалоговом окне Макрос (отображается путем указать макрос в меню Tools и щелкнуть Макрос).</description>
             </item>
             <item>
-              <description>Макрос в книге по-прежнему можно запускать в диалоговом окне макроса, даже если они не видны. Кроме того, имена макроса не должны быть квалифицироваться именем книги.</description>
+              <description>Макрос в книге по-прежнему можно запускать из диалоговой окне Макро, даже если они не видны. Кроме того, имена макроса не должны быть квалифицированы с именем книги.</description>
             </item>
             <item>
-              <description>Удерживая клавишу SHIFT при открываемой книге, это не влияет на работу.</description>
+              <description>Удержание ключа SHIFT при открываемой книге не влияет.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -3371,7 +3371,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если указанная книга редактируется на месте. <b>False,</b> если книга была открыта в Microsoft Excel для редактирования. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если указанная книга редактирована на месте. <b>False,</b> если книга была открыта в Microsoft Excel для редактирования. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3402,7 +3402,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если для общей книги включено отслеживание изменений. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если отслеживание изменений включено для общей книги. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3478,10 +3478,10 @@
         <Parameter Name="EditionRef" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name"><b>Необязательная строка.</b></param>
-        <param name="LinkInfo">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlLinkInfo" /> . Тип возвращаемой информации.</param>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlLinkInfoType" /> . Тип возвращаемой ссылки.</param>
-        <param name="EditionRef"><b>Необязательный объект</b>. Если ссылка является выпуском, этот аргумент указывает ссылку на выпуск в качестве строки в стиле R1C1. Этот аргумент необходим, если в книге имеется несколько издателей или подписчиков с одинаковыми именами.</param>
+        <param name="Name"><b>Необязательная строка</b>.</param>
+        <param name="LinkInfo">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlLinkInfo" /> . Тип возвращаемой информации.</param>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlLinkInfoType" />Необязательный . Тип возвращаемой ссылки.</param>
+        <param name="EditionRef"><b>Необязательный объект</b>. Если ссылка является выпуском, этот аргумент указывает ссылку на издание как строку в стиле R1C1. Этот аргумент необходим, если в книге имеется несколько издателей или подписчиков с одинаковым именем.</param>
         <summary>Возвращает дату ссылки и состояние обновления. <b>Объект</b>.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -3512,11 +3512,11 @@
         <Parameter Name="Type" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlLink" /> . Тип возвращаемой ссылки.</param>
-        <summary>Возвращает массив ссылок в книге. Имена в массиве — это имена связанных документов, выпусков, DDE- или OLE-серверов. Возвращает <b>пустое,</b> если ссылок нет. <b>Объект</b>.</summary>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlLink" />Необязательный . Тип возвращаемой ссылки.</param>
+        <summary>Возвращает массив ссылок в книге. Имена в массиве — это имена связанных документов, выпусков или серверов DDE или OLE. Возвращает <b>пустой,</b> если нет ссылок. <b>Объект</b>.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Формат массива — это одномерный массив для всех типов, кроме издателя и подписчика. Возвращенные строки содержат имя источника ссылки в соответствующей нотации для типа ссылки. Например, ссылки DDE используют "Сервер| Документ! Синтаксис item.</para>
-          <para>Для ссылок издателя и подписчика возвращаемая массив является двумерной. Первый столбец массива содержит имена выпуска, а второй столбец содержит ссылки на выпуски в виде текста.</para>
+        <remarks><para>Формат массива — это одномерный массив для всех типов, кроме издателя и абонента. Возвращенные строки содержат имя источника ссылок в соответствующей нотации для типа ссылки. Например, ссылки DDE используют "Server| Документ! Синтаксис Item.</para>
+          <para>Для ссылок издателя и подписчиков возвращаемая массивка является двумерной. Первый столбец массива содержит имена издания, а второй — ссылки на выпуски в виде текста.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3546,7 +3546,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если изменения в общей книге показаны на отдельном сайте. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если изменения в общей книге показаны на отдельном таблице. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3572,7 +3572,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Блокирует книгу на сервере, чтобы предотвратить изменение.</summary>
+        <summary>Блокирует книгу на сервере для предотвращения изменений.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -3599,7 +3599,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Mailer</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно найти в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
+        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно получить в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3627,7 +3627,7 @@
         <Parameter Name="Filename" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">Необходимый <b>объект</b>. Имя файла книги, которая содержит изменения, которые необходимо объединить с открытой книгой.</param>
+        <param name="Filename">Необходимый <b>объект</b>. Имя файла книги, которая содержит изменения, которые будут объединены в открытую книгу.</param>
         <summary>Объединяет изменения из одной книги в открытую книгу.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3717,9 +3717,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если книга открыта как общий список. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если книга открыта как общий список. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы сохранить книгу в качестве общего списка, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> этот метод. Чтобы переключить книгу из общего режима в монопольный режим, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.ExclusiveAccess" /> метод.</para>
+        <remarks><para>Чтобы сохранить книгу в общем списке, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод. Чтобы переключить книгу из общего режима в эксклюзивный, используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.ExclusiveAccess" /> метод.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3774,7 +3774,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Names</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, которая представляет все имена в указанной книге (включая все <see cref="T:Microsoft.Office.Interop.Excel.Names" /> имена, специфификие для таблицы). Объект Names только <b>для</b> чтения.</summary>
+        <summary>Возвращает коллекцию, которая представляет все имена в указанной книге (включая все имена, определенные для <see cref="T:Microsoft.Office.Interop.Excel.Names" /> таблицы). Объект "Имена <b>только для чтения".</b></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3964,9 +3964,9 @@
         <Parameter Name="Type" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки Microsoft Excel или DDE/OLE, возвращаемой <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> методом.</param>
-        <param name="ReadOnly"><b>Необязательный объект</b>. <b>True,</b> чтобы открывать документы только для чтения. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlLink" /> . Тип ссылки.</param>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки Microsoft Excel или DDE/OLE, как возвращается из <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> метода.</param>
+        <param name="ReadOnly"><b>Необязательный объект</b>. <b>True</b> для открытия документов только для чтения. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlLink" />Необязательный . Тип ссылки.</param>
         <summary>Открывает вспомогательные документы для ссылки или ссылок.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4054,9 +4054,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку,</b> указывающее алгоритм, который Microsoft Excel использует для шифрования паролей для указанной книги. Только для чтения.</summary>
+        <summary>Возвращает <b>строку с</b> указанием алгоритма, Microsoft Excel используется для шифрования паролей для указанной книги. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SetPasswordEncryptionOptions(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы указать, шифрует ли Excel свойства файлов для книг, защищенных паролем.</para>
+        <remarks><para>Используйте метод, чтобы указать, Excel шифрует свойства файлов для книг, защищенных <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SetPasswordEncryptionOptions(System.Object,System.Object,System.Object,System.Object)" /> паролем.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4083,9 +4083,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если Microsoft Excel шифрует свойства файлов для указанной защищенной паролем книги. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> Microsoft Excel шифрует свойства файлов для указанной книги, защищенной паролем. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SetPasswordEncryptionOptions(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы указать, шифрует ли Excel свойства файла для указанной защищенной паролем книги.</para>
+        <remarks><para>Используйте метод, чтобы указать, Excel шифрует свойства файлов для указанной книги, <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SetPasswordEncryptionOptions(System.Object,System.Object,System.Object,System.Object)" /> защищенной паролем.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4112,9 +4112,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>значение,</b> указывающее длину ключа алгоритма, который Microsoft Excel использует при шифровании паролей для указанной книги. Только для чтения.</summary>
+        <summary>Возвращает <b>integer,</b> указывающее длину ключа алгоритма, Microsoft Excel при шифровании паролей для указанной книги. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SetPasswordEncryptionOptions(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы указать, шифрует ли Excel свойства файла для указанной защищенной паролем книги.</para>
+        <remarks><para>Используйте метод, чтобы указать, Excel шифрует свойства файлов для указанной книги, <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SetPasswordEncryptionOptions(System.Object,System.Object,System.Object,System.Object)" /> защищенной паролем.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4141,8 +4141,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку,</b> указывав имя поставщика шифрования алгоритма, который Microsoft Excel использует при шифровании паролей для указанной книги. Только для чтения.</summary>
-        <value><b>Строка</b></value>
+        <summary>Возвращает <b>строку с</b> указанием имени поставщика шифрования алгоритма, который Microsoft Excel при шифровании паролей для указанной книги. Только для чтения.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4172,7 +4172,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает полный путь к приложению, за исключением конечного сепаратора и имени приложения. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает полный путь к приложению, исключая окончательный сепаратор и имя приложения. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4231,7 +4231,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если параметры фильтрации и сортировки для списков включены в личное представление общей книги пользователя. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если параметры фильтрации и сортировки списков включены в личное представление пользователя об общей книге. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4262,7 +4262,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если параметры печати включены в личное представление общей книги пользователя. Read-write <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> если параметры печати включены в личное представление пользователя об общей книге. Read-write <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4288,7 +4288,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> коллекцию, представляюную все кэши pivotTable в указанной книге. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, которая представляет все кэши <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> PivotTable в указанной книге. Только для чтения.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4316,7 +4316,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет коллекцию всех отчетов pivotTable на этом сайте. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет коллекцию всех отчетов PivotTable на таблице. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4409,8 +4409,8 @@
         <Parameter Name="DestName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="DestName"><b>Необязательный объект</b>. Этот аргумент игнорируется. Метод <b>Post</b> указывает пользователю указать назначение книги.</param>
-        <summary>Публикует указанную книгу в общедоступных папках. Этот метод работает только с клиентом Microsoft Exchange, подключенным к серверу Microsoft Exchange.</summary>
+        <param name="DestName"><b>Необязательный объект</b>. Этот аргумент игнорируется. Метод <b>Post</b> позволяет пользователю указать пункт назначения книги.</param>
+        <summary>Публикация указанной книги в общедоступные папки. Этот метод работает только с клиентом Microsoft Exchange, подключенным к серверу Microsoft Exchange.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4446,7 +4446,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если вычисления в этой книге будут произведены с использованием только точности отображаемого числа. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если вычисления в этой книге будут сделаны с использованием только точности чисел, как они отображаются. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4486,16 +4486,16 @@
         <Parameter Name="PrToFileName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="From"><b>Необязательный объект</b>. Номер страницы, на которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
+        <param name="From"><b>Необязательный объект</b>. Число страницы, на которой необходимо начать печать. Если этот аргумент опущен, печать начинается в начале.</param>
         <param name="To"><b>Необязательный объект</b>. Номер последней страницы для печати. Если этот аргумент опущен, печать заканчивается последней страницей.</param>
         <param name="Copies"><b>Необязательный объект</b>. Количество копий для печати. Если этот аргумент опущен, печатается одна копия.</param>
-        <param name="Preview"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы Microsoft Excel вызывал предварительный просмотр печати перед печатью объекта. <b>False</b> (или пропущен) для немедленной печати объекта.</param>
+        <param name="Preview"><b>Необязательный объект</b>. <b>True,</b> чтобы Microsoft Excel вызвать предварительный просмотр печати перед печатью объекта. <b>False</b> (или опущенный) для немедленной печати объекта.</param>
         <param name="ActivePrinter"><b>Необязательный объект</b>. Задает имя активного принтера.</param>
-        <param name="PrintToFile"><b>Необязательный объект</b>. <b>True</b> для печати в файл. Если он не указан, Microsoft Excel запросит у пользователя ввести <paramref name="PrToFileName" /> имя выходного файла.</param>
-        <param name="Collate"><b>Необязательный объект</b>. <b>True</b> для совме-ации нескольких копий.</param>
-        <param name="PrToFileName"><b>Необязательный объект</b>. Если <paramref name="PrintToFile" /> задано <b>true,</b>этот аргумент указывает имя файла, в который нужно напечатать.</param>
-        <summary>Печатает объект.</summary>
-        <remarks><para>"Страницы" в описаниях и ссылается на печатные страницы, а не на общие страницы <paramref name="From" /> <paramref name="To" /> на листе или в книге.</para>
+        <param name="PrintToFile"><b>Необязательный объект</b>. <b>True</b> для печати в файл. Если не указано, Microsoft Excel пользователю ввести имя <paramref name="PrToFileName" /> выходного файла.</param>
+        <param name="Collate"><b>Необязательный объект</b>. <b>True</b> для скопить несколько копий.</param>
+        <param name="PrToFileName"><b>Необязательный объект</b>. Если <paramref name="PrintToFile" /> <b>задана версия True,</b>в этом аргументе указывается имя файла, который необходимо распечатать.</param>
+        <summary>Принты объекта.</summary>
+        <remarks><para>"Страницы" в описаниях печатных страниц, а не общих страниц в листе или <paramref name="From" /> <paramref name="To" /> книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4571,7 +4571,7 @@
       </Parameters>
       <Docs>
         <param name="EnableChanges">Включает изменения объекта.</param>
-        <summary>Отображает предварительный просмотр объекта, как бы он выглядел при печати.</summary>
+        <summary>Показывает предварительный просмотр объекта, как он будет выглядеть при печати.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4599,10 +4599,10 @@
         <Parameter Name="Windows" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password"><b>Необязательный объект</b>. Строка, которая указывает пароль для электронной таблицы или книги с учетом конкретного случая. Если этот аргумент опущен, можно отобразить таблицу или книгу без использования пароля. В противном случае необходимо указать пароль, чтобы отопрестить рабочий таблицу или книгу. Если вы забудете пароль, вы не сможете отопрестить рабочий или электронный таблицу. Лучше хранить список паролей и соответствующих им имен документов в надежном месте.</param>
-        <param name="Structure"><b>Необязательный объект</b>. <b>True</b> для защиты структуры книги (относительного положения листов). Значение по умолчанию — <b>False</b>.</param>
+        <param name="Password"><b>Необязательный объект</b>. Строка, которая указывает пароль, чувствительный к делу для таблицы или книги. Если этот аргумент опущен, можно отклонить таблицу или книгу без использования пароля. В противном случае необходимо указать пароль, чтобы отклонить таблицу или книгу. Если вы забудете пароль, вы не сможете отклонить таблицу или книгу. Лучше хранить список паролей и их соответствующих имен документов в безопасном месте.</param>
+        <param name="Structure"><b>Необязательный объект</b>. <b>True</b> для защиты структуры книги (относительное положение листов). Значение по умолчанию — <b>False</b>.</param>
         <param name="Windows"><b>Необязательный объект</b>. <b>True</b> для защиты окон книг. Если этот аргумент опущен, окна не защищены.</param>
-        <summary>Защищает книгу, чтобы ее нельзя было изменить.</summary>
+        <summary>Защищает книгу таким образом, чтобы ее нельзя было изменить.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4636,12 +4636,12 @@
         <Parameter Name="SharingPassword" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename"><b>Необязательный объект</b>. Строка, указывающая имя сохраненного файла. Можно включить полный путь; Если этого не делать, Microsoft Excel сохраняет файл в текущей папке.</param>
-        <param name="Password"><b>Необязательный объект</b>. Строка с учетом дела, указывающая пароль защиты, который необходимо наводить на файл. Не должно быть больше 15 символов.</param>
-        <param name="WriteResPassword"><b>Необязательный объект</b>. Строка, указывающая пароль резервирования записи для этого файла. Если файл сохранен с паролем, а пароль не предоставляется при его открытие, файл открывается только для чтения.</param>
-        <param name="ReadOnlyRecommended"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы отобразить сообщение при его открытом файле, чтобы он был открыт только для чтения.</param>
-        <param name="CreateBackup"><b>Необязательный объект</b>. <b>True</b> для создания файла резервной копии.</param>
-        <param name="SharingPassword"><b>Необязательный объект</b>. Строка, указывающая пароль, используемый для защиты файла для общего доступа.</param>
+        <param name="Filename"><b>Необязательный объект</b>. Строка, указывающая имя сохраненного файла. Вы можете включить полный путь; если нет, Microsoft Excel сохраняет файл в текущей папке.</param>
+        <param name="Password"><b>Необязательный объект</b>. Строка, учитываемая в случае, указывающая пароль защиты, который должен быть предоставлен файлу. Должно быть не более 15 символов.</param>
+        <param name="WriteResPassword"><b>Необязательный объект</b>. Строка, указывающая пароль для записи резервирования для этого файла. Если файл сохранен с помощью пароля, а пароль не предоставляется при его открывлении, файл открывается только для чтения.</param>
+        <param name="ReadOnlyRecommended"><b>Необязательный объект</b>. <b>True</b> отображает сообщение при открываемом файле, рекомендав открыть файл только для чтения.</param>
+        <param name="CreateBackup"><b>Необязательный объект</b>. <b>True</b> для создания файла резервного копирования.</param>
+        <param name="SharingPassword"><b>Необязательный объект</b>. Строка, указывающая пароль, который будет использоваться для защиты файла для общего доступа.</param>
         <summary>Сохраняет книгу и защищает ее для общего доступа.</summary>
         <remarks><para>Используйте надежные пароли, содержащие строчные и прописные буквы, цифры и знаки. В ненадежных паролях не используются сочетания таких элементов. Надежный пароль: Y6dh!et5. Слабый пароль: House27. Используйте надежный пароль, который можно запомнить, чтобы не пришлось его записывать.</para>
           <para> </para></remarks>
@@ -4709,7 +4709,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если порядок листов в книге защищен. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если порядок листов в книге защищен. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4793,8 +4793,8 @@
         <Parameter Name="SharingPassword" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Days">Обязательный атрибут типа <b>Integer</b>. Количество дней, в течение которое изменения сохраняются в журнале изменений.</param>
-        <param name="SharingPassword"><b>Необязательный объект</b>. Пароль, который не защищит книгу для общего доступа. Если книга защищена для общего доступа с паролем и этот аргумент опущен, пользователю будет предложено вводить пароль.</param>
+        <param name="Days">Обязательный атрибут типа <b>Integer</b>. Необходимо сохранить количество дней, за которые будут внесены изменения в журнале изменений.</param>
+        <param name="SharingPassword"><b>Необязательный объект</b>. Пароль, который отщипает книгу для общего доступа. Если книга защищена для общего доступа с паролем и этот аргумент опущен, пользователю будет предложен пароль.</param>
         <summary>Удаляет записи из журнала изменений для указанной книги.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4825,9 +4825,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если объект открыт только для чтения. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если объект открыт только для чтения. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство используется только для списков, связанных с сайтом SharePoint.</para>
+        <remarks><para>Это свойство используется только для списков, связанных с SharePoint сайтом.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4859,7 +4859,7 @@
       <Docs>
         <summary><b>True,</b> если книга была сохранена как рекомендуется только для чтения. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Когда вы открываете книгу, которая была сохранена как рекомендованная только для чтения, в Microsoft Excel отображается сообщение с рекомендациями открыть книгу как открытую только для чтения.</para>
+        <remarks><para>При открывлении книги, которая была сохранена только для чтения, Microsoft Excel отображается сообщение с рекомендациями открыть книгу только для чтения.</para>
           <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> для изменения этого свойства.</para>
           <para> </para></remarks>
       </Docs>
@@ -4888,7 +4888,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вызывает проверку смарт-тега переднего плана, автоматически занося примечания к данным, которые ранее не были заметены.</summary>
+        <summary>Вызывает проверку смарт-тегов на переднем плане, автоматически аннотируя данные, которые ранее не были аннотированы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4913,8 +4913,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет все диапазоны внешних данных и отчеты pivotTable в указанной книге.</summary>
-        <remarks><para>Объекты со <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.BackgroundQuery" /> свойством <b>True</b> обновляются в фоновом режиме.</para>
+        <summary>Обновляет все внешние диапазоны данных и отчеты PivotTable в указанной книге.</summary>
+        <remarks><para>Объекты с <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.BackgroundQuery" /> свойством <b>True</b> обновляются в фоновом режиме.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4942,9 +4942,9 @@
         <Parameter Name="Where" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="When"><b>Необязательный объект</b>. Указывает, когда все изменения отклоняется.</param>
-        <param name="Who"><b>Необязательный объект</b>. Указывает, кем будут отклониться все изменения.</param>
-        <param name="Where"><b>Необязательный объект</b>. Указывает место, в котором все изменения отклоняется.</param>
+        <param name="When"><b>Необязательный объект</b>. Указывает, когда все изменения будут отклонены.</param>
+        <param name="Who"><b>Необязательный объект</b>. Указывает, кем будут отклонены все изменения.</param>
+        <param name="Where"><b>Необязательный объект</b>. Указывает, где все изменения отклонены.</param>
         <summary>Отклоняет все изменения в указанной общей книге.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4972,9 +4972,9 @@
         <Parameter Name="Encoding" Type="Microsoft.Office.Core.MsoEncoding" />
       </Parameters>
       <Docs>
-        <param name="Encoding">Обязательное <see cref="T:Microsoft.Office.Core.MsoEncoding" /> . Кодивную кодику, которая должна быть применена к книге.</param>
-        <summary>Перезагружает книгу на основе HTML-документа с использованием указанной кодии документа.</summary>
-        <remarks><para>Только <b>константы msoEncoding,</b> применимые к HTML, работают с методом <b>ReloadAs.</b></para>
+        <param name="Encoding">Обязательно <see cref="T:Microsoft.Office.Core.MsoEncoding" /> . Кодивка, которая должна применяться к книге.</param>
+        <summary>Перезагружает книгу на основе HTML-документа с использованием указанного кодиза документа.</summary>
+        <remarks><para>Только <b>константы msoEncoding,</b> применимые к HTML-данным, работают с методом <b>ReloadAs.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5001,8 +5001,8 @@
         <Parameter Name="RemoveDocInfoType" Type="Microsoft.Office.Interop.Excel.XlRemoveDocInfoType" />
       </Parameters>
       <Docs>
-        <param name="RemoveDocInfoType">Одно из <see cref="T:Microsoft.Office.Interop.Excel.XlRemoveDocInfoType" /> значений, указывающее тип удаляемой информации.</param>
-        <summary>Удаляет из книги все сведения указанного типа.</summary>
+        <param name="RemoveDocInfoType">Одно из <see cref="T:Microsoft.Office.Interop.Excel.XlRemoveDocInfoType" /> значений, указывающих тип удаляемой информации.</param>
+        <summary>Удаляет все сведения указанного типа из книги.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5032,7 +5032,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если персональные данные можно удалить из указанной книги. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если личные данные можно удалить из указанной книги. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5089,7 +5089,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно найти в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
+        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно получить в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5117,7 +5117,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно найти в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
+        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно получить в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5144,8 +5144,8 @@
       </Parameters>
       <Docs>
         <param name="ShowMessage"><b>Необязательный объект</b>. <b>False</b> не отображает сообщение. <b>True</b> отображает сообщение.</param>
-        <summary>Отправляет сообщение электронной почты автору книги, которая была отправлена на проверку, уведомляя его о том, что проверяющий завершил проверку книги.</summary>
-        <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SendForReview(System.Object,System.Object,System.Object,System.Object)" /> метод для запуска совместной проверки книги. Если метод <b>ReplyWithChanges</b> выполняется в книге, которая не является частью цикла совместной проверки, пользователь получит сообщение об ошибке.</para>
+        <summary>Отправляет сообщение электронной почты автору книги, отправленной для проверки, уведомляя их о том, что рецензент завершил проверку книги.</summary>
+        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SendForReview(System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы начать совместную проверку книги. Если метод <b>ReplyWithChanges</b> выполняется в книге, которая не входит в цикл совместной проверки, пользователь получит ошибку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5198,7 +5198,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сбрасывает цветовую палитру до цветов по умолчанию.</summary>
+        <summary>Сбрасывает цветовую палитру в цвета по умолчанию.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5228,9 +5228,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает количество сбереганий книги при открытом в общем списке. Если книга открыта в монопольном режиме, это свойство возвращает значение 0 (ноль). Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает количество сохраненных книг во время открытия в общем списке. Если книга открыта в эксклюзивном режиме, это свойство возвращает 0 (ноль). Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>RevisionNumber</b> обновляется только при сэкономлении локальной копии книги, а не при удалении копий.</para>
+        <remarks><para>Свойство <b>RevisionNumber</b> обновляется только при сэкономлении локальной копии книги, а не при сэкономлении удаленных копий.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5261,8 +5261,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Маршруты книги, используя текущую маршрутику книги.</summary>
-        <remarks><para>При маршрутике книги свойству <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Routed" /> заносится true. <b></b></para>
+        <summary>Маршруты книги с помощью текущего скольжения маршрутов книги.</summary>
+        <remarks><para>Маршрутивка книги задает свойство <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Routed" /> True . <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5295,9 +5295,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если книга была перенаададовна следующему получателю. <b>False,</b> если книга должна быть маршрутифна. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если книга была маршрутивна следующему получателю. <b>False,</b> если требуется маршрутировать книгу. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если книга не была направлена текущему получателю, это свойство всегда имеет состояние <b>False</b> (например, если в документе нет ни поскакив, ни если только что была создана помещающая маршрутка).</para>
+        <remarks><para>Если книга не была направлена текущему получателю, <b></b> это свойство всегда является false (например, если в документе нет скольжения маршрутивки или если только что был создан скольжение маршрутов).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5327,7 +5327,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.RoutingSlip</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет собой помещающий <see cref="T:Microsoft.Office.Interop.Excel.RoutingSlip" /> маршрут для книги. Чтение этого свойства, если не существует скольжения маршрутирования, приводит к ошибке (сначала <see cref="P:Microsoft.Office.Interop.Excel._Workbook.HasRoutingSlip" /> проверьте свойство). Только для чтения.</summary>
+        <summary>Возвращает объект, представляюющий скольжение <see cref="T:Microsoft.Office.Interop.Excel.RoutingSlip" /> маршрутов для книги. Чтение этого свойства, если нет скольжения маршрутирования, вызывает ошибку (сначала проверьте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.HasRoutingSlip" /> свойство). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5358,8 +5358,8 @@
         <Parameter Name="Which" Type="Microsoft.Office.Interop.Excel.XlRunAutoMacro" />
       </Parameters>
       <Docs>
-        <param name="Which">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlRunAutoMacro" /> .</param>
-        <summary>Запускает Auto_Open, Auto_Close, Auto_Activate или Auto_Deactivate, подключенных к книге. Этот метод включен для обеспечения обратной совместимости. Вместо этих макроса следует использовать события Open, Close, Activate и Deactivate.</summary>
+        <param name="Which">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlRunAutoMacro" /> .</param>
+        <summary>Выполняет макрос Auto_Open, Auto_Close, Auto_Activate или Auto_Deactivate, присоединенный к книге. Этот метод включен для обратной совместимости. Вместо этих макрос следует использовать события Open, Close, Activate и Deactivate.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5389,8 +5389,8 @@
       <Docs>
         <summary>Сохраняет изменения в указанной книге.</summary>
         <remarks><para>Чтобы открыть файл книги, используйте <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод.</para>
-          <para>Чтобы пометить книгу как сохраненную без записи на диск, установите для ее <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Saved" /> свойства true. <b></b></para>
-          <para>При первом сохранения книги используйте метод, чтобы <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> указать имя файла.</para>
+          <para>Чтобы пометить книгу как сохраненную, не написав ее на диск, установите <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Saved" /> ее свойство <b>True</b>.</para>
+          <para>При первом сохранения книги используйте метод, чтобы указать <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> имя файла.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5430,18 +5430,18 @@
         <Parameter Name="Local" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename"><b>Необязательный объект</b>. Строка, которая указывает имя файла, который необходимо сохранить. Можно включить полный путь; Если этого не делать, Microsoft Excel сохраняет файл в текущей папке.</param>
-        <param name="FileFormat"><b>Необязательный объект</b>. Формат файла, который будет применяться при его сохранения. Список допустимого варианта см. в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> свойстве. Для существующего файла форматом по умолчанию является последний указанный формат; для нового файла по умолчанию используется формат используемой версии Excel.</param>
-        <param name="Password"><b>Необязательный объект</b>. Строка с учетом дела (не более 15 символов), которая указывает пароль защиты, который необходимо указать в файле.</param>
-        <param name="WriteResPassword"><b>Необязательный объект</b>. Строка, которая указывает пароль резервирования записи для этого файла. Если файл сохранен с паролем, а пароль не предоставляется при его открытие, файл открывается только для чтения.</param>
-        <param name="ReadOnlyRecommended"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы отобразить сообщение при его открытом файле, чтобы он был открыт только для чтения.</param>
-        <param name="CreateBackup"><b>Необязательный объект</b>. <b>True</b> для создания файла резервной копии.</param>
-        <param name="AccessMode">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlSaveAsAccessMode" /> .</param>
-        <param name="ConflictResolution">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlSaveConflictResolution" /> .</param>
-        <param name="AddToMru"><b>Необязательный объект</b>. <b>True,</b> чтобы добавить эту книгу в список недавно использованных файлов. Значение по умолчанию — <b>False</b>.</param>
-        <param name="TextCodepage"><b>Необязательный объект</b>. Не используется в U.S. English Microsoft Excel.</param>
-        <param name="TextVisualLayout"><b>Необязательный объект</b>. Не используется в U.S. English Microsoft Excel.</param>
-        <param name="Local"><b>Необязательный объект</b>. <b>True</b> сохраняет файлы на языке Microsoft Excel (включая параметры панели управления). Значение <b>False</b> (по умолчанию) сохраняет файлы на языке Visual Basic для приложений (VBA), который обычно является английским (США), если проект VBA, в котором запускается Workbooks.Open, не является старым международным проектом VBA XL5/95.</param>
+        <param name="Filename"><b>Необязательный объект</b>. Строка, которая указывает имя сохраненного файла. Вы можете включить полный путь; если нет, Microsoft Excel сохраняет файл в текущей папке.</param>
+        <param name="FileFormat"><b>Необязательный объект</b>. Формат файла, который необходимо использовать при сохранения файла. Список допустимого выбора см. в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> свойстве. Для существующего файла формат по умолчанию — это последний указанный формат файла; для нового файла по умолчанию используется формат версии Excel.</param>
+        <param name="Password"><b>Необязательный объект</b>. Строка с учетом случая (не более 15 символов), которая указывает пароль защиты, который должен быть предоставлен файлу.</param>
+        <param name="WriteResPassword"><b>Необязательный объект</b>. Строка, которая указывает пароль для записи резервирования для этого файла. Если файл сохранен с помощью пароля, а пароль не предоставляется при его открывлении, файл открывается только для чтения.</param>
+        <param name="ReadOnlyRecommended"><b>Необязательный объект</b>. <b>True</b> для отображения сообщения при открываемом файле с рекомендациями открывать файл только для чтения.</param>
+        <param name="CreateBackup"><b>Необязательный объект</b>. <b>True</b> для создания файла резервного копирования.</param>
+        <param name="AccessMode"><see cref="T:Microsoft.Office.Interop.Excel.XlSaveAsAccessMode" />Необязательный .</param>
+        <param name="ConflictResolution"><see cref="T:Microsoft.Office.Interop.Excel.XlSaveConflictResolution" />Необязательный .</param>
+        <param name="AddToMru"><b>Необязательный объект</b>. <b>Правда,</b> чтобы добавить эту книгу в список недавно используемых файлов. Значение по умолчанию — <b>False</b>.</param>
+        <param name="TextCodepage"><b>Необязательный объект</b>. Не используется в американских английских Microsoft Excel.</param>
+        <param name="TextVisualLayout"><b>Необязательный объект</b>. Не используется в американских английских Microsoft Excel.</param>
+        <param name="Local"><b>Необязательный объект</b>. <b>True</b> сохраняет файлы на языке Microsoft Excel (включая параметры панели управления). False <b>(по</b> умолчанию) сохраняет файлы на языке Visual Basic для приложений (VBA) (который обычно является английским языком США, если проект VBA, из которого запускается Workbooks.Open, не является старым интернационализированным проектом VBA XL5/95).</param>
         <summary>Сохраняет изменения в книге в другом файле.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5470,11 +5470,11 @@
         <Parameter Name="Map" Type="Microsoft.Office.Interop.Excel.XmlMap" />
       </Parameters>
       <Docs>
-        <param name="Filename">Обязательный атрибут типа <b>String</b>. Строка, которая указывает имя файла, который необходимо сохранить. Можно включить полный путь; Если этого не делать, Microsoft Excel сохраняет файл в текущей папке.</param>
-        <param name="Map">Необходимый <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объект. Карта схемы, применяемая к данным.</param>
-        <summary>Экспортирует данные, которые были соеданы с указанной картой схемы XML в XML-файл данных.</summary>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
-          <para>Этот метод приведет к ошибке во время работы, если Excel не может экспортировать данные с указанной картой схемы. Чтобы проверить, может ли Excel использовать указанную карту схемы для экспорта данных, используйте <see cref="P:Microsoft.Office.Interop.Excel.XmlMap.IsExportable" /> свойство.</para>
+        <param name="Filename">Обязательный атрибут типа <b>String</b>. Строка, которая указывает имя сохраненного файла. Вы можете включить полный путь; если нет, Microsoft Excel сохраняет файл в текущей папке.</param>
+        <param name="Map">Необходимый <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> объект. Схема, которая будет применяться к данным.</param>
+        <summary>Экспортирует данные, которые были соеданы на указанную схему XML-схемы, в XML-файл данных.</summary>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+          <para>Этот метод приведет к ошибке во время работы, если Excel не удается экспортировать данные с указанной схемой карты. Чтобы проверить, Excel использовать указанную схему для экспорта данных, используйте <see cref="P:Microsoft.Office.Interop.Excel.XmlMap.IsExportable" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5503,8 +5503,8 @@
         <Parameter Name="Filename" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename">Обязательный. Указывает имя файла для копии.</param>
-        <summary>Сохраняет копию книги в файл, но не изменяет открытую книгу в памяти.</summary>
+        <param name="Filename">Обязательный элемент. Указывает имя файла для копии.</param>
+        <summary>Сохраняет копию книги в файл, но не изменит открытую книгу в памяти.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5540,10 +5540,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если указанной книге не было внося изменений с момента последнего с момента ее с сохранения. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если с момента последнего сэкономленного изменения в указанной книге не были внесены. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если книга никогда не была сохранена, ее <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Path" /> свойство возвращает пустую строку ("").</para>
-          <para>Это свойство можно установить <b>в</b> true, если вы хотите закрыть измененную книгу без сохранения или запроса на сохранение.</para>
+        <remarks><para>Если книга никогда не была сохранена, ее свойство возвращает <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Path" /> пустую строку ("").</para>
+          <para>Вы можете установить это свойство <b>true,</b> если вы хотите закрыть измененную книгу без ее сохранения или запроса на ее сохранение.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5579,7 +5579,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если Microsoft Excel сохраняет значения внешних ссылок в книге. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> Microsoft Excel сохраняет значения внешних ссылок с книгой. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5639,14 +5639,14 @@
         <Parameter Name="ShowMessage" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Recipients"><b>Необязательный объект</b>. Строка, которая представляет номера факсов и адреса электронной почты людей, которым будет отправлен факс. Разделять нескольких получателей с зачетом.</param>
-        <param name="Subject"><b>Необязательный объект</b>. Строка, представляютив строку темы для факсимилного документа.</param>
-        <param name="ShowMessage"><b>Необязательный объект</b>. <b>True</b> отображает факс-сообщение перед отправкой. <b>False</b> отправляет факс без отображения факс-сообщения.</param>
+        <param name="Recipients"><b>Необязательный объект</b>. Строка, которая представляет номера факсов и адреса электронной почты людей, которым будет отправлен факс. Разделим несколько получателей с полуколоном.</param>
+        <param name="Subject"><b>Необязательный объект</b>. Строка, представляюная строку субъекта для факсимилного документа.</param>
+        <param name="ShowMessage"><b>Необязательный объект</b>. <b>True</b> отображает сообщение факса перед отправкой. <b>False</b> отправляет факс без отображения сообщения факса.</param>
         <summary>Отправляет таблицу в качестве факса указанным получателям.</summary>
-        <remarks><para>Для использования <b>метода SendFaxOverInternet</b> необходимо включить службу факсов на компьютере пользователя.</para>
-          <para>Формат, используемый для указания номеров факсов в <paramref name="Recipients" /> параметре: или <paramref name="recipientsfaxnumber@usersfaxprovider" /> <paramref name="recipientsname@recipientsfaxnumber" /> . Вы можете получить доступ к сведениям о поставщике факсов пользователя, используя следующий путь в реестре:</para>
+        <remarks><para>Использование метода <b>SendFaxOverInternet</b> требует включения службы факсов на компьютере пользователя.</para>
+          <para>Формат, используемый для указания номеров факсов в <paramref name="Recipients" /> параметре, либо <paramref name="recipientsfaxnumber@usersfaxprovider" /> . <paramref name="recipientsname@recipientsfaxnumber" /> Вы можете получить доступ к данным поставщика факсов пользователя, используя следующий путь реестра:</para>
           <para>HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Common\Services\Fax</para>
-          <para>Используйте значение ключа FaxAddress в этом пути реестра, чтобы определить формат, который будет применяться для получателя.</para>
+          <para>Для определения формата, используемого для получателя, используйте значение клавиши ФаксAddress на этом пути реестра.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5675,12 +5675,12 @@
         <Parameter Name="IncludeAttachment" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Recipients"><b>Необязательный объект</b>. Строка, в которой перечислены люди, которым необходимо отправить сообщение. Это могут быть не разрешенные имена и псевдонимы в телефонной книге электронной почты или полных адресах электронной почты. Разделять нескольких получателей точками с затменной за ;). Если оставить это сообщение пустым и иметь false, вы получите сообщение об ошибке, и сообщение не <paramref name="ShowMessage" /> будет отправлено. <b></b></param>
-        <param name="Subject"><b>Необязательный объект</b>. Строка для темы сообщения. Если оставить пустым, тема будет: "Пожалуйста, просмотрите" <paramref name="filename" /> ".</param>
-        <param name="ShowMessage"><b>Необязательный объект</b>. <b>Boolean</b> value that indicates whether the message should be displayed when the method is executed. Значение по умолчанию — <b>True</b>. Если за <b>установлено false,</b>сообщение автоматически отправляется получателям без показа сообщения отправителю.</param>
-        <param name="IncludeAttachment"><b>Необязательный объект</b>. <b>Boolean</b> value that indicates whether the message should include an attachment or a link to a server location. Значение по умолчанию — <b>True</b>. Если за <b>установлено false,</b>документ должен храниться в общем расположении.</param>
+        <param name="Recipients"><b>Необязательный объект</b>. Строка, в которой перечислены люди, которым необходимо отправить сообщение. Это могут быть неурегулированные имена и псевдонимы в телефонной книге электронной почты или полные адреса электронной почты. Разделим несколько получателей с полуколоном (;). Если оставлен пустым и является false, вы получите сообщение об ошибке, и сообщение <paramref name="ShowMessage" /> не будет <b></b>отправлено.</param>
+        <param name="Subject"><b>Необязательный объект</b>. Строка для субъекта сообщения. Если оставить пустым, тема будет: Пожалуйста, просмотрите " <paramref name="filename" /> ".</param>
+        <param name="ShowMessage"><b>Необязательный объект</b>. Значение <b>Boolean,</b> которое указывает, следует ли отображать сообщение при выполнении метода. Значение по умолчанию — <b>True</b>. Если настроено <b>на false,</b>сообщение автоматически отправляется получателям без первого показа сообщения отправителю.</param>
+        <param name="IncludeAttachment"><b>Необязательный объект</b>. Значение <b>Boolean,</b> которое указывает, должно ли сообщение включать вложение или ссылку на расположение сервера. Значение по умолчанию — <b>True</b>. Если <b>установлено false,</b>документ должен храниться в общем расположении.</param>
         <summary>Отправляет книгу в сообщении электронной почты для проверки указанным получателям.</summary>
-        <remarks><para>Метод <b>SendForReview</b> запускает цикл совместной проверки. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Workbook.EndReview" /> метод для окончания цикла проверки.</para>
+        <remarks><para>Метод <b>SendForReview</b> запускает цикл совместной проверки. Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.EndReview" /> метод, чтобы закончить цикл проверки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5711,9 +5711,9 @@
         <Parameter Name="ReturnReceipt" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Recipients">Необходимый <b>объект</b>. Указывает имя получателя в виде текста или массива текстовых строк, если получателей несколько. Должен быть указан по крайней мере один получатель, и все получатели добавляются в качестве получателей.</param>
-        <param name="Subject"><b>Необязательный объект</b>. Указывает тему сообщения. Если этот аргумент опущен, используется имя документа.</param>
-        <param name="ReturnReceipt"><b>Необязательный объект</b>. <b>True,</b> чтобы запросить квитанцию возврата. <b>False,</b> чтобы не запрашивать квитанцию возврата. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Recipients">Необходимый <b>объект</b>. Указывает имя получателя в виде текста или массива текстовых строк, если существует несколько получателей. Должен быть указан по крайней мере один получатель, и все получатели будут добавлены в качестве получателей.</param>
+        <param name="Subject"><b>Необязательный объект</b>. Указывает субъект сообщения. Если этот аргумент опущен, используется имя документа.</param>
+        <param name="ReturnReceipt"><b>Необязательный объект</b>. <b>True</b> to request a return receipt. <b>False,</b> чтобы не запрашивать получение возврата. Значение по умолчанию — <b>False</b>.</param>
         <summary>Отправляет книгу с помощью установленной почтовой системы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5746,7 +5746,7 @@
       <Docs>
         <param name="FileFormat">Этот параметр предназначен только для Macintosh и его не следует использовать.</param>
         <param name="Priority">Этот параметр предназначен только для Macintosh и его не следует использовать.</param>
-        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно найти в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
+        <summary>Вы запросили справку по ключевому слову Visual Basic, используемом только в Macintosh. Сведения об этом ключевом слове можно получить в справочной справке по языку, включенной в Microsoft Office Macintosh Edition.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -5773,7 +5773,7 @@
         <ReturnType>Microsoft.Office.Core.ServerPolicy</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет политику, указанную для книги, хранимой на сервере с <see cref="T:Microsoft.Office.Core.ServerPolicy" /> 2nd_OSS_NoVersion 2007. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет политику, указанную для книги, хранимой на <see cref="T:Microsoft.Office.Core.ServerPolicy" /> сервере, 2nd_OSS_NoVersion 2007 г. Только для чтения.</summary>
         <value><b>ServerPolicy</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5801,9 +5801,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ServerViewableItems</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Позволяет разработчику взаимодействовать со списком опубликованных объектов в книге, которые показаны на сервере. Только для чтения.</summary>
+        <summary>Позволяет разработчику взаимодействовать со списком опубликованных объектов в книге, которая отображается на сервере. Только для чтения.</summary>
         <value><see cref="P:Microsoft.Office.Interop.Excel._Workbook.ServerViewableItems" /></value>
-        <remarks><para>Это свойство возвращает коллекцию элементов, которые можно опубликовать в службы Excel.  Он может включать в себя таблицы, списки, именуемые диапазоны и диаграммы.  Он также может содержать листы, если он не является сочетанием листов и ранее упомянутого списка.  </para>
+        <remarks><para>Это свойство возвращает коллекцию элементов, которые могут быть опубликованы в службы Excel.  Он может включать Таблицы, PivotTables, Именные диапазоны и Диаграммы.  Он также может содержать листы, если он не является смесью листов и ранее упомянутого списка.  </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5833,8 +5833,8 @@
         <Parameter Name="Procedure" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки DDE/OLE, возвращаемой <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> методом.</param>
-        <param name="Procedure">Обязательный атрибут типа <b>String</b>. Имя процедуры, которая будет запускаться при обновлении ссылки. Это может быть макрос Microsoft Excel 4.0 или Visual Basic. Установите для этого аргумента пустую строку (""), чтобы указать, что при обновлении ссылки процедуры не следует запускать.</param>
+        <param name="Name">Обязательный атрибут типа <b>String</b>. Имя ссылки DDE/OLE, возвращаемой из <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> метода.</param>
+        <param name="Procedure">Обязательный атрибут типа <b>String</b>. Имя процедуры, которая будет запускаться при обновлении ссылки. Это может быть макрос Microsoft Excel 4.0 или Visual Basic процедуры. Установите этот аргумент на пустую строку (""), чтобы указать, что при обновлении ссылки не следует запускать процедуру.</param>
         <summary>Задает имя процедуры, которая выполняется при обновлении ссылки DDE.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5864,13 +5864,13 @@
         <Parameter Name="PasswordEncryptionFileProperties" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="PasswordEncryptionProvider"><b>Необязательный объект</b>. Строка с чувствительным к делу поставщиком шифрования.</param>
-        <param name="PasswordEncryptionAlgorithm"><b>Необязательный объект</b>. Строка с чувствительным к делу коротким именем алгоритма (например, "RC4").</param>
-        <param name="PasswordEncryptionKeyLength"><b>Необязательный объект</b>. Длина ключа шифрования, кратное 8 (40 или более).</param>
-        <param name="PasswordEncryptionFileProperties"><b>Необязательный объект</b>. <b>Значение True</b> (по умолчанию) для шифрования свойств файла.</param>
+        <param name="PasswordEncryptionProvider"><b>Необязательный объект</b>. Деликатная строка поставщика шифрования.</param>
+        <param name="PasswordEncryptionAlgorithm"><b>Необязательный объект</b>. Деликатная строка алгоритмического короткого имени (например, "RC4").</param>
+        <param name="PasswordEncryptionKeyLength"><b>Необязательный объект</b>. Длина ключа шифрования, которая составляет несколько 8 (40 или больше).</param>
+        <param name="PasswordEncryptionFileProperties"><b>Необязательный объект</b>. <b>True</b> (по умолчанию) для шифрования свойств файлов.</param>
         <summary>Задает параметры шифрования книг с помощью паролей.</summary>
-        <remarks><para>Аргументы <paramref name="PasswordEncryptionProvider" /> <paramref name="PasswordEncryptionAlgorithm" /> и аргументы не <paramref name="PasswordEncryptionKeyLength" /> зависят друг от друга. Выбранный поставщик шифрования ограничивает набор алгоритмов и длину ключа, которые можно выбрать.</para>
-          <para>Для <paramref name="PasswordEncryptionKeyLength" /> аргумента не существует ограничений по диапазону длины ключа. Диапазон определяется поставщиком служб шифрования, который также определяет алгоритм шифрования.</para>
+        <remarks><para>Аргументы <paramref name="PasswordEncryptionProvider" /> <paramref name="PasswordEncryptionAlgorithm" /> и <paramref name="PasswordEncryptionKeyLength" /> аргументы не зависят друг от друга. Выбранный поставщик шифрования ограничивает набор алгоритмов и длину ключей, которые можно выбрать.</para>
+          <para>Для <paramref name="PasswordEncryptionKeyLength" /> аргумента не существует неотъемлемого ограничения диапазона длины ключа. Диапазон определяется поставщиком криптографических служб, который также определяет криптографический алгоритм.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5897,7 +5897,7 @@
         <ReturnType>Microsoft.Office.Core.SharedWorkspace</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет область документов, в которой расположен указанный <see cref="T:Microsoft.Office.Core.SharedWorkspace" /> документ. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет рабочее пространство документа, в котором расположен указанный <see cref="T:Microsoft.Office.Core.SharedWorkspace" /> документ. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5925,7 +5925,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sheets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекцию, представляюную все листы в указанной книге. Объект <b>Sheets</b> только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекцию, которая представляет все листы в указанной книге. Объект <b>"Листы только для</b> чтения".</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5962,7 +5962,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если лист "Журнал конфликтов" отображается в книге, открытой как общий список. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если лист истории конфликтов отображается в книге, открытой в общем списке. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Если указанная книга не открыта как общий список, это свойство не работает. Чтобы определить, открыта ли книга как общий список, используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.MultiUserEditing" /> свойство.</para>
           <para> </para></remarks>
@@ -5994,9 +5994,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство управляет видимостью сводная диаграмма фильтра. Для чтения и записи.</summary>
+        <summary>Это свойство контролирует видимость области сводная диаграмма фильтра. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Это свойство управляет видимостью области сводная диаграмма фильтра (отключает или отключает ее).  Чтобы он был видимым, <b></b> необходимо выбрать сводная диаграмма объекта. </para>
+        <remarks><para>Это свойство контролирует видимость области сводная диаграмма фильтра (переключает его на/выключение).  Чтобы он был виден, необходимо <b>выбрать сводная диаграмма</b> объекта. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6026,7 +6026,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true</b> (по умолчанию), если может быть показан список полей pivotTable. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True</b> (по умолчанию), если можно показать список полей PivotTable. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6056,7 +6056,7 @@
       <Docs>
         <summary>Возвращает цифровые подписи для книги. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Core.SignatureSet" /></value>
-        <remarks><para>Для цифровой подписи книг Excel2007 и проверки других подписей в них потребуется Microsoft CryptoAPI и уникальный сертификат цифровой подписи. CryptoAPI устанавливается вместе с Microsoft Internet Explorer 4.01 или более поздней. Сертификат цифровой подписи можно получить в сертификации.
+        <remarks><para>Чтобы цифрово подписать книги Excel2007 и проверить другие подписи в них, потребуется Microsoft CryptoAPI и уникальный сертификат цифровой подписи. CryptoAPI устанавливается с помощью Microsoft Internet Explorer 4.01 или более поздней модели. Сертификат цифровой подписи можно получить в органе сертификации.
 </para>
           <para> </para></remarks>
       </Docs>
@@ -6113,7 +6113,7 @@
         <ReturnType>Microsoft.Office.Core.SmartDocument</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.SmartDocument" /> объект, который представляет параметры решения интеллектуального документа. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.SmartDocument" /> объект, который представляет параметры решения смарт-документа. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6172,7 +6172,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Styles</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Styles" /> коллекцию, представляюную все стили в указанной книге. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Styles" /> коллекцию, которая представляет все стили в указанной книге. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6243,7 +6243,7 @@
         <ReturnType>Microsoft.Office.Core.Sync</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который предоставляет доступ к методам и свойствам документов, которые являются частью рабочей области <see cref="T:Microsoft.Office.Core.Sync" /> документов.</summary>
+        <summary>Возвращает объект, который предоставляет доступ к методам и свойствам для документов, которые являются частью рабочей области <see cref="T:Microsoft.Office.Core.Sync" /> документа.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6271,9 +6271,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TableStyles</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект коллекции для текущей книги, который ссылается на стили, <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> используемые в текущей книге. Только для чтения.</summary>
+        <summary>Возвращает объект коллекции для текущей книги, которая ссылается <see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /> на стили, используемые в текущей книге. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.TableStyles" /></value>
-        <remarks><para>Можно управлять стилями таблиц, возвращаемой свойством.</para>
+        <remarks><para>Вы можете управлять стилями таблиц, возвращаемой свойством.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6303,7 +6303,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если ссылки на внешние данные удаляются, когда книга сохранена в качестве шаблона. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если внешние ссылки на данные удаляются, когда книга сохранена в качестве шаблона. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6400,8 +6400,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отключение или выключение режима конструктора формы.</summary>
-        <remarks><para>Когда Excel находится в режиме конструктора формы, отображается панель инструментов панели инструментов для управления. Эту панель инструментов можно использовать для вставки ActiveX элементов управления, таких как кнопки команд, полосы прокрутки и кнопки выбора. В режиме конструктора формы процедуры обработки событий не запускаются, и при нажатии внедренного управления отображаются работки размеров.</para>
+        <summary>Переключается режим разработки формы или выключение.</summary>
+        <remarks><para>Когда Excel находится в режиме разработки формы, отображается панель инструментов control Toolbox. Эту панель инструментов можно использовать для ActiveX элементов управления, таких как кнопки команд, свитки и кнопки параметра. В режиме разработки форм процедуры событий не запускаются, и при нажатии встроенного управления появляются ручки размеров управления.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6430,9 +6430,9 @@
         <Parameter Name="Password" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password"><b>Необязательный объект</b>. Строка, обозначая пароль с учетом дела, который будет применяться для сноски листа или книги. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если опустить этот аргумент для листа, защищенного паролем, вам будет предложено вводить пароль. Если опустить этот аргумент для книги, защищенной паролем, метод не будет работать.</param>
-        <summary>Удаляет защиту с листа или книги. Этот метод не действует, если лист или книга не защищены.</summary>
-        <remarks><para>Если вы забудете пароль, вы не сможете отклонить лист или книгу. Лучше хранить список паролей и соответствующих им имен документов в надежном месте.</para>
+        <param name="Password"><b>Необязательный объект</b>. Строка, обозначаемая паролем, чувствительным к делу, чтобы отклонить лист или книгу. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если упустить этот аргумент для листа, защищенного паролем, вам будет предложен пароль. Если не использовать этот аргумент для книги, защищенной паролем, метод не работает.</param>
+        <summary>Удаляет защиту из листа или книги. Этот метод не влияет, если лист или книга не защищены.</summary>
+        <remarks><para>Если вы забудете пароль, вы не сможете отклонить лист или книгу. Лучше хранить список паролей и их соответствующих имен документов в безопасном месте.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6488,8 +6488,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Обновляет книгу только для чтения из сохраненной версии диска книги, если версия диска более новая, чем копия книги, загруженная в память. Если дисковая копия не изменилась с момента загрузки книги, копия книги в памяти не будет перезагружена.</summary>
-        <remarks><para>Этот метод полезен, когда пользователь А открывает книгу как открытую только для чтения, а пользователь Б — как книгу для чтения и записи. Если пользователь Б сохраняет более новую версию книги на диск, а пользователь А по-прежнему открывает книгу, пользователь А не может получить обновленную копию без закрытия и повторного открытия книги и потери параметров представления. Метод <b>UpdateFromFile</b> обновляет копию книги в памяти из файла диска.</para>
+        <summary>Обновляет книгу только для чтения из сохраненной дисковых версий книги, если дисковая версия является более последней, чем копия книги, загружаемой в память. Если дисковая копия не изменилась с момента загрузки книги, ее копия в памяти не будет перезагружена.</summary>
+        <remarks><para>Этот метод полезен, когда книга открывается только для чтения пользователем A и открывается как чтение или написание пользователем B. Если пользователь B сохраняет более новую версию книги на диск, в то время как пользователь A по-прежнему имеет открытую книгу, пользователь A не может получить обновленную копию без закрытия и открытия книги и потери параметров представления. Метод <b>UpdateFromFile</b> обновляет копию книги в памяти из дискового файла.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6519,10 +6519,10 @@
         <Parameter Name="Type" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name"><b>Необязательный объект</b>. Имя обновляемой ссылки Microsoft Excel или DDE/OLE, возвращаемой <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> методом.</param>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlLinkType" /> .</param>
-        <summary>Обновляет ссылку Microsoft Excel, DDE или OLE (или ссылки).</summary>
-        <remarks><para>Если метод <b>UpdateLink</b> вызван без параметров, Excel по умолчанию обновляет все ссылки на таблицы.</para>
+        <param name="Name"><b>Необязательный объект</b>. Имя ссылки Microsoft Excel DDE/OLE, которая будет обновляться, как возвращается из <see cref="M:Microsoft.Office.Interop.Excel._Workbook.LinkSources(System.Object)" /> метода.</param>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlLinkType" />Необязательный .</param>
+        <summary>Обновляет ссылку Microsoft Excel, DDE или OLE(или ссылки).</summary>
+        <remarks><para>Если метод <b>UpdateLink</b> вызван без параметров, Excel по умолчанию обновить все ссылки на таблицу.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6552,7 +6552,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlUpdateLinks</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает константы, указывающие параметр книги для <see cref="T:Microsoft.Office.Interop.Excel.XlUpdateLinks" /> обновления внедренных ссылок OLE. Для чтения и записи.</summary>
+        <summary>Возвращает или задает констант, указывающее параметр книги для <see cref="T:Microsoft.Office.Interop.Excel.XlUpdateLinks" /> обновления встроенных ссылок OLE. Для чтения и записи.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6589,7 +6589,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если Microsoft Excel обновляет удаленные ссылки в книге. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> Microsoft Excel обновляет удаленные ссылки в книге. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6657,9 +6657,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает одномерный двумерный массив, который предоставляет сведения о каждом пользователе, у которого книга открыта как общий список. Первый элемент второго измерения — это имя пользователя, второй — дата и время последнего открытия книги пользователем, а третий элемент — число, указывающее тип списка (1 означает монопольное, а 2 — общее). Объект только для <b>чтения.</b></summary>
+        <summary>Возвращает одномерный двухмерный массив, который предоставляет сведения о каждом пользователе, у которого открыта книга в общем списке. Первым элементом второго измерения является имя пользователя, вторым элементом является дата и время, когда пользователь последний раз открывал книгу, а третьим элементом является число, указывающее тип списка (1 указывает эксклюзивный, а 2 указывает общий). Объект только для <b>чтения.</b></summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>UserStatus</b> не возвращает сведения о пользователях, для которых указанная книга открыта только для чтения.</para>
+        <remarks><para>Свойство <b>UserStatus</b> не возвращает сведения о пользователях, у которых указанная книга открыта только для чтения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6686,7 +6686,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если книга использует шаблоны поиска, которые соответствуют всему содержимому ячейки. <b>Boolean только для чтения</b> (<b>bool</b> в C#).</summary>
+        <summary><b>Верно,</b> если в книге используются шаблоны поиска, которые соответствуют всему содержимому ячейки. Только для чтения <b>Boolean</b> <b>(bool</b> в C#).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6714,7 +6714,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если книга включает поддиапные знаки для сравнения строк символов и поиска. <b>Boolean только для чтения</b> (<b>bool</b> в C#).</summary>
+        <summary><b>True,</b> если книга включает подмычковые знаки для сравнения строк символов и поиска. Только для чтения <b>Boolean</b> <b>(bool</b> в C#).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6742,7 +6742,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> Visual Basic для приложений, если проект указанной книги имеет цифровую подпись. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если Visual Basic для приложений для указанной книги был подписан в цифровом формате. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6770,7 +6770,7 @@
         <ReturnType>Microsoft.Vbe.Interop.VBProject</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <b>VBProject,</b> который представляет Visual Basic в указанной книге. Только для чтения.</summary>
+        <summary>Возвращает объект <b>VBProject,</b> который представляет проект Visual Basic в указанной книге. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6798,7 +6798,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WebOptions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, которая содержит атрибуты уровня книги, используемые Microsoft Excel при сохранения документа в качестве <see cref="T:Microsoft.Office.Interop.Excel.WebOptions" /> веб-страницы или открытия веб-страницы. Только для чтения.</summary>
+        <summary>Возвращает коллекцию, которая содержит атрибуты уровня книг, используемые Microsoft Excel при сохранения документа в качестве веб-страницы или открытия <see cref="T:Microsoft.Office.Interop.Excel.WebOptions" /> веб-страницы. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -6824,7 +6824,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отображает предварительный просмотр указанной книги, как бы она выглядела, если бы она была сохранена как веб-страница.</summary>
+        <summary>Отображает предварительный просмотр указанной книги так, как она будет выглядеть, если сохранена в качестве веб-страницы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -6851,7 +6851,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Windows</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Windows" /> коллекцию, представляюную все окна в указанной книге. Объект <b>Windows</b> только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Windows" /> коллекцию, которая представляет все окна в указанной книге. Объект только <b>для чтения Windows.</b></summary>
         <value>To be added.</value>
         <remarks><para>Это свойство возвращает коллекцию видимых и скрытых окон.</para>
           <para> </para></remarks>
@@ -6880,10 +6880,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Sheets</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> коллекцию, представляюную все таблицы в указанной книге. Объект <b>Sheets, только для</b> чтения.</summary>
+        <summary>Возвращает коллекцию, которая представляет все таблицы <see cref="T:Microsoft.Office.Interop.Excel.Sheets" /> в указанной книге. Объект <b>"Листы только для</b> чтения".</summary>
         <value>To be added.</value>
-        <remarks><para>При использовании этого свойства без квалификатора объекта возвращаются все таблицы в активной книге.</para>
-          <para>Это свойство не возвращает листы макроса; используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Excel4MacroSheets" /> свойство или <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Excel4IntlMacroSheets" /> свойство для возврата этих листов.</para>
+        <remarks><para>Использование этого свойства без квалификатора объекта возвращает все таблицы в активной книге.</para>
+          <para>Это свойство не возвращает макрос; используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Excel4MacroSheets" /> свойство или <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Excel4IntlMacroSheets" /> свойство, чтобы вернуть эти листы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -6944,9 +6944,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если книга зарезервирована для записи. Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если книга зарезервирована для записи. Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы установить это свойство.</para>
+        <remarks><para>Для этого <see cref="M:Microsoft.Office.Interop.Excel._Workbook.SaveAs(System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,Microsoft.Office.Interop.Excel.XlSaveAsAccessMode,System.Object,System.Object,System.Object,System.Object,System.Object)" /> свойства используйте метод.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -7006,21 +7006,21 @@
         <Parameter Name="Destination" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Url">Обязательный атрибут типа <b>String</b>. URL-адрес или UNC-путь к XML-файлу данных.</param>
-        <param name="ImportMap">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> . Карта схемы, применяемая при импорте файла.</param>
-        <param name="Overwrite"><b>Необязательный boolean</b>. Если значение параметра не задано, этот параметр указывает, следует ли переописывать данные, которые были соеданы с картой схемы, указанной в <paramref name="Destination" /> <paramref name="ImportMap" /> параметре. Установите <b>true,</b> чтобы переописать данные, или <b>False,</b> чтобы примедить новые данные к существующим данным. Значение по умолчанию — <b>True</b>. Если для параметра задано значение, этот параметр указывает, следует ли <paramref name="Destination" /> переописывать существующие данные. Установите <b>true,</b> чтобы перезаписать существующие данные, или <b>False,</b> чтобы отменить импорт, если данные будут перезаписаны. Значение по умолчанию — <b>True</b>.</param>
-        <param name="Destination">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> . Данные будут импортироваться в новый XML-список в указанном диапазоне.</param>
-        <summary>Импортирует XML-файл данных в текущую книгу. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlXmlImportResult" /> .</summary>
+        <param name="Url">Обязательный атрибут типа <b>String</b>. Единый локатор ресурсов (URL-адрес) или путь единой конвенции имен (UNC) к XML-файлу данных.</param>
+        <param name="ImportMap">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> . Схема, применяемая при импорте файла.</param>
+        <param name="Overwrite"><b>Необязательный boolean</b>. Если значение для параметра не указано, этот параметр указывает, следует ли переписать данные, которые были отнесутся к схеме, указанной в <paramref name="Destination" /> <paramref name="ImportMap" /> параметре. Установите для <b>True</b> переописывание данных или <b>false</b> для приложения новых данных к существующим данным. Значение по умолчанию — <b>True</b>. Если для параметра задано значение, этот параметр указывает, следует ли переписать <paramref name="Destination" /> существующие данные. Установите для <b>True</b> перезаписывание существующих данных или <b>false,</b> чтобы отменить импорт, если данные будут перезаписаны. Значение по умолчанию — <b>True</b>.</param>
+        <param name="Destination"><see cref="T:Microsoft.Office.Interop.Excel.Range" />Необязательный . Данные будут импортироваться в новый список XML в указанном диапазоне.</param>
+        <summary>Импорт XML-файла данных в текущую книгу. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlXmlImportResult" /> .</summary>
         <returns>To be added.</returns>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
-          <para>Не указыйте значение для параметра, если вы хотите импортировать данные <paramref name="Destination" /> в существующее сопоставление.</para>
-          <para>Следующие условия приводят к тому, что метод <b>XMLImport</b> генерирует ошибки во время работы:</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+          <para>Не укажите значение для параметра, если вы хотите импортировать данные <paramref name="Destination" /> в существующее сопоставление.</para>
+          <para>Следующие условия приводят к тому, что <b>метод XMLImport</b> создает ошибки во время работы:</para>
           <list type="bullet">
             <item>
               <description>Указанные XML-данные содержат ошибки синтаксиса.</description>
             </item>
             <item>
-              <description>Процесс импорта был отменен, так как указанные данные не могут вместить их в таблицу.</description>
+              <description>Процесс импорта был отменен, так как указанные данные не могут вписаться в таблицу.</description>
             </item>
           </list>
           <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel._Workbook.XmlImportXml(System.String,Microsoft.Office.Interop.Excel.XmlMap@,System.Object,System.Object)" /> объекта <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> для импорта XML-данных, ранее загруженных в память.</para>
@@ -7052,24 +7052,24 @@
         <Parameter Name="Destination" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Data">Обязательный атрибут типа <b>String</b>. Импортируемые данные.</param>
-        <param name="ImportMap">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> . Карта схемы, применяемая при импорте файла.</param>
-        <param name="Overwrite"><b>Необязательный boolean</b>. Если значение параметра не задано, этот параметр указывает, следует ли переописывать данные, которые были соеданы с картой схемы, указанной в <paramref name="Destination" /> <paramref name="ImportMap" /> параметре. Установите <b>true,</b> чтобы переописать данные, или <b>False,</b> чтобы примедить новые данные к существующим данным. Значение по умолчанию — <b>True</b>. Если для параметра задано значение, этот параметр указывает, следует ли <paramref name="Destination" /> переописывать существующие данные. Установите <b>true,</b> чтобы перезаписать существующие данные, или <b>False,</b> чтобы отменить импорт, если данные будут перезаписаны. Значение по умолчанию — <b>True</b>.</param>
-        <param name="Destination">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.Range" /> . Данные будут импортироваться в новый XML-список в указанном диапазоне.</param>
+        <param name="Data">Обязательный атрибут типа <b>String</b>. Данные для импорта.</param>
+        <param name="ImportMap">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XmlMap" /> . Схема, применяемая при импорте файла.</param>
+        <param name="Overwrite"><b>Необязательный boolean</b>. Если значение для параметра не указано, этот параметр указывает, следует ли переписать данные, которые были отнесутся к схеме, указанной в <paramref name="Destination" /> <paramref name="ImportMap" /> параметре. Установите для <b>True</b> переописывание данных или <b>false</b> для приложения новых данных к существующим данным. Значение по умолчанию — <b>True</b>. Если для параметра задано значение, этот параметр указывает, следует ли переписать <paramref name="Destination" /> существующие данные. Установите для <b>True</b> перезаписывание существующих данных или <b>false,</b> чтобы отменить импорт, если данные будут перезаписаны. Значение по умолчанию — <b>True</b>.</param>
+        <param name="Destination"><see cref="T:Microsoft.Office.Interop.Excel.Range" />Необязательный . Данные будут импортироваться в новый список XML в указанном диапазоне.</param>
         <summary>Импортирует XML-поток данных, ранее загруженный в память. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlXmlImportResult" /> .</summary>
         <returns>To be added.</returns>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронных таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
-          <para>Не укажите значение параметра, если необходимо импортировать данные <paramref name="Destination" /> в существующее сопоставление.</para>
-          <para>Следующие условия приводят к тому, что метод <b>XMLImport</b> генерирует ошибки во время работы:</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+          <para>Не укажите значение для параметра, если вы хотите импортировать данные <paramref name="Destination" /> в существующее сопоставление.</para>
+          <para>Следующие условия приводят к тому, что <b>метод XMLImport</b> создает ошибки во время работы:</para>
           <list type="bullet">
             <item>
               <description>Указанные XML-данные содержат ошибки синтаксиса.</description>
             </item>
             <item>
-              <description>Процесс импорта был отменен, так как указанные данные не могут вместить их в таблицу.</description>
+              <description>Процесс импорта был отменен, так как указанные данные не могут вписаться в таблицу.</description>
             </item>
           </list>
-          <para>Используйте метод объекта для импорта XML-файла данных <see cref="M:Microsoft.Office.Interop.Excel._Workbook.XmlImport(System.String,Microsoft.Office.Interop.Excel.XmlMap@,System.Object,System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> в текущую книгу.</para>
+          <para>Используйте метод объекта для импорта XML-файла данных <see cref="M:Microsoft.Office.Interop.Excel._Workbook.XmlImport(System.String,Microsoft.Office.Interop.Excel.XmlMap@,System.Object,System.Object)" /> в <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> текущую книгу.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -7098,7 +7098,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XmlMaps" /> коллекцию, представляюную карты схемы, добавленные в указанную книгу. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -7127,7 +7127,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XmlNamespaces" /> коллекцию, представляюную пространства имен XML, содержащиеся в указанной книге. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Функции XML, за исключением сохранения файлов в формате электронной таблицы XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
+        <remarks><para>Функции XML, за исключением сохранения файлов в формате таблиц XML, доступны только в Microsoft Office Professional Edition 2003 и Microsoft Office Excel 2003.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

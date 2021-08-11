@@ -1,5 +1,5 @@
 <Type Name="LegendEntries" FullName="Microsoft.Office.Interop.Excel.LegendEntries">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8e175f39321b99a7e8cc5297856cd4932c8371cc" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50000101" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntries : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e254ab6b130974ca1674d0335af28a5e7e8e3b142de32818057b9d6b15ffbabe" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54515131" /></Metadata><TypeSignature Language="C#" Value="public interface LegendEntries : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract LegendEntries implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.LegendEntries" />
   <TypeSignature Language="VB.NET" Value="Public Interface LegendEntries&#xA;Implements IEnumerable" />
@@ -25,11 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.LegendEntry" /> указанной легенде диаграммы.</summary>
-    <remarks><para>Каждая запись легенды состоит из двух частей: текста записи, который является именем ряда или линии тренда, связанной с записью легенды; и маркер записи, который визуально связывает запись легенды со связанными с ней рядами или линией тренда на диаграмме. Свойства форматирования маркера записи и связанные с ним ряды или линии тренда содержатся в <see cref="T:Microsoft.Office.Interop.Excel.LegendKey" /> объекте.</para>
-      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Legend.LegendEntries(System.Object)" /> метод для возврата коллекции <b>LegendEntries.</b></para>
-      <para>Используйте <b>LegendEntries</b>( ), где находится номер индекса записи легенды, чтобы <paramref name="index" /> вернуть один объект <paramref name="index" /> <b>LegendEntry.</b> Вы не можете возвращать записи условных обозначений по имени.</para>
-      <para>Номер индекса представляет положение записи в условных обозначениях. LegendEntries(1) находится в верхней части легенды; LegendEntries(LegendEntries.Count) находится внизу.</para>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.LegendEntry" /> в заданной легенде диаграммы.</summary>
+    <remarks><para>Каждая запись легенды состоит из двух частей: текста записи, которая является именем серии или линии тренда, связанной с записью легенды; и маркер входа, который визуально связывает запись легенды со связанной с ней серией или линией тренда на диаграмме. Свойства форматирования маркера входа и связанных с ним серий или трендовой линии содержатся в <see cref="T:Microsoft.Office.Interop.Excel.LegendKey" /> объекте.</para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.Legend.LegendEntries(System.Object)" /> для возврата <b>коллекции LegendEntries.</b></para>
+      <para>Используйте <b>LegendEntries</b>(), где находится номер индекса записи легенды, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>LegendEntry.</b> Вы не можете возвращать записи условных обозначений по имени.</para>
+      <para>Номер индекса представляет положение записи в условных обозначениях. LegendEntries (1) находится в верхней части легенды; LegendEntries (LegendEntries.Count) находится в нижней части.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -88,7 +88,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -146,8 +146,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -206,7 +206,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
