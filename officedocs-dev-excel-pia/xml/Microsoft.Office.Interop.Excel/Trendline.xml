@@ -1,5 +1,5 @@
 <Type Name="Trendline" FullName="Microsoft.Office.Interop.Excel.Trendline">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="43cabd68ae83576c2d2f307683fffd5d099fc7d7" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009480" /></Metadata><TypeSignature Language="C#" Value="public interface Trendline" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6a930ebc84632db2f6995aef63fe35eec004ee4c0d3dbb87a15bdaf8e49b91c8" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54517945" /></Metadata><TypeSignature Language="C#" Value="public interface Trendline" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Trendline" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Trendline" />
   <TypeSignature Language="VB.NET" Value="Public Interface Trendline" />
@@ -22,9 +22,9 @@
   </Attributes>
   <Docs>
     <summary>Представляет линию тренда на диаграмме. Линия тренда отображает тенденцию или направление данных в ряде.</summary>
-    <remarks><para>Объект <b>Trendline</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Trendlines" /> коллекции. Коллекция <b>Trendlines</b> содержит все объекты <b>Trendline</b> для одного ряда.</para>
-      <para>Используйте <b>линии тренда</b>( ), где находится номер индекса линии <paramref name="index" /> тренда, чтобы вернуть один объект <paramref name="index" /> <b>Trendline.</b></para>
-      <para>Номер индекса обозначает порядок, в котором линии тренда были добавлены в ряд. Trendlines(1) — это первая линия тренда, добавленная в ряд, а Trendlines(Trendlines.Count) — последняя добавленная.</para>
+    <remarks><para>Объект <b>Trendline</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Trendlines" /> коллекции. Коллекция <b>Trendlines</b> содержит все объекты <b>Trendline</b> для одной серии.</para>
+      <para>Используйте <b>Trendlines</b>(), где находится номер индекса тренда, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>Trendline.</b></para>
+      <para>Номер индекса обозначает порядок, в котором трендовые линии были добавлены в серию. Trendlines(1) — это первая линия тренда, добавленная в серию, а Trendlines (Trendlines.Count) — последняя добавленная.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -51,7 +51,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -88,7 +88,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц на точечная диаграмма), которые линия тренда расширяет в обратном направлении.</summary>
+        <summary>Возвращает или задает количество периодов (или единиц на диаграмме разброса), которые линия тренда расширяется назад.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -119,8 +119,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц на точечная диаграмма), которые линия тренда расширяет в обратном направлении. Для чтения и записи.</summary>
-        <value>64-разрядное число с плавающей запятой двойной точности.</value>
+        <summary>Возвращает или задает количество периодов (или единиц на диаграмме разброса), которые линия тренда расширяется назад. Для чтения и записи.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -203,8 +203,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -233,7 +233,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DataLabel" /> объект, который представляет метку данных, связанную с точкой или линией тренда.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы включить метки данных для линии тренда, необходимо установить для свойства или <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayEquation" /> <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayRSquared" /> свойства true. <b></b></para>
+        <remarks><para>Чтобы включить метки данных для трендовой линии, необходимо настроить свойство <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayEquation" /> или <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayRSquared" /> свойство True. <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -289,7 +289,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если уравнение для линии тренда отображается на диаграмме (в той же метки данных, что и значение R-squared). Установка для этого свойства <b>свойства true</b> автоматически включает метки данных.</summary>
+        <summary><b>True,</b> если уравнение для трендовой линии отображается на диаграмме (в той же мете данных, что и значение R-squared). Настройка этого свойства <b>true</b> автоматически включает метки данных.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -320,7 +320,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение</b> true, если значение линии тренда в квадрате R отображается на диаграмме (в той же метки данных, что и уравнение). Установка для этого свойства <b>свойства true</b> автоматически включает метки данных.</summary>
+        <summary><b>Значение</b> True, если значение R-squared линии тренда отображается на диаграмме (в той же мете данных, что и уравнение). Настройка этого свойства <b>true</b> автоматически включает метки данных.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -348,7 +348,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает формат для элементов диаграммы. Только для чтения.</summary>
+        <summary>Возвращает формат элементов диаграммы. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -385,7 +385,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц на точечная диаграмма), которые линия тренда расширяет вперед.</summary>
+        <summary>Возвращает или задает количество периодов (или единиц на диаграмме разброса), которое линия тренда расширяется вперед.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -416,8 +416,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает число периодов (или единиц на точечная диаграмма), которые линия тренда расширяет вперед. Для чтения и записи.</summary>
-        <value>64-разрядное число с плавающей запятой двойной точности.</value>
+        <summary>Возвращает или задает количество периодов (или единиц на диаграмме разброса), которое линия тренда расширяется вперед. Для чтения и записи.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -444,7 +444,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции похожих объектов.</summary>
+        <summary>Возвращает индексный номер объекта в коллекции аналогичных объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -475,9 +475,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает точку, в которой линия тренда пересекает ось значений.</summary>
+        <summary>Возвращает или задает точку, в которой линия тренда пересекает ось значения.</summary>
         <value>To be added.</value>
-        <remarks><para>При установке этого свойства <see cref="P:Microsoft.Office.Interop.Excel.Trendline.InterceptIsAuto" /> свойству устанавливается <b></b>false.</para>
+        <remarks><para>Настройка этого свойства задает <see cref="P:Microsoft.Office.Interop.Excel.Trendline.InterceptIsAuto" /> свойство <b>False</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -507,9 +507,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если точка, в которой линия тренда пересекает ось значений, автоматически определяется регрессией.</summary>
+        <summary><b>Верно,</b> если точка, в которой линия тренда пересекает ось значения, автоматически определяется регрессией.</summary>
         <value>To be added.</value>
-        <remarks><para>При <see cref="P:Microsoft.Office.Interop.Excel.Trendline.Intercept" /> установке свойства <b></b>для этого свойства устанавливается false.</para>
+        <remarks><para>Настройка свойства <see cref="P:Microsoft.Office.Interop.Excel.Trendline.Intercept" /> задает это <b></b>свойство false .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -570,7 +570,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если Microsoft Excel автоматически определяет имя линии тренда.</summary>
+        <summary><b>True Microsoft Excel</b> автоматически определяет имя трендовой линии.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -601,7 +601,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок линии тренда (integer больше 1) при типе линии тренда <b>xlPolynomial</b>.</summary>
+        <summary>Возвращает или задает порядок линии тренда (набор больше 1), когда тип <b>trendline xlPolynomial</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -660,7 +660,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает период для линии тренда скользящего среднего.</summary>
+        <summary>Возвращает или задает период для линии тренда скользящего среднего значения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -717,7 +717,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlTrendlineType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип линии тренда.</summary>
+        <summary>Возвращает или задает тип trendline.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

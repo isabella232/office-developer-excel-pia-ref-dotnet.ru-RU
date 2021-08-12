@@ -1,5 +1,5 @@
 <Type Name="TextFrame" FullName="Microsoft.Office.Interop.Excel.TextFrame">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="2d1bfd568b124e87a7cc39c702d6b945df65ab68" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009648" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="5b4356dc4dd2d3b658f3600cb0230834afce20795d1430632fc3d0d156c66e64" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518036" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextFrame" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.TextFrame" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextFrame" />
@@ -21,7 +21,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет рамку текста в <b>объекте Shape.</b> Содержит текст в рамке текста, а также свойства и методы, которые контролируют выравнивание и привязку рамки текста.</summary>
+    <summary>Представляет текстовую рамку в <b>объекте Shape.</b> Содержит текст в текстовом кадре, а также свойства и методы, которые контролируют выравнивание и закрепление текстового кадра.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -48,7 +48,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -79,9 +79,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если Microsoft Excel автоматически вычисляет поля текстовых кадров.</summary>
+        <summary><b>True,</b> Microsoft Excel автоматически вычисляет поля кадров текста.</summary>
         <value>To be added.</value>
-        <remarks><para>Если это свойство <b>имеет свойство True,</b> <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginLeft" /> свойства , , и <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginRight" /> <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginTop" /> <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginBottom" /> игнорируются.</para>
+        <remarks><para>Если это свойство <b>true,</b>свойства и свойства <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginLeft" /> <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginRight" /> <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginTop" /> <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.MarginBottom" /> игнорируются.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -111,7 +111,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если размер указанного объекта автоматически меняется для вместить текст в пределах его границ.</summary>
+        <summary><b>True,</b> если размер указанного объекта автоматически меняется, чтобы соответствовать тексту в пределах его границ.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,12 +139,12 @@
         <Parameter Name="Length" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Start"><b>Необязательный объект</b>. Первый возвращаемый символ. Если этот аргумент имеет либо 1, либо опущен, метод <b>Characters</b> возвращает диапазон символов, начиная с первого символа.</param>
-        <param name="Length"><b>Необязательный объект</b>. Количество возвращаемого символа. Если этот аргумент опущен, метод <b>Characters</b> возвращает оставшуюся часть строки (все после символа, заданной в качестве <paramref name="Start" /> аргумента).</param>
-        <summary>Возвращает объект, который представляет диапазон символов в <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> рамке текста фигуры.</summary>
+        <param name="Start"><b>Необязательный объект</b>. Первый символ, который будет возвращен. Если этот аргумент заданной до 1 или опущен, метод <b>Characters</b> возвращает диапазон символов, начиная с первого символа.</param>
+        <param name="Length"><b>Необязательный объект</b>. Количество возвращаемого символа. Если этот аргумент опущен, метод <b>Characters</b> возвращает остаток строки (все после символа, заданной в качестве <paramref name="Start" /> аргумента).</param>
+        <summary>Возвращает объект, который представляет диапазон символов <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> в текстовом кадре фигуры.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Объект Characters <b>можно</b> использовать для добавления и формата символов в рамке текста.</para>
-          <para>Объект <b>Characters</b> не является коллекцией.</para>
+        <remarks><para>Объект Characters <b>можно</b> использовать для добавления и формата символов в текстовом кадре.</para>
+          <para>Объект <b>Characters</b> — это не коллекция.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -173,8 +173,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -207,7 +207,7 @@
         <summary>Возвращает или задает горизонтальное выравнивание для указанного объекта.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>HorizontalAlignment</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlHAlign" /> констант.</para>
-          <para>Некоторые из этих констант могут быть недоступны вам, в зависимости от выбранной или установленной языковой поддержки (например, для английского (США).</para>
+          <para>Некоторые из этих констант могут быть недоступны в зависимости от выбранной или установленной языковой поддержки (например, английского языка США).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -240,7 +240,7 @@
         <summary>Получает или задает параметр горизонтального переполнения для указанного объекта.</summary>
         <value>Параметр горизонтального переполнения для указанного объекта.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Это свойство действует, только если свойство <see cref="P:Microsoft.Office.Interop.Excel.TextFrame2.WordWrap" /> <b>имеет свойство msoFalse</b> (0).</para>
+          <para>Это свойство действует только в том случае, если <see cref="P:Microsoft.Office.Interop.Excel.TextFrame2.WordWrap" /> свойство <b>msoFalse</b> (0).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -270,7 +270,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между нижней частью рамки текста и нижней частью вписаемого прямоугольника фигуры, содержащем текст.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между нижней частью текстового кадра и нижней частью вписаного прямоугольника фигуры, содержащем текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -301,7 +301,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между левый край рамки текста и левый край вписаного прямоугольника фигуры, которая содержит текст.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между левый край текстового кадра и левый край вписаного прямоугольника фигуры, содержа которой содержится текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -332,7 +332,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между правым краем рамки текста и правым краем вписаного прямоугольника фигуры, содержаной текст.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между правым краем текстового кадра и правым краем вписаного прямоугольника фигуры, содержа которой содержится текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -363,7 +363,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между верхней частью рамки текста и верхней частью вписаемого прямоугольника фигуры, содержаной текст.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между верхней частью текстового кадра и верхней частью вписаного прямоугольника фигуры, содержа которой содержится текст.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -394,9 +394,9 @@
         <ReturnType>Microsoft.Office.Core.MsoTextOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ориентация рамки текста.</summary>
+        <summary>Ориентация текстового кадра.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Orientation</b> может быть значением от –90 до 90 градусов или одной из констант <b>MsoTextOrientation.</b></para>
+        <remarks><para>Свойство <b>Orientation</b> может быть значением от -90 до 90 градусов или одним из констант <b>MsoTextOrientation.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -454,10 +454,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок чтения для указанного объекта.</summary>
+        <summary>Возвращает или задает порядок чтения указанного объекта.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>ReadingOrder</b> может быть одной из следующих констант: <b>xlRTL</b> (справа налево), <b>xlLTR</b> (слева направо) или <b>xlContext</b>.</para>
-          <para>Некоторые из этих констант могут быть недоступны вам, в зависимости от выбранной или установленной языковой поддержки (например, для английского (США).</para>
+          <para>Некоторые из этих констант могут быть недоступны в зависимости от выбранной или установленной языковой поддержки (например, английского языка США).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -490,7 +490,7 @@
         <summary>Возвращает или задает вертикальное выравнивание указанного объекта.</summary>
         <value>To be added.</value>
         <remarks><para>Свойство <b>VerticalAlignment</b> может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlVAlign" /> констант.</para>
-          <para>Некоторые из этих констант могут быть недоступны вам, в зависимости от выбранной или установленной языковой поддержки (например, для английского (США).</para>
+          <para>Некоторые из этих констант могут быть недоступны в зависимости от выбранной или установленной языковой поддержки (например, английского языка США).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -523,7 +523,7 @@
         <summary>Получает или задает параметр вертикального переполнения для указанного объекта.</summary>
         <value>Параметр вертикального переполнения для указанного объекта.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Это свойство действует только в том случае, если <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.AutoSize" /> свойство имеет false. <b></b></para>
+          <para>Это свойство действует только в том случае, если <see cref="P:Microsoft.Office.Interop.Excel.TextFrame.AutoSize" /> свойство является <b>ложным.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>

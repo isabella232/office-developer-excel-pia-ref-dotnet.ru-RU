@@ -1,5 +1,5 @@
 <Type Name="Parameters" FullName="Microsoft.Office.Interop.Excel.Parameters">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6941b2d7f4dfb9eda0f671667102e7c868310e4e" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50011055" /></Metadata><TypeSignature Language="C#" Value="public interface Parameters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="567926f8c55d5fcb936352a3b41fc1686be3126cfeacac6ea843cab518a53522" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54513178" /></Metadata><TypeSignature Language="C#" Value="public interface Parameters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Parameters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Parameters" />
   <TypeSignature Language="VB.NET" Value="Public Interface Parameters&#xA;Implements IEnumerable" />
@@ -25,10 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция объектов <see cref="T:Microsoft.Office.Interop.Excel.Parameter" /> для указанной таблицы запросов. Каждый <b>объект Parameter</b> представляет один параметр запроса. Каждая таблица запросов содержит коллекцию <b>параметров,</b> но она пуста, если в таблице запросов не используется запрос параметров.</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Parameters" /> для возврата коллекции <b>Parameters.</b></para>
-      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Parameters.Add(System.String,System.Object)" /> метод для создания нового параметра для таблицы запросов.</para>
-      <para>Метод Add нельзя использовать <b>в</b> таблице запросов на подключение к URL-адресу. Для таблиц запросов подключений к URL-адресам Microsoft Excel создает параметры на основе свойств <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.PostText" /> и свойств.</para>
+    <summary>Коллекция объектов <see cref="T:Microsoft.Office.Interop.Excel.Parameter" /> для указанной таблицы запросов. Каждый <b>объект Parameter</b> представляет один параметр запроса. Каждая таблица запросов содержит коллекцию <b>параметров,</b> но коллекция пуста, если в таблице запросов не используется запрос параметров.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Parameters" /> свойство, чтобы вернуть коллекцию <b>Параметры.</b></para>
+      <para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.Parameters.Add(System.String,System.Object)" /> для создания нового параметра для таблицы запросов.</para>
+      <para>Метод Add нельзя <b>использовать</b> в таблице запросов на подключение URL-адресов. Для таблиц запросов на подключение к URL Microsoft Excel создает параметры на основе свойств и <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.Connection" /> <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.PostText" /> свойств.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -90,7 +90,7 @@
         <Parameter Name="iDataType" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">Обязательный атрибут типа String. Имя указанного параметра. Имя параметра должно соответствовать предложению параметра в SQL.</param>
+        <param name="Name">Обязательный атрибут типа String. Имя указанного параметра. Имя параметра должно соответствовать пункту параметра в SQL.</param>
         <param name="iDataType"><b>Необязательный объект</b>. Тип данных параметра. Может быть любой <see cref="T:Microsoft.Office.Interop.Excel.XlParameterDataType" /> константой.</param>
         <summary>Создает новый параметр запроса. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Parameter" /> объект.</summary>
         <returns>To be added.</returns>
@@ -120,7 +120,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -176,9 +176,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -262,7 +262,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
