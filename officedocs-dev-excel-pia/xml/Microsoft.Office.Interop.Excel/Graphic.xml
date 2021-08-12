@@ -1,5 +1,5 @@
 <Type Name="Graphic" FullName="Microsoft.Office.Interop.Excel.Graphic">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="557d2313e5eee89f3ea3d42e9d0eca09addf2bb5" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003502" /></Metadata><TypeSignature Language="C#" Value="public interface Graphic" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ead33b565d41786c1fd8eac76a34cef0ae017c9a47888dda66ba0d239c15e852" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508404" /></Metadata><TypeSignature Language="C#" Value="public interface Graphic" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Graphic" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Graphic" />
   <TypeSignature Language="VB.NET" Value="Public Interface Graphic" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Содержит свойства, которые применяются к объектам рисунков в области и подголке.</summary>
-    <remarks><para>Существует несколько свойств <see cref="T:Microsoft.Office.Interop.Excel.PageSetup" /> объекта, которые возвращают <b>графический</b> объект.</para>
-      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.CenterFooterPicture" /> свойства <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.CenterHeaderPicture" /> , , или для возврата <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.LeftFooterPicture" /> <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.LeftHeaderPicture" /> <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.RightFooterPicture" /> <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.RightHeaderPicture" /> <b>графического</b> объекта.</para>
+    <summary>Содержит свойства, применимые к объектам изображения загона и подножки.</summary>
+    <remarks><para>Существует несколько свойств <see cref="T:Microsoft.Office.Interop.Excel.PageSetup" /> объекта, возвращаемого <b>объекту Graphic.</b></para>
+      <para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.CenterFooterPicture" /> свойства <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.CenterHeaderPicture" /> , , , <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.LeftFooterPicture" /> <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.LeftHeaderPicture" /> <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.RightFooterPicture" /> или, чтобы вернуть <see cref="P:Microsoft.Office.Interop.Excel.PageSetup.RightHeaderPicture" /> <b>графический</b> объект.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -81,9 +81,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает яркость указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает яркость указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Brightness</b> должно быть числом от 0,0 (dimmest) до 1,0 (самый светлый).</para>
+        <remarks><para>Свойство <b>Brightness</b> должно быть числом от 0.0 (dimmest) до 1.0 (самый яркий).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -113,10 +113,10 @@
         <ReturnType>Microsoft.Office.Core.MsoPictureColorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип преобразования цвета, примененного к указанному рисунку или объекту OLE.</summary>
+        <summary>Возвращает или задает тип преобразования цвета, примененного к указанному изображению или объекту OLE.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Core.MsoPictureColorType" />может быть одной из следующих <b>констант MsoPictureColorType:</b></para>
+            <see cref="T:Microsoft.Office.Core.MsoPictureColorType" />может быть одним из следующих констант <b>MsoPictureColorType:</b></para>
           <para>
             <b>msoPictureAutomatic</b>
           </para>
@@ -130,7 +130,7 @@
             <b>msoPictureMixed</b>
           </para>
           <para>
-            <b>msoPictureSmark</b>
+            <b>msoPictureWatermark</b>
           </para>
           <para> </para></remarks>
       </Docs>
@@ -161,9 +161,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает контраст для указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает контраст для указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Contrast</b> должно быть числом от 0,0 (наименьшая контрастность) до 1,0 (наибольшая контрастность).</para>
+        <remarks><para>Свойство <b>Contrast</b> должно быть числом от 0.0 (наименьший контраст) до 1.0 (наибольший контраст).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -192,8 +192,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -223,9 +223,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных в нижней части указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных в нижней части указанного объекта или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение высотой 100 пунктов, перемасштабирование его так, чтобы оно было на 200 точек выше, а затем установить для свойства <b>CropBottom</b> 50, 100 точек (не 50) будут обрезаны по нижней части изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение с высотой в 100 баллов, перенастройте ее так, чтобы она была 200 точек, а затем установите свойство <b>CropBottom</b> до 50, 100 точек (а не 50) будут обрезаны в нижней части изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -255,9 +255,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных с левой стороны указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных с левой стороны указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение шириной 100 точек, перемасштабирование его на 200 точек в ширину, а затем установить для свойства <b>CropLeft</b> 50, 100 точек (а не 50) будут обрезаны с левой стороны изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение шириной в 100 точек, перенастройте его так, чтобы она была шириной 200 точек, а затем установите свойство <b>CropLeft</b> до 50, 100 точек (а не 50) будут обрезаны с левой стороны изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -287,9 +287,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных с правой стороны указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных с правой стороны указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить рисунок шириной 100 точек, переклассуйте его так, чтобы ширина была 200 точек, а затем установите для свойства <b>CropRight</b> 50, 100 точек (а не 50) будут обрезаны с правой стороны изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение шириной в 100 точек, перенастройте ее так, чтобы она была шириной 200 точек, а затем установите свойство <b>CropRight</b> до 50, 100 точек (а не 50) будут обрезаны с правой стороны изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -319,9 +319,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество точек, обрезанных поверх указанного рисунка или объекта OLE.</summary>
+        <summary>Возвращает или задает количество точек, обрезанных в верхней части указанного изображения или объекта OLE.</summary>
         <value>To be added.</value>
-        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение высотой 100 пунктов, перемасштабирование его так, чтобы оно было на 200 точек выше, а затем установить для свойства <b>CropTop</b> 50, 100 точек (а не 50) будут обрезаны в верхней части изображения.</para>
+        <remarks><para>Обрезка рассчитывается относительно исходного размера изображения. Например, если вставить изображение с высотой в 100 баллов, перенастройте ее так, чтобы она была 200 точек, а затем установите свойство <b>CropTop</b> до 50, 100 точек (а не 50) будут обрезаны в верхней части изображения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -351,9 +351,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает URL-адрес (в интрасети или Интернете) или путь (локальный или сетевой) к расположению, в котором был сохранен указанный исходный объект.</summary>
+        <summary>Возвращает или задает URL-адрес (на интрасети или в Интернете) или путь (локальный или сетевой) к расположению, где был сохранен указанный исходный объект.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>FileName</b> создает ошибку, если папка по указанному пути не существует.</para>
+        <remarks><para>Свойство <b>FileName</b> создает ошибку, если папка в указанном пути не существует.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -383,7 +383,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота объекта (в пунктах).</summary>
+        <summary>Высота объекта в точках.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -414,7 +414,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если указанная фигура сохраняет исходные пропорции при ее размере. <b>False,</b> если вы можете изменить высоту и ширину фигуры независимо друг от друга при изменении ее размеров.</summary>
+        <summary><b>True,</b> если указанная фигура сохраняет исходные пропорции при повторном ее размере. <b>False,</b> если вы можете изменить высоту и ширину формы независимо друг от друга при ее изменении.</summary>
         <value>To be added.</value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Core.MsoTriState" />может быть одной из следующих <b>констант MsoTriState:</b></para>
@@ -422,7 +422,7 @@
             <b>msoCTrue</b>
           </para>
           <para>
-            <b>msoFalse</b> При изменении ее размеров можно изменить высоту и ширину фигуры независимо друг от друга.</para>
+            <b>msoFalse</b> При изменении размеров можно изменять высоту и ширину формы независимо друг от друга.</para>
           <para>
             <b>msoTriStateMixed</b>
           </para>
@@ -430,7 +430,7 @@
             <b>msoTriStateToggle</b>
           </para>
           <para>
-            <b>msoTrue</b> Указанная фигура сохраняет исходные пропорции при ее размере.</para>
+            <b>msoTrue</b> Указанная форма сохраняет исходные пропорции при повторном ее размере.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -488,7 +488,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина объекта (в пунктах).</summary>
+        <summary>Ширина объекта в точках.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

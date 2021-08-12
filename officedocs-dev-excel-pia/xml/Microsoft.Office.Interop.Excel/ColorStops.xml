@@ -1,5 +1,5 @@
 <Type Name="ColorStops" FullName="Microsoft.Office.Interop.Excel.ColorStops">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="de9fbfb5c737f16b971690bfbb733b0377f32643" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50005742" /></Metadata><TypeSignature Language="C#" Value="public interface ColorStops : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="12e3e22b831cf323ecefa9825c1906af3ef96b8b9ed2a0f2e780fe3b42226f60" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54509636" /></Metadata><TypeSignature Language="C#" Value="public interface ColorStops : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ColorStops implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ColorStops" />
   <TypeSignature Language="VB.NET" Value="Public Interface ColorStops&#xA;Implements IEnumerable" />
@@ -25,7 +25,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.ColorStop" /> для указанного ряда.</summary>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.ColorStop" /> для указанной серии.</summary>
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
@@ -87,7 +87,7 @@
         <Parameter Name="Position" Type="System.Double" />
       </Parameters>
       <Docs>
-        <param name="Position">Представляет положение, в которое необходимо применить <b>ColorStop.</b></param>
+        <param name="Position">Представляет положение, в котором необходимо применить <b>ColorStop.</b></param>
         <summary>Добавляет объект <see cref="T:Microsoft.Office.Interop.Excel.ColorStop" /> в указанную коллекцию.</summary>
         <returns>ColorStop</returns>
         <remarks>To be added.</remarks>
@@ -116,7 +116,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel._Application" /> представляет приложение Microsoft Excel. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
+        <summary>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Microsoft Excel приложение. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта). Только для чтения.</summary>
         <value><b>Приложение</b> (см. выше)</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -169,10 +169,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает количество представленных объектов. Только для чтения</summary>
-        <value>64-разрядное целое число.</value>
+        <summary>Возвращает или задает количество представленного объекта. Только для чтения</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
-        <example><para>Возвращает количество элементов ColorStop в активной ячейке.</para>
+        <example><para>Возвращает число ColorStops в активной ячейке.</para>
           <code>&lt;span class="label"&gt;ActiveCell.Interior.Gradient.ColorStops.Count&lt;/span&gt;</code></example>
       </Docs>
     </Member>
@@ -199,9 +199,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> enumeration, которая указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> переумериях, которая указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство Creator предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL. </para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Свойство Creator предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -260,7 +260,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Имя или номер индекса для объекта.</param>
+        <param name="Index">Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из представленной коллекции.</summary>
         <returns>Объект, <see cref="T:Microsoft.Office.Interop.Excel.ColorStop" /> содержащийся в коллекции.</returns>
         <remarks>To be added.</remarks>

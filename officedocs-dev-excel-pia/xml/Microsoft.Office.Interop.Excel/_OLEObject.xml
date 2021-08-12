@@ -1,5 +1,5 @@
 <Type Name="_OLEObject" FullName="Microsoft.Office.Interop.Excel._OLEObject">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="af49a80aff9121295165535f61d74b6cd1d1256b" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012686" /></Metadata><TypeSignature Language="C#" Value="public interface _OLEObject" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="68d775a6630163aee28d8cfb30306ccaf7e3c4db551d8045bc35fae7ec41c67b" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54516034" /></Metadata><TypeSignature Language="C#" Value="public interface _OLEObject" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _OLEObject" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel._OLEObject" />
   <TypeSignature Language="VB.NET" Value="Public Interface _OLEObject" />
@@ -111,7 +111,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство возвращает объект, который представляет создателя указанного объекта (это свойство можно использовать с объектом автоматизации OLE для возврата приложения <see cref="T:Microsoft.Office.Interop.Excel.Application" /> этого объекта). Только для чтения.</summary>
+        <summary>Это свойство возвращает объект, который представляет создателя указанного объекта (вы можете использовать это свойство с объектом автоматизации OLE для возврата приложения <see cref="T:Microsoft.Office.Interop.Excel.Application" /> этого объекта). Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -142,10 +142,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект OLE автоматически загружается при его открытие в книге. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если объект OLE автоматически загружается при открывлении книги, которая содержит его. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство игнорируется ActiveX элементов управления. ActiveX элементов управления всегда загружаются при открытие книги.</para>
-          <para>Для большинства типов объектов OLE это свойство не должно иметь <b>true.</b> По умолчанию свойству <b>AutoLoad</b> занося значение <b>False</b> для новых объектов OLE; Это экономит время и память при загрузке книг в Microsoft Excel. Преимущество автоматической загрузки объектов OLE в том, что для объектов, которые представляют переменные данные, ссылки на исходные данные можно восстановить немедленно, а при необходимости объекты можно отрисовки снова.</para>
+        <remarks><para>Это свойство игнорируется ActiveX элементов управления. ActiveX всегда загружаются при открываемой книге.</para>
+          <para>Для большинства типов объектов OLE это свойство не следует задать <b>true</b>. По умолчанию для новых объектов OLE для <b>свойства AutoLoad</b> <b>установлено значение False;</b> это экономит время и память, Microsoft Excel загружает книги. Преимущество автоматической загрузки объектов OLE в том, что для объектов, которые представляют волатильные данные, ссылки на исходные данные можно немедленно восстановить и при необходимости повторно отрисовки объектов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -175,7 +175,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект OLE обновляется автоматически при смене источника. Допустимо, только если объект связан (его <see cref="P:Microsoft.Office.Interop.Excel._OLEObject.OLEType" /> свойство должно быть <b>xlOLELink).</b> Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если объект OLE обновляется автоматически при изменениях источника. Допустимо только в том случае, если объект связан (его <see cref="P:Microsoft.Office.Interop.Excel._OLEObject.OLEType" /> свойство должно быть <b>xlOLELink).</b> Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -231,7 +231,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет ячейку, расположенную <see cref="T:Microsoft.Office.Interop.Excel.Range" /> под правым нижним углом объекта. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет ячейку, расположенную в нижнем правом <see cref="T:Microsoft.Office.Interop.Excel.Range" /> углу объекта. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -257,7 +257,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выводит объект перед z-порядком.</summary>
+        <summary>Привносит объект в переднюю часть z-order.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -311,8 +311,8 @@
         <Parameter Name="Format" Type="Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />
       </Parameters>
       <Docs>
-        <param name="Appearance">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> . Указывает, как следует скопировать рисунок.</param>
-        <param name="Format">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> . Формат изображения.</param>
+        <param name="Appearance"><see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" />Необязательный . Указывает, как должно быть скопировано изображение.</param>
+        <param name="Format"><see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />Необязательный . Формат изображения.</param>
         <summary>Копирует выбранный объект в буфер обмена в качестве изображения. <b>Объект</b>.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -341,9 +341,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. <b>XlCreatorCode</b>только для чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <b>xlCreatorCode</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -368,9 +368,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Прикрепить объект к буферу обмена или в pastes it into a specified destination.</summary>
+        <summary>Отрезает объект в буфер обмена или вклеит его в заданный пункт назначения.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Вырезать можно только внедренные диаграммы.</para>
+        <remarks><para>Можно вырезать только встроенные диаграммы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -452,7 +452,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект включен. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если объект включен. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -483,7 +483,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Высота объекта (в пунктах). Для чтения и записи, <b>Double</b>.</summary>
+        <summary>Высота объекта в точках. Для чтения и записи, <b>Double</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -511,7 +511,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции похожих объектов. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает индексный номер объекта в коллекции аналогичных объектов. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -539,7 +539,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет интерьер указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -570,9 +570,9 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от левого края объекта до левого края столбца A (на графике) или левого края области диаграммы (на диаграмме). Для чтения и записи, <b>Double</b>.</summary>
+        <summary>Расстояние в точках от левого края объекта до левого края столбца A (на таблице) или левого края области диаграммы (на диаграмме). Для чтения и записи, <b>Double</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если окно максимальное, это свойство возвращает отрицательное число, которое зависит от ширины границы окна. Если установить для этого свойства значение 0 (ноль), окно будет немного меньше, чем если бы окно приложения было максимальное. Другими словами, если свойство <b>Left</b> имеет значение 0 (ноль), левая граница главного окна Microsoft Excel будет просто еле видна на экране.</para>
+        <remarks><para>Если окно максимальное, это свойство возвращает отрицательное число, которое изменяется в зависимости от ширины границы окна. Настройка этого свойства до 0 (ноль) сделает окно немного меньше, чем если бы было максимальное окно приложения. Другими словами, <b></b> если свойство Left — 0 (ноль), левая граница основного окна Microsoft Excel будет едва видна на экране.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -602,9 +602,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает диапазон таблиц, связанный со значением этого управления. Если вы поместите значение в ячейку, элемент управления принимает это значение. Аналогично, если изменить значение элемента управления, это значение также помещается в ячейку. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает диапазон таблиц, связанный со значением управления. Если вы поместите значение в ячейку, элемент управления принимает это значение. Кроме того, если изменить значение элемента управления, это значение также помещается в ячейку. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство нельзя использовать с списками с несколькими списками.</para>
+        <remarks><para>Это свойство нельзя использовать в многоцелевом списке.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -634,10 +634,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает диапазон таблиц, используемый для заполнения указанного списка. Установка этого свойства уничтожает все существующие списки в списке. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает диапазон листов, используемый для заполнения указанного окна списка. Настройка этого свойства уничтожает любой существующий список в поле списка. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Microsoft Excel читает содержимое каждой ячейки в диапазоне и вставляет их значения в список. Список отслеживает изменения в ячейках диапазона.</para>
-          <para>Если список в списке был создан с помощью метода, это свойство возвращает <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.AddItem(System.String,System.Object)" /> пустую строку ("").</para>
+        <remarks><para>Microsoft Excel читает содержимое каждой ячейки в диапазоне и вставляет значения ячейки в поле списка. Список отслеживает изменения в ячейках диапазона.</para>
+          <para>Если список в поле списка был создан с помощью метода, это свойство возвращает пустую строку <see cref="M:Microsoft.Office.Interop.Excel.ControlFormat.AddItem(System.String,System.Object)" /> ("").</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -667,7 +667,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект заблокирован, <b>false,</b> если объект можно изменить при защите листа. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если объект заблокирован, <b>False,</b> если объект может быть изменен при защите листа. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -726,7 +726,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект OLE Automation, связанный с этим объектом OLE. Объект только для <b>чтения.</b></summary>
+        <summary>Возвращает объект автоматизации OLE, связанный с этим объектом OLE. Объект только для <b>чтения.</b></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -754,7 +754,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип объекта OLE. Может быть одной из следующих <b>констант XlOLEType:</b> <b>xlOLELink</b> или <b>xlOLEEmbed.</b> Возвращает <b>xlOLELink,</b> если объект связан (он существует за пределами файла) или <b>возвращает xlOLEEmbed,</b> если объект внедрен (он полностью содержится в файле). Объект только для <b>чтения.</b></summary>
+        <summary>Возвращает тип объекта OLE. Может быть одной из следующих <b>констант XlOLEType:</b> <b>xlOLELink</b> или <b>xlOLEEmbed.</b> Возвращает <b>xlOLELink,</b> если объект связан (он существует за пределами файла) или возвращает <b>xlOLEEmbed,</b> если объект встроен (он полностью содержится в файле). Объект только для <b>чтения.</b></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -791,19 +791,19 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя макроса, который будет запускаться при щелчке указанного объекта. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает имя макроса, запускаемого при нажатии указанного объекта. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Настройка этого свойства для элемента меню переопределяет все настраиваемые сведения справки, заданные для пункта меню, с данными, заданными для назначенного макроса.</para>
+        <remarks><para>При настройке этого свойства для элемента меню переопределяется любая настраиваемая информация справки, настроенная для элемента меню, с информацией, настроенной для назначенного макроса.</para>
           <para> </para></remarks>
-        <example><para>В этом примере microsoft Excel вызывает процедуру ShapeClick при нажатии фигуры.</para>
+        <example><para>В этом примере Microsoft Excel процедуру ShapeClick при нажатии фигуры.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(1).&lt;/span&gt;
 &lt;span class="label"&gt;OnAction&lt;/span&gt;
 &lt;span class="label"&gt;= "ShapeClick"&lt;/span&gt;</code></example>
-        <example><para>В этом примере Microsoft Excel вызывает процедуру ShapeClick при нажатии фигуры.</para>
+        <example><para>В этом примере Microsoft Excel процедуру ShapeClick при нажатии фигуры.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(1).&lt;/span&gt;
 &lt;span class="label"&gt;OnAction&lt;/span&gt;
 &lt;span class="label"&gt;= "ShapeClick"&lt;/span&gt;</code></example>
-        <example><para>В этом примере microsoft Excel вызывает процедуру ShapeClick при нажатии фигуры.</para>
+        <example><para>В этом примере Microsoft Excel процедуру ShapeClick при нажатии фигуры.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(1).&lt;/span&gt;
 &lt;span class="label"&gt;OnAction&lt;/span&gt;
 &lt;span class="label"&gt;= "ShapeClick"&lt;/span&gt;</code></example>
@@ -863,7 +863,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ прикрепления объекта к ячейкам под ней. Объект <b>read/write</b>.</summary>
+        <summary>Возвращает или задает способ прикрепления объекта к ячейкам под ней. Объект <b>Read/write</b>.</summary>
         <value>To be added.</value>
         <remarks><para>Используйте одну из следующих констант:</para>
           <para>
@@ -904,7 +904,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если объект будет печататься при печати документа. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если объект будет напечатан при печати документа. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -932,7 +932,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает программные идентификаторы для объекта. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает программные идентификаторы объекта. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -959,7 +959,7 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace"><b>Необязательный объект</b>. <b>True,</b> чтобы заменить текущий выбор указанным объектом. <b>False,</b> чтобы расширить текущий выбор, чтобы включить все ранее выбранные объекты и указанный объект.</param>
+        <param name="Replace"><b>Необязательный объект</b>. <b>True</b> для замены текущего выбора указанным объектом. <b>False,</b> чтобы расширить текущий выбор, чтобы включить все ранее выбранные объекты и указанный объект.</param>
         <summary>Выбирает объект.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -986,7 +986,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Отправляет объект на задний ядр z-порядка.</summary>
+        <summary>Отправляет объект в задней части z-order.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1017,7 +1017,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт является теневым шрифтом или объект имеет тень. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если шрифт — это шрифт теней или если объект имеет тень. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1045,7 +1045,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ShapeRange</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект, который представляет указанный объект или объекты. Только для чтения.</summary>
+        <summary>Возвращает объект, который представляет указанный <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объект или объект. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1076,7 +1076,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает имя источника ссылки указанного объекта. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает имя источника ссылок указанного объекта. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1107,7 +1107,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Расстояние в пунктах от верхнего края объекта до верхней строки 1 (на графике) или верхней части области диаграммы (на диаграмме). Для чтения и записи, <b>Double</b>.</summary>
+        <summary>Расстояние в точках от верхнего края объекта до верхней строки 1 (на таблице) или верхней части области диаграммы (на диаграмме). Для чтения и записи, <b>Double</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1135,7 +1135,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет ячейку, расположенную под левый верхний <see cref="T:Microsoft.Office.Interop.Excel.Range" /> угол указанного объекта. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Range" /> объект, который представляет ячейку, расположенную в верхнем левом углу указанного объекта. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1188,7 +1188,7 @@
         <Parameter Name="Verb" Type="Microsoft.Office.Interop.Excel.XlOLEVerb" />
       </Parameters>
       <Docs>
-        <param name="Verb"><b>Необязательный XlOLEVerb</b>. Глагол, с который должен действовать сервер объекта OLE. Если этот аргумент опущен, отправляется глагол по умолчанию. Доступные команды определяются исходным приложением объекта. Типичными глаголами для объекта OLE являются Open и Primary (представленные константами <b>XlOLEVerb</b> <b>xlOpen</b> и <b>xlPrimary).</b></param>
+        <param name="Verb"><b>Необязательный XlOLEVerb</b>. Глагол, на который должен действовать сервер объекта OLE. Если этот аргумент опущен, отправляется глагол по умолчанию. Доступные глаголы определяются исходным приложением объекта. Типичными глаголами для объекта OLE являются Open и Primary (представлены константами <b>XlOLEVerb</b> <b>xlOpen</b> и <b>xlPrimary).</b></param>
         <summary>Отправляет глагол на сервер указанного объекта OLE.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -1220,7 +1220,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли объект видимым. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Определяет, виден ли объект. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1251,7 +1251,7 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Ширина объекта (в пунктах). Для чтения и записи, <b>Double</b>.</summary>
+        <summary>Ширина объекта в точках. Для чтения и записи, <b>Double</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1279,9 +1279,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает положение объекта в z-порядке. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает положение z-order объекта. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>В любой коллекции объектов объект в задней части z-порядка имеет (1), а объект в передней части <paramref name="collection" /> z-порядка <paramref name="collection" /> — ( <paramref name="collection" /> .<b> Count</b>).</para>
+        <remarks><para>В любом собрании объектов объект в задней части z-order является (1), а объект в передней части <paramref name="collection" /> z-order <paramref name="collection" /> — <paramref name="collection" /> (.<b> Count</b>).</para>
           <para> </para></remarks>
       </Docs>
     </Member>

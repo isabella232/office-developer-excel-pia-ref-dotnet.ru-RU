@@ -1,5 +1,5 @@
 <Type Name="FileExportConverter" FullName="Microsoft.Office.Interop.Excel.FileExportConverter">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="4b27ac15b0b3e0b0e1c199c9745e73b9bbe348b0" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003607" /></Metadata><TypeSignature Language="C#" Value="public interface FileExportConverter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d85d0953cb2a108687c37cc4ab832a532d2f5895ca9fa67fc29b6c7ed74d969d" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508481" /></Metadata><TypeSignature Language="C#" Value="public interface FileExportConverter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract FileExportConverter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.FileExportConverter" />
   <TypeSignature Language="VB.NET" Value="Public Interface FileExportConverter" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет конвертер файлов, используемый для сохранения файлов.</summary>
-    <remarks><para>Невозможно создать новый конвертер файлов или добавить его в <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекцию. <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> объекты добавляются во время установки Microsoft Office путем установки дополнительных конвертеров файлов.</para>
+    <summary>Представляет конвертер файлов, который используется для сохранения файлов.</summary>
+    <remarks><para>Невозможно создать новый конвертер файлов или добавить его в <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverters" /> коллекцию. <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" />объекты добавляются во время установки Microsoft Office или путем установки дополнительных преобразователей файлов.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,7 +49,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -77,9 +77,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> объект, который указывает приложение, в котором был создан указанный объект. Только для чтения.</summary>
+        <summary>Возвращает приложение, в котором был создан <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> указанный объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" />.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает значение 5843454C, которое представляет строку "XCEL". Свойство Creator предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает hexadecimal значение 5843454C, которое представляет строку "XCEL". Свойство Creator предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -107,7 +107,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает описание конвертера файлов. Только для чтения, <b>String</b>.</summary>
-        <value><b>Строка</b></value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -135,7 +135,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает расширения имен файлов, связанные с указанным <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> объектом. Только для чтения, <b>String</b>.</summary>
-        <value><b>Строка</b></value>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -162,8 +162,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает integer, которое идентифицирует формат файла, связанный с указанным <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> объектом. Только для чтения.</summary>
-        <value>64-разрядное целое число.</value>
+        <summary>Возвращается integer, идентифицирует формат файла, связанный с указанным <see cref="T:Microsoft.Office.Interop.Excel.FileExportConverter" /> объектом. Только для чтения.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

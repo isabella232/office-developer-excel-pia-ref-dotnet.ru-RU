@@ -1,5 +1,5 @@
 <Type Name="SparkHorizontalAxis" FullName="Microsoft.Office.Interop.Excel.SparkHorizontalAxis">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d17f400b5b6b710e5d3be00feaaaf13db697ccb6" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009949" /></Metadata><TypeSignature Language="C#" Value="public interface SparkHorizontalAxis" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c9dc47e50c04fbdb0e028c54a82ea1279e54d41a030f1662731aa1bcff2c4d31" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54516727" /></Metadata><TypeSignature Language="C#" Value="public interface SparkHorizontalAxis" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SparkHorizontalAxis" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SparkHorizontalAxis" />
   <TypeSignature Language="VB.NET" Value="Public Interface SparkHorizontalAxis" />
@@ -21,8 +21,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет параметры для горизонтальных осей группы спарклинов.</summary>
-    <remarks><para>Используйте свойство объекта, чтобы вернуть объект <see cref="P:Microsoft.Office.Interop.Excel.SparkAxes.Horizontal" /> <see cref="T:Microsoft.Office.Interop.Excel.SparkAxes" /> для группы <see cref="T:Microsoft.Office.Interop.Excel.SparkHorizontalAxis" /> спарклинов. Горизонтальная ось отображается, только если данные для спарклайна имеет как отрицательные, так и положительные значения на вертикальной оси.</para>
+    <summary>Представляет параметры горизонтальных осей группы sparklines.</summary>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.SparkAxes.Horizontal" /> <see cref="T:Microsoft.Office.Interop.Excel.SparkAxes" /> объекта, чтобы вернуть объект <see cref="T:Microsoft.Office.Interop.Excel.SparkHorizontalAxis" /> для группы sparklines. Горизонтальная ось отображается только в том случае, если данные для sparkline имеет отрицательные и положительные значения на вертикальной оси.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,7 +49,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <summary>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Microsoft Excel приложение. При этом с помощью квалификатора объектов это свойство возвращает объект, представляю который представляет создателя <see cref="T:Microsoft.Office.Interop.Excel.Application" /> указанного объекта.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -78,8 +78,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SparkColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает объект, который указывает цвет горизонтальной оси <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> спарклайна.</summary>
-        <value>Объект, который указывает цвет горизонтальной оси <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> спарклайна.</value>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> объект, который указывает цвет горизонтальной оси sparkline.</summary>
+        <value>Объект, который указывает цвет горизонтальной <see cref="T:Microsoft.Office.Interop.Excel.SparkColor" /> оси sparkline.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -107,10 +107,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para>Длинное только <b>для чтения.</b></para>
-          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.SparkHorizontalAxis.Creator" /> символьный код создателя. Например, excelnv1 имеет код создателя XCEL.</para>
+        <summary>Получает 32-битный <b>ряд,</b> который указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-bit <b>integer,</b> который указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Только для <b>чтения .</b></para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.SparkHorizontalAxis.Creator" /> символов. Например, excelnv1 имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -137,11 +137,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, зависит ли горизонтальная ось спарклайна от значений даты.</summary>
-        <value>имеет значение <b>true,</b> если горизонтальная ось спарклайна основана на значениях даты; в <b>противном</b>случае false .</value>
+        <summary>Получает, основана ли горизонтальная ось sparkline на значениях дат.</summary>
+        <value><b>значение true,</b> если горизонтальная ось sparkline основана на значениях дат; в противном <b>случае, false</b>.</value>
         <remarks><para>Только для чтения.</para>
-          <para>имеет значение 
-            <b>true,</b> если горизонтальная ось основана на значениях даты; в <b>противном случае false</b>.</para>
+          <para>
+            <b>значение true,</b> если горизонтальная ось основана на значениях дат; в <b>противном случае false</b>.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -168,7 +168,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> родительский объект для указанного объекта.</summary>
+        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объект для указанного объекта.</summary>
         <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.SparklineGroup" /> объект для указанного объекта.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -200,10 +200,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, будут ли точки на горизонтальной оси отсвещены справа налево.</summary>
-        <value><b>true,</b> если точки на горизонтальной оси расположены справа налево; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, расположены ли точки на горизонтальной оси в порядке справа налево.</summary>
+        <value><b>верно,</b> если точки горизонтальной оси расположены в порядке справа налево; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Установите для <see cref="P:Microsoft.Office.Interop.Excel.SparkHorizontalAxis.RightToLeftPlotOrder" /> свойства значение <b>true,</b> чтобы выстроить значения на горизонтальной оси в порядке справа налево.</para>
+          <para>Установите свойство true для настроя значений на горизонтальной оси <see cref="P:Microsoft.Office.Interop.Excel.SparkHorizontalAxis.RightToLeftPlotOrder" /> в порядке справа налево. <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>

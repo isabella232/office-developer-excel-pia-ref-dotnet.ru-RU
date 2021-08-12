@@ -1,5 +1,5 @@
 <Type Name="ErrorCheckingOptions" FullName="Microsoft.Office.Interop.Excel.ErrorCheckingOptions">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="fcbc54c7e67e1b8642a95dec50c04ef275b48f27" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50003614" /></Metadata><TypeSignature Language="C#" Value="public interface ErrorCheckingOptions" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="36d64edfe0fb68e494eea472be2fd123cf51485ebb5fa0156b10acdfd290d8cc" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508488" /></Metadata><TypeSignature Language="C#" Value="public interface ErrorCheckingOptions" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ErrorCheckingOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ErrorCheckingOptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface ErrorCheckingOptions" />
@@ -22,8 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет параметры проверки ошибок для приложения.</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Application.ErrorCheckingOptions" /> объекта для возврата объекта <see cref="T:Microsoft.Office.Interop.Excel.Application" /> <b>ErrorCheckingOptions.</b></para>
-      <para>Со <see cref="P:Microsoft.Office.Interop.Excel.Errors.Item(System.Object)" /> ссылкой на свойство <see cref="T:Microsoft.Office.Interop.Excel.Errors" /> объекта можно просмотреть список значений индекса, связанных с вариантами проверки ошибок.</para>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Application.ErrorCheckingOptions" /> свойство объекта <see cref="T:Microsoft.Office.Interop.Excel.Application" /> для возврата объекта <b>ErrorCheckingOptions.</b></para>
+      <para>Ссылка на <see cref="P:Microsoft.Office.Interop.Excel.Errors.Item(System.Object)" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.Errors" /> объекта, чтобы просмотреть список значений индекса, связанных с вариантами проверки ошибок.</para>
       <para>Для настройки или возврата параметров проверки ошибок можно использовать следующие свойства, которые являются членами объекта <b>ErrorCheckingOptions.</b></para>
       <list type="bullet">
         <item>
@@ -98,7 +98,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -129,10 +129,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Оповещает пользователя о всех ячейках, нарушающих включенные правила проверки ошибок.</summary>
+        <summary>Оповещает пользователя о всех ячейках, нарушающих правила проверки ошибок с включенной поддержкой.</summary>
         <value>To be added.</value>
-        <remarks><para>Если для <b>свойства BackgroundChecking</b> установлено значение <b>True</b> (по умолчанию), рядом со всеми ячейками, нарушающих включенные ошибки, отображается кнопка "Параметры автозаполнения". <b>False</b> отключает фоновую проверку на ошибки.</para>
-          <para>Обратитесь <see cref="T:Microsoft.Office.Interop.Excel.ErrorCheckingOptions" /> к объекту, чтобы просмотреть список его членов, которые можно включить.</para>
+        <remarks><para>Когда свойство <b>BackgroundChecking</b> за установлено <b>значение True</b> (по умолчанию), рядом со всеми ячейками, нарушающих ошибки с включенной поддержкой, отображается кнопка Параметры AutoCorrect. <b>False</b> отключает фоновую проверку на ошибки.</para>
+          <para>Обратитесь <see cref="T:Microsoft.Office.Interop.Excel.ErrorCheckingOptions" /> к объекту, чтобы просмотреть список его участников, которые можно включить.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -161,8 +161,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -192,7 +192,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если установлено <b>значение True</b> (по умолчанию), Microsoft Excel идентифицирует с помощью кнопки "Параметры автозаполнения" выбранные ячейки, содержащие формулы, которые ссылаются на пустые ячейки. <b>False отключает</b> проверку ссылок на пустые ячейки.</summary>
+        <summary>Если <b>установлено значение True</b> (по умолчанию), Microsoft Excel определяет с помощью кнопки Параметры AutoCorrect выбранные ячейки, содержащие формулы, которые относятся к пустым ячейкам. <b>False</b> отключает проверку ссылок на пустые ячейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -223,7 +223,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если установлено <b>значение True</b> (по умолчанию), Microsoft Excel идентифицирует с помощью кнопки "Параметры автозаполнения" выбранные ячейки, содержащие формулы, оценивающие ошибку. <b>Значение False</b> отключает проверку ошибок для ячеек, которые оцениваются как значение ошибки.</summary>
+        <summary>При зачете <b>True</b> (по умолчанию) Microsoft Excel с помощью кнопки Параметры AutoCorrect выбранные ячейки, содержащие формулы, оценивающие ошибку. <b>False</b> отключает проверку ошибок для ячеек, которые оценивают значение ошибки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -254,9 +254,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если установлено <b>значение True</b> (по умолчанию), Microsoft Excel определяет ячейки, содержащие несогласованную формулу в регионе. <b>False</b> отключает несогласованную проверку формул.</summary>
+        <summary>При наборе <b>true</b> (по умолчанию) Microsoft Excel ячейки, содержащие несогласованную формулу в регионе. <b>False</b> отключает несогласованную проверку формулы.</summary>
         <value>To be added.</value>
-        <remarks><para>Согласованные формулы в области должны находиться слева и справа или выше и ниже ячейки, содержащей несогласованную формулу для правильной работы свойства <b>InconsistentFormula.</b></para>
+        <remarks><para>Последовательные формулы в регионе должны находиться слева и справа или выше и ниже ячейки, содержащей несогласованную формулу, чтобы свойство <b>InconsistentFormula</b> работало правильно.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -286,7 +286,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если формула таблицы несогласованной. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если формула таблицы несогласованной. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -325,7 +325,7 @@
             <b>xlColorIndexAutomatic</b> Цвет системы по умолчанию.</para>
           <para>
             <b>xlColorIndexNone</b> Не используется с этим свойством.</para>
-          <para>Можно указать определенный цвет для индикатора, введите соответствующее значение индекса. Это свойство можно <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Colors(System.Object)" /> использовать для возврата текущей цветовой палитры.</para>
+          <para>Вы можете указать определенный цвет для индикатора, введите соответствующее значение индекса. Свойство можно использовать <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Colors(System.Object)" /> для возврата текущей цветовой палитры.</para>
           <para>На рисунке ниже показаны значения цветового индекса в цветовой палитре по умолчанию.</para>
           <para> </para></remarks>
       </Docs>
@@ -356,9 +356,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Boolean</b> value that is <b>True</b> if data validation is enabled in a list.</summary>
+        <summary>Значение <b>Boolean,</b> значение <b>True,</b> если проверка данных включена в списке.</summary>
         <value>To be added.</value>
-        <remarks><para>Проверка данных для списка также может быть включена или отключена в пользовательском интерфейсе путем выбора или с очистки окна проверки данных списка на вкладке "Проверка ошибок" в диалоговом окне "Параметры".</para>
+        <remarks><para>Проверка данных для списка также может быть включена или отключена в пользовательском интерфейсе путем выбора или очистки проверки ошибок проверки данных списка на вкладке Проверка ошибок диалогового окна Options.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -388,7 +388,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если установлено <b>значение True</b> (по умолчанию), Microsoft Excel идентифицирует с помощью кнопки "Параметры автозаполнения" выбранные ячейки, содержащие числа, написанные в виде текста. <b>False</b> отключает проверку ошибок для номеров, написанных в виде текста.</summary>
+        <summary>Если <b>установлено значение True</b> (по умолчанию), Microsoft Excel с помощью кнопки Параметры AutoCorrect выбранные ячейки, содержащие числа, написанные в виде текста. <b>False</b> отключает проверку ошибок для номеров, написанных в виде текста.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -419,7 +419,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если параметр имеет значение <b>True</b> (по умолчанию), Microsoft Excel идентифицирует с помощью кнопки "Параметры автозаполнения" выбранные ячейки, содержащие формулы, ссылаясь на диапазон, который опустить смежные ячейки, которые могут быть включены. <b>False</b> отключает проверку ошибок для пропущенных ячеек.</summary>
+        <summary>Если <b>установлено значение True</b> (по умолчанию), Microsoft Excel определяет с помощью кнопки Параметры AutoCorrect выбранные ячейки, содержащие формулы, ссылаясь на диапазон, который не включает смежные ячейки, которые могут быть включены. <b>False</b> отключает проверку ошибок для пропущенных ячеек.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -478,7 +478,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если параметр имеет значение <b>True</b> (по умолчанию), Microsoft Excel идентифицирует с помощью кнопки "Параметры автозаполнения" ячейки, содержащие текстовую дату с двузначным годом. <b>False</b> отключает проверку ошибок для ячеек, содержащих текстовую дату с двузначным годом.</summary>
+        <summary>Если <b>установлено значение True</b> (по умолчанию), Microsoft Excel с помощью кнопки Параметры AutoCorrect ячейки, содержащие текстовую дату с двухзначным годом. <b>False</b> отключает проверку ошибок для ячеек, содержащих текстовую дату с двухзначным годом.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -509,7 +509,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если установлено <b>значение True</b> (по умолчанию), Microsoft Excel определяет выбранные ячейки, которые разблокированы и содержат формулу. <b>False</b> отключает проверку ошибок для разблокированных ячеек, содержащих формулы.</summary>
+        <summary>При наборе <b>True</b> (по умолчанию) Microsoft Excel выбранные ячейки, которые разблокированы, и содержат формулу. <b>False</b> отключает проверку ошибок для разблокированных ячеек, содержащих формулы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

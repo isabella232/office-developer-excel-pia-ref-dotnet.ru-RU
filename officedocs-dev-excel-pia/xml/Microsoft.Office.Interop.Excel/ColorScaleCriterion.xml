@@ -1,5 +1,5 @@
 <Type Name="ColorScaleCriterion" FullName="Microsoft.Office.Interop.Excel.ColorScaleCriterion">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="71a5a3fdaa7d1393ccedac6ff867343c7fd8ae11" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50005749" /></Metadata><TypeSignature Language="C#" Value="public interface ColorScaleCriterion" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4300478031386a6108bff5ce1de31ebaedde5c92e202b2aa273a0c5a4efce780" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54509650" /></Metadata><TypeSignature Language="C#" Value="public interface ColorScaleCriterion" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ColorScaleCriterion" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ColorScaleCriterion" />
   <TypeSignature Language="VB.NET" Value="Public Interface ColorScaleCriterion" />
@@ -21,11 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет критерии минимального, среднего или максимального пороговых значений условного формата цвета.</summary>
-    <remarks><para>Каждый <b>ColorScaleCriterion</b> является частью <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> коллекции. Используйте <b>ColorScaleCriteria</b>( <paramref name="index" /> ), чтобы вернуть отдельный критерий.</para>
-      <para>Для цветовой шкалы можно установить пороговое значение и <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.Type" /> <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.Value" /> <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.FormatColor" /> пороговое значение.</para>
+    <summary>Представляет критерии для минимальных, средних или максимальных пороговых значений для условного формата цветового формата.</summary>
+    <remarks><para>Каждый <b>ColorScaleCriterion</b> является частью <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> коллекции. Используйте <b>ColorScaleCriteria</b> <paramref name="index" /> (), чтобы вернуть отдельный критерий.</para>
+      <para>Вы можете установить <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.Type" /> , <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.Value" /> и каждого <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.FormatColor" /> порогового значения для цветовой шкалы.</para>
       <para> </para></remarks>
-    <example><para>В следующем примере кода создается диапазон чисел, а затем к этому диапазону применяется правило условного форматирования двух цветов. Затем цвет минимального порогового значения устанавливается красным, а максимальное — синим путем индексации в коллекцию для <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> определения отдельных критериев.</para></example>
+    <example><para>В следующем примере кода создается диапазон чисел, а затем применяется правило условного форматирования двухцветной шкалы к этому диапазону. Затем цвет для минимального порогового значения назначен красным, а максимальный — синим, индексация в коллекцию для <see cref="T:Microsoft.Office.Interop.Excel.ColorScaleCriteria" /> определения отдельных критериев.</para></example>
   </Docs>
   <Members>
     <Member MemberName="FormatColor">
@@ -51,9 +51,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.FormatColor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который указывает цвет, присвоенный порогу условного форматирования <see cref="T:Microsoft.Office.Interop.Excel.FormatColor" /> цветовой шкалы. Только для чтения.</summary>
+        <summary>Возвращает объект, который указывает цвет, присвоенный порогу условного формата <see cref="T:Microsoft.Office.Interop.Excel.FormatColor" /> цветовой шкалы. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.FormatColor" /></value>
-        <remarks><para>С помощью свойства можно установить цвет минимального, среднего или максимального пороговых значений для любого настраиваемого цвета или <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.Color" /> <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.ThemeColor" /> использовать свойство.</para>
+        <remarks><para>Вы можете установить цвет минимального, среднего или максимального пороговых значений для любого настраиваемого цвета с помощью свойства; или <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.Color" /> использовать <see cref="P:Microsoft.Office.Interop.Excel.FormatColor.ThemeColor" /> свойство.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -80,9 +80,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>значение, указывающее пороговое</b> значение, которое представляет критерий. Только для чтения.</summary>
-        <value>64-разрядное целое число.</value>
-        <remarks><para>Для правила условного форматирования с двумя цветами это свойство возвращает значение "1" для минимального порогового значения и "2" для максимального порогового значения. При использовании правила трехцветной шкалы значения будут иметь значение "1" для минимального значения, "2" для средней точки и "3" для максимального порогового значения.</para>
+        <summary>Возвращает значение <b>Integer,</b> указывающее пороговое значение, которое представляют критерии. Только для чтения.</summary>
+        <value><b>Integer</b></value>
+        <remarks><para>Для правила условного формата двухцветной шкалы это свойство возвращает значение "1" для минимального порогового значения и "2" для максимального порогового значения. При использовании правила трехцветной шкалы значения будут "1" для минимума, "2" для средней точки и "3" для максимальных пороговых значений.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -112,9 +112,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlConditionValueTypes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает одну из констант этого нумерации, которая определяет, как определяются пороговые значения для панели данных или условного <see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes" /> форматирования цветовой шкалы. Только для чтения.</summary>
+        <summary>Возвращает одну из констант переопределения, которая указывает, как определяются пороговые значения для панели данных или условного формата <see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes" /> цветовой шкалы. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes" /></value>
-        <remarks><para>Тип порогового значения для панели данных или цветовой шкалы может быть числом, процентом, формулой или процентильной шкалой. Установка типа в процентиль будет использовать функцию Percentile в Excel, чтобы определить пороговое значение.</para>
+        <remarks><para>Тип порогового значения для панели данных или цветовой шкалы может быть числом, процентом, формулой или процентином. Для определения порогового значения Excel тип для процентила будет использовать функцию percentile в Excel.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -144,10 +144,10 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает минимальное, среднего или максимальное пороговое значение условного форматирования цветовой шкалы. Для чтения и записи.</summary>
+        <summary>Возвращает или задает минимальное, среднее или максимальное пороговое значение для условного формата цветовой шкалы. Для чтения и записи.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Значение можно установить только в том случае, если для свойства условного формата установлена одна из следующих констант: <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.Type" /> <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueNumber" /> , , или <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercent" /> <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercentile" /> <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueFormula" /> .</para>
-          <para>Если типом порогового значения является формула, можно установить формулу в виде <b>строки.</b> Формула должна возвращать одно число.</para>
+        <remarks><para>Значение можно установить только в том случае, если свойство условного формата настроено на одну из следующих констант: <see cref="P:Microsoft.Office.Interop.Excel.ColorScaleCriterion.Type" /> , , , или <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueNumber" /> <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercent" /> <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValuePercentile" /> <see cref="F:Microsoft.Office.Interop.Excel.XlConditionValueTypes.xlConditionValueFormula" /> .</para>
+          <para>Если тип порога является формулой, можно завести формулу как <b>строку.</b> Формула должна возвращать одно число.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
