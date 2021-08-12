@@ -1,5 +1,5 @@
 <Type Name="TreeviewControl" FullName="Microsoft.Office.Interop.Excel.TreeviewControl">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="1afb6b42e9222ca9571894f88d24856a84c5f717" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009494" /></Metadata><TypeSignature Language="C#" Value="public interface TreeviewControl" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="240298a09f2e5c3b1d1cbbdd4ac7797406f59f87b6ed92c393ff18371df063fe" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54519261" /></Metadata><TypeSignature Language="C#" Value="public interface TreeviewControl" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TreeviewControl" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.TreeviewControl" />
   <TypeSignature Language="VB.NET" Value="Public Interface TreeviewControl" />
@@ -18,7 +18,7 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет иерархический контроль выбора членов для поля куба. Этот объект в основном используется для записи макроса; Она не предназначена для другого использования.</summary>
+    <summary>Представляет иерархический контроль выбора участников в кубическом поле. Этот объект используется в основном для записи макроса; он не предназначен для любого другого использования.</summary>
     <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.CubeField.TreeviewControl" /> для возврата <b>объекта TreeviewControl.</b></para>
       <para> </para></remarks>
   </Docs>
@@ -46,7 +46,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -76,8 +76,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -107,11 +107,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает состояние "drilled" (expanded, or visible) для членов поля куба в иерархическому контролю выбора членов поля куба. Это свойство используется в основном для записи макроса и не предназначено для другого использования.</summary>
+        <summary>Задает "сверленное" (расширенное или видимое) состояние участников кубического поля в иерархическому контролю выбора участников кубического поля. Это свойство используется в основном для записи макроса и не предназначено для любого другого использования.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Drilled</b> принимает массив. Каждый элемент массива соответствует уровню расширенного поля куба. Максимальное число элементов — количество уровней в поле куба. Каждый элемент массива является массивом типа <b>String,</b>содержащим уникальные имена членов, которые видны (расширены) на соответствующем уровне элемента управления. См. свойство объекта, чтобы определить, когда члены явным образом скрыты <see cref="T:Microsoft.Office.Interop.Excel.TreeviewControl" /> <see cref="P:Microsoft.Office.Interop.Excel.TreeviewControl.Hidden" /> в расширенном представлении.</para>
+        <remarks><para>Свойство <b>Drilled</b> принимает массив. Каждый элемент массива соответствует уровню расширенного поля куба. Максимальное количество элементов — это количество уровней в кубовом поле. Каждый элемент массива — это массив строки <b>типа,</b>содержащий уникальные имена членов, видимые (расширенные) на соответствующем уровне элемента управления. См. свойство объекта, чтобы определить, когда участники явно скрыты <see cref="T:Microsoft.Office.Interop.Excel.TreeviewControl" /> <see cref="P:Microsoft.Office.Interop.Excel.TreeviewControl.Hidden" /> в расширенном представлении.</para>
           <para>
-            <b>Примечание.</b>Это свойство не возвращает массив, который представляет состояние "drilled" для членов поля куба в иерархическое управление выбором членов для поля куба.</para>
+            <b>Примечание.</b>Это свойство не возвращает массив, который представляет просверленное состояние участников кубического поля в иерархичественном контроле выбора участников кубического поля.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -141,9 +141,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает скрытое состояние членов поля куба в иерархичеическом контроле выбора членов поля куба.</summary>
+        <summary>Возвращает или задает скрытый статус участников кубического поля в иерархичном контроле выбора участника в поле куба.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Hidden</b> возвращает или задает массив. Каждый элемент массива соответствует уровню скрытого поля куба. Максимальное число элементов — количество уровней в поле куба. Каждый элемент массива является массивом типа <b>String,</b>содержащим уникальные имена членов, скрытые на соответствующем уровне элемента управления. См. свойство объекта, чтобы определить, когда члены видимы <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.DrilledDown" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> (расширенные) в объекте управления.</para>
+        <remarks><para><b>Скрытое</b> свойство возвращает или задает массив. Каждый элемент массива соответствует уровню скрытого поля куба. Максимальное количество элементов — это количество уровней в кубовом поле. Каждый элемент массива — это массив <b>строки</b>типа, содержащий уникальные имена членов, скрытые на соответствующем уровне элемента управления. См. свойство объекта, чтобы определить, когда участники видны <see cref="P:Microsoft.Office.Interop.Excel.PivotItem.DrilledDown" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> (расширены) в области управления.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

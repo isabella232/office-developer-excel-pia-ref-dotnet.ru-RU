@@ -1,5 +1,5 @@
 <Type Name="Windows" FullName="Microsoft.Office.Interop.Excel.Windows">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="216071def9d8f4a2c63cf628170e2d5fcd646a71" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009256" /></Metadata><TypeSignature Language="C#" Value="public interface Windows : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="0fc3d6836588d6c65260a54d7ffab3ff33453b20c06f49f682c883304d7e1ab9" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54519247" /></Metadata><TypeSignature Language="C#" Value="public interface Windows : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Windows implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Windows" />
   <TypeSignature Language="VB.NET" Value="Public Interface Windows&#xA;Implements IEnumerable" />
@@ -25,11 +25,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.Window" /> Microsoft Excel.</summary>
-    <remarks><para>Коллекция <b>Windows,</b> возвращаемая свойством объекта, содержит все окна в приложении, а коллекция Windows, возвращенная свойством объекта, содержит только окна в указанной <see cref="P:Microsoft.Office.Interop.Excel._Application.Windows" /> <see cref="T:Microsoft.Office.Interop.Excel.Application" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Windows" /> <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> книге.</para>
-      <para>Используйте метод <b>NewWindow</b> объекта <b>Window</b> или <b>Workbook,</b> чтобы создать новое окно и добавить его в коллекцию.</para>
-      <para>Используйте <b>Windows</b>( ), где находится имя окна или номер <paramref name="index" /> индекса, чтобы вернуть один объект <paramref name="index" /> <b>Window.</b></para>
-      <para>Обратите внимание, что активным окном всегда является Windows(1).</para>
+    <summary>Коллекция всех объектов <see cref="T:Microsoft.Office.Interop.Excel.Window" /> в Microsoft Excel.</summary>
+    <remarks><para>Коллекция <b>Windows,</b> возвращенная свойством объекта, содержит все окна в приложении, в то время как коллекция Windows, возвращенная свойством объекта, содержит только окна в указанной <see cref="P:Microsoft.Office.Interop.Excel._Application.Windows" /> <see cref="T:Microsoft.Office.Interop.Excel.Application" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Windows" /> <see cref="T:Microsoft.Office.Interop.Excel.Workbook" /> книге.</para>
+      <para>Чтобы создать новое окно и добавить его в коллекцию, используйте метод <b>NewWindow</b> объекта <b>Window</b> или <b>Workbook.</b></para>
+      <para>Используйте <b>Windows</b>(), где имя окна или номер индекса, чтобы <paramref name="index" /> вернуть объект <paramref name="index" /> <b>единого окна.</b></para>
+      <para>Обратите внимание, что активное окно всегда Windows(1).</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -91,7 +91,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -121,11 +121,11 @@
         <Parameter Name="SyncVertical" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ArrangeStyle">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlArrangeStyle" /> .</param>
-        <param name="ActiveWorkbook"><b>Необязательный объект</b>. <b>True,</b> чтобы расположить только видимые окна активной книги. <b>False для</b> упорядотки всех окон. Значение по умолчанию — <b>False</b>.</param>
-        <param name="SyncHorizontal"><b>Необязательный объект</b>. Игнорируется, <paramref name="ActiveWorkbook" /> если <b>имеется false</b> или пропущен. <b>True,</b> чтобы синхронизировать окна активной книги при горизонтальной прокрутке. <b>False,</b> чтобы не синхронизировать окна. Значение по умолчанию — <b>False</b>.</param>
-        <param name="SyncVertical"><b>Необязательный объект</b>. Игнорируется, <paramref name="ActiveWorkbook" /> если <b>имеется false</b> или пропущен. <b>True,</b> чтобы синхронизировать окна активной книги при прокрутке по вертикали. <b>False,</b> чтобы не синхронизировать окна. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Упорядока окон на экране.</summary>
+        <param name="ArrangeStyle"><see cref="T:Microsoft.Office.Interop.Excel.XlArrangeStyle" />Необязательный .</param>
+        <param name="ActiveWorkbook"><b>Необязательный объект</b>. <b>True</b> для организации только видимых окон активной книги. <b>False</b> для организации всех окон. Значение по умолчанию — <b>False</b>.</param>
+        <param name="SyncHorizontal"><b>Необязательный объект</b>. Игнорируется, <paramref name="ActiveWorkbook" /> если <b>является ложным</b> или опущенным. <b>Правильно</b> синхронизировать окна активной книги при прокрутке по горизонтали. <b>False,</b> чтобы не синхронизировать окна. Значение по умолчанию — <b>False</b>.</param>
+        <param name="SyncVertical"><b>Необязательный объект</b>. Игнорируется, <paramref name="ActiveWorkbook" /> если <b>является ложным</b> или опущенным. <b>Правильно</b> синхронизировать окна активной книги при прокрутке по вертикали. <b>False,</b> чтобы не синхронизировать окна. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Организует окна на экране.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -151,7 +151,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Заканчивается рядом, если два окна находятся в режиме рядом.</summary>
+        <summary>Заканчивается в одностороннем режиме, если два окна находятся в боковом режиме.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -180,9 +180,9 @@
       </Parameters>
       <Docs>
         <param name="WindowName">Имя открываемого окна.</param>
-        <summary>Открывает два окна в режиме рядом.</summary>
+        <summary>Открывает два окна в одностороннем режиме.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Невозможно использовать метод <b>CompareSideBySideWith</b> с <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объектом или <see cref="P:Microsoft.Office.Interop.Excel._Application.ActiveWorkbook" /> свойством.</para>
+        <remarks><para>Нельзя использовать метод <b>CompareSideSideWith</b> с <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объектом или <see cref="P:Microsoft.Office.Interop.Excel._Application.ActiveWorkbook" /> свойством.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -239,8 +239,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -357,8 +357,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сбрасывает положение двух окон таблиц, которые сравниваются рядом.</summary>
-        <remarks><para>Используйте метод <b>ResetPositionsSideBySide</b> для сброса положения двух таблиц, которые сравниваются параллельно. Например, если пользователь свернет или настроит одно из двух сравниваемых окон, метод <b>ResetPositionsSideBySide</b> сбрасывает дисплей, чтобы два окна снова отображались параллельно.</para>
+        <summary>Сбрасывает положение двух окон таблицы, которые сравниваются рядом.</summary>
+        <remarks><para>Используйте метод <b>ResetPositionsSideBySide,</b> чтобы сбросить положение двух таблиц, которые сравниваются рядом. Например, если пользователь минимизирует или максимизирует одно из двух сравниваемых окон таблицы, метод <b>ResetPositionsSideBySide</b> сброшен, чтобы два окна снова отображались бок о бок.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -388,7 +388,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True</b> позволяет прокручивать содержимое окон одновременно, когда документы сравниваются рядом. <b>False</b> отключает одновременное прокрутку окон.</summary>
+        <summary><b>True</b> позволяет прокручивать содержимое окон одновременно с сравнением документов. <b>False</b> отключает прокрутку окон одновременно.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

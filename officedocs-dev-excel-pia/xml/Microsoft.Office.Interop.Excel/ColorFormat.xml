@@ -1,5 +1,5 @@
 <Type Name="ColorFormat" FullName="Microsoft.Office.Interop.Excel.ColorFormat">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="3d031f52b238ec46211ddb6bca7295480f58f00f" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50004013" /></Metadata><TypeSignature Language="C#" Value="public interface ColorFormat : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="282699bc22927817e416906a7a38027c41140f4ff1eef15b420cb7cd73d52efd" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54510231" /></Metadata><TypeSignature Language="C#" Value="public interface ColorFormat : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ColorFormat implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ColorFormat" />
   <TypeSignature Language="VB.NET" Value="Public Interface ColorFormat&#xA;Implements _IMsoDispObj" />
@@ -22,9 +22,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет цвет одноцветного объекта, цвет переднего плана или фона объекта с градиентной или узорной заливки или цвет указателя.</summary>
-    <remarks><para>Вы можете установить в цветах явное красно-зелено-синее значение (с помощью свойства) или цвет в цветовой схеме <see cref="P:Microsoft.Office.Interop.Excel.ColorFormat.RGB" /> (с помощью <see cref="P:Microsoft.Office.Interop.Excel.ColorFormat.SchemeColor" /> свойства).</para>
-      <para>Используйте одно из свойств, перечисленных в следующей таблице, для возврата объекта <b>ColorFormat.</b></para>
+    <summary>Представляет цвет одноцветного объекта, переднего плана или фонового цвета объекта с градиентом или узорной заливки или цвета указателя.</summary>
+    <remarks><para>Вы можете установить цвета для явного красно-зелено-синего значения (с помощью свойства) или цвета в цветовой схеме <see cref="P:Microsoft.Office.Interop.Excel.ColorFormat.RGB" /> (с помощью <see cref="P:Microsoft.Office.Interop.Excel.ColorFormat.SchemeColor" /> свойства).</para>
+      <para>Чтобы вернуть объект <b>ColorFormat,</b> используйте одно из свойств, перечисленных в следующей таблице.</para>
       <list type="table">
         <item>
           <term>
@@ -33,7 +33,7 @@
           <description>
             <b>FillFormat</b>
           </description>
-          <description>Цвет заливки фона (используется в затененой или узорной заливки)</description>
+          <description>Цвет заполнения фона (используется в затененой или узорной заливки)</description>
         </item>
         <item>
           <term>
@@ -42,7 +42,7 @@
           <description>
             <b>FillFormat</b>
           </description>
-          <description>Цвет заливки переднего плана (или просто цвет заливки для сплошной заливки)</description>
+          <description>Цвет заполнения переднего плана (или просто цвет заполнения для твердого заполнения)</description>
         </item>
         <item>
           <term>
@@ -51,7 +51,7 @@
           <description>
             <b>LineFormat</b>
           </description>
-          <description>Цвет фоновой линии (используется в шаблонной строке)</description>
+          <description>Цвет фоновой строки (используется в шаблонной строке)</description>
         </item>
         <item>
           <term>
@@ -60,7 +60,7 @@
           <description>
             <b>LineFormat</b>
           </description>
-          <description>Цвет линии переднего плана (или только цвет линии для сплошной линии)</description>
+          <description>Цвет линии переднего плана (или просто цвет строки для сплошной строки)</description>
         </item>
         <item>
           <term>
@@ -78,7 +78,7 @@
           <description>
             <b>ThreeDFormat</b>
           </description>
-          <description>Цвет сторон объекта extruded</description>
+          <description>Цвет сторон extruded объекта</description>
         </item>
       </list>
       <para> </para></remarks>
@@ -110,7 +110,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -141,10 +141,10 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает luminosity указанного объекта.</summary>
-        <value>Luminosity указанного объекта.</value>
+        <summary>Получает или задает светоносность указанного объекта.</summary>
+        <value>Светоносность указанного объекта.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Значение этого свойства должно быть числом от 0,0 (dimmest) до 1,0 (самый светлый).</para>
+          <para>Значение для этого свойства должно быть числом от 0.0 (dimmest) до 1.0 (самое яркое).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -175,9 +175,9 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
-        <value>64-разрядное целое число.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.ColorFormat.Creator" /> символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL. См. <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> также.</para>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.ColorFormat.Creator" /> символов. Например, Microsoft Excel имеет код создателя XCEL. См. <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> также .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -207,7 +207,7 @@
         <ReturnType>Microsoft.Office.Core.MsoThemeColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет, который со карты с цветовой схемой темы. Чтение и написание <see cref="T:Microsoft.Office.Core.MsoThemeColorIndex" /> .</summary>
+        <summary>Возвращает или задает цвет, относясь к цветовой схеме темы. Чтение и написание <see cref="T:Microsoft.Office.Core.MsoThemeColorIndex" /> .</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoThemeColorIndex" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -300,7 +300,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет объекта цвета в качестве индекса в текущей цветовой схеме.</summary>
+        <summary>Возвращает или задает цвет цветного объекта в качестве индекса в текущей цветовой схеме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -331,9 +331,9 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>single, который</b> осветляет или затемнеет цвет указанной фигуры.</summary>
+        <summary>Возвращает или задает <b>одиночный,</b> который осветляет или темнеет цвет указанной формы.</summary>
         <value>To be added.</value>
-        <remarks><para>Вы можете ввести число от -1 (самый темный) до 1 (самый светлый) для свойства <b>TintAndShade,</b> 0 (ноль) — нейтральный.</para>
+        <remarks><para>Вы можете ввести число от -1 (самое темное) до 1 (самое светлое) для свойства <b>TintAndShade,</b> 0 (ноль).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -360,10 +360,10 @@
         <ReturnType>Microsoft.Office.Core.MsoColorType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип формата вызовите.</summary>
+        <summary>Возвращает или задает тип формата вызовов.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <b>MsoCalloutType может</b> быть одной из этих констант <b>MsoCalloutType.</b></para>
+            <b>MsoCalloutType</b> может быть одной из этих констант <b>MsoCalloutType.</b></para>
           <para>
             <b>msoCalloutFour</b>
           </para>

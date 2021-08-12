@@ -1,5 +1,5 @@
 <Type Name="PivotFilter" FullName="Microsoft.Office.Interop.Excel.PivotFilter">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="8ca490d3d62655bdb53770e1be334fbb762008fb" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010873" /></Metadata><TypeSignature Language="C#" Value="public interface PivotFilter" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="d7125387017b779474c0b8eda06ea2a2023fb42d9091b0e2b896dd281b509eb8" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54510322" /></Metadata><TypeSignature Language="C#" Value="public interface PivotFilter" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotFilter" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotFilter" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotFilter" />
@@ -22,7 +22,7 @@
   </Attributes>
   <Docs>
     <summary>A <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /> применяется к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объекту.</summary>
-    <remarks><para>Разработчики могут именовать фильтры для справки, так как индекс ненадежный. Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.DataField" /> указывает на основе <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтра значений.</para>
+    <remarks><para>У разработчиков есть возможность именовать фильтры для ссылок, так как индекс ненадежен. Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.DataField" /> указывает на основе <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтра значений.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -51,7 +51,7 @@
       <Docs>
         <summary>Возвращает, активен ли <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter" /> указанный. Только для чтения.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Это свойство возвращает <b>true,</b> когда фильтр находится в фильтре и оценивается <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> при <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> обновлении фильтра. Он возвращает <b>false,</b> если фильтр не находится в этом фильтре и <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> не влияет на <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> вычисление.</para>
+        <remarks><para>Это свойство возвращает <b>True,</b> когда фильтр находится в фильтре, а фильтр оценивается <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> при <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> обновлении. Он возвращает <b>false,</b> когда фильтр не находится в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> и не влияет на <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> вычисление.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -78,9 +78,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает Microsoft Office Excel <see cref="T:Microsoft.Office.Interop.Excel._Application" /> . При использования с квалификатором объекта это свойство возвращает создателя указанного объекта. Только для чтения.</summary>
+        <summary>При его использования без квалификатора объекта это свойство возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Microsoft Office Excel. При этом свойстве, используемом с квалификатором объекта, возвращается создатель указанного объекта. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
-        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с помощью объекта автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -107,9 +107,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает 32-битный <b>integer,</b> который указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -136,7 +136,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.CubeField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство применимо только к OLAP и предоставляет поле (в области значений), фильтруется по <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Value" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтру значений. Для чтения и записи.</summary>
+        <summary>Это свойство применимо только к OLAP и предоставляет поле (в области Значений), фильтруемое <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Value" /> для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтра значений. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.CubeField" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -164,7 +164,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство применимо только к не OLAP и предоставляет поле (в области значений), фильтруется по <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Value" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтру значений. Для чтения и записи.</summary>
+        <summary>Это свойство применимо только к non-OLAP и предоставляет поле (в области Значений), фильтруемое <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotTable.Value" /> для <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтра значений. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotField" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -190,7 +190,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет фильтр и удаляет его из коллекций фильтров <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> для и <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</summary>
+        <summary>Удаляет фильтр и удаляет его из коллекций фильтров и <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> .</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -217,9 +217,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Предоставляет необязательное описание <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /> объекта. Только для чтения.</summary>
-        <value><b>Строка</b></value>
-        <remarks><para>Максимальная длина строки <b>описания</b> составляет 255 символов.</para>
+        <summary>Предоставляет необязательный описание <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /> объекта. Только для чтения.</summary>
+        <value><b>String</b></value>
+        <remarks><para>Максимальная длина строки <b>описания</b> — 255 символов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -248,7 +248,7 @@
       <Docs>
         <summary>Указывает тип применяемого фильтра. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlPivotFilterType" /></value>
-        <remarks><para>В следующей таблице показаны типы фильтров, которые можно добавить в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> . Аргументы, которые должны быть предоставлены методу для этого типа фильтра, помечены как "Required", а аргументы, которые не могут быть предоставлены, помечены как <see cref="T:Microsoft.Office.Interop.Excel.xlPivotFilters.Add" /> "Unavailable".</para>
+        <remarks><para>В следующей таблице показаны типы фильтров, которые можно добавить в <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> . Аргументы, которые должны быть предоставлены методу для этого типа фильтра, помечены как "Required", а те, которые не могут быть предоставлены, помечены <see cref="T:Microsoft.Office.Interop.Excel.xlPivotFilters.Add" /> как "Недоступные".</para>
           <list type="table">
             <item>
               <term>
@@ -282,138 +282,138 @@
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlBottomCount</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlTopPercent</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlBottomPercent</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlTopSum</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlBottomSum</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionEquals</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionDoesNotEqual</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionIsGreaterThan</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionIsGreaterThanOrEqualTo</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionIsLessThan</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionIsLessThanOrEqualTo</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionBeginsWith</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionDoesNotBeginWith</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionEndsWith</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionDoesNotEndWith</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionContains</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionDoesNotContain</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlCaptionIsBetween</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
             </item>
             <item>
               <term>xlCaptionIsNotBetween</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
             </item>
@@ -422,42 +422,42 @@
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlValueDoesNotEqual</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlValueIsGreaterThan</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlValueIsGreaterThanOrEqualTo</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlValueIsLessThan</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlValueIsLessThanOrEqualTo</term>
               <description>Обязательный</description>
               <description>Обязательный</description>
               <description>Обязательный</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlValueIsBetween</term>
@@ -475,283 +475,283 @@
             </item>
             <item>
               <term>xlSpecificDate</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlNotSpecificDate</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlBefore</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlBeforeOrEqualTo</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlAfter</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlAfterOrEqualTo</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlBetween</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlNotBetween</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Обязательна</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Обязательно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterToday</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterYesterday</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterTomorrow</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterThisWeek</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterLastWeek</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterNextWeek</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterThisMonth</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterLastMonth</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterNextMonth</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterThisQuarter</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterLastQuarter</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterNextQuarter</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterThisYear</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterLastYear</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterNextYear</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterYearToDate</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodQuarter1</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodQuarter2</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodQuarter3</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodQuarter4</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodJanuary</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodFebruary</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodMarch</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodApril</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodMay</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodJune</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodJuly</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodAugust</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodSeptember</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodOctober</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodNovember</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
             <item>
               <term>xlFilterAllDatesInPeriodDecember</term>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
-              <description>Недоступен</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
+              <description>Недоступно</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -780,10 +780,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, основан ли фильтр меток на подписях свойства-члена поля или на подписях <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> самого <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> поля. Только для чтения.</summary>
+        <summary>Указывает, основан ли фильтр метки на подписях свойства участника поля или на подписях <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> самого <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> поля. Только для чтения.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Значение по умолчанию для этого свойства — <b>False.</b></para>
-          <para>Возвращает <b>true,</b> если фильтр меток основан на подписях свойства члена ; или возвращает False, если фильтр основан на подписях <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <b></b> <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> c. Это свойство допустимо только для фильтров меток и только для OLAP, которые имеют <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> хотя бы одно свойство-член.</para>
+        <remarks><para>По умолчанию значение этого свойства <b>false</b>.</para>
+          <para>Возвращает <b>True,</b> если фильтр метки основан на подписях свойства участника; или возвращает False, если фильтр основан на подписях <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <b></b> <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> c. Это свойство допустимо только для фильтров Label и только для OLAP, которые имеют по крайней мере <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> одно свойство участника.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -810,9 +810,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство указывает свойство-член, на котором основан <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтр меток. Для чтения и записи.</summary>
+        <summary>Это свойство указывает свойство участника, на котором основан <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> фильтр метки. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotField" /></value>
-        <remarks><para>Это свойство допустимо только для фильтров Метки и OLAP, которые имеют <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> по крайней мере одно свойство-член.</para>
+        <remarks><para>Это свойство допустимо только для фильтров Label и OLAP, которые имеют по крайней мере <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> одно свойство участника.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -839,8 +839,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство предоставляет возможность именования фильтров для ссылки. Для точной ссылки нельзя использовать значение индекса, так как это значение может измениться.</summary>
-        <value><b>Строка</b></value>
+        <summary>Это свойство предоставляет возможность именовать фильтры для ссылки. Вы не можете полагаться на значение индекса для точной ссылки, так как это значение может измениться.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -870,13 +870,13 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает порядок оценки фильтра среди всех фильтров значений, применяемых к <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> целому. Чтение и запись</summary>
+        <summary>Указывает порядок оценки фильтра среди всех фильтров value, применяемых для всего <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> фильтра . Чтение и запись</summary>
         <value><b>Integer</b>.</value>
-        <remarks><para>Это свойство допустимо только для <b>значений</b> и <b>типов</b> <paramref name="n" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /> Top. Ошибка во время запуска возвращается, если предпринята попытка установить или получить это свойство для фильтров <b>меток</b> <b>и</b> дат. 1 представляет первый оцениваемого фильтра, 2 — следующий фильтр, который вычисляется, и так далее, пока не будет достигнуто <paramref name="n" /> значение 1. –1 представляет неактивный фильтр.</para>
-          <para>Если свойство не указано при добавлении нового фильтра, ему будет задано (где находится текущее самое высокое число <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.Order" /> <paramref name="N+1" /> в коллекции <paramref name="N" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.Order" /> фильтров).</para>
-          <para>Свойство может быть указано в методе или позднее для поля путем <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters.Add" /> изменения свойства.</para>
-          <para>Увеличение порядка оценки для поля уменьшит порядок оценки поля, которое ранее удерживает это значение порядка оценки ( и все поля между двумя полями) на один. Установка порядка оценки так же, как и раньше, не даст эффекта. Уменьшение порядка оценки для поля увеличит порядок оценки поля, ранее удерживая это значение порядка оценки ( и все поля между двумя полями) на один.</para>
-          <para>Порядок в коллекции такой же, как и порядок <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> их оценки. Таким образом, разработчики могут изменить порядок <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> оценки. При удалении из коллекции объектов (не OLAP) или OLAP этому свойству устанавливается значение -1 для значения или верхнего фильтра, примененного к <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <paramref name="n" /> полю. При повторном добавлении поля к свойству применяется фильтр Value или Top, если значение не указано <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.Order" /> <paramref name="N+1" /> <paramref name="n" /> явным образом.</para>
+        <remarks><para>Это свойство допустимо только для <b>значения и</b> <b>верхнего</b> <paramref name="n" /> типа <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /> s. Ошибка времени запуска возвращается, если предпринята попытка установить или получить это свойство для фильтров <b>Метки</b> и <b>Даты.</b> 1 представляет первый оцененный фильтр, 2 — следующий фильтр, который оценивается, и так далее, пока не будет достигнуто <paramref name="n" /> значение th. -1 представляет неактивный фильтр.</para>
+          <para>Если свойство не указано при добавлении нового фильтра, оно будет задано (где текущее самое высокое число в <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.Order" /> <paramref name="N+1" /> коллекции <paramref name="N" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.Order" /> фильтров).</para>
+          <para>Свойство может быть указано в методе или оно может быть задано позже для поля <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters.Add" /> путем изменения свойства.</para>
+          <para>Увеличение порядка оценки для поля уменьшит порядок оценки поля, ранее удерживаемого этим значением порядка оценки, и всех полей между двумя полями на один. Настройка порядка оценки так же, как и раньше, не будет иметь эффекта. Уменьшение порядка оценки для поля увеличит порядок оценки поля, ранее удерживаемого этим значением порядка оценки, и всех полей между двумя полями на один.</para>
+          <para>Порядок в коллекции такой же, как и <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> порядок их оценки. Таким образом, разработчики могут изменить порядок <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> оценки. Когда из коллекции удаляется (не <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> OLAP) или A (OLAP), это свойство заданной для значения или верхнего фильтра, примененного к <see cref="T:Microsoft.Office.Interop.Excel.CubeField" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> <paramref name="n" /> полю. Добавление обратного поля задано свойство для фильтра Value или Top, примененного, если значение явно не <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.Order" /> <paramref name="N+1" /> <paramref name="n" /> указано.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -931,7 +931,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает, <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> к которому применяется фильтр. Только для чтения.</summary>
+        <summary>Указывает, <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> к каков фильтр. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotField" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -959,7 +959,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство является предоставленным пользователем параметром для определения фильтра для <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.PivotField" /> . Для чтения и записи.</summary>
+        <summary>Это свойство является предоставленным пользователем параметром для определения фильтра <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.PivotField" /> для . Для чтения и записи.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -987,7 +987,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Это свойство является предоставленным пользователем параметром для определения фильтра для <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.PivotField" /> . Для чтения и записи.</summary>
+        <summary>Это свойство является предоставленным пользователем параметром для определения фильтра <see cref="P:Microsoft.Office.Interop.Excel.PivotFilter.PivotField" /> для . Для чтения и записи.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1018,19 +1018,19 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает или получает семантику фильтрации для фильтров даты. <b>Boolean</b> (<b>bool</b> in C#). Чтение и запись</summary>
+        <summary>Задает или получает семантику фильтрации для фильтров дат. <b>Boolean</b> <b>(bool</b> in C#). Чтение и запись</summary>
         <value>To be added.</value>
         <remarks><para>Ниже описаны результаты для предыдущих и текущих параметров свойств:</para>
           <list type="bullet">
             <item>
-              <description>False (поведение Office 2010): можно у указано любое время; даты — это точные точки времени (полночь указанной даты). Диапазоны дат фильтрации начинаются или заканчиваются в полночь.</description>
+              <description>False (Office 2010): любое время может быть указано; даты — это точные точки времени (полночь указанной даты). Диапазоны дат фильтрации начинаются или заканчиваются в полночь.</description>
             </item>
             <item>
-              <description>True (поведение Office 2013): это поведение принудительно для элементов управления временной шкалы. Указаны только целые даты; даты включают все время суток до полуночи и не включают следующий день.</description>
+              <description>True (Office 2013): Это поведение выполняется для элементов управления Timeline. Указаны только целые даты; даты включают все дни до полуночи и не включают следующий день.</description>
             </item>
           </list>
-          <para>Для временной шкалы всегда <b>возвращается true;</b> возвращает ошибку времени запуска при установке для этого параметра параметра <b>false.</b></para>
-          <para>Для фильтра, не относя другого к дате, любой доступ возвращает ошибку времени запуска.</para>
+          <para>Для временной шкалы всегда возвращает <b>true;</b> возвращает временную ошибку при настройке этого <b>параметра</b>false .</para>
+          <para>Для фильтра, не относяного к дате, любой доступ возвращает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

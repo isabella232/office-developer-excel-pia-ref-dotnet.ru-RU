@@ -1,5 +1,5 @@
 <Type Name="Validation" FullName="Microsoft.Office.Interop.Excel.Validation">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="64490ccfa07c156fb946aaf6fbcab62bd0310122" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009354" /></Metadata><TypeSignature Language="C#" Value="public interface Validation" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="bcefabffb082d58fb828d0e95052c76d080751ba439964ed2a1dcd4e10569753" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54519744" /></Metadata><TypeSignature Language="C#" Value="public interface Validation" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Validation" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Validation" />
   <TypeSignature Language="VB.NET" Value="Public Interface Validation" />
@@ -22,8 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет проверку данных для диапазона таблиц.</summary>
-    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Range.Validation" /> для возврата объекта <b>Validation.</b></para>
-      <para>Используйте этот метод для добавления проверки данных в диапазон и <see cref="M:Microsoft.Office.Interop.Excel.Validation.Add(Microsoft.Office.Interop.Excel.XlDVType,System.Object,System.Object,System.Object,System.Object)" /> создания нового объекта <b>Validation.</b></para>
+    <remarks><para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.Range.Validation" /> для возврата объекта <b>Проверки.</b></para>
+      <para>Используйте метод для добавления проверки данных в диапазон и <see cref="M:Microsoft.Office.Interop.Excel.Validation.Add(Microsoft.Office.Interop.Excel.XlDVType,System.Object,System.Object,System.Object,System.Object)" /> создания нового объекта <b>проверки.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -53,11 +53,11 @@
         <Parameter Name="Formula2" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlDVType" /> . Тип проверки.</param>
-        <param name="AlertStyle"><b>Необязательный объект</b>. Стиль оповещений проверки. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlDVAlertStyle" /> <b>xlValidAlertInformation,</b> <b>xlValidAlertStop</b>или <b>xlValidAlertWarning.</b></param>
-        <param name="Operator"><b>Необязательный объект</b>. Оператор проверки данных. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> <b>xlBetween,</b> <b>xlEqual,</b> <b>xlGreater,</b> <b>xlGreaterEqual,</b> <b>xlLess,</b> <b>xlLessEqual,</b> <b>xlNotBetween</b>или <b>xlNotEqual</b>.</param>
-        <param name="Formula1"><b>Необязательный объект</b>. Первая часть формулы проверки данных.</param>
-        <param name="Formula2"><b>Необязательный объект</b>. Вторая часть проверки данных, когда это <paramref name="Operator" /> <b>xlBetween</b> или <b>xlNotBetween</b> (в противном случае этот аргумент игнорируется).</param>
+        <param name="Type">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlDVType" /> . Тип проверки.</param>
+        <param name="AlertStyle"><b>Необязательный объект</b>. Стиль оповещения о проверке. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlDVAlertStyle" /> констант: <b>xlValidAlertInformation</b>, <b>xlValidAlertStop</b>или <b>xlValidAlertWarning</b>.</param>
+        <param name="Operator"><b>Необязательный объект</b>. Оператор проверки данных. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> <b>xlBetween</b>, <b>xlEqual</b>, <b>xlGreater</b>, <b>xlGreaterEqual</b>, <b>xlLessEqual , xlLessEqual</b>, <b>xlNotBetween</b>, или <b>xlNotEqual</b>. <b></b></param>
+        <param name="Formula1"><b>Необязательный объект</b>. Первая часть уравнения проверки данных.</param>
+        <param name="Formula2"><b>Необязательный объект</b>. Вторая часть проверки данных при <paramref name="Operator" /> <b>xlBetween</b> или <b>xlNotBetween</b> (в противном случае этот аргумент игнорируется).</param>
         <summary>Добавляет проверку данных в указанный диапазон.</summary>
         <remarks><para>Метод Add требует различных аргументов в зависимости от типа проверки, как показано в следующей таблице.</para>
           <list type="table">
@@ -66,7 +66,7 @@
                 <b>xlValidateCustom</b>
               </term>
               <description>
-                <paramref name="Formula1" /> является обязательной; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должно содержать выражение, которое оценивается как <b>true,</b> если запись данных действительна, и <b>False,</b> если запись данных недействительна.</description>
+                <paramref name="Formula1" /> требуется; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должно содержать выражение, которое оценивается до <b>True,</b> когда запись данных является допустимой, а <b>false</b> , когда запись данных недействительна.</description>
             </item>
             <item>
               <term>
@@ -80,12 +80,12 @@
                 <b>xlValidateList</b>
               </term>
               <description>
-                <paramref name="Formula1" /> является обязательной; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должен содержать либо список значений с запятой, либо ссылку на лист в этом списке.</description>
+                <paramref name="Formula1" /> требуется; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должен содержать либо запятый список значений, либо лист ссылок на этот список.</description>
             </item>
             <item>
               <term>
                 <b>xlValidateWholeNumber,</b> <b>xlValidateDate,</b> <b>xlValidateDecimal,</b> <b>xlValidateTextLength</b>или <b>xlValidateTime</b></term>
-              <description>Один из <paramref name="Formula1" /> них либо должен быть <paramref name="Formula2" /> указан, либо может быть указан и тот, и другой.</description>
+              <description>Один из них <paramref name="Formula1" /> <paramref name="Formula2" /> или должен быть указан, или оба могут быть указаны.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -114,9 +114,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает стиль оповещений проверки. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlDVAlertStyle" /> чтения.</summary>
+        <summary>Возвращает стиль оповещения о проверке. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlDVAlertStyle" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.Validation.Add(Microsoft.Office.Interop.Excel.XlDVType,System.Object,System.Object,System.Object,System.Object)" /> метод, чтобы настроить стиль оповещений для диапазона. Если диапазон уже имеет проверку данных, используйте <see cref="M:Microsoft.Office.Interop.Excel.Validation.Modify(System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для изменения стиля оповещения.</para>
+        <remarks><para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.Validation.Add(Microsoft.Office.Interop.Excel.XlDVType,System.Object,System.Object,System.Object,System.Object)" /> для набора стиля оповещения для диапазона. Если в диапазоне уже есть проверка данных, используйте <see cref="M:Microsoft.Office.Interop.Excel.Validation.Modify(System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод для изменения стиля оповещения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -143,7 +143,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -171,9 +171,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Только для <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> чтения.</summary>
+        <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Только для чтения <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> .</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -259,7 +259,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает заголовок диалоговое окно ошибки проверки данных. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает название диалогового окна ошибки проверки данных. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -287,7 +287,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает значение или выражение, связанное с условным форматом или проверкой данных. Может быть постоянным значением, строкой, ссылкой на ячейку или формулой. Только для чтения, <b>String</b>.</summary>
+        <summary>Возвращает значение или выражение, связанное с условным форматом или проверкой данных. Может быть постоянным значением, значением строки, ссылкой ячейки или формулой. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -317,7 +317,7 @@
       <Docs>
         <summary>Возвращает значение или выражение, связанное со второй частью условного формата или проверки данных. Только для чтения, <b>String</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство используется, только если свойство условного форматирования проверки данных <see cref="P:Microsoft.Office.Interop.Excel.Validation.Operator" /> <b>— xlBetween</b> или <b>xlNotBetween.</b> Это может быть постоянное значение, строка, ссылка на ячейку или формула.</para>
+        <remarks><para>Это свойство используется только тогда, когда свойство условного формата проверки данных <see cref="P:Microsoft.Office.Interop.Excel.Validation.Operator" /> <b>xlBetween</b> или <b>xlNotBetween</b>. Это может быть постоянное значение, значение строки, ссылка на ячейку или формула.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -347,9 +347,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если проверка данных диапазона разрешает пустые значения. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если пустые значения разрешены проверкой данных диапазона. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если свойство <b>IgnoreBlank</b> имеет свойство <b>True,</b>данные ячейки считаются допустимыми, если ячейка пуста, или если ячейка, на которая ссылается либо свойство, либо <see cref="P:Microsoft.Office.Interop.Excel.ListDataFormat.MinNumber" /> <see cref="P:Microsoft.Office.Interop.Excel.ListDataFormat.MaxNumber" /> пуста.</para>
+        <remarks><para>Если свойство <b>IgnoreBlank</b> является <b>true,</b>данные ячейки считаются допустимыми, если ячейка пуста, или если ячейка, на нее ссылается, или <see cref="P:Microsoft.Office.Interop.Excel.ListDataFormat.MinNumber" /> свойство <see cref="P:Microsoft.Office.Interop.Excel.ListDataFormat.MaxNumber" /> пусто.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -379,9 +379,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает описание правил ввода для японского языка. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlIMEMode" /> констант. Для чтения и записи, <b>Integer</b>.</summary>
+        <summary>Возвращает или задает описание японских правил ввода. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlIMEMode" /> констант. Для чтения и записи, <b>Integer</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Обратите внимание, что это свойство можно установить только в том случае, если установлена и выбрана поддержка японского языка.</para>
+        <remarks><para>Обратите внимание, что это свойство может быть установлено только при установке и выборе поддержки японского языка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -411,9 +411,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если при проверке данных отображается выпада содержащий допустимые значения список. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если проверка данных отображает отсевной список, содержащий допустимые значения. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство игнорируется, если тип проверки не <b>xlValidateList.</b></para>
+        <remarks><para>Это свойство игнорируется, если тип проверки не <b>является xlValidateList.</b></para>
           <para>Используйте аргумент или метод объекта, чтобы указать <paramref name="Minimum" /> <see cref="M:Microsoft.Office.Interop.Excel.Validation.Add(Microsoft.Office.Interop.Excel.XlDVType,System.Object,System.Object,System.Object,System.Object)" /> <see cref="M:Microsoft.Office.Interop.Excel.Validation.Modify(System.Object,System.Object,System.Object,System.Object,System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.Validation" /> диапазон, содержащий допустимые данные.</para>
           <para> </para></remarks>
       </Docs>
@@ -444,7 +444,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает входное сообщение проверки данных. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает вводное сообщение проверки данных. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -475,7 +475,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает заголовок диалоговых окна ввода для проверки данных. Для чтения и записи, <b>String</b>.</summary>
+        <summary>Возвращает или задает название диалогового окна ввода для проверки данных. Для чтения и записи, <b>String</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -506,13 +506,13 @@
         <Parameter Name="Formula2" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlDVType" /> . Тип проверки.</param>
-        <param name="AlertStyle">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlDVAlertStyle" /> . Стиль оповещений проверки.</param>
-        <param name="Operator">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> . Оператор проверки данных.</param>
-        <param name="Formula1"><b>Необязательный объект</b>. Первая часть формулы проверки данных.</param>
-        <param name="Formula2"><b>Необязательный объект</b>. Вторая часть проверки данных, когда это <paramref name="Operator" /> <b>xlBetween</b> или <b>xlNotBetween</b> (в противном случае этот аргумент игнорируется).</param>
+        <param name="Type">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlDVType" /> . Тип проверки.</param>
+        <param name="AlertStyle"><see cref="T:Microsoft.Office.Interop.Excel.XlDVAlertStyle" />Необязательный . Стиль оповещения о проверке.</param>
+        <param name="Operator"><see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" />Необязательный . Оператор проверки данных.</param>
+        <param name="Formula1"><b>Необязательный объект</b>. Первая часть уравнения проверки данных.</param>
+        <param name="Formula2"><b>Необязательный объект</b>. Вторая часть проверки данных при <paramref name="Operator" /> <b>xlBetween</b> или <b>xlNotBetween</b> (в противном случае этот аргумент игнорируется).</param>
         <summary>Изменяет проверку данных для диапазона.</summary>
-        <remarks><para>Для <b>метода Modify</b> требуются разные аргументы в зависимости от типа проверки, как показано в следующей таблице.</para>
+        <remarks><para>Метод <b>Modify</b> требует различных аргументов в зависимости от типа проверки, как показано в следующей таблице.</para>
           <list type="table">
             <item>
               <term>
@@ -526,20 +526,20 @@
                 <b>xlValidateCustom</b>
               </term>
               <description>
-                <paramref name="Formula1" /> является обязательной; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должно содержать выражение, которое оценивается как <b>true,</b> если запись данных действительна, и <b>False,</b> если запись данных недействительна.</description>
+                <paramref name="Formula1" /> требуется; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должно содержать выражение, которое оценивается до <b>True,</b> когда запись данных является допустимой, а <b>false</b> , когда запись данных недействительна.</description>
             </item>
             <item>
               <term>
                 <b>xlValidateList</b>
               </term>
               <description>
-                <paramref name="Formula1" /> является обязательной; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должен содержать список значений с запятой или ссылку на список на листе.</description>
+                <paramref name="Formula1" /> требуется; <paramref name="Formula2" /> игнорируется. <paramref name="Formula1" /> должен содержать либо запятый список значений, либо ссылку на лист.</description>
             </item>
             <item>
               <term>
                 <b>xlValidateDate,</b> <b>xlValidateDecimal,</b> <b>xlValidateTextLength,</b> <b>xlValidateTime</b>или <b>xlValidateWholeNumber</b></term>
               <description>
-                <paramref name="Formula1" /> или <paramref name="Formula2" /> и то, и другое должно быть указано.</description>
+                <paramref name="Formula1" /> или <paramref name="Formula2" /> , или оба, должны быть указаны.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -568,7 +568,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает оператор для условного форматирования или проверки данных. Только для чтения, <b>Integer</b>.</summary>
+        <summary>Возвращает оператора для условного формата или проверки данных. Только для чтения, <b>Integer</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -627,7 +627,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если сообщение об ошибке проверки данных будет отображаться при вводе пользователем недопустимых данных. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если сообщение об ошибке проверки данных будет отображаться всякий раз, когда пользователь вводит недействительные данные. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -658,7 +658,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если входное сообщение проверки данных будет отображаться при выборе пользователем ячейки в диапазоне проверки данных. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> если сообщение ввода проверки данных будет отображаться всякий раз, когда пользователь выбирает ячейку в диапазоне проверки данных. Для чтения и записи, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -686,7 +686,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает проверку типа данных для диапазона. Только для <b>чтения, которое</b> может быть одной из констант <see cref="T:Microsoft.Office.Interop.Excel.XlDVType" /> .</summary>
+        <summary>Возвращает проверку типа данных для диапазона. <b>Integer только для чтения,</b> который может быть одной из констант <see cref="T:Microsoft.Office.Interop.Excel.XlDVType" /> .</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -714,7 +714,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если выполнены все критерии проверки (то есть если диапазон содержит допустимые данные). Только для чтения, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если все критерии проверки выполнены (то есть если диапазон содержит допустимые данные). Только для чтения, <b>Boolean</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>

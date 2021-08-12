@@ -1,5 +1,5 @@
 <Type Name="SlicerCache" FullName="Microsoft.Office.Interop.Excel.SlicerCache">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="a96b54b98889ea92252a13d6047f49b294863580" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010250" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerCache" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="831f2fcf8da26c9b01889aa87c03caf5c63f6fe2aafabd505fe7786d4d15c8e3" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54519611" /></Metadata><TypeSignature Language="C#" Value="public interface SlicerCache" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SlicerCache" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SlicerCache" />
   <TypeSignature Language="VB.NET" Value="Public Interface SlicerCache" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет текущее состояние фильтра для среза и сведения о том, к каков срез <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> подключен.</summary>
-    <remarks><para>Используйте свойство объекта для доступа к <see cref="P:Microsoft.Office.Interop.Excel._Workbook.SlicerCaches" /> коллекции объектов в <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> книге.</para>
-      <para>Каждый срез имеет базовый объект, который представляет элементы, отображались в срезе, и текущее состояние пользовательского интерфейса плиток, отображаемого с соответствующими <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> подписями элементов. Каждый срез, который пользователь видит в Excel, представлен объектом, связанным <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> с ним.</para>
+    <summary>Представляет текущее состояние фильтра для среза и сведения о том, к каков срез или <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> к которому подключен срез.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel._Workbook.SlicerCaches" /> свойство объекта <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> для доступа к коллекции объектов в <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> книге.</para>
+      <para>Каждый срез имеет базовый объект, который представляет элементы, отображаемые в срезе, и текущее состояние пользовательского интерфейса плитки, отображаемой с соответствующими подписями <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> элементов. Каждый контроль среза, который пользователь видит в Excel, представлен объектом, который <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> имеет связанный с ним объект.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство получает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. При этом используется с квалификатором объекта, это свойство получает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
+        <summary>При применении без квалификатора объекта это свойство получает объект, представляю Microsoft Excel <see cref="T:Microsoft.Office.Interop.Excel.Application" /> приложения. При этом свойстве, используемом с квалификатором объекта, получается объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> создателя указанного объекта.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Application" />Объект.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -102,7 +102,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Очищает фильтр временной шкалы (фильтр даты).</summary>
+        <summary>Очищает фильтр для временной шкалы (фильтр даты).</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -127,8 +127,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Очищает фильтрацию всех срезов, связанных с указанным кэшом срезов.</summary>
-        <remarks><para>Если очистить фильтрацию из одного среза с помощью метода, но один или несколько срезов являются межфильтрованными данными в этом срезе, некоторые элементы в первом срезе останутся <see cref="M:Microsoft.Office.Interop.Excel.SlicerCache.ClearManualFilter" /> серыми. Например, если у вас есть срез Customer и Country, которые фильтруются поперек, и вы выполняете ActiveWorkbook.SlicerCaches("Slicer_Customer"). ClearManualFilter, все элементы в срезе Customer не будут доступны, пока вы не выполните ActiveWorkbook.SlicerCaches("Slicer_Country"). ClearManualFilter. Дополнительные сведения о перекрестной фильтрации см. в <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойстве.</para>
+        <summary>Очищает фильтрацию всех срезов, связанных с указанным кэшом среза.</summary>
+        <remarks><para>Если вы очищаете фильтрацию с одного среза с помощью метода, но один или несколько срезов являются перекрестными данными фильтрации в этом срезе, некоторые элементы первого среза останутся <see cref="M:Microsoft.Office.Interop.Excel.SlicerCache.ClearManualFilter" /> серыми. Например, если у вас есть срез клиента и страны, которые фильтруются поперек, и вы выполняете ActiveWorkbook.SlicerCaches ("Slicer_Customer"). ClearManualFilter, все элементы в срезе клиента не станут доступны, пока вы не выполните ActiveWorkbook.SlicerCaches ("Slicer_Country"). ClearManualFilter. Дополнительные сведения о перекрестной фильтрации см. в <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойстве.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -155,10 +155,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</summary>
-        <value>32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект.</value>
-        <remarks><para>Длинное только <b>для чтения.</b></para>
-          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.Creator" /> символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <summary>Получает 32-битный <b>ряд,</b> который указывает приложение, в котором был создан этот объект.</summary>
+        <value>32-bit <b>integer,</b> который указывает приложение, в котором был создан этот объект.</value>
+        <remarks><para>Только для <b>чтения .</b></para>
+          <para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.Creator" /> символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -188,12 +188,12 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, участвует ли срез в перекрестной фильтрации с другими срезами, которые имеют один и тот же кэш среза, и как отображается межфильтровая фильтрация.</summary>
+        <summary>Получает или задает, участвует ли срезер в перекрестной фильтрации с другими срезами, которые имеют один и тот же кэш среза, и как отображается перекрестная фильтрация.</summary>
         <value>Объект <see cref="T:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType" />.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Если несколько срезов связаны с одной и той же срезов, по умолчанию, если элемент или элементы, фильтруемые в одном срезе, не имеют соответствующих данных в другом срезе, эти элементы будут недоступны. Например, если у вас есть срез страны и срез состояния и вы щелкали страну в срезе страны, все состояния, которые не находятся в этой стране, будут серыми. Эта функция называется "перекрестной фильтрацией".</para>
-          <para>Параметры пользовательского интерфейса, соответствующие параметру свойства, — это визуальное обозначение элементов без данных и показ элементов без последних флажков данных в диалоговом окне "Параметры <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> среза". Настройка свойства соответствует выбору элементов visually indicate без данных и "Показать элементы без последних <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithDataAtTop" /> флажков данных". Настройка свойства соответствует выбору только элементов визуального обозначения <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithNoData" /> без соответствующего параметра. Очистка обоих флажков соответствует установке <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойства на .. <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerNoCrossFilter" /></para>
-          <para>Источники данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) не поддерживаются <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта. Для источников данных OLAP используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта.</para>
+          <para>Если несколько срезов связаны с одним и тем же pivotTable, по умолчанию, если элемент или элементы, фильтруемые в одном срезе, не имеют соответствующих данных в другом срезе, эти элементы будут серыми. Например, если у вас есть срез страны и срезы состояния, и вы щелкните страну в срезе Страны, все состояния, которые не находятся в этой стране, будут серыми. Эта функция называется "перекрестная фильтрация".</para>
+          <para>Параметры пользовательского интерфейса, соответствующие параметру свойства, — это элементы Visually, не соответствующие данным, и элементы Show без последних флажков данных в диалоговом <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> окне Slicer Параметры. Настройка свойства соответствует выбору элементов Visually, не соответствующих данным, и элементов Show без последних <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithDataAtTop" /> флажков данных. Настройка свойства соответствует выбору только элементов <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerCrossFilterShowItemsWithNoData" /> Visually без проверки данных. Очистка обоих флажков соответствует настройке <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSlicerCrossFilterType.xlSlicerNoCrossFilter" /> .</para>
+          <para>Источники данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) не поддерживается <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.CrossFilterType" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта. Для источников данных OLAP используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.CrossFilterType" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -218,7 +218,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет указанный кэш срезов и связанные с ним срезы.</summary>
+        <summary>Удаляет указанный кэш среза и связанные с ним срезы.</summary>
         <remarks><para>Чтобы удалить определенный срез независимо от кэша среза, используйте метод <see cref="M:Microsoft.Office.Interop.Excel.Slicer.Delete" /> <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объекта.</para>
           <para> </para></remarks>
       </Docs>
@@ -246,7 +246,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, очищается ли состояние фильтра среза или временной шкалы. <b>Boolean</b> (<b>bool</b> in C#). Только для чтения</summary>
+        <summary>Возвращает, очищается ли состояние фильтра среза или временной шкалы. <b>Boolean</b> <b>(bool</b> in C#). Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -302,7 +302,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если кэш среза относится к срезу в таблице. <b>В противном</b> случае false. <b>Boolean</b> (<b>bool</b> in C#) Read-only</summary>
+        <summary><b>True,</b> если кэш slicer для среза на таблице. <b>False</b> otherwise. <b>Boolean</b> <b>(bool</b> in C#) Read-only</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -363,7 +363,7 @@
       <Docs>
         <summary>Получает или задает имя кэша среза.</summary>
         <value>Имя кэша среза.</value>
-        <remarks><para>Имя кэша среза должно быть уникальным в пространстве имен книги. По умолчанию имя, назначенное кэше срезов, Slicer_ за которым следует имя поля pivotTable, с которым связан кэш срезов. Например, если срез связан с полем "Категория продукта" в pivotTable, имя по умолчанию будет Slicer_Product_Category (все пробелы в имени поля заменяются символами подчеркивания). Если в одной книге имеется несколько полей категории продуктов с срезом или другой именованной сущностью в книге с именем Slicer_Product_Category, Excel будет примесить номер после имени, чтобы создать уникальное имя, например Slicer_Product_Category1.</para>
+        <remarks><para>Имя кэша среза должно быть уникальным в пространстве имен книг. По умолчанию имя, назначенное кэшу среза, Slicer_ за ним следует имя поля PivotTable, с которым связан кэш среза. Например, если срез связан с полем категории продуктов в PivotTable, имя по умолчанию будет Slicer_Product_Category (любое пространство в имени поля заменяется символами подчеркивания). Если в одной книге имеется несколько полей категории продуктов с связанным с ним срезом или какое-либо другое имя объекта в книге с именем Slicer_Product_Category, Excel будет примыкать номер после имени для создания уникального имени, например Slicer_Product_Category1.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -390,8 +390,8 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, основан ли срез, связанный с указанным кэшом срезов, на основе источника данных OLAP.</summary>
-        <value><b>имеет</b> true, если срез, связанный с указанным кэшом среза, основан на источнике данных OLAP; в <b>противном</b>случае false .</value>
+        <summary>Получает, основан ли срезник, связанный с указанным кэшом срезов, на основе источника данных OLAP.</summary>
+        <value><b>верно,</b> если срез, связанный с указанным кэшом среза, основан на источнике данных OLAP; в противном <b>случае, false</b>.</value>
         <remarks><para>Только для чтения.</para>
           <para>
             <b>true,</b>если срез основан на источнике данных OLAP; в <b>противном случае false</b>.</para>
@@ -421,7 +421,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerCaches" /> родительский объект для указанного <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта.</summary>
+        <summary>Получает родительский <see cref="T:Microsoft.Office.Interop.Excel.SlicerCaches" /> объект для указанного <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта.</summary>
         <value>Родительский <see cref="T:Microsoft.Office.Interop.Excel.SlicerCaches" /> объект для указанного <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> объекта.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
@@ -450,10 +450,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SlicerPivotTables</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает коллекцию, содержаную сведения о срезах, фильтруемых в кэше <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> срезов.</summary>
-        <value>Коллекция, которая содержит сведения о срезов кэш среза в настоящее время <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> фильтрации.</value>
+        <summary>Получает коллекцию, которая содержит сведения о pivotTables, который в настоящее время фильтруется кэш <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> среза.</summary>
+        <value>Коллекция, <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> которая содержит сведения о pivotTables кэш slicer в настоящее время фильтрации.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Коллекция, возвращаемая свойством, будет пустой, если связанный с указанным срез не подключен ни к одной из <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> срезов.</para>
+          <para>Коллекция, возвращаемая свойством, будет пустой, если срез, связанный с указанным, не подключен к любым <see cref="T:Microsoft.Office.Interop.Excel.SlicerPivotTables" /> <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.PivotTables" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> pivotTables.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -483,7 +483,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>True, если требуются обновления кэша среза вручную. Boolean (<b>bool</b> in C#) Read/Write</summary>
+        <summary>True, когда требуются обновления кэша среза вручную. Boolean<b>(bool</b> in C#) Read/Write</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -514,11 +514,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, отображают ли срезы, подключенные к указанному кэше срезов, элементы, удаленные из соответствующего pivotCache.</summary>
-        <value><b>имеет</b> true, если срезы, подключенные к указанному кэше срезов, отображают элементы, удаленные из соответствующего pivotCache; в <b>противном</b>случае false . Значение по умолчанию: <b>true</b>.</value>
+        <summary>Получает или задает, отображаются ли фрагменты, подключенные к указанным кэшам среза, удаленным из соответствующего PivotCache.</summary>
+        <value><b>верно,</b> если срезы, подключенные к указанному кэшу среза, отображают элементы, удаленные из соответствующего PivotCache; в противном <b>случае, false</b>. Значение по умолчанию: <b>true</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Если свойству задано значение true (по умолчанию), элементы, удаленные из исходных данных, отображаются в срезах, подключенных к указанному кэше <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> среза. <b></b> Свойство соответствует параметру элементов show, удаленных из окна источника данных в диалоговом окне "Параметры <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> среза".</para>
-          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> применяется только к срезам, основанным на диапазонах книг или списках ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />), или срезы, основанные на реляционных источниках данных ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> и <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false</b>). Попытка установить свойство для срезов, подключенных к совпам на основе внешних <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> источников данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска.</para>
+          <para>Когда свойство задано значение true (по умолчанию), элементы, удаленные из исходных данных, отображаются в срезах, подключенных к указанному кэшу <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> среза. <b></b> Свойство соответствует параметру элементов Show, удаленных из окна источника данных в <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> диалоговом окне Slicer Параметры.</para>
+          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> применяется только к срезам, основанным на диапазонах или списках книг ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />), или срезами, основанными на реляционных источниках данных ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> . .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> и <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false</b>). Попытка установить свойство для срезов, подключенных к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.ShowAllItems" /> PivotTables на основе внешних источников данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -545,10 +545,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SlicerCacheLevels</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает коллекцию объектов, которые представляют уровни иерархии OLAP, на которых основан указанный кэш <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> среза.</summary>
-        <value>Коллекция объектов, которые представляют уровни иерархии OLAP, на которых основан указанный кэш <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> среза.</value>
+        <summary>Получает коллекцию объектов, которые представляют уровни иерархии OLAP, на которой основан указанный <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> кэш среза.</summary>
+        <value>Коллекция объектов, которые представляют уровни иерархии OLAP, на которой основан указанный <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> кэш среза.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerCacheLevels" /> применяется только к срезам, фильтруя источники данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>). Попытка получить доступ к этому свойству из срезов, не влияющих на OLAP, вызывает ошибку времени запуска.</para>
+          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerCacheLevels" /> применяется только к срезам, фильтруя источники данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>). Попытка получить доступ к этому свойству из среза не OLAP создает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -575,7 +575,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSlicerCacheType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает тип кэша срезов — срез или временная шкала. Только для чтения</summary>
+        <summary>Возвращает тип кэша среза — срез или хронология. Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -604,9 +604,9 @@
       </ReturnValue>
       <Docs>
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> коллекцию, которая содержит коллекцию всех элементов в кэше среза.</summary>
-        <value>Коллекция, <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> которая содержит коллекцию всех элементов в кэше среза.</value>
+        <value>Коллекция, <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> которая содержит коллекцию всех элементов в кэше slicer.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство объекта применимо только к срезам, основанным на срезах на основе диапазонов книг или <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> списков ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />), или для срезов, основанных на срезах, основанных на реляционных источниках данных ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> и <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false</b>). Попытка доступа к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> свойству срезов, подключенных к внешнему источнику данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска. Для источников данных OLAP используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SlicerItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта.</para>
+          <para>Свойство объекта применимо только для срезов, основанных на <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> pivotTables на основе диапазонов книг или списков ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />), или для срезов, основанных на pivotTables на основе источников реляционных данных ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> и <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false</b>). Попытка доступа к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SlicerItems" /> свойству для срезателей, подключенных к внешнему источнику данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска. Для источников данных OLAP используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SlicerItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -633,8 +633,8 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Slicers</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> коллекцию, которая содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объектов, связанных с <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> указанным.</summary>
-        <value>Коллекция, <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> которая содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объектов, связанных с указанным <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .</value>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> коллекцию, содержаную коллекцию <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объектов, связанных с указанным <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .</summary>
+        <value>Коллекция, <see cref="T:Microsoft.Office.Interop.Excel.Slicers" /> которая содержит коллекцию <see cref="T:Microsoft.Office.Interop.Excel.Slicer" /> объектов, связанных с указанными <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -665,11 +665,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlSlicerSort</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, сортироваться ли элементы в срезе.</summary>
+        <summary>Получает или задает, сортироваться ли элементы в срезе.</summary>
         <value>Объект <see cref="T:Microsoft.Office.Interop.Excel.XlSlicerSort" />.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>По умолчанию это свойство имеет значение <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" /> .</para>
-          <para>Свойство объекта применяется только к срезам, основанным на срезах, подключенных к диапазонам книг или спискам <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortItems" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />). Попытка доступа к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortItems" /> свойству для срезов, подключенных к источникам данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска. Для источников данных OLAP используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SortItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта.</para>
+          <para>Параметр по умолчанию этого свойства <see cref="F:Microsoft.Office.Interop.Excel.XlSortOrder.xlAscending" /> .</para>
+          <para>Свойство объекта применяется только к срезам, основанным на <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortItems" /> <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> pivotTables, подключенных к диапазонам или спискам книг ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />). Попытка доступа к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortItems" /> свойству для срезателей, подключенных к источникам данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска. Для источников данных OLAP используйте <see cref="P:Microsoft.Office.Interop.Excel.SlicerCacheLevel.SortItems" /> свойство <see cref="T:Microsoft.Office.Interop.Excel.SlicerCacheLevel" /> объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -699,11 +699,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает, будут ли элементы в указанном кэше среза сортироваться по настраиваемой спискам.</summary>
-        <value><b>true,</b> если элементы в указанном кэше среза будут отсортироваться по настраиваемой спискам; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, будут ли элементы в указанном кэше среза сортироваться по пользовательским спискам.</summary>
+        <value><b>верно,</b> если элементы в указанном кэше среза будут сортироваться по пользовательским спискам; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Свойство соответствует параметру "Использовать настраиваемые списки" при сортировке в диалоговом окне <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortUsingCustomLists" /> "Параметры среза". Чтобы получить доступ к пользовательским спискам, связанным с текущей установкой Excel, перейдите на вкладку "Файл", выберите "Параметры", "Дополнительные" и "Изменить настраиваемые списки" в категории "Общие".</para>
-          <para>Свойство применяется только к срезам, фильтрующие источники данных, не <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortUsingCustomLists" /> относяющиеся к OLAP. Попытка доступа к этому свойству из кэша среза, который фильтрует источник данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска.</para>
+          <para>Свойство соответствует параметру Пользовательские списки использования при сортировке в диалоговом <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortUsingCustomLists" /> окне Slicer Параметры. Чтобы получить доступ к пользовательским спискам, связанным с текущей установкой Excel, щелкните вкладку File, щелкните Параметры, нажмите кнопку Advanced и нажмите кнопку Изменить настраиваемые списки в категории General.</para>
+          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SortUsingCustomLists" /> применяется только к срезам, которые фильтруют источники данных, не относящающиеся к OLAP. Попытка получить доступ к этому свойству из кэша среза, который фильтрует источник данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -730,11 +730,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает имя источника данных, к который подключен срез.</summary>
-        <value>Имя источника данных, к который подключен срез.</value>
+        <summary>Получает имя источника данных, к который подключен срезник.</summary>
+        <value>Имя источника данных, к который подключен срезник.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Для срезов на основе данных в книге ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />) или срезы, основанные на внешних данных, не относяхся к OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> и <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false),</b>возвращает имя соответствующего столбца в исходных данных.</para>
-          <para>Для срезов OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true),</b>возвращает уникальное имя MDX иерархии, на основе которого основан срез.</para>
+          <para>Для срезов на основе данных в книге ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />), или срезы на основе внешних данных, не основанных на OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> и <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>false),</b>возвращает имя соответствующего столбца в исходных данных.</para>
+          <para>Для слайсеров OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true),</b>возвращает уникальное имя MDX иерархии, на основе которого основан срез.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -761,10 +761,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotTableSourceType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает тип источника данных, к который подключен срез.</summary>
-        <value>Тип источника данных, к который подключен срез.</value>
+        <summary>Получает тип источника данных, к который подключен срезник.</summary>
+        <value>Тип источника данных, к который подключен срезник.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Поддерживаются <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" /> <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> только типы источников данных и источников данных.</para>
+          <para>Поддерживаются <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" /> <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" /> только типы источников и данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -791,7 +791,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.TimelineState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Состояние объекта <b>SlicerCache</b> для определенной временной шкалы. Только для чтения</summary>
+        <summary>Состояние объекта <b>SlicerCache,</b> определенное временной шкалой. Только для чтения</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -819,10 +819,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.SlicerItems</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает коллекцию, которая содержит коллекцию всех видимых элементов в указанном <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> кэше среза.</summary>
-        <value>Коллекция, которая содержит коллекцию всех видимых <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> элементов в указанном кэше среза.</value>
+        <summary>Получает коллекцию, которая содержит коллекцию всех видимых элементов <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> в указанном кэше среза.</summary>
+        <value>Коллекция, которая содержит коллекцию всех видимых элементов в указанном кэше <see cref="T:Microsoft.Office.Interop.Excel.SlicerItems" /> среза.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Это свойство применимо только к срезам, основанным на срезах на основе диапазонов книг <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.VisibleSlicerItems" /> или списков ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />). Попытка доступа к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.VisibleSlicerItems" /> свойству срезов, подключенных к источнику данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска.</para>
+          <para>Свойство применимо только для срезов, основанных на pivotTables на основе диапазонов книг <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.VisibleSlicerItems" /> или списков ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> . .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />). Попытка доступа к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.VisibleSlicerItems" /> свойству для срезов, подключенных к источнику данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>) создает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -852,8 +852,8 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает список уникальных имен MDX для членов на всех уровнях иерархии, где применяется ручная фильтрация.</summary>
-        <value>Список уникальных имен MDX для членов на всех уровнях иерархии, где применяется ручная фильтрация.</value>
+        <summary>Получает или задает список уникальных имен MDX для участников на всех уровнях иерархии, где применяется ручная фильтрация.</summary>
+        <value>Список уникальных имен MDX для участников на всех уровнях иерархии, где применяется ручная фильтрация.</value>
         <remarks><para>Для чтения и записи.</para>
           <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.VisibleSlicerItemsList" /> применимо только к срезам, основанным на источниках данных OLAP ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.OLAP" /> = <b>true</b>).</para>
           <para> </para></remarks>
@@ -882,10 +882,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.WorkbookConnection</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объект, который представляет подключение к данным, используемого указанным срезом.</summary>
+        <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> объект, который представляет подключение к данным, используемую указанным срезом.</summary>
         <value>Объект, <see cref="T:Microsoft.Office.Interop.Excel.WorkbookConnection" /> который представляет подключение к данным, используемого указанным срезом.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.WorkbookConnection" /> применяется только к срезам, основанным на внешних источниках данных ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" />). Попытка доступа к свойству срезов, подключенных к списанной на основе диапазонов книг <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.WorkbookConnection" /> или списков ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />) создает ошибку во время запуска.</para>
+          <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.WorkbookConnection" /> применяется только к срезам, основанным на внешних источниках данных ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlExternal" />). Попытка доступа к свойству для срезов, подключенных к <see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.WorkbookConnection" /> PivotTables на основе диапазонов книг или списков ( <see cref="T:Microsoft.Office.Interop.Excel.SlicerCache" /> .<see cref="P:Microsoft.Office.Interop.Excel.SlicerCache.SourceType" /> = <see cref="F:Microsoft.Office.Interop.Excel.XlPivotTableSourceType.xlDatabase" />) создает ошибку во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

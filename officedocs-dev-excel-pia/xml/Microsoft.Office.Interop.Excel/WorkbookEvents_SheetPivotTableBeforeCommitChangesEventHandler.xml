@@ -1,5 +1,5 @@
 <Type Name="WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler" FullName="Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="f0b5bea7b9270ddfa690e3017250a802f15d8fbd" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50008759" /></Metadata><TypeSignature Language="C#" Value="public delegate void WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler(object Sh, PivotTable TargetPivotTable, int ValueChangeStart, int ValueChangeEnd, out bool Cancel);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="66435c273577ad8ce3863df05c1d3c4a0283aba556093e8ec0e68346e298c80f" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54510329" /></Metadata><TypeSignature Language="C#" Value="public delegate void WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler(object Sh, PivotTable TargetPivotTable, int ValueChangeStart, int ValueChangeEnd, out bool Cancel);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub WorkbookEvents_SheetPivotTableBeforeCommitChangesEventHandler(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Integer, ValueChangeEnd As Integer, ByRef Cancel As Boolean)" />
@@ -30,12 +30,12 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="Sh">Таблица, содержаная совмест.</param>
-    <param name="TargetPivotTable">PivotTable that contains the changes to commit.</param>
+    <param name="Sh">Таблица с pivotTable.</param>
+    <param name="TargetPivotTable">PivotTable, содержащий изменения для фиксации.</param>
     <param name="ValueChangeStart">Индекс первого изменения в связанном <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> объекте. Индекс указывается свойством <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Order" /> объекта <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</param>
     <param name="ValueChangeEnd">Индекс последнего изменения в связанном <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> объекте. Индекс указывается свойством <see cref="P:Microsoft.Office.Interop.Excel.ValueChange.Order" /> объекта <see cref="T:Microsoft.Office.Interop.Excel.ValueChange" /> в <see cref="T:Microsoft.Office.Interop.Excel.PivotTableChangeList" /> коллекции.</param>
-    <param name="Cancel"><b>false,</b> когда происходит событие. Если процедура события устанавливает для этого аргумента <b>true,</b>изменения не будут зафиксированы в источнике данных OLAP в pivotTable.</param>
-    <summary>Тип <b>делегата,</b> используемый для добавления обработки <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableBeforeCommitChanges" /> события. Событие <b>SheetPivotTableBeforeCommitChanges</b> происходит до внесения изменений в источник данных OLAP для pivotTable.</summary>
+    <param name="Cancel"><b>false,</b> когда происходит событие. Если процедура события задает этот аргумент <b>true,</b>изменения не совершаются в отношении источника данных OLAP pivotTable.</param>
+    <summary>Тип <b>Delegate,</b> используемый для добавления обработка событий для <see cref="E:Microsoft.Office.Interop.Excel.WorkbookEvents_Event.SheetPivotTableBeforeCommitChanges" /> события. Событие <b>SheetPivotTableBeforeCommitChanges</b> происходит перед внесением изменений в источник данных OLAP для pivotTable.</summary>
     <remarks>To be added.</remarks>
   </Docs>
 </Type>
