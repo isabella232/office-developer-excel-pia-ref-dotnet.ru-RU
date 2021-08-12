@@ -1,5 +1,5 @@
 <Type Name="Characters" FullName="Microsoft.Office.Interop.Excel.Characters">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="175d99118aa50595e1cd1bb6597be66d75d3d559" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50005994" /></Metadata><TypeSignature Language="C#" Value="public interface Characters" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="f1530e8ec3ccb0bfca0452dbcedaa05614ae6c2706a7d20d2fe1ddaa53428342" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508068" /></Metadata><TypeSignature Language="C#" Value="public interface Characters" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Characters" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Characters" />
   <TypeSignature Language="VB.NET" Value="Public Interface Characters" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет символы в объекте, который содержит текст. Объект <b>Characters</b> позволяет изменять любую последовательность символов, содержащихся в полной текстовой строке.</summary>
-    <remarks><para>Используйте <b>символы</b>( , ), где находится номер начала символа и число <paramref name="start" /> <paramref name="length" /> <paramref name="start" /> <paramref name="length" /> символов, чтобы вернуть <b>объект Characters.</b></para>
-      <para>Метод <b>Characters</b> необходим только в том случае, если необходимо изменить часть текста объекта, не влияя на остальные (нельзя использовать метод <b>Characters</b> для формата части текста, если объект не поддерживает форматирование текста). Чтобы изменить весь текст одновременно, обычно можно применить соответствующий метод или свойство непосредственно к объекту.</para>
+    <summary>Представляет символы в объекте с текстом. Объект <b>Characters</b> позволяет изменять любую последовательность символов, содержащихся в полной текстовой строке.</summary>
+    <remarks><para>Используйте <b>символы</b>( , ), где находится число начните символов и количество символов, чтобы <paramref name="start" /> вернуть объект <paramref name="length" /> <paramref name="start" /> <paramref name="length" /> <b>Characters.</b></para>
+      <para>Метод <b>Characters</b> необходим только в том случае, если необходимо изменить текст объекта, не затрагивая остальные (нельзя использовать метод <b>Characters</b> для формата части текста, если объект не поддерживает насыщенный текст). Чтобы изменить весь текст одновременно, обычно можно применить соответствующий метод или свойство непосредственно к объекту.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -139,8 +139,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -221,7 +221,7 @@
       </Parameters>
       <Docs>
         <param name="String">Обязательный атрибут типа <b>String</b>. Строка для вставки.</param>
-        <summary>Вставляет строку перед выбранными символами.</summary>
+        <summary>Вставляет строку, предшествуя выбранным символам.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -282,7 +282,7 @@
       <Docs>
         <summary>Возвращает или задает фонетический текст в указанном <see cref="T:Microsoft.Office.Interop.Excel.Characters" /> объекте.</summary>
         <value>To be added.</value>
-        <remarks><para>Вместо использования этого свойства следует использовать метод коллекции для добавления фонетических сведений в ячейку и использовать свойство объекта, чтобы возвращать или устанавливать фонетические текстовые строки в <see cref="M:Microsoft.Office.Interop.Excel.Phonetics.Add(System.Int32,System.Int32,System.String)" /> <see cref="T:Microsoft.Office.Interop.Excel.Phonetics" /> <see cref="P:Microsoft.Office.Interop.Excel.Phonetic.Text" /> <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> ячейке.</para>
+        <remarks><para>Вместо использования этого свойства следует использовать метод коллекции для добавления фонетических сведений в ячейку и использования свойства объекта для возврата или набора фонетических текстовых строк в <see cref="M:Microsoft.Office.Interop.Excel.Phonetics.Add(System.Int32,System.Int32,System.String)" /> <see cref="T:Microsoft.Office.Interop.Excel.Phonetics" /> <see cref="P:Microsoft.Office.Interop.Excel.Phonetic.Text" /> <see cref="T:Microsoft.Office.Interop.Excel.Phonetic" /> ячейке.</para>
           <para>Это свойство можно использовать только с <b>объектами Characters,</b> основанными на одной ячейке.</para>
           <para> </para></remarks>
       </Docs>

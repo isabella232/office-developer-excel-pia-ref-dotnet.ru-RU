@@ -1,5 +1,5 @@
 <Type Name="ChartEvents_SelectEventHandler" FullName="Microsoft.Office.Interop.Excel.ChartEvents_SelectEventHandler">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d908c92015694a838a0f3791d629e86b7417d344" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50004034" /></Metadata><TypeSignature Language="C#" Value="public delegate void ChartEvents_SelectEventHandler(int ElementID, int Arg1, int Arg2);" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="2f9dda833164a5e6df84626eaa50ce49e76c3a3d0827448c535fce344a102e03" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54507592" /></Metadata><TypeSignature Language="C#" Value="public delegate void ChartEvents_SelectEventHandler(int ElementID, int Arg1, int Arg2);" />
   <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ChartEvents_SelectEventHandler extends System.MulticastDelegate" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ChartEvents_SelectEventHandler" />
   <TypeSignature Language="VB.NET" Value="Public Delegate Sub ChartEvents_SelectEventHandler(ElementID As Integer, Arg1 As Integer, Arg2 As Integer)" />
@@ -28,10 +28,10 @@
     <ReturnType>System.Void</ReturnType>
   </ReturnValue>
   <Docs>
-    <param name="ElementID">Обязательный. Объект, дважды щелкнув его.</param>
+    <param name="ElementID">Обязательный элемент. Дважды щелкнув объект.</param>
     <param name="Arg1">Зависит от <paramref name="ElementID" /> .</param>
     <param name="Arg2">Зависит от <paramref name="ElementID" /> .</param>
-    <summary>Тип <b>делегата,</b> используемый для добавления обработки <see cref="E:Microsoft.Office.Interop.Excel.ChartEvents_Event.Select" /> события. Событие <b>Select</b> возникает при выборе элемента диаграммы.</summary>
+    <summary>Тип <b>Delegate,</b> используемый для добавления обработка событий для <see cref="E:Microsoft.Office.Interop.Excel.ChartEvents_Event.Select" /> события. Событие <b>Select</b> происходит при выборе элемента диаграммы.</summary>
     <remarks><para>В следующей таблице показаны аргументы, связанные с каждым <paramref name="ElementID" /> из них.</para>
       <list type="table">
         <item>
@@ -194,7 +194,7 @@
       <list type="table">
         <item>
           <term>AxisIndex</term>
-          <description>Указывает, является ли ось основной или вторичной. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>xlSecondary.</b></description>
+          <description>Указывает, является ли оси первичной или вторичной. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>xlSecondary.</b></description>
         </item>
         <item>
           <term>AxisType</term>
@@ -202,31 +202,31 @@
         </item>
         <item>
           <term>DropZoneType</term>
-          <description>Указывает тип зоны перепада: столбец, данные, страница или поле строки. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" /> <b>xlColumnField,</b> <b>xlDataField,</b> <b>xlPageField</b>или <b>xlRowField.</b> Константы полей столбцов и строк указывают поля ряда и категории соответственно.</description>
+          <description>Указывает тип зоны падения: столбец, данные, страница или поле строки. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" /> <b>xlColumnField</b>, <b>xlDataField</b>, <b>xlPageField</b>или <b>xlRowField</b>. Константы поля столбцов и строк указывают поля серий и категорий соответственно.</description>
         </item>
         <item>
           <term>GroupIndex</term>
-          <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> для определенной группы диаграммы.</description>
+          <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> коллекции для определенной группы диаграмм.</description>
         </item>
         <item>
           <term>PivotFieldIndex</term>
-          <description>Указывает смещение в коллекции для определенного <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> столбца (ряда), данных, страницы или строки (категории).</description>
+          <description>Указывает смещение в коллекции для определенного поля <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> столбца (серии), данных, страницы или строки (категории).</description>
         </item>
         <item>
           <term>PointIndex</term>
-          <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Points" /> для определенной точки в ряду. Значение –1 указывает, что выбраны все точки данных.</description>
+          <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Points" /> коллекции для определенной точки в серии. Значение -1 указывает, что выбраны все точки данных.</description>
         </item>
         <item>
           <term>SeriesIndex</term>
-          <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Series" /> для определенного ряда.</description>
+          <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Series" /> коллекции для определенной серии.</description>
         </item>
         <item>
           <term>ShapeIndex</term>
-          <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> для определенной фигуры.</description>
+          <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции для определенной формы.</description>
         </item>
         <item>
           <term>TrendlineIndex</term>
-          <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Trendlines" /> для определенной линии тренда в ряде.</description>
+          <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Trendlines" /> коллекции для определенной линии тренда в серии.</description>
         </item>
       </list>
       <para> </para></remarks>

@@ -1,5 +1,5 @@
 <Type Name="CalculatedMember" FullName="Microsoft.Office.Interop.Excel.CalculatedMember">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="7dbe58948b0a319d6163ef1a376e3134b0cce7cd" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50006057" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedMember" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="1c86f7dc26610f37d139c110969b898dc8368015b8738a8147643578eabe1ba9" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54508131" /></Metadata><TypeSignature Language="C#" Value="public interface CalculatedMember" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract CalculatedMember" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.CalculatedMember" />
   <TypeSignature Language="VB.NET" Value="Public Interface CalculatedMember" />
@@ -21,11 +21,11 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет вычисляемые поля и вычисляемые элементы для список с источниками данных OLAP.</summary>
-    <remarks><para>Используйте метод или свойство коллекции для возврата объекта <see cref="M:Microsoft.Office.Interop.Excel.CalculatedMembers.Add(System.String,System.String,System.Object,System.Object)" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMembers.Item(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> <b>CalculatedMember.</b></para>
-      <para>С помощью <b>объекта CalculatedMember</b> вы можете проверить правильность вычисляемого поля или элемента в с помощью <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.IsValid" /> свойства.</para>
+    <summary>Представляет вычисляемые поля и вычисляемые элементы для PivotTables с источниками данных online analytical Processing (OLAP).</summary>
+    <remarks><para>Чтобы вернуть объект <see cref="M:Microsoft.Office.Interop.Excel.CalculatedMembers.Add(System.String,System.String,System.Object,System.Object)" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMembers.Item(System.Object)" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> <b>CalculatedMember,</b> используйте метод или свойство коллекции.</para>
+      <para>С помощью <b>объекта CalculatedMember</b> можно проверить правильность вычисляемого поля или элемента в pivotTable с помощью <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.IsValid" /> свойства.</para>
       <para>
-        <b>Примечание</b>  Свойство <b>IsValid</b> возвращает <b>true,</b> если в настоящее время сиветь не подключена к источнику данных. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.MakeConnection" /> метод перед тестированием <b>свойства IsValid.</b></para>
+        <b>Примечание</b>  Свойство <b>IsValid</b> возвращает <b>True,</b> если pivotTable в настоящее время не подключен к источнику данных. Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.MakeConnection" /> перед тестированием <b>свойства IsValid.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -83,7 +83,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,8 +113,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -140,7 +140,7 @@
       <Parameters />
       <Docs>
         <summary>Удаляет объект.</summary>
-        <remarks><para>Поля куба можно удалить только в том случае, если поля куба созданы самостоятельно с помощью метода <b>CalculatedMember.Add</b> с <paramref name="xlCalculatedSet" /> аргументом.</para>
+        <remarks><para>Удалить кубовые поля можно только в том случае, если вы сами создали кубовые поля с помощью метода <b>CalculatedMember.Add</b> с <paramref name="xlCalculatedSet" /> аргументом.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -167,11 +167,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает отображаемую папку для именоваемой папки.</summary>
-        <value>Отображаемая папка для именоваемой набор.</value>
+        <summary>Получает имя папки отображения для набора имен.</summary>
+        <value>Имя папки отображения для набора имен.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Значение этого свойства соответствует необязательному значению, которое можно ввести в текстовом поле папки отображения в диалоговом окне "Создать/изменить набор" при его добавлении или изменении. Чтобы создать именоваемый набор на основе источника данных OLAP на основе источника данных OLAP, щелкните "Поле", "Элементы", "Наборы" на вкладке "Параметры средств" на ленте, щелкните "Управление наборами", выберите "Создать" в диалоговом окне "Настройка диспетчера" и нажмите кнопку "Создать набор с помощью &amp; MDX". Отобразит диалоговое окно "Создать набор", которое содержит текстовое поле папки отображения. Аналогично, если в диалоговом окне Set Manager выбрать существующий именованый набор и нажать кнопку "Изменить", отобразилось диалоговое окно "Изменить набор".</para>
-          <para>Это свойство вместе с свойствами и свойствами можно считыть только для именуемых наборов (которые представлены объектами, <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Dynamic" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.HierarchizeDistinct" /> свойство которых <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedSet" /> равно). Эти свойства не могут быть считаны для вычисляемых членов или мер (которые представлены объектами, свойство <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> которых <paramref name="xlCalculatedMember" /> равно). При попытке прочитать эти свойства для вычисляемого члена или мер вызывается ошибка во время запуска.</para>
+          <para>Значение этого свойства соответствует необязательному значению, которое можно ввести в текстовом окне Папка отображения диалогового окна New/Modify Set при создания или редактировании набора с именем. Чтобы создать новый набор имен из данных в pivotTable на основе источника данных OLAP, щелкните PivotTable, щелкните Поле, элементы, задает на вкладке Параметры средств pivotTable на ленте, щелкните Управление наборами, щелкните Новое в диалоговом окне Set Manager и нажмите кнопку Создать набор с помощью &amp; MDX. Здесь будет отображаться диалоговое окно New Set, в котором содержится текстовое окно папки Display. Аналогично, если в диалоговом окне Set Manager выбран существующий набор с именем, а затем нажмите кнопку Изменить, отображается диалоговое окно Modify Set.</para>
+          <para>Это свойство вместе с свойствами и свойствами можно считыть только для именных наборов (которые представлены объектами, равными <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Dynamic" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.HierarchizeDistinct" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedSet" /> свойству). Эти свойства не могут быть прочитаны для вычисляемых членов или мер (которые представлены объектами, <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> равными <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedMember" /> свойству). При попытке считыть эти свойства для рассчитанных участников или мер повышается временная ошибка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -198,13 +198,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, пересчитываются ли указанные именовамые наборы при каждом обновлении.</summary>
-        <value><b>имеет</b> true, если указанный именоваированный набор пересчитываются при каждом обновлении; в <b>противном</b>случае false .</value>
+        <summary>Получает, будет ли указанный набор с именем пересчитываться с каждым обновлением.</summary>
+        <value><b>верно,</b> если указанный набор с именем пересчитываются с каждым обновлением; в противном <b>случае, false</b>.</value>
         <remarks><para>Только для чтения.</para>
           <para>
-            <b>имеет</b> true, если именоваированный набор пересчитываются при каждом обновлении; в <b>противном случае false</b>.</para>
-          <para>Значение этого свойства соответствует параметру набора пересчета с каждым установленным в диалоговом окне "Создать/изменить набор" значением, доступным при создании или изменении именоваемого набора. Чтобы создать новый именоваемый набор на основе источника данных OLAP на основе источника данных OLAP, щелкните "Поле", "Элементы", "Наборы" на вкладке "Параметры средств" на ленте, щелкните "Управление наборами", выберите "Создать" в диалоговом окне "Настройка диспетчера" и нажмите кнопку "Создать набор с помощью &amp; MDX". Отобразит диалоговое окно "Создать набор", которое содержит набор пересчета с каждым установленным для каждого обновления. Аналогично, если в диалоговом окне Set Manager выбрать существующий именованый набор и нажать кнопку "Изменить", отобразилось диалоговое окно "Изменить набор".</para>
-          <para>Это свойство вместе с свойствами и свойствами можно считыть только для именуемых наборов (которые представлены объектами, <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.DisplayFolder" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.HierarchizeDistinct" /> свойство которых <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedSet" /> равно). Эти свойства не могут быть считаны для вычисляемых членов или мер (которые представлены объектами, свойство <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> которых <paramref name="xlCalculatedMember" /> равно). При попытке прочитать эти свойства для вычисляемого члена или мер вызывается ошибка времени запуска.</para>
+            <b>верно,</b> если названный набор пересчитываются с каждым обновлением; в <b>противном случае false</b>.</para>
+          <para>Значение этого свойства соответствует параметру набора Пересчета с каждым окном обновления в диалоговом окне New/Modify Set, который доступен при создании или редактировании набора с именем. Чтобы создать новый набор имен из данных в pivotTable на основе источника данных OLAP, щелкните PivotTable, щелкните Поле, элементы, задает на вкладке Параметры средств pivotTable на ленте, щелкните Управление наборами, щелкните Новое в диалоговом окне Set Manager и нажмите кнопку Создать набор с помощью &amp; MDX. На этом экране будет отображаться диалоговое окно New Set, в котором содержится набор Пересчета с каждым окном обновления. Аналогично, если в диалоговом окне Set Manager выбран существующий набор с именем, а затем нажмите кнопку Изменить, отображается диалоговое окно Modify Set.</para>
+          <para>Это свойство вместе с свойствами и свойствами можно считыть только для именных наборов (которые представлены объектами, равными <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.DisplayFolder" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.HierarchizeDistinct" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedSet" /> свойству). Эти свойства не могут быть прочитаны для вычисляемых членов или мер (которые представлены объектами, <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> равными <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedMember" /> свойству). При попытке считыть эти свойства для рассчитанных участников или мер повышается временная ошибка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -234,12 +234,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, отображаются ли элементы из всех уровней иерархии указанного именоваемого набора в одном поле отчета pivotTable на основе куба OLAP.</summary>
-        <value><b>имеет</b> true, если элементы из всех уровней иерархии указанного именоваемого набора отображаются в одном поле отчета pivotTable на основе куба OLAP; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, отображаются ли элементы всех уровней иерархии указанного набора имен в одном поле отчета PivotTable на основе куба OLAP.</summary>
+        <value><b>верно,</b> если элементы всех уровней иерархии указанного набора имен отображаются в том же поле отчета PivotTable на основе куба OLAP; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>имеет</b> true, если элементы из всех уровней иерархии именоваемого набора отображаются в одном поле; в <b>противном случае false</b>.</para>
-          <para>Значение этого свойства соответствует параметру элементов отображения с разных уровней в отдельных полях в диалоговом окне "Создать/изменить набор" при создании или изменении именоваемого набора. Чтобы создать новый именоваемый набор на основе источника данных OLAP на основе источника данных OLAP, щелкните "Поле", "Элементы", "Наборы" на вкладке "Параметры средств" на ленте, щелкните "Управление наборами", выберите "Создать" в диалоговом окне "Настройка диспетчера" и нажмите кнопку "Создать набор с помощью &amp; MDX". Отобразит диалоговое окно "Создать набор", которое содержит элементы отображения с разных уровней в отдельных полях. Аналогично, если в диалоговом окне Set Manager выбрать существующий именованый набор и нажать кнопку "Изменить", отобразилось диалоговое окно "Изменить набор".</para>
+            <b>верно,</b> если элементы всех уровней иерархии названного набора отображаются в одном поле; в <b>противном случае false</b>.</para>
+          <para>Значение этого свойства соответствует параметру элементов Display с разных уровней в отдельном поле в диалоговом окне New/Modify Set при создании или редактировании набора с именем. Чтобы создать новый набор имен из данных в pivotTable на основе источника данных OLAP, щелкните PivotTable, щелкните Поле, элементы, задает на вкладке Параметры средств pivotTable на ленте, щелкните Управление наборами, щелкните Новое в диалоговом окне Set Manager и нажмите кнопку Создать набор с помощью &amp; MDX. В этом диалоговом окне New Set будет отображаться элемент Display с разных уровней в отдельном поле. Аналогично, если в диалоговом окне Set Manager выбран существующий набор с именем, а затем нажмите кнопку Изменить, отображается диалоговое окно Modify Set.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -266,13 +266,13 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает формулу члена в синтаксис многомерных выражений (MDX).</summary>
+        <summary>Возвращает формулу участника в синтаксис многомерных выражений (MDX).</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство не доступно для источников данных OLAP.</para>
-          <para>Если ячейка содержит константу, это свойство возвращает константу. Если ячейка пуста, свойство <b>Formula</b> возвращает пустую строку. Если ячейка содержит формулу, свойство <b>Formula</b> возвращает формулу в виде строки в том же формате, который будет отображаться в строке формул (включая знак "равно").</para>
-          <para>Если присвоить значение или формулу ячейки для даты, Microsoft Excel проверяет, отформатирована ли эта ячейка с помощью одного из форматов даты или времени. Если нет, Microsoft Excel изменяет формат номера на короткий формат номера даты по умолчанию.</para>
-          <para>Если диапазон является одномерным или двумерным, можно установить формулу для массива тех же измерений. Аналогичным образом можно поместить формулу в массив.</para>
-          <para>При настройке формулы для диапазона из нескольких ячеек все ячейки в диапазоне заполняются формулой.</para>
+          <para>Если ячейка содержит константу, это свойство возвращает константу. Если ячейка пуста, свойство <b>Formula</b> возвращает пустую строку. Если ячейка содержит формулу, свойство <b>Formula</b> возвращает формулу в виде строки в том же формате, который будет отображаться в панели формул (включая знак равного знака).</para>
+          <para>Если присвоить значение или формулу ячейки для даты, Microsoft Excel проверяет, отформатирована ли эта ячейка с помощью одного из форматов даты или времени. Если нет, Microsoft Excel изменяет формат номеров в формат коротких номеров по умолчанию.</para>
+          <para>Если диапазон одно- или двухмерный, можно настроить формулу на массив тех же размеров. Аналогичным образом можно поместить формулу в массив.</para>
+          <para>Настройка формулы для диапазона нескольких клеток заполняет все ячейки в диапазоне формулой.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -302,13 +302,13 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает порядок и удаление дубликатов при отобралении иерархии указанного именоваемого набора в отчете pivotTable на основе куба OLAP.</summary>
-        <value><b>имеет</b> true, если дубликаты должны быть упорядочены и удалены при отобралении иерархии указанного именоваемого набора в отчете pivotTable на основе куба OLAP; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, следует ли заказывать и удалять дубликаты при отобралении иерархии указанного набора имен в отчете PivotTable на основе куба OLAP.</summary>
+        <value><b>верно,</b> если дубликаты должны быть упорядочены и удалены при отобралении иерархии указанного набора имен в отчете PivotTable на основе куба OLAP; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
           <para>
-            <b>имеет</b> true, если иерархия именоваемого набора отображается как упорядоченная с удалением дубликатов; в <b>противном случае false</b>.</para>
-          <para>Значение этого свойства соответствует автоматическому порядку и удаляет дубликаты из установленного параметра в диалоговом окне "Создать/изменить набор" при его добавлении или изменении. Чтобы создать новый именоваемый набор на основе источника данных OLAP на основе источника данных OLAP, щелкните "Поле", "Элементы", "Наборы" на вкладке "Параметры средств" на ленте, щелкните "Управление наборами", выберите "Создать" в диалоговом окне "Настройка диспетчера" и нажмите кнопку "Создать набор с помощью &amp; MDX". Отобразит диалоговое окно "Создать набор", которое содержит автоматический порядок и удалит дубликаты из установленного установленного. Аналогично, если в диалоговом окне Set Manager выбрать существующий именованый набор и нажать кнопку "Изменить", отобразилось диалоговое окно "Изменить набор".</para>
-          <para>Это свойство вместе с свойствами и свойствами можно считыть только для именуемых наборов (которые представлены объектами, <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.DisplayFolder" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Dynamic" /> свойство которых <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedSet" /> равно). Эти свойства не могут быть считаны для вычисляемых членов или мер (которые представлены объектами, свойство <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> которых <paramref name="xlCalculatedMember" /> равно). При попытке прочитать эти свойства для вычисляемого члена или мер вызывается ошибка времени запуска.</para>
+            <b>верно,</b> если иерархия названного набора отображается по порядку с удалением дубликатов; в <b>противном случае false</b>.</para>
+          <para>Значение этого свойства соответствует автоматическому порядку и удаляет дубликаты из задатки в диалоговом окне New/Modify Set, когда создается или редактируется названный набор. Чтобы создать новый набор имен из данных в pivotTable на основе источника данных OLAP, щелкните PivotTable, щелкните Поле, элементы, задает на вкладке Параметры средств pivotTable на ленте, щелкните Управление наборами, щелкните Новое в диалоговом окне Set Manager и нажмите кнопку Создать набор с помощью &amp; MDX. При этом будет отображаться диалоговое окно New Set, которое содержит автоматический порядок и удаляет дубликаты из установленного контрольного окна. Аналогично, если в диалоговом окне Set Manager выбран существующий набор с именем, а затем нажмите кнопку Изменить, отображается диалоговое окно Modify Set.</para>
+          <para>Это свойство вместе с свойствами и свойствами можно считыть только для именных наборов (которые представлены объектами, равными <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.DisplayFolder" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Dynamic" /> <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedSet" /> свойству). Эти свойства не могут быть прочитаны для вычисляемых членов или мер (которые представлены объектами, <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMember" /> равными <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMember.Type" /> <paramref name="xlCalculatedMember" /> свойству). При попытке считыть эти свойства для рассчитанных участников или мер повышается временная ошибка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -335,9 +335,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>boolean,</b> который указывает, успешно ли был успешно установлен определенный вычисляемого члена с поставщиком OLAP во время текущего сеанса.</summary>
+        <summary>Возвращает <b>boolean,</b> который указывает, был ли указанный вычисляемого участника успешно мгновенно с поставщиком OLAP во время текущего сеанса.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство возвращает <b>true,</b> даже если сиветь не подключена к источнику данных. Прежде чем запрашивать значение свойства <b>IsValid,</b> убедитесь, что совластика подключена.</para>
+        <remarks><para>Это свойство возвращает <b>True,</b> даже если pivotTable не подключен к источнику данных. Убедитесь, что pivotTable подключен, прежде чем запрашивать значение <b>свойства IsValid.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -364,7 +364,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает связанную группу мер. Только для чтения.</summary>
+        <summary>Возвращает связанную группу измерения. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -420,7 +420,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCalcMemNumberFormatType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlCalcMemNumberFormatType" /> значение, которое представляет числовом формате вычисляемого члена. Значение по умолчанию — <b>xlNumberFormatTypeDefault.</b> Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.XlCalcMemNumberFormatType" /> значение, представляюное формат номера вычисляемого участника. По умолчанию значение <b>xlNumberFormatTypeDefault</b>. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -476,7 +476,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя текущей родительской иерархии из иерархий, доступных в кубе. Только для чтения.</summary>
+        <summary>Возвращает имя текущей родительской иерархии из иерархий, доступных на кубе. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -504,10 +504,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя родительского члена родительской иерархии. Только для чтения.</summary>
+        <summary>Возвращает имя родительского члена для родительской иерархии. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Родительский член по умолчанию определяется тем, что определен конструктором кубов или службами аналитики в качестве члена выбранной иерархии по умолчанию. Например, если для выбранной иерархии существует член "All", то обычно это родительский член куба по умолчанию.</para>
-          <para>Если выбранная родительская иерархия не имеет родительского члена "All", другой родительский член по умолчанию определяется либо конструктором куба, либо программным путем службами аналитики. (Если конструктор кубов не указывает член по умолчанию, объеха служб аналитики автоматически определяет его.)</para>
+        <remarks><para>Родительский член по умолчанию определяется тем, что было определено конструктором куба или службами анализа в качестве члена выбранной иерархии по умолчанию. Например, если для выбранной иерархии существует член "All", это обычно родительский член по умолчанию на кубе.</para>
+          <para>Если выбранная родительская иерархия не имеет родительского члена "All", другой родительский член по умолчанию определяется конструктором куба или программным путем службами анализа. (Если участник по умолчанию не указан конструктором куба, двигатель служб анализа автоматически определяет его.)</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -534,7 +534,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>integer,</b> указывав значение аргумента MDX порядок решения вычисляемого члена (многомерное выражение). Значение по умолчанию: ноль.</summary>
+        <summary>Возвращает аргумент <b>Integer,</b> указывающий значение аргумента MDX (многомерное выражение) расчетного порядок решения участника. Значение по умолчанию: ноль.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -562,14 +562,14 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя указанного объекта, как оно отображается в исходных данных источника для указанного отчета pivotTable.</summary>
+        <summary>Возвращает имя указанного объекта, как оно отображается в исходных исходных данных для указанного отчета PivotTable.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>SourceName может</b> быть отличается от текущего имени элемента, если пользователь переименовал элемент после создания отчета pivotTable.</para>
+        <remarks><para>Свойство <b>SourceName может</b> отличается от текущего имени элемента, если пользователь переименовал элемент после создания отчета PivotTable.</para>
           <para>В следующей таблице показаны примеры значений свойства <b>SourceName</b> и связанных свойств с учетом <a href="mk:@MSITStore:C:\Program%20Files\Microsoft%20Office\OFFICE11\1033\VBAXL10.CHM::/html/xlproSourceName1.htm">OLAP</a></para>
           <list type="table">
             <item>
               <term>
-                <b>Заголовок</b>
+                <b>Caption</b>
               </term>
               <description>Париж</description>
               <description>Париж</description>
@@ -578,35 +578,35 @@
               <term>
                 <b>Имя</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
             <item>
               <term>
                 <b>SourceName</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
-              <description>(То же, SQL свойства, только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
+              <description>(то же SQL свойства, только для чтения)</description>
             </item>
             <item>
               <term>
                 <b>Значение</b>
               </term>
-              <description>[Европа]. [Франция]. [Paris] (только для чтения)</description>
+              <description>[Европа]. [Франция]. [Париж] (только для чтения)</description>
               <description>Париж</description>
             </item>
           </list>
-          <para>При указании индекса в коллекции можно использовать синтаксис, <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> показанный в следующей таблице.</para>
+          <para>При указании индекса в коллекцию можно использовать <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> синтаксис, показанный в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>выражение. PivotItems("[Europe].[ Франция]. [Paris]")</term>
-              <description>выражение. PivotItems("Paris")</description>
+              <term>выражения. PivotItems("[Europe].[ Франция]. [Париж]")</term>
+              <description>выражения. PivotItems ("Париж")</description>
             </item>
           </list>
-          <para>При использовании свойства для ссылки на определенный член коллекции можно использовать имена текстовых индексов, как показано <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMembers.Item(System.Object)" /> в следующей таблице.</para>
+          <para>При использовании свойства для ссылки на определенного члена коллекции можно использовать текстовые имена индексов, как показано <see cref="P:Microsoft.Office.Interop.Excel.CalculatedMembers.Item(System.Object)" /> в следующей таблице.</para>
           <list type="table">
             <item>
-              <term>[Европа]. [Франция]. [Paris]</term>
+              <term>[Европа]. [Франция]. [Париж]</term>
               <description>Париж</description>
             </item>
           </list>
@@ -636,10 +636,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCalculatedMemberType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает вычисляемого типа члена.</summary>
+        <summary>Возвращает рассчитанный тип участника.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlCalculatedMemberType" />может быть одной из этих <b>констант XlCalculatedMemberType:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlCalculatedMemberType" />может быть одним из этих <b>констант XlCalculatedMemberType:</b></para>
           <para>
             <b>xlCalculatedMember</b>
           </para>

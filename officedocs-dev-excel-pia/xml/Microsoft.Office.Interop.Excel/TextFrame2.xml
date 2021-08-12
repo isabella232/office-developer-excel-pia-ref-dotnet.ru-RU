@@ -1,5 +1,5 @@
 <Type Name="TextFrame2" FullName="Microsoft.Office.Interop.Excel.TextFrame2">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="ed2de645a61dfb227782869ab7a06f69f1159fde" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009634" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame2 : Microsoft.Office.Core._IMsoDispObj" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="6bf15328a4d34bac8fc1bc6dab0f3d286a13ce515390878d041089f310d6fb63" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54507487" /></Metadata><TypeSignature Language="C#" Value="public interface TextFrame2 : Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract TextFrame2 implements class Microsoft.Office.Core._IMsoDispObj" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.TextFrame2" />
   <TypeSignature Language="VB.NET" Value="Public Interface TextFrame2&#xA;Implements _IMsoDispObj" />
@@ -22,8 +22,8 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет рамку текста в объекте <see cref="T:Microsoft.Office.Interop.Excel.Shape" />  <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> или    <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> объекте.</summary>
-    <remarks><para>Этот объект содержит текст в рамке текста, а также свойства и методы, которые контролируют выравнивание и привязку рамки текста. Используйте свойство <b>TextFrame2</b> для возврата <see cref="T:Microsoft.Office.Interop.Excel.TextFrame2" /> объекта.</para>
+    <summary>Представляет текстовую рамку в <see cref="T:Microsoft.Office.Interop.Excel.Shape" />  <see cref="T:Microsoft.Office.Interop.Excel.ShapeRange" /> объекте или    <see cref="T:Microsoft.Office.Interop.Excel.ChartFormat" /> объекте.</summary>
+    <remarks><para>Этот объект содержит текст в текстовом кадре, а также свойства и методы, которые контролируют выравнивание и закрепление текстового кадра. Чтобы вернуть объект, используйте свойство <b>TextFrame2.</b> <see cref="T:Microsoft.Office.Interop.Excel.TextFrame2" /></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -55,7 +55,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
-        <remarks><para>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel._Application" /> представляет приложение Microsoft Excel. При использовании с квалификатором объекта это свойство возвращает объект, который представляет создателя указанного объекта (это свойство можно использовать с объектом автоматизации OLE для возврата приложения <see cref="T:Microsoft.Office.Interop.Excel._Application" /> этого объекта). </para>
+        <remarks><para>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Microsoft Excel приложение. При использовании с квалификатором объекта это свойство возвращает объект, который представляет создателя указанного объекта (вы можете использовать это свойство с объектом автоматизации OLE для возврата приложения этого <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объекта). </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -85,7 +85,7 @@
         <ReturnType>Microsoft.Office.Core.MsoAutoSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Размер указанного объекта, который изменяется автоматически в зависимости от его границ. Для чтения и записи.</summary>
+        <summary>Размер указанного объекта, который изменяется автоматически, чтобы соответствовать тексту в пределах его границ. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoAutoSize" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,7 +113,7 @@
         <ReturnType>Microsoft.Office.Core.TextColumn2</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Core.TextColumn2" /> объект, который представляет столбцы в рамке текста. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Core.TextColumn2" /> объект, который представляет столбцы в текстовом кадре. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Core.TextColumn2" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,8 +145,8 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан. Только для чтения.</summary>
-        <value>64-разрядное целое число.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C. Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет код автора из <see cref="P:Microsoft.Office.Interop.Excel.TextFrame2.Creator" /> четырех символов. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <value><b>Integer</b></value>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C. Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.TextFrame2.Creator" /> символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -171,8 +171,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет текст из рамки текста и все связанные свойства текста.</summary>
-        <remarks><para>Связанные текстовые свойства включают такие <see cref="T:Microsoft.Office.Interop.Excel.Font" /> атрибуты, как полужирный шрифт, подчеркнутая и так далее.</para>
+        <summary>Удаляет текст из текстового кадра и все связанные свойства текста.</summary>
+        <remarks><para>Связанные свойства текста включают <see cref="T:Microsoft.Office.Interop.Excel.Font" /> такие атрибуты, как bold, underline и так далее.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -199,7 +199,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, имеет ли указанный текстовый кадр текст. Только для чтения.</summary>
+        <summary>Возвращает, есть ли текст в указанном текстовом кадре. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoTriState" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -230,7 +230,7 @@
         <ReturnType>Microsoft.Office.Core.MsoHorizontalAnchor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип привязки по горизонтали для указанного текста. Для чтения и записи.</summary>
+        <summary>Возвращает или задает горизонтальный тип якоря для указанного текста. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoHorizontalAnchor" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -261,7 +261,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между нижней частью рамки текста и нижней частью вписаемого прямоугольника фигуры, содержащем текст. Для чтения и записи.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между нижней частью текстового кадра и нижней частью вписаного прямоугольника фигуры, содержащем текст. Для чтения и записи.</summary>
         <value><b>Single</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -292,7 +292,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между левый край рамки текста и левый край вписаного прямоугольника фигуры, которая содержит текст. Для чтения и записи.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между левый край текстового кадра и левый край вписаного прямоугольника фигуры, содержа которой содержится текст. Для чтения и записи.</summary>
         <value><b>Single</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -323,7 +323,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между правым краем рамки текста и правым краем вписаного прямоугольника фигуры, содержаной текст. Для чтения и записи.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между правым краем текстового кадра и правым краем вписаного прямоугольника фигуры, содержа которой содержится текст. Для чтения и записи.</summary>
         <value><b>Single</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -354,7 +354,7 @@
         <ReturnType>System.Single</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние (в пунктах) между верхней частью рамки текста и верхней частью вписаемого прямоугольника фигуры, содержаной текст. Для чтения и записи.</summary>
+        <summary>Возвращает или задает расстояние (в точках) между верхней частью текстового кадра и верхней частью вписаного прямоугольника фигуры, содержа которой содержится текст. Для чтения и записи.</summary>
         <value><b>Single</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -385,10 +385,10 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, указывающее, поворачивать ли текст фигуры, если фигура вращается. Чтение и запись</summary>
+        <summary>Возвращает или задает значение, указывающее, вращается ли текст фигуры, если сама фигура вращается. Чтение и запись</summary>
         <value>To be added.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Возвращает или задает для значений следующие значения:</para>
+          <para>Возвращает или задает переумерия msoTriState со следующими значениями:</para>
           <list type="number">
             <item>
               <description>
@@ -445,9 +445,9 @@
         <ReturnType>Microsoft.Office.Core.MsoTextOrientation</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значение, которое представляет ориентацию рамки текста. Для чтения и записи.</summary>
+        <summary>Возвращает или задает значение, представляю которое представляет ориентацию текстового кадра. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoTextOrientation" /></value>
-        <remarks><para>Этому свойству можно установить значение от –90 до 90 градусов или одной из <see cref="T:Microsoft.Office.Core.MsoTextOrientation" /> констант.</para>
+        <remarks><para>Значение этого свойства можно установить в значении от -90 до 90 градусов или к одной из <see cref="T:Microsoft.Office.Core.MsoTextOrientation" /> констант.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -589,7 +589,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ThreeDFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, содержащий свойства форматирования <see cref="T:Microsoft.Office.Interop.Excel.ThreeDFormat" /> трех эффектов для указанного текста. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ThreeDFormat" /> объект, содержащий свойства форматирования 3D-эффекта для указанного текста. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.ThreeDFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -620,7 +620,7 @@
         <ReturnType>Microsoft.Office.Core.MsoVerticalAnchor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип вертикальной привязки для указанного текста. Для чтения и записи.</summary>
+        <summary>Возвращает или задает вертикальный тип якоря для указанного текста. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoVerticalAnchor" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -651,7 +651,7 @@
         <ReturnType>Microsoft.Office.Core.MsoWarpFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип вехи для заданного текстового кадра. Для чтения и записи.</summary>
+        <summary>Возвращает или задает тип варп для указанного текстового кадра. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoWarpFormat" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -713,7 +713,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTriState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строки разрывов текста внутри или за границами фигуры. Для чтения и записи.</summary>
+        <summary>Возвращает или задает строки разрыва текста в пределах или за границами фигуры. Для чтения и записи.</summary>
         <value><see cref="T:Microsoft.Office.Core.MsoTriState" /></value>
         <remarks>To be added.</remarks>
       </Docs>

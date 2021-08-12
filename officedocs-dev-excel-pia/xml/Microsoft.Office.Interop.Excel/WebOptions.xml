@@ -1,5 +1,5 @@
 <Type Name="WebOptions" FullName="Microsoft.Office.Interop.Excel.WebOptions">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="daab179c046c8ae3d7a70032ace37b8eb5d45e81" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50009270" /></Metadata><TypeSignature Language="C#" Value="public interface WebOptions" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="4931b180d1a90c7fc24a9cf3ce958feee9c52b65b4f90806444ef2b8410dbdda" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54512422" /></Metadata><TypeSignature Language="C#" Value="public interface WebOptions" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract WebOptions" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.WebOptions" />
   <TypeSignature Language="VB.NET" Value="Public Interface WebOptions" />
@@ -19,8 +19,8 @@
   </Attributes>
   <Docs>
     <summary>Содержит атрибуты уровня книги, используемые Microsoft Excel при сохранения документа в качестве веб-страницы или открытия веб-страницы.</summary>
-    <remarks><para>Вы можете возвращать или устанавливать атрибуты на уровне приложения (глобального) или на уровне книги. (Обратите внимание, что значения атрибутов могут быть разными в зависимости от значения атрибута во время сберегания книги.) Параметры атрибутов на уровне книги переопрепреяют параметры атрибутов уровня приложения. Атрибуты уровня приложения содержатся в <see cref="T:Microsoft.Office.Interop.Excel.DefaultWebOptions" /> объекте.</para>
-      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Workbook.WebOptions" /> для возврата объекта <b>WebOptions.</b></para>
+    <remarks><para>Вы можете возвращать или устанавливать атрибуты на уровне приложения (глобального) или на уровне книг. (Обратите внимание, что значения атрибутов могут быть разными от одной книги к другой, в зависимости от значения атрибута во время сберегания книги.) Параметры атрибута уровня книги переопределяют параметры атрибута на уровне приложений. Атрибуты уровня приложений содержатся в <see cref="T:Microsoft.Office.Interop.Excel.DefaultWebOptions" /> объекте.</para>
+      <para>Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel._Workbook.WebOptions" /> для возврата <b>объекта WebOptions.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,9 +50,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если PNG (переносимая сетовая графика) допускается в виде формата изображения при сохранения документов в виде веб-страницы. <b>False,</b> если PNG не разрешен в качестве выходного формата. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>True,</b> если PNG (портативная сетовая графика) разрешен в виде формата изображения при сохранения документов в виде веб-страницы. <b>False,</b> если PNG не разрешен в формате вывода. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если вы сохраняете изображения в формате PNG, а не в любом другом формате файлов, вы можете улучшить качество изображения или уменьшить размер этих файлов изображений, а значит уменьшить время загрузки при условии, что веб-браузеры, на которые вы ориентированы, поддерживают формат PNG.</para>
+        <remarks><para>Если вы сохраните изображения в формате PNG в отличие от любого другого формата файлов, вы можете улучшить качество изображения или уменьшить размер этих файлов изображений, а значит, сократить время загрузки, если предположить, что веб-браузеры, на которые вы нацелены, поддерживают формат PNG.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -79,7 +79,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -109,8 +109,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -140,10 +140,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, Microsoft Office веб-компоненты загружаются при просмотре сохраненного документа в веб-браузере, но только в том случае, если компоненты еще не установлены. <b>False,</b> если компоненты не загружены. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>True,</b> если Microsoft Office веб-компоненты загружаются при просмотре сохраненного документа в веб-браузере, но только если компоненты еще не установлены. <b>False,</b> если компоненты не загружены. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Для свойства можно установить центральный URL-адрес (в интрасети или Интернете) или путь (локальный или сетевой) к расположению, из которого авторизованные пользователи могут загружать компоненты при просмотре сохраненного <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.LocationOfComponents" /> документа. Путь должен быть допустимым и должен быть указать на расположение, которое содержит необходимые компоненты, а у пользователя должна быть действительная Microsoft Office лицензии.</para>
-          <para>Веб-компоненты Office добавляют интерактивность к документам, которые вы сохраняете как веб-страницы. При просмотре веб-страницы в браузере на компьютере, где не установлены компоненты, интерактивные части страницы будут статическими.</para>
+        <remarks><para>Вы можете настроить свойство на центральный URL-адрес (на интрасети или в Интернете) или путь (локальный или сетевой) к расположению, из которого уполномоченные пользователи могут загружать компоненты при просмотре сохраненного <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.LocationOfComponents" /> документа. Путь должен быть допустимым и должен указать на расположение, содержа которое содержит необходимые компоненты, и у пользователя должна быть действительная Microsoft Office лицензия.</para>
+          <para>Office Веб-компоненты добавляют интерактивность документам, которые вы сохраняете в качестве веб-страниц. Если вы просматривали веб-страницу в браузере на компьютере, на который не установлены компоненты, интерактивные части страницы будут статичными.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -173,9 +173,9 @@
         <ReturnType>Microsoft.Office.Core.MsoEncoding</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает кодику документа (кодовую страницу или набор символов), которая будет использоваться веб-браузером при просмотре сохраненного документа. По умолчанию это страница системного кода.</summary>
+        <summary>Возвращает или задает кодию документа (страницу кода или набор символов), который будет использоваться веб-браузером при просмотре сохраненного документа. По умолчанию — страница кода системы.</summary>
         <value>To be added.</value>
-        <remarks><para>Нельзя использовать константы с суффиксом <b>AutoDetect.</b> Эти константы используются <see cref="M:Microsoft.Office.Interop.Excel._Workbook.ReloadAs(Microsoft.Office.Core.MsoEncoding)" /> методом.</para>
+        <remarks><para>Нельзя использовать ни один из констант с суффиксом <b>AutoDetect.</b> Эти константы используются <see cref="M:Microsoft.Office.Interop.Excel._Workbook.ReloadAs(Microsoft.Office.Core.MsoEncoding)" /> методом.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -202,11 +202,11 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает суффикс папки, который Microsoft Excel использует при сохранения документа как веб-страницы, использовании длинных имен файлов и выборе для сохранения вспомогательных файлов в отдельной папке (то есть, если для свойств и свойств установлено <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.UseLongFileNames" /> <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> true). <b></b></summary>
+        <summary>Возвращает суффикс папки, который Microsoft Excel при сохранения документа в качестве веб-страницы, используйте длинные имена файлов и выберите для сохранения вспомогательных файлов в отдельной папке (то есть, если свойства и свойства настроены на <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.UseLongFileNames" /> <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> <b>True).</b></summary>
         <value>To be added.</value>
-        <remarks><para>В новых документах используется суффикс, возвращаемый <see cref="P:Microsoft.Office.Interop.Excel.DefaultWebOptions.FolderSuffix" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.DefaultWebOptions" /> объекта. Значение свойства <b>FolderSuffix</b> объекта может отличаться от значения объекта <see cref="T:Microsoft.Office.Interop.Excel.WebOptions" /> <b>DefaultWebOptions,</b> если документ ранее редактировался в другой языковой версии Microsoft Excel. С помощью этого метода можно изменить суффикс на язык, который в настоящее время используется <see cref="M:Microsoft.Office.Interop.Excel.WebOptions.UseDefaultFolderSuffix" /> в Microsoft Office.</para>
-          <para>По умолчанию имя вспомогательной папки — это имя веб-страницы, а также подчеркивание (_), точка (.) или дефис (-) и слово "files" (на языке версии Excel, в которой файл был сохранен как веб-страница). Например, предположим, что вы используете нидерландскую языковую версию Excel для сохранения файла Page1 в качестве веб-страницы. Имя вспомогательной папки по умолчанию — Page1_bestanden.</para>
-          <para>В следующей таблице перечислены все языковые версии Office, а также соответствующие значения свойств и суффикс <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> папок. Для языков, не указанных в таблице, используется суффикс ".files".</para>
+        <remarks><para>В вновь созданных документах используется суффикс, возвращаемый <see cref="P:Microsoft.Office.Interop.Excel.DefaultWebOptions.FolderSuffix" /> свойством <see cref="T:Microsoft.Office.Interop.Excel.DefaultWebOptions" /> объекта. Значение свойства <b>FolderSuffix</b> объекта может отличаться от значения объекта <see cref="T:Microsoft.Office.Interop.Excel.WebOptions" /> <b>DefaultWebOptions,</b> если документ ранее был отредактирован в другой языковой версии Microsoft Excel. Этот метод можно использовать для изменения суффикса на язык, который в настоящее время <see cref="M:Microsoft.Office.Interop.Excel.WebOptions.UseDefaultFolderSuffix" /> используется в Microsoft Office.</para>
+          <para>По умолчанию имя вспомогательной папки — это имя веб-страницы плюс подчеркивание (_), период (.) или дефис (-) и слово "files" (появляется на языке версии Excel, в которой файл был сохранен в качестве веб-страницы). Например, предположим, что для сохранения файла под названием "Page1" Excel в качестве веб-страницы используется голландская языковая версия Excel. Имя вспомогательной папки по умолчанию является Page1_bestanden.</para>
+          <para>В следующей таблице перечислены все языковые версии Office и указаны соответствующие значения свойств и суффикс <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> папок. Для языков, не перечисленных в таблице, используется суффикс ".files".</para>
           <list type="table">
             <item>
               <term>Арабский</term>
@@ -214,12 +214,12 @@
               <description>.files</description>
             </item>
             <item>
-              <term>Баскский</term>
+              <term>Basque</term>
               <description>1069</description>
               <description>_fitxategiak</description>
             </item>
             <item>
-              <term>Бразилии</term>
+              <term>Бразильский</term>
               <description>1046</description>
               <description>_arquivos</description>
             </item>
@@ -234,7 +234,7 @@
               <description>_fitxers</description>
             </item>
             <item>
-              <term>Китайский ( упрощенное)</term>
+              <term>Китайский язык — упрощенный</term>
               <description>2052</description>
               <description>.files</description>
             </item>
@@ -364,7 +364,7 @@
               <description>_fajlovi</description>
             </item>
             <item>
-              <term>Словакия</term>
+              <term>Словацкая</term>
               <description>1051</description>
               <description>.files</description>
             </item>
@@ -433,9 +433,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает центральный URL-адрес (в интрасети или Интернете) или путь (локальный или сетевой) к расположению, из которого авторизованные пользователи могут загружать Microsoft Office веб-компоненты при просмотре сохраненного документа. Значение по умолчанию — путь локальной или сетевой установки для Microsoft Office.</summary>
+        <summary>Возвращает или задает центральный URL-адрес (на интрасети или в Интернете) или путь (локальный или сетевой) в расположение, из которого уполномоченные пользователи могут загружать Microsoft Office веб-компоненты при просмотре сохраненного документа. Значение по умолчанию — это путь локальной или сетевой установки для Microsoft Office.</summary>
         <value>To be added.</value>
-        <remarks><para>Веб-компоненты Office автоматически загружаются с указанной веб-страницей, если свойству задано true, компоненты еще не установлены, путь действителен и указывает на расположение с необходимыми компонентами, а у пользователя есть действующая Microsoft Office <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.DownloadComponents" /> лицензии. <b></b></para>
+        <remarks><para>Office Веб-компоненты автоматически загружаются с указанной веб-страницей, если свойство настроено на True, компоненты еще не установлены, путь действителен и указывает на расположение, которое содержит необходимые компоненты, и у пользователя есть действительная <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.DownloadComponents" /> Microsoft Office лицензия. <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -465,11 +465,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если все вспомогательные файлы, такие как фоновые текстуры и графики, организованы в отдельной папке при сохранения указанного документа в качестве веб-страницы. <b>False,</b> если вспомогательные файлы сохраняются в той же папке, что и веб-страница. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если все поддерживающие файлы, такие как фоновые текстуры и графики, организованы в отдельной папке при сохранения указанного документа в качестве веб-страницы. <b>False,</b> если поддерживаемые файлы сохраняются в той же папке, что и веб-страница. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Новая папка создается в папке, в которой сохранена веб-страница, и называется после документа. Если используются длинные имена файлов, к имени папки добавляется суффикс. Свойство возвращает суффикс папки для выбранной или установленной языковой поддержки или суффикс папки по <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.FolderSuffix" /> умолчанию.</para>
-          <para>Если сохранить документ, который был ранее сохранен с другим значением свойства <b>OrganizeInFolder,</b> Microsoft Excel автоматически перемещает вспомогательные файлы в папку или из нее, если это необходимо.</para>
-          <para>Если вы не используете длинные имена файлов (т. е. если свойство имеет свойство False), Microsoft Excel автоматически сохраняет все вспомогательные файлы в <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.UseLongFileNames" /> отдельной папке. <b></b> Файлы не могут быть сохранены в той же папке, что и веб-страница.</para>
+        <remarks><para>Новая папка создается в папке, в которой сохранена веб-страница и названа в честь документа. Если используются длинные имена файлов, в имя папки добавляется суффикс. Свойство возвращает суффикс папки для выбранной или установленной языковой поддержки или суффикс папки по <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.FolderSuffix" /> умолчанию.</para>
+          <para>Если вы сохраните документ, который был ранее сохранен с свойством <b>OrganisInFolder,</b> которое имеет другое значение, Microsoft Excel автоматически перемещает вспомогательные файлы в папку или из нее, если это необходимо.</para>
+          <para>Если вы не используете длинные имена файлов (то есть, если свойство настроено на False), Microsoft Excel автоматически сохраняет все вспомогательные файлы в <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.UseLongFileNames" /> отдельной папке. <b></b> Файлы не могут быть сохранены в той же папке, что и веб-страница.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -527,10 +527,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает плотность графических изображений и ячеек таблицы (пикселей на дюйм) на веб-странице. Диапазон параметров обычно находится в диапазоне от 19 до 480, а для популярных размеров экрана — 72, 96 и 120. Значение по умолчанию — 96.</summary>
+        <summary>Возвращает или задает плотность (пикселей на дюйм) графических изображений и клеток таблицы на веб-странице. Диапазон параметров обычно от 19 до 480, а для популярных размеров экрана — 72, 96 и 120. Параметр по умолчанию — 96.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство определяет размер изображений и ячеек на указанной веб-странице относительно размера текста при просмотре сохраненного документа в веб-браузере. Физические размеры итога изображения или ячейки являются результатом исходных измерений (в дюймах), умноженных на количество пикселей на дюйм.</para>
-          <para>Это свойство используется <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.ScreenSize" /> для того, чтобы установить оптимальный размер экрана для целевых веб-браузеров.</para>
+        <remarks><para>Это свойство определяет размер изображений и ячеек на указанной веб-странице относительно размера текста при просмотре сохраненного документа в веб-браузере. Физические размеры изображения или ячейки являются результатом исходных размеров (в дюймах), умноженных на количество пикселей на дюйм.</para>
+          <para>Свойство используется для набора оптимального размера экрана для <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.ScreenSize" /> целевых веб-браузеров.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -560,10 +560,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если каскадные таблицы стилей (CSS) используются для форматирования шрифтов при просмотре сохраненного документа в веб-браузере. <b>False,</b> если используются теги HTML FONT и &lt; &gt; каскадные таблицы стилей. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если каскадные листы стилей (CSS) используются для форматирования шрифтов при просмотре сохраненного документа в веб-браузере. <b>False,</b> если используются теги HTML FONT и каскадные &lt; &gt; листы стилей. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Microsoft Excel создает файл каскадной таблицы стилей и сохраняет его в указанной папке или в той же папке, что и веб-страница, в зависимости от значения <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> свойства.</para>
-          <para>Если веб-браузер <b></b> поддерживает каскадные таблицы стилей, этому свойству следует установить true, так как это даст более точный контроль макета и форматирования на веб-странице и сделает его более похожим на документ (как в Microsoft Excel).</para>
+        <remarks><para>Microsoft Excel создает каскадный файл листа стилей и сохраняет его либо в указанной папке, либо в той же папке, что и веб-страница, в зависимости от значения <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> свойства.</para>
+          <para>Это свойство следует задать <b>True,</b> если веб-браузер поддерживает каскадные листы стилей, так как это даст вам более точный контроль макета и форматирования на веб-странице и сделает его более похожим на документ (как это показалось в Microsoft Excel).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -593,9 +593,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если файлы изображений не создаются из объектов рисования при сохранения документа в качестве веб-страницы. <b>False,</b> если создаются изображения. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>True,</b> если файлы изображений не создаются из объектов рисования при сохранения документа в качестве веб-страницы. <b>False,</b> если создаются изображения. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Вы можете уменьшить размеры файлов, не создавая изображения для объектов рисования, если веб-браузер поддерживает язык векторной разметки (VML). Следует установить для свойства <b>RelyOnVML</b> свойство <b>True,</b> если вы нацелились на браузер, который поддерживает VML. Для браузеров, которые не поддерживают VML, изображение не будет отображаться при просмотре веб-страницы, сохраненной с этим свойством.</para>
+        <remarks><para>Можно уменьшить размер файла, не создавая изображения для объектов рисования, если ваш веб-браузер поддерживает язык разметки Vector (VML). Если вы нацелены на браузер, поддерживаюющий VML, следует установить свойство <b>RelyOnVML</b> true. <b></b> Для браузеров, которые не поддерживают VML, изображение не будет отображаться при просмотре веб-страницы, сохраненной с помощью этого свойства.</para>
           <para>Например, не следует создавать изображения, если на веб-странице используются созданные ранее файлы изображений, а также если расположение, в котором сохраняется документ, отличается от конечного расположения страницы на веб-сервере.</para>
           <para> </para></remarks>
       </Docs>
@@ -626,7 +626,7 @@
         <ReturnType>Microsoft.Office.Core.MsoScreenSize</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает константы, определяющие идеальный минимальный размер экрана (ширина по высоте, в пикселях), который следует использовать при просмотре сохраненного документа в <see cref="T:Microsoft.Office.Core.MsoScreenSize" /> веб-браузере. Константа по <b>умолчанию — msoScreenSize800x600.</b></summary>
+        <summary>Возвращает или задает констант, указывая идеальный минимальный размер экрана (ширина по высоте, в пикселях), который следует использовать при просмотре сохраненного документа в <see cref="T:Microsoft.Office.Core.MsoScreenSize" /> веб-браузере. Константа по умолчанию <b>— msoScreenSize800x600.</b></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -657,7 +657,7 @@
         <ReturnType>Microsoft.Office.Core.MsoTargetBrowser</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoTargetBrowser" /> константы, указывающие версию браузера.</summary>
+        <summary>Возвращает или задает <see cref="T:Microsoft.Office.Core.MsoTargetBrowser" /> констант с указанием версии браузера.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -684,8 +684,8 @@
       <Parameters />
       <Docs>
         <summary>Задает суффикс папки для указанного документа в суффикс по умолчанию для выбранной или установленной языковой поддержки.</summary>
-        <remarks><para>Microsoft Excel использует суффикс папки при сохранения документа в качестве веб-страницы, использовании длинных имен файлов и выборе сохранения вспомогательных файлов в отдельной папке (то есть, если для свойств и свойств установлено <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.UseLongFileNames" /> <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> true). <b></b></para>
-          <para>Суффикс отображается в имени папки после имени документа. Например, если документ называется Book1, а язык английский, имя папки будет Book1_files. Доступные суффиксы папок перечислены в разделе <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.FolderSuffix" /> о свойстве.</para>
+        <remarks><para>Microsoft Excel используется суффикс папки при сохранения документа в качестве веб-страницы, использования длинных имен файлов и сохранения поддерживающих файлов в отдельной папке (то есть, если свойства и свойства настроены на <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.UseLongFileNames" /> <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> <b>True).</b></para>
+          <para>Суффикс отображается в имени папки после имени документа. Например, если документ называется "Book1" и язык английский, имя папки Book1_files. Доступные суффиксы папок перечислены в разделе <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.FolderSuffix" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -715,9 +715,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если при сохранения документа в качестве веб-страницы используются длинные имена файлов. <b>False,</b> если длинные имена файлов не используются и используется формат doS-имени файла (8.3). Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если при сохранения документа в качестве веб-страницы используются длинные имена файлов. <b>False,</b> если длинные имена файлов не используются и используется формат имя файла DOS (8.3). Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Если вы не используете длинные имена файлов, а в вашем документе есть вспомогательные файлы, Microsoft Excel автоматически упорядояет эти файлы в отдельной папке. В противном случае используйте свойство, чтобы определить, организованы ли вспомогательные файлы <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> в отдельной папке.</para>
+        <remarks><para>Если вы не используете длинные имена файлов, а в документе есть вспомогательные файлы, Microsoft Excel автоматически организует эти файлы в отдельной папке. В противном случае используйте свойство, чтобы определить, организованы ли вспомогательные файлы <see cref="P:Microsoft.Office.Interop.Excel.WebOptions.OrganizeInFolder" /> в отдельной папке.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
