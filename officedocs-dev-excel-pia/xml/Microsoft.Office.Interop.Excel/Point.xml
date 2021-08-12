@@ -1,5 +1,5 @@
 <Type Name="Point" FullName="Microsoft.Office.Interop.Excel.Point">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="41d76d059050993a028c8b26b1795b64c3e70e33" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="49997210" /></Metadata><TypeSignature Language="C#" Value="public interface Point" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="991fad0cf35ec6931cabde63ab81cdb20de16673502d2a78ec53178ea4f7a08d" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518484" /></Metadata><TypeSignature Language="C#" Value="public interface Point" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract Point" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.Point" />
   <TypeSignature Language="VB.NET" Value="Public Interface Point" />
@@ -21,9 +21,9 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет одну точку в ряде диаграммы.</summary>
-    <remarks><para>Объект <b>Point</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Points" /> коллекции. Коллекция <b>Points</b> содержит все точки в одном ряду.</para>
-      <para>Используйте <b>точки</b>( <paramref name="index" /> ), где находится номер <paramref name="index" /> индекса точки, чтобы вернуть один <b>объект Point.</b> Точки набраются слева направо в ряду. Points(1) — это самая левая точка, а Points(Points.Count) — самая правая точка.</para>
+    <summary>Представляет одну точку в серии в диаграмме.</summary>
+    <remarks><para>Объект <b>Point</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.Points" /> коллекции. Коллекция <b>Points</b> содержит все точки в одной серии.</para>
+      <para>Используйте <b>пункты</b> <paramref name="index" /> (), где находится номер индекса точек, чтобы вернуть один объект <paramref name="index" /> <b>Point.</b> В серии точки про номера слева направо. Точки (1) — это левая точка, а пункты (Points.Count) — самая правая точка.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -87,7 +87,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -123,16 +123,16 @@
         <Parameter Name="Separator" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlDataLabelsType" /> . Тип применяемой метки данных. Может быть одной из следующих констант <b>XlDataLabelsType:</b> <b>xlDataLabelsShowBubbleSizes</b><b>xlDataLabelsShowLabelAndPercent</b> Percentage of the total and category for the point. Доступно только для круговой и кольцевой диаграмм. <b>xlDataLabelsShowPercent</b> Процент от общего числа. Доступно только для круговой и кольцевой диаграмм. <b>xlDataLabelsShowLabel</b> Категория для точки. <b>xlDataLabelsShowNone</b> Метки данных не заметок. <b>xlDataLabelsShowValue</b> Значение по умолчанию. Значение для точки (предполагается, что этот аргумент не указан).</param>
-        <param name="LegendKey"><b>Необязательный объект</b>. <b>Значение true,</b> чтобы показать ключ легенды рядом с точкой. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AutoText"><b>Необязательный объект</b>. <b>True,</b> если объект автоматически создает соответствующий текст на основе содержимого.</param>
-        <param name="HasLeaderLines"><b>Необязательный объект</b>. Для объектов <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> и <see cref="T:Microsoft.Office.Interop.Excel.Series" /> объектов имеет <b>true,</b> если ряд имеет линии лидеров.</param>
-        <param name="ShowSeriesName"><b>Необязательный объект</b>. Имя ряда для метки данных.</param>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlDataLabelsType" />Необязательный . Тип метки данных для применения. Может быть одним из следующих констант <b>XlDataLabelsType:</b> <b>xlDataLabelsShowBubbleSizes</b><b>xlDataLabelsShowLabelAndPercent</b> Процент от общего числа и категории для точки. Доступно только для диаграмм пирога и кольцевой диаграммы. <b>xlDataLabelsShowPercent</b> Процент от общего числа. Доступно только для диаграмм пирога и кольцевой диаграммы. <b>xlDataLabelsShowLabel</b> Категория для точки. <b>xlDataLabelsShowNone</b> Меток данных нет. <b>xlDataLabelsShowValue</b> По умолчанию. Значение для точки (предполагается, если этот аргумент не указан).</param>
+        <param name="LegendKey"><b>Необязательный объект</b>. <b>True,</b> чтобы показать ключ легенды рядом с точкой. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AutoText"><b>Необязательный объект</b>. <b>True,</b> если объект автоматически создает соответствующий текст на основе контента.</param>
+        <param name="HasLeaderLines"><b>Необязательный объект</b>. Для объектов <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> <see cref="T:Microsoft.Office.Interop.Excel.Series" /> и объектов <b>True,</b> если в серии есть строки лидеров.</param>
+        <param name="ShowSeriesName"><b>Необязательный объект</b>. Имя серии для метки данных.</param>
         <param name="ShowCategoryName"><b>Необязательный объект</b>. Имя категории для метки данных.</param>
         <param name="ShowValue"><b>Необязательный объект</b>. Значение для метки данных.</param>
         <param name="ShowPercentage"><b>Необязательный объект</b>. Процент метки данных.</param>
-        <param name="ShowBubbleSize"><b>Необязательный объект</b>. Размер пузырьков для метки данных.</param>
-        <param name="Separator"><b>Необязательный объект</b>. Сепаратор для метки данных.</param>
+        <param name="ShowBubbleSize"><b>Необязательный объект</b>. Размер пузыря для метки данных.</param>
+        <param name="Separator"><b>Необязательный объект</b>. Сепаратор метки данных.</param>
         <summary>Применяет метки данных к точке диаграммы.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -164,9 +164,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если рисунок применяется к концу точки или всем точкам в ряду.</summary>
+        <summary><b>True,</b> если изображение применяется к концу точки или всем точкам в серии.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применяется только к трех d диаграммам.</para>
+        <remarks><para>Это свойство применяется только к 3-D диаграммам.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -196,9 +196,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если рисунок применяется к передней части точки или всем точкам в ряду.</summary>
+        <summary><b>True,</b> если изображение применяется к передней части точки или всем точкам в серии.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применяется только к трех d диаграммам.</para>
+        <remarks><para>Это свойство применяется только к 3-D диаграммам.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -228,9 +228,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если рисунок применяется к сторонам точки или всем точкам в ряду.</summary>
+        <summary><b>True,</b> если изображение применяется к сторонам точки или всем точкам в серии.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство применяется только к трехd-диаграммам.</para>
+        <remarks><para>Это свойство применяется только к 3D-диаграммам.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -312,7 +312,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Если точка или ряд имеет заливку изображения, копирует изображение в буфер обмена.</summary>
+        <summary>Если точка или серия имеет заполнение изображения, скопирует изображение в буфер обмена.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -342,8 +342,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -370,9 +370,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.DataLabel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет метку <see cref="T:Microsoft.Office.Interop.Excel.DataLabel" /> данных, связанную с точкой или линией тренда.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.DataLabel" /> объект, который представляет метку данных, связанную с точкой или линией тренда.</summary>
         <value>To be added.</value>
-        <remarks><para>Чтобы включить метки данных для линии тренда, необходимо установить для свойства или <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayEquation" /> <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayRSquared" /> свойства true. <b></b></para>
+        <remarks><para>Чтобы включить метки данных для трендовой линии, необходимо настроить свойство <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayEquation" /> или <see cref="P:Microsoft.Office.Interop.Excel.Trendline.DisplayRSquared" /> свойство True. <b></b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -399,7 +399,7 @@
       <Docs>
         <summary>Удаляет объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>При <see cref="T:Microsoft.Office.Interop.Excel.Point" /> удалении объекта удаляется весь ряд.</para>
+        <remarks><para>Удаление объекта <see cref="T:Microsoft.Office.Interop.Excel.Point" /> удаляет всю серию.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -460,7 +460,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartFillFormat</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект для указанной фигуры или объекта для указанной диаграммы, которая содержит свойства форматирования заливки <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> для фигуры или диаграммы.</summary>
+        <summary>Возвращает объект для указанной фигуры или объект для указанной диаграммы, которая содержит свойства форматирования заполнения для <see cref="T:Microsoft.Office.Interop.Excel.FillFormat" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartFillFormat" /> фигуры или диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -519,10 +519,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает и задает значение, которое определяет, имеет ли точка трехмерный вид. Для чтения и записи.</summary>
+        <summary>Возвращает и задает значение, которое определяет, если точка имеет трехмерный внешний вид. Для чтения и записи.</summary>
         <value>Boolean</value>
-        <remarks><para>Возвращает true, если точка имеет трехмерный вид. </para>
-          <para>Это свойство применяется только к пузырьковой диаграмме.</para>
+        <remarks><para>Возвращает True, если точка имеет трехмерный вид. </para>
+          <para>Это свойство применяется только к диаграммам пузырьков.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -552,7 +552,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если точка имеет метку данных.</summary>
+        <summary><b>True,</b> если в точке есть метка данных.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -580,8 +580,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает высоту объекта (в пунктах).</summary>
-        <value>Высота объекта (в пунктах).</value>
+        <summary>Получает высоту в точках объекта.</summary>
+        <value>Высота объекта в точках.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -612,7 +612,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Interior</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет внутреннюю часть указанного объекта.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Interior" /> объект, который представляет интерьер указанного объекта.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -643,7 +643,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если Microsoft Excel инвертует шаблон в элементе, если он соответствует отрицательному числу.</summary>
+        <summary><b>Верно,</b> Microsoft Excel выверяет шаблон в элементе, если он соответствует отрицательному номеру.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -671,8 +671,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, которое представляет расстояние (в пунктах) от левого края объекта до левого края области диаграммы.</summary>
-        <value>Расстояние (в пунктах) от левого края объекта до левого края области диаграммы.</value>
+        <summary>Получает значение, которое представляет расстояние в точках от левого края объекта до левого края области диаграммы.</summary>
+        <value>Расстояние в точках от левого края объекта до левого края области диаграммы.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -703,7 +703,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает цвет фона маркера в качестве значения RGB или возвращает соответствующее значение индекса цвета. Применяется только к линиям, точечная и радиолокационной диаграммам.</summary>
+        <summary>Задает фоновый цвет маркера в качестве значения RGB или возвращает соответствующее значение индекса цвета. Применяется только к строке, рассеянию и диаграммам радаров.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -734,7 +734,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет фона маркера в качестве индекса в текущей цветовой палитре или в качестве одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> <b>xlColorIndexAutomatic</b> или <b>xlColorIndexNone</b>. Применяется только к линиям, точечная и радиолокационной диаграммам.</summary>
+        <summary>Возвращает или задает фоновый цвет маркера в качестве индекса в текущей цветовой палитре или в качестве одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> <b>xlColorIndexAutomatic</b> или <b>xlColorIndexNone</b>. Применяется только к строке, рассеянию и диаграммам радаров.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -765,7 +765,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Задает цвет фона маркера в качестве значения RGB или возвращает соответствующее значение индекса цвета. Применяется только к линиям, точечная и радиолокационной диаграммам.</summary>
+        <summary>Задает фоновый цвет маркера в качестве значения RGB или возвращает соответствующее значение индекса цвета. Применяется только к строке, рассеянию и диаграммам радаров.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -796,7 +796,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlColorIndex</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает цвет переднего плана маркера в качестве индекса в текущей цветовой палитре или в качестве одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> <b>xlColorIndexAutomatic</b> или <b>xlColorIndexNone</b>. Применяется только к линиям, точечная и радиолокационной диаграммам.</summary>
+        <summary>Возвращает или задает цвет маркера в качестве индекса в текущую цветовую палитру или в качестве одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlColorIndex" /> <b>xlColorIndexAutomatic</b> или <b>xlColorIndexNone</b>. Применяется только к строке, рассеянию и диаграммам радаров.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -858,32 +858,32 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlMarkerStyle</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает стиль маркера для точки или ряда в графике, точечная диаграмма или диаграмма радиолокатора.</summary>
+        <summary>Возвращает или задает стиль маркера для точки или серии в строковой диаграмме, диаграмме рассеяния или диаграмме радара.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlMarkerStyle" />может быть одной из следующих <b>констант XlMarkerStyle:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlMarkerStyle" />может быть одним из следующих <b>констант XlMarkerStyle:</b></para>
           <para>
             <b>xlMarkerStyleAutomatic</b>. Автоматические маркеры</para>
           <para>
-            <b>xlMarkerStyleCircle</b>. Циклы маркеров</para>
+            <b>xlMarkerStyleCircle</b>. Круговые маркеры</para>
           <para>
-            <b>xlMarkerStyleDash</b>. Маркеры длинной панели</para>
+            <b>xlMarkerStyleDash</b>. Маркеры длинных планок</para>
           <para>
-            <b>xlMarkerStyleDiamond</b>. Маркеры в форме диаманта</para>
+            <b>xlMarkerStyleDiamond</b>. Маркеры в форме алмаза</para>
           <para>
-            <b>xlMarkerStyleDot</b>. Маркеры короткой панели</para>
+            <b>xlMarkerStyleDot</b>. Маркеры коротких планок</para>
           <para>
             <b>xlMarkerStyleNone</b>. Нет маркеров</para>
           <para>
-            <b>xlMarkerStylePicture</b>. Маркеры рисунков</para>
+            <b>xlMarkerStylePicture</b>. Маркеры изображений</para>
           <para>
-            <b>xlMarkerStylePlus</b>. Квадратные маркеры со знаком "плюс"</para>
+            <b>xlMarkerStylePlus</b>. Квадратные маркеры со знаком плюс</para>
           <para>
             <b>xlMarkerStyleSquare</b>. Квадратные маркеры</para>
           <para>
             <b>xlMarkerStyleStar</b>. Квадратные маркеры со звездочкой</para>
           <para>
-            <b>xlMarkerStyleTriangle</b>. Трехугольные маркеры</para>
+            <b>xlMarkerStyleTriangle</b>. Треугольные маркеры</para>
           <para>
             <b>xlMarkerStyleX</b>. Квадратные маркеры с X</para>
           <para> </para></remarks>
@@ -915,7 +915,7 @@
         <summary>Получает имя объекта.</summary>
         <value>Имя объекта.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Это свойство соответствует имени точки данных на диаграмме. Имя представлено в следующем формате: номер точки P серии &lt; &gt; &lt; &gt; S.</para>
+          <para>Это свойство соответствует имени точки данных на диаграмме. Имя представлено в следующем формате: номер точки &lt; S серии &gt; &lt; &gt; P.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -968,9 +968,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Вает изображение из буфера обмена в качестве маркера в выбранной точке.</summary>
+        <summary>Вклеит изображение из буфера обмена в качестве маркера на выбранной точке.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Метод <b>Paste</b> можно использовать в столбцах, гистограммах, линиях или радиолокационных диаграммах и задает для свойства свойство <see cref="P:Microsoft.Office.Interop.Excel.Point.MarkerStyle" /> <b>xlMarkerStylePicture.</b></para>
+        <remarks><para>Метод <b>Paste</b> можно использовать на диаграммах столбцов, баров, строк или радаров, и он задает свойство <see cref="P:Microsoft.Office.Interop.Excel.Point.MarkerStyle" /> <b>xlMarkerStylePicture.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1000,10 +1000,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlChartPictureType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ отображения изображений на диаграмме со столбцом или гнойной диаграммой.</summary>
+        <summary>Возвращает или задает способ отображения изображений на столбце или диаграмме изображения с баром.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlChartPictureType" />может быть одной из следующих <b>констант XlChartPictureType:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlChartPictureType" />может быть одной из следующих констант <b>XlChartPictureType:</b></para>
           <para>
             <b>xlStack</b>
           </para>
@@ -1048,7 +1048,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает единицу для каждого рисунка на диаграмме, если для свойства установлено свойство <see cref="P:Microsoft.Office.Interop.Excel.Point.PictureType" /> <b>xlStackScale</b> (если нет, это свойство игнорируется).</summary>
+        <summary>Возвращает или задает единицу для каждого изображения на диаграмме, если свойство <see cref="P:Microsoft.Office.Interop.Excel.Point.PictureType" /> <b>настроено на xlStackScale</b> (если нет, это свойство игнорируется).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1079,8 +1079,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает единицу для каждого изображения на диаграмме, если для свойства установлено свойство <see cref="P:Microsoft.Office.Interop.Excel.Point.PictureType" /> <b>xlStackScale</b> (если нет, это свойство игнорируется). Для чтения и записи.</summary>
-        <value>64-разрядное число с плавающей запятой двойной точности.</value>
+        <summary>Возвращает или задает единицу для каждого изображения на диаграмме, если свойство <see cref="P:Microsoft.Office.Interop.Excel.Point.PictureType" /> <b>настроено на xlStackScale</b> (если нет, это свойство игнорируется). Для чтения и записи.</summary>
+        <value><b>Double</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1108,10 +1108,10 @@
       </Parameters>
       <Docs>
         <param name="loc">Указывает горизонтальную или вертикальную координату.</param>
-        <param name="Index">Указывает, какую координату положения кругового среза необходимо вернуть. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlPieSliceIndex.xlOuterCenterPoint" />.</param>
-        <summary>Возвращает вертикальное или горизонтальное положение точки на элементе диаграммы (в пунктах) от верхнего или левого края объекта до верхнего или левого края области диаграммы.</summary>
-        <returns>Вертикальное или горизонтальное положение точки на элементе диаграммы (в пунктах) от верхнего или левого края объекта до верхнего или левого края области диаграммы.</returns>
-        <remarks><para>Это свойство применяется только к типам круговой и кольцевой диаграмм.</para>
+        <param name="Index">Указывает координаты позиции среза пирога, чтобы вернуться. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlPieSliceIndex.xlOuterCenterPoint" />.</param>
+        <summary>Возвращает вертикальное или горизонтальное положение точки на элементе диаграммы в точках с верхнего или левого края объекта на верхний или левый край области диаграммы.</summary>
+        <returns>Вертикальное или горизонтальное положение точки на элементе диаграммы в точках, от верхнего или левого края объекта до верхнего или левого края области диаграммы.</returns>
+        <remarks><para>Это свойство применяется только к типам диаграммы пирога и пончик.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1141,7 +1141,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Значение true,</b> если точка находится во вторичном разделе круговой диаграммы или грезы круговой диаграммы. Применяется только к точкам круговой диаграммы или г. круговой диаграммы.</summary>
+        <summary><b>True,</b> если точка находится во вторичном разделе или пирога диаграммы пирога или панели диаграммы пирога. Применяется только к точкам на диаграммах пирога или панели диаграмм пирога.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1198,7 +1198,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если шрифт является теневым шрифтом или объект имеет тень.</summary>
+        <summary><b>True,</b> если шрифт — это шрифт теней или если объект имеет тень.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1226,8 +1226,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает значение, которое представляет расстояние от верхнего края объекта до верхнего края области диаграммы (в пунктах).</summary>
-        <value>Расстояние (в пунктах) от верхнего края объекта до верхнего края области диаграммы.</value>
+        <summary>Получает значение, которое представляет расстояние в точках от верхнего края объекта до верхнего края области диаграммы.</summary>
+        <value>Расстояние в точках от верхнего края объекта до верхнего края области диаграммы.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>
@@ -1255,8 +1255,8 @@
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает ширину объекта (в пунктах).</summary>
-        <value>Ширина объекта (в пунктах).</value>
+        <summary>Получает ширину объекта в точках.</summary>
+        <value>Ширина объекта в точках.</value>
         <remarks><para>Только для чтения.</para>
           <para> </para></remarks>
       </Docs>

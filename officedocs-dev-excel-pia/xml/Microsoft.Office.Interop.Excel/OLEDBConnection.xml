@@ -1,5 +1,5 @@
 <Type Name="OLEDBConnection" FullName="Microsoft.Office.Interop.Excel.OLEDBConnection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="907e0e2b7ef356c71a4d22a04803c5aeb256084d" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50011363" /></Metadata><TypeSignature Language="C#" Value="public interface OLEDBConnection" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="da0d456cfd0d5cb2fc5730ebc56258e3dad340916ab85ed3549732eeee756c5f" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518512" /></Metadata><TypeSignature Language="C#" Value="public interface OLEDBConnection" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract OLEDBConnection" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.OLEDBConnection" />
   <TypeSignature Language="VB.NET" Value="Public Interface OLEDBConnection" />
@@ -22,8 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет подключение OLE DB.</summary>
-    <remarks><para>Подключение OLE DB может храниться в книге Excel.  Когда приложение Micrososft Excel открывает книгу, Excel создает в памяти копию подключения OLE DB, известного как  <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> объект.</para>
-      <para>Объект содержит сведения, связанные с подключением, например имя сервера для подключения и имена объектов, которые необходимо <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> открыть на этом сервере.  При желании объект также может включать данные учетных данных проверки подлинности или команду, которая должна быть передана на сервер и выполнена (например, для выполнения <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> SQL Server).</para>
+    <remarks><para>Подключение OLE DB можно хранить в Excel книге.  Когда micrososft Excel открывает книгу, Excel создает в памяти копию подключения OLE DB, известного как <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> объект.</para>
+      <para>Объект содержит сведения, связанные с подключением, например имя сервера для подключения к и имя объектов, которые будут открыты <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> на этом сервере.  Кроме того, объект может также включать сведения о учетных данных проверки подлинности или команду, которая должна быть передана серверу и выполнена (например, заявление SELECT, которое будет выполнено <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> SQL Server).</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,12 +50,12 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект подключения ADO, если кэш pivotTable подключен к источнику данных OLE DB. Только для чтения.</summary>
+        <summary>Возвращает объект подключения ADO, если кэш PivotTable подключен к источнику данных OLE DB. Только для чтения.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Это свойство предоставляет доступ к подключению Microsoft Excel к поставщику данных, позволяя пользователю писать код в контексте того же сеанса, который <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.ADOConnection" /> использует Excel. </para>
-          <para>Свойство доступно только для сеансов, где источником данных является источник данных <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.ADOConnection" /> OLE DB. Если сеанс ADO не существует, запрос приведет к ошибке во время выполнения.
+        <remarks><para>Свойство предоставляет Microsoft Excel к поставщику данных, позволяя пользователю писать код в контексте того же сеанса, <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.ADOConnection" /> Excel используется. </para>
+          <para>Свойство доступно только для сеансов, где источником данных <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.ADOConnection" /> является источник данных OLE DB. Если сеанс ADO не будет, запрос приведет к ошибке во времени выполнения.
 
-Свойство можно использовать для любого кэша на основе <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.ADOConnection" /> OLE DB с ADO. Объект подключения ADO можно использовать с ADO MD для поиска сведений о кубах OLAP, на которых основан кэш.</para>
+Свойство можно использовать для любого кэша <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.ADOConnection" /> на основе OLE DB с помощью ADO. Объект подключения ADO можно использовать с помощью ADO MD для поиска сведений о кубах OLAP, на которых основан кэш.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -85,9 +85,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b>true, если файл подключения всегда используется для установления подключения к источнику данных. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b>если файл подключения всегда используется для установления подключения к источнику данных. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если это свойство имеет <b>true,</b> файл подключения всегда будет использоваться для установления подключения к источнику данных.  Если подключение, внедренное в книгу, отличается от внешнего файла подключения, внедренное подключение игнорируется, и рассматривается только внешний файл подключения.</para>
+        <remarks><para>Если это свойство <b>true,</b> файл подключения всегда будет использоваться для установления подключения к источнику данных.  Если подключение, встроенное в книгу, отличается от внешнего файла подключения, встроенное подключение будет проигнорировано, а внешний файл подключения будет рассматриваться только в качестве версии.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -114,9 +114,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office  <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
+        <summary>При применении без квалификатора объекта это свойство возвращает объект, представляю Microsoft Office Excel <see cref="T:Microsoft.Office.Interop.Excel._Application" /> приложение. При его применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
         <value><b>Приложение</b></value>
-        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с помощью объекта автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -146,9 +146,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если запросы для подключения OLE DB выполняются асинхронно (в фоновом режиме). Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если запросы для подключения OLE DB выполняются асинхронно (в фоновом режиме). Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Для источников данных OLAP это свойство является "только чтением" и всегда возвращает <b>false.</b></para>
+        <remarks><para>Для источников данных OLAP это свойство является только для чтения и всегда возвращает <b>False.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -178,7 +178,7 @@
         <summary>Получает <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> коллекцию для указанного подключения.</summary>
         <value>Коллекция <see cref="T:Microsoft.Office.Interop.Excel.CalculatedMembers" /> для указанного подключения.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Используйте свойство коллекции для обмена вычисляемыми членами между несколькими сносями и функциями куба, которые <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CalculatedMembers" /> используют одно и то же <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> подключение.</para>
+          <para>Используйте свойство коллекции для обмена вычисляемыми участниками между несколькими функциями <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CalculatedMembers" /> <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> PivotTables и кубами, которые используют одно и то же подключение.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -204,7 +204,7 @@
       <Parameters />
       <Docs>
         <summary>Отменяет все операции обновления для указанного подключения OLE DB.</summary>
-        <remarks><para>Используйте это свойство, чтобы определить, проводится ли операция <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Refreshing" /> обновления в данный момент.</para>
+        <remarks><para>Используйте свойство, чтобы определить, продолжается ли операция <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Refreshing" /> обновления.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -234,9 +234,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку команды для указанного источника данных. Объект <b>read/write</b>.</summary>
+        <summary>Возвращает или задает строку команды для указанного источника данных. Объект <b>Read/write</b>.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Следует использовать это свойство вместо свойства SQL, которое теперь существует в основном для совместимости с более ранними <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> версиями Microsoft <b></b>Excel. Если вы используете оба свойства, приоритет имеет значение <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> свойства.</para>
+        <remarks><para>Вместо свойства SQL, которое теперь существует в основном для совместимости с более ранними версиями <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> Microsoft Excel. <b></b> Если вы используете оба свойства, значение свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> имеет приоритет.</para>
           <para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandType" /> описывает значение <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
@@ -269,7 +269,7 @@
       <Docs>
         <summary>Возвращает или задает одну из <b>констант XlCmdType.</b> Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlCmdType" /> .</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCmdType" /></value>
-        <remarks><para>Возвращаемая или установленная константа описывает значение <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> свойства. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlCmdType.xlCmdSql" />. </para>
+        <remarks><para>Возвращаемая или установленная константа описывает значение <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.CommandText" /> свойства. Значение по умолчанию — <see cref="F:Microsoft.Office.Interop.Excel.XlCmdType.xlCmdSql" />. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -299,11 +299,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку, содержаную параметры OLE DB, которые позволяют Microsoft Excel подключаться к источнику данных OLE DB. Объект <b>read/write</b>.</summary>
+        <summary>Возвращает или задает строку, содержаную параметры OLE DB, Microsoft Excel подключиться к источнику данных OLE DB. Объект <b>Read/write</b>.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Установка свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> не сразу инициирует подключение к источнику данных. Этот метод необходимо <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> использовать для подключения и извлечения данных.
+        <remarks><para>Настройка свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> не сразу инициирует подключение к источнику данных. Для подключения и получения данных необходимо использовать <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> метод.
 
-При использовании автономного файла куба установите для свойства свойство True и используйте <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> свойство вместо <b></b> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойства.</para>
+При использовании автономного кубового файла установите свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> <b>True</b> и используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> вместо <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -330,9 +330,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> enumeration, которая указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> переумериях, которая указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Creator" /> символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.  Свойство предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Creator" /> символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -362,9 +362,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если пользователь может обновить подключение. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если подключение может быть обновлено пользователем. Значение по умолчанию — <b>True</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.RefreshOnFileOpen" /> игнорируется, если для свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.EnableRefresh" /> установлено свойство <b>False.</b> </para>
+        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.RefreshOnFileOpen" /> игнорируется, если <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.EnableRefresh" /> свойство настроено на <b>False.</b> </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -391,9 +391,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.MaintainConnection" /> свойство имеет свойство<b>True.</b> Возвращает <b>false,</b> если оно в настоящее время не подключено к источнику. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.MaintainConnection" /> свойство<b>True</b>. Возвращает <b>False,</b> если он в настоящее время не подключен к источнику. Только для чтения, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.IsConnected" /> не проверяет, подключено ли подключение. Даже если это свойство возвращает<b>true,</b>отправка команд поставщику может привести к ошибке, если подключение больше не является допустимым.</para>
+        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.IsConnected" /> не проверяет, подключено ли подключение. Даже если это свойство возвращает<b>True,</b>отправка команд поставщику может привести к ошибке, если подключение больше не допустимо.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -423,11 +423,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает строку подключения к автономному файлу куба. Объект <b>read/write</b>.</summary>
+        <summary>Возвращает или задает строку подключения к автономному файлу куба. Объект <b>Read/write</b>.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Для источника данных, не относящихся к OLAP, значением свойства является пустая строка, а для свойства установлено значение <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> <b>False.</b></para>
-          <para>Установка свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> не сразу инициирует подключение к источнику данных. Сначала необходимо использовать этот метод для подключения и <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> извлечения данных.</para>
-          <para>Значение свойства используется, если для свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> установлено значение <b>True.</b> Если <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> свойству задано false, свойство указывает строку подключения для таблиц запросов на основе источников, кроме локальных файлов <b></b> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> куба.</para>
+        <remarks><para>Для источника данных, не относящихся к OLAP, значение свойства — пустая строка, а свойство — <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> <b>False.</b></para>
+          <para>Настройка свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> не сразу инициирует подключение к источнику данных. Сначала необходимо использовать метод для подключения и <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> получения данных.</para>
+          <para>Значение свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> используется, если <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> свойство настроено на <b>True</b>. Если свойство задано false, свойство указывает строку подключения для таблиц запросов на основе источников, помимо <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.UseLocalConnection" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> локальных кубовых файлов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -457,10 +457,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает идентификатор локали для указанного подключения.</summary>
-        <value>Идентификатор локали для указанного подключения.</value>
+        <summary>Получает или задает идентификатор локального подключения для указанного подключения.</summary>
+        <value>Идентификатор locale для указанного подключения.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Перед тем как установить для свойства новый региональный настройка, необходимо установить для свойства <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocaleID" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.RetrieveInOfficeUILang" /> объекта <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> false. <b></b> Сведения о допустимом значении LCID см. на веб-сайте MSDN по запросу "Locale IDs Assigned by Microsoft".</para>
+          <para>Прежде чем установить свойство в новом локальном расположении, необходимо установить свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocaleID" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.RetrieveInOfficeUILang" /> объекта false <see cref="T:Microsoft.Office.Interop.Excel.OLEDBConnection" /> . <b></b> Сведения о допустимом значении Locale ID (LCID) можно найти на веб-сайте MSDN для "Локальные удостоверения, заданные Корпорацией Майкрософт".</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -490,9 +490,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если подключение к указанному источнику данных сохраняется после операции обновления и до закрытия книги. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если подключение к указанному источнику данных поддерживается после операции обновления и до закрытия книги. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Значение по умолчанию — <b>True</b>. Если вы ожидаете частые запросы к <b></b> серверу, установка для этого свойства true может повысить производительность за счет сокращения времени повторного подключения. Установка для этого свойства <b>свойства False</b> приводит к закрытию открытого подключения.</para>
+        <remarks><para>Значение по умолчанию — <b>True</b>. Если вы ожидаете частые запросы на сервер, настройка этого свойства <b>true</b> может повысить производительность за счет сокращения времени повторного подключения. Настройка этого свойства <b>false</b> приводит к закрытию открытого подключения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -518,9 +518,9 @@
       <Parameters />
       <Docs>
         <summary>Устанавливает подключение для указанного подключения OLE DB.</summary>
-        <remarks><para>Этот метод можно использовать, когда соединение перетаскивается и пользователь хочет восстановить <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.MakeConnection" /> подключение. </para>
-          <para>При сброшении подключения различные объекты и методы могут возвращать ошибку во время работы. Использование этого метода обеспечивает подключение перед выполнением других объектов или методов.</para>
-          <para>Этот метод приведет к ошибке во время работы, если свойству указанного подключения OLE DB задано <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.MaintainConnection" /> свойство <b>False.</b></para>
+        <remarks><para>Этот метод можно использовать, когда подключение падает, и пользователь хочет восстановить <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.MakeConnection" /> подключение. </para>
+          <para>Различные объекты и методы могут возвращать временную ошибку, если подключение отброшено. Использование этого метода обеспечивает подключение перед выполнением других объектов или методов.</para>
+          <para>Этот метод приведет к ошибке во время работы, если свойство указанного <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.MaintainConnection" /> подключения <b></b>OLE DB было задано false .</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -550,8 +550,8 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает максимальное число записей для извлечения. Для чтения и записи, <b>Integer</b>.</summary>
-        <value>64-разрядное целое число.</value>
+        <summary>Возвращает или задает максимальное число записей для получения. Для чтения и записи, <b>Integer</b>.</summary>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -578,7 +578,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если подключение OLE DB подключено к серверу OLAP. Только для чтения, <b>Boolean</b>.</summary>
+        <summary>Возвращает <b>True,</b> если подключение OLE DB подключено к серверу online Analytical Processing (OLAP). Только для чтения, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -632,7 +632,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сбрасывает и повторно подключит указанное подключение.</summary>
+        <summary>Отбрасыв, а затем повторно подключив указанное подключение.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -658,11 +658,11 @@
       <Parameters />
       <Docs>
         <summary>Обновляет подключение OLE DB.</summary>
-        <remarks><para>При под подключение к источнику данных OLE DB Microsoft Excel использует строку подключения, указанную <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойством. Если в указанной строке подключения отсутствуют необходимые значения, отобразиться диалоговое окно с запросом требуемой информации для пользователя. Если свойство имеет свойство False, диалоговое окно не отображается, и метод не будет работать с исключением <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> <b></b> <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> "Недостаточно сведений о под соединении".</para>
-          <para>После успешного подключения Microsoft Excel сохраняет заполненную строку подключения, чтобы в течение того же сеанса редактирования не отображались запросы на последующие вызовы <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> метода. Вы можете получить заполненную строку подключения, изучив значение  <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойства.</para>
-          <para>После подключения к базе данных запрос SQL проверяется. Если запрос не является допустимым, метод не будет работать с исключением SQL <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> синтаксиса.</para>
-          <para>Метод возвращает true, если запрос успешно завершен или запущен; если пользователь отменяет подключение, возвращается <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> false. <b></b> <b></b></para>
-          <para>Чтобы узнать, превысило ли число извлеченных строк число доступных строк на этом сайте, проверьте <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.FetchedRowOverflow" /> свойство. Это свойство инициализируются при каждом <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> методе.</para>
+        <remarks><para>При подключении к источнику данных OLE DB Microsoft Excel использует строку подключения, указанную <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойством. Если в указанной строке подключения отсутствуют необходимые значения, будут отображаться диалоговое окно для запроса пользователем требуемой информации. Если свойство false, диалоговое окно не отображается, и метод не удается с исключением <see cref="P:Microsoft.Office.Interop.Excel._Application.DisplayAlerts" /> <b></b> <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> Недостаточное подключение информации.</para>
+          <para>После Microsoft Excel успешного подключения она сохраняет завершенную строку подключения, чтобы запросы не отображались для последующих вызовов к методу во время одного и того же сеанса <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> редактирования. Вы можете получить завершенную строку подключения, изучив значение  <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойства.</para>
+          <para>После подключения к базе данных проверяется SQL запрос. Если запрос не действителен, метод сбой с исключением <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> SQL синтаксиса.</para>
+          <para>Метод возвращает True, если запрос успешно завершен или запущен; он возвращает False, если пользователь <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> отменяет подключение. <b></b> <b></b></para>
+          <para>Чтобы узнать, превысило ли количество извлеченных строк количество доступных строк на таблице, изучите <see cref="P:Microsoft.Office.Interop.Excel._QueryTable.FetchedRowOverflow" /> свойство. Это свойство инициализировано каждый раз, <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> когда метод называется.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -689,7 +689,7 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает дату последнего обновления подключения OLE DB. Дата и время только <b>для чтения.</b></summary>
+        <summary>Возвращает дату последнего обновления подключения OLE DB. Только для чтения <b>DateTime</b>.</summary>
         <value><b>DateTime</b></value>
         <remarks><para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para> </para></remarks>
@@ -718,9 +718,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если фоновый запрос OLE DB находится в процессе выполнения для указанного подключения OLE DB. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если фоновый запрос OLE DB находится в процессе для указанного подключения OLE DB. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.CancelRefresh" /> метод для отмены фоновых запросов.</para>
+        <remarks><para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.CancelRefresh" /> для отмены фоновых запросов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -750,9 +750,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если подключение автоматически обновляется каждый раз, когда открывается книга. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если подключение автоматически обновляется каждый раз, когда книга открывается. Значение по умолчанию — <b>False</b>. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Подключения не обновляются автоматически при открываемой книге с помощью метода <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> в Visual Basic. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> метод для обновления данных после открытия книги.</para>
+        <remarks><para>Подключения не обновляются автоматически при открываемой книге с помощью метода <see cref="M:Microsoft.Office.Interop.Excel.Workbooks.Open(System.String,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object)" /> Visual Basic. Используйте метод для обновления данных после открытия <see cref="M:Microsoft.Office.Interop.Excel.OLEDBConnection.Refresh" /> книги.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -783,8 +783,8 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает количество минут между обновлениями. Для чтения и записи, <b>Integer</b>.</summary>
-        <value>64-разрядное целое число.</value>
-        <remarks><para>Установка 0 (ноль) отключает автоматическое обновление с заданной периодикой и эквивалентно установке для этого свойства <b>null.</b> Свойство <b>RefreshPeriod</b> может иметь значение от 0 до 32767.</para>
+        <value><b>Integer</b></value>
+        <remarks><para>Настройка периода до 0 (ноль) отключает автоматическое время обновления и эквивалентно настройке этого <b>свойства null</b>. Значение свойства <b>RefreshPeriod</b> может быть integer от 0 до 32767.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -814,9 +814,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если данные и ошибки должны быть извлечены на языке отображения пользовательского интерфейса Office, когда это доступно.  Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если данные и ошибки должны быть извлечены на языке отображения пользовательского интерфейса Office при наличии.  Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если этому свойству <b>задано значение False,</b>используется значение LCID в строке подключения. Если LCID не указан, используется используемый по умолчанию LCID с сервера.</para>
+        <remarks><para>Если это свойство задано <b>false,</b>вместо этого используется значение LCID в строке подключения. Если LCID не указан, используется LCID по умолчанию с сервера.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -848,8 +848,8 @@
       <Docs>
         <summary>Возвращает или задает подключение OLE DB к источнику данных. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlRobustConnect" /> .</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlRobustConnect" /></value>
-        <remarks><para>Если вы используете надежное подключение, если Microsoft Excel не удается установить подключение с помощью сведений о под подключением к книге, Excel проверит, есть ли у подключения к книге путь к внешнему файлу подключения.  В этом случае Excel откроет внешний файл подключения и попытается подключиться с помощью сведений, содержащихся во внешнем файле подключения.  Если после использования внешнего файла подключения можно установить подключение, Excel обновует объект подключения книги.  </para>
-          <para>Это обеспечивает надежное подключение в сценариях, где отдел информационных технологий поддерживает и обновляет подключения в центральном месте, позволяя книге пользователя автоматически получать эти обновления при сбойе предыдущей версии подключения (кэшируется в книге). </para>
+        <remarks><para>Если вы используете надежное подключение, Microsoft Excel не удается установить подключение с помощью сведений о подключении к книге, Excel проверит, есть ли у подключения книги путь к внешнему файлу подключения.  Если это так, Excel откроет внешний файл подключения и попытается подключиться с помощью сведений, содержащихся во внешнем файле подключения.  Если подключение может быть установлено после использования внешнего файла подключения, Excel затем обновит объект подключения книги.  </para>
+          <para>Это обеспечивает надежную связь в сценариях, когда отдел информационных технологий поддерживает и обновляет подключения в центре, что позволяет книге пользователя автоматически получать эти обновления, когда предыдущая версия подключения (кэшируется в книге) не удается. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -879,8 +879,8 @@
       <Docs>
         <param name="ODCFileName">Расположение для сохранения файла.</param>
         <param name="Description">Описание, которое будет сохранено в файле.</param>
-        <param name="Keywords">Разделенные пробелами ключевые слова, которые можно использовать для поиска этого файла.</param>
-        <summary>Сохраняет подключение OLE DB в качестве Microsoft Office подключения к данным.</summary>
+        <param name="Keywords">Ключевые слова, разделенные пробелами, которые можно использовать для поиска этого файла.</param>
+        <summary>Сохраняет подключение OLE DB в качестве файла Microsoft Office подключения к данным.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -910,9 +910,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если сведения о пароле в строке подключения OLE DB сохраняются в строке подключения. <b>False,</b> если пароль удален. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если сведения о паролях в строке подключения OLE DB сохраняются в строке подключения. <b>False,</b> если пароль удален. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Это свойство используется как в запросах ODBC, так и в OLEDB, а также в списоных и queryTables.</para>
+        <remarks><para>Это свойство используется как в запросах ODBC и OLEDB, так и в pivotTables и QueryTables.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -942,7 +942,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCredentialsMethod</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает тип учетных данных, которые должны использоваться для проверки подлинности сервера. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlCredentialsMethod" /> .</summary>
+        <summary>Возвращает или задает тип учетных данных, которые необходимо использовать для проверки подлинности сервера. Чтение и написание <see cref="T:Microsoft.Office.Interop.Excel.XlCredentialsMethod" /> .</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCredentialsMethod" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -973,7 +973,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если формат цвета заливки для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если формат цвета заполнения для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1004,7 +1004,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если формат стиля шрифта для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если формат стиля шрифта для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1035,7 +1035,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если формат номера для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> если формат номеров для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1066,8 +1066,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает идентификатор приложения единого входа, который используется для поиска учетных данных в базе данных единого входа. Для чтения и записи, <b>String</b>.</summary>
-        <value><b>Строка</b></value>
+        <summary>Возвращает или задает идентификатор одного входа приложения (SSO), который используется для выполнения поиска в базе данных SSO для учетных данных. Для чтения и записи, <b>String</b>.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1097,7 +1097,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если формат цвета текста для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>Верно,</b> если текстовый цвет для сервера OLAP извлекается с сервера при использовании указанного подключения.  Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1128,8 +1128,8 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку,</b> указывающее Microsoft Office подключения к данным или аналогичный файл, который использовался для создания подключения. Для чтения и записи.</summary>
-        <value><b>Строка</b></value>
+        <summary>Возвращает или задает <b>строку,</b> указывающее Microsoft Office или аналогичный файл, который использовался для создания подключения. Для чтения и записи.</summary>
+        <value><b>String</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1160,8 +1160,8 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает или задает <b>строку,</b> указывающее исходный файл данных для подключения OLE DB. Для чтения и записи.</summary>
-        <value><b>Строка</b></value>
-        <remarks><para>Для файлового источника данных (например, Access) свойство содержит полный путь к <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.SourceDataFile" /> файлу исходных данных. Он имеет null для серверных источников данных (например, SQL Server). Если свойство было изменено программным путем, для свойства устанавливается <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.SourceDataFile" /> <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> null.</para>
+        <value><b>String</b></value>
+        <remarks><para>Для источников данных на основе файлов (например, Access) свойство содержит полностью квалифицированный путь <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.SourceDataFile" /> к файлу исходных данных. Это null для серверных источников данных (например, SQL Server). Свойство <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.SourceDataFile" /> настроено на нуль, если <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> свойство изменено программным образом.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1191,9 +1191,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если свойство используется для указания строки, которая позволяет <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> Microsoft Excel подключаться к источнику данных. <b>False,</b> если используется строка подключения, <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> указанная свойством. Для чтения и записи, <b>Boolean</b>.</summary>
+        <summary><b>True,</b> если свойство используется для указания строки, Microsoft Excel подключиться к <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.LocalConnection" /> источнику данных. <b>False,</b> если используется строка <see cref="P:Microsoft.Office.Interop.Excel.OLEDBConnection.Connection" /> подключения, указанная свойством. Для чтения и записи, <b>Boolean</b>.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>В этом примере устанавливается строка подключения первого кэша pivotTable для ссылки на автономный файл куба.</para>
+        <remarks><para>В этом примере строка подключения первого кэша PivotTable задает ссылку на автономный куб-файл.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

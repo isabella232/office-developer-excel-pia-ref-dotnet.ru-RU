@@ -1,5 +1,5 @@
 <Type Name="ServerViewableItems" FullName="Microsoft.Office.Interop.Excel.ServerViewableItems">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="6a49378a5a672e109bb0d1469a510a5d3faf8153" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010390" /></Metadata><TypeSignature Language="C#" Value="public interface ServerViewableItems : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="cc883c260d2e188264f53f25ac65e3bf5cbc3c4a7e4656c7f151a22fe20bd43a" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518897" /></Metadata><TypeSignature Language="C#" Value="public interface ServerViewableItems : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ServerViewableItems implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ServerViewableItems" />
   <TypeSignature Language="VB.NET" Value="Public Interface ServerViewableItems&#xA;Implements IEnumerable" />
@@ -26,9 +26,9 @@
   </Attributes>
   <Docs>
     <summary>Коллекция объектов, помеченных как просматриваемые на сервере.</summary>
-    <remarks><para>Это коллекция ссылок на объекты в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . На сервере будут показаны только объекты из этой коллекции.  По умолчанию отображается вся книга (включая все таблицы).  </para>
-      <para>Для каждого <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> объекта может существовать только <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> один объект.  Эта коллекция не индексироваться по имени, так как нет гарантии, что имена объектов, помеченных как просматриваемые на сервере, уникальны.</para>
-      <para>В пользовательском интерфейсе Excel можно просмотреть коллекцию объектов, помеченных как просматриваемые на сервере, в диалоговом окне службы Excel параметров.</para>
+    <remarks><para>Это коллекция ссылок на объекты в <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Только объекты в этой коллекции будут показаны на сервере.  По умолчанию отображается вся книга (включая все таблицы).  </para>
+      <para>В одном <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> объекте может существовать <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> только один объект.  Эта коллекция не индексируемый по имени, так как нет гарантии, что имена объектов, которые помечены как просматриваемые на сервере, являются уникальными.</para>
+      <para>В интерфейсе Excel можно просмотреть коллекцию объектов, которые помечены как просматриваемые на сервере в диалоговом окне службы Excel Параметры.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -90,10 +90,10 @@
         <Parameter Name="Obj" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Obj">Необходимый <b>объект может</b> быть ссылкой на листы или именуемые элементы <paramref name="Obj" /> (например, именуются <see cref="T:Microsoft.Office.Interop.Excel.Range" /> s, диаграммы, таблицы и <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> s). В одной коллекции нельзя одновременно иметь как листы, так и именуемые элементы.</param>
+        <param name="Obj">Необходимый <b>объект</b> может быть ссылкой на листы или элементы с именем (например, с именем <paramref name="Obj" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> s, диаграммы, таблицы и <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> s). В одной коллекции нельзя иметь как листы, так и именуемые элементы.</param>
         <summary>Добавляет ссылку на <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> коллекцию.</summary>
         <returns><b>Object</b></returns>
-        <remarks><para>При попытке добавить в коллекцию сочетание обоих листов и именуемого элементов <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> возвращается ошибка.  Коллекция может содержать ссылки только на листы или ссылки только на именуемые элементы, но не оба в <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> одном вызове.  </para>
+        <remarks><para>Если вы пытаетесь добавить в коллекцию сочетание обоих листов и именных <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> элементов, возвращается ошибка.  Коллекция может содержать ссылки только на листы или ссылки только на названные элементы, но не в одном <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> вызове.  </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -122,7 +122,7 @@
       <Docs>
         <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel._Application" /> объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
-        <remarks><para>Если используется без квалификатора объекта, это свойство возвращает Microsoft Office Excel. При применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта.</para>
+        <remarks><para>При применении без квалификатора объекта это свойство возвращает Microsoft Office Excel приложения. При его применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -150,7 +150,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает количество объектов в коллекции. Только для чтения.</summary>
-        <value>64-разрядное целое число.</value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -177,9 +177,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает 32-битный <b>integer,</b> который указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -206,9 +206,9 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательное <b>integer</b> Индекс объекта, который требуется удалить.</param>
-        <summary>Удаляет ссылку на объект в <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> коллекции в <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объекте .</summary>
-        <remarks><para>Если вы не хотите, чтобы определенный объект был виден в службы Excel, используйте этот метод для удаления этого объекта.</para>
+        <param name="Index">Необходимый <b>integer</b> Индекс объекта, который необходимо удалить.</param>
+        <summary>Удаляет ссылку на объект в <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> коллекции <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> в .</summary>
+        <remarks><para>Если вы не хотите, чтобы тот или иной объект был службы Excel, используйте этот метод для удаления этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -233,10 +233,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет ссылки на все объекты в <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> коллекции в <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> объекте .</summary>
-        <remarks><para>Если вы не хотите, чтобы какие-либо объекты в коллекции были просмотрены на сервере, используйте этот метод, чтобы удалить <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> их все одновременно.</para>
+        <summary>Удаляет ссылки на все объекты <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> в коллекции <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> в .</summary>
+        <remarks><para>Если вы не хотите, чтобы какие-либо объекты в коллекции просматривались на сервере, используйте этот метод, чтобы удалить их <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> все сразу.</para>
           <para>
-            <b>Примечание.</b>Если коллекция не содержит по крайней мере один объект, при просмотре элемента в службы Excel отобразилось <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> сообщение "Unable to Display Specified Named Range or <b></b> <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> Item".</para>
+            <b>Примечание.</b>Если коллекция не содержит хотя бы одного объекта, при просмотре в службы Excel будет отображаться сообщение "Невозможно отображать указанный диапазон имен или <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> <b></b> <see cref="T:Microsoft.Office.Interop.Excel._Workbook" /> элемент".</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -295,7 +295,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Обязательное <b>integer</b> Индекс <b>возвращаемого</b> объекта.</param>
+        <param name="Index">Требуется <b>integer</b> Индекс <b>объекта,</b> который должен быть возвращен.</param>
         <summary>Возвращает один <b>объект</b> из <see cref="T:Microsoft.Office.Interop.Excel.ServerViewableItems" /> коллекции.</summary>
         <returns><b>Object</b></returns>
         <remarks>To be added.</remarks>

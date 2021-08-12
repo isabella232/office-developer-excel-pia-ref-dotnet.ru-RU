@@ -1,5 +1,5 @@
 <Type Name="PivotCell" FullName="Microsoft.Office.Interop.Excel.PivotCell">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d2f870880113d0a92987ae33be86341048714031" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010936" /></Metadata><TypeSignature Language="C#" Value="public interface PivotCell" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="fbbdae64cf7a054bab0c86aad763673fe235fd17db6bf4e764080c5fc2243be9" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518743" /></Metadata><TypeSignature Language="C#" Value="public interface PivotCell" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotCell" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotCell" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotCell" />
@@ -21,10 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет ячейку в отчете pivotTable.</summary>
-    <remarks><para>Используйте свойство коллекции для возврата объекта <see cref="P:Microsoft.Office.Interop.Excel.Range.PivotCell" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> <b>PivotCell.</b></para>
-      <para>После возврата <b>объекта PivotCell</b> можно использовать свойство, чтобы определить тип ячейки <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.PivotCellType" /> определенного диапазона.</para>
-      <para>С помощью свойства или свойства можно определить коллекцию, соответствующую элементов на оси столбца или строки, которая представляет <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> выбранное число.</para>
+    <summary>Представляет ячейку в отчете PivotTable.</summary>
+    <remarks><para>Используйте <see cref="P:Microsoft.Office.Interop.Excel.Range.PivotCell" /> свойство коллекции <see cref="T:Microsoft.Office.Interop.Excel.Range" /> для возврата объекта <b>PivotCell.</b></para>
+      <para>После возвращения <b>объекта PivotCell</b> можно использовать свойство для определения типа ячейки <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.PivotCellType" /> определенного диапазона.</para>
+      <para>Вы можете использовать свойство или свойство для определения коллекции, соответствующей пунктам на оси столбца или строки, представляюющей <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.ColumnItems" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.RowItems" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotItems" /> выбранный номер.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -49,9 +49,9 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Выполняет операцию записи для указанной ячейки в отчете pivotTable на основе источника данных OLAP.</summary>
-        <remarks><para>Этот метод выполняет заявление UPDATE CUBE, чтобы добавить только изменения в этой ячейке, но также включает все предыдущие примененные изменения. После выполнения заявления UPDATE CUBE выполняется обновление с помощью pivotTable, а затем выполняется операция ROLLBACK TRANSACTION.</para>
-          <para>При запуске метода для ячейки в отчете pivotTable, основанном на источнике данных, не относяжимом к OLAP, создается ошибка <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.AllocateChange" /> времени работы.</para>
+        <summary>Выполняет операцию списания на указанной ячейке в отчете PivotTable на основе источника данных OLAP.</summary>
+        <remarks><para>Этот метод выполняет заявление UPDATE CUBE, чтобы добавить только изменение в этой конкретной ячейке, но также включает в себя все предыдущие примененные изменения. После выполнения заявления UPDATE CUBE выполняется обновление PivotTable, а затем выполняется утверждение ТРАНЗАКЦИИ ОТКАТА.</para>
+          <para>Запуск метода <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.AllocateChange" /> ячейки в отчете PivotTable на основе источника данных, не относящаого к OLAP, создает ошибку во время работы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -78,7 +78,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -106,71 +106,71 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCellChangedState</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает, была ли изменена или пересчитана ячейка значения pivotTable с момента создания отчета pivotTable или последней операции фиксации.</summary>
+        <summary>Получает, была ли изменена или пересчитана ячейка значения PivotTable с момента создания отчета PivotTable или последней операции фиксации.</summary>
         <value>Объект <see cref="T:Microsoft.Office.Interop.Excel.XlCellChangedState" />.</value>
-        <remarks><para>Значение свойства по <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> умолчанию.</para>
-          <para>Для отчетов pivotTable с источниками данных, не относяжимыми к OLAP, значением этого свойства может быть только один <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> или <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> . Она для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> ячеек, которые не были изменены, и для ячеек, <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> которые были изменены. При удалении изменений устанавливается значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> .</para>
-          <para>Применение и сохранение изменений относится только к отчетам pivotTable с источниками данных OLAP. Ниже описаны возможные состояния свойства, применимые только к с помощью список с <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> источниками данных OLAP.</para>
+        <remarks><para>Значение свойства <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> по <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> умолчанию.</para>
+          <para>Для отчетов pivotTable с источниками данных, не относящаемыми к OLAP, значение этого свойства может быть только или <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> . Это для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> ячеек, которые не были изменены, и для ячеек, <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> которые были изменены. Удаление изменений задает его значение <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> .</para>
+          <para>Применение и сохранение изменений применяется только к отчетам PivotTable с источниками данных OLAP. Ниже описаны возможные состояния свойства, применимые только к <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> PivotTables с источниками данных OLAP.</para>
           <list type="bullet">
             <item>
               <description>
-                <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> - ячейка не была изменена или пересчитана (если ячейка содержит формулу) с момента создания списочнойt или с момента последней операции сохранения или отклонения изменений.</description>
+                <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> - ячейка не была изменена и не пересчитана (если ячейка содержит формулу) с момента создания PivotTable или с момента последней операции сохранения или сброса изменений.</description>
             </item>
             <item>
               <description>
-                <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> - ячейка была изменена или пересчитана с момента создания pivotTable или с момента последнего применения изменений или операции сохранения изменений, но это изменение еще не было применено (для нее не была выполнена операция UPDATE CUBE).</description>
+                <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> - ячейка была отредактирована или пересчитана с момента создания PivotTable или с момента выполнения последнего применения изменений или операции сохранения изменений, но это изменение еще не применено (заявление UPDATE CUBE для нее не выполняется).</description>
             </item>
             <item>
               <description>
-                <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" />- ячейка была изменена или пересчитана с момента создания pivotTable или с момента последнего применения изменений, сохранения изменений или сброса изменений, и это изменение было применено (для нее была выполнена операция UPDATE CUBE).</description>
+                <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" />- ячейка была изменена или пересчитана с момента создания PivotTable или после выполнения последнего применения изменений, сохранения изменений или сброса изменений, и это изменение было применено (для нее было выполнено заявление UPDATE CUBE).</description>
             </item>
           </list>
-          <para>В следующей таблице описано, как различные действия пользователя влияют на настройку свойства в совмещаемой таблице с <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> источником данных OLAP.</para>
+          <para>В следующей таблице описывается, как различные действия пользователя влияют на параметр свойства в <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.CellChanged" /> pivotTable с источником данных OLAP.</para>
           <list type="table">
             <item>
-              <term>Внося значение или формулу в ячейку или несколько ячеек.</term>
+              <term>Типы значения или формулы в ячейку или несколько ячеек.</term>
               <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> этих ячеек.</description>
               <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> этих ячеек.</description>
             </item>
             <item>
-              <term>Пересчитывает ячейку или несколько ячеек с помощью формулы ( вручную (F9) или автоматически с помощью Excel.</term>
-              <description>Недоступно</description>
+              <term>Пересчет ячейки или нескольких ячеек с помощью формулы вручную (F9) или автоматически Excel.</term>
+              <description>Н/Д</description>
               <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> этих ячеек.</description>
             </item>
             <item>
-              <term>Сохраняет (сохраняет) изменения.</term>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех измененных ячеек без формулы.</description>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> всех измененных ячеек формулу.</description>
+              <term>Сохраняет (совершает) изменения.</term>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех отредактированы ячейки без формулы.</description>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> всех отредактированы ячейки с помощью формулы.</description>
             </item>
             <item>
               <term>Удаляет все изменения.</term>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех измененных ячеек без формулы.</description>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех измененных ячеек формулу.</description>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех отредактированы ячейки без формулы.</description>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех отредактированы ячейки с помощью формулы.</description>
             </item>
             <item>
               <term>Отбрасывается изменение в одной ячейке.</term>
-              <description>Только для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> этой ячейки.</description>
-              <description>Только для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> этой ячейки.</description>
+              <description>Установите только <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для этой ячейки.</description>
+              <description>Установите только <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для этой ячейки.</description>
             </item>
             <item>
-              <term>Очищает несколько ячеек за одну операцию.</term>
+              <term>Очищает несколько ячеек в одной операции.</term>
               <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех этих ячеек.</description>
               <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> всех этих ячеек.</description>
             </item>
             <item>
               <term>Очищает ячейку.</term>
-              <description>Только для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> этой ячейки.</description>
-              <description>Только для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> этой ячейки.</description>
+              <description>Установите только <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для этой ячейки.</description>
+              <description>Установите только <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellNotChanged" /> для этой ячейки.</description>
             </item>
             <item>
-              <term>Выполняет операцию отмены, которая возвращает значение к ранее измененным значениям, прежде чем это значение было применено.</term>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> всех измененных ячеек без формулы.</description>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> всех измененных ячеек формулу.</description>
+              <term>Выполняет операцию отмены, которая изменяет значение обратно на ранее отредактируемую, прежде чем это значение было применено.</term>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> всех отредактированы ячейки без формулы.</description>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChanged" /> всех отредактированы ячейки с помощью формулы.</description>
             </item>
             <item>
-              <term>Выполняет операцию отмены, которая возвращает значение ранее измененного значения после того, как это значение было применено.</term>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> всех измененных ячеек без формулы.</description>
-              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> всех измененных ячеек формулу.</description>
+              <term>Выполняет операцию отмены, которая возвращает значение к ранее отредактируемой, после того как это значение было применено.</term>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> всех отредактированы ячейки без формулы.</description>
+              <description>Установите для <see cref="F:Microsoft.Office.Interop.Excel.XlCellChangedState.xlCellChangeApplied" /> всех отредактированы ячейки с помощью формулы.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -199,7 +199,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotItemList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, соответствующую элементами на оси столбцов, <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> которые представляют выбранный диапазон.</summary>
+        <summary>Возвращает коллекцию, соответствующую пунктам оси столбцов, <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> которые представляют выбранный диапазон.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -229,8 +229,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -257,10 +257,10 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlConsolidationFunction</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает настраиваемую настройку поля функции subtotal <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объекта.</summary>
+        <summary>Возвращает настраиваемый параметр поля функции подстановки <see cref="T:Microsoft.Office.Interop.Excel.PivotCell" /> объекта.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" />может быть одной из следующих <b>констант XlConsolidationFunction:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlConsolidationFunction" />может быть одним из следующих <b>констант XlConsolidationFunction:</b></para>
           <para>
             <b>xlAverage</b>
           </para>
@@ -297,7 +297,7 @@
           <para>
             <b>xlVarP</b>
           </para>
-          <para>Свойство <b>CustomSubtotalFunction</b> возвращает ошибку, если тип объекта <b>PivotCell</b> не является настраиваемой подстановки. Это свойство применяется только к исходным данным, не относящаться к OLAP.</para>
+          <para>Свойство <b>CustomSubtotalFunction</b> возвращает ошибку, если тип объекта <b>PivotCell</b> не является настраиваемой subtotal. Это свойство применяется только к исходным данным, не относящеся к OLAP.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -324,7 +324,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, соответствующий выбранному полю данных.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, соответствующий выбранному поле данных.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство возвращает ошибку, если объект <b>PivotCell</b> не является одним из разрешенных типов: <b>XlPivotCellTypeValue,</b> <b>XlPivotCellTypeDataField,</b> <b>XlPivotCellTypeSubtotal</b>или <b>XlPivotCellTypeGrandTotal</b>.</para>
           <para> </para></remarks>
@@ -353,11 +353,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает последнее значение, извлеченное из источника данных для измененных ячеек в отчете pivotTable.</summary>
-        <value>Последнее значение, извлеченное из источника данных для измененных ячеек в отчете pivotTable.</value>
+        <summary>Получает последнее значение, извлеченное из источника данных для измененных ячеек в отчете PivotTable.</summary>
+        <value>Последнее значение, извлеченное из источника данных для измененных ячеек в отчете PivotTable.</value>
         <remarks><para>Только для чтения.</para>
-          <para>При редактировании ячейки в области значений отчета pivotTable свойство будет удерживать значение, которое было в последний раз извлечено из источника данных перед <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> изменением. Для ячеек значения отчета pivotTable, которые не были изменены или для которых значение источника данных не было явно извлечено, это свойство возвращает нулевую ссылку (Nothing in Visual Basic). Для отчетов pivotTable с источниками данных OLAP значение свойства извлекается из отдельного подключения, чтобы убедиться, что оно не содержит значения каких-либо операций записи, которые пользователь мог <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> сделать.</para>
-          <para>Чтение свойства ячеек, которые находятся за пределами области значений отчета pivotTable, приводит к ошибке <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> во время работы.</para>
+          <para>При редактировании ячейки в области значений отчета PivotTable свойство будет удерживать значение, которое было в последний раз извлечено из источника данных до <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> редактирования. Для ячеек значения pivotTable отчетов, которые не были изменены или для которых явно не было извлечено значение источника данных, это свойство возвращает ссылку null (Ничего в Visual Basic). Для отчетов pivotTable с источниками данных OLAP значение свойства извлекается из отдельного подключения, чтобы убедиться, что оно не содержит значения любых операций списания, которые мог сделать <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> пользователь.</para>
+          <para>Чтение свойства для ячеек, которые находятся за пределами области значений отчета <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.DataSourceValue" /> PivotTable, создает ошибку во время работы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -382,8 +382,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Удаляет изменения указанной ячейки в отчете pivotTable.</summary>
-        <remarks><para>Для ячейки в pivotTable на основе источника данных OLAP метод удаляет значение или формулу, введенную в указанной ячейке, а затем запускает обновление pivotTable для получения последнего значения из источника <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.DiscardChange" /> данных. Этот метод для указанной ячейки будет иметь значение null reference (Nothing in Visual Basic) для источника данных. Этот метод также удаляет все изменения, внесенные в эту ячейку, из списка изменений Excel, чтобы он больше не включался в отчет UPDATE CUBE для источника данных. Этот метод также воссоздает состояние сеанса для всех остальных изменений, внесенных в транзакцию. Это включает выполнение заявления ROLLBACK TRANSACTION, а затем выполнение операции UPDATE CUBE со всеми изменениями, кроме указанной ячейки. Для ячейки в pivotTable на основе источника данных, не основанного на OLAP, этот метод просто очищает измененную ячейку.</para>
+        <summary>Удаляет изменения указанной ячейки в отчете PivotTable.</summary>
+        <remarks><para>Для ячейки в pivotTable на основе источника данных OLAP метод удаляет значение или формулу, вступив в указанную ячейку, а затем запускает обновление PivotTable для получения последнего значения из источника <see cref="M:Microsoft.Office.Interop.Excel.PivotCell.DiscardChange" /> данных. Этим методом для указанной ячейки будет установлено значение null reference (Nothing in Visual Basic) этого метода. Метод также удаляет все изменения, внесенные в эту ячейку из списка изменений Excel, чтобы она больше не была включена в заявление UPDATE CUBE для источника данных. Этот метод также воссоздает состояние сеанса для всех других изменений, внесенных в транзакцию. Это включает выполнение утверждения ТРАНЗАКЦИИ ОТКАТА, а затем выполнение заявления UPDATE CUBE со всеми изменениями, за исключением указанной ячейки. Для ячейки в pivotTable, основанной на источнике данных без OLAP, этот метод просто очищает отредактированную ячейку.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -441,10 +441,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает набор, который предоставляет полные координаты MDX указанной ячейки значения в pivotTable с источником данных OLAP.</summary>
-        <value>Набор, который предоставляет полные координаты MDX указанной ячейки значения в pivotTable с источником данных OLAP.</value>
+        <summary>Получает пучок, который предоставляет полные координаты MDX указанной ячейки значения в PivotTable с источником данных OLAP.</summary>
+        <value>Пучок, который предоставляет полные координаты MDX указанной ячейки значения в PivotTable с источником данных OLAP.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Измерения, возвращенные свойством в качестве размера, включают координаты строк и столбцов, а также <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.MDX" /> координаты фильтра отчетов. Для ячеек за пределами области значений в списной и за пределами севоводки доступ к этому свойству приводит к ошибке во время работы. При доступе к этому свойству с помощью нескольких элементов в поле фильтра отчетов также будет создаваться ошибка во время работы.</para>
+          <para>Измерения, возвращенные в пучке свойством, включают координаты строк и столбцов, а также <see cref="P:Microsoft.Office.Interop.Excel.PivotCell.MDX" /> координаты фильтра отчетов. Для ячеек за пределами области значений PivotTable и за пределами pivotTable доступ к этому свойству создает ошибку во время работы. Для pivotTables с выбором нескольких элементов в поле фильтра отчетов доступ к этому свойству также создает ошибку во время работы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -499,30 +499,30 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotCellType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу, идентифицируемую объектом pivotTable, к котором соответствует ячейка.</summary>
+        <summary>Возвращает константу, определяемую объектом PivotTable, к котором соответствует ячейка.</summary>
         <value>To be added.</value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlPivotCellType" />может быть одной из следующих <b>констант XlPivotCellType:</b></para>
           <para>
-            <b>xlPivotCellBlankCell</b> Структурная пустая ячейка в pivotTable.</para>
+            <b>xlPivotCellBlankCell</b> Структурная пустая ячейка в PivotTable.</para>
           <para>
-            <b>xlPivotCellCustomSubtotal</b> Ячейка в области строки или столбца, которая является настраиваемой подстановки.</para>
+            <b>xlPivotCellCustomSubtotal</b> Ячейка в области строки или столбца, которая является настраиваемой подтособной.</para>
           <para>
-            <b>xlPivotCellDataField</b> Метка поля данных (а не <b>кнопка</b> "Данные").</para>
+            <b>xlPivotCellDataField</b> Метка поля данных (а не <b>кнопка Data).</b></para>
           <para>
-            <b>xlPivotCellDataPivotField</b> Кнопка <b>"Данные".</b></para>
+            <b>xlPivotCellDataPivotField</b> Кнопка <b>Data.</b></para>
           <para>
-            <b>xlPivotCellGrandTotal</b> Ячейка в области строки или столбца, которая является итоговой суммой.</para>
+            <b>xlPivotCellGrandTotal</b> Ячейка в строке или области столбца с общей суммой.</para>
           <para>
-            <b>xlPivotCellPageFieldItem</b> Ячейка, в которую указывается выбранный элемент поля страницы.</para>
+            <b>xlPivotCellPageFieldItem</b> Ячейка, отображаемая выбранный элемент поля Страницы.</para>
           <para>
-            <b>xlPivotCellPivotField</b> Кнопка для поля (а не <b>"Данные").</b></para>
+            <b>xlPivotCellPivotField</b> Кнопка для поля (не <b>кнопка Data).</b></para>
           <para>
-            <b>xlPivotCellPivotItem</b> Ячейка в области строки или столбца, которая не является итоговой, общей суммой, настраиваемой подстановки или пустой строкой.</para>
+            <b>xlPivotCellPivotItem</b> Ячейка в области строки или столбца, которая не является подтолковой, общей, настраиваемой подтолковой или пустой строкой.</para>
           <para>
-            <b>xlPivotCellSubtotal</b> Ячейка в области строки или столбца, которая является подстановки.</para>
+            <b>xlPivotCellSubtotal</b> Ячейка в области строки или столбца, которая является subtotal.</para>
           <para>
-            <b>xlPivotCellValue</b> Любая ячейка в области данных (кроме пустой строки).</para>
+            <b>xlPivotCellValue</b> Любая ячейка в области данных (за исключением пустой строки).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -549,11 +549,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotLine</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> столбец для определенного объекта <b>PivotCell.</b> Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> столбец для определенного <b>объекта PivotCell.</b> Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /></value>
-        <remarks><para>Если <b>pivotCell</b> находится в строках, свойство <b>PivotColumnLine</b> возвращает ошибку времени запуска.</para>
-          <para>Если <b>pivotCell</b> находится в столбцах, свойство <b>PivotColumnLine</b> возвращает объект <b>PivotLine столбца.</b></para>
-          <para>Если <b>pivotCell</b> находится в области данных, свойство <b>PivotColumnLine</b> возвращает соответствующий объект <b>PivotLine столбца.</b></para>
+        <remarks><para>Если <b>pivotCell</b> находится в строках, свойство <b>PivotColumnLine</b> возвращает ошибку во время запуска.</para>
+          <para>Если <b>pivotCell</b> находится в столбцах, свойство <b>PivotColumnLine</b> возвращает объект <b>PivotLine</b> столбца.</para>
+          <para>Если <b>PivotCell</b> находится в области данных, свойство <b>PivotColumnLine</b> возвращает соответствующий объект <b>PivotLine</b> столбца.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -580,7 +580,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotField</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, представляющей поле pivotTable, содержащее левый верхний угол <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> указанного диапазона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotField" /> объект, представляющее поле PivotTable, содержащее верхний левый угол указанного диапазона.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -608,7 +608,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotItem</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект, представляющей элемент pivotTable, содержащий левый верхний угол указанного диапазона.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotItem" /> объект, представляющего элемент PivotTable, содержащий верхний левый угол указанного диапазона.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -636,11 +636,11 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotLine</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> строку для определенного объекта <b>PivotCell.</b> PivotLine только <b>для чтения.</b></summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /> строку для определенного <b>объекта PivotCell.</b> Только для чтения <b>PivotLine</b>.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotLine" /></value>
-        <remarks><para>Если <b>pivotCell</b> находится в строках, <b>PivotRowLine</b> возвращает объект <b>PivotLine строки.</b></para>
-          <para>Если <b>pivotCell</b> находится в столбцах, <b>PivotRowLine</b>  возвращает ошибку времени запуска.</para>
-          <para>Если <b>PivotCell</b> находится в области данных, <b>PivotRowLine</b> возвращает объект <b>PivotLine соответствующей строки.</b></para>
+        <remarks><para>Если <b>PivotCell</b> находится на строках, <b>PivotRowLine</b> возвращает объект <b>PivotLine</b> строки.</para>
+          <para>Если <b>PivotCell</b> находится в столбцах, <b>PivotRowLine</b>  возвращает ошибку во время запуска.</para>
+          <para>Если <b>PivotCell</b> находится в области данных, <b>PivotRowLine</b> возвращает объект <b>PivotLine соответствующей</b> строки.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -667,7 +667,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotTable</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет отчет pivotTable, содержащий левый верхний угол указанного диапазона, или отчет pivotTable, связанный с отчетом сводная диаграмма <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> отчета.</summary>
+        <summary>Возвращает объект, представляющего отчет PivotTable, содержащий верхний левый угол указанного диапазона, или отчет PivotTable, связанный с отчетом <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> сводная диаграмма.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -695,7 +695,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Range</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет диапазон, к который <see cref="T:Microsoft.Office.Interop.Excel.Range" /> применяется указанный объект PivotCell.</summary>
+        <summary>Возвращает объект, который представляет диапазон, к который применяется <see cref="T:Microsoft.Office.Interop.Excel.Range" /> PivotCell.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -723,7 +723,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.PivotItemList</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, соответствующую элементам на оси категорий, которые <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> представляют выбранную ячейку.</summary>
+        <summary>Возвращает коллекцию, соответствующую элементам на оси <see cref="T:Microsoft.Office.Interop.Excel.PivotItemList" /> категории, которые представляют выбранную ячейку.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -751,9 +751,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Actions</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Представляет коллекцию действий, состоящих из определенных OLAP-действий, которые можно выполнять. Эти действия являются специфическими для список, существующих на уровне таблицы. Только для чтения</summary>
+        <summary>Представляет коллекцию действий, состоящую из действий, определенных OLAP, которые можно выполнять. Действия специфическ для pivotTables, существующих на уровне таблицы. Только для чтения</summary>
         <value>To be added.</value>
-        <remarks><para>Действие сервера — это необязательная функция, которую администратор куба OLAP может определить на сервере, который использует элемент куба или измеряет его в качестве параметра в запросе для получения сведений в кубе.</para>
+        <remarks><para>Действие сервера — это необязательная функция, которую администратор куба OLAP может определить на сервере, использующем элемент куба или измеряющий его в качестве параметра в запросе для получения сведений в кубе.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

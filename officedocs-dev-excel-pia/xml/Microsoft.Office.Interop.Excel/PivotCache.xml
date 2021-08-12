@@ -1,5 +1,5 @@
 <Type Name="PivotCache" FullName="Microsoft.Office.Interop.Excel.PivotCache">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="7195435ce0a1b6444d578842bbbfb476577c6bb3" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010950" /></Metadata><TypeSignature Language="C#" Value="public interface PivotCache" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="246a36e943673e1aee4228f3ca60dbee79d2d5c4ec399664e0f1719713981799" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518372" /></Metadata><TypeSignature Language="C#" Value="public interface PivotCache" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotCache" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotCache" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotCache" />
@@ -21,10 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет кэш памяти для отчета pivotTable.</summary>
+    <summary>Представляет кэш памяти для отчета PivotTable.</summary>
     <remarks><para>Объект <b>PivotCache</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> коллекции.</para>
-      <para>Используйте этот метод для возврата объекта <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotCache" /> <b>PivotCache</b> для отчета pivotTable (каждый отчет имеет только один кэш).</para>
-      <para>Используйте <b>pivotCaches</b>( ), где находится номер кэша pivotTable, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>PivotCache</b> из коллекции <b>PivotCaches</b> для книги.</para>
+      <para>Используйте метод для возврата объекта <see cref="M:Microsoft.Office.Interop.Excel.PivotTable.PivotCache" /> <b>PivotCache</b> для отчета PivotTable (каждый отчет имеет только один кэш).</para>
+      <para>Используйте <b>PivotCaches</b>(), где находится номер кэша PivotTable, чтобы вернуть один объект <paramref name="index" /> <paramref name="index" /> <b>PivotCache</b> из коллекции <b>PivotCaches</b> для книги.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -51,11 +51,11 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект подключения ADO, если кэш pivotTable подключен к источнику данных OLE DB.</summary>
+        <summary>Возвращает объект подключения ADO, если кэш PivotTable подключен к источнику данных OLE DB.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>ADOConnection</b> предоставляет подключение Microsoft Excel к поставщику данных, позволяя пользователю писать код в контексте того же сеанса, который Excel использует с ADO (реляционный источник) или ADOMD (источник OLAP).</para>
-          <para>Свойство <b>ADOConnection</b> доступно только для сеансов, где источником данных является источник данных OLE DB. При отсутствие сеанса ADO запрос приведет к ошибке во время выполнения.</para>
-          <para>Свойство <b>ADOConnection</b> можно использовать для любого кэша на основе OLEDB с ADO. Объект подключения ADO можно использовать с ADOMD для поиска сведений о кубах OLAP, на которых основан кэш.</para>
+        <remarks><para>Свойство <b>ADOConnection</b> предоставляет Microsoft Excel к поставщику данных, позволяя пользователю писать код в контексте того же сеанса, который Excel с ADO (реляционный источник) или ADOMD (olap source).</para>
+          <para>Свойство <b>ADOConnection</b> доступно только для сеансов, где источником данных является источник данных OLE DB. Если сеанс ADO не будет, запрос приведет к ошибке во время выполнения.</para>
+          <para>Свойство <b>ADOConnection</b> можно использовать для любого кэша на основе OLEDB с помощью ADO. Объект подключения ADO можно использовать с помощью ADOMD для поиска сведений о кубах OLAP, на которых основан кэш.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -82,7 +82,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -113,9 +113,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если запросы отчета или таблицы запросов с помощью pivotTable выполняются асинхронно (в фоновом режиме).</summary>
+        <summary><b>True,</b> если запросы для отчета pivotTable или таблицы запросов выполняются асинхронно (в фоновом режиме).</summary>
         <value>To be added.</value>
-        <remarks><para>Для источников данных OLAP это свойство является "только чтение" и всегда возвращает <b>false.</b></para>
+        <remarks><para>Для источников данных OLAP это свойство является только для чтения и всегда возвращает <b>False.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -147,7 +147,7 @@
       <Docs>
         <summary>Возвращает или задает строку команды для указанного источника данных.</summary>
         <value>To be added.</value>
-        <remarks><para>Для источников OLE DB свойство описывает тип значения свойства <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.CommandType" /> <b>CommandText.</b></para>
+        <remarks><para>Для источников OLE DB свойство описывает тип значения <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.CommandType" /> <b>свойства CommandText.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -177,20 +177,20 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCmdType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает константы, описывающие тип значения <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.CommandText" /> свойства. Значение по умолчанию <b>— xlCmdSQL.</b></summary>
+        <summary>Возвращает или задает констант, описывающий тип значения <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.CommandText" /> свойства. По умолчанию значение <b>xlCmdSQL</b>.</summary>
         <value>To be added.</value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlCmdType" />может быть одной из следующих <b>констант XlCmdType:</b></para>
           <para>
             <b>xlCmdCube</b>. Содержит имя куба для источника данных OLAP.</para>
           <para>
-            <b>xlCmdDefault</b>. Содержит текст команды, который понимает поставщик OLE DB.</para>
+            <b>xlCmdDefault</b>. Содержит командный текст, понятный поставщику OLE DB.</para>
           <para>
             <b>xlCmdSql</b>. Содержит SQL.</para>
           <para>
             <b>xlCmdTable</b>. Содержит имя таблицы для доступа к источникам данных OLE DB.</para>
-          <para>Свойство <b>CommandType</b> можно установить только в том случае, если значение свойства для таблицы запросов или кэша <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.QueryType" /> pivotTable — <b>xlOLEDBQuery.</b></para>
-          <para>Если свойство <b>CommandType</b> имеет значение <b>xlCmdCube,</b>это значение нельзя изменить, если с таблицей запросов связан отчет pivotTable.</para>
+          <para>Свойство <b>CommandType</b> можно установить только в том случае, если значение свойства для таблицы запросов или кэша <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.QueryType" /> PivotTable <b>xlOLEDBQuery.</b></para>
+          <para>Если свойство <b>CommandType</b> имеет <b>значение xlCmdCube,</b>изменить это значение невозможно, если существует отчет PivotTable, связанный со таблицей запросов.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -220,13 +220,13 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает сведения о под соединении для кэша pivotTable.</summary>
+        <summary>Возвращает или задает сведения о подключении для кэша PivotTable.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>Connection</b> может иметь одно из следующих свойств: параметры OLE DB, позволяющие Microsoft Excel подключаться к источнику данных OLE DB, параметры ODBC, позволяющие Microsoft Excel подключаться к источнику данных ODBC, URL-адрес, позволяющий Microsoft Excel подключаться к веб-источнику данных, путь к текстовом файлу и имя файла, а также путь к файлу и имя файла, который указывает базу данных или веб-запрос.</para>
-          <para>Установка свойства <b>Connection</b> не сразу инициирует подключение к источнику данных. Этот метод необходимо использовать для подключения и <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> извлечения данных.</para>
-          <para>При использовании автономного файла куба установите для свойства true и используйте свойство вместо <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.LocalConnection" /> свойства <b>Connection.</b></para>
-          <para>Дополнительные сведения о синтаксис строки подключения см. в методе коллекции <see cref="M:Microsoft.Office.Interop.Excel.PivotCaches.Add(Microsoft.Office.Interop.Excel.XlPivotTableSourceType,System.Object)" /> <b>PivotCaches.</b></para>
-          <para>Кроме того, вы можете получить доступ к источнику данных напрямую с помощью библиотеки microsoft ActiveX Data Objects (ADO).</para>
+        <remarks><para>Свойство <b></b> Connection может быть одним из следующих: параметры OLE DB, позволяющие Microsoft Excel подключиться к источнику данных OLE DB, параметры ODBC, позволяющие Microsoft Excel подключаться к источнику данных ODBC, URL-адресу, который позволяет Microsoft Excel подключиться к источнику веб-данных, пути к текстовому файлу и имени файла, а также к имени файла, указыва которого указана база данных или веб-запрос.</para>
+          <para>Настройка свойства <b>Подключение</b> не сразу инициирует подключение к источнику данных. Для подключения и получения данных необходимо использовать <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> метод.</para>
+          <para>При использовании автономного кубового файла установите свойство True и используйте <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> свойство вместо свойства <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.LocalConnection" /> <b>Connection.</b></para>
+          <para>Дополнительные сведения о синтаксисе строки подключения см. в <see cref="M:Microsoft.Office.Interop.Excel.PivotCaches.Add(Microsoft.Office.Interop.Excel.XlPivotTableSourceType,System.Object)" /> методе <b>коллекции PivotCaches.</b></para>
+          <para>Кроме того, вы можете получить доступ к источнику данных непосредственно с помощью библиотеки ActiveX объектов данных (ADO).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -257,33 +257,33 @@
         <Parameter Name="Height" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ChartDestination">Таблица "Назначение"</param>
+        <param name="ChartDestination">Таблица Destination</param>
         <param name="XlChartType">Тип диаграммы</param>
-        <param name="Left">Расстояние в пунктах от левого края объекта до левого края столбца A (на графике) или левого края области диаграммы (на диаграмме).</param>
-        <param name="Top">Расстояние в пунктах от верхнего края самой верхней фигуры в диапазоне фигур до верхнего края таблицы.</param>
-        <param name="Width">Ширина объекта (в пунктах).</param>
-        <param name="Height">Ширина объекта (в пунктах).</param>
-        <summary>Создает автономный сводная диаграмма из объекта <b>PivotCache.</b> Возвращается <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект.</summary>
+        <param name="Left">Расстояние в точках от левого края объекта до левого края столбца A (на таблице) или левого края области диаграммы (на диаграмме).</param>
+        <param name="Top">Расстояние в точках от верхнего края самой верхней фигуры в диапазоне фигур до верхнего края таблицы.</param>
+        <param name="Width">Ширина объекта в точках.</param>
+        <param name="Height">Ширина объекта в точках.</param>
+        <summary>Создает автономный сводная диаграмма из <b>объекта PivotCache.</b> Возвращается <see cref="T:Microsoft.Office.Interop.Excel.Shape" /> объект.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Если объект <b>PivotCache,</b> из который вызван метод, не имеет подключенной списочнойt:</para>
+        <remarks><para>Если объект <b>PivotCache,</b> из который вызван метод, не имеет присоединенного pivotTable:</para>
           <list type="bullet">
             <item>
-              <description>Из существующего кэша pivotCache создается списоная на уровне книги.</description>
+              <description>Из существующего PivotCache создается pivotTable на уровне книг.</description>
             </item>
             <item>
-              <description>Будет создан автономный сводная диаграмма со ссылкой на созданную с помощью список.</description>
+              <description>Будет создан автономный сводная диаграмма со ссылкой на недавно созданный PivotTable.</description>
             </item>
           </list>
-          <para>Если с pivotCache уже связана с ней:</para>
+          <para>Если в PivotCache уже есть связанный pivotTable:</para>
           <list type="bullet">
             <item>
-              <description>Клонирован pivotCache</description>
+              <description>Клонирован PivotCache</description>
             </item>
             <item>
-              <description>На основе клонированной pivotCache создается новая pivotTable на уровне книги.</description>
+              <description>Новый pivotTable уровня книг создается на основе клонированной pivotCache.</description>
             </item>
             <item>
-              <description>Создается автономный сводная диаграмма со ссылкой на новую севостойку на уровне книги.</description>
+              <description>Создается автономный сводная диаграмма со ссылкой на новый pivotTable на уровне книг.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -314,13 +314,13 @@
         <Parameter Name="DefaultVersion" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="TableDestination">Необходимый <b>объект</b>. Ячейка в левом верхнем углу конечного диапазона отчета pivotTable (диапазон на странице, на которой будет размещен итоговая таблица). Диапазон назначения должен быть на таблице в книге, которая содержит объект <b>PivotCache,</b> указанный выражением.</param>
-        <param name="TableName"><b>Необязательный объект</b>. Имя нового отчета pivotTable.</param>
-        <param name="ReadData"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы создать кэш pivotTable, содержащий все записи из внешней базы данных; Этот кэш может быть очень большим. <b>False,</b> чтобы включить настройку некоторых полей в качестве серверных полей страницы перед фактическим чтением данных.</param>
-        <param name="DefaultVersion"><b>Необязательный объект</b>. Версия отчета pivotTable по умолчанию.</param>
-        <summary>Создает отчет pivotTable на основе <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объекта.</summary>
+        <param name="TableDestination">Необходимый <b>объект</b>. Ячейка в верхнем левом углу диапазона назначения отчетов PivotTable (диапазон на таблице, где будет размещен результат отчета PivotTable). Диапазон назначения должен быть на таблице в книге, которая содержит объект <b>PivotCache,</b> указанный выражением.</param>
+        <param name="TableName"><b>Необязательный объект</b>. Имя нового отчета PivotTable.</param>
+        <param name="ReadData"><b>Необязательный объект</b>. <b>True</b> для создания кэша PivotTable, который содержит все записи из внешней базы данных; этот кэш может быть очень большим. <b>False,</b> чтобы включить настройку некоторых полей в качестве серверных полей страниц перед фактическим чтением данных.</param>
+        <param name="DefaultVersion"><b>Необязательный объект</b>. Версия отчета PivotTable по умолчанию.</param>
+        <summary>Создает отчет PivotTable на основе <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объекта.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Альтернативный способ создания отчета pivotTable на основе кэша pivotTable см. в <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> методе <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.</para>
+        <remarks><para>Альтернативный способ создания отчета PivotTable на основе кэша PivotTable <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> см. в методе <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -349,8 +349,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -380,10 +380,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если пользователь может обновить кэш или таблицу запросов. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если кэш pivotTable или таблица запросов может быть обновлена пользователем. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство игнорируется, если для свойства <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.RefreshOnFileOpen" /> <b>EnableRefresh</b> установлено свойство <b>False.</b></para>
-          <para>Для источников данных OLAP установка для этого свойства параметра <b>False</b> отключает обновления.</para>
+        <remarks><para>Свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.RefreshOnFileOpen" /> игнорируется, если свойство <b>EnableRefresh</b> настроено на <b>False.</b></para>
+          <para>Для источников данных OLAP настройка этого свойства <b>false</b> отключает обновления.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -410,7 +410,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции похожих объектов.</summary>
+        <summary>Возвращает индексный номер объекта в коллекции аналогичных объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -438,10 +438,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если свойство имеет свойство True, а кэш pivotTable в настоящее время <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.MaintainConnection" /> подключен к <b></b> источнику. Возвращает <b>false,</b> если оно в настоящее время не подключено к источнику.</summary>
+        <summary>Возвращает <b>True,</b> если свойство True и <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.MaintainConnection" /> кэш PivotTable в настоящее время подключен к источнику. <b></b> Возвращает <b>False,</b> если он в настоящее время не подключен к источнику.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>IsConnected</b> не проверяет, подключено ли подключение. Даже если это свойство возвращает <b>true,</b>отправка команд поставщику может привести к ошибке, если подключение больше не является допустимым.</para>
-          <para>Требует, чтобы тип источника кэша был внешним и что он является источником данных OLE DB.</para>
+        <remarks><para>Свойство <b>IsConnected</b> не проверяет подключение. Даже если это свойство возвращает <b>True,</b>отправка команд поставщику может привести к ошибке, если подключение больше не допустимо.</para>
+          <para>Требуется внешний тип источника кэша и источник данных OLE DB.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -473,10 +473,10 @@
       <Docs>
         <summary>Возвращает или задает строку подключения к автономному файлу куба.</summary>
         <value>To be added.</value>
-        <remarks><para>Для источника данных, не относящихся к OLAP, значение свойства <b>LocalConnection</b> — пустая строка, а для свойства установлено значение <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> <b>False.</b></para>
-          <para>Установка свойства <b>LocalConnection</b> не сразу инициирует подключение к источнику данных. Сначала необходимо использовать этот метод для подключения и <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> извлечения данных.</para>
-          <para>Значение свойства <b>LocalConnection</b> используется, если свойство имеет значение <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> <b>True.</b> Если <b>свойству UseLocalConnection</b> задано свойство False, свойство указывает строку подключения для таблиц запросов на основе источников, кроме <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> локальных файлов куба.</para>
-          <para>Дополнительные сведения о синтаксисах для строк подключения см. в разделе справки по методу коллекции <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> <b>сводныхttables.</b></para>
+        <remarks><para>Для источника данных, не связанных с OLAP, значение свойства <b>LocalConnection</b> — это пустая строка, а свойство — <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> <b>False</b>.</para>
+          <para>Настройка свойства <b>LocalConnection</b> не сразу инициирует подключение к источнику данных. Сначала необходимо использовать метод для подключения и <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> получения данных.</para>
+          <para>Значение свойства <b>LocalConnection</b> используется, если свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.UseLocalConnection" /> настроено на <b>True.</b> Если свойство <b>UseLocalConnection</b> задано как False, свойство указывает строку подключения для таблиц запросов на основе источников, не связанных <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> с локальными кубальными файлами.</para>
+          <para>Дополнительные сведения о синтаксисе для строк подключения см. в разделе Справка для метода коллекции <see cref="M:Microsoft.Office.Interop.Excel.PivotTables.Add(Microsoft.Office.Interop.Excel.PivotCache,System.Object,System.Object,System.Object,System.Object)" /> <b>PivotTables.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -506,10 +506,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если подключение к указанному источнику данных сохраняется после обновления и до закрытия книги. Значение по умолчанию — <b>True</b>.</summary>
+        <summary><b>True,</b> если подключение к указанному источнику данных сохраняется после обновления и до закрытия книги. Значение по умолчанию — <b>True</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>MaintainConnection</b> можно установить только в том случае, если для свойства таблицы запросов или кэша <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.QueryType" /> pivotTable установлено свойство <b>xlOLEDBQuery.</b></para>
-          <para>Если вы ожидаете частые запросы к <b></b> серверу, установка для этого свойства true может повысить производительность за счет сокращения времени повторного подключения. Установка для свойства <b>false</b> приводит к закрытию открытого подключения.</para>
+        <remarks><para>Свойство <b>MaintainConnection</b> можно установить только в том случае, если свойство таблицы запросов или кэша <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.QueryType" /> PivotTable установлено <b>для xlOLEDBQuery.</b></para>
+          <para>Если вы ожидаете частые запросы на сервер, настройка этого свойства <b>true</b> может повысить производительность за счет сокращения времени повторного подключения. Настройка свойства <b>False</b> приводит к закрытию открытого подключения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -534,10 +534,10 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Устанавливает подключение для указанного кэша список.</summary>
-        <remarks><para>Метод <b>MakeConnection</b> можно использовать после того, как кэш переключит подключение и пользователь захочет восстановить подключение.</para>
-          <para>Различные объекты и методы могут возвращать ошибку времени работы, если кэш не подключен. Использование этого метода обеспечивает подключение перед выполнением других объектов или методов.</para>
-          <para>Этот метод приведет к ошибке во время работы, если для свойства указанного кэша pivotTable задано свойство False, свойство указанного кэша pivotTable не было установлено в <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.MaintainConnection" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceType" /> <b>xlExternal</b>или если подключение не OLEDB.</para>
+        <summary>Устанавливает подключение для указанного кэша PivotTable.</summary>
+        <remarks><para>Метод <b>MakeConnection</b> можно использовать после того, как кэш отключит подключение и пользователь захочет восстановить подключение.</para>
+          <para>Различные объекты и методы могут возвращать временную ошибку, если кэш не подключен. Использование этого метода обеспечивает подключение перед выполнением других объектов или методов.</para>
+          <para>Этот метод приведет к ошибке в течение времени, если свойство указанного кэша PivotTable было задано false, свойство указанного кэша PivotTable не было задано <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.MaintainConnection" /> <b></b> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceType" /> <b>xlExternal</b>или если подключение не OLEDB.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -564,10 +564,10 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объем памяти в ветвях, используемых объектом в данный момент.</summary>
+        <summary>Возвращает количество памяти в bytes, используемом в настоящее время объектом.</summary>
         <value>To be added.</value>
-        <remarks><para>Свойство <b>MemoryUsed</b> отражает временные состояния кэша во время его запроса.</para>
-          <para>Если к объекту не подключен отчет <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> pivotTable, это свойство возвращает значение 0 (ноль).</para>
+        <remarks><para>Свойство <b>MemoryUsed</b> отражает переходное состояние кэша во время запроса.</para>
+          <para>Если объект не имеет приложенного к нему отчета <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> PivotTable, это свойство возвращает 0 (ноль).</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -597,18 +597,18 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlPivotTableMissingItems</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает максимальное количество уникальных элементов для каждого поля совпайки, которые сохраняются, даже если они не имеют вспомогательных данных в записях кэша.</summary>
+        <summary>Возвращает или задает максимальное количество уникальных элементов в поле PivotTable, которые сохраняются, даже если у них нет вспомогательных данных в записях кэша.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableMissingItems" />может быть одной из следующих <b>констант XlPivotTableMissingItems:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableMissingItems" />может быть одним из следующих <b>констант XlPivotTableMissingItems:</b></para>
           <para>
-            <b>xlMissingItemsDefault</b> Допустимое число уникальных элементов по умолчанию на pivotField.</para>
+            <b>xlMissingItemsDefault</b> Разрешено число уникальных элементов по умолчанию на PivotField.</para>
           <para>
-            <b>xlMissingItemsMax</b> Максимально допустимое число уникальных элементов на pivotField (32 500).</para>
+            <b>xlMissingItemsMax</b> Максимальное количество уникальных элементов на PivotField разрешено (32 500).</para>
           <para>
-            <b>xlMissingItemsNone</b> На pivotField не допускаются уникальные элементы (ноль).</para>
-          <para>Этому свойству можно установить значение от 0 до 32500. Если указано значение, меньшее нулю, это эквивалентно указанию <b>xlMissingItemsDefault.</b> Можно указать integers greater than 32,500, but will have the same effect as <b>specifying xlMissingItemsMax</b>.</para>
-          <para>Свойство <b>MissingItemsLimit</b> работает только для список, не относящихся к OLAP; в противном случае может возникнуть ошибка во время запуска.</para>
+            <b>xlMissingItemsNone</b> Нет уникальных элементов на PivotField разрешено (ноль).</para>
+          <para>Это свойство может быть заданной для значения от 0 до 32500. Если указано меньше нуля, это эквивалентно указанию <b>xlMissingItemsDefault.</b> Можно указать более 32 500 integers, но они будут иметь тот же эффект, что и указание <b>xlMissingItemsMax.</b></para>
+          <para>Свойство <b>MissingItemsLimit</b> работает только для pivotTables, не относящихся к OLAP; в противном случае может возникнуть ошибка во время запуска.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -635,7 +635,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>true,</b> если кэш pivotTable подключен к серверу OLAP.</summary>
+        <summary>Возвращает <b>True,</b> если кэш PivotTable подключен к серверу online analytical Processing (OLAP).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -666,10 +666,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если кэш pivotTable оптимизирован при его построении. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>True,</b> если кэш PivotTable оптимизирован при его построении. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Оптимизация кэша приводит к дополнительным запросам и снижает начальную производительность отчета pivotTable.</para>
-          <para>Для источников данных OLE DB это свойство является "только чтением" и всегда возвращает <b>false.</b></para>
+        <remarks><para>Оптимизация кэша приводит к дополнительным запросам и снижает начальную производительность отчета PivotTable.</para>
+          <para>Для источников данных OLE DB это свойство является только для чтения и всегда возвращает <b>False.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -724,7 +724,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlQueryType</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Указывает тип запроса, используемого Microsoft Excel для заполнения кэша pivotTable.</summary>
+        <summary>Указывает тип запроса, используемого Microsoft Excel для заполнения кэша PivotTable.</summary>
         <value>To be added.</value>
         <remarks><para>
             <see cref="T:Microsoft.Office.Interop.Excel.XlQueryType" />может быть одной из следующих <b>констант XlQueryType:</b></para>
@@ -740,7 +740,7 @@
             <b>xlDAORecordSet</b>. На основе запроса наборов записей DAO; только для таблиц запросов.</para>
           <para>
             <b>xlODBCQuery</b>. На основе источника данных ODBC.</para>
-          <para>Источник данных указывается в префиксе значения <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойства.</para>
+          <para>В префиксе указывается источник данных для <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> значения свойства.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -767,9 +767,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает количество записей в кэше pivotTable или количество записей кэша, содержащих указанный элемент.</summary>
+        <summary>Возвращает количество записей в кэше PivotTable или количество записей кэша, содержащих указанный элемент.</summary>
         <value>To be added.</value>
-        <remarks><para>Это свойство отражает временные состояния кэша во время его запроса. Кэш может изменяться между запросами.</para>
+        <remarks><para>Это свойство отражает переходное состояние кэша во время запроса. Кэш может изменяться между запросами.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -799,9 +799,9 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает объект <b>Recordset,</b> используемый в качестве источника данных для указанной таблицы запросов или кэша севоводной таблицы.</summary>
+        <summary>Возвращает или задает объект <b>Recordset,</b> используемый в качестве источника данных для указанной таблицы запросов или кэша PivotTable.</summary>
         <value>To be added.</value>
-        <remarks><para>Если это свойство используется для переоценки существующего наборов записей, изменение вступает в силу при <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> запуске метода.</para>
+        <remarks><para>Если это свойство используется для переписать существующий набор записей, изменение вступает в силу при <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> запуске метода.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -853,9 +853,9 @@
         <ReturnType>System.DateTime</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает дату последнего обновления кэша pivotTable.</summary>
+        <summary>Возвращает дату последнего обновления кэша PivotTable.</summary>
         <value>To be added.</value>
-        <remarks><para>С кэшом должен быть связан по крайней мере один отчет pivotTable.</para>
+        <remarks><para>Кэш должен иметь как минимум один отчет PivotTable, связанный с ним.</para>
           <para>Для источников данных OLAP это свойство обновляется после каждого запроса.</para>
           <para> </para></remarks>
       </Docs>
@@ -883,7 +883,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя человека, который последним обновил кэш список.</summary>
+        <summary>Возвращает имя человека, который в последний раз обновил кэш PivotTable.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -914,9 +914,9 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если кэш pivotTable автоматически обновляется каждый раз, когда книга открывается. Значение по умолчанию — <b>False</b>.</summary>
+        <summary><b>True,</b> если кэш PivotTable обновляется автоматически каждый раз, когда книга открывается. Значение по умолчанию — <b>False</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Отчеты pivotTable не обновляются автоматически. Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> метод для обновления данных после открытия книги.</para>
+        <remarks><para>Отчеты pivotTable не обновляются автоматически. Используйте метод для обновления данных после открытия <see cref="M:Microsoft.Office.Interop.Excel.PivotCache.Refresh" /> книги.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -948,8 +948,8 @@
       <Docs>
         <summary>Возвращает или задает количество минут между обновлениями.</summary>
         <value>To be added.</value>
-        <remarks><para>Установка 0 (ноль) отключает автоматическое обновление с заданной периодикой и эквивалентно установке для этого свойства <b>null.</b></para>
-          <para>Свойство <b>RefreshPeriod</b> может иметь значение от 0 до 32 767.</para>
+        <remarks><para>Настройка периода до 0 (ноль) отключает автоматическое время обновления и эквивалентно настройке этого <b>свойства null</b>.</para>
+          <para>Значение свойства <b>RefreshPeriod</b> может быть вмеятелем от 0 до 32 767.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -974,7 +974,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сбрасывает время обновления для указанного отчета pivotTable до последнего интервала, заданного с помощью <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.RefreshPeriod" /> свойства.</summary>
+        <summary>Сбрасывает время обновления указанного отчета PivotTable до последнего интервала, заданного с помощью <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.RefreshPeriod" /> свойства.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1004,16 +1004,16 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlRobustConnect</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает подключение кэша pivotTable к источнику данных.</summary>
+        <summary>Возвращает или задает, как кэш PivotTable подключается к источнику данных.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlRobustConnect" />может быть одной из следующих <b>констант XlRobustConnect:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlRobustConnect" />может быть одним из следующих <b>констант XlRobustConnect:</b></para>
           <para>
-            <b>xlAlways</b> Для повторного подключения кэша всегда используются сведения о внешнем источнике (определенные <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceConnectionFile" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceDataFile" /> свойством или свойством).</para>
+            <b>xlAlways</b> Кэш всегда использует внешние исходные сведения (как определено свойством <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceConnectionFile" /> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.SourceDataFile" /> или свойством) для повторного подключения.</para>
           <para>
-            <b>xlAsRequired</b> Кэш использует сведения о внешнем источнике для повторного подключения с помощью <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойства.</para>
+            <b>xlAsRequired</b> Кэш использует внешние исходные данные для повторного подключения с помощью <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> свойства.</para>
           <para>
-            <b>xlNever</b> Кэш никогда не использует исходные сведения для повторного подключения.</para>
+            <b>xlNever</b> Кэш никогда не использует исходные данные для повторного подключения.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1043,8 +1043,8 @@
       <Docs>
         <param name="ODCFileName">Обязательный атрибут типа <b>String</b>. Расположение для сохранения файла.</param>
         <param name="Description"><b>Необязательный объект</b>. Описание, которое будет сохранено в файле.</param>
-        <param name="Keywords"><b>Необязательный объект</b>. Разделенные пробелами ключевые слова, которые можно использовать для поиска этого файла.</param>
-        <summary>Сохраняет источник кэша pivotTable в Microsoft Office подключения к данным.</summary>
+        <param name="Keywords"><b>Необязательный объект</b>. Ключевые слова, разделенные пробелами, которые можно использовать для поиска этого файла.</param>
+        <summary>Сохраняет источник кэша PivotTable в качестве Microsoft Office подключения к данным.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1074,7 +1074,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если сведения о пароле в строке подключения ODBC сохраняются с указанным запросом. <b>False,</b> если пароль удален.</summary>
+        <summary><b>True,</b> если сведения о паролях в строке подключения ODBC сохраняются с указанным запросом. <b>False,</b> если пароль удален.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство влияет только на запросы ODBC.</para>
           <para> </para></remarks>
@@ -1106,7 +1106,7 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>строку,</b> указывающее Microsoft Office подключения к данным или аналогичный файл, который использовался для создания pivotTable.</summary>
+        <summary>Возвращает или задает <b>строку</b> с указанием Microsoft Office или аналогичного файла, который использовался для создания PivotTable.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1137,25 +1137,25 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает источник данных для отчета pivotTable.</summary>
+        <summary>Возвращает источник данных для отчета PivotTable.</summary>
         <value>To be added.</value>
         <remarks><para>В следующей таблице показаны значения, возвращаемые <b>свойством SourceDate:</b></para>
           <list type="table">
             <item>
-              <term>Список или база данных Microsoft Excel</term>
+              <term>Microsoft Excel списка или базы данных</term>
               <description>Ссылка на ячейку в виде текста.</description>
             </item>
             <item>
               <term>Внешний источник данных</term>
-              <description>Массив. Каждая строка состоит из SQL подключения с оставшимися элементами в качестве строки запроса, разбитой на 255-символьные сегменты.</description>
+              <description>Массив. Каждая строка состоит из строки SQL с остальными элементами в качестве строки запроса, разбитой на 255-символьные сегменты.</description>
             </item>
             <item>
               <term>Несколько диапазонов консолидации</term>
-              <description>Двумерный массив. Каждая строка состоит из ссылки и связанных с ней элементов поля страницы.</description>
+              <description>Двумерный массив. Каждая строка состоит из ссылки и связанных с ней элементов поля страниц.</description>
             </item>
             <item>
-              <term>Другой отчет pivotTable</term>
-              <description>Один из трех вышеперечисленной информации.</description>
+              <term>Другой отчет PivotTable</term>
+              <description>Один из трех вышеуказанных видов информации.</description>
             </item>
           </list>
           <para>Это свойство не доступно для источников данных OLE DB.</para>
@@ -1185,9 +1185,9 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <b>строку,</b> указывающее исходный файл данных для кэша pivotTable.</summary>
+        <summary>Возвращает <b>строку,</b> указывающее исходный файл данных для кэша PivotTable.</summary>
         <value>To be added.</value>
-        <remarks><para>Для файлового источника данных (например, Microsoft Access) свойство <b>SourceDataFile</b> содержит полный путь к файлу исходных данных. Для <b>серверных источников</b> данных это NULL (например, SQL Server). Если свойство изменено программным путем, свойству <b>SourceDataFile</b> задано <b>null.</b> <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /></para>
+        <remarks><para>Для источников данных на основе файлов (например, Microsoft Access) свойство <b>SourceDataFile</b> содержит полностью квалифицированный путь к файлу исходных данных. Это <b>Null</b> для серверных источников данных (например, SQL Server). Свойство <b>SourceDataFile</b> задано <b>null,</b> если свойство <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> изменено программным образом.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1217,7 +1217,7 @@
         <summary>Возвращает значение, которое определяет тип публикуемого элемента.</summary>
         <value>To be added.</value>
         <remarks><para>
-            <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" />может быть одной из следующих <b>констант XlPivotTableSourceType:</b></para>
+            <see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableSourceType" />может быть одной из следующих констант <b>XlPivotTableSourceType:</b></para>
           <para>
             <b>xlConsolidation</b>
           </para>
@@ -1299,11 +1299,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Содержит сведения об обновлении всех подключенных и подключенных при <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> следующем обновлении. Для чтения и записи.</summary>
+        <summary>Содержит сведения о том, следует ли обновить все подключенные данные <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotTables" /> при следующем обновлении. Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Значение по умолчанию — <b>False</b>. Если для свойства установлено значение <b>True</b> для <b>pivotCache,</b>обновление всех подключенных к pivotCache приводит к обновлению pivotCache и всех присоединенных стеблей до версии <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> 2007 (PivotTable.Version = 3) <b></b> <b></b> в рамках обновления. <b></b></para>
-          <para>Если для свойства для <b>pivotCache</b>за установлено значение <b>False,</b> обновление любой подключенной к этой <b>pivotCache</b> списочнойt не изменит версию <b>pivotCache</b>или версию присоединенных <b></b> севостой. <b></b> Все они остаются в той же версии, что и до обновления.</para>
-          <para>Сохранение в short_Excel2007 файла, когда в режиме совместимости для <b></b> этого свойства устанавливается true для всех в <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> книге.</para>
+        <remarks><para>Значение по умолчанию — <b>False</b>. Если свойство настроено на <b>True</b> для <b>PivotCache,</b>освежает все присоединенные к этому <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> <b>PivotCache обновления PivotCache</b> и всех присоединенных <b>pivotTables</b> до версии 2007 <b></b> (PivotTable.Version = 3) в рамках обновления.</para>
+          <para>Если свойство настроено на <b>False</b> для <b>PivotCache,</b>обновление любого <b>pivotTable,</b> присоединенного к этому <b>PivotCache,</b> не изменит версию <b>PivotCache</b>или версию присоединенных <b>pivotTables</b>. Все они остаются той же версией, что и до обновления.</para>
+          <para>Сохранение формата short_Excel2007 файла, когда в режиме совместимости задаст это свойство <b>True</b> для всех <see cref="T:Microsoft.Office.Interop.Excel.PivotCaches" /> в книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1333,7 +1333,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если свойство используется для указания строки, которая позволяет <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.LocalConnection" /> Microsoft Excel подключаться к источнику данных. <b>False,</b> если используется строка подключения, <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> указанная свойством.</summary>
+        <summary><b>True,</b> если свойство используется для указания строки, Microsoft Excel подключиться к <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.LocalConnection" /> источнику данных. <b>False,</b> если используется строка <see cref="P:Microsoft.Office.Interop.Excel.PivotCache.Connection" /> подключения, указанная свойством.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1363,7 +1363,7 @@
       <Docs>
         <summary>Возвращает версию Microsoft Excel, в которой <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> был создан. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlPivotTableVersionList" /></value>
-        <remarks><para>Это свойство возвращает версию <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Параметры и поведение по умолчанию зависят от версии, позволяющей запускать старый код объектной модели <b>pivotTable</b> в 1st_Excel12 с тем же поведением, если версия <b>pivotTable</b> соответствует версии Excel, для которой был написан код.</para>
+        <remarks><para>Это свойство возвращает версию <see cref="T:Microsoft.Office.Interop.Excel.PivotTable" /> . Параметры и поведение по умолчанию зависят от версии, позволяющей старому коду объектной модели <b>PivotTable</b> работать в 1st_Excel12 с аналогичным поведением, когда версия <b>PivotTable</b> соответствует версии Excel, для которой был написан код.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1392,7 +1392,7 @@
       <Docs>
         <summary>Устанавливает связь между текущей книгой и <see cref="T:Microsoft.Office.Interop.Excel.PivotCache" /> объектом. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Объект <b>WorkbookConnection</b> представляет подключение к внешнему источнику данных.</para>
+        <remarks><para>Объект <b>WorkbookConnection</b> представляет собой подключение к внешнему источнику данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

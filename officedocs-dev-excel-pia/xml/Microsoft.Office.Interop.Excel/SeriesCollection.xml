@@ -1,5 +1,5 @@
 <Type Name="SeriesCollection" FullName="Microsoft.Office.Interop.Excel.SeriesCollection">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="9b503045ebef3ddb75466923708250f026284484" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010418" /></Metadata><TypeSignature Language="C#" Value="public interface SeriesCollection : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="226f220393deafb8f566b1b7879f06875da7a0c25077c8b40c4f8bf33c2b63b6" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54518155" /></Metadata><TypeSignature Language="C#" Value="public interface SeriesCollection : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract SeriesCollection implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.SeriesCollection" />
   <TypeSignature Language="VB.NET" Value="Public Interface SeriesCollection&#xA;Implements IEnumerable" />
@@ -25,10 +25,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.Series" /> указанной диаграмме или группе диаграмм.</summary>
-    <remarks><para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel._Chart.SeriesCollection(System.Object)" /> метод для возврата коллекции <b>SeriesCollection.</b></para>
-      <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.SeriesCollection.Add(System.Object,Microsoft.Office.Interop.Excel.XlRowCol,System.Object,System.Object,System.Object)" /> метод для создания нового ряда и добавления его в диаграмму.</para>
-      <para>Используйте <b>SeriesCollection</b>( ), где индекс — это номер или имя индекса <paramref name="index" /> ряда, чтобы вернуть один объект <b>Series.</b></para>
+    <summary>Коллекция всех объектов в <see cref="T:Microsoft.Office.Interop.Excel.Series" /> указанной группе диаграммы или диаграммы.</summary>
+    <remarks><para>Используйте метод <see cref="M:Microsoft.Office.Interop.Excel._Chart.SeriesCollection(System.Object)" /> для возврата <b>коллекции SeriesCollection.</b></para>
+      <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.SeriesCollection.Add(System.Object,Microsoft.Office.Interop.Excel.XlRowCol,System.Object,System.Object,System.Object)" /> метод, чтобы создать новую серию и добавить ее в диаграмму.</para>
+      <para>Используйте <b>SeriesCollection</b>(), где индексом является номер или имя индекса серии, чтобы <paramref name="index" /> вернуть один объект <b>Series.</b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -90,12 +90,12 @@
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Source">Необходимый <b>объект</b>. Новые данные в качестве объекта Range или массива точек данных.</param>
-        <param name="Rowcol">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> . Указывает, находятся ли новые значения в строках или столбцах указанного диапазона.</param>
-        <param name="SeriesLabels"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если является массивом. <b>Имеет</b> true, если первая строка или столбец содержит имя ряда данных. <b>False,</b> если первая строка или столбец содержит первую точку данных ряда. Если этот аргумент опущен, Microsoft Excel пытается определить расположение имени ряда из содержимого первой строки или столбца.</param>
-        <param name="CategoryLabels"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если является массивом. <b>Имеет</b> true, если первая строка или столбец содержит имя меток категории. <b>False,</b> если первая строка или столбец содержит первую точку данных ряда. Если этот аргумент опущен, Microsoft Excel пытается определить расположение метки категории из содержимого первой строки или столбца.</param>
-        <param name="Replace"><b>Необязательный объект</b>. Если <paramref name="CategoryLabels" /> <b>заданы</b> true и <paramref name="Replace" /> <b>true,</b>указанные категории заменяют категории, существующие в данный момент для ряда. Если <paramref name="Replace" /> <b>замещается false,</b>существующие категории не заменяются. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Добавляет один или несколько новых рядов в <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> коллекцию.</summary>
+        <param name="Source">Необходимый <b>объект</b>. Новые данные, как объект Range, так и массив точек данных.</param>
+        <param name="Rowcol"><see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" />Необязательный . Указывает, находятся ли новые значения в строках или столбцах указанного диапазона.</param>
+        <param name="SeriesLabels"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если массив. <b>True,</b> если первая строка или столбец содержит имя серии данных. <b>False,</b> если первая строка или столбец содержит первую точку данных серии. Если этот аргумент опущен, Microsoft Excel определить расположение имени серии из содержимого первой строки или столбца.</param>
+        <param name="CategoryLabels"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если массив. <b>True,</b> если первая строка или столбец содержит имя меток категорий. <b>False,</b> если первая строка или столбец содержит первую точку данных серии. Если этот аргумент опущен, Microsoft Excel определить расположение метки категории из содержимого первой строки или столбца.</param>
+        <param name="Replace"><b>Необязательный объект</b>. Если <paramref name="CategoryLabels" /> <b></b> true и true, указанные категории заменяют категории, существующие в настоящее время <paramref name="Replace" /> для этой серии. <b></b> Если <paramref name="Replace" /> <b></b>false, существующие категории не будут заменены. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Добавляет одну или несколько новых серий в <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> коллекцию.</summary>
         <returns>To be added.</returns>
         <remarks><para>Этот метод не доступен для сводная диаграмма отчетов.</para>
           <para> </para></remarks>
@@ -124,7 +124,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -182,8 +182,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -211,10 +211,10 @@
         <Parameter Name="CategoryLabels" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Source">Необходимый <b>объект</b>. Новые данные, добавляемые в объект в качестве объекта или <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> массива точек данных.</param>
-        <param name="Rowcol"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если является массивом. Указывает, находятся ли новые значения в строках или столбцах заданного источника диапазона. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlRows</b> или <b>xlColumns.</b> Если этот аргумент опущен, Microsoft Excel пытается определить, где находятся значения, по размеру и ориентации выбранного диапазона или по размерам массива.</param>
-        <param name="CategoryLabels"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если является массивом. <b>Имеет</b> true, чтобы первая строка или столбец содержали имя меток категории. <b>False,</b> чтобы первая строка или столбец содержала первую точку данных ряда. Если этот аргумент опущен, Microsoft Excel пытается определить расположение метки категории из содержимого первой строки или столбца.</param>
-        <summary>Добавляет новые точки данных в существующую коллекцию рядов.</summary>
+        <param name="Source">Необходимый <b>объект</b>. Новые данные, которые будут добавлены в объект, как объект, так и <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> <see cref="T:Microsoft.Office.Interop.Excel.Range" /> массив точек данных.</param>
+        <param name="Rowcol"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если массив. Указывает, находятся ли новые значения в строках или столбцах данного источника диапазона. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlRows или</b> <b>xlColumns</b>. Если этот аргумент опущен, Microsoft Excel определить, где находятся значения по размеру и ориентации выбранного диапазона или по размерам массива.</param>
+        <param name="CategoryLabels"><b>Необязательный объект</b>. Игнорируется, <paramref name="Source" /> если массив. <b>Правда,</b> чтобы первая строка или столбец содержали имя меток категорий. <b>False,</b> чтобы первая строка или столбец содержали первую точку данных серии. Если этот аргумент опущен, Microsoft Excel определить расположение метки категории из содержимого первой строки или столбца.</param>
+        <summary>Добавляет новые данные в существующую коллекцию серий.</summary>
         <returns>To be added.</returns>
         <remarks><para>Этот метод не доступен для сводная диаграмма отчетов.</para>
           <para> </para></remarks>
@@ -275,7 +275,7 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса для объекта.</param>
+        <param name="Index">Необходимый <b>объект</b>. Имя или номер индекса объекта.</param>
         <summary>Возвращает один объект из коллекции.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -302,7 +302,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Создает новый ряд. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Series" /> объект, который представляет новый ряд.</summary>
+        <summary>Создает новую серию. Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Series" /> объект, который представляет новую серию.</summary>
         <returns>To be added.</returns>
         <remarks><para>Этот метод не доступен для сводная диаграмма отчетов.</para>
           <para> </para></remarks>
@@ -362,12 +362,12 @@
         <Parameter Name="NewSeries" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Rowcol">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> . Указывает, находятся ли значения, соответствующие определенному ряду данных, в строках или столбцах. Может быть одной из этих <b>констант XlRowCol:</b> <b>xlColumns</b> <b>по умолчанию xlRows</b></param>
-        <param name="SeriesLabels"><b>Необязательный объект</b>. <b>True</b> используется для использования содержимого ячейки в первом столбце каждой строки (или первой строки каждого столбца) в качестве имени ряда данных в этой строке (или столбце). <b>False</b> для использования содержимого ячейки в первом столбце каждой строки (или первой строки каждого столбца) в качестве первой точки данных в ряду данных. Значение по умолчанию — <b>False</b>.</param>
-        <param name="CategoryLabels"><b>Необязательный объект</b>. <b>True</b> используется для использования содержимого первой строки (или столбца) выделения в качестве категорий для диаграммы. <b>False</b> для использования содержимого первой строки (или столбца) в качестве первого ряда данных на диаграмме. Значение по умолчанию — <b>False</b>.</param>
-        <param name="Replace"><b>Необязательный объект</b>. <b>True,</b> чтобы применять категории, заменяя существующие категории информацией из скопированного диапазона. <b>False</b> для вставки новых категорий без замены старых. Значение по умолчанию — <b>True</b>.</param>
-        <param name="NewSeries"><b>Необязательный объект</b>. <b>True,</b> чтобы ввести данные в качестве нового ряда. <b>False,</b> чтобы ввести данные в качестве новых точек в существующей серии. Значение по умолчанию — <b>True</b>.</param>
-        <summary>Вает данные из буфера обмена в указанную коллекцию рядов.</summary>
+        <param name="Rowcol"><see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" />Необязательный . Указывает, находятся ли значения, соответствующие определенной серии данных, в строках или столбцах. Может быть одним из этих <b>констант XlRowCol:</b> <b>xlColumns</b> по умолчанию<b>xlRows</b></param>
+        <param name="SeriesLabels"><b>Необязательный объект</b>. <b>Верно</b> использовать содержимое ячейки в первом столбце каждой строки (или первом ряду каждого столбца) в качестве имени серии данных в этой строке (или столбце). <b>False</b> для использования содержимого ячейки в первом столбце каждой строки (или первого ряда каждого столбца) в качестве первой точки данных в серии данных. Значение по умолчанию — <b>False</b>.</param>
+        <param name="CategoryLabels"><b>Необязательный объект</b>. <b>Верно</b> использовать содержимое первой строки (или столбца) выбора в качестве категорий для диаграммы. <b>False</b> для использования содержимого первой строки (или столбца) в качестве первой серии данных на диаграмме. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Replace"><b>Необязательный объект</b>. <b>Верно</b> применять категории при замене существующих категорий сведениями из скопированного диапазона. <b>False</b> для вставки новых категорий без замены старых. Значение по умолчанию — <b>True</b>.</param>
+        <param name="NewSeries"><b>Необязательный объект</b>. <b>True</b> для вклейки данных в качестве новой серии. <b>False</b> для вклейки данных в качестве новых точек в существующей серии. Значение по умолчанию — <b>True</b>.</param>
+        <summary>Вклеить данные из буфера обмена в заданную коллекцию серий.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
