@@ -1,5 +1,5 @@
 <Type Name="_Chart" FullName="Microsoft.Office.Interop.Excel._Chart">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="57339bb20d25fcbe71c1c566971bde680079bc66" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50012714" /></Metadata><TypeSignature Language="C#" Value="public interface _Chart" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a59b7fc21619f1d11273515d96708e70dcfd1fd923223a79682fbc885f1583fc" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54513528" /></Metadata><TypeSignature Language="C#" Value="public interface _Chart" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract _Chart" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel._Chart" />
   <TypeSignature Language="VB.NET" Value="Public Interface _Chart" />
@@ -347,7 +347,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, который <see cref="T:Microsoft.Office.Interop.Excel.Application" /> представляет приложение Microsoft Excel. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта).</summary>
+        <summary>При его применении без квалификатора объекта это свойство возвращает объект, который представляет <see cref="T:Microsoft.Office.Interop.Excel.Application" /> Microsoft Excel приложение. Если используется с квалификатором объекта, это свойство возвращает объект <b>Application</b>, который представляет создателя указанного объекта (вы можете задать это свойство с объектом OLE-автоматизации для возврата приложения этого объекта).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -375,9 +375,9 @@
         <Parameter Name="Filename" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="Filename">Имя файла для шаблона диаграммы.</param>
+        <param name="Filename">Имя файла шаблона диаграммы.</param>
         <summary>Применяет стандартный или настраиваемый тип диаграммы к диаграмме.</summary>
-        <remarks><para>Этот метод не поддерживает прием констант для нативных или комбинированных диаграмм.</para>
+        <remarks><para>Этот метод не поддерживает прием констант для родных или комбинированных диаграмм.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -407,8 +407,8 @@
         <Parameter Name="TypeName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="ChartType">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlChartType" /> . Стандартный тип диаграммы.</param>
-        <param name="TypeName"><b>Необязательный</b> объект (используется только с <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объектом). Имя пользовательского типа диаграммы, если <paramref name="ChartType" /> задана настраиваемая галерея диаграмм.</param>
+        <param name="ChartType">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlChartType" /> . Стандартный тип диаграммы.</param>
+        <param name="TypeName"><b>Необязательный</b> объект (используется только с <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> объектом). Имя настраиваемого типа диаграммы, если <paramref name="ChartType" /> указывает настраиваемую галерею диаграмм.</param>
         <summary>Применяет стандартный или настраиваемый тип диаграммы к диаграмме.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -447,17 +447,17 @@
         <Parameter Name="Separator" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlDataLabelsType" /> . Тип применяемой метки данных.</param>
-        <param name="LegendKey"><b>Необязательный объект</b>. <b>Значение True,</b> чтобы отвести ключ легенды рядом с точкой. Значение по умолчанию — <b>False</b>.</param>
-        <param name="AutoText"><b>Необязательный объект</b>. <b>True,</b> если объект автоматически создает соответствующий текст на основе содержимого.</param>
-        <param name="HasLeaderLines"><b>Необязательный объект</b>. Для объектов <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> и <see cref="T:Microsoft.Office.Interop.Excel.Series" /> объектов имеет <b>true,</b> если ряд имеет линии лидеров.</param>
-        <param name="ShowSeriesName"><b>Необязательный объект</b>. Имя ряда для метки данных.</param>
+        <param name="Type"><see cref="T:Microsoft.Office.Interop.Excel.XlDataLabelsType" />Необязательный . Тип метки данных для применения.</param>
+        <param name="LegendKey"><b>Необязательный объект</b>. <b>True,</b> чтобы показать ключ легенды рядом с точкой. Значение по умолчанию — <b>False</b>.</param>
+        <param name="AutoText"><b>Необязательный объект</b>. <b>True,</b> если объект автоматически создает соответствующий текст на основе контента.</param>
+        <param name="HasLeaderLines"><b>Необязательный объект</b>. Для объектов <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> <see cref="T:Microsoft.Office.Interop.Excel.Series" /> и объектов <b>True,</b> если в серии есть строки лидеров.</param>
+        <param name="ShowSeriesName"><b>Необязательный объект</b>. Имя серии для метки данных.</param>
         <param name="ShowCategoryName"><b>Необязательный объект</b>. Имя категории для метки данных.</param>
         <param name="ShowValue"><b>Необязательный объект</b>. Значение для метки данных.</param>
         <param name="ShowPercentage"><b>Необязательный объект</b>. Процент метки данных.</param>
-        <param name="ShowBubbleSize"><b>Необязательный объект</b>. Размер пузырьков для метки данных.</param>
-        <param name="Separator"><b>Необязательный объект</b>. Сепаратор для метки данных.</param>
-        <summary>Применяет метки данных к точке, ряду или ко всем рядам в диаграмме.</summary>
+        <param name="ShowBubbleSize"><b>Необязательный объект</b>. Размер пузыря для метки данных.</param>
+        <param name="Separator"><b>Необязательный объект</b>. Сепаратор метки данных.</param>
+        <summary>Применяет метки данных к точке, серии или всем сериям в диаграмме.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -487,7 +487,7 @@
         <param name="Layout">Указывает тип макета.  Тип макета обозначается числом от 1 до 10.</param>
         <param name="ChartType">Тип диаграммы.</param>
         <summary>Применяет макеты, показанные на ленте.</summary>
-        <remarks><para>При использовании макета для текущего типа диаграммы к типу диаграммы применяется число от 1 до 10.  Вы также можете применить макет одного типа диаграммы к другому типу диаграммы.  Например, можно применить макеты, доступные из графиковой диаграммы, к диаграмме столбца.  Макет добавляет только элементы диаграммы, доступные для конкретного типа диаграммы.</para>
+        <remarks><para>При использовании макета текущего типа диаграммы к типу диаграммы применяется число от 1 до 10.  Вы также можете применить макет одного типа диаграммы к другому типу диаграммы.  Например, можно применить макеты, доступные из строковой диаграммы, в диаграмму столбцов.  Макет добавляет только элементы диаграммы, доступные для этого типа диаграммы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -554,7 +554,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет группу диаграмм области на трех d <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграмме.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу диаграммы области на 3-D диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -588,7 +588,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Количество групп диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращает объект, который представляет либо одну группу диаграммы области (объект), либо коллекцию групп диаграмм области <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D-диаграмме возвращается объект, который представляет либо одну группу диаграммы области (объект), либо коллекцию групп диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> области <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -657,7 +657,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если Microsoft Excel масштабировать объемную диаграмму так, чтобы она была ближе к эквивалентной двухмерной диаграмме. Свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.RightAngleAxes" /> должно иметь свойство <b>True.</b></summary>
+        <summary><b>Верно,</b> Microsoft Excel масштабировать трехмерную диаграмму так, чтобы она была ближе по размеру к эквивалентной двухмерной диаграмме. Свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.RightAngleAxes" /> должно быть <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -688,8 +688,8 @@
         <Parameter Name="AxisGroup" Type="Microsoft.Office.Interop.Excel.XlAxisGroup" />
       </Parameters>
       <Docs>
-        <param name="Type"><b>Необязательный объект</b>. Указывает возвращаемую ось. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> <b>xlValue,</b> <b>xlCategory</b>или <b>xlSeriesAxis</b> (<b>xlSeriesAxis</b> is valid only for 3-D charts).</param>
-        <param name="AxisGroup">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> . Указывает группу осей. Если этот аргумент опущен, используется основная группа. Трех d диаграммы имеют только одну группу осей.</param>
+        <param name="Type"><b>Необязательный объект</b>. Указывает возвращаемую ось. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> <b>xlValue,</b> <b>xlCategory</b>или <b>xlSeriesAxis</b> <b>(xlSeriesAxis</b> действителен только для трехмерных диаграмм).</param>
+        <param name="AxisGroup"><see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" />Необязательный . Указывает группу осей. Если этот аргумент опущен, используется основная группа. 3-D диаграммы имеют только одну группу осей.</param>
         <summary>Возвращает объект, представляющий одну ось или коллекцию осей на диаграмме.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -718,7 +718,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Walls</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который позволяет пользователю по отдельности форматирование задней стены трех d <see cref="T:Microsoft.Office.Interop.Excel.Walls" /> диаграммы. Только для чтения.</summary>
+        <summary>Возвращает объект, который позволяет пользователю индивидуально отформатирование <see cref="T:Microsoft.Office.Interop.Excel.Walls" /> задней стены трехдюймной диаграммы. Только для чтения.</summary>
         <value><b>Walls</b></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -752,7 +752,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу лихой диаграммы на трехтонной диаграмме.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу диаграммы панели на 3-D-диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -786,7 +786,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращает объект, который представляет либо одну группу лик-диаграммы (объект), либо коллекцию групп линих <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D-диаграмме возвращается объект, который представляет либо одну группу диаграммы панели (объект), либо коллекцию групп диаграммы панели <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -817,7 +817,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlBarShape</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает фигуру, используемую с трехтонной диаграммой или диаграммой столбца.</summary>
+        <summary>Возвращает или задает фигуру, используемую с помощью 3-D-панели или диаграммы столбцов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -882,9 +882,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCategoryLabelLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константы, ссылаясь на уровень источника меток <see cref="T:Microsoft.Office.Interop.Excel.XlCategoryLabelLevel" /> категории. <b>Integer</b> <b>(int</b> in C#) Read/Write.</summary>
+        <summary>Возвращает констант, ссылаясь на уровень источников меток <see cref="T:Microsoft.Office.Interop.Excel.XlCategoryLabelLevel" /> категорий. <b>Integer</b> <b>(int</b> in C#) Read/Write.</summary>
         <value>To be added.</value>
-        <remarks><para>Если имеется иерархия, 0 относится к наиболее родительскому уровню, 1 — к его потомкам и так далее. Таким образом, 0 равно первому уровню, 1 – второму уровню, 2 – третьему и так далее.</para>
+        <remarks><para>Если есть иерархия, 0 относится к основному родительскому уровню, 1 — к его детям и так далее. Итак, 0 равно первому уровню, 1 равно второму уровню, 2 равно третьему уровню и так далее.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -914,7 +914,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartArea</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет полную область <see cref="T:Microsoft.Office.Interop.Excel.ChartArea" /> диаграммы для диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartArea" /> объект, который представляет полную область диаграммы для диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -945,7 +945,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>integer</b> <b>(int</b> in c#), представляю собой цветовую схему диаграммы. Чтение и запись.</summary>
+        <summary>Возвращает или задает <b>integer (int</b> in C#), который представляет цветовую схему диаграммы.<b></b> Чтение и запись.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -976,7 +976,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Количество групп диаграммы.</param>
-        <summary>Возвращает объект, который представляет одну группу диаграммы (объект) или коллекцию всех групп диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> в диаграмме <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (объекте). Возвращаемая коллекция включает группы всех типов.</summary>
+        <summary>Возвращает объект, который представляет одну группу диаграмм (объект) или коллекцию всех групп диаграммы в диаграмме <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (объект). Возвращаемая коллекция включает группы всех типов.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1006,10 +1006,10 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index"><b>Необязательный объект</b>. Имя или номер диаграммы. Этот аргумент может быть массивом для указания более одной диаграммы.</param>
-        <summary>Возвращает объект, который представляет одну внедренную диаграмму (объект) или коллекцию всех внедренных диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartObjects" /> (объекта) на листе.</summary>
+        <param name="Index"><b>Необязательный объект</b>. Имя или номер диаграммы. Этот аргумент может быть массивом, чтобы указать несколько диаграмм.</param>
+        <summary>Возвращает объект, который представляет одну встроенную диаграмму (объект) или коллекцию всех встроенных диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartObject" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartObjects" /> (объекта) на листе.</summary>
         <returns>To be added.</returns>
-        <remarks><para>Этот метод не эквивалентен <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Charts" /> свойству. Этот метод возвращает внедренные диаграммы; Свойство <b>Charts</b> возвращает листы диаграмм. Используйте свойство <see cref="P:Microsoft.Office.Interop.Excel.ChartObject.Chart" /> для возврата объекта <b>Chart</b> для внедренной диаграммы.</para>
+        <remarks><para>Этот метод не эквивалентен <see cref="P:Microsoft.Office.Interop.Excel._Workbook.Charts" /> свойству. Этот метод возвращает встроенные диаграммы; свойство <b>Charts</b> возвращает таблицы. Используйте <see cref="P:Microsoft.Office.Interop.Excel.ChartObject.Chart" /> свойство, чтобы вернуть объект <b>Chart</b> для встроенной диаграммы.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1041,7 +1041,7 @@
       <Docs>
         <summary>Возвращает или задает стиль для диаграммы. Для чтения и записи.</summary>
         <value><b>Object</b></value>
-        <remarks><para>Для применения стиля диаграммы можно использовать число от 1 до 48.</para>
+        <remarks><para>Для набора стиля диаграммы можно использовать число от 1 до 48.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1143,19 +1143,19 @@
         <Parameter Name="ExtraTitle" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Source"><b>Необязательный объект</b>. Диапазон, содержащий исходные данные для новой диаграммы. Если этот аргумент опущен, Microsoft Excel редактирует активный лист диаграммы или выбранную диаграмму на активном листе.</param>
-        <param name="Gallery">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlChartType" /> . Тип диаграммы.</param>
-        <param name="Format"><b>Необязательный объект</b>. Номер параметра для встроенных автоформатов. Может быть числом от 1 до 10 в зависимости от типа коллекции. Если этот аргумент опущен, Microsoft Excel выбирает значение по умолчанию в зависимости от типа коллекции и источника данных.</param>
-        <param name="PlotBy"><b>Необязательный объект</b>. Указывает, будут ли данные для каждого ряда в строках или столбцах. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlRows</b> или <b>xlColumns.</b></param>
-        <param name="CategoryLabels"><b>Необязательный объект</b>. Целый ряд, определяющий количество строк или столбцов в диапазоне источника, содержащих метки категорий. Допустимые значения: от 0 (ноль) до одного меньше максимального числа соответствующих категорий или рядов.</param>
-        <param name="SeriesLabels"><b>Необязательный объект</b>. Целый ряд, определяющий количество строк или столбцов в диапазоне источника, содержащих метки рядов. Допустимые значения: от 0 (ноль) до одного меньше максимального числа соответствующих категорий или рядов.</param>
+        <param name="Source"><b>Необязательный объект</b>. Диапазон, содержащий исходные данные для новой диаграммы. Если этот аргумент опущен, Microsoft Excel активного листа диаграммы или выбранной диаграммы на активном листе.</param>
+        <param name="Gallery"><see cref="T:Microsoft.Office.Interop.Excel.XlChartType" />Необязательный . Тип диаграммы.</param>
+        <param name="Format"><b>Необязательный объект</b>. Номер параметра для встроенных автоформатов. Может быть число от 1 до 10 в зависимости от типа галереи. Если этот аргумент опущен, Microsoft Excel выбирает значение по умолчанию на основе типа галереи и источника данных.</param>
+        <param name="PlotBy"><b>Необязательный объект</b>. Указывает, являются ли данные для каждой серии строками или столбцами. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlRows или</b> <b>xlColumns</b>.</param>
+        <param name="CategoryLabels"><b>Необязательный объект</b>. Набор, определяющий количество строк или столбцов в диапазоне исходных источников, содержащих метки категорий. Юридические значения от 0 (ноль) до одного меньше максимального числа соответствующих категорий или сериалов.</param>
+        <param name="SeriesLabels"><b>Необязательный объект</b>. Набор, определяющий количество строк или столбцов в диапазоне исходных источников, содержащих метки серий. Юридические значения от 0 (ноль) до одного меньше максимального числа соответствующих категорий или сериалов.</param>
         <param name="HasLegend"><b>Необязательный объект</b>. <b>True,</b> чтобы включить легенду.</param>
         <param name="Title"><b>Необязательный объект</b>. Текст заголовка диаграммы.</param>
         <param name="CategoryTitle"><b>Необязательный объект</b>. Текст заголовка оси категории.</param>
-        <param name="ValueTitle"><b>Необязательный объект</b>. Текст заголовка оси значений.</param>
-        <param name="ExtraTitle"><b>Необязательный объект</b>. Заголовок оси ряда для трех d диаграмм или второй заголовок оси значений для двух d диаграмм.</param>
+        <param name="ValueTitle"><b>Необязательный объект</b>. Текст заголовок оси значения.</param>
+        <param name="ExtraTitle"><b>Необязательный объект</b>. Заголовок оси серии для 3-D диаграмм или заголовок второй оси значения для 2-D диаграмм.</param>
         <summary>Изменяет свойства данной диаграммы. Этот метод можно использовать для быстрого формата диаграммы без настройки всех отдельных свойств. Этот метод не является интерактивным и изменяет только указанные свойства.</summary>
-        <remarks><para>Если этот метод опущен и выделение не является внедренной диаграммой на активном листе или активным листом не является существующей диаграммой, этот метод не работает и возникает <paramref name="Source" /> ошибка.</para>
+        <remarks><para>Если выбор не включен, и выбор не является встроенной диаграммой на активном листе, либо активный лист не является существующей диаграммой, этот метод не работает, и возникает <paramref name="Source" /> ошибка.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1221,11 +1221,11 @@
         <Parameter Name="SpellLang" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="CustomDictionary"><b>Необязательный объект</b>. Строка, которая указывает имя файла пользовательского словаря, который необходимо исследовать, если слово не найдено в основном словаре. Если этот аргумент опущен, используется указанный словарь.</param>
-        <param name="IgnoreUppercase"><b>Необязательный объект</b>. <b>True,</b> чтобы Microsoft Excel игнорировать слова, которые все заголовочные буквы. <b>False,</b> чтобы Microsoft Excel проверял слова в верхнем регистре. Если этот аргумент опущен, будет использоваться текущий параметр.</param>
-        <param name="AlwaysSuggest"><b>Необязательный объект</b>. <b>True,</b> чтобы в Microsoft Excel отображался список предлагаемых альтернативных орфографий при обнаружении неправильной орфографии. <b>False,</b> чтобы Microsoft Excel подождите, пока вы введет правильное написание. Если этот аргумент опущен, будет использоваться текущий параметр.</param>
+        <param name="CustomDictionary"><b>Необязательный объект</b>. Строка, которая указывает имя файла пользовательского словаря, которое должно быть рассмотрено, если слово не найдено в основном словаре. Если этот аргумент опущен, используется указанный в настоящее время словарь.</param>
+        <param name="IgnoreUppercase"><b>Необязательный объект</b>. <b>True,</b> чтобы Microsoft Excel игнорировать слова, которые все uppercase. <b>False,</b> чтобы Microsoft Excel проверить слова, которые являются все uppercase. Если этот аргумент будет опущен, будет использоваться текущий параметр.</param>
+        <param name="AlwaysSuggest"><b>Необязательный объект</b>. <b>Правда,</b> Microsoft Excel список предложенных альтернативных орфографий при обнаружении неправильной орфографии. <b>False,</b> чтобы Microsoft Excel дождаться ввода правильной орфографии. Если этот аргумент будет опущен, будет использоваться текущий параметр.</param>
         <param name="SpellLang"><b>Необязательный объект</b>. Язык используемого словаря. Может быть одним из <see cref="T:Microsoft.Office.Core.MsoLanguageID" /> значений, используемых <see cref="P:Microsoft.Office.Core.LanguageSettings.LanguageID(Microsoft.Office.Core.MsoAppLanguageID)" /> свойством.</param>
-        <summary>Проверяет правописание объекта и отображает диалоговое окно проверки правописания</summary>
+        <summary>Проверяет орфографию объекта и отображает диалоговое окно Spelling</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -1250,8 +1250,8 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Очищает все цвета на указанной диаграмме, которые не следуют цветовой схеме, примененной к диаграмме.</summary>
-        <remarks><para>Используйте этот метод для сброса всего форматирования цвета диаграммы до цветового стиля, примененного к диаграмме.</para>
+        <summary>Очищает все цвета на указанной диаграмме, которые не следуют цвету, примененным к диаграмме.</summary>
+        <remarks><para>Используйте этот метод, чтобы сбросить все форматирование цветов диаграммы в цветовой стиль, примененный к диаграмме.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1277,7 +1277,7 @@
       <Parameters />
       <Docs>
         <summary>Очищает форматирование элементов диаграммы до автоматического.</summary>
-        <remarks><para>Используйте этот метод для автоматического сброса форматирования элементов диаграммы.    Если вы используете этот метод на диаграмме, будет сброшено все форматирование (включая переопределения).</para>
+        <remarks><para>С помощью этого метода сбросить форматирование элементов диаграммы в автоматическое.    Если этот метод используется на диаграмме, все форматирование (включая переопределения) будет сброшено.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1304,10 +1304,10 @@
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает имя кода для объекта.</summary>
+        <summary>Возвращает кодовое имя объекта.</summary>
         <value>To be added.</value>
-        <remarks><para>Значение, которое вы видите в ячейке справа от (Имя) в окне свойств это имя кода выбранного объекта. Во время разработки можно изменить имя кода объекта, изменив это значение. Это свойство нельзя изменить программным путем во время запуска.</para>
-          <para>Имя кода для объекта можно использовать в качестве имени выражения, возвращаемого объектом. Возможно, имя листа отличается от имени кода. При создании листа имя листа и имя кода одинаковы, но изменение имени листа не изменяет имя кода, а изменение имени кода не изменяет имя листа.</para>
+        <remarks><para>Значение, которое вы видите в ячейке справа от (Имя) в окне Свойства— кодовое имя выбранного объекта. Во время разработки можно изменить кодовое имя объекта, изменив это значение. Невозможно программным образом изменить это свойство во время запуска.</para>
+          <para>Кодовое имя объекта можно использовать на месте выражения, возвращаемого объекту. Возможно, имя листа отличается от имени кода. При создании листа имя листа и кодовое имя одинаковы, но изменение имени листа не меняет имя кода, а изменение имени кода не меняет имя листа.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1340,7 +1340,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.ChartGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу диаграммы столбцов на трех d диаграмме.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу диаграмм столбцов на 3-D-диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1374,7 +1374,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращает объект, который представляет группу диаграммы с одним столбцом (объект) или коллекцию групп <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> столбцов диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D диаграмме возвращается объект, представляюный одну группу диаграмм столбцов (объект) или коллекцию групп диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> столбцов <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1407,8 +1407,8 @@
       <Docs>
         <param name="Before"><b>Необязательный объект</b>. Лист, перед которым будет размещен скопирован лист. Вы не можете <paramref name="Before" /> указать, указываете <paramref name="After" /> ли вы.</param>
         <param name="After"><b>Необязательный объект</b>. Лист, после которого будет размещен скопирован лист. Вы не можете <paramref name="After" /> указать, указываете <paramref name="Before" /> ли вы.</param>
-        <summary>Копирует лист в другое расположение книги.</summary>
-        <remarks><para>Если ни один из этих печатей не указан, Microsoft Excel создает книгу, которая <paramref name="Before" /> <paramref name="After" /> содержит скопированную таблицу.</para>
+        <summary>Копирует лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не указываете ни то, ни Microsoft Excel создает новую книгу, которая <paramref name="Before" /> <paramref name="After" /> содержит скопированную простыню.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1467,9 +1467,9 @@
         <Parameter Name="Size" Type="Microsoft.Office.Interop.Excel.XlPictureAppearance" />
       </Parameters>
       <Docs>
-        <param name="Appearance">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> . Указывает, как следует скопировать рисунок.</param>
-        <param name="Format">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" /> . Формат изображения.</param>
-        <param name="Size">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" /> . Размер скопированного рисунка, если объект является диаграммой на листе диаграммы (не внедрен в лист).</param>
+        <param name="Appearance"><see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" />Необязательный . Указывает, как должно быть скопировано изображение.</param>
+        <param name="Format"><see cref="T:Microsoft.Office.Interop.Excel.XlCopyPictureFormat" />Необязательный . Формат изображения.</param>
+        <param name="Size"><see cref="T:Microsoft.Office.Interop.Excel.XlPictureAppearance" />Необязательный . Размер скопированного изображения, когда объект является диаграммой на листе диаграммы (не встроенной в лист).</param>
         <summary>Копирует выбранный объект в буфер обмена в качестве изображения.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1503,7 +1503,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Corners</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Corners" /> объект, который представляет углы трех d-диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Corners" /> объект, который представляет углы 3-D диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1576,9 +1576,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> enumeration, которая указывает приложение, в котором был создан этот объект. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</summary>
+        <summary>Возвращает константу в <see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /> переумериях, которая указывает приложение, в котором был создан этот объект. Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -1800,7 +1800,7 @@
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращается объект, который представляет либо одну группу кольцевой диаграммы (объект), либо коллекцию групп кольцевой <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D-диаграмме возвращается объект, который представляет либо одну группу кольцевой диаграммы (объект), либо коллекцию групп кольцевой <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -1902,14 +1902,14 @@
       </Parameters>
       <Docs>
         <param name="Index">To be added.</param>
-        <summary>Для вызовов с явно установленным значением перетаскового значения это свойство возвращает вертикальное расстояние (в пунктах) от края текстового ограниченного окна до места, в котором строка вызовите присоединение к текстовом поле. Один только для <b>чтения.</b></summary>
+        <summary>Для вызовов с явно заданной значением падения это свойство возвращает вертикальное расстояние (в точках) от края текстового окне, связанного с текстом, к месту, где строка вызова присоединяется к текстовому окну. Одноместный <b>только для чтения</b>.</summary>
         <returns>Возвращает <see cref="T:System.Object" /> .</returns>
-        <remarks><para>Это расстояние измеряется от верхней части текстового окна, если для свойства <b>AutoAttach</b> не установлено свойство <b>True,</b> а текстовое поле находится слева от начала строки вызовите (место, на которое указывает вызов), в этом случае расстояние отбрасывается от нижней части текстового окна. </para>
-          <para>Используйте этот <see cref="M:Microsoft.Office.Interop.Excel.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы установить значение этого свойства.</para>
+        <remarks><para>Это расстояние измеряется в верхней части текстового окна, если свойство <b>AutoAttach</b> не настроено на <b>True,</b> а текстовое поле находится слева от начала строки вызова (места, на которое указывает вызываемая строка), в этом случае расстояние отбрасываний измеряется из нижней части текстового окна. </para>
+          <para>Используйте <see cref="M:Microsoft.Office.Interop.Excel.CalloutFormat.CustomDrop(System.Single)" /> метод, чтобы установить значение этого свойства.</para>
           <para> </para>
-          <para>Значение этого свойства точно отражает положение вложенной строки вызываемой строки в текстовом поле только в том случае, если для вызываемой точки явно установлено значение перетаска, то есть если значение свойства <see cref="P:Microsoft.Office.Interop.Excel.CalloutFormat.DropType" /> <b>— msoCalloutDropCustom.</b></para>
+          <para>Значение этого свойства точно отражает положение вложения строки вызовов в текстовое поле только в том случае, если вызов имеет явно задаточное значение drop — то есть, если значение свойства <see cref="P:Microsoft.Office.Interop.Excel.CalloutFormat.DropType" /> <b>msoCalloutDropCustom</b>.</para>
           <para> </para></remarks>
-        <example><para>В этом примере настраиваемый перетаск для фигуры 1 в myDocument заменяется одним из двух предустановленных опадающих значений в зависимости от того, больше или меньше половины высоты текстового окна вызовите. Чтобы пример работал, фигура 1 должна быть вызовом.</para>
+        <example><para>В этом примере настраиваемая капля для формы на myDocument заменяется одной из двух заданной, в зависимости от того, превышает или не превышает половину высоты текстового окна вызова. Для примера работы фигура должна быть вызываемой.</para>
           <code>&lt;span class="label"&gt;Set myDocument = Worksheets(1)  
  
  
@@ -1961,7 +1961,7 @@ With myDocument.Shapes(1).Callout
         If .&lt;/span&gt;
 &lt;i&gt;Drop&lt;/i&gt;
 &lt;span class="label"&gt;&amp;lt; .Parent.Height / 2 Then             .PresetDrop msoCalloutDropTop         Else             .PresetDrop msoCalloutDropBottom         End If     End If End With&lt;/span&gt;</code></example>
-        <example><para>В этом примере настраиваемый перетаск для фигуры 1 в myDocument заменяется одним из двух предустановленных опадающих значений в зависимости от того, больше или меньше половины высоты текстового окна вызовите. Чтобы пример работал, фигура 1 должна быть вызовом.</para>
+        <example><para>В этом примере настраиваемая капля для формы на myDocument заменяется одной из двух заданной, в зависимости от того, превышает или не превышает половину высоты текстового окна вызова. Для примера работы фигура должна быть вызываемой.</para>
           <code>&lt;span class="label"&gt;Set myDocument = Worksheets(1)  
  
  
@@ -2013,7 +2013,7 @@ With myDocument.Shapes(1).Callout
         If .&lt;/span&gt;
 &lt;i&gt;Drop&lt;/i&gt;
 &lt;span class="label"&gt;&amp;lt; .Parent.Height / 2 Then             .PresetDrop msoCalloutDropTop         Else             .PresetDrop msoCalloutDropBottom         End If     End If End With&lt;/span&gt;</code></example>
-        <example><para>В этом примере настраиваемый перетаск для фигуры 1 в myDocument заменяется одним из двух предустановленных опадающих значений в зависимости от того, больше или меньше половины высоты текстового окна вызовите. Чтобы пример работал, фигура 1 должна быть вызовом.</para>
+        <example><para>В этом примере настраиваемая капля для формы на myDocument заменяется одной из двух заданной, в зависимости от того, превышает или не превышает половину высоты текстового окна вызова. Для примера работы фигура должна быть вызываемой.</para>
           <code>&lt;span class="label"&gt;Set myDocument = Worksheets(1)  
  
  
@@ -2173,9 +2173,9 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает повышение прав на трехградусное представление диаграммы в градусах.</summary>
+        <summary>Возвращает или задает высоту представления 3-D диаграммы в градусах.</summary>
         <value>To be added.</value>
-        <remarks><para>Повышение высоты диаграммы — это высота, при которой диаграмма просматривается в градусах. Значение по умолчанию — 15 для большинства типов диаграмм. Значение этого свойства должно быть в от -90 до 90, за исключением трехтонных линых диаграмм, где должно быть от 0 до 44.</para>
+        <remarks><para>Высота диаграммы — это высота, на которой вы видите диаграмму в градусах. По умолчанию для большинства типов диаграмм значение 15. Значение этого свойства должно быть от -90 до 90, за исключением 3-D диаграмм панели, где она должна быть между 0 и 44.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2205,7 +2205,7 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Name" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">Необходимый <b>объект</b>. Имя объекта, использующее соглашение об именовом имени Microsoft Excel.</param>
+        <param name="Name">Необходимый <b>объект</b>. Имя объекта с использованием конвенции именования Microsoft Excel.</param>
         <summary>Преобразует имя Microsoft Excel в объект или значение.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -2236,9 +2236,9 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя экспортируемого файла.</param>
-        <param name="FilterName"><b>Необязательный объект</b>. Независимое от языка имя графического фильтра, которое отображается в реестре.</param>
-        <param name="Interactive"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы отобразить диалоговое окно, которое содержит параметры, специфично определенные для фильтра. Если этот аргумент имеет значение <b>False,</b>Microsoft Excel использует значения по умолчанию для фильтра. Значение по умолчанию — <b>False</b>.</param>
-        <summary>Экспортирует диаграмму в графическом формате.</summary>
+        <param name="FilterName"><b>Необязательный объект</b>. Имя графического фильтра, независимого от языка, как оно отображается в реестре.</param>
+        <param name="Interactive"><b>Необязательный объект</b>. <b>True,</b> чтобы отобразить диалоговое окно, содержаное параметры, определенные фильтром. Если этот аргумент является <b>ложным,</b>Microsoft Excel использует значения по умолчанию для фильтра. Значение по умолчанию — <b>False</b>.</param>
+        <summary>Экспорт диаграммы в графическом формате.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2274,16 +2274,16 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Type">Формат файла для экспорта.</param>
-        <param name="Filename">Имя файла, который необходимо сохранить. Можно включить полный путь или short_Excel2007 сохранить файл в текущей папке.</param>
-        <param name="Quality">Необязательный <see cref="T:Microsoft.Office.Interop.Excel.XlFixedFormatQuality" /> . Указывает качество опубликованного файла.</param>
-        <param name="IncludeDocProperties"><b>True,</b> чтобы включить свойства документа; в противном <b>случае False</b>.</param>
-        <param name="IgnorePrintAreas"><b>True,</b> чтобы игнорировать все области печати, установленные при публикации; в противном <b>случае False</b>.</param>
-        <param name="From">Номер страницы, на которой нужно начать публикацию. Если этот аргумент опущен, публикация начинается с начала.</param>
+        <param name="Filename">Имя файла, который необходимо сохранить. Вы можете включить полный путь или short_Excel2007 сохранить файл в текущей папке.</param>
+        <param name="Quality"><see cref="T:Microsoft.Office.Interop.Excel.XlFixedFormatQuality" />Необязательный . Указывает качество опубликованного файла.</param>
+        <param name="IncludeDocProperties"><b>True,</b> чтобы включить свойства документа; в <b>противном случае False</b>.</param>
+        <param name="IgnorePrintAreas"><b>True,</b> чтобы игнорировать все области печати, заданные при публикации; в <b>противном случае False</b>.</param>
+        <param name="From">Номер страницы, на которой необходимо начать публикацию. Если этот аргумент опущен, публикация начинается с самого начала.</param>
         <param name="To">Номер последней страницы для публикации. Если этот аргумент опущен, публикация заканчивается последней страницей.</param>
-        <param name="OpenAfterPublish"><b>True,</b> чтобы отобразить файл в просматриваемом файле после его публикации; в противном <b>случае False</b>.</param>
+        <param name="OpenAfterPublish"><b>True</b> для отображения файла в зрителье после его публикации; в <b>противном случае False</b>.</param>
         <param name="FixedFormatExtClassPtr">Указатель на класс FixedFormatExt.</param>
-        <summary>Экспортируется в файл указанного формата.</summary>
-        <remarks><para>Этот метод также поддерживает инициализацию надстройки для экспорта файла в файл фиксированного формата. Например, Excel будет выполнять преобразование формата файлов, если конвертеры присутствуют. Преобразование обычно инициалось пользователем.</para>
+        <summary>Экспорт в файл указанного формата.</summary>
+        <remarks><para>Этот метод также поддерживает инициализацию надстройки для экспорта файла в файл фиксированного формата. Например, Excel преобразования формата файлов, если конвертеры присутствуют. Преобразование обычно инициировал пользователь.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2313,7 +2313,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.Floor</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Floor" /> объект, который представляет пол 3-D-диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Floor" /> объект, который представляет пол диаграммы 3-D.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2343,11 +2343,11 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Индексный номер отфильтрованного объекта <b>Series.</b></param>
-        <summary>Позволяет получить отфильтрованный ряд, указанный аргументом Index.</summary>
+        <param name="Index">Индексировать число отфильтрованного объекта <b>Series.</b></param>
+        <summary>Позволяет получить отфильтрованную серию, указанную аргументом Index.</summary>
         <returns>To be added.</returns>
         <remarks><para>
-            <b>Объекты</b> ряда в скрытых строках или столбцах не отображаются в коллекции текущих рядов, если пользователь не включил параметр <b>"Показать</b> данные в скрытых строках и столбцах" в диалоговом окте "Выбор данных".</para>
+            <b>Объекты</b> серии в скрытых строках или столбцах не отображаются в текущей коллекции серий, если только пользователь не включил параметр <b>Показать</b> данные в скрытых строках и столбцах в диалоговом окантовке Выбор данных.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -2383,7 +2383,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает расстояние между рядами данных в объемной диаграмме в процентах от ширины маркера. Значение этого свойства должно быть от 0 до 500.</summary>
+        <summary>Возвращает или задает расстояние между сериями данных в трехмерной диаграмме в процентах от ширины маркера. Значение этого свойства должно быть от 0 до 500.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2415,13 +2415,13 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Arg2" Type="System.Int32&amp;" RefType="ref" />
       </Parameters>
       <Docs>
-        <param name="x">Обязательный атрибут типа <b>Integer</b>. Координата X элемента диаграммы.</param>
+        <param name="x">Обязательный атрибут типа <b>Integer</b>. X-координата элемента диаграммы.</param>
         <param name="y">Обязательный атрибут типа <b>Integer</b>. Координата Y элемента диаграммы.</param>
-        <param name="ElementID">Обязательный атрибут типа <b>Integer</b>. При возвращении метода этот аргумент содержит значение элемента <see cref="T:Microsoft.Office.Interop.Excel.XlChartItem" /> диаграммы в указанных координатах. Дополнительные сведения см. в разделе "Примечания".</param>
-        <param name="Arg1">Обязательный атрибут типа <b>Integer</b>. При возвращении метода этот аргумент содержит сведения, связанные с элементом диаграммы. Дополнительные сведения см. в разделе "Примечания".</param>
-        <param name="Arg2">Обязательный атрибут типа <b>Integer</b>. При возвращении метода этот аргумент содержит сведения, связанные с элементом диаграммы. Дополнительные сведения см. в разделе "Примечания".</param>
-        <summary>Возвращает сведения об элементе диаграммы в указанных координатах X и Y. Этот метод является необычным, так как вы указываете значения только для первых двух аргументов. Microsoft Excel заполняет другие аргументы, и ваш код должен проверять эти значения при возвращении метода.</summary>
-        <remarks><para>Значение после возврата метода определяет, содержатся ли какие-либо сведения, как показано <paramref name="ElementID" /> <paramref name="Arg1" /> в <paramref name="Arg2" /> следующей таблице.</para>
+        <param name="ElementID">Обязательный атрибут типа <b>Integer</b>. Когда метод возвращается, этот аргумент содержит значение элемента <see cref="T:Microsoft.Office.Interop.Excel.XlChartItem" /> диаграммы в указанных координатах. Дополнительные сведения см. в разделе "Примечания".</param>
+        <param name="Arg1">Обязательный атрибут типа <b>Integer</b>. Когда метод возвращается, этот аргумент содержит сведения, связанные с элементом диаграммы. Дополнительные сведения см. в разделе "Примечания".</param>
+        <param name="Arg2">Обязательный атрибут типа <b>Integer</b>. Когда метод возвращается, этот аргумент содержит сведения, связанные с элементом диаграммы. Дополнительные сведения см. в разделе "Примечания".</param>
+        <summary>Возвращает сведения о элементе диаграммы в указанных координатах X и Y. Этот метод является необычным, так как вы указываете значения только для первых двух аргументов. Microsoft Excel заполняет другие аргументы, и код должен изучить эти значения при возвращении метода.</summary>
+        <remarks><para>Значение после возвращения метода определяет, содержатся ли какие-либо сведения, как показано <paramref name="ElementID" /> <paramref name="Arg1" /> в <paramref name="Arg2" /> следующей таблице.</para>
           <list type="table">
             <item>
               <term>
@@ -2641,11 +2641,11 @@ With myDocument.Shapes(1).Callout
               <description>Нет</description>
             </item>
           </list>
-          <para>В следующей таблице описывается значение и после <paramref name="Arg1" /> <paramref name="Arg2" /> возврата метода.</para>
+          <para>В следующей таблице описывается значение и после <paramref name="Arg1" /> <paramref name="Arg2" /> возвращения метода.</para>
           <list type="table">
             <item>
               <term>AxisIndex</term>
-              <description>Указывает, является ли ось основной или вторичной. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>xlSecondary.</b></description>
+              <description>Указывает, является ли оси первичной или вторичной. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант: <b>xlPrimary</b> или <b>xlSecondary.</b></description>
             </item>
             <item>
               <term>AxisType</term>
@@ -2653,31 +2653,31 @@ With myDocument.Shapes(1).Callout
             </item>
             <item>
               <term>DropZoneType</term>
-              <description>Указывает тип зоны перепада: столбец, данные, страница или поле строки. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" /> <b>xlColumnField,</b> <b>xlDataField,</b> <b>xlPageField</b>или <b>xlRowField.</b> Константы полей столбцов и строк указывают поля ряда и категории соответственно.</description>
+              <description>Указывает тип зоны падения: столбец, данные, страница или поле строки. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlPivotFieldOrientation" /> <b>xlColumnField</b>, <b>xlDataField</b>, <b>xlPageField</b>или <b>xlRowField</b>. Константы поля столбцов и строк указывают поля серий и категорий соответственно.</description>
             </item>
             <item>
               <term>GroupIndex</term>
-              <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> для определенной группы диаграммы.</description>
+              <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> коллекции для определенной группы диаграмм.</description>
             </item>
             <item>
               <term>PivotFieldIndex</term>
-              <description>Указывает смещение в коллекции для определенного <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> столбца (ряда), данных, страницы или строки (категории). -1, если тип зоны перетащите <b>— xlDataField.</b></description>
+              <description>Указывает смещение в коллекции для определенного поля <see cref="T:Microsoft.Office.Interop.Excel.PivotFields" /> столбца (серии), данных, страницы или строки (категории). -1, если тип зоны падения <b>xlDataField.</b></description>
             </item>
             <item>
               <term>PointIndex</term>
-              <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Points" /> для определенной точки в ряду. Значение –1 указывает, что выбраны все точки данных.</description>
+              <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Points" /> коллекции для определенной точки в серии. Значение -1 указывает, что выбраны все точки данных.</description>
             </item>
             <item>
               <term>SeriesIndex</term>
-              <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Series" /> для определенного ряда.</description>
+              <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Series" /> коллекции для определенной серии.</description>
             </item>
             <item>
               <term>ShapeIndex</term>
-              <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> для определенной фигуры.</description>
+              <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> коллекции для определенной формы.</description>
             </item>
             <item>
               <term>TrendlineIndex</term>
-              <description>Указывает смещение в коллекции <see cref="T:Microsoft.Office.Interop.Excel.Trendlines" /> для определенной линии тренда в ряде.</description>
+              <description>Указывает смещение в <see cref="T:Microsoft.Office.Interop.Excel.Trendlines" /> коллекции для определенной линии тренда в серии.</description>
             </item>
           </list>
           <para> </para></remarks>
@@ -2787,9 +2787,9 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Index2" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index1"><b>Необязательный объект</b>. Тип оси. Оси рядов применяются только к трех d диаграммам. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> констант.</param>
-        <param name="Index2"><b>Необязательный объект</b>. Группа осей. Трех d диаграммы имеют только один набор осей. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант.</param>
-        <summary>Возвращает или задает оси, которые существуют на диаграмме.</summary>
+        <param name="Index1"><b>Необязательный объект</b>. Тип оси. Оси серии применяются только к 3-D диаграммам. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlAxisType" /> констант.</param>
+        <param name="Index2"><b>Необязательный объект</b>. Группа осей. 3-D диаграммы имеют только один набор осей. Может быть одной из <see cref="T:Microsoft.Office.Interop.Excel.XlAxisGroup" /> констант.</param>
+        <summary>Возвращает или задает, какие оси существуют на диаграмме.</summary>
         <value>To be added.</value>
         <remarks><para>Microsoft Excel может создавать или удалять оси при изменении типа диаграммы или <see cref="P:Microsoft.Office.Interop.Excel.Axis.AxisGroup" /> свойства.</para>
           <para> </para></remarks>
@@ -2821,7 +2821,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если диаграмма имеет таблицу данных.</summary>
+        <summary><b>True,</b> если на диаграмме есть таблица данных.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2889,7 +2889,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет true,</b> если диаграмма имеет легенду.</summary>
+        <summary><b>True,</b> если на диаграмме есть легенда.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2926,7 +2926,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если сводная диаграмма элементы управления отображаются в указанном сводная диаграмма отчете. Значение по умолчанию — <b>True</b>. Для обычной диаграммы это свойство всегда возвращает <b>false</b> и не может быть установлено.</summary>
+        <summary><b>True,</b> если сводная диаграмма элементы управления отображаются в указанном отчете сводная диаграмма. Значение по умолчанию — <b>True</b>. Для обычной диаграммы это свойство всегда возвращает <b>false</b> и не может быть заданной.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -2963,7 +2963,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если ось или диаграмма имеет видимый заголовок.</summary>
+        <summary><b>True,</b> если ось или диаграмма имеет видимое название.</summary>
         <value>To be added.</value>
         <remarks><para>Заголовок оси представлен <see cref="T:Microsoft.Office.Interop.Excel.AxisTitle" /> объектом.</para>
           <para>Заголовок диаграммы представлен <see cref="T:Microsoft.Office.Interop.Excel.ChartTitle" /> объектом.</para>
@@ -3061,7 +3061,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает номер индекса объекта в коллекции похожих объектов.</summary>
+        <summary>Возвращает индексный номер объекта в коллекции аналогичных объектов.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3160,7 +3160,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.ChartGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу графики на трехстройной диаграмме.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу диаграммы строки на 3-D-диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3194,7 +3194,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухстройной диаграмме возвращает объект, который представляет группу одностроковой диаграммы (объект) или коллекцию групп <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> графики <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D диаграмме возвращается объект, который представляет либо одну группу диаграммы (объект), либо коллекцию групп диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> строки <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3261,32 +3261,32 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Номер индекса отдельной текстовой записи, которая должна быть установлена или возвращена. Если этот аргумент опущен, возвращается весь список или устанавливается в качестве массива строк.</param>
-        <summary>Возвращает или задает текстовые записи в указанном поле списка или поле со списком в виде массива строк или возвращает или задает одну текстовую запись. Если в списке нет записей, возникает ошибка.</summary>
+        <param name="Index">Номер индекса одной текстовой записи, которая должна быть установлена или возвращена. Если этот аргумент опущен, весь список возвращается или устанавливается в качестве массива строк.</param>
+        <summary>Возвращает или задает текстовые записи в указанном поле списка или в поле комбо в виде массива строк или возвращает или задает одну текстовую запись. Ошибка возникает, если в списке нет записей.</summary>
         <returns>Variant</returns>
-        <remarks><para>При установке этого свойства очищается любой диапазон, указанный <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойством.</para>
+        <remarks><para>Настройка этого свойства очищает любой диапазон, заданный <see cref="P:Microsoft.Office.Interop.Excel.ControlFormat.ListFillRange" /> свойством.</para>
           <para> </para></remarks>
-        <example><para>В этом примере устанавливаются записи в списке на листе 1. Если shapes(2) не представляет поле списка, этот пример не удается.</para>
+        <example><para>В этом примере записи в поле списка устанавливаются на листе один. Если Shapes(2) не представляет поле списка, этот пример не удается.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(2).ControlFormat.&lt;/span&gt;
 &lt;i&gt;List&lt;/i&gt;
 &lt;span class="label"&gt;= _     Array("cogs", "widgets", "sprockets", "gizmos")&lt;/span&gt;</code>
-          <para>В этом примере устанавливается запись 4 в списке на листе 1. Если shapes(2) не представляет поле списка, этот пример не удается.</para>
+          <para>В этом примере устанавливается запись 4 в поле списка на листе 1. Если Shapes(2) не представляет поле списка, этот пример не удается.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(2).ControlFormat.&lt;/span&gt;
 &lt;i&gt;List&lt;/i&gt;
 &lt;span class="label"&gt;(4) = "gadgets"&lt;/span&gt;</code></example>
-        <example><para>В этом примере устанавливаются записи в списке на листе 1. Если shapes(2) не представляет список, в этом примере не удается.</para>
+        <example><para>В этом примере записи в поле списка устанавливаются на листе один. Если Shapes(2) не представляет поле списка, этот пример не удается.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(2).ControlFormat.&lt;/span&gt;
 &lt;i&gt;List&lt;/i&gt;
 &lt;span class="label"&gt;= _     Array("cogs", "widgets", "sprockets", "gizmos")&lt;/span&gt;</code>
-          <para>В этом примере устанавливается запись 4 в списке на листе 1. Если shapes(2) не представляет поле списка, этот пример не удается.</para>
+          <para>В этом примере устанавливается запись 4 в поле списка на листе 1. Если Shapes(2) не представляет поле списка, этот пример не удается.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(2).ControlFormat.&lt;/span&gt;
 &lt;i&gt;List&lt;/i&gt;
 &lt;span class="label"&gt;(4) = "gadgets"&lt;/span&gt;</code></example>
-        <example><para>В этом примере устанавливаются записи в списке на листе 1. Если shapes(2) не представляет поле списка, этот пример не удается.</para>
+        <example><para>В этом примере записи в поле списка устанавливаются на листе один. Если Shapes(2) не представляет поле списка, этот пример не удается.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(2).ControlFormat.&lt;/span&gt;
 &lt;i&gt;List&lt;/i&gt;
 &lt;span class="label"&gt;= _     Array("cogs", "widgets", "sprockets", "gizmos")&lt;/span&gt;</code>
-          <para>В этом примере устанавливается запись 4 в списке на листе 1. Если shapes(2) не представляет поле списка, этот пример не удается.</para>
+          <para>В этом примере устанавливается запись 4 в поле списка на листе 1. Если Shapes(2) не представляет поле списка, этот пример не удается.</para>
           <code>&lt;span class="label"&gt;Worksheets(1).Shapes(2).ControlFormat.&lt;/span&gt;
 &lt;i&gt;List&lt;/i&gt;
 &lt;span class="label"&gt;(4) = "gadgets"&lt;/span&gt;</code></example>
@@ -3315,8 +3315,8 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Name" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Where">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.XlChartLocation" /> . Место перемещения диаграммы.</param>
-        <param name="Name"><b>Необязательный объект;</b> требуется, если <paramref name="Where" /> <b>это xlLocationAsObject.</b> Имя листа, на котором будет внедрена диаграмма, если это <paramref name="Where" /> <b>xlLocationAsObject,</b> или имя нового листа, если это <paramref name="Where" /> <b>xlLocationAsNewSheet.</b></param>
+        <param name="Where">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.XlChartLocation" /> . Куда переместить диаграмму.</param>
+        <param name="Name"><b>Необязательный объект;</b> требуется, <paramref name="Where" /> если <b>xlLocationAsObject</b>. Имя листа, на котором будет встроена диаграмма, если <paramref name="Where" /> <b>это xlLocationAsObject</b> или имя нового листа, если <paramref name="Where" /> это <b>xlLocationAsNewSheet.</b></param>
         <summary>Перемещает диаграмму в новое расположение.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -3377,9 +3377,9 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Before"><b>Необязательный объект</b>. Лист, перед которым будет размещен перемещен лист. Вы не можете <paramref name="Before" /> указать, указываете <paramref name="After" /> ли вы.</param>
-        <param name="After"><b>Необязательный объект</b>. Лист, после которого будет размещен перемещен лист. Вы не можете <paramref name="After" /> указать, указываете <paramref name="Before" /> ли вы.</param>
-        <summary>Перемещает лист в другое расположение книги.</summary>
-        <remarks><para>Если ни один из этих указаний не указан, Microsoft Excel создает новую книгу, которая <paramref name="Before" /> <paramref name="After" /> содержит перемещенную таблицу.</para>
+        <param name="After"><b>Необязательный объект</b>. Лист, после которого перемещается лист. Вы не можете <paramref name="After" /> указать, указываете <paramref name="Before" /> ли вы.</param>
+        <summary>Перемещает лист в другое расположение в книге.</summary>
+        <remarks><para>Если вы не указываете ни то, ни Microsoft Excel создает новую <paramref name="Before" /> <paramref name="After" /> книгу, которая содержит перенесенный лист.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3468,7 +3468,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер объекта OLE.</param>
-        <summary>Возвращает объект, который представляет один объект OLE (an) или коллекцию всех объектов <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" /> OLE (коллекции) на <see cref="T:Microsoft.Office.Interop.Excel.OLEObjects" /> диаграмме или листе.</summary>
+        <summary>Возвращает объект, который представляет один объект OLE (an) или коллекцию всех объектов OLE (коллекции) на диаграмме <see cref="T:Microsoft.Office.Interop.Excel.OLEObject" /> <see cref="T:Microsoft.Office.Interop.Excel.OLEObjects" /> или листе.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3751,8 +3751,8 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Type" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Type"><b>Необязательный объект</b>. Указывает сведения о диаграмме, которую необходимо в paste, если диаграмма находится в буфере обмена. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> <b>xlFormats,</b> <b>xlFormulas</b>или <b>xlAll.</b> Значение по умолчанию — <b>xlAll.</b> Если в буфере обмена есть данные, кроме диаграммы, этот аргумент использовать нельзя.</param>
-        <summary>Ветвь данных диаграммы из буфера обмена в указанную диаграмму.</summary>
+        <param name="Type"><b>Необязательный объект</b>. Указывает сведения о диаграмме, которые необходимо вклеить, если диаграмма находится на буфере обмена. Может быть одной из следующих констант: <see cref="T:Microsoft.Office.Interop.Excel.XlPasteType" /> <b>xlFormats,</b> <b>xlFormulas</b>или <b>xlAll.</b> По умолчанию значение <b>xlAll</b>. Если на буфере clipboard есть данные, кроме диаграммы, этот аргумент нельзя использовать.</param>
+        <summary>Вклеит данные диаграммы из буфера обмена в указанную диаграмму.</summary>
         <remarks><para>Этот метод изменяет текущий выбор.</para>
           <para> </para></remarks>
       </Docs>
@@ -3789,7 +3789,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает перспективу для представления трех d диаграммы. Должно быть от 0 до 100. Это свойство игнорируется, если свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.RightAngleAxes" /> имеет свойство <b>True.</b></summary>
+        <summary>Возвращает или задает перспективу для представления 3-D диаграммы. Должно быть от 0 до 100. Это свойство игнорируется, если <see cref="P:Microsoft.Office.Interop.Excel._Chart.RightAngleAxes" /> свойство <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3857,7 +3857,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.ChartGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу круговой диаграммы на трехразовой диаграмме.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу диаграммы пирога на 3-D диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3891,7 +3891,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращает объект, который представляет либо одну группу круговой диаграммы (объект), либо коллекцию групп <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> круговой диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D-диаграмме возвращается объект, который представляет либо одну группу диаграммы пирога (объект), либо коллекцию групп диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> пирога <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3919,9 +3919,9 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.PivotLayout</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет размещение полей в отчете pivotTable и размещение осей <see cref="T:Microsoft.Office.Interop.Excel.PivotLayout" /> в сводная диаграмма отчете.</summary>
+        <summary>Возвращает объект, который представляет размещение полей в отчете PivotTable и размещение осей в сводная диаграмма <see cref="T:Microsoft.Office.Interop.Excel.PivotLayout" /> отчете.</summary>
         <value>To be added.</value>
-        <remarks><para>Если указанная диаграмма не является отчетом сводная диаграмма отчета, значение этого свойства — <b>Nothing.</b></para>
+        <remarks><para>Если указанная диаграмма не является отчетом сводная диаграмма, значение этого свойства <b>ничто.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -3951,7 +3951,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.PlotArea</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PlotArea" /> объект, который представляет область диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.PlotArea" /> объект, который представляет область сюжета диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -3982,7 +3982,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.XlRowCol</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает способ использования столбцов или строк в качестве рядов данных на диаграмме. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlColumns</b> или <b>xlRows.</b> Для сводная диаграмма отчетов это свойство является только для чтения и всегда возвращает <b>xlColumns.</b></summary>
+        <summary>Возвращает или задает способ использования столбцов или строк в качестве рядов данных на диаграмме. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlColumns</b> или <b>xlRows</b>. Для сводная диаграмма отчетов это свойство только для чтения и всегда возвращает <b>xlColumns.</b></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4019,7 +4019,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если выявимы только видимые ячейки. <b>False,</b> если отображается и видимая, и скрытая ячейки.</summary>
+        <summary><b>True,</b> если замышированы только видимые ячейки. <b>False,</b> если замышированы как видимые, так и скрытые ячейки.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4075,10 +4075,10 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает количество страниц комментариев, которые будут печататься для текущей диаграммы.</summary>
-        <value>Количество страниц комментариев, которые будут печататься для текущей диаграммы.</value>
+        <summary>Получает количество страниц комментариев, которые будут напечатаны для текущей диаграммы.</summary>
+        <value>Количество страниц комментариев, которые будут напечатаны для текущей диаграммы.</value>
         <remarks><para>Только для чтения.</para>
-          <para>Поскольку диаграммы и листы диаграмм не поддерживают комментарии, свойство объекта всегда <see cref="P:Microsoft.Office.Interop.Excel._Chart.PrintedCommentPages" /> <see cref="T:Microsoft.Office.Interop.Excel._Chart" /> возвращает ноль.</para>
+          <para>Так как диаграммы и таблицы не поддерживают комментарии, свойство объекта всегда будет <see cref="P:Microsoft.Office.Interop.Excel._Chart.PrintedCommentPages" /> <see cref="T:Microsoft.Office.Interop.Excel._Chart" /> возвращать ноль.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4117,16 +4117,16 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="PrToFileName" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="From"><b>Необязательный объект</b>. Номер страницы, на которой начинается печать. Если этот аргумент опущен, печать начинается с начала.</param>
+        <param name="From"><b>Необязательный объект</b>. Число страницы, на которой необходимо начать печать. Если этот аргумент опущен, печать начинается в начале.</param>
         <param name="To"><b>Необязательный объект</b>. Номер последней страницы для печати. Если этот аргумент опущен, печать заканчивается последней страницей.</param>
         <param name="Copies"><b>Необязательный объект</b>. Количество копий для печати. Если этот аргумент опущен, печатается одна копия.</param>
-        <param name="Preview"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы Microsoft Excel вызывал предварительный просмотр печати перед печатью объекта. <b>False</b> (или пропущен) для немедленной печати объекта.</param>
+        <param name="Preview"><b>Необязательный объект</b>. <b>True,</b> чтобы Microsoft Excel вызвать предварительный просмотр печати перед печатью объекта. <b>False</b> (или опущенный) для немедленной печати объекта.</param>
         <param name="ActivePrinter"><b>Необязательный объект</b>. Задает имя активного принтера.</param>
-        <param name="PrintToFile"><b>Необязательный объект</b>. <b>True</b> для печати в файл. Если он не указан, Microsoft Excel запросит у пользователя ввести <paramref name="PrToFileName" /> имя выходного файла.</param>
-        <param name="Collate"><b>Необязательный объект</b>. <b>True</b> для совме-ации нескольких копий.</param>
-        <param name="PrToFileName"><b>Необязательный объект</b>. Если <paramref name="PrintToFile" /> задано <b>true,</b>этот аргумент указывает имя файла, в который нужно напечатать.</param>
-        <summary>Печатает объект.</summary>
-        <remarks><para>"Страницы" в описаниях и ссылается на печатные страницы, а не на общие страницы <paramref name="From" /> <paramref name="To" /> на листе или в книге.</para>
+        <param name="PrintToFile"><b>Необязательный объект</b>. <b>True</b> для печати в файл. Если не указано, Microsoft Excel пользователю ввести имя <paramref name="PrToFileName" /> выходного файла.</param>
+        <param name="Collate"><b>Необязательный объект</b>. <b>True</b> для скопить несколько копий.</param>
+        <param name="PrToFileName"><b>Необязательный объект</b>. Если <paramref name="PrintToFile" /> <b>задана версия True,</b>в этом аргументе указывается имя файла, который необходимо распечатать.</param>
+        <summary>Принты объекта.</summary>
+        <remarks><para>"Страницы" в описаниях печатных страниц и ссылаются на них, а не общие страницы в <paramref name="From" /> <paramref name="To" /> листе или книге.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4199,8 +4199,8 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="EnableChanges" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="EnableChanges"><b>Необязательный объект</b>. <b>True,</b> чтобы включить изменения диаграммы.</param>
-        <summary>Отображает предварительный просмотр объекта, как бы он выглядел при печати.</summary>
+        <param name="EnableChanges"><b>Необязательный объект</b>. <b>True</b> для внесения изменений в диаграмму.</param>
+        <summary>Показывает предварительный просмотр объекта, как он будет выглядеть при печати.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4230,12 +4230,12 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="UserInterfaceOnly" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password"><b>Необязательный объект</b>. Строка, которая указывает пароль для электронной таблицы или книги с учетом конкретного случая. Если этот аргумент опущен, можно отобразить таблицу или книгу без использования пароля. В противном случае необходимо указать пароль, чтобы отопрестить рабочий таблицу или книгу. Если вы забудете пароль, вы не сможете отопрестить рабочий или электронный таблицу. Лучше хранить список паролей и соответствующих им имен документов в надежном месте.</param>
-        <param name="DrawingObjects"><b>Необязательный объект</b>. <b>True</b> для защиты фигур. Значение по умолчанию — <b>False</b>.</param>
+        <param name="Password"><b>Необязательный объект</b>. Строка, которая указывает пароль, чувствительный к делу для таблицы или книги. Если этот аргумент опущен, можно отклонить таблицу или книгу без использования пароля. В противном случае необходимо указать пароль, чтобы отклонить таблицу или книгу. Если вы забудете пароль, вы не сможете отклонить таблицу или книгу. Лучше хранить список паролей и их соответствующих имен документов в безопасном месте.</param>
+        <param name="DrawingObjects"><b>Необязательный объект</b>. <b>True</b> для защиты фигур. Значение по умолчанию — <b>False</b>.</param>
         <param name="Contents"><b>Необязательный объект</b>. <b>True</b> для защиты содержимого. Для диаграммы это защищает всю диаграмму. Для таблицы это защищает заблокированные ячейки. Значение по умолчанию — <b>True</b>.</param>
-        <param name="Scenarios"><b>Необязательный объект</b>. <b>Верно</b> для защиты сценариев. Этот аргумент действителен только для таблиц. Значение по умолчанию — <b>True</b>.</param>
-        <param name="UserInterfaceOnly"><b>Необязательный объект</b>. <b>True</b> для защиты пользовательского интерфейса, но не макроса. Если этот аргумент опущен, защита применяется как к макросам, так и к пользовательскому интерфейсу.</param>
-        <summary>Защищает диаграмму, чтобы ее нельзя было изменить.</summary>
+        <param name="Scenarios"><b>Необязательный объект</b>. <b>True</b> для защиты сценариев. Этот аргумент действителен только для таблиц. Значение по умолчанию — <b>True</b>.</param>
+        <param name="UserInterfaceOnly"><b>Необязательный объект</b>. <b>True</b> для защиты пользовательского интерфейса, но не макрос. Если этот аргумент опущен, защита применяется как к макросам, так и к пользовательскому интерфейсу.</param>
+        <summary>Защищает диаграмму так, чтобы ее нельзя было изменить.</summary>
         <remarks><para>Используйте надежные пароли, содержащие строчные и прописные буквы, цифры и знаки. В ненадежных паролях не используются сочетания таких элементов. Надежный пароль: Y6dh!et5. Слабый пароль: House27. Используйте надежный пароль, который можно запомнить, чтобы не пришлось его записывать.</para>
           <para> </para></remarks>
       </Docs>
@@ -4297,7 +4297,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если пользователь не может изменить формулы рядов.</summary>
+        <summary><b>True,</b> если формулы серий не могут быть изменены пользователем.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4361,7 +4361,7 @@ With myDocument.Shapes(1).Callout
       <Docs>
         <summary><b>True,</b> если форматирование диаграммы не может быть изменено пользователем.</summary>
         <value>To be added.</value>
-        <remarks><para>Если это свойство имеет свойство <b>True,</b>команда "Объект" в меню Format отключена, а элементы диаграммы нельзя добавлять, удалять, удалять, а также удалять.</para>
+        <remarks><para>Когда это свойство <b>true,</b>команда объекта в меню Format отключена, а элементы диаграммы нельзя добавлять, перемещать, реамизировать или удалять.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4428,7 +4428,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если включена защита только для пользовательского интерфейса. Чтобы включить защиту пользовательского интерфейса, используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Protect(System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод с аргументом <paramref name="UserInterfaceOnly" /> <b>True.</b></summary>
+        <summary><b>True,</b> если включена защита только для пользовательского интерфейса. Чтобы включить защиту пользовательского интерфейса, используйте <see cref="M:Microsoft.Office.Interop.Excel._Chart.Protect(System.Object,System.Object,System.Object,System.Object,System.Object)" /> метод с набором аргументов <paramref name="UserInterfaceOnly" /> <b>True</b>.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4459,9 +4459,9 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>True,</b> если не удается выбрать элементы диаграммы.</summary>
+        <summary><b>True,</b> если элементы диаграммы не могут быть выбраны.</summary>
         <value>To be added.</value>
-        <remarks><para>Если это свойство имеет свойство <b>True,</b>фигуры невозможно добавить на диаграмму, а события Click и DoubleClick для элементов диаграммы не возникают.</para>
+        <remarks><para>Если это свойство <b>true,</b>фигуры не могут быть добавлены в диаграмму, а события Click и DoubleClick для элементов диаграммы не происходят.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4494,7 +4494,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращает объект, который представляет либо одну группу радиолокационных диаграмм (объект), либо коллекцию групп радиолокационных <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграмм <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекции).</summary>
+        <summary>На 2-D диаграмме возвращается объект, представляюный либо одну группу диаграммы радаров (объект), либо коллекцию групп диаграмм радаров <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4590,9 +4590,9 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если оси диаграммы находятся под правым углом независимо от поворота или повышения прав диаграммы. Применяется только к трехтонным строкам, столбцам и лиерным диаграммам.</summary>
+        <summary><b>True,</b> если оси диаграммы находятся под прямым углом, независимо от вращения диаграммы или высоты. Применяется только к 3-D-строкам, столбцам и диаграммам.</summary>
         <value>To be added.</value>
-        <remarks><para>Если это свойство <b>имеет true,</b>свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.Perspective" /> игнорируется.</para>
+        <remarks><para>Если это свойство <b>true,</b> <see cref="P:Microsoft.Office.Interop.Excel._Chart.Perspective" /> свойство игнорируется.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4628,7 +4628,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает поворот 3-D представления диаграммы (поворот области диаграммы вокруг оси Z в градусах). Значение этого свойства должно быть от 0 до 360, за исключением трех d личная диаграмма, где значение должно быть от 0 до 44. Значение по умолчанию — 20. Применяется только к трех d диаграммам.</summary>
+        <summary>Возвращает или задает вращение 3-D представления диаграммы (вращение области участка вокруг оси z-axis в градусах). Значение этого свойства должно быть от 0 до 360, за исключением трех-D-диаграмм, где значение должно быть от 0 до 44. Значение по умолчанию — 20. Применяется только к 3-D диаграммам.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4664,16 +4664,16 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Local" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Filename"><b>Необязательный объект</b>. Строка, которая указывает имя файла, который необходимо сохранить. Можно включить полный путь; Если этого не делать, Microsoft Excel сохраняет файл в текущей папке.</param>
-        <param name="FileFormat"><b>Необязательный объект</b>. Формат файла, который будет применяться при его сохранения. Список допустимого варианта см. в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> свойстве. Для существующего файла форматом по умолчанию является последний указанный формат; для нового файла по умолчанию используется формат используемой версии Excel.</param>
-        <param name="Password"><b>Необязательный объект</b>. Строка с учетом дела (не более 15 символов), которая указывает пароль защиты, который необходимо указать в файле.</param>
-        <param name="WriteResPassword"><b>Необязательный объект</b>. Строка, которая указывает пароль резервирования записи для этого файла. Если файл сохранен с паролем, а пароль не предоставляется при его открытие, файл открывается только для чтения.</param>
-        <param name="ReadOnlyRecommended"><b>Необязательный объект</b>. <b>Имеет</b> true, чтобы отображать сообщение при его открытом файле, рекомендуется, чтобы файл был открыт только для чтения.</param>
-        <param name="CreateBackup"><b>Необязательный объект</b>. <b>True</b> для создания файла резервной копии.</param>
-        <param name="AddToMru"><b>Необязательный объект</b>. <b>True,</b> чтобы добавить эту книгу в список недавно использованных файлов. Значение по умолчанию — <b>False</b>.</param>
-        <param name="TextCodepage"><b>Необязательный объект</b>. Не используется в U.S. English Microsoft Excel.</param>
-        <param name="TextVisualLayout"><b>Необязательный объект</b>. Не используется в U.S. English Microsoft Excel.</param>
-        <param name="Local"><b>Необязательный объект</b>. <b>True</b> сохраняет файлы на языке Microsoft Excel (включая параметры панели управления). Значение <b>False</b> (по умолчанию) сохраняет файлы на языке Visual Basic для приложений (который обычно является английским языком США, если проект VBA, в котором запускается <b>Workbooks.Open,</b> не является старым международным проектом VBA XL5/95).</param>
+        <param name="Filename"><b>Необязательный объект</b>. Строка, которая указывает имя сохраненного файла. Вы можете включить полный путь; если нет, Microsoft Excel сохраняет файл в текущей папке.</param>
+        <param name="FileFormat"><b>Необязательный объект</b>. Формат файла, который необходимо использовать при сохранения файла. Список допустимого выбора см. в <see cref="P:Microsoft.Office.Interop.Excel._Workbook.FileFormat" /> свойстве. Для существующего файла формат по умолчанию — это последний указанный формат файла; для нового файла по умолчанию используется формат версии Excel.</param>
+        <param name="Password"><b>Необязательный объект</b>. Строка с учетом случая (не более 15 символов), которая указывает пароль защиты, который должен быть предоставлен файлу.</param>
+        <param name="WriteResPassword"><b>Необязательный объект</b>. Строка, которая указывает пароль для записи резервирования для этого файла. Если файл сохранен с помощью пароля, а пароль не предоставляется при его открывлении, файл открывается только для чтения.</param>
+        <param name="ReadOnlyRecommended"><b>Необязательный объект</b>. <b>True</b> для отображения сообщения при открываемом файле, рекомендуется открыть его только для чтения.</param>
+        <param name="CreateBackup"><b>Необязательный объект</b>. <b>True</b> для создания файла резервного копирования.</param>
+        <param name="AddToMru"><b>Необязательный объект</b>. <b>Правда,</b> чтобы добавить эту книгу в список недавно используемых файлов. Значение по умолчанию — <b>False</b>.</param>
+        <param name="TextCodepage"><b>Необязательный объект</b>. Не используется в американских английских Microsoft Excel.</param>
+        <param name="TextVisualLayout"><b>Необязательный объект</b>. Не используется в американских английских Microsoft Excel.</param>
+        <param name="Local"><b>Необязательный объект</b>. <b>True</b> сохраняет файлы на языке Microsoft Excel (включая параметры панели управления). False <b>(по</b> умолчанию) сохраняет файлы на языке Visual Basic для приложений (который обычно является английским языком США, если проект VBA, в котором запускается <b>Workbooks.Open,</b> не является старым интернационализированным проектом VBA XL5/95).</param>
         <summary>Сохраняет изменения диаграммы или таблицы в другом файле.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4703,7 +4703,7 @@ With myDocument.Shapes(1).Callout
       <Docs>
         <param name="Filename">Имя шаблона диаграммы.</param>
         <summary>Сохраняет настраиваемый шаблон диаграммы в списке доступных шаблонов диаграмм.</summary>
-        <remarks><para>По умолчанию этот метод сохраняет активную диаграмму в каталог шаблона диаграммы пользователя.  Если указан UNC или URL-адрес, диаграмма будет сохранена в указанном расположении. </para>
+        <remarks><para>По умолчанию этот метод сохраняет активную диаграмму в каталоге шаблонов диаграммы пользователя.  Если указан UNC или URL-адрес, диаграмма будет сохранена в указанном расположении. </para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4733,7 +4733,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Core.Scripts</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает коллекцию, содержащую объекты, представляющие блоки скрипта или кода в указанном документе, когда он сохранен как <see cref="T:Microsoft.Office.Core.Scripts" /> <see cref="T:Microsoft.Office.Core.Script" /> веб-страница.</summary>
+        <summary>Возвращает коллекцию, содержащую объекты, представляющие блоки скрипта или кода в указанном документе, когда он сохранен <see cref="T:Microsoft.Office.Core.Scripts" /> <see cref="T:Microsoft.Office.Core.Script" /> в качестве веб-страницы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4797,7 +4797,7 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Replace" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Replace"><b>Необязательный объект</b>. Объект, который необходимо заменить.</param>
+        <param name="Replace"><b>Необязательный объект</b>. Объект для замены.</param>
         <summary>Выбирает объект.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4828,7 +4828,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Имя или номер линии тренда.</param>
-        <summary>Возвращает объект, который представляет один ряд (объект) или коллекцию всех рядов (коллекции) в диаграмме <see cref="T:Microsoft.Office.Interop.Excel.Series" /> <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> или группе диаграмм.</summary>
+        <summary>Возвращает объект, который представляет одну серию (объект) или коллекцию всех серий (коллекции) в группе <see cref="T:Microsoft.Office.Interop.Excel.Series" /> <see cref="T:Microsoft.Office.Interop.Excel.SeriesCollection" /> диаграммы или диаграммы.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4859,7 +4859,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.XlSeriesNameLevel</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает константы, ссылаясь на уровень источников имен <see cref="T:Microsoft.Office.Interop.Excel.XlSeriesNameLevel" /> рядов. <b>Integer</b> <b>(int</b> in C#) Read/Write.</summary>
+        <summary>Возвращает констант, ссылаясь на уровень источников имен <see cref="T:Microsoft.Office.Interop.Excel.XlSeriesNameLevel" /> серий. <b>Integer</b> <b>(int</b> in C#) Read/Write.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -4888,7 +4888,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Filename">Обязательный атрибут типа <b>String</b>. Имя графического файла.</param>
-        <summary>Задает фоновую графику для таблицы или диаграммы.</summary>
+        <summary>Задает фоновую графику для таблицы или таблицы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4915,8 +4915,8 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Name" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Name">Указывает имя шаблона диаграммы по умолчанию, который будет использоваться при создании новых диаграмм.  Это имя может быть строкой именования диаграммы в коллекции для пользовательского шаблона или может быть специальной константой для указания встроенного <see cref="F:Microsoft.Office.Interop.Excel.XlChartGallery.xlBuiltIn" /> шаблона диаграммы.</param>
-        <summary>Указывает имя шаблона диаграммы, который Microsoft Excel использует при создании новых диаграмм.</summary>
+        <param name="Name">Указывает имя шаблона диаграммы по умолчанию, который будет использоваться при создании новых диаграмм.  Это имя может быть строкой, назвав диаграмму в галерее для шаблона, определенного пользователем, или это может быть специальная константа для указания встроенного <see cref="F:Microsoft.Office.Interop.Excel.XlChartGallery.xlBuiltIn" /> шаблона диаграммы.</param>
+        <summary>Указывает имя шаблона диаграммы, который Microsoft Excel при создании новых диаграмм.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -4945,16 +4945,16 @@ With myDocument.Shapes(1).Callout
       <Docs>
         <param name="Element">Указывает тип элемента диаграммы.</param>
         <summary>Задает элементы диаграммы на диаграмме. Для чтения и записи.</summary>
-        <remarks><para>Для диаграмм этот метод соответствует следующим командам на вкладке <see cref="M:Microsoft.Office.Interop.Excel._Chart.SetElement(Microsoft.Office.Core.MsoChartElementType)" /> "Макет":</para>
+        <remarks><para>Для диаграмм следующие команды на вкладке Макет соответствуют <see cref="M:Microsoft.Office.Interop.Excel._Chart.SetElement(Microsoft.Office.Core.MsoChartElementType)" /> методу:</para>
           <list type="bullet">
             <item>
-              <description>Все в группе "Метки".</description>
+              <description>Все в группе Labels.</description>
             </item>
             <item>
-              <description>Все в группе "Оси".</description>
+              <description>Все в группе Axes.</description>
             </item>
             <item>
-              <description>Все в группе анализа.</description>
+              <description>Все в группе Analysis.</description>
             </item>
             <item>
               <description>Кнопки PlotArea, Chart Wall и Chart Floor.</description>
@@ -4962,7 +4962,7 @@ With myDocument.Shapes(1).Callout
           </list>
           <para> </para>
           <para>
-            <b>MsoChartElementType</b> — это enumeration констант, которые ссылаются на все вышеперечисленные команды.</para>
+            <b>MsoChartElementType</b> — это переустановка констант, которые ссылаются на все вышеперечисленные команды.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -4989,8 +4989,8 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="PlotBy" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Source">Обязательное <see cref="T:Microsoft.Office.Interop.Excel.Range" /> . Диапазон, содержащий исходные данные.</param>
-        <param name="PlotBy"><b>Необязательный объект</b>. Указывает способ, в который будут выданы данные. Может быть одной из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlColumns</b> или <b>xlRows.</b></param>
+        <param name="Source">Обязательно <see cref="T:Microsoft.Office.Interop.Excel.Range" /> . Диапазон, содержащий исходные данные.</param>
+        <param name="PlotBy"><b>Необязательный объект</b>. Указывает способ подготовки данных. Может быть любой из следующих <see cref="T:Microsoft.Office.Interop.Excel.XlRowCol" /> констант: <b>xlColumns или</b> <b>xlRows</b>.</param>
         <summary>Задает диапазон исходных данных для диаграммы.</summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5018,7 +5018,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.Shapes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который представляет все фигуры на листе или <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> листе диаграммы. Только для чтения.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Shapes" /> объект, который представляет все фигуры на листе листе или диаграмме. Только для чтения.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5049,11 +5049,11 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отображение всех кнопок полей на сводная диаграмма.</summary>
-        <value><b>имеет</b> true, если должны отображаться все кнопки сводная диаграмма поля; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает отображение всех кнопок поля на сводная диаграмма.</summary>
+        <value><b>true,</b> если все кнопки поля на сводная диаграмма должны отображаться; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Установите для <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAllFieldButtons" /> свойства <b>true,</b> чтобы отобразить все кнопки полей на указанном сводная диаграмма. Установите для свойства <b>false,</b> чтобы скрыть все кнопки полей.</para>
-          <para>Свойство соответствует команде "Скрыть все" в выпадаемом списке "Кнопки полей" вкладки "Анализ", которая доступна при сводная диаграмма <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAllFieldButtons" /> выбора.</para>
+          <para>Установите свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAllFieldButtons" /> <b>true, чтобы</b> отобразить все кнопки поля в указанном сводная диаграмма. Установите свойство <b>false, чтобы</b> скрыть все кнопки поля.</para>
+          <para>Свойство соответствует команде Hide All в выпадаемом списке полевых кнопок вкладки "Анализ", которая доступна при <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAllFieldButtons" /> сводная диаграмма выбранной области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5083,11 +5083,11 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Получает или задает отображение кнопок поля оси на сводная диаграмма.</summary>
-        <value><b>true,</b> если кнопки полей оси на сводная диаграмма должны отображаться; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, следует ли отображать кнопки поля оси на сводная диаграмма.</summary>
+        <value><b>true,</b> если кнопки поля оси на сводная диаграмма должны отображаться; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Установите для свойства true, чтобы отображать кнопки полей оси на <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAxisFieldButtons" /> указанном сводная диаграмма. <b></b> Установите для свойства <b>false,</b> чтобы скрыть кнопки.</para>
-          <para>Это свойство соответствует команде "Показать кнопки поля оси" в выпадаемом списке "Кнопки поля" вкладки "Анализ", которая доступна при сводная диаграмма <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAxisFieldButtons" /> выбора.</para>
+          <para>Установите свойство true для отображения кнопок поля оси <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAxisFieldButtons" /> на указанном <b></b> сводная диаграмма. Установите свойство <b>false, чтобы</b> скрыть кнопки.</para>
+          <para>Свойство соответствует команде Кнопки поля "Показать оси" в выпадаемом списке полевых кнопок вкладки "Анализ", которая доступна при <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowAxisFieldButtons" /> сводная диаграмма.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5117,9 +5117,9 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает, следует ли показывать метки данных, если значение больше максимального значения на оси значений.  Для чтения и записи.</summary>
+        <summary>Возвращает или задает, показывать ли метки данных, если значение превышает максимальное значение оси значения.  Для чтения и записи.</summary>
         <value><b>Boolean</b></value>
-        <remarks><para>Если изменить ось значений таким образом, чтобы она стала меньше размера точек данных, это свойство можно использовать для того, чтобы определить, следует ли показывать метки данных. Это свойство применяется только к двух d диаграммам.</para>
+        <remarks><para>Если вы измените ось значения таким образом, чтобы она стала меньше размера точек данных, вы можете использовать это свойство, чтобы определить, показывать ли метки данных. Это свойство применяется только к 2-D диаграммам.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5149,11 +5149,11 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отображение кнопок поля легенды на сводная диаграмма.</summary>
-        <value><b>true,</b> если кнопки поля легенды на сводная диаграмма должны отображаться; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает отображение кнопок поля легенды на сводная диаграмма.</summary>
+        <value><b>true,</b> если кнопки поля легенды на сводная диаграмма должны отображаться; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Установите для свойства true, чтобы отображать кнопки поля легенды на <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowLegendFieldButtons" /> указанном сводная диаграмма. <b></b> Установите для свойства <b>false,</b> чтобы скрыть кнопки.</para>
-          <para>Это свойство соответствует команде "Показать кнопки поля легенды" в выпадаемом списке "Кнопки поля" на вкладке "Анализ", которая доступна при сводная диаграмма <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowLegendFieldButtons" /> выбора.</para>
+          <para>Установите свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowLegendFieldButtons" /> true <b>для</b> отображения кнопок поля легенды на указанном сводная диаграмма. Установите свойство <b>false, чтобы</b> скрыть кнопки.</para>
+          <para>Свойство соответствует команде кнопок поля Show Legend в выпадаемом списке полевых кнопок вкладки "Анализ", которая доступна при сводная диаграмма <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowLegendFieldButtons" /> выбранной области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5183,11 +5183,11 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отображение кнопок поля фильтра отчетов на сводная диаграмма.</summary>
-        <value><b>имеет</b> true, если должны отображаться кнопки поля фильтра сводная диаграмма отчета; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает отображение кнопок поля фильтрации отчетов на сводная диаграмма.</summary>
+        <value><b>верно,</b> если должны отображаться кнопки поля фильтрации отчетов на сводная диаграмма; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Установите для свойства true, чтобы отображать кнопки поля фильтра отчетов <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowReportFilterFieldButtons" /> на указанном <b></b> сводная диаграмма. Установите для свойства <b>false,</b> чтобы скрыть кнопки.</para>
-          <para>Это свойство соответствует команде "Показать кнопки поля фильтра отчетов" в выпадаемом списке "Кнопки поля" вкладки "Анализ", которая доступна при сводная диаграмма <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowReportFilterFieldButtons" /> выбора.</para>
+          <para>Установите свойство <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowReportFilterFieldButtons" /> <b>true, чтобы</b> отобразить кнопки поле фильтрации отчетов на указанном сводная диаграмма. Установите свойство <b>false, чтобы</b> скрыть кнопки.</para>
+          <para>Свойство соответствует команде кнопки полей фильтра "Показать отчет" в выпадаемом списке полевых кнопок вкладки "Анализ", которая доступна при <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowReportFilterFieldButtons" /> сводная диаграмма выбора.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5217,11 +5217,11 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает отображение кнопок поля значения на сводная диаграмма.</summary>
-        <value>имеет значение <b>true,</b> если кнопки поля значений на сводная диаграмма должны отображаться; в <b>противном</b>случае false .</value>
+        <summary>Получает или задает, следует ли отображать кнопки поля значения на сводная диаграмма.</summary>
+        <value><b>true,</b> если кнопки поля значений на сводная диаграмма должны отображаться; в противном <b>случае, false</b>.</value>
         <remarks><para>Для чтения и записи.</para>
-          <para>Установите для свойства значение true, чтобы отображать кнопки поля значений <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowValueFieldButtons" /> на указанном <b></b> сводная диаграмма. Установите для свойства <b>false,</b> чтобы скрыть кнопку.</para>
-          <para>Свойство соответствует команде "Показать кнопки поля значения" в выпадаемом списке "Кнопки полей" вкладки "Анализ", которая доступна при сводная диаграмма <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowValueFieldButtons" /> выбора.</para>
+          <para>Установите значение true для отображения кнопок Поле значений в <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowValueFieldButtons" /> указанном сводная диаграмма. <b></b> Установите свойство <b>false, чтобы</b> скрыть кнопку.</para>
+          <para>Свойство соответствует команде Кнопки поля показать значение в выпадаемом списке полевых кнопок вкладки "Анализ", которая доступна при <see cref="P:Microsoft.Office.Interop.Excel._Chart.ShowValueFieldButtons" /> сводная диаграмма выбранной области.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5257,7 +5257,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если внедренная диаграмма отображается в отдельном окне. Объект, <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> используемый с этим свойством, должен ссылаться на внедренную диаграмму.</summary>
+        <summary><b>True,</b> если встроенная диаграмма отображается в отдельном окне. Объект, <see cref="T:Microsoft.Office.Interop.Excel.Chart" /> используемый с этим свойством, должен ссылаться на встроенную диаграмму.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5285,7 +5285,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.Walls</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект, который позволяет пользователю по отдельности форматирование боковой стены <see cref="T:Microsoft.Office.Interop.Excel.Walls" /> 3D-диаграммы. Только для чтения.</summary>
+        <summary>Возвращает объект, который позволяет пользователю индивидуально отформатирование боковой <see cref="T:Microsoft.Office.Interop.Excel.Walls" /> стены 3-D-диаграммы. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.Walls" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5328,7 +5328,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если Размер диаграммы в Microsoft Excel соответствует размеру окна листа диаграммы. <b>False,</b> если размер диаграммы не привязан к размеру окна. Применяется только к листам диаграмм (не применяется к внедренным диаграммам).</summary>
+        <summary><b>True Microsoft Excel</b> если размер диаграммы совпадает с размером окна листа диаграммы. <b>False,</b> если размер диаграммы не привязан к размеру окна. Применяется только к листам диаграмм (не применяется к встроенным диаграммам).</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5439,7 +5439,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.ChartGroup</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, который представляет группу поверхностных диаграмм для трех d диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> объект, представляю который представляет группу поверхностных диаграмм 3-D-диаграммы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5467,7 +5467,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.Tab</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает объект <see cref="T:Microsoft.Office.Interop.Excel.Tab" /> для диаграммы или таблицы.</summary>
+        <summary>Возвращает объект для диаграммы или <see cref="T:Microsoft.Office.Interop.Excel.Tab" /> таблицы.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5574,9 +5574,9 @@ With myDocument.Shapes(1).Callout
         <Parameter Name="Password" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Password"><b>Необязательный объект</b>. Строка, обозначая пароль с учетом дела, который будет применяться для сноски листа или книги. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если опустить этот аргумент для листа, защищенного паролем, вам будет предложено вводить пароль. Если опустить этот аргумент для книги, защищенной паролем, метод не будет работать.</param>
-        <summary>Удаляет защиту с листа или книги. Этот метод не действует, если лист или книга не защищены.</summary>
-        <remarks><para>Если вы забудете пароль, вы не сможете отклонить лист или книгу. Лучше хранить список паролей и соответствующих им имен документов в надежном месте.</para>
+        <param name="Password"><b>Необязательный объект</b>. Строка, обозначаемая паролем, чувствительным к делу, чтобы отклонить лист или книгу. Если лист или книга не защищены паролем, этот аргумент игнорируется. Если упустить этот аргумент для листа, защищенного паролем, вам будет предложен пароль. Если не использовать этот аргумент для книги, защищенной паролем, метод не работает.</param>
+        <summary>Удаляет защиту из листа или книги. Этот метод не влияет, если лист или книга не защищены.</summary>
+        <remarks><para>Если вы забудете пароль, вы не сможете отклонить лист или книгу. Лучше хранить список паролей и их соответствующих имен документов в безопасном месте.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -5612,7 +5612,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.XlSheetVisibility</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Определяет, является ли объект видимым.</summary>
+        <summary>Определяет, виден ли объект.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5643,7 +5643,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>Microsoft.Office.Interop.Excel.Walls</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Walls" /> объект, который представляет стены 3-D-диаграммы.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Walls" /> объект, который представляет стены 3-D диаграммы.</summary>
         <value>To be added.</value>
         <remarks><para>Это свойство не применяется к объемным круговым диаграммам.</para>
           <para> </para></remarks>
@@ -5687,7 +5687,7 @@ With myDocument.Shapes(1).Callout
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary><b>Имеет</b> true, если линии сетки рисуются двумерно на трехмерной диаграмме.</summary>
+        <summary><b>True,</b> если сетки рисуются двумерно на трехмерной диаграмме.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -5721,7 +5721,7 @@ With myDocument.Shapes(1).Callout
       </Parameters>
       <Docs>
         <param name="Index"><b>Необязательный объект</b>. Указывает группу диаграммы.</param>
-        <summary>На двухразовой диаграмме возвращает объект, который представляет либо одну группу точечная диаграмма (объект), либо коллекцию групп точечная <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> диаграммы <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
+        <summary>На 2-D диаграмме возвращается объект, представляюный либо одну группу диаграммы рассеяния (объект), либо коллекцию групп диаграммы рассеяния <see cref="T:Microsoft.Office.Interop.Excel.ChartGroup" /> <see cref="T:Microsoft.Office.Interop.Excel.ChartGroups" /> (коллекция).</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

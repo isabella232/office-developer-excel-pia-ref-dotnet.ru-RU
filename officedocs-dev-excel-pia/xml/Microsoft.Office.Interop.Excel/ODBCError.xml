@@ -1,5 +1,5 @@
 <Type Name="ODBCError" FullName="Microsoft.Office.Interop.Excel.ODBCError">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="774b935a1d08dc0ba643f5f2e6e1a60659bb479d" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50011412" /></Metadata><TypeSignature Language="C#" Value="public interface ODBCError" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="c69e05b7a212fdb30123a6ec685e7bc566f7af44e5da95d3217c8d8816ea6110" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54504827" /></Metadata><TypeSignature Language="C#" Value="public interface ODBCError" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ODBCError" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.ODBCError" />
   <TypeSignature Language="VB.NET" Value="Public Interface ODBCError" />
@@ -22,8 +22,8 @@
   </Attributes>
   <Docs>
     <summary>Представляет ошибку ODBC, созданную последним запросом ODBC.</summary>
-    <remarks><para>Объект <b>ODBCError</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.ODBCErrors" /> коллекции. Если указанный запрос ODBC выполняется без ошибок, коллекция <b>ODBCErrors</b> пуста. Ошибки в коллекции индексются в том порядке, в котором они создаются источником данных ODBC.</para>
-      <para>Используйте <b>ODBCErrors</b>( ), где индекс — это номер индекса ошибки, чтобы вернуть один объект <paramref name="index" /> <b>ODBCError.</b></para>
+    <remarks><para>Объект <b>ODBCError</b> является членом <see cref="T:Microsoft.Office.Interop.Excel.ODBCErrors" /> коллекции. Если указанный запрос ODBC выполняется без ошибок, коллекция <b>ODBCErrors</b> пуста. Ошибки в коллекции индексироваться в порядке, в котором они создаются источником данных ODBC.</para>
+      <para>Для возврата одного объекта <b>ODBCError используйте ODBCErrors</b>(, где индексом является число индексов <paramref name="index" /> ошибки). <b></b></para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -50,7 +50,7 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет приложение Microsoft Excel.</summary>
+        <summary>Возвращает <see cref="T:Microsoft.Office.Interop.Excel.Application" /> объект, который представляет Microsoft Excel приложение.</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,8 +80,8 @@
       <Docs>
         <summary>Возвращает 32-битное целое число, указывающее на приложение, в котором объект был создан.</summary>
         <value>To be added.</value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.</para>
-          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.</para>
+          <para>Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -166,7 +166,7 @@
       <Docs>
         <summary>Возвращает ошибку SQL состояния.</summary>
         <value>To be added.</value>
-        <remarks><para>Описание конкретной ошибки см. в документации по SQL.</para>
+        <remarks><para>Для объяснения конкретной ошибки см. в SQL документации.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

@@ -1,5 +1,5 @@
 <Type Name="IconCriterion" FullName="Microsoft.Office.Interop.Excel.IconCriterion">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="aeac399c7630a815bc10a17585c99b77cfcc3ff7" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50000234" /></Metadata><TypeSignature Language="C#" Value="public interface IconCriterion" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="e19325de9317002315e49c97966302e1963aa338e03106c2d0ee40b91ef31a87" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54505037" /></Metadata><TypeSignature Language="C#" Value="public interface IconCriterion" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IconCriterion" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.IconCriterion" />
   <TypeSignature Language="VB.NET" Value="Public Interface IconCriterion" />
@@ -21,10 +21,10 @@
     </Attribute>
   </Attributes>
   <Docs>
-    <summary>Представляет критерий для отдельного значка в наборе значков. Этот критерий определяет диапазон значений и тип порога, связанный со значком в правиле условного форматирования значка.</summary>
-    <remarks><para>Все условия условного формата набора значков содержатся в <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> коллекции. Вы можете получить доступ к <b>каждому объекту IconCriterion</b> в коллекции, передав индекс в коллекцию. Подробные сведения см. в примере.</para>
+    <summary>Представляет критерий для отдельного значка в наборе значков. Критерий указывает диапазон значений и пороговый тип, связанный с значком в правиле условного форматирования набора значков.</summary>
+    <remarks><para>Все критерии условного формата набора значков содержатся в <see cref="T:Microsoft.Office.Interop.Excel.IconCriteria" /> коллекции. Вы можете получить доступ к каждому <b>объекту IconCriterion</b> в коллекции, передав индекс в коллекцию. Подробные сведения см. в примере.</para>
       <para> </para></remarks>
-    <example><para>В следующем примере кода создается диапазон чисел, представляющих результаты тестирования, а затем к этому диапазону применяется правило условного форматирования набора значков. Затем тип набора значков меняется с значков по умолчанию на набор значков с пятью стрелками. Наконец, тип порога изменен с процентили на жестко заданный номер.</para>
+    <example><para>В следующем примере кода создается диапазон чисел, представляющих результаты тестирования, а затем применяется правило условного форматирования набора значков к этому диапазону. Затем тип набора значков меняется с значков по умолчанию на набор значков с пятью стрелками. Наконец, пороговый тип изменен с процентила на жестко закодифицированный номер.</para>
       <code>&lt;span class="label"&gt;Sub CreateIconSetCF()    Dim cfIconSet As IconSetCondition        'Fill cells with sample data    With ActiveSheet        .Range("C1") = 55        .Range("C2") = 92        .Range("C3") = 88        .Range("C4") = 77        .Range("C5") = 66        .Range("C6") = 93        .Range("C7") = 76        .Range("C8") = 80        .Range("C9") = 79        .Range("C10") = 83        .Range("C11") = 66        .Range("C12") = 74    End With        Range("C1:C12").Select          'Create an icon set conditional format for the created sample data range    Set cfIconSet = Selection.FormatConditions.AddIconSetCondition        'Change the icon set to a five-arrow icon set    cfIconSet.IconSet = ActiveWorkbook.IconSets(xl5Arrows)        'The IconCriterion collection contains all IconCriteria    'By indexing into the collection you can modify each criterion    With cfIconSet.IconCriteria(1)        .Type = xlConditionValueNumber        .Value = 0        .Operator = 7    End With    With cfIconSet.IconCriteria(2)        .Type = xlConditionValueNumber        .Value = 60        .Operator = 7    End With    With cfIconSet.IconCriteria(3)        .Type = xlConditionValueNumber        .Value = 70        .Operator = 7    End With    With cfIconSet.IconCriteria(4)        .Type = xlConditionValueNumber        .Value = 80        .Operator = 7    End With    With cfIconSet.IconCriteria(5)        .Type = xlConditionValueNumber        .Value = 90        .Operator = 7    End With        End Sub&lt;/span&gt;</code></example>
   </Docs>
   <Members>
@@ -54,9 +54,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlIcon</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает значок для условия в правиле условного форматирования набора значков.</summary>
+        <summary>Получает или задает значок для критерия в правиле условного форматирования набора значков.</summary>
         <value>To be added.</value>
-        <remarks><para>После того как вы установите свойство <b>Icon</b> для условия значка в правиле условного форматирования, свойство изменится на <see cref="P:Microsoft.Office.Interop.Excel.IconSetCondition.IconSet" /> <b>xlCustomSet.</b></para>
+        <remarks><para>После того, как вы установите свойство <b>Icon</b> для критерия значка в правиле условного форматирования набора значков, свойство будет изменено на <see cref="P:Microsoft.Office.Interop.Excel.IconSetCondition.IconSet" /> <b>xlCustomSet.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -115,9 +115,9 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает одну из констант этого значения, которая определяет, является ли пороговое значение "больше" или "больше или равно" пороговом <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> значению.</summary>
+        <summary>Возвращает или задает одну из констант переоценки, которая определяет, если пороговое значение "больше" или "больше или <see cref="T:Microsoft.Office.Interop.Excel.XlFormatConditionOperator" /> равно" порогового значения.</summary>
         <value>To be added.</value>
-        <remarks><para>Для правила условного форматирования набора значков этому свойству можно установить только одну из следующих двух констант: <b>xlGreater</b> или <b>xlGreaterEqual.</b></para>
+        <remarks><para>Для правила условного форматирования набора значков это свойство может быть назначено только одной из следующих двух констант: <b>xlGreater</b> или <b>xlGreaterEqual.</b></para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -147,9 +147,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlConditionValueTypes</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает одну из констант этого нумерации, которая определяет, как определяется пороговое значение набора <see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes" /> значков. Только для чтения.</summary>
+        <summary>Возвращает одну из констант переопределения, которая указывает, как определяется пороговое значение для набора <see cref="T:Microsoft.Office.Interop.Excel.XlConditionValueTypes" /> значков. Только для чтения.</summary>
         <value>To be added.</value>
-        <remarks><para>Тип порогового значения для набора значков может быть числом, процентом, формулой или процентильной величиной. Установка типа в процентиль будет использовать функцию Percentile в Excel, чтобы определить пороговое значение.</para>
+        <remarks><para>Тип порогового значения для набора значков может быть числом, процентом, формулой или процентили. Для определения порогового значения Excel тип для процентила будет использовать функцию percentile в Excel.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -181,8 +181,8 @@
       <Docs>
         <summary>Возвращает или задает пороговое значение для значка в условном формате. Для чтения и записи, <b>Variant</b>.</summary>
         <value>To be added.</value>
-        <remarks><para>Значение можно установить, только если для свойства условного формата установлена одна из следующих констант: <see cref="P:Microsoft.Office.Interop.Excel.IconCriterion.Type" /> <b>xlConditionValueNumber,</b> <b>xlConditionValuePercent,</b> <b>xlConditionValuePercentile</b>или <b>xlConditionValueFormula.</b></para>
-          <para>Если типом порогового значения является формула, можно установить формулу в виде <b>строки.</b> Формула должна возвращать одно число.</para>
+        <remarks><para>Значение можно установить только в том случае, если свойство условного формата задает одну из следующих <see cref="P:Microsoft.Office.Interop.Excel.IconCriterion.Type" /> констант: <b>xlConditionValueNumber,</b> <b>xlConditionValuePercent</b>, <b>xlConditionValuePercentile</b>или <b>xlConditionValueFormula.</b></para>
+          <para>Если тип порога является формулой, можно завести формулу как <b>строку.</b> Формула должна возвращать одно число.</para>
           <para> </para></remarks>
       </Docs>
     </Member>

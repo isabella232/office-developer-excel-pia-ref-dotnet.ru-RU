@@ -1,5 +1,5 @@
 <Type Name="IRTDUpdateEvent" FullName="Microsoft.Office.Interop.Excel.IRTDUpdateEvent">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="d11bd9b734395c326ae11b307cdfec21f36a30a4" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50001361" /></Metadata><TypeSignature Language="C#" Value="public interface IRTDUpdateEvent" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="a0819b294b6dd2fa6ed828a0ba7240cfad88d4e311b891a7942741c39e3002e1" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54514109" /></Metadata><TypeSignature Language="C#" Value="public interface IRTDUpdateEvent" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IRTDUpdateEvent" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.IRTDUpdateEvent" />
   <TypeSignature Language="VB.NET" Value="Public Interface IRTDUpdateEvent" />
@@ -19,7 +19,7 @@
   </Attributes>
   <Docs>
     <summary>Представляет события обновления данных в режиме реального времени.</summary>
-    <remarks><para>Чтобы сделать объект <b>IRTDUpdateEvent</b> или вернуть его, объявите переменную как объект <b>IRTDUpdateEvent,</b> а затем используйте эту переменную в качестве объекта обратного вызова.</para>
+    <remarks><para>Чтобы мгновенно или вернуть объект <b>IRTDUpdateEvent,</b> объявите переменную <b>объектом IRTDUpdateEvent</b> и используйте эту переменную в качестве объекта обратного вызова.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -44,7 +44,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Указывает серверу данных в режиме реального времени (RTD) отключать от указанного <see cref="T:Microsoft.Office.Interop.Excel.IRTDUpdateEvent" /> объекта.</summary>
+        <summary>Предписывает серверу данных в режиме реального времени (RTD) отключиться от указанного <see cref="T:Microsoft.Office.Interop.Excel.IRTDUpdateEvent" /> объекта.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -74,11 +74,11 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает или задает <b>integer</b> для интервала между обновлениями для данных в режиме реального времени. Для чтения и записи.</summary>
+        <summary>Возвращает или задает набор <b>integer</b> для интервала между обновлениями для данных в режиме реального времени. Для чтения и записи.</summary>
         <value>To be added.</value>
-        <remarks><para>Если установить <see cref="P:Microsoft.Office.Interop.Excel.IRTDUpdateEvent.HeartbeatInterval" /> для свойства -1, метод <see cref="M:Microsoft.Office.Interop.Excel.IRtdServer.Heartbeat" /> не будет вызван.</para>
+        <remarks><para>Настройка <see cref="P:Microsoft.Office.Interop.Excel.IRTDUpdateEvent.HeartbeatInterval" /> свойства до -1 приведет к <see cref="M:Microsoft.Office.Interop.Excel.IRtdServer.Heartbeat" /> незваным методу.</para>
           <para>
-            <b>Примечание</b>  Интервал пульса не может быть установлен ниже 15 000 миллисекунд из-за стандартного 15-секундного таймаута.</para>
+            <b>Примечание</b>  Интервал сердцебиения не может быть установлен ниже 15 000 миллисекунд из-за стандартного 15-секундного перерыва.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -103,7 +103,7 @@
       </ReturnValue>
       <Parameters />
       <Docs>
-        <summary>Сервер данных в режиме реального времени (RTD) использует этот метод для уведомления Microsoft Excel о том, что получены новые данные.</summary>
+        <summary>Сервер данных в режиме реального времени (RTD) использует этот метод для уведомления Microsoft Excel о том, что новые данные получены.</summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

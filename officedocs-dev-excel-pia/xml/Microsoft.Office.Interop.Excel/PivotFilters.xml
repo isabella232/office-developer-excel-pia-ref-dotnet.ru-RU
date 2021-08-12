@@ -1,5 +1,5 @@
 <Type Name="PivotFilters" FullName="Microsoft.Office.Interop.Excel.PivotFilters">
-  <Metadata><Meta Name="ms.openlocfilehash" Value="241a7e92c74b8d47295e5e1915f8efb2b688ac82" /><Meta Name="ms.sourcegitcommit" Value="f58b07bd9753015d401a69461f61bc174edee843" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="01/27/2021" /><Meta Name="ms.locfileid" Value="50010866" /></Metadata><TypeSignature Language="C#" Value="public interface PivotFilters : System.Collections.IEnumerable" />
+  <Metadata><Meta Name="ms.openlocfilehash" Value="ace568c888a46955b876f7ef89a8c6c67e30514a67c565435a56fd758106d83d" /><Meta Name="ms.sourcegitcommit" Value="daf501296516d104cf396246ac0d336adfeffd0d" /><Meta Name="ms.translationtype" Value="MT" /><Meta Name="ms.contentlocale" Value="ru-RU" /><Meta Name="ms.lasthandoff" Value="08/06/2021" /><Meta Name="ms.locfileid" Value="54513843" /></Metadata><TypeSignature Language="C#" Value="public interface PivotFilters : System.Collections.IEnumerable" />
   <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract PivotFilters implements class System.Collections.IEnumerable" />
   <TypeSignature Language="DocId" Value="T:Microsoft.Office.Interop.Excel.PivotFilters" />
   <TypeSignature Language="VB.NET" Value="Public Interface PivotFilters&#xA;Implements IEnumerable" />
@@ -26,7 +26,7 @@
   </Attributes>
   <Docs>
     <summary>Объект  <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> — это коллекция <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /> объектов.</summary>
-    <remarks><para>Коллекция содержит свойства и методы для добавления новых фильтров, подсчета числа существующих фильтров в коллекции и ссылки на определенные <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" />  объекты.</para>
+    <remarks><para>Коллекция содержит свойства и методы добавления новых фильтров, подсчета количества существующих фильтров в коллекции и ссылок на <see cref="T:Microsoft.Office.Interop.Excel.PivotFilters" /> конкретные <see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" />  объекты.</para>
       <para> </para></remarks>
   </Docs>
   <Members>
@@ -147,8 +147,8 @@
         <param name="Order">Порядок фильтрации данных.</param>
         <param name="Name">Имя фильтра.</param>
         <param name="Description">Краткое описание фильтра.</param>
-        <param name="MemberPropertyField">Указывает поле свойства участника, на котором основан фильтр меток.</param>
-        <param name="WholeDayFilter">Указывает фильтр на основе дней.</param>
+        <param name="MemberPropertyField">Указывает поле свойства участника, на котором основан фильтр метки.</param>
+        <param name="WholeDayFilter">Указывает фильтр в зависимости от дней.</param>
         <summary>Добавляет новые фильтры в <b>коллекцию PivotFilters.</b></summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -177,9 +177,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.Application</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Если используется без квалификатора объекта, это свойство возвращает объект, Microsoft Office <see cref="T:Microsoft.Office.Interop.Excel._Application" /> Excel. При применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
+        <summary>При применении без квалификатора объекта это свойство возвращает объект, представляю Microsoft Office Excel <see cref="T:Microsoft.Office.Interop.Excel._Application" /> приложение. При его применении с квалификатором объекта это свойство возвращает объект <b>Application,</b> который представляет создателя указанного объекта. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel._Application" /></value>
-        <remarks><para>Это свойство можно использовать с объектом автоматизации OLE для возврата приложения этого объекта.</para>
+        <remarks><para>Это свойство можно использовать с помощью объекта автоматизации OLE для возврата приложения этого объекта.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -207,7 +207,7 @@
       </ReturnValue>
       <Docs>
         <summary>Возвращает количество элементов в <b>коллекции PivotFilters.</b> Только для чтения.</summary>
-        <value>64-разрядное целое число.</value>
+        <value><b>Integer</b></value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -234,9 +234,9 @@
         <ReturnType>Microsoft.Office.Interop.Excel.XlCreator</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает 32-битное <b>integer,</b> которое указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
+        <summary>Возвращает 32-битный <b>integer,</b> который указывает приложение, в котором был создан этот объект. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.XlCreator" /></value>
-        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel для Macintosh, где каждое приложение имеет четырех символьный код создателя. Например, в Microsoft Excel есть код создателя XCEL.</para>
+        <remarks><para>Если объект был создан в Microsoft Excel, это свойство возвращает строку XCEL, эквивалентную hexadecimal number 5843454C.  Свойство <b>Creator</b> предназначено для использования в Microsoft Excel Macintosh, где каждое приложение имеет код создателя из четырех символов. Например, Microsoft Excel имеет код создателя XCEL.</para>
           <para> </para></remarks>
       </Docs>
     </Member>
@@ -298,8 +298,8 @@
         <Parameter Name="Index" Type="System.Object" />
       </Parameters>
       <Docs>
-        <param name="Index">Required <b>Object</b> Specifies the position of an element of the collection.</param>
-        <summary>Возвращает определенный элемент объекта <b>коллекции PivotFilters</b> по его позиции в коллекции. Только для чтения.</summary>
+        <param name="Index">Необходимый <b>объект</b> указывает положение элемента коллекции.</param>
+        <summary>Возвращает определенный элемент объекта <b>коллекции PivotFilters</b> по его положению в коллекции. Только для чтения.</summary>
         <value><see cref="T:Microsoft.Office.Interop.Excel.PivotFilter" /></value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -327,7 +327,7 @@
         <ReturnType>System.Object</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>Возвращает родительский объект для указанного <b>объекта PivotFilters.</b> Только для чтения.</summary>
+        <summary>Возвращает родитель для указанного <b>объекта PivotFilters.</b> Только для чтения.</summary>
         <value><b>Object</b></value>
         <remarks>To be added.</remarks>
       </Docs>
